@@ -1,0 +1,651 @@
+{
+  "country": "FRA",
+  "clubs": [
+    {
+      "id": "paris-saint-germain",
+      "league": "fra-ligue-1",
+      "name": "Paris Saint-Germain",
+      "short": "PSG",
+      "abbr": "PSG",
+      "city": "Paris",
+      "colors": [
+        "#004170",
+        "#DA291C"
+      ],
+      "reputation": {
+        "domestic": 5,
+        "continental": 5,
+        "international": 5
+      }
+    },
+    {
+      "id": "olympique-marseille",
+      "league": "fra-ligue-1",
+      "name": "Olympique Marseille",
+      "short": "Marseille",
+      "abbr": "OM",
+      "city": "Marseille",
+      "colors": [
+        "#2FAEE0",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 3,
+        "international": 4
+      }
+    },
+    {
+      "id": "as-monaco",
+      "league": "fra-ligue-1",
+      "name": "AS Monaco",
+      "short": "Monaco",
+      "abbr": "ASM",
+      "city": "Monaco",
+      "colors": [
+        "#E63329",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 3,
+        "international": 4
+      }
+    },
+    {
+      "id": "olympique-lyon",
+      "league": "fra-ligue-1",
+      "name": "Olympique Lyon",
+      "short": "Lyon",
+      "abbr": "OL",
+      "city": "Lyon",
+      "colors": [
+        "#1A2B49",
+        "#DA291C"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 2,
+        "international": 4
+      }
+    },
+    {
+      "id": "lille",
+      "league": "fra-ligue-1",
+      "name": "LOSC Lille",
+      "short": "Lille",
+      "abbr": "LIL",
+      "city": "Lille",
+      "colors": [
+        "#E01E13",
+        "#003E7E"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 2,
+        "international": 3
+      }
+    },
+    {
+      "id": "nice",
+      "league": "fra-ligue-1",
+      "name": "OGC Nice",
+      "short": "Nice",
+      "abbr": "NIC",
+      "city": "Nizza",
+      "colors": [
+        "#E30613",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 2,
+        "international": 2
+      }
+    },
+    {
+      "id": "rc-lens",
+      "league": "fra-ligue-1",
+      "name": "RC Lens",
+      "short": "Lens",
+      "abbr": "RCL",
+      "city": "Lens",
+      "colors": [
+        "#FFED00",
+        "#E30613"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "rennes",
+      "league": "fra-ligue-1",
+      "name": "Stade Rennais",
+      "short": "Rennes",
+      "abbr": "SRF",
+      "city": "Rennes",
+      "colors": [
+        "#E30613",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "strasbourg",
+      "league": "fra-ligue-1",
+      "name": "RC Strasbourg",
+      "short": "Strasbourg",
+      "abbr": "RCS",
+      "city": "Straßburg",
+      "colors": [
+        "#009EE0",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 1
+      }
+    },
+    {
+      "id": "brest",
+      "league": "fra-ligue-1",
+      "name": "Stade Brestois",
+      "short": "Brest",
+      "abbr": "BRE",
+      "city": "Brest",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 1
+      }
+    },
+    {
+      "id": "toulouse",
+      "league": "fra-ligue-1",
+      "name": "Toulouse FC",
+      "short": "Toulouse",
+      "abbr": "TFC",
+      "city": "Toulouse",
+      "colors": [
+        "#5F259F",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "reims",
+      "league": "fra-ligue-1",
+      "name": "Stade de Reims",
+      "short": "Reims",
+      "abbr": "SDR",
+      "city": "Reims",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "nantes",
+      "league": "fra-ligue-1",
+      "name": "FC Nantes",
+      "short": "Nantes",
+      "abbr": "FCN",
+      "city": "Nantes",
+      "colors": [
+        "#FFED00",
+        "#009640"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "auxerre",
+      "league": "fra-ligue-1",
+      "name": "AJ Auxerre",
+      "short": "Auxerre",
+      "abbr": "AJA",
+      "city": "Auxerre",
+      "colors": [
+        "#004E9E",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "montpellier",
+      "league": "fra-ligue-1",
+      "name": "Montpellier HSC",
+      "short": "Montpellier",
+      "abbr": "MHS",
+      "city": "Montpellier",
+      "colors": [
+        "#0B2D6B",
+        "#F58220"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "angers",
+      "league": "fra-ligue-1",
+      "name": "Angers SCO",
+      "short": "Angers",
+      "abbr": "SCO",
+      "city": "Angers",
+      "colors": [
+        "#000000",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "le-havre",
+      "league": "fra-ligue-1",
+      "name": "Le Havre AC",
+      "short": "Le Havre",
+      "abbr": "HAC",
+      "city": "Le Havre",
+      "colors": [
+        "#009EE0",
+        "#000080"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "saint-etienne",
+      "league": "fra-ligue-1",
+      "name": "AS Saint-Étienne",
+      "short": "Saint-Étienne",
+      "abbr": "ASSE",
+      "city": "Saint-Étienne",
+      "colors": [
+        "#009640",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 3
+      }
+    },
+    {
+      "id": "bordeaux",
+      "league": "fra-ligue-2",
+      "name": "FC Girondins de Bordeaux",
+      "short": "Bordeaux",
+      "abbr": "FCGB",
+      "city": "Bordeaux",
+      "colors": [
+        "#00214E",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "metz",
+      "league": "fra-ligue-2",
+      "name": "FC Metz",
+      "short": "Metz",
+      "abbr": "FCM",
+      "city": "Metz",
+      "colors": [
+        "#8E1F2F",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "lorient",
+      "league": "fra-ligue-2",
+      "name": "FC Lorient",
+      "short": "Lorient",
+      "abbr": "FCL",
+      "city": "Lorient",
+      "colors": [
+        "#F58220",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "guingamp",
+      "league": "fra-ligue-2",
+      "name": "EA Guingamp",
+      "short": "Guingamp",
+      "abbr": "EAG",
+      "city": "Guingamp",
+      "colors": [
+        "#E30613",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "lille-osc",
+      "league": "fra-ligue-1",
+      "name": "Lille OSC",
+      "short": "Lille OSC",
+      "abbr": "LIO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "olympique-lyonnais",
+      "league": "fra-ligue-1",
+      "name": "Olympique Lyonnais",
+      "short": "Olympique Lyonnais",
+      "abbr": "OLL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "ac-ajaccio",
+      "league": "fra-ligue-2",
+      "name": "AC Ajaccio",
+      "short": "AC Ajaccio",
+      "abbr": "AJA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "rodez-af",
+      "league": "fra-ligue-2",
+      "name": "Rodez AF",
+      "short": "Rodez AF",
+      "abbr": "ROA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "clermont-foot-63",
+      "league": "fra-ligue-2",
+      "name": "Clermont Foot 63",
+      "short": "Clermont Foot 63",
+      "abbr": "CLF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "pau-fc",
+      "league": "fra-ligue-2",
+      "name": "Pau FC",
+      "short": "Pau",
+      "abbr": "PAU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "estac-troyes",
+      "league": "fra-ligue-2",
+      "name": "ESTAC Troyes",
+      "short": "ESTAC Troyes",
+      "abbr": "EST",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "grenoble-foot-38",
+      "league": "fra-ligue-2",
+      "name": "Grenoble Foot 38",
+      "short": "Grenoble Foot 38",
+      "abbr": "GRF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "stade-lavallois",
+      "league": "fra-ligue-2",
+      "name": "Stade Lavallois",
+      "short": "Stade Lavallois",
+      "abbr": "STL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "amiens-sc",
+      "league": "fra-ligue-2",
+      "name": "Amiens SC",
+      "short": "Amiens",
+      "abbr": "AMI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "red-star-fc",
+      "league": "fra-ligue-2",
+      "name": "Red Star FC",
+      "short": "Red Star",
+      "abbr": "RES",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "usl-dunkerque",
+      "league": "fra-ligue-2",
+      "name": "USL Dunkerque",
+      "short": "USL Dunkerque",
+      "abbr": "USD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-annecy",
+      "league": "fra-ligue-2",
+      "name": "FC Annecy",
+      "short": "FC Annecy",
+      "abbr": "ANN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sm-caen",
+      "league": "fra-ligue-2",
+      "name": "SM Caen",
+      "short": "SM Caen",
+      "abbr": "SMC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-martigues",
+      "league": "fra-ligue-2",
+      "name": "FC Martigues",
+      "short": "FC Martigues",
+      "abbr": "MAR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sc-bastia",
+      "league": "fra-ligue-2",
+      "name": "SC Bastia",
+      "short": "SC Bastia",
+      "abbr": "BAS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

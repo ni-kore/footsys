@@ -1,0 +1,1909 @@
+{
+  "country": "ENG",
+  "clubs": [
+    {
+      "id": "manchester-city",
+      "league": "eng-premier-league",
+      "name": "Manchester City",
+      "short": "Man City",
+      "abbr": "MCI",
+      "city": "Manchester",
+      "colors": [
+        "#6CABDD",
+        "#1C2C5B"
+      ],
+      "reputation": {
+        "domestic": 5,
+        "continental": 5,
+        "international": 5
+      }
+    },
+    {
+      "id": "liverpool",
+      "league": "eng-premier-league",
+      "name": "Liverpool FC",
+      "short": "Liverpool",
+      "abbr": "LIV",
+      "city": "Liverpool",
+      "colors": [
+        "#C8102E",
+        "#00B2A9"
+      ],
+      "reputation": {
+        "domestic": 5,
+        "continental": 5,
+        "international": 5
+      }
+    },
+    {
+      "id": "arsenal",
+      "league": "eng-premier-league",
+      "name": "Arsenal FC",
+      "short": "Arsenal",
+      "abbr": "ARS",
+      "city": "London",
+      "colors": [
+        "#EF0107",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 5,
+        "continental": 4,
+        "international": 5
+      }
+    },
+    {
+      "id": "chelsea",
+      "league": "eng-premier-league",
+      "name": "Chelsea FC",
+      "short": "Chelsea",
+      "abbr": "CHE",
+      "city": "London",
+      "colors": [
+        "#034694",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 3,
+        "international": 5
+      }
+    },
+    {
+      "id": "tottenham-hotspur",
+      "league": "eng-premier-league",
+      "name": "Tottenham Hotspur",
+      "short": "Tottenham",
+      "abbr": "TOT",
+      "city": "London",
+      "colors": [
+        "#132257",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 3,
+        "international": 4
+      }
+    },
+    {
+      "id": "newcastle-united",
+      "league": "eng-premier-league",
+      "name": "Newcastle United",
+      "short": "Newcastle",
+      "abbr": "NEW",
+      "city": "Newcastle",
+      "colors": [
+        "#241F20",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 2,
+        "international": 3
+      }
+    },
+    {
+      "id": "aston-villa",
+      "league": "eng-premier-league",
+      "name": "Aston Villa",
+      "short": "Aston Villa",
+      "abbr": "AVL",
+      "city": "Birmingham",
+      "colors": [
+        "#95BFE5",
+        "#670E36"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 3,
+        "international": 3
+      }
+    },
+    {
+      "id": "brighton",
+      "league": "eng-premier-league",
+      "name": "Brighton & Hove Albion",
+      "short": "Brighton",
+      "abbr": "BHA",
+      "city": "Brighton",
+      "colors": [
+        "#0057B8",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "west-ham-united",
+      "league": "eng-premier-league",
+      "name": "West Ham United",
+      "short": "West Ham",
+      "abbr": "WHU",
+      "city": "London",
+      "colors": [
+        "#7A263A",
+        "#1BB1E7"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 3
+      }
+    },
+    {
+      "id": "crystal-palace",
+      "league": "eng-premier-league",
+      "name": "Crystal Palace",
+      "short": "Palace",
+      "abbr": "CRY",
+      "city": "London",
+      "colors": [
+        "#1B458F",
+        "#C4122E"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "everton",
+      "league": "eng-premier-league",
+      "name": "Everton FC",
+      "short": "Everton",
+      "abbr": "EVE",
+      "city": "Liverpool",
+      "colors": [
+        "#003399",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "fulham",
+      "league": "eng-premier-league",
+      "name": "Fulham FC",
+      "short": "Fulham",
+      "abbr": "FUL",
+      "city": "London",
+      "colors": [
+        "#FFFFFF",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "brentford",
+      "league": "eng-premier-league",
+      "name": "Brentford FC",
+      "short": "Brentford",
+      "abbr": "BRE",
+      "city": "London",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "nottingham-forest",
+      "league": "eng-premier-league",
+      "name": "Nottingham Forest",
+      "short": "Forest",
+      "abbr": "NFO",
+      "city": "Nottingham",
+      "colors": [
+        "#DD0000",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "wolverhampton",
+      "league": "eng-premier-league",
+      "name": "Wolverhampton Wanderers",
+      "short": "Wolves",
+      "abbr": "WOL",
+      "city": "Wolverhampton",
+      "colors": [
+        "#FDB913",
+        "#231F20"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "bournemouth",
+      "league": "eng-premier-league",
+      "name": "AFC Bournemouth",
+      "short": "Bournemouth",
+      "abbr": "BOU",
+      "city": "Bournemouth",
+      "colors": [
+        "#DA291C",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "leicester-city",
+      "league": "eng-premier-league",
+      "name": "Leicester City",
+      "short": "Leicester",
+      "abbr": "LEI",
+      "city": "Leicester",
+      "colors": [
+        "#003090",
+        "#FDBE11"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 3
+      }
+    },
+    {
+      "id": "ipswich-town",
+      "league": "eng-premier-league",
+      "name": "Ipswich Town",
+      "short": "Ipswich",
+      "abbr": "IPS",
+      "city": "Ipswich",
+      "colors": [
+        "#0044A9",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "southampton",
+      "league": "eng-premier-league",
+      "name": "Southampton FC",
+      "short": "Southampton",
+      "abbr": "SOU",
+      "city": "Southampton",
+      "colors": [
+        "#D71920",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "leeds-united",
+      "league": "eng-championship",
+      "name": "Leeds United",
+      "short": "Leeds",
+      "abbr": "LEE",
+      "city": "Leeds",
+      "colors": [
+        "#FFCD00",
+        "#1D428A"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 3
+      }
+    },
+    {
+      "id": "burnley",
+      "league": "eng-championship",
+      "name": "Burnley FC",
+      "short": "Burnley",
+      "abbr": "BUR",
+      "city": "Burnley",
+      "colors": [
+        "#6C1D45",
+        "#99D6EA"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "sheffield-united",
+      "league": "eng-championship",
+      "name": "Sheffield United",
+      "short": "Sheffield Utd",
+      "abbr": "SHU",
+      "city": "Sheffield",
+      "colors": [
+        "#EE2737",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "sunderland",
+      "league": "eng-championship",
+      "name": "Sunderland AFC",
+      "short": "Sunderland",
+      "abbr": "SUN",
+      "city": "Sunderland",
+      "colors": [
+        "#EB172B",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "west-bromwich-albion",
+      "league": "eng-championship",
+      "name": "West Bromwich Albion",
+      "short": "West Brom",
+      "abbr": "WBA",
+      "city": "West Bromwich",
+      "colors": [
+        "#122F67",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "middlesbrough",
+      "league": "eng-championship",
+      "name": "Middlesbrough FC",
+      "short": "Middlesbrough",
+      "abbr": "MID",
+      "city": "Middlesbrough",
+      "colors": [
+        "#E21C38",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "norwich-city",
+      "league": "eng-championship",
+      "name": "Norwich City",
+      "short": "Norwich",
+      "abbr": "NOR",
+      "city": "Norwich",
+      "colors": [
+        "#FFF200",
+        "#00A650"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "coventry-city",
+      "league": "eng-championship",
+      "name": "Coventry City",
+      "short": "Coventry",
+      "abbr": "COV",
+      "city": "Coventry",
+      "colors": [
+        "#78D0F3",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "derby-county",
+      "league": "eng-championship",
+      "name": "Derby County",
+      "short": "Derby",
+      "abbr": "DER",
+      "city": "Derby",
+      "colors": [
+        "#FFFFFF",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "portsmouth",
+      "league": "eng-championship",
+      "name": "Portsmouth FC",
+      "short": "Portsmouth",
+      "abbr": "POR",
+      "city": "Portsmouth",
+      "colors": [
+        "#001489",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "queens-park-rangers",
+      "league": "eng-championship",
+      "name": "Queens Park Rangers",
+      "short": "QPR",
+      "abbr": "QPR",
+      "city": "London",
+      "colors": [
+        "#1D5BA4",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "millwall",
+      "league": "eng-championship",
+      "name": "Millwall FC",
+      "short": "Millwall",
+      "abbr": "MIL",
+      "city": "London",
+      "colors": [
+        "#001D5E",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "birmingham-city",
+      "league": "eng-league-one",
+      "name": "Birmingham City",
+      "short": "Birmingham",
+      "abbr": "BIR",
+      "city": "Birmingham",
+      "colors": [
+        "#0000FF",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "bolton-wanderers",
+      "league": "eng-league-one",
+      "name": "Bolton Wanderers",
+      "short": "Bolton",
+      "abbr": "BOL",
+      "city": "Bolton",
+      "colors": [
+        "#263C7E",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "wrexham",
+      "league": "eng-league-one",
+      "name": "Wrexham AFC",
+      "short": "Wrexham",
+      "abbr": "WRE",
+      "city": "Wrexham",
+      "colors": [
+        "#DD0000",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "charlton-athletic",
+      "league": "eng-league-one",
+      "name": "Charlton Athletic",
+      "short": "Charlton",
+      "abbr": "CHA",
+      "city": "London",
+      "colors": [
+        "#D4021D",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hull-city-afc",
+      "league": "eng-premier-league",
+      "name": "Hull City AFC",
+      "short": "Hull City AFC",
+      "abbr": "HUC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 2,
+        "international": 1
+      }
+    },
+    {
+      "id": "preston-north-end-fc",
+      "league": "eng-championship",
+      "name": "Preston North End FC",
+      "short": "Preston North",
+      "abbr": "PNE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bristol-city-fc",
+      "league": "eng-championship",
+      "name": "Bristol City FC",
+      "short": "Bristol City",
+      "abbr": "BRC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "lincoln-city-fc",
+      "league": "eng-championship",
+      "name": "Lincoln City FC",
+      "short": "Lincoln City",
+      "abbr": "LIC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "stoke-city-fc",
+      "league": "eng-championship",
+      "name": "Stoke City FC",
+      "short": "Stoke City",
+      "abbr": "STC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "swansea-city-afc",
+      "league": "eng-championship",
+      "name": "Swansea City AFC",
+      "short": "Swansea City AFC",
+      "abbr": "SWC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "watford-fc",
+      "league": "eng-championship",
+      "name": "Watford FC",
+      "short": "Watford",
+      "abbr": "WAT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cardiff-city-fc",
+      "league": "eng-championship",
+      "name": "Cardiff City FC",
+      "short": "Cardiff City",
+      "abbr": "CAC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "blackburn-rovers-fc",
+      "league": "eng-championship",
+      "name": "Blackburn Rovers FC",
+      "short": "Blackburn Rovers",
+      "abbr": "BLR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "luton-town",
+      "league": "eng-league-one",
+      "name": "Luton Town",
+      "short": "Luton Town",
+      "abbr": "LUT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "afc-wimbledon",
+      "league": "eng-league-one",
+      "name": "AFC Wimbledon",
+      "short": "AFC Wimbledon",
+      "abbr": "WIM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "peterborough-united",
+      "league": "eng-league-one",
+      "name": "Peterborough United",
+      "short": "Peterborough United",
+      "abbr": "PEU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "blackpool-fc",
+      "league": "eng-league-one",
+      "name": "Blackpool FC",
+      "short": "Blackpool",
+      "abbr": "BLA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "stevenage-fc",
+      "league": "eng-league-one",
+      "name": "Stevenage FC",
+      "short": "Stevenage",
+      "abbr": "STE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bradford-city",
+      "league": "eng-league-one",
+      "name": "Bradford City",
+      "short": "Bradford City",
+      "abbr": "BRC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "wycombe-wanderers",
+      "league": "eng-league-one",
+      "name": "Wycombe Wanderers",
+      "short": "Wycombe Wanderers",
+      "abbr": "WYW",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "burton-albion",
+      "league": "eng-league-one",
+      "name": "Burton Albion",
+      "short": "Burton Albion",
+      "abbr": "BUA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "mansfield-town",
+      "league": "eng-league-one",
+      "name": "Mansfield Town",
+      "short": "Mansfield Town",
+      "abbr": "MAT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "doncaster-rovers",
+      "league": "eng-league-one",
+      "name": "Doncaster Rovers",
+      "short": "Doncaster Rovers",
+      "abbr": "DOR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "exeter-city",
+      "league": "eng-league-one",
+      "name": "Exeter City",
+      "short": "Exeter City",
+      "abbr": "EXC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "huddersfield-town",
+      "league": "eng-league-one",
+      "name": "Huddersfield Town",
+      "short": "Huddersfield Town",
+      "abbr": "HUT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "leyton-orient",
+      "league": "eng-league-one",
+      "name": "Leyton Orient",
+      "short": "Leyton Orient",
+      "abbr": "LEO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "reading-fc",
+      "league": "eng-league-one",
+      "name": "Reading FC",
+      "short": "Reading",
+      "abbr": "REA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "plymouth-argyle",
+      "league": "eng-league-one",
+      "name": "Plymouth Argyle",
+      "short": "Plymouth Argyle",
+      "abbr": "PLA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "barnsley-fc",
+      "league": "eng-league-one",
+      "name": "Barnsley FC",
+      "short": "Barnsley",
+      "abbr": "BAR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "rotherham-united",
+      "league": "eng-league-one",
+      "name": "Rotherham United",
+      "short": "Rotherham United",
+      "abbr": "ROU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "port-vale-fc",
+      "league": "eng-league-one",
+      "name": "Port Vale FC",
+      "short": "Port Vale",
+      "abbr": "POV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "wigan-athletic",
+      "league": "eng-league-one",
+      "name": "Wigan Athletic",
+      "short": "Wigan Athletic",
+      "abbr": "WIG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "northampton-town",
+      "league": "eng-league-one",
+      "name": "Northampton Town",
+      "short": "Northampton Town",
+      "abbr": "NOT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "stockport-county",
+      "league": "eng-league-one",
+      "name": "Stockport County",
+      "short": "Stockport County",
+      "abbr": "STC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "accrington-stanley",
+      "league": "eng-tier-4",
+      "name": "Accrington Stanley",
+      "short": "Accrington Stanley",
+      "abbr": "ACS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "gillingham-fc",
+      "league": "eng-tier-4",
+      "name": "Gillingham FC",
+      "short": "Gillingham",
+      "abbr": "GIL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "harrogate-town",
+      "league": "eng-tier-4",
+      "name": "Harrogate Town",
+      "short": "Harrogate Town",
+      "abbr": "HAT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cambridge-united",
+      "league": "eng-tier-4",
+      "name": "Cambridge United",
+      "short": "Cambridge United",
+      "abbr": "CAU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cheltenham-town",
+      "league": "eng-tier-4",
+      "name": "Cheltenham Town",
+      "short": "Cheltenham Town",
+      "abbr": "CHT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "colchester-united",
+      "league": "eng-tier-4",
+      "name": "Colchester United",
+      "short": "Colchester United",
+      "abbr": "COU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "tranmere-rovers",
+      "league": "eng-tier-4",
+      "name": "Tranmere Rovers",
+      "short": "Tranmere Rovers",
+      "abbr": "TRR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "barnet-fc",
+      "league": "eng-tier-4",
+      "name": "Barnet FC",
+      "short": "Barnet",
+      "abbr": "BAR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fleetwood-town",
+      "league": "eng-tier-4",
+      "name": "Fleetwood Town",
+      "short": "Fleetwood Town",
+      "abbr": "FLT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "chesterfield-fc",
+      "league": "eng-tier-4",
+      "name": "Chesterfield FC",
+      "short": "Chesterfield",
+      "abbr": "CHE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "barrow-afc",
+      "league": "eng-tier-4",
+      "name": "Barrow AFC",
+      "short": "Barrow AFC",
+      "abbr": "BAR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "grimsby-town",
+      "league": "eng-tier-4",
+      "name": "Grimsby Town",
+      "short": "Grimsby Town",
+      "abbr": "GRT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "crawley-town",
+      "league": "eng-tier-4",
+      "name": "Crawley Town",
+      "short": "Crawley Town",
+      "abbr": "CRT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "milton-keynes-dons",
+      "league": "eng-tier-4",
+      "name": "Milton Keynes Dons",
+      "short": "Milton Keynes",
+      "abbr": "MKD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "oldham-athletic",
+      "league": "eng-tier-4",
+      "name": "Oldham Athletic",
+      "short": "Oldham Athletic",
+      "abbr": "OLD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "newport-county",
+      "league": "eng-tier-4",
+      "name": "Newport County",
+      "short": "Newport County",
+      "abbr": "NEC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "notts-county",
+      "league": "eng-tier-4",
+      "name": "Notts County",
+      "short": "Notts County",
+      "abbr": "NOC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "salford-city",
+      "league": "eng-tier-4",
+      "name": "Salford City",
+      "short": "Salford City",
+      "abbr": "SAC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "crewe-alexandra",
+      "league": "eng-tier-4",
+      "name": "Crewe Alexandra",
+      "short": "Crewe Alexandra",
+      "abbr": "CRA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "shrewsbury-town",
+      "league": "eng-tier-4",
+      "name": "Shrewsbury Town",
+      "short": "Shrewsbury Town",
+      "abbr": "SHT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bromley-fc",
+      "league": "eng-tier-4",
+      "name": "Bromley FC",
+      "short": "Bromley",
+      "abbr": "BRO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "walsall-fc",
+      "league": "eng-tier-4",
+      "name": "Walsall FC",
+      "short": "Walsall",
+      "abbr": "WAL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "swindon-town",
+      "league": "eng-tier-4",
+      "name": "Swindon Town",
+      "short": "Swindon Town",
+      "abbr": "SWT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "altrincham-fc",
+      "league": "eng-tier-5",
+      "name": "Altrincham FC",
+      "short": "Altrincham",
+      "abbr": "ALT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "aldershot-town",
+      "league": "eng-tier-5",
+      "name": "Aldershot Town",
+      "short": "Aldershot Town",
+      "abbr": "ALT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "boreham-wood",
+      "league": "eng-tier-5",
+      "name": "Boreham Wood",
+      "short": "Boreham Wood",
+      "abbr": "BOW",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "rochdale-afc",
+      "league": "eng-tier-5",
+      "name": "Rochdale AFC",
+      "short": "Rochdale AFC",
+      "abbr": "ROC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "brackley-town",
+      "league": "eng-tier-5",
+      "name": "Brackley Town",
+      "short": "Brackley Town",
+      "abbr": "BRT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "eastleigh-fc",
+      "league": "eng-tier-5",
+      "name": "Eastleigh FC",
+      "short": "Eastleigh",
+      "abbr": "EAS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "braintree-town",
+      "league": "eng-tier-5",
+      "name": "Braintree Town",
+      "short": "Braintree Town",
+      "abbr": "BRT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "halifax-town",
+      "league": "eng-tier-5",
+      "name": "Halifax Town",
+      "short": "Halifax Town",
+      "abbr": "HAT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "gateshead-fc",
+      "league": "eng-tier-5",
+      "name": "Gateshead FC",
+      "short": "Gateshead",
+      "abbr": "GAT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "southend-united",
+      "league": "eng-tier-5",
+      "name": "Southend United",
+      "short": "Southend United",
+      "abbr": "SOU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "solihull-moors",
+      "league": "eng-tier-5",
+      "name": "Solihull Moors",
+      "short": "Solihull Moors",
+      "abbr": "SOM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "forest-green-rovers",
+      "league": "eng-tier-5",
+      "name": "Forest Green Rovers",
+      "short": "Forest Green",
+      "abbr": "FGR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "tamworth-fc",
+      "league": "eng-tier-5",
+      "name": "Tamworth FC",
+      "short": "Tamworth",
+      "abbr": "TAM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "scunthorpe-united",
+      "league": "eng-tier-5",
+      "name": "Scunthorpe United",
+      "short": "Scunthorpe United",
+      "abbr": "SCU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "wealdstone-fc",
+      "league": "eng-tier-5",
+      "name": "Wealdstone FC",
+      "short": "Wealdstone",
+      "abbr": "WEA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "truro-city",
+      "league": "eng-tier-5",
+      "name": "Truro City",
+      "short": "Truro City",
+      "abbr": "TRC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "woking-fc",
+      "league": "eng-tier-5",
+      "name": "Woking FC",
+      "short": "Woking",
+      "abbr": "WOK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "carlisle-united",
+      "league": "eng-tier-5",
+      "name": "Carlisle United",
+      "short": "Carlisle United",
+      "abbr": "CAU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "yeovil-town",
+      "league": "eng-tier-5",
+      "name": "Yeovil Town",
+      "short": "Yeovil Town",
+      "abbr": "YET",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hartlepool-united",
+      "league": "eng-tier-5",
+      "name": "Hartlepool United",
+      "short": "Hartlepool United",
+      "abbr": "HAU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "york-city",
+      "league": "eng-tier-5",
+      "name": "York City",
+      "short": "York City",
+      "abbr": "YOC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sutton-united",
+      "league": "eng-tier-5",
+      "name": "Sutton United",
+      "short": "Sutton United",
+      "abbr": "SUU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "boston-united",
+      "league": "eng-tier-5",
+      "name": "Boston United",
+      "short": "Boston United",
+      "abbr": "BOU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "morecambe-fc",
+      "league": "eng-tier-5",
+      "name": "Morecambe FC",
+      "short": "Morecambe",
+      "abbr": "MOR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

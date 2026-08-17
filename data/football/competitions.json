@@ -1,0 +1,64 @@
+{
+  "$comment": "Wettbewerbe oberhalb der Ligen: kontinentale Klubwettbewerbe, Klub-WM und Nationalmannschafts-Turniere. Ligen und nationale Pokale stehen in leagues.json bzw. cups.json. 'prestige' 1–5 steuert, wie stark ein Titel in der Vitrine und im Karriere-Score gewichtet wird.",
+
+  "$gender": "Jeder Wettbewerb trägt 'gender': 'men' oder 'women'. Die Engine wählt anhand des Spielergeschlechts aus. Solange footsys nur Männerkarrieren kennt, sind die Frauenwettbewerbe hinterlegt, aber inaktiv.",
+  "$ageLimit": "Nachwuchswettbewerbe tragen 'maxAge'. Sie werden nur gewürfelt, solange der Spieler jung genug ist.",
+
+  "club": [
+    { "id": "uefa-champions-league", "name": "UEFA Champions League", "confederation": "UEFA", "gender": "men", "level": "continental_primary", "prestige": 5, "trophy": "continental-primary" },
+    { "id": "uefa-europa-league", "name": "UEFA Europa League", "confederation": "UEFA", "gender": "men", "level": "continental_secondary", "prestige": 3, "trophy": "continental-secondary" },
+    { "id": "uefa-conference-league", "name": "UEFA Conference League", "confederation": "UEFA", "gender": "men", "level": "continental_tertiary", "prestige": 2, "trophy": "continental-tertiary" },
+    { "id": "uefa-youth-league", "name": "UEFA Youth League", "confederation": "UEFA", "gender": "men", "level": "continental_youth", "prestige": 2, "trophy": "continental-youth", "maxAge": 19 },
+    { "id": "uefa-super-cup", "name": "UEFA Super Cup", "confederation": "UEFA", "gender": "men", "level": "continental_supercup", "prestige": 2, "trophy": "supercup" },
+    { "id": "uefa-womens-champions-league", "name": "UEFA Women's Champions League", "confederation": "UEFA", "gender": "women", "level": "continental_primary", "prestige": 5, "trophy": "continental-primary" },
+    { "id": "uefa-womens-europa-cup", "name": "UEFA Women's Europa Cup", "confederation": "UEFA", "gender": "women", "level": "continental_secondary", "prestige": 3, "trophy": "continental-secondary" },
+
+    { "id": "conmebol-libertadores", "name": "CONMEBOL Libertadores", "confederation": "CONMEBOL", "gender": "men", "level": "continental_primary", "prestige": 5, "trophy": "continental-primary" },
+    { "id": "conmebol-sudamericana", "name": "CONMEBOL Sudamericana", "confederation": "CONMEBOL", "gender": "men", "level": "continental_secondary", "prestige": 3, "trophy": "continental-secondary" },
+    { "id": "conmebol-libertadores-sub-20", "name": "CONMEBOL Libertadores Sub-20", "confederation": "CONMEBOL", "gender": "men", "level": "continental_youth", "prestige": 2, "trophy": "continental-youth", "maxAge": 20 },
+    { "id": "conmebol-recopa", "name": "CONMEBOL Recopa Sudamericana", "confederation": "CONMEBOL", "gender": "men", "level": "continental_supercup", "prestige": 2, "trophy": "supercup" },
+    { "id": "conmebol-libertadores-femenina", "name": "CONMEBOL Libertadores Femenina", "confederation": "CONMEBOL", "gender": "women", "level": "continental_primary", "prestige": 5, "trophy": "continental-primary" },
+
+    { "id": "caf-champions-league", "name": "TotalEnergies CAF Champions League", "confederation": "CAF", "gender": "men", "level": "continental_primary", "prestige": 4, "trophy": "continental-primary" },
+    { "id": "caf-confederation-cup", "name": "TotalEnergies CAF Confederation Cup", "confederation": "CAF", "gender": "men", "level": "continental_secondary", "prestige": 2, "trophy": "continental-secondary" },
+
+    { "id": "concacaf-champions-cup", "name": "CONCACAF Champions Cup", "confederation": "CONCACAF", "gender": "men", "level": "continental_primary", "prestige": 3, "trophy": "continental-primary" },
+    { "id": "concacaf-caribbean-cup", "name": "Caribbean Cup", "confederation": "CONCACAF", "gender": "men", "level": "continental_secondary", "prestige": 2, "trophy": "continental-secondary" },
+
+    { "id": "afc-champions-league-elite", "name": "AFC Champions League Elite", "confederation": "AFC", "gender": "men", "level": "continental_primary", "prestige": 4, "trophy": "continental-primary" },
+    { "id": "afc-champions-league-two", "name": "AFC Champions League Two", "confederation": "AFC", "gender": "men", "level": "continental_secondary", "prestige": 2, "trophy": "continental-secondary" },
+    { "id": "afc-challenge-league", "name": "AFC Challenge League", "confederation": "AFC", "gender": "men", "level": "continental_tertiary", "prestige": 1, "trophy": "continental-tertiary" },
+    { "id": "asean-club-championship", "name": "ASEAN Club Championship", "confederation": "AFC", "gender": "men", "level": "continental_regional", "prestige": 1, "trophy": "continental-tertiary" },
+    { "id": "afc-womens-champions-league", "name": "AFC Women's Champions League", "confederation": "AFC", "gender": "women", "level": "continental_primary", "prestige": 4, "trophy": "continental-primary" },
+
+    { "id": "ofc-champions-league", "name": "OFC Men's Champions League", "confederation": "OFC", "gender": "men", "level": "continental_primary", "prestige": 2, "trophy": "continental-primary" },
+    { "id": "ofc-womens-champions-league", "name": "OFC Women's Champions League", "confederation": "OFC", "gender": "women", "level": "continental_primary", "prestige": 2, "trophy": "continental-primary" },
+
+    { "id": "fifa-club-world-cup", "name": "FIFA Klub-Weltmeisterschaft", "confederation": null, "gender": "men", "level": "world_club", "prestige": 5, "trophy": "world-club" }
+  ],
+
+  "national": [
+    { "id": "fifa-world-cup", "name": "Weltmeisterschaft", "confederation": null, "gender": "men", "level": "world_cup", "prestige": 5, "trophy": "world-cup", "cycleYears": 4, "editions": [2026, 2030, 2034, 2038, 2042, 2046, 2050] },
+    { "id": "uefa-euro", "name": "Europameisterschaft", "confederation": "UEFA", "gender": "men", "level": "continental_national", "prestige": 4, "trophy": "continental-national", "cycleYears": 4 },
+    { "id": "copa-america", "name": "Copa América", "confederation": "CONMEBOL", "gender": "men", "level": "continental_national", "prestige": 4, "trophy": "continental-national", "cycleYears": 4 },
+    { "id": "africa-cup-of-nations", "name": "Afrika-Cup", "confederation": "CAF", "gender": "men", "level": "continental_national", "prestige": 3, "trophy": "continental-national", "cycleYears": 2 },
+    { "id": "afc-asian-cup", "name": "Asienmeisterschaft", "confederation": "AFC", "gender": "men", "level": "continental_national", "prestige": 3, "trophy": "continental-national", "cycleYears": 4 },
+    { "id": "concacaf-gold-cup", "name": "Gold Cup", "confederation": "CONCACAF", "gender": "men", "level": "continental_national", "prestige": 3, "trophy": "continental-national", "cycleYears": 2 },
+    { "id": "ofc-nations-cup", "name": "OFC Nations Cup", "confederation": "OFC", "gender": "men", "level": "continental_national", "prestige": 2, "trophy": "continental-national", "cycleYears": 4 },
+    { "id": "uefa-nations-league", "name": "Nations League", "confederation": "UEFA", "gender": "men", "level": "secondary_national", "prestige": 2, "trophy": "supercup", "cycleYears": 2 },
+    { "id": "olympic-football", "name": "Olympisches Fußballturnier", "confederation": null, "gender": "men", "level": "youth_national", "prestige": 2, "trophy": "olympic", "cycleYears": 4, "maxAge": 23 }
+  ],
+
+  "individual": [
+    { "id": "ballon-dor", "name": "Ballon d'Or", "scope": "world", "prestige": 5, "trophy": "individual-golden-ball" },
+    { "id": "world-cup-golden-ball", "name": "WM: Goldener Ball", "scope": "world", "prestige": 5, "trophy": "individual-golden-ball" },
+    { "id": "world-cup-golden-boot", "name": "WM: Goldener Schuh", "scope": "world", "prestige": 5, "trophy": "individual-golden-boot" },
+    { "id": "golden-boy", "name": "Golden Boy", "scope": "world", "prestige": 3, "trophy": "individual-young", "maxAge": 21 },
+    { "id": "league-top-scorer", "name": "Torschützenkönig", "scope": "league", "prestige": 3, "trophy": "individual-golden-boot" },
+    { "id": "league-top-assists", "name": "Vorlagenkönig", "scope": "league", "prestige": 2, "trophy": "individual-playmaker" },
+    { "id": "league-player-of-the-season", "name": "Spieler der Saison", "scope": "league", "prestige": 3, "trophy": "individual-golden-ball" },
+    { "id": "league-young-player", "name": "Nachwuchsspieler der Saison", "scope": "league", "prestige": 2, "trophy": "individual-young", "maxAge": 21 },
+    { "id": "league-goalkeeper-of-the-season", "name": "Torwart der Saison", "scope": "league", "prestige": 2, "trophy": "individual-golden-glove", "positionGroup": "GK" },
+    { "id": "continental-top-scorer", "name": "Torschützenkönig (kontinental)", "scope": "continental", "prestige": 4, "trophy": "individual-golden-boot" }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "country": "RUS",
+  "clubs": [
+    {
+      "id": "lokomotiv-moskva",
+      "league": "rus-premier-liga",
+      "name": "Lokomotiv Moskva",
+      "short": "Lokomotiv Moskva",
+      "abbr": "LOM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "akron-tolyatti",
+      "league": "rus-premier-liga",
+      "name": "Akron Tolyatti",
+      "short": "Akron Tolyatti",
+      "abbr": "AKT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "krylia-sovetov",
+      "league": "rus-premier-liga",
+      "name": "Krylia Sovetov",
+      "short": "Krylia Sovetov",
+      "abbr": "KRS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "zenit-st-petersburg",
+      "league": "rus-premier-liga",
+      "name": "Zenit St. Petersburg",
+      "short": "Zenit St.",
+      "abbr": "ZSP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-rostov",
+      "league": "rus-premier-liga",
+      "name": "FK Rostov",
+      "short": "FK Rostov",
+      "abbr": "FKR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cska-moskva",
+      "league": "rus-premier-liga",
+      "name": "CSKA Moskva",
+      "short": "CSKA Moskva",
+      "abbr": "CSM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "dinamo-moskva",
+      "league": "rus-premier-liga",
+      "name": "Dinamo Moskva",
+      "short": "Dinamo Moskva",
+      "abbr": "DIM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fakel-voronezh",
+      "league": "rus-premier-liga",
+      "name": "Fakel Voronezh",
+      "short": "Fakel Voronezh",
+      "abbr": "FAV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-orenburg",
+      "league": "rus-premier-liga",
+      "name": "FK Orenburg",
+      "short": "FK Orenburg",
+      "abbr": "FKO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "spartak-moskva",
+      "league": "rus-premier-liga",
+      "name": "Spartak Moskva",
+      "short": "Spartak Moskva",
+      "abbr": "SPM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "akhmat-grozny",
+      "league": "rus-premier-liga",
+      "name": "Akhmat Grozny",
+      "short": "Akhmat Grozny",
+      "abbr": "AKG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-krasnodar",
+      "league": "rus-premier-liga",
+      "name": "FK Krasnodar",
+      "short": "FK Krasnodar",
+      "abbr": "FKK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-khimki",
+      "league": "rus-premier-liga",
+      "name": "FK Khimki",
+      "short": "FK Khimki",
+      "abbr": "FKK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-dinamo-makhachkala",
+      "league": "rus-premier-liga",
+      "name": "FK Dinamo Makhachkala",
+      "short": "FK Dinamo",
+      "abbr": "FDM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-nizhny-novgorod",
+      "league": "rus-premier-liga",
+      "name": "FK Nizhny Novgorod",
+      "short": "FK Nizhny",
+      "abbr": "FNN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "rubin-kazan",
+      "league": "rus-premier-liga",
+      "name": "Rubin Kazan",
+      "short": "Rubin Kazan",
+      "abbr": "RUK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,515 @@
+{
+  "country": "CZE",
+  "clubs": [
+    {
+      "id": "ac-sparta-praha",
+      "league": "cze-fortuna-liga",
+      "name": "AC Sparta Praha",
+      "short": "AC Sparta Praha",
+      "abbr": "SPP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-pardubice",
+      "league": "cze-fortuna-liga",
+      "name": "FK Pardubice",
+      "short": "FK Pardubice",
+      "abbr": "FKP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-jablonec",
+      "league": "cze-fortuna-liga",
+      "name": "FK Jablonec",
+      "short": "FK Jablonec",
+      "abbr": "FKJ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-mlada-boleslav",
+      "league": "cze-fortuna-liga",
+      "name": "FK Mladá Boleslav",
+      "short": "FK Mladá",
+      "abbr": "FMB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bohemians-praha-1905",
+      "league": "cze-fortuna-liga",
+      "name": "Bohemians Praha 1905",
+      "short": "Bohemians Praha",
+      "abbr": "BOP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "banik-ostrava",
+      "league": "cze-fortuna-liga",
+      "name": "Baník Ostrava",
+      "short": "Baník Ostrava",
+      "abbr": "BAO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-dukla-praha",
+      "league": "cze-fortuna-liga",
+      "name": "FK Dukla Praha",
+      "short": "FK Dukla Praha",
+      "abbr": "FDP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "viktoria-plzen",
+      "league": "cze-fortuna-liga",
+      "name": "Viktoria Plzeň",
+      "short": "Viktoria Plzeň",
+      "abbr": "VIP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "mfk-karvina",
+      "league": "cze-fortuna-liga",
+      "name": "MFK Karviná",
+      "short": "MFK Karviná",
+      "abbr": "MFK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "slovan-liberec",
+      "league": "cze-fortuna-liga",
+      "name": "Slovan Liberec",
+      "short": "Slovan Liberec",
+      "abbr": "SLL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "slavia-praha",
+      "league": "cze-fortuna-liga",
+      "name": "Slavia Praha",
+      "short": "Slavia Praha",
+      "abbr": "SLP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-hradec-kralove",
+      "league": "cze-fortuna-liga",
+      "name": "FC Hradec Králové",
+      "short": "FC Hradec",
+      "abbr": "HRK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-teplice",
+      "league": "cze-fortuna-liga",
+      "name": "FK Teplice",
+      "short": "FK Teplice",
+      "abbr": "FKT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "dynamo-ceske-budejovice",
+      "league": "cze-fortuna-liga",
+      "name": "Dynamo České Budějovice",
+      "short": "Dynamo České",
+      "abbr": "DČB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sigma-olomouc",
+      "league": "cze-fortuna-liga",
+      "name": "Sigma Olomouc",
+      "short": "Sigma Olomouc",
+      "abbr": "SIO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sfc-opava",
+      "league": "cze-tier-2",
+      "name": "SFC Opava",
+      "short": "SFC Opava",
+      "abbr": "SFO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-sellier-bellot-vlasim",
+      "league": "cze-tier-2",
+      "name": "FC Sellier & Bellot Vlašim",
+      "short": "FC Sellier",
+      "abbr": "SBV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "mfk-chrudim",
+      "league": "cze-tier-2",
+      "name": "MFK Chrudim",
+      "short": "MFK Chrudim",
+      "abbr": "MFC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sigma-olomouc-b",
+      "league": "cze-tier-2",
+      "name": "Sigma Olomouc B",
+      "short": "Sigma Olomouc B",
+      "abbr": "SOB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "mfk-vyskov",
+      "league": "cze-tier-2",
+      "name": "MFK Vyškov",
+      "short": "MFK Vyškov",
+      "abbr": "MFV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sk-lisen",
+      "league": "cze-tier-2",
+      "name": "SK Líšeň",
+      "short": "SK Líšeň",
+      "abbr": "SKL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-zlin",
+      "league": "cze-tier-2",
+      "name": "FC Zlín",
+      "short": "FC Zlín",
+      "abbr": "ZLÍ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-mas-taborsko",
+      "league": "cze-tier-2",
+      "name": "FK MAS Táborsko",
+      "short": "FK MAS Táborsko",
+      "abbr": "FMT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "slavia-praha-b",
+      "league": "cze-tier-2",
+      "name": "Slavia Praha B",
+      "short": "Slavia Praha B",
+      "abbr": "SPB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ac-sparta-praha-b",
+      "league": "cze-tier-2",
+      "name": "AC Sparta Praha B",
+      "short": "AC Sparta",
+      "abbr": "SPB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "banik-ostrava-b",
+      "league": "cze-tier-2",
+      "name": "Baník Ostrava B",
+      "short": "Baník Ostrava B",
+      "abbr": "BOB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-varnsdorf",
+      "league": "cze-tier-2",
+      "name": "FK Varnsdorf",
+      "short": "FK Varnsdorf",
+      "abbr": "FKV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "viktoria-zizkov",
+      "league": "cze-tier-2",
+      "name": "Viktoria Žižkov",
+      "short": "Viktoria Žižkov",
+      "abbr": "VIŽ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vysocina-jihlava",
+      "league": "cze-tier-2",
+      "name": "Vysočina Jihlava",
+      "short": "Vysočina Jihlava",
+      "abbr": "VYJ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "zbrojovka-brno",
+      "league": "cze-tier-2",
+      "name": "Zbrojovka Brno",
+      "short": "Zbrojovka Brno",
+      "abbr": "ZBB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

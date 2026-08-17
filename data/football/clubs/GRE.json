@@ -1,0 +1,243 @@
+{
+  "country": "GRE",
+  "clubs": [
+    {
+      "id": "volos-nfc",
+      "league": "gre-super-league",
+      "name": "Volos NFC",
+      "short": "Volos NFC",
+      "abbr": "VON",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "olympiakos-piraeus",
+      "league": "gre-super-league",
+      "name": "Olympiakos Piraeus",
+      "short": "Olympiakos Piraeus",
+      "abbr": "OLP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "paok-saloniki",
+      "league": "gre-super-league",
+      "name": "PAOK Saloniki",
+      "short": "PAOK Saloniki",
+      "abbr": "PAS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "panserraikos",
+      "league": "gre-super-league",
+      "name": "Panserraikos",
+      "short": "Panserraikos",
+      "abbr": "PAN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "levadiakos",
+      "league": "gre-super-league",
+      "name": "Levadiakos",
+      "short": "Levadiakos",
+      "abbr": "LEV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "gs-kallithea",
+      "league": "gre-super-league",
+      "name": "GS Kallithea",
+      "short": "GS Kallithea",
+      "abbr": "GSK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "panathinaikos",
+      "league": "gre-super-league",
+      "name": "Panathinaikos",
+      "short": "Panathinaikos",
+      "abbr": "PAN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "asteras-tripolis",
+      "league": "gre-super-league",
+      "name": "Asteras Tripolis",
+      "short": "Asteras Tripolis",
+      "abbr": "AST",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "atromitos",
+      "league": "gre-super-league",
+      "name": "Atromitos",
+      "short": "Atromitos",
+      "abbr": "ATR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "aris-saloniki",
+      "league": "gre-super-league",
+      "name": "Aris Saloniki",
+      "short": "Aris Saloniki",
+      "abbr": "ARS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "aek-athen",
+      "league": "gre-super-league",
+      "name": "AEK Athen",
+      "short": "AEK Athen",
+      "abbr": "AEA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ofi-heraklion",
+      "league": "gre-super-league",
+      "name": "OFI Heraklion",
+      "short": "OFI Heraklion",
+      "abbr": "OFH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "panetolikos",
+      "league": "gre-super-league",
+      "name": "Panetolikos",
+      "short": "Panetolikos",
+      "abbr": "PAN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "lamia",
+      "league": "gre-super-league",
+      "name": "Lamia",
+      "short": "Lamia",
+      "abbr": "LAM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

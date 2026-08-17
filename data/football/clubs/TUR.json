@@ -1,0 +1,328 @@
+{
+  "country": "TUR",
+  "clubs": [
+    {
+      "id": "galatasaray",
+      "league": "tur-super-lig",
+      "name": "Galatasaray",
+      "short": "Galatasaray",
+      "abbr": "GAL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hatayspor",
+      "league": "tur-super-lig",
+      "name": "Hatayspor",
+      "short": "Hatayspor",
+      "abbr": "HAT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kas-mpasa-sk",
+      "league": "tur-super-lig",
+      "name": "Kasımpaşa SK",
+      "short": "Kasımpaşa",
+      "abbr": "KAS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "konyaspor",
+      "league": "tur-super-lig",
+      "name": "Konyaspor",
+      "short": "Konyaspor",
+      "abbr": "KON",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "antalyaspor",
+      "league": "tur-super-lig",
+      "name": "Antalyaspor",
+      "short": "Antalyaspor",
+      "abbr": "ANT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "goeztepe",
+      "league": "tur-super-lig",
+      "name": "Göztepe",
+      "short": "Göztepe",
+      "abbr": "GÖZ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fenerbahce",
+      "league": "tur-super-lig",
+      "name": "Fenerbahçe",
+      "short": "Fenerbahçe",
+      "abbr": "FEN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "adana-demirspor",
+      "league": "tur-super-lig",
+      "name": "Adana Demirspor",
+      "short": "Adana Demirspor",
+      "abbr": "ADD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sivasspor",
+      "league": "tur-super-lig",
+      "name": "Sivasspor",
+      "short": "Sivasspor",
+      "abbr": "SIV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "trabzonspor",
+      "league": "tur-super-lig",
+      "name": "Trabzonspor",
+      "short": "Trabzonspor",
+      "abbr": "TRA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "alanyaspor",
+      "league": "tur-super-lig",
+      "name": "Alanyaspor",
+      "short": "Alanyaspor",
+      "abbr": "ALA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "eyuepspor",
+      "league": "tur-super-lig",
+      "name": "Eyüpspor",
+      "short": "Eyüpspor",
+      "abbr": "EYÜ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "samsunspor",
+      "league": "tur-super-lig",
+      "name": "Samsunspor",
+      "short": "Samsunspor",
+      "abbr": "SAM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "besiktas",
+      "league": "tur-super-lig",
+      "name": "Beşiktaş",
+      "short": "Beşiktaş",
+      "abbr": "BEŞ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "caykur-rizespor",
+      "league": "tur-super-lig",
+      "name": "Çaykur Rizespor",
+      "short": "Çaykur Rizespor",
+      "abbr": "ÇAR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "istanbul-basaksehir",
+      "league": "tur-super-lig",
+      "name": "İstanbul Başakşehir",
+      "short": "İstanbul Başakşehir",
+      "abbr": "İSB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bodrum-fk",
+      "league": "tur-super-lig",
+      "name": "Bodrum FK",
+      "short": "Bodrum",
+      "abbr": "BOF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "gaziantep-fk",
+      "league": "tur-super-lig",
+      "name": "Gaziantep FK",
+      "short": "Gaziantep",
+      "abbr": "GAF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kayserispor",
+      "league": "tur-super-lig",
+      "name": "Kayserispor",
+      "short": "Kayserispor",
+      "abbr": "KAY",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

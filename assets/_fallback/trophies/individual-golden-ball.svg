@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Auszeichnung: Goldener Ball">
+  <circle cx="32" cy="24" r="15" fill="currentColor" fill-opacity=".92"/>
+  <path d="m32 16 4.8 3.5-1.8 5.6h-6l-1.8-5.6L32 16Z" fill="currentColor" fill-opacity=".3"/>
+  <path d="M32 9v7M19.5 18.5l6.5 2.5M44.5 18.5 38 21M23 36l3-5.5M41 36l-3-5.5" stroke="currentColor" stroke-width="1.6" stroke-opacity=".35"/>
+  <path d="M27 40h10l1.5 7h-13L27 40Z" fill="currentColor" fill-opacity=".65"/>
+  <rect x="18" y="48" width="28" height="6" rx="2" fill="currentColor" fill-opacity=".5"/>
+</svg>

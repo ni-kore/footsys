@@ -1,0 +1,192 @@
+{
+  "country": "WAL",
+  "clubs": [
+    {
+      "id": "newtown-afc",
+      "league": "wal-tier-1",
+      "name": "Newtown AFC",
+      "short": "Newtown AFC",
+      "abbr": "NEW",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "aberystwyth-town",
+      "league": "wal-tier-1",
+      "name": "Aberystwyth Town",
+      "short": "Aberystwyth Town",
+      "abbr": "ABT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "barry-town-united",
+      "league": "wal-tier-1",
+      "name": "Barry Town United",
+      "short": "Barry Town",
+      "abbr": "BTU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bala-town",
+      "league": "wal-tier-1",
+      "name": "Bala Town",
+      "short": "Bala Town",
+      "abbr": "BAT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "flint-town-united",
+      "league": "wal-tier-1",
+      "name": "Flint Town United",
+      "short": "Flint Town",
+      "abbr": "FTU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cardiff-metropolitan",
+      "league": "wal-tier-1",
+      "name": "Cardiff Metropolitan",
+      "short": "Cardiff Metropolitan",
+      "abbr": "CAM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "haverfordwest-county",
+      "league": "wal-tier-1",
+      "name": "Haverfordwest County",
+      "short": "Haverfordwest County",
+      "abbr": "HAC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "the-new-saints",
+      "league": "wal-tier-1",
+      "name": "The New Saints",
+      "short": "The New Saints",
+      "abbr": "TNS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "caernarfon-town",
+      "league": "wal-tier-1",
+      "name": "Caernarfon Town",
+      "short": "Caernarfon Town",
+      "abbr": "CAT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "briton-ferry-llansawel-afc",
+      "league": "wal-tier-1",
+      "name": "Briton Ferry Llansawel AFC",
+      "short": "Briton Ferry",
+      "abbr": "BFL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "penybont-fc",
+      "league": "wal-tier-1",
+      "name": "Penybont FC",
+      "short": "Penybont",
+      "abbr": "PEN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

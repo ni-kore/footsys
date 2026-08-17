@@ -1,0 +1,50 @@
+{
+  "$comment": "Sichtbare Karrieremeter. Werden in der UI als 5-stufige Balken dargestellt (component.meter aus design/tokens.json) und von Karriere-Events verändert. Sie sind Voraussetzung für einige Events und beeinflussen Angebote.",
+
+  "meters": {
+    "morale": {
+      "label": { "de": "Moral", "en": "Morale" },
+      "start": 60,
+      "min": 0,
+      "max": 100,
+      "driftPerSeason": { "$comment": "Zieht ohne Einfluss langsam Richtung Mittelwert.", "toward": 60, "amount": 4 },
+      "effects": [
+        { "below": 25, "modifiers": { "roleShift": -1 } },
+        { "above": 85, "modifiers": { "immediateOverall": 1 } }
+      ],
+      "influencedBy": ["playingTime", "titles", "injuries", "events"]
+    },
+    "fanSupport": {
+      "label": { "de": "Rückhalt bei den Fans", "en": "Fan support" },
+      "start": 50,
+      "min": 0,
+      "max": 100,
+      "driftPerSeason": { "toward": 50, "amount": 3 },
+      "effects": [
+        { "below": 30, "unlocksEvent": "fan_backlash" },
+        { "above": 75, "modifiers": { "marketValueMultiplier": 1.05 } }
+      ],
+      "influencedBy": ["goals", "loyalty", "titles", "events"],
+      "resetOnTransfer": { "$comment": "Beim Vereinswechsel neu — die neuen Fans kennen dich noch nicht.", "to": 50 }
+    },
+    "mediaRelation": {
+      "label": { "de": "Verhältnis zur Presse", "en": "Media relations" },
+      "start": 55,
+      "min": 0,
+      "max": 100,
+      "driftPerSeason": { "toward": 55, "amount": 3 },
+      "effects": [
+        { "below": 25, "modifiers": { "marketValueMultiplier": 0.92 } },
+        { "above": 80, "modifiers": { "awardChanceMultiplier": 1.15 } }
+      ],
+      "influencedBy": ["events", "awards", "nationalTeam"]
+    }
+  },
+
+  "display": {
+    "$comment": "Abbildung des 0–100-Werts auf die fünf Balkensegmente der UI und deren Farbe.",
+    "steps": 5,
+    "thresholds": [20, 40, 60, 80, 100],
+    "colorByStep": ["status.negative", "status.negative", "status.warning", "status.positive", "status.positive"]
+  }
+}

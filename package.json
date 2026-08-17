@@ -1,0 +1,24 @@
+{
+  "name": "footsys",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Fußball-Karriere-Simulator",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p packages/engine/tsconfig.json --noEmit",
+    "test": "node --import tsx --test \"packages/engine/src/**/*.test.ts\"",
+    "app": "npm --prefix apps/mobile run web",
+    "app:clear": "cd apps/mobile && npx expo start --web --clear",
+    "sim": "tsx packages/engine/src/tools/simulate.ts",
+    "assets": "tsx packages/engine/src/tools/assets.ts",
+    "import:clubs": "tsx packages/engine/src/tools/import-clubs.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "pdf-parse": "^2.4.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

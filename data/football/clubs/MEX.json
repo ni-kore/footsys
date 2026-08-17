@@ -1,0 +1,294 @@
+{
+  "country": "MEX",
+  "clubs": [
+    {
+      "id": "puebla-fc",
+      "league": "mex-liga-mx",
+      "name": "Puebla FC",
+      "short": "Puebla",
+      "abbr": "PUE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "santos-laguna",
+      "league": "mex-liga-mx",
+      "name": "Santos Laguna",
+      "short": "Santos Laguna",
+      "abbr": "SAL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "gallos-blancos",
+      "league": "mex-liga-mx",
+      "name": "Gallos Blancos",
+      "short": "Gallos Blancos",
+      "abbr": "GAB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "club-tijuana",
+      "league": "mex-liga-mx",
+      "name": "Club Tijuana",
+      "short": "Club Tijuana",
+      "abbr": "TIJ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-juarez",
+      "league": "mex-liga-mx",
+      "name": "FC Juárez",
+      "short": "FC Juárez",
+      "abbr": "JUÁ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "atlas-guadalajara",
+      "league": "mex-liga-mx",
+      "name": "Atlas Guadalajara",
+      "short": "Atlas Guadalajara",
+      "abbr": "ATG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "atletico-san-luis",
+      "league": "mex-liga-mx",
+      "name": "Atlético San Luis",
+      "short": "Atlético San",
+      "abbr": "ASL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "cf-america",
+      "league": "mex-liga-mx",
+      "name": "CF América",
+      "short": "CF América",
+      "abbr": "AMÉ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "uanl-tigres",
+      "league": "mex-liga-mx",
+      "name": "UANL Tigres",
+      "short": "UANL Tigres",
+      "abbr": "UAT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "club-necaxa",
+      "league": "mex-liga-mx",
+      "name": "Club Necaxa",
+      "short": "Club Necaxa",
+      "abbr": "NEC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "deportivo-toluca",
+      "league": "mex-liga-mx",
+      "name": "Deportivo Toluca",
+      "short": "Deportivo Toluca",
+      "abbr": "TOL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "cruz-azul",
+      "league": "mex-liga-mx",
+      "name": "Cruz Azul",
+      "short": "Cruz Azul",
+      "abbr": "CRA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "mazatlan-fc",
+      "league": "mex-liga-mx",
+      "name": "Mazatlán FC",
+      "short": "Mazatlán",
+      "abbr": "MAZ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "pumas-unam",
+      "league": "mex-liga-mx",
+      "name": "Pumas UNAM",
+      "short": "Pumas UNAM",
+      "abbr": "PUU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "club-leon",
+      "league": "mex-liga-mx",
+      "name": "Club León",
+      "short": "Club León",
+      "abbr": "LEÓ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "cf-pachuca",
+      "league": "mex-liga-mx",
+      "name": "CF Pachuca",
+      "short": "CF Pachuca",
+      "abbr": "PAC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "cf-monterrey",
+      "league": "mex-liga-mx",
+      "name": "CF Monterrey",
+      "short": "CF Monterrey",
+      "abbr": "MON",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    }
+  ]
+}

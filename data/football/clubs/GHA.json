@@ -1,0 +1,311 @@
+{
+  "country": "GHA",
+  "clubs": [
+    {
+      "id": "dreams-fc",
+      "league": "gha-premier-league",
+      "name": "Dreams FC",
+      "short": "Dreams",
+      "abbr": "DRE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-samartex-1996",
+      "league": "gha-premier-league",
+      "name": "FC Samartex 1996",
+      "short": "FC Samartex 1996",
+      "abbr": "SAM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vision-fc",
+      "league": "gha-premier-league",
+      "name": "Vision FC",
+      "short": "Vision",
+      "abbr": "VIS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "berekum-chelsea-fc",
+      "league": "gha-premier-league",
+      "name": "Berekum Chelsea FC",
+      "short": "Berekum Chelsea",
+      "abbr": "BEC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "accra-hearts-of-oak-sc",
+      "league": "gha-premier-league",
+      "name": "Accra Hearts of Oak SC",
+      "short": "Accra Hearts",
+      "abbr": "AHO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "basake-holy-stars-fc",
+      "league": "gha-premier-league",
+      "name": "Basake Holy Stars FC",
+      "short": "Basake Holy",
+      "abbr": "BHS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "aduana-fc",
+      "league": "gha-premier-league",
+      "name": "Aduana FC",
+      "short": "Aduana",
+      "abbr": "ADU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "heart-of-lions-fc",
+      "league": "gha-premier-league",
+      "name": "Heart of Lions FC",
+      "short": "Heart of Lions",
+      "abbr": "HOL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "karela-united-fc",
+      "league": "gha-premier-league",
+      "name": "Karela United FC",
+      "short": "Karela United",
+      "abbr": "KAU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "asante-kotoko-fc",
+      "league": "gha-premier-league",
+      "name": "Asante Kotoko FC",
+      "short": "Asante Kotoko",
+      "abbr": "ASK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bibiani-gold-stars-fc",
+      "league": "gha-premier-league",
+      "name": "Bibiani Gold Stars FC",
+      "short": "Bibiani Gold",
+      "abbr": "BGS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "legon-cities-fc",
+      "league": "gha-premier-league",
+      "name": "Legon Cities FC",
+      "short": "Legon Cities",
+      "abbr": "LEC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "nsoatreman-fc",
+      "league": "gha-premier-league",
+      "name": "Nsoatreman FC",
+      "short": "Nsoatreman",
+      "abbr": "NSO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "wenchi-young-apostles-fc",
+      "league": "gha-premier-league",
+      "name": "Wenchi Young Apostles FC",
+      "short": "Wenchi Young",
+      "abbr": "WYA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "nations-fc",
+      "league": "gha-premier-league",
+      "name": "Nations FC",
+      "short": "Nations",
+      "abbr": "NAT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bechem-united-fc",
+      "league": "gha-premier-league",
+      "name": "Bechem United FC",
+      "short": "Bechem United",
+      "abbr": "BEU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "medeama-sc",
+      "league": "gha-premier-league",
+      "name": "Medeama SC",
+      "short": "Medeama",
+      "abbr": "MED",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "accra-lions-fc",
+      "league": "gha-premier-league",
+      "name": "Accra Lions FC",
+      "short": "Accra Lions",
+      "abbr": "ACL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

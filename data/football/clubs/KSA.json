@@ -1,0 +1,294 @@
+{
+  "country": "KSA",
+  "clubs": [
+    {
+      "id": "al-taawoun",
+      "league": "ksa-pro-league",
+      "name": "Al Taawoun",
+      "short": "Al Taawoun",
+      "abbr": "ALT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "al-fayha",
+      "league": "ksa-pro-league",
+      "name": "Al Fayha",
+      "short": "Al Fayha",
+      "abbr": "ALF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "al-wehda",
+      "league": "ksa-pro-league",
+      "name": "Al Wehda",
+      "short": "Al Wehda",
+      "abbr": "ALW",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "al-riyadh",
+      "league": "ksa-pro-league",
+      "name": "Al Riyadh",
+      "short": "Al Riyadh",
+      "abbr": "ALR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "al-nassr",
+      "league": "ksa-pro-league",
+      "name": "Al Nassr",
+      "short": "Al Nassr",
+      "abbr": "ALN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "damac-fc",
+      "league": "ksa-pro-league",
+      "name": "Damac FC",
+      "short": "Damac",
+      "abbr": "DAM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "al-khaleej",
+      "league": "ksa-pro-league",
+      "name": "Al Khaleej",
+      "short": "Al Khaleej",
+      "abbr": "ALK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "al-ahli-sfc",
+      "league": "ksa-pro-league",
+      "name": "Al Ahli SFC",
+      "short": "Al Ahli SFC",
+      "abbr": "AAS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "al-orobah",
+      "league": "ksa-pro-league",
+      "name": "Al Orobah",
+      "short": "Al Orobah",
+      "abbr": "ALO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "al-qadsiah",
+      "league": "ksa-pro-league",
+      "name": "Al Qadsiah",
+      "short": "Al Qadsiah",
+      "abbr": "ALQ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "al-fateh",
+      "league": "ksa-pro-league",
+      "name": "Al Fateh",
+      "short": "Al Fateh",
+      "abbr": "ALF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "al-kholood",
+      "league": "ksa-pro-league",
+      "name": "Al Kholood",
+      "short": "Al Kholood",
+      "abbr": "ALK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "al-ittihad",
+      "league": "ksa-pro-league",
+      "name": "Al Ittihad",
+      "short": "Al Ittihad",
+      "abbr": "ALI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "al-okhdood",
+      "league": "ksa-pro-league",
+      "name": "Al Okhdood",
+      "short": "Al Okhdood",
+      "abbr": "ALO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "al-hilal",
+      "league": "ksa-pro-league",
+      "name": "Al Hilal",
+      "short": "Al Hilal",
+      "abbr": "ALH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "al-shabab",
+      "league": "ksa-pro-league",
+      "name": "Al Shabab",
+      "short": "Al Shabab",
+      "abbr": "ALS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "al-ettifaq",
+      "league": "ksa-pro-league",
+      "name": "Al Ettifaq",
+      "short": "Al Ettifaq",
+      "abbr": "ALE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    }
+  ]
+}

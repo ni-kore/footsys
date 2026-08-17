@@ -1,0 +1,1557 @@
+[
+  {
+    "id": "eng-premier-league",
+    "name": "Premier League",
+    "country": "ENG",
+    "tier": 1,
+    "teams": 20,
+    "strength": 5,
+    "cup": "eng-fa-cup",
+    "secondaryCup": "eng-league-cup",
+    "continentalSlots": {
+      "primary": 5,
+      "secondary": 2,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "eng-championship",
+    "name": "Championship",
+    "country": "ENG",
+    "tier": 2,
+    "teams": 24,
+    "strength": 3,
+    "cup": "eng-fa-cup",
+    "secondaryCup": "eng-league-cup",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "eng-league-one",
+    "name": "League One",
+    "country": "ENG",
+    "tier": 3,
+    "teams": 24,
+    "strength": 2,
+    "cup": "eng-fa-cup",
+    "secondaryCup": "eng-league-cup",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "esp-laliga",
+    "name": "LaLiga",
+    "country": "ESP",
+    "tier": 1,
+    "teams": 20,
+    "strength": 5,
+    "cup": "esp-copa-del-rey",
+    "secondaryCup": "esp-supercopa",
+    "continentalSlots": {
+      "primary": 5,
+      "secondary": 2,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "esp-laliga-2",
+    "name": "LaLiga Hypermotion",
+    "country": "ESP",
+    "tier": 2,
+    "teams": 22,
+    "strength": 3,
+    "cup": "esp-copa-del-rey",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "ger-bundesliga",
+    "name": "Bundesliga",
+    "country": "GER",
+    "tier": 1,
+    "teams": 18,
+    "strength": 5,
+    "cup": "ger-dfb-pokal",
+    "secondaryCup": "ger-supercup",
+    "continentalSlots": {
+      "primary": 5,
+      "secondary": 2,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "ger-2-bundesliga",
+    "name": "2. Bundesliga",
+    "country": "GER",
+    "tier": 2,
+    "teams": 18,
+    "strength": 3,
+    "cup": "ger-dfb-pokal",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "ger-3-liga",
+    "name": "3. Liga",
+    "country": "GER",
+    "tier": 3,
+    "teams": 20,
+    "strength": 2,
+    "cup": "ger-dfb-pokal",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "ita-serie-a",
+    "name": "Serie A",
+    "country": "ITA",
+    "tier": 1,
+    "teams": 20,
+    "strength": 5,
+    "cup": "ita-coppa-italia",
+    "secondaryCup": "ita-supercoppa",
+    "continentalSlots": {
+      "primary": 5,
+      "secondary": 2,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "ita-serie-b",
+    "name": "Serie B",
+    "country": "ITA",
+    "tier": 2,
+    "teams": 20,
+    "strength": 3,
+    "cup": "ita-coppa-italia",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "fra-ligue-1",
+    "name": "Ligue 1",
+    "country": "FRA",
+    "tier": 1,
+    "teams": 18,
+    "strength": 4,
+    "cup": "fra-coupe-de-france",
+    "secondaryCup": "fra-trophee-des-champions",
+    "continentalSlots": {
+      "primary": 4,
+      "secondary": 2,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "fra-ligue-2",
+    "name": "Ligue 2",
+    "country": "FRA",
+    "tier": 2,
+    "teams": 18,
+    "strength": 2,
+    "cup": "fra-coupe-de-france",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "ned-eredivisie",
+    "name": "Eredivisie",
+    "country": "NED",
+    "tier": 1,
+    "teams": 18,
+    "strength": 4,
+    "cup": "ned-knvb-beker",
+    "secondaryCup": "ned-johan-cruijff-schaal",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "ned-eerste-divisie",
+    "name": "Eerste Divisie",
+    "country": "NED",
+    "tier": 2,
+    "teams": 20,
+    "strength": 2,
+    "cup": "ned-knvb-beker",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "por-primeira-liga",
+    "name": "Liga Portugal",
+    "country": "POR",
+    "tier": 1,
+    "teams": 18,
+    "strength": 4,
+    "cup": "por-taca-de-portugal",
+    "secondaryCup": "por-taca-da-liga",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "por-liga-2",
+    "name": "Liga Portugal 2",
+    "country": "POR",
+    "tier": 2,
+    "teams": 18,
+    "strength": 2,
+    "cup": "por-taca-de-portugal",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "bel-pro-league",
+    "name": "Jupiler Pro League",
+    "country": "BEL",
+    "tier": 1,
+    "teams": 16,
+    "strength": 3,
+    "cup": "bel-beker-van-belgie",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "tur-super-lig",
+    "name": "Süper Lig",
+    "country": "TUR",
+    "tier": 1,
+    "teams": 18,
+    "strength": 3,
+    "cup": "tur-turkiye-kupasi",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "sco-premiership",
+    "name": "Scottish Premiership",
+    "country": "SCO",
+    "tier": 1,
+    "teams": 12,
+    "strength": 3,
+    "cup": "sco-scottish-cup",
+    "secondaryCup": "sco-league-cup",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "aut-bundesliga",
+    "name": "Österreichische Bundesliga",
+    "country": "AUT",
+    "tier": 1,
+    "teams": 12,
+    "strength": 3,
+    "cup": "aut-oefb-cup",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "sui-super-league",
+    "name": "Super League",
+    "country": "SUI",
+    "tier": 1,
+    "teams": 12,
+    "strength": 3,
+    "cup": "sui-schweizer-cup",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "gre-super-league",
+    "name": "Super League Griechenland",
+    "country": "GRE",
+    "tier": 1,
+    "teams": 14,
+    "strength": 3,
+    "cup": "gre-cup",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "ukr-premier-liha",
+    "name": "Premjer-Liha",
+    "country": "UKR",
+    "tier": 1,
+    "teams": 16,
+    "strength": 3,
+    "cup": "ukr-cup",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "rus-premier-liga",
+    "name": "Premier-Liga",
+    "country": "RUS",
+    "tier": 1,
+    "teams": 16,
+    "strength": 3,
+    "cup": "rus-cup",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "den-superliga",
+    "name": "Superliga",
+    "country": "DEN",
+    "tier": 1,
+    "teams": 12,
+    "strength": 3,
+    "cup": "den-pokalen",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "nor-eliteserien",
+    "name": "Eliteserien",
+    "country": "NOR",
+    "tier": 1,
+    "teams": 16,
+    "strength": 2,
+    "cup": "nor-cupen",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "swe-allsvenskan",
+    "name": "Allsvenskan",
+    "country": "SWE",
+    "tier": 1,
+    "teams": 16,
+    "strength": 2,
+    "cup": "swe-svenska-cupen",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "pol-ekstraklasa",
+    "name": "Ekstraklasa",
+    "country": "POL",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": "pol-puchar-polski",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "cze-fortuna-liga",
+    "name": "Chance Liga",
+    "country": "CZE",
+    "tier": 1,
+    "teams": 16,
+    "strength": 2,
+    "cup": "cze-pohar",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "cro-hnl",
+    "name": "SuperSport HNL",
+    "country": "CRO",
+    "tier": 1,
+    "teams": 10,
+    "strength": 3,
+    "cup": "cro-kup",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "srb-superliga",
+    "name": "Super liga Srbije",
+    "country": "SRB",
+    "tier": 1,
+    "teams": 16,
+    "strength": 2,
+    "cup": "srb-kup",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "rou-superliga",
+    "name": "SuperLiga",
+    "country": "ROU",
+    "tier": 1,
+    "teams": 16,
+    "strength": 2,
+    "cup": "rou-cupa-romaniei",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "hun-nb-i",
+    "name": "NB I",
+    "country": "HUN",
+    "tier": 1,
+    "teams": 12,
+    "strength": 2,
+    "cup": "hun-magyar-kupa",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "isr-ligat-haal",
+    "name": "Ligat ha'Al",
+    "country": "ISR",
+    "tier": 1,
+    "teams": 14,
+    "strength": 2,
+    "cup": "isr-gviya",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "irl-premier-division",
+    "name": "Premier Division",
+    "country": "IRL",
+    "tier": 1,
+    "teams": 10,
+    "strength": 1,
+    "cup": "irl-fai-cup",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "arg-liga-profesional",
+    "name": "Liga Profesional",
+    "country": "ARG",
+    "tier": 1,
+    "teams": 28,
+    "strength": 4,
+    "cup": "arg-copa-argentina",
+    "secondaryCup": "arg-supercopa",
+    "continentalSlots": {
+      "primary": 6,
+      "secondary": 6,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "arg-primera-nacional",
+    "name": "Primera Nacional",
+    "country": "ARG",
+    "tier": 2,
+    "teams": 38,
+    "strength": 2,
+    "cup": "arg-copa-argentina",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "bra-serie-a",
+    "name": "Brasileirão Série A",
+    "country": "BRA",
+    "tier": 1,
+    "teams": 20,
+    "strength": 4,
+    "cup": "bra-copa-do-brasil",
+    "secondaryCup": "bra-supercopa",
+    "continentalSlots": {
+      "primary": 7,
+      "secondary": 5,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "bra-serie-b",
+    "name": "Brasileirão Série B",
+    "country": "BRA",
+    "tier": 2,
+    "teams": 20,
+    "strength": 2,
+    "cup": "bra-copa-do-brasil",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "uru-primera-division",
+    "name": "Primera División",
+    "country": "URU",
+    "tier": 1,
+    "teams": 16,
+    "strength": 3,
+    "cup": "uru-copa-uruguay",
+    "continentalSlots": {
+      "primary": 4,
+      "secondary": 3,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "chi-liga-de-primera",
+    "name": "Liga de Primera",
+    "country": "CHI",
+    "tier": 1,
+    "teams": 16,
+    "strength": 3,
+    "cup": "chi-copa-chile",
+    "continentalSlots": {
+      "primary": 4,
+      "secondary": 3,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "col-liga-betplay",
+    "name": "Liga BetPlay",
+    "country": "COL",
+    "tier": 1,
+    "teams": 20,
+    "strength": 3,
+    "cup": "col-copa-colombia",
+    "continentalSlots": {
+      "primary": 4,
+      "secondary": 4,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "ecu-liga-pro",
+    "name": "LigaPro Serie A",
+    "country": "ECU",
+    "tier": 1,
+    "teams": 16,
+    "strength": 3,
+    "cup": "ecu-copa-ecuador",
+    "continentalSlots": {
+      "primary": 4,
+      "secondary": 4,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "par-primera-division",
+    "name": "Copa de Primera",
+    "country": "PAR",
+    "tier": 1,
+    "teams": 12,
+    "strength": 3,
+    "cup": "par-copa-paraguay",
+    "continentalSlots": {
+      "primary": 4,
+      "secondary": 4,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "per-liga1",
+    "name": "Liga 1",
+    "country": "PER",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": "per-copa-peru",
+    "continentalSlots": {
+      "primary": 4,
+      "secondary": 4,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "bol-division-profesional",
+    "name": "División Profesional",
+    "country": "BOL",
+    "tier": 1,
+    "teams": 16,
+    "strength": 2,
+    "cup": "bol-copa-bolivia",
+    "continentalSlots": {
+      "primary": 4,
+      "secondary": 4,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "ven-liga-futve",
+    "name": "Liga FUTVE",
+    "country": "VEN",
+    "tier": 1,
+    "teams": 16,
+    "strength": 1,
+    "cup": "ven-copa-venezuela",
+    "continentalSlots": {
+      "primary": 4,
+      "secondary": 4,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "mex-liga-mx",
+    "name": "Liga MX",
+    "country": "MEX",
+    "tier": 1,
+    "teams": 18,
+    "strength": 4,
+    "cup": "mex-copa-mx",
+    "secondaryCup": "mex-campeon-de-campeones",
+    "continentalSlots": {
+      "primary": 5,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "usa-mls",
+    "name": "MLS",
+    "country": "USA",
+    "tier": 1,
+    "teams": 30,
+    "strength": 3,
+    "cup": "usa-us-open-cup",
+    "secondaryCup": "usa-leagues-cup",
+    "continentalSlots": {
+      "primary": 5,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "crc-primera-division",
+    "name": "Primera División",
+    "country": "CRC",
+    "tier": 1,
+    "teams": 12,
+    "strength": 2,
+    "cup": "crc-copa",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "hon-liga-nacional",
+    "name": "Liga Nacional",
+    "country": "HON",
+    "tier": 1,
+    "teams": 10,
+    "strength": 1,
+    "cup": "hon-copa",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "gua-liga-nacional",
+    "name": "Liga Nacional",
+    "country": "GUA",
+    "tier": 1,
+    "teams": 12,
+    "strength": 1,
+    "cup": "gua-copa",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "pan-lpf",
+    "name": "Liga Panameña de Fútbol",
+    "country": "PAN",
+    "tier": 1,
+    "teams": 10,
+    "strength": 1,
+    "cup": "pan-copa",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "slv-primera-division",
+    "name": "Primera División",
+    "country": "SLV",
+    "tier": 1,
+    "teams": 12,
+    "strength": 1,
+    "cup": "slv-copa",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "jam-premier-league",
+    "name": "Jamaica Premier League",
+    "country": "JAM",
+    "tier": 1,
+    "teams": 12,
+    "strength": 1,
+    "cup": "jam-cup",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "can-premier-league",
+    "name": "Canadian Premier League",
+    "country": "CAN",
+    "tier": 1,
+    "teams": 8,
+    "strength": 1,
+    "cup": "can-championship",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "ksa-pro-league",
+    "name": "Saudi Pro League",
+    "country": "KSA",
+    "tier": 1,
+    "teams": 18,
+    "strength": 4,
+    "cup": "ksa-kings-cup",
+    "continentalSlots": {
+      "primary": 4,
+      "secondary": 2,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "jpn-j1-league",
+    "name": "J1 League",
+    "country": "JPN",
+    "tier": 1,
+    "teams": 20,
+    "strength": 3,
+    "cup": "jpn-emperors-cup",
+    "secondaryCup": "jpn-levain-cup",
+    "continentalSlots": {
+      "primary": 3,
+      "secondary": 1,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "kor-k-league-1",
+    "name": "K League 1",
+    "country": "KOR",
+    "tier": 1,
+    "teams": 12,
+    "strength": 3,
+    "cup": "kor-fa-cup",
+    "continentalSlots": {
+      "primary": 3,
+      "secondary": 1,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "chn-super-league",
+    "name": "Chinese Super League",
+    "country": "CHN",
+    "tier": 1,
+    "teams": 16,
+    "strength": 2,
+    "cup": "chn-fa-cup",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 1,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "qat-stars-league",
+    "name": "Qatar Stars League",
+    "country": "QAT",
+    "tier": 1,
+    "teams": 12,
+    "strength": 2,
+    "cup": "qat-emir-cup",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 1,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "uae-pro-league",
+    "name": "UAE Pro League",
+    "country": "UAE",
+    "tier": 1,
+    "teams": 14,
+    "strength": 2,
+    "cup": "uae-presidents-cup",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 1,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "irn-persian-gulf-pro-league",
+    "name": "Persian Gulf Pro League",
+    "country": "IRN",
+    "tier": 1,
+    "teams": 16,
+    "strength": 2,
+    "cup": "irn-hazfi-cup",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 1,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "aus-a-league",
+    "name": "A-League Men",
+    "country": "AUS",
+    "tier": 1,
+    "teams": 13,
+    "strength": 2,
+    "cup": "aus-cup",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 1,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "ind-super-league",
+    "name": "Indian Super League",
+    "country": "IND",
+    "tier": 1,
+    "teams": 13,
+    "strength": 1,
+    "cup": "ind-super-cup",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "tha-league-1",
+    "name": "Thai League 1",
+    "country": "THA",
+    "tier": 1,
+    "teams": 16,
+    "strength": 1,
+    "cup": "tha-fa-cup",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "uzb-super-league",
+    "name": "Uzbekistan Super League",
+    "country": "UZB",
+    "tier": 1,
+    "teams": 14,
+    "strength": 1,
+    "cup": "uzb-cup",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "egy-premier-league",
+    "name": "Egyptian Premier League",
+    "country": "EGY",
+    "tier": 1,
+    "teams": 18,
+    "strength": 3,
+    "cup": "egy-cup",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 2,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "mar-botola",
+    "name": "Botola Pro",
+    "country": "MAR",
+    "tier": 1,
+    "teams": 16,
+    "strength": 3,
+    "cup": "mar-coupe-du-trone",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 2,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "alg-ligue-1",
+    "name": "Ligue 1 Mobilis",
+    "country": "ALG",
+    "tier": 1,
+    "teams": 16,
+    "strength": 2,
+    "cup": "alg-coupe",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 2,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "tun-ligue-1",
+    "name": "Ligue Professionnelle 1",
+    "country": "TUN",
+    "tier": 1,
+    "teams": 16,
+    "strength": 2,
+    "cup": "tun-coupe",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 2,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "rsa-premiership",
+    "name": "Betway Premiership",
+    "country": "RSA",
+    "tier": 1,
+    "teams": 16,
+    "strength": 2,
+    "cup": "rsa-nedbank-cup",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 2,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "nga-npfl",
+    "name": "NPFL",
+    "country": "NGA",
+    "tier": 1,
+    "teams": 20,
+    "strength": 1,
+    "cup": "nga-federation-cup",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "gha-premier-league",
+    "name": "Ghana Premier League",
+    "country": "GHA",
+    "tier": 1,
+    "teams": 18,
+    "strength": 1,
+    "cup": "gha-fa-cup",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "civ-ligue-1",
+    "name": "Ligue 1",
+    "country": "CIV",
+    "tier": 1,
+    "teams": 14,
+    "strength": 1,
+    "cup": "civ-coupe",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "sen-ligue-1",
+    "name": "Ligue 1",
+    "country": "SEN",
+    "tier": 1,
+    "teams": 14,
+    "strength": 1,
+    "cup": "sen-coupe",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "ang-girabola",
+    "name": "Girabola",
+    "country": "ANG",
+    "tier": 1,
+    "teams": 16,
+    "strength": 1,
+    "cup": "ang-taca",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "nzl-national-league",
+    "name": "National League",
+    "country": "NZL",
+    "tier": 1,
+    "teams": 10,
+    "strength": 1,
+    "cup": "nzl-chatham-cup",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "fij-premier-league",
+    "name": "Fiji Premier League",
+    "country": "FIJ",
+    "tier": 1,
+    "teams": 8,
+    "strength": 1,
+    "cup": "fij-cup",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "ger-tier-4",
+    "name": "Deutschland · 4. Liga",
+    "country": "GER",
+    "tier": 4,
+    "teams": 18,
+    "strength": 2,
+    "cup": "ger-dfb-pokal",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "eng-tier-4",
+    "name": "England · 4. Liga",
+    "country": "ENG",
+    "tier": 4,
+    "teams": 18,
+    "strength": 2,
+    "cup": "eng-fa-cup",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "eng-tier-5",
+    "name": "England · 5. Liga",
+    "country": "ENG",
+    "tier": 5,
+    "teams": 18,
+    "strength": 1,
+    "cup": "eng-fa-cup",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "ita-tier-3",
+    "name": "Italien · 3. Liga",
+    "country": "ITA",
+    "tier": 3,
+    "teams": 18,
+    "strength": 3,
+    "cup": "ita-coppa-italia",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "aut-tier-2",
+    "name": "Österreich · 2. Liga",
+    "country": "AUT",
+    "tier": 2,
+    "teams": 18,
+    "strength": 2,
+    "cup": "aut-oefb-cup",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "aut-tier-3",
+    "name": "Österreich · 3. Liga",
+    "country": "AUT",
+    "tier": 3,
+    "teams": 18,
+    "strength": 1,
+    "cup": "aut-oefb-cup",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "alb-tier-1",
+    "name": "Albanien · 1. Liga",
+    "country": "ALB",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "and-tier-1",
+    "name": "Andorra · 1. Liga",
+    "country": "AND",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "arm-tier-1",
+    "name": "Armenien · 1. Liga",
+    "country": "ARM",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "aze-tier-1",
+    "name": "Aserbaidschan · 1. Liga",
+    "country": "AZE",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "bih-tier-1",
+    "name": "Bosnien und Herzegowina · 1. Liga",
+    "country": "BIH",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "bul-tier-1",
+    "name": "Bulgarien · 1. Liga",
+    "country": "BUL",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "cyp-tier-1",
+    "name": "Zypern · 1. Liga",
+    "country": "CYP",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "cze-tier-2",
+    "name": "Tschechien · 2. Liga",
+    "country": "CZE",
+    "tier": 2,
+    "teams": 18,
+    "strength": 1,
+    "cup": "cze-pohar",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "den-tier-2",
+    "name": "Dänemark · 2. Liga",
+    "country": "DEN",
+    "tier": 2,
+    "teams": 18,
+    "strength": 2,
+    "cup": "den-pokalen",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "gib-tier-1",
+    "name": "Gibraltar · 1. Liga",
+    "country": "GIB",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "kvx-tier-1",
+    "name": "Kosovo · 1. Liga",
+    "country": "KVX",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "lux-tier-1",
+    "name": "Luxemburg · 1. Liga",
+    "country": "LUX",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "mlt-tier-1",
+    "name": "Malta · 1. Liga",
+    "country": "MLT",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "mda-tier-1",
+    "name": "Moldau · 1. Liga",
+    "country": "MDA",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "mne-tier-1",
+    "name": "Montenegro · 1. Liga",
+    "country": "MNE",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "mkd-tier-1",
+    "name": "Nordmazedonien · 1. Liga",
+    "country": "MKD",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "nir-tier-1",
+    "name": "Nordirland · 1. Liga",
+    "country": "NIR",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "pol-tier-2",
+    "name": "Polen · 2. Liga",
+    "country": "POL",
+    "tier": 2,
+    "teams": 18,
+    "strength": 1,
+    "cup": "pol-puchar-polski",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "smr-tier-1",
+    "name": "San Marino · 1. Liga",
+    "country": "SMR",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "svk-tier-1",
+    "name": "Slowakei · 1. Liga",
+    "country": "SVK",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "svn-tier-1",
+    "name": "Slowenien · 1. Liga",
+    "country": "SVN",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "sui-tier-2",
+    "name": "Schweiz · 2. Liga",
+    "country": "SUI",
+    "tier": 2,
+    "teams": 18,
+    "strength": 2,
+    "cup": "sui-schweizer-cup",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "wal-tier-1",
+    "name": "Wales · 1. Liga",
+    "country": "WAL",
+    "tier": 1,
+    "teams": 18,
+    "strength": 2,
+    "cup": null,
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "nga-tier-2",
+    "name": "Nigeria · 2. Liga",
+    "country": "NGA",
+    "tier": 2,
+    "teams": 18,
+    "strength": 1,
+    "cup": "nga-federation-cup",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  },
+  {
+    "id": "isr-tier-2",
+    "name": "Israel · 2. Liga",
+    "country": "ISR",
+    "tier": 2,
+    "teams": 18,
+    "strength": 1,
+    "cup": "isr-gviya",
+    "continentalSlots": {
+      "primary": 0,
+      "secondary": 0,
+      "tertiary": 0
+    }
+  }
+]

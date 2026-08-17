@@ -1,0 +1,138 @@
+[
+  {
+    "id": "GK", "group": "GK", "x": 50, "y": 5,
+    "abbr": { "de": "TW", "en": "GK" },
+    "name": { "de": "Torwart", "en": "Goalkeeper" },
+    "goalFactor": 0.0, "assistFactor": 0.0, "defenseWeight": 1.0,
+    "tracksCleanSheets": true, "tracksSaves": true,
+    "related": []
+  },
+  {
+    "id": "SW", "group": "DEF", "x": 50, "y": 15,
+    "abbr": { "de": "LIB", "en": "SW" },
+    "name": { "de": "Libero", "en": "Sweeper" },
+    "goalFactor": 0.06, "assistFactor": 0.06, "defenseWeight": 0.95,
+    "tracksCleanSheets": true, "tracksSaves": false,
+    "related": ["CB", "DM"]
+  },
+  {
+    "id": "CB", "group": "DEF", "x": 50, "y": 20,
+    "abbr": { "de": "IV", "en": "CB" },
+    "name": { "de": "Innenverteidiger", "en": "Centre-Back" },
+    "goalFactor": 0.08, "assistFactor": 0.05, "defenseWeight": 1.0,
+    "tracksCleanSheets": true, "tracksSaves": false,
+    "related": ["SW", "DM", "LB", "RB"]
+  },
+  {
+    "id": "LB", "group": "DEF", "x": 15, "y": 25,
+    "abbr": { "de": "LV", "en": "LB" },
+    "name": { "de": "Linksverteidiger", "en": "Left-Back" },
+    "goalFactor": 0.07, "assistFactor": 0.22, "defenseWeight": 0.85,
+    "tracksCleanSheets": true, "tracksSaves": false,
+    "related": ["LWB", "CB", "LM"]
+  },
+  {
+    "id": "RB", "group": "DEF", "x": 85, "y": 25,
+    "abbr": { "de": "RV", "en": "RB" },
+    "name": { "de": "Rechtsverteidiger", "en": "Right-Back" },
+    "goalFactor": 0.07, "assistFactor": 0.22, "defenseWeight": 0.85,
+    "tracksCleanSheets": true, "tracksSaves": false,
+    "related": ["RWB", "CB", "RM"]
+  },
+  {
+    "id": "LWB", "group": "DEF", "x": 10, "y": 40,
+    "abbr": { "de": "LAV", "en": "LWB" },
+    "name": { "de": "Linker Flügelverteidiger", "en": "Left Wing-Back" },
+    "goalFactor": 0.10, "assistFactor": 0.30, "defenseWeight": 0.70,
+    "tracksCleanSheets": true, "tracksSaves": false,
+    "related": ["LB", "LM", "LW"]
+  },
+  {
+    "id": "RWB", "group": "DEF", "x": 90, "y": 40,
+    "abbr": { "de": "RAV", "en": "RWB" },
+    "name": { "de": "Rechter Flügelverteidiger", "en": "Right Wing-Back" },
+    "goalFactor": 0.10, "assistFactor": 0.30, "defenseWeight": 0.70,
+    "tracksCleanSheets": true, "tracksSaves": false,
+    "related": ["RB", "RM", "RW"]
+  },
+  {
+    "id": "DM", "group": "MID", "x": 50, "y": 38,
+    "abbr": { "de": "ZDM", "en": "CDM" },
+    "name": { "de": "Defensives Mittelfeld", "en": "Defensive Midfielder" },
+    "goalFactor": 0.14, "assistFactor": 0.20, "defenseWeight": 0.90,
+    "tracksCleanSheets": false, "tracksSaves": false,
+    "related": ["CM", "CB", "SW"]
+  },
+  {
+    "id": "CM", "group": "MID", "x": 50, "y": 50,
+    "abbr": { "de": "ZM", "en": "CM" },
+    "name": { "de": "Zentrales Mittelfeld", "en": "Central Midfielder" },
+    "goalFactor": 0.25, "assistFactor": 0.35, "defenseWeight": 0.65,
+    "tracksCleanSheets": false, "tracksSaves": false,
+    "related": ["DM", "AM", "LM", "RM"]
+  },
+  {
+    "id": "AM", "group": "MID", "x": 50, "y": 65,
+    "abbr": { "de": "ZOM", "en": "CAM" },
+    "name": { "de": "Offensives Mittelfeld", "en": "Attacking Midfielder" },
+    "goalFactor": 0.45, "assistFactor": 0.55, "defenseWeight": 0.35,
+    "tracksCleanSheets": false, "tracksSaves": false,
+    "related": ["CM", "SS", "LW", "RW"]
+  },
+  {
+    "id": "LM", "group": "MID", "x": 12, "y": 55,
+    "abbr": { "de": "LM", "en": "LM" },
+    "name": { "de": "Linkes Mittelfeld", "en": "Left Midfielder" },
+    "goalFactor": 0.28, "assistFactor": 0.45, "defenseWeight": 0.55,
+    "tracksCleanSheets": false, "tracksSaves": false,
+    "related": ["LW", "LWB", "CM"]
+  },
+  {
+    "id": "RM", "group": "MID", "x": 88, "y": 55,
+    "abbr": { "de": "RM", "en": "RM" },
+    "name": { "de": "Rechtes Mittelfeld", "en": "Right Midfielder" },
+    "goalFactor": 0.28, "assistFactor": 0.45, "defenseWeight": 0.55,
+    "tracksCleanSheets": false, "tracksSaves": false,
+    "related": ["RW", "RWB", "CM"]
+  },
+  {
+    "id": "LW", "group": "ATT", "x": 12, "y": 75,
+    "abbr": { "de": "LA", "en": "LW" },
+    "name": { "de": "Linksaußen", "en": "Left Winger" },
+    "goalFactor": 0.55, "assistFactor": 0.55, "defenseWeight": 0.25,
+    "tracksCleanSheets": false, "tracksSaves": false,
+    "related": ["LM", "AM", "ST"]
+  },
+  {
+    "id": "RW", "group": "ATT", "x": 88, "y": 75,
+    "abbr": { "de": "RA", "en": "RW" },
+    "name": { "de": "Rechtsaußen", "en": "Right Winger" },
+    "goalFactor": 0.55, "assistFactor": 0.55, "defenseWeight": 0.25,
+    "tracksCleanSheets": false, "tracksSaves": false,
+    "related": ["RM", "AM", "ST"]
+  },
+  {
+    "id": "SS", "group": "ATT", "x": 50, "y": 78,
+    "abbr": { "de": "HS", "en": "SS" },
+    "name": { "de": "Hängende Spitze", "en": "Second Striker" },
+    "goalFactor": 0.70, "assistFactor": 0.45, "defenseWeight": 0.20,
+    "tracksCleanSheets": false, "tracksSaves": false,
+    "related": ["AM", "ST", "CF"]
+  },
+  {
+    "id": "CF", "group": "ATT", "x": 50, "y": 85,
+    "abbr": { "de": "MS", "en": "CF" },
+    "name": { "de": "Mittelstürmer", "en": "Centre-Forward" },
+    "goalFactor": 0.85, "assistFactor": 0.35, "defenseWeight": 0.15,
+    "tracksCleanSheets": false, "tracksSaves": false,
+    "related": ["ST", "SS", "AM"]
+  },
+  {
+    "id": "ST", "group": "ATT", "x": 50, "y": 92,
+    "abbr": { "de": "ST", "en": "ST" },
+    "name": { "de": "Stürmer", "en": "Striker" },
+    "goalFactor": 1.0, "assistFactor": 0.25, "defenseWeight": 0.10,
+    "tracksCleanSheets": false, "tracksSaves": false,
+    "related": ["CF", "SS", "LW", "RW"]
+  }
+]

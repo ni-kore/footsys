@@ -1,0 +1,209 @@
+{
+  "country": "NIR",
+  "clubs": [
+    {
+      "id": "glentoran-fc",
+      "league": "nir-tier-1",
+      "name": "Glentoran FC",
+      "short": "Glentoran",
+      "abbr": "GLE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "crusaders-fc",
+      "league": "nir-tier-1",
+      "name": "Crusaders FC",
+      "short": "Crusaders",
+      "abbr": "CRU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ballymena-united",
+      "league": "nir-tier-1",
+      "name": "Ballymena United",
+      "short": "Ballymena United",
+      "abbr": "BAU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "linfield-fc",
+      "league": "nir-tier-1",
+      "name": "Linfield FC",
+      "short": "Linfield",
+      "abbr": "LIN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "carrick-rangers",
+      "league": "nir-tier-1",
+      "name": "Carrick Rangers",
+      "short": "Carrick Rangers",
+      "abbr": "CAR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "glenavon-fc",
+      "league": "nir-tier-1",
+      "name": "Glenavon FC",
+      "short": "Glenavon",
+      "abbr": "GLE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "dungannon-swifts",
+      "league": "nir-tier-1",
+      "name": "Dungannon Swifts",
+      "short": "Dungannon Swifts",
+      "abbr": "DUS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "coleraine-fc",
+      "league": "nir-tier-1",
+      "name": "Coleraine FC",
+      "short": "Coleraine",
+      "abbr": "COL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cliftonville-fc",
+      "league": "nir-tier-1",
+      "name": "Cliftonville FC",
+      "short": "Cliftonville",
+      "abbr": "CLI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "portadown-fc",
+      "league": "nir-tier-1",
+      "name": "Portadown FC",
+      "short": "Portadown",
+      "abbr": "POR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "larne-fc",
+      "league": "nir-tier-1",
+      "name": "Larne FC",
+      "short": "Larne",
+      "abbr": "LAR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "loughgall-fc",
+      "league": "nir-tier-1",
+      "name": "Loughgall FC",
+      "short": "Loughgall",
+      "abbr": "LOU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

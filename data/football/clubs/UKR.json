@@ -1,0 +1,277 @@
+{
+  "country": "UKR",
+  "clubs": [
+    {
+      "id": "nk-veres",
+      "league": "ukr-premier-liha",
+      "name": "NK Veres",
+      "short": "NK Veres",
+      "abbr": "NKV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "karpaty-lviv",
+      "league": "ukr-premier-liha",
+      "name": "Karpaty Lviv",
+      "short": "Karpaty Lviv",
+      "abbr": "KAL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kryvbas-kryvyi-rih",
+      "league": "ukr-premier-liha",
+      "name": "Kryvbas Kryvyi Rih",
+      "short": "Kryvbas Kryvyi",
+      "abbr": "KKR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "chernomorets-odessa",
+      "league": "ukr-premier-liha",
+      "name": "Chernomorets Odessa",
+      "short": "Chernomorets Odessa",
+      "abbr": "CHO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-lnz-cherkasy",
+      "league": "ukr-premier-liha",
+      "name": "FC LNZ Cherkasy",
+      "short": "FC LNZ Cherkasy",
+      "abbr": "LNC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "livyi-bereh",
+      "league": "ukr-premier-liha",
+      "name": "Livyi Bereh",
+      "short": "Livyi Bereh",
+      "abbr": "LIB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vorskla-poltava",
+      "league": "ukr-premier-liha",
+      "name": "Vorskla Poltava",
+      "short": "Vorskla Poltava",
+      "abbr": "VOP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "shakhtar-donetsk",
+      "league": "ukr-premier-liha",
+      "name": "Shakhtar Donetsk",
+      "short": "Shakhtar Donetsk",
+      "abbr": "SHD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-obolon",
+      "league": "ukr-premier-liha",
+      "name": "FK Obolon",
+      "short": "FK Obolon",
+      "abbr": "FKO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kolos-kovalivka",
+      "league": "ukr-premier-liha",
+      "name": "Kolos Kovalivka",
+      "short": "Kolos Kovalivka",
+      "abbr": "KOK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "zorya-lugansk",
+      "league": "ukr-premier-liha",
+      "name": "Zorya Lugansk",
+      "short": "Zorya Lugansk",
+      "abbr": "ZOL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "inhulets-petrove",
+      "league": "ukr-premier-liha",
+      "name": "Inhulets Petrove",
+      "short": "Inhulets Petrove",
+      "abbr": "INP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-oleksandriya",
+      "league": "ukr-premier-liha",
+      "name": "FK Oleksandriya",
+      "short": "FK Oleksandriya",
+      "abbr": "FKO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "dinamo-kiev",
+      "league": "ukr-premier-liha",
+      "name": "Dinamo Kiev",
+      "short": "Dinamo Kiev",
+      "abbr": "DIK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "rukh-lviv",
+      "league": "ukr-premier-liha",
+      "name": "Rukh Lviv",
+      "short": "Rukh Lviv",
+      "abbr": "RUL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "polissya-zhytomyr",
+      "league": "ukr-premier-liha",
+      "name": "Polissya Zhytomyr",
+      "short": "Polissya Zhytomyr",
+      "abbr": "POZ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

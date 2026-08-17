@@ -1,0 +1,277 @@
+{
+  "country": "ALG",
+  "clubs": [
+    {
+      "id": "es-setif",
+      "league": "alg-ligue-1",
+      "name": "ES Sétif",
+      "short": "ES Sétif",
+      "abbr": "ESS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "mc-el-bayadh",
+      "league": "alg-ligue-1",
+      "name": "MC El Bayadh",
+      "short": "MC El Bayadh",
+      "abbr": "MEB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "olympique-akbou",
+      "league": "alg-ligue-1",
+      "name": "Olympique Akbou",
+      "short": "Olympique Akbou",
+      "abbr": "OLA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "nc-magra",
+      "league": "alg-ligue-1",
+      "name": "NC Magra",
+      "short": "NC Magra",
+      "abbr": "NCM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "paradou-ac",
+      "league": "alg-ligue-1",
+      "name": "Paradou AC",
+      "short": "Paradou",
+      "abbr": "PAR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "aso-chlef",
+      "league": "alg-ligue-1",
+      "name": "ASO Chlef",
+      "short": "ASO Chlef",
+      "abbr": "ASC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "mc-oran",
+      "league": "alg-ligue-1",
+      "name": "MC Oran",
+      "short": "MC Oran",
+      "abbr": "MCO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "js-saoura",
+      "league": "alg-ligue-1",
+      "name": "JS Saoura",
+      "short": "JS Saoura",
+      "abbr": "JSS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "js-kabylie",
+      "league": "alg-ligue-1",
+      "name": "JS Kabylie",
+      "short": "JS Kabylie",
+      "abbr": "JSK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "mc-alger",
+      "league": "alg-ligue-1",
+      "name": "MC Alger",
+      "short": "MC Alger",
+      "abbr": "MCA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cs-constantine",
+      "league": "alg-ligue-1",
+      "name": "CS Constantine",
+      "short": "CS Constantine",
+      "abbr": "CSC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "es-mostaganem",
+      "league": "alg-ligue-1",
+      "name": "ES Mostaganem",
+      "short": "ES Mostaganem",
+      "abbr": "ESM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "usm-khenchela",
+      "league": "alg-ligue-1",
+      "name": "USM Khenchela",
+      "short": "USM Khenchela",
+      "abbr": "USK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cr-belouizdad",
+      "league": "alg-ligue-1",
+      "name": "CR Bélouizdad",
+      "short": "CR Bélouizdad",
+      "abbr": "CRB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "usm-alger",
+      "league": "alg-ligue-1",
+      "name": "USM Alger",
+      "short": "USM Alger",
+      "abbr": "USA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "us-biskra",
+      "league": "alg-ligue-1",
+      "name": "US Biskra",
+      "short": "US Biskra",
+      "abbr": "BIS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

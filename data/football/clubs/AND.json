@@ -1,0 +1,107 @@
+{
+  "country": "AND",
+  "clubs": [
+    {
+      "id": "fc-pas-de-la-casa",
+      "league": "and-tier-1",
+      "name": "FC Pas de la Casa",
+      "short": "FC Pas",
+      "abbr": "PDL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-ordino",
+      "league": "and-tier-1",
+      "name": "FC Ordino",
+      "short": "FC Ordino",
+      "abbr": "ORD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "penya-encarnada",
+      "league": "and-tier-1",
+      "name": "Penya Encarnada",
+      "short": "Penya Encarnada",
+      "abbr": "PEE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "atletic-escaldes",
+      "league": "and-tier-1",
+      "name": "Atlétic Escaldes",
+      "short": "Atlétic Escaldes",
+      "abbr": "ATE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ue-santa-coloma",
+      "league": "and-tier-1",
+      "name": "UE Santa Coloma",
+      "short": "UE Santa Coloma",
+      "abbr": "USC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fs-la-massana",
+      "league": "and-tier-1",
+      "name": "FS La Massana",
+      "short": "FS La Massana",
+      "abbr": "FLM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

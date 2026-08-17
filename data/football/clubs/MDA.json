@@ -1,0 +1,141 @@
+{
+  "country": "MDA",
+  "clubs": [
+    {
+      "id": "fc-floresti",
+      "league": "mda-tier-1",
+      "name": "FC Floreşti",
+      "short": "FC Floreşti",
+      "abbr": "FLO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "spartanii-sportul",
+      "league": "mda-tier-1",
+      "name": "Spartanii Sportul",
+      "short": "Spartanii Sportul",
+      "abbr": "SPS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-sheriff",
+      "league": "mda-tier-1",
+      "name": "FC Sheriff",
+      "short": "FC Sheriff",
+      "abbr": "SHE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "dacia-buiucani",
+      "league": "mda-tier-1",
+      "name": "Dacia Buiucani",
+      "short": "Dacia Buiucani",
+      "abbr": "DAB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-zimbru",
+      "league": "mda-tier-1",
+      "name": "FC Zimbru",
+      "short": "FC Zimbru",
+      "abbr": "ZIM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-balti",
+      "league": "mda-tier-1",
+      "name": "FC Bălţi",
+      "short": "FC Bălţi",
+      "abbr": "BĂL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-milsami",
+      "league": "mda-tier-1",
+      "name": "FC Milsami",
+      "short": "FC Milsami",
+      "abbr": "MIL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cs-petrocub",
+      "league": "mda-tier-1",
+      "name": "CS Petrocub",
+      "short": "CS Petrocub",
+      "abbr": "CSP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

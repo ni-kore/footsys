@@ -1,0 +1,702 @@
+{
+  "country": "ESP",
+  "clubs": [
+    {
+      "id": "real-madrid",
+      "league": "esp-laliga",
+      "name": "Real Madrid CF",
+      "short": "Real Madrid",
+      "abbr": "RMA",
+      "city": "Madrid",
+      "colors": [
+        "#FFFFFF",
+        "#FEBE10"
+      ],
+      "reputation": {
+        "domestic": 5,
+        "continental": 5,
+        "international": 5
+      }
+    },
+    {
+      "id": "fc-barcelona",
+      "league": "esp-laliga",
+      "name": "FC Barcelona",
+      "short": "Barcelona",
+      "abbr": "BAR",
+      "city": "Barcelona",
+      "colors": [
+        "#A50044",
+        "#004D98"
+      ],
+      "reputation": {
+        "domestic": 5,
+        "continental": 5,
+        "international": 5
+      }
+    },
+    {
+      "id": "athletic-club",
+      "league": "esp-laliga",
+      "name": "Athletic Club",
+      "short": "Athletic",
+      "abbr": "ATH",
+      "city": "Bilbao",
+      "colors": [
+        "#EE2523",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 2,
+        "international": 3
+      }
+    },
+    {
+      "id": "villarreal",
+      "league": "esp-laliga",
+      "name": "Villarreal CF",
+      "short": "Villarreal",
+      "abbr": "VIL",
+      "city": "Villarreal",
+      "colors": [
+        "#FFE667",
+        "#005187"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 2,
+        "international": 3
+      }
+    },
+    {
+      "id": "real-betis",
+      "league": "esp-laliga",
+      "name": "Real Betis",
+      "short": "Betis",
+      "abbr": "BET",
+      "city": "Sevilla",
+      "colors": [
+        "#00954C",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 3
+      }
+    },
+    {
+      "id": "real-sociedad",
+      "league": "esp-laliga",
+      "name": "Real Sociedad",
+      "short": "Real Sociedad",
+      "abbr": "RSO",
+      "city": "San Sebastián",
+      "colors": [
+        "#0067B1",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 2,
+        "international": 3
+      }
+    },
+    {
+      "id": "sevilla",
+      "league": "esp-laliga",
+      "name": "Sevilla FC",
+      "short": "Sevilla",
+      "abbr": "SEV",
+      "city": "Sevilla",
+      "colors": [
+        "#D9002A",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 2,
+        "international": 4
+      }
+    },
+    {
+      "id": "valencia",
+      "league": "esp-laliga",
+      "name": "Valencia CF",
+      "short": "Valencia",
+      "abbr": "VAL",
+      "city": "Valencia",
+      "colors": [
+        "#FFFFFF",
+        "#F18E00"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 3
+      }
+    },
+    {
+      "id": "celta-vigo",
+      "league": "esp-laliga",
+      "name": "RC Celta de Vigo",
+      "short": "Celta",
+      "abbr": "CEL",
+      "city": "Vigo",
+      "colors": [
+        "#8AC3EE",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "rayo-vallecano",
+      "league": "esp-laliga",
+      "name": "Rayo Vallecano",
+      "short": "Rayo",
+      "abbr": "RAY",
+      "city": "Madrid",
+      "colors": [
+        "#FFFFFF",
+        "#E53027"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "osasuna",
+      "league": "esp-laliga",
+      "name": "CA Osasuna",
+      "short": "Osasuna",
+      "abbr": "OSA",
+      "city": "Pamplona",
+      "colors": [
+        "#D91A21",
+        "#0A346F"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "getafe",
+      "league": "esp-laliga",
+      "name": "Getafe CF",
+      "short": "Getafe",
+      "abbr": "GET",
+      "city": "Getafe",
+      "colors": [
+        "#005999",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "girona",
+      "league": "esp-laliga",
+      "name": "Girona FC",
+      "short": "Girona",
+      "abbr": "GIR",
+      "city": "Girona",
+      "colors": [
+        "#CD2534",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "mallorca",
+      "league": "esp-laliga",
+      "name": "RCD Mallorca",
+      "short": "Mallorca",
+      "abbr": "MLL",
+      "city": "Palma",
+      "colors": [
+        "#E20613",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "espanyol",
+      "league": "esp-laliga",
+      "name": "RCD Espanyol",
+      "short": "Espanyol",
+      "abbr": "ESP",
+      "city": "Barcelona",
+      "colors": [
+        "#007FC8",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "deportivo-alaves",
+      "league": "esp-laliga",
+      "name": "Deportivo Alavés",
+      "short": "Alavés",
+      "abbr": "ALA",
+      "city": "Vitoria-Gasteiz",
+      "colors": [
+        "#0761AF",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "las-palmas",
+      "league": "esp-laliga",
+      "name": "UD Las Palmas",
+      "short": "Las Palmas",
+      "abbr": "LPA",
+      "city": "Las Palmas",
+      "colors": [
+        "#FFE400",
+        "#0067B1"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "leganes",
+      "league": "esp-laliga",
+      "name": "CD Leganés",
+      "short": "Leganés",
+      "abbr": "LEG",
+      "city": "Leganés",
+      "colors": [
+        "#005CA9",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "real-valladolid",
+      "league": "esp-laliga",
+      "name": "Real Valladolid",
+      "short": "Valladolid",
+      "abbr": "VLL",
+      "city": "Valladolid",
+      "colors": [
+        "#762157",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "deportivo-la-coruna",
+      "league": "esp-laliga-2",
+      "name": "RC Deportivo",
+      "short": "Deportivo",
+      "abbr": "DEP",
+      "city": "A Coruña",
+      "colors": [
+        "#00529F",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "racing-santander",
+      "league": "esp-laliga-2",
+      "name": "Racing de Santander",
+      "short": "Racing",
+      "abbr": "RAC",
+      "city": "Santander",
+      "colors": [
+        "#00A650",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "sporting-gijon",
+      "league": "esp-laliga-2",
+      "name": "Sporting de Gijón",
+      "short": "Sporting",
+      "abbr": "SPG",
+      "city": "Gijón",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "levante",
+      "league": "esp-laliga-2",
+      "name": "Levante UD",
+      "short": "Levante",
+      "abbr": "LEV",
+      "city": "Valencia",
+      "colors": [
+        "#004B9E",
+        "#B4053C"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "real-zaragoza",
+      "league": "esp-laliga-2",
+      "name": "Real Zaragoza",
+      "short": "Zaragoza",
+      "abbr": "ZAR",
+      "city": "Zaragoza",
+      "colors": [
+        "#005BAC",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "cadiz",
+      "league": "esp-laliga-2",
+      "name": "Cádiz CF",
+      "short": "Cádiz",
+      "abbr": "CAD",
+      "city": "Cádiz",
+      "colors": [
+        "#FFE500",
+        "#0066B3"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "granada",
+      "league": "esp-laliga-2",
+      "name": "Granada CF",
+      "short": "Granada",
+      "abbr": "GRA",
+      "city": "Granada",
+      "colors": [
+        "#E4022C",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "almeria",
+      "league": "esp-laliga-2",
+      "name": "UD Almería",
+      "short": "Almería",
+      "abbr": "ALM",
+      "city": "Almería",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "rc-deportivo-la-coruna",
+      "league": "esp-laliga",
+      "name": "RC Deportivo La Coruña",
+      "short": "RC Deportivo",
+      "abbr": "LAC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 2,
+        "international": 1
+      }
+    },
+    {
+      "id": "elche-cf",
+      "league": "esp-laliga",
+      "name": "Elche CF",
+      "short": "Elche",
+      "abbr": "ELC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 2,
+        "international": 1
+      }
+    },
+    {
+      "id": "malaga-cf",
+      "league": "esp-laliga",
+      "name": "Málaga CF",
+      "short": "Málaga",
+      "abbr": "MÁL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 2,
+        "international": 1
+      }
+    },
+    {
+      "id": "burgos-cf",
+      "league": "esp-laliga-2",
+      "name": "Burgos CF",
+      "short": "Burgos",
+      "abbr": "BUR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cultural-leonesa",
+      "league": "esp-laliga-2",
+      "name": "Cultural Leonesa",
+      "short": "Cultural Leonesa",
+      "abbr": "CUL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ad-ceuta-fc",
+      "league": "esp-laliga-2",
+      "name": "AD Ceuta FC",
+      "short": "AD Ceuta",
+      "abbr": "ADC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cd-castellon",
+      "league": "esp-laliga-2",
+      "name": "CD Castellón",
+      "short": "CD Castellón",
+      "abbr": "CAS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sd-eibar",
+      "league": "esp-laliga-2",
+      "name": "SD Eibar",
+      "short": "SD Eibar",
+      "abbr": "EIB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "real-sociedad-b",
+      "league": "esp-laliga-2",
+      "name": "Real Sociedad B",
+      "short": "Real Sociedad B",
+      "abbr": "SOB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cd-mirandes",
+      "league": "esp-laliga-2",
+      "name": "CD Mirandés",
+      "short": "CD Mirandés",
+      "abbr": "MIR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sd-huesca",
+      "league": "esp-laliga-2",
+      "name": "SD Huesca",
+      "short": "SD Huesca",
+      "abbr": "HUE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-andorra",
+      "league": "esp-laliga-2",
+      "name": "FC Andorra",
+      "short": "FC Andorra",
+      "abbr": "AND",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cordoba-cf",
+      "league": "esp-laliga-2",
+      "name": "Córdoba CF",
+      "short": "Córdoba",
+      "abbr": "CÓR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "albacete",
+      "league": "esp-laliga-2",
+      "name": "Albacete",
+      "short": "Albacete",
+      "abbr": "ALB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

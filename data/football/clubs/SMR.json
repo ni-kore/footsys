@@ -1,0 +1,277 @@
+{
+  "country": "SMR",
+  "clubs": [
+    {
+      "id": "ss-folgore-falciano",
+      "league": "smr-tier-1",
+      "name": "SS Folgore/Falciano",
+      "short": "SS Folgore/Falciano",
+      "abbr": "FOF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sp-tre-fiori",
+      "league": "smr-tier-1",
+      "name": "SP Tre Fiori",
+      "short": "SP Tre Fiori",
+      "abbr": "STF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ac-libertas",
+      "league": "smr-tier-1",
+      "name": "AC Libertas",
+      "short": "AC Libertas",
+      "abbr": "LIB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ss-cosmos",
+      "league": "smr-tier-1",
+      "name": "SS Cosmos",
+      "short": "SS Cosmos",
+      "abbr": "COS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-fiorentino",
+      "league": "smr-tier-1",
+      "name": "FC Fiorentino",
+      "short": "FC Fiorentino",
+      "abbr": "FIO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ac-juvenes-dogana",
+      "league": "smr-tier-1",
+      "name": "AC Juvenes/Dogana",
+      "short": "AC Juvenes/Dogana",
+      "abbr": "JUD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-domagnano",
+      "league": "smr-tier-1",
+      "name": "FC Domagnano",
+      "short": "FC Domagnano",
+      "abbr": "DOM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "san-marino-academy",
+      "league": "smr-tier-1",
+      "name": "San Marino Academy",
+      "short": "San Marino",
+      "abbr": "SMA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ss-murata",
+      "league": "smr-tier-1",
+      "name": "SS Murata",
+      "short": "SS Murata",
+      "abbr": "MUR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ss-pennarossa",
+      "league": "smr-tier-1",
+      "name": "SS Pennarossa",
+      "short": "SS Pennarossa",
+      "abbr": "PEN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sp-cailungo",
+      "league": "smr-tier-1",
+      "name": "SP Cailungo",
+      "short": "SP Cailungo",
+      "abbr": "SPC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sc-faetano",
+      "league": "smr-tier-1",
+      "name": "SC Faetano",
+      "short": "SC Faetano",
+      "abbr": "FAE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sp-tre-penne",
+      "league": "smr-tier-1",
+      "name": "SP Tre Penne",
+      "short": "SP Tre Penne",
+      "abbr": "STP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sp-la-fiorita",
+      "league": "smr-tier-1",
+      "name": "SP La Fiorita",
+      "short": "SP La Fiorita",
+      "abbr": "SLF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ss-virtus",
+      "league": "smr-tier-1",
+      "name": "SS Virtus",
+      "short": "SS Virtus",
+      "abbr": "VIR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ss-san-giovanni",
+      "league": "smr-tier-1",
+      "name": "SS San Giovanni",
+      "short": "SS San Giovanni",
+      "abbr": "SAG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

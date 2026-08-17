@@ -1,0 +1,226 @@
+{
+  "country": "AUS",
+  "clubs": [
+    {
+      "id": "central-coast-mariners",
+      "league": "aus-a-league",
+      "name": "Central Coast Mariners",
+      "short": "Central Coast",
+      "abbr": "CCM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "melbourne-victory",
+      "league": "aus-a-league",
+      "name": "Melbourne Victory",
+      "short": "Melbourne Victory",
+      "abbr": "MEV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "auckland-fc",
+      "league": "aus-a-league",
+      "name": "Auckland FC",
+      "short": "Auckland",
+      "abbr": "AUC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "brisbane-roar",
+      "league": "aus-a-league",
+      "name": "Brisbane Roar",
+      "short": "Brisbane Roar",
+      "abbr": "BRR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "newcastle-united-jets",
+      "league": "aus-a-league",
+      "name": "Newcastle United Jets",
+      "short": "Newcastle United",
+      "abbr": "NUJ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "wellington-phoenix",
+      "league": "aus-a-league",
+      "name": "Wellington Phoenix",
+      "short": "Wellington Phoenix",
+      "abbr": "WEP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "western-united",
+      "league": "aus-a-league",
+      "name": "Western United",
+      "short": "Western United",
+      "abbr": "WEU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "macarthur-fc",
+      "league": "aus-a-league",
+      "name": "Macarthur FC",
+      "short": "Macarthur",
+      "abbr": "MAC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "perth-glory",
+      "league": "aus-a-league",
+      "name": "Perth Glory",
+      "short": "Perth Glory",
+      "abbr": "PEG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "adelaide-united",
+      "league": "aus-a-league",
+      "name": "Adelaide United",
+      "short": "Adelaide United",
+      "abbr": "ADU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sydney-fc",
+      "league": "aus-a-league",
+      "name": "Sydney FC",
+      "short": "Sydney",
+      "abbr": "SYD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sieger-ef",
+      "league": "aus-a-league",
+      "name": "Sieger EF",
+      "short": "Sieger EF",
+      "abbr": "SIE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "n-n",
+      "league": "aus-a-league",
+      "name": "N.N.",
+      "short": "N.N.",
+      "abbr": "NN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "country": "MNE",
+  "clubs": [
+    {
+      "id": "fk-bokelj",
+      "league": "mne-tier-1",
+      "name": "FK Bokelj",
+      "short": "FK Bokelj",
+      "abbr": "FKB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-jezero",
+      "league": "mne-tier-1",
+      "name": "FK Jezero",
+      "short": "FK Jezero",
+      "abbr": "FKJ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-arsenal",
+      "league": "mne-tier-1",
+      "name": "FK Arsenal",
+      "short": "FK Arsenal",
+      "abbr": "FKA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "jedinstvo-bijelo-polje",
+      "league": "mne-tier-1",
+      "name": "Jedinstvo Bijelo Polje",
+      "short": "Jedinstvo Bijelo",
+      "abbr": "JBP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-mornar",
+      "league": "mne-tier-1",
+      "name": "FK Mornar",
+      "short": "FK Mornar",
+      "abbr": "FKM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-otrant",
+      "league": "mne-tier-1",
+      "name": "FK Otrant",
+      "short": "FK Otrant",
+      "abbr": "FKO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-sutjeska",
+      "league": "mne-tier-1",
+      "name": "FK Sutjeska",
+      "short": "FK Sutjeska",
+      "abbr": "FKS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-decic-tuzi",
+      "league": "mne-tier-1",
+      "name": "FK Dečić Tuzi",
+      "short": "FK Dečić Tuzi",
+      "abbr": "FDT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-buducnost-podgorica",
+      "league": "mne-tier-1",
+      "name": "FK Budućnost Podgorica",
+      "short": "FK Budućnost",
+      "abbr": "FBP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ofk-petrovac",
+      "league": "mne-tier-1",
+      "name": "OFK Petrovac",
+      "short": "OFK Petrovac",
+      "abbr": "OFP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

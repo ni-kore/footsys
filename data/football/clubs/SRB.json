@@ -1,0 +1,277 @@
+{
+  "country": "SRB",
+  "clubs": [
+    {
+      "id": "fk-radnicki-1923",
+      "league": "srb-superliga",
+      "name": "FK Radnički 1923",
+      "short": "FK Radnički 1923",
+      "abbr": "FKR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "zeleznicar-pancevo",
+      "league": "srb-superliga",
+      "name": "Železničar Pančevo",
+      "short": "Železničar Pančevo",
+      "abbr": "ŽEP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-napredak",
+      "league": "srb-superliga",
+      "name": "FK Napredak",
+      "short": "FK Napredak",
+      "abbr": "FKN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "partizan",
+      "league": "srb-superliga",
+      "name": "Partizan",
+      "short": "Partizan",
+      "abbr": "PAR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "crvena-zvezda",
+      "league": "srb-superliga",
+      "name": "Crvena Zvezda",
+      "short": "Crvena Zvezda",
+      "abbr": "CRZ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "jedinstvo-ub",
+      "league": "srb-superliga",
+      "name": "Jedinstvo Ub",
+      "short": "Jedinstvo Ub",
+      "abbr": "JEU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "mladost-lucani",
+      "league": "srb-superliga",
+      "name": "Mladost Lučani",
+      "short": "Mladost Lučani",
+      "abbr": "MLL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ofk-beograd",
+      "league": "srb-superliga",
+      "name": "OFK Beograd",
+      "short": "OFK Beograd",
+      "abbr": "OFB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-cukaricki",
+      "league": "srb-superliga",
+      "name": "FK Čukarički",
+      "short": "FK Čukarički",
+      "abbr": "FKČ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "radnicki-nis",
+      "league": "srb-superliga",
+      "name": "Radnički Niš",
+      "short": "Radnički Niš",
+      "abbr": "RAN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-novi-pazar",
+      "league": "srb-superliga",
+      "name": "FK Novi Pazar",
+      "short": "FK Novi Pazar",
+      "abbr": "FNP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "spartak-subotica",
+      "league": "srb-superliga",
+      "name": "Spartak Subotica",
+      "short": "Spartak Subotica",
+      "abbr": "SPS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "tekstilac-odzaci",
+      "league": "srb-superliga",
+      "name": "Tekstilac Odžaci",
+      "short": "Tekstilac Odžaci",
+      "abbr": "TEO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vojvodina",
+      "league": "srb-superliga",
+      "name": "Vojvodina",
+      "short": "Vojvodina",
+      "abbr": "VOJ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "tsc-backa-topola",
+      "league": "srb-superliga",
+      "name": "TSC Bačka Topola",
+      "short": "TSC Bačka Topola",
+      "abbr": "TBT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "imt-beograd",
+      "league": "srb-superliga",
+      "name": "IMT Beograd",
+      "short": "IMT Beograd",
+      "abbr": "IMB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

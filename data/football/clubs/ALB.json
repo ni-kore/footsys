@@ -1,0 +1,175 @@
+{
+  "country": "ALB",
+  "clubs": [
+    {
+      "id": "kf-teuta-durres",
+      "league": "alb-tier-1",
+      "name": "KF Teuta Durrës",
+      "short": "KF Teuta Durrës",
+      "abbr": "KTD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kf-bylis-ballsh",
+      "league": "alb-tier-1",
+      "name": "KF Bylis Ballsh",
+      "short": "KF Bylis Ballsh",
+      "abbr": "KBB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-dinamo-city",
+      "league": "alb-tier-1",
+      "name": "FC Dinamo City",
+      "short": "FC Dinamo City",
+      "abbr": "DIC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "egnatia-rrogozhine",
+      "league": "alb-tier-1",
+      "name": "Egnatia Rrogozhine",
+      "short": "Egnatia Rrogozhine",
+      "abbr": "EGR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kf-laci",
+      "league": "alb-tier-1",
+      "name": "KF Laçi",
+      "short": "KF Laçi",
+      "abbr": "KFL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kf-tirane",
+      "league": "alb-tier-1",
+      "name": "KF Tiranë",
+      "short": "KF Tiranë",
+      "abbr": "KFT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-partizani",
+      "league": "alb-tier-1",
+      "name": "FK Partizani",
+      "short": "FK Partizani",
+      "abbr": "FKP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-vllaznia",
+      "league": "alb-tier-1",
+      "name": "FK Vllaznia",
+      "short": "FK Vllaznia",
+      "abbr": "FKV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kf-skenderbeu",
+      "league": "alb-tier-1",
+      "name": "KF Skënderbeu",
+      "short": "KF Skënderbeu",
+      "abbr": "KFS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "af-elbasani",
+      "league": "alb-tier-1",
+      "name": "AF Elbasani",
+      "short": "AF Elbasani",
+      "abbr": "AFE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

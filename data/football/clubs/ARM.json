@@ -1,0 +1,175 @@
+{
+  "country": "ARM",
+  "clubs": [
+    {
+      "id": "bkma-yerevan",
+      "league": "arm-tier-1",
+      "name": "BKMA Yerevan",
+      "short": "BKMA Yerevan",
+      "abbr": "BKY",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "shirak-fc",
+      "league": "arm-tier-1",
+      "name": "Shirak FC",
+      "short": "Shirak",
+      "abbr": "SHI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-ararat",
+      "league": "arm-tier-1",
+      "name": "FC Ararat",
+      "short": "FC Ararat",
+      "abbr": "ARA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-alashkert",
+      "league": "arm-tier-1",
+      "name": "FC Alashkert",
+      "short": "FC Alashkert",
+      "abbr": "ALA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-van",
+      "league": "arm-tier-1",
+      "name": "FK Van",
+      "short": "FK Van",
+      "abbr": "FKV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-urartu",
+      "league": "arm-tier-1",
+      "name": "FC Urartu",
+      "short": "FC Urartu",
+      "abbr": "URA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "pyunik-fc",
+      "league": "arm-tier-1",
+      "name": "Pyunik FC",
+      "short": "Pyunik",
+      "abbr": "PYU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-noah",
+      "league": "arm-tier-1",
+      "name": "FC Noah",
+      "short": "FC Noah",
+      "abbr": "NOA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "gandzasar-kapan",
+      "league": "arm-tier-1",
+      "name": "Gandzasar Kapan",
+      "short": "Gandzasar Kapan",
+      "abbr": "GAK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-west-armenia",
+      "league": "arm-tier-1",
+      "name": "FC West Armenia",
+      "short": "FC West Armenia",
+      "abbr": "WEA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "country": "SUI",
+  "clubs": [
+    {
+      "id": "fc-lugano",
+      "league": "sui-super-league",
+      "name": "FC Lugano",
+      "short": "FC Lugano",
+      "abbr": "LUG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "grasshopper-club-zuerich",
+      "league": "sui-super-league",
+      "name": "Grasshopper Club Zürich",
+      "short": "Grasshopper Club",
+      "abbr": "GRZ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "yverdon-sport-fc",
+      "league": "sui-super-league",
+      "name": "Yverdon Sport FC",
+      "short": "Yverdon Sport",
+      "abbr": "YVS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-winterthur",
+      "league": "sui-super-league",
+      "name": "FC Winterthur",
+      "short": "FC Winterthur",
+      "abbr": "WIN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-st-gallen",
+      "league": "sui-super-league",
+      "name": "FC St. Gallen",
+      "short": "FC St. Gallen",
+      "abbr": "STG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bsc-young-boys",
+      "league": "sui-super-league",
+      "name": "BSC Young Boys",
+      "short": "BSC Young Boys",
+      "abbr": "BYB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-sion",
+      "league": "sui-super-league",
+      "name": "FC Sion",
+      "short": "FC Sion",
+      "abbr": "SIO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-lausanne-sport",
+      "league": "sui-super-league",
+      "name": "FC Lausanne-Sport",
+      "short": "FC Lausanne-Sport",
+      "abbr": "LAS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-basel-1893",
+      "league": "sui-super-league",
+      "name": "FC Basel 1893",
+      "short": "FC Basel 1893",
+      "abbr": "BAS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-luzern",
+      "league": "sui-super-league",
+      "name": "FC Luzern",
+      "short": "FC Luzern",
+      "abbr": "LUZ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "servette-fc",
+      "league": "sui-super-league",
+      "name": "Servette FC",
+      "short": "Servette",
+      "abbr": "SER",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-schaffhausen",
+      "league": "sui-tier-2",
+      "name": "FC Schaffhausen",
+      "short": "FC Schaffhausen",
+      "abbr": "SCH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "etoile-carouge-fc",
+      "league": "sui-tier-2",
+      "name": "Etoile Carouge FC",
+      "short": "Etoile Carouge",
+      "abbr": "ETC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "neuchatel-xamax-fcs",
+      "league": "sui-tier-2",
+      "name": "Neuchâtel Xamax FCS",
+      "short": "Neuchâtel Xamax",
+      "abbr": "NXF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "stade-lausanne-ouchy",
+      "league": "sui-tier-2",
+      "name": "Stade Lausanne-Ouchy",
+      "short": "Stade Lausanne-Ouchy",
+      "abbr": "SLO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-aarau",
+      "league": "sui-tier-2",
+      "name": "FC Aarau",
+      "short": "FC Aarau",
+      "abbr": "AAR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-thun-berner-oberland",
+      "league": "sui-tier-2",
+      "name": "FC Thun Berner Oberland",
+      "short": "FC Thun",
+      "abbr": "TBO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ac-bellinzona",
+      "league": "sui-tier-2",
+      "name": "AC Bellinzona",
+      "short": "AC Bellinzona",
+      "abbr": "BEL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-wil-1900",
+      "league": "sui-tier-2",
+      "name": "FC Wil 1900",
+      "short": "FC Wil 1900",
+      "abbr": "WIL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-vaduz",
+      "league": "sui-tier-2",
+      "name": "FC Vaduz",
+      "short": "FC Vaduz",
+      "abbr": "VAD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-stade-nyonnais",
+      "league": "sui-tier-2",
+      "name": "FC Stade Nyonnais",
+      "short": "FC Stade",
+      "abbr": "STN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

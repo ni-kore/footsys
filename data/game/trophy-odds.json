@@ -1,0 +1,39 @@
+{
+  "$comment": "Titelwahrscheinlichkeiten pro Saison. Index = Reputationsstufe des Vereins (0–5) im jeweiligen Bereich: 'domestic' für Liga und Pokal, 'continental' für Europapokal & Co., 'international' für die Klub-WM. Karriere-Events können diese Werte per Multiplikator verändern.",
+
+  "club": {
+    "league":                { "byDomesticReputation": [0.00, 0.02, 0.06, 0.22, 0.42, 0.68] },
+    "domesticCup":           { "byDomesticReputation": [0.02, 0.05, 0.10, 0.22, 0.32, 0.40] },
+    "domesticSuperCup":      { "byDomesticReputation": [0.00, 0.02, 0.05, 0.14, 0.24, 0.35], "requiresPriorTitle": true },
+    "continentalPrimary":    { "byContinentalReputation": [0.00, 0.00, 0.02, 0.10, 0.18, 0.30] },
+    "continentalSecondary":  { "byContinentalReputation": [0.00, 0.03, 0.10, 0.06, 0.02, 0.00] },
+    "continentalTertiary":   { "byContinentalReputation": [0.02, 0.08, 0.06, 0.01, 0.00, 0.00] },
+    "continentalSuperCup":   { "byContinentalReputation": [0.00, 0.00, 0.01, 0.06, 0.10, 0.16], "requiresPriorTitle": true },
+    "clubWorldCup":          { "byInternationalReputation": [0.00, 0.00, 0.00, 0.02, 0.06, 0.12], "requiresPriorTitle": true }
+  },
+
+  "national": {
+    "$comment": "Gilt nur, wenn der Spieler zum Turnierzeitpunkt nominiert ist. Index = strength des Landes aus countries.json (1–5).",
+    "worldCup":            { "byCountryStrength": { "1": 0.000, "2": 0.002, "3": 0.010, "4": 0.045, "5": 0.110 } },
+    "continentalNational": { "byCountryStrength": { "1": 0.005, "2": 0.020, "3": 0.060, "4": 0.130, "5": 0.220 } },
+    "secondaryNational":   { "byCountryStrength": { "1": 0.010, "2": 0.035, "3": 0.080, "4": 0.150, "5": 0.220 } },
+    "olympic":             { "byCountryStrength": { "1": 0.010, "2": 0.030, "3": 0.070, "4": 0.120, "5": 0.160 } },
+    "confederationDifficulty": {
+      "$comment": "Zusätzlicher Faktor auf die WM-Chance. Eine europäische 5 gewinnt öfter als eine ozeanische 5.",
+      "UEFA": 1.0, "CONMEBOL": 0.95, "CONCACAF": 0.35, "AFC": 0.30, "CAF": 0.45, "OFC": 0.05
+    }
+  },
+
+  "individual": {
+    "$comment": "Persönliche Auszeichnungen. 'minOverall' ist Voraussetzung, 'chance' die Wahrscheinlichkeit, wenn zusätzlich die Leistungsbedingung erfüllt ist.",
+    "leagueTopScorer":          { "minOverall": 78, "requiresRole": ["starter"], "requiresPositionGroup": ["ATT", "MID"], "chanceByLeagueStrength": { "1": 0.35, "2": 0.28, "3": 0.20, "4": 0.14, "5": 0.10 } },
+    "leagueTopAssists":         { "minOverall": 76, "requiresRole": ["starter"], "requiresPositionGroup": ["MID", "ATT"], "chanceByLeagueStrength": { "1": 0.35, "2": 0.28, "3": 0.20, "4": 0.14, "5": 0.10 } },
+    "leaguePlayerOfTheSeason":  { "minOverall": 84, "requiresRole": ["starter"], "chanceByLeagueStrength": { "1": 0.30, "2": 0.24, "3": 0.18, "4": 0.12, "5": 0.09 } },
+    "leagueYoungPlayer":        { "minOverall": 74, "maxAge": 21, "requiresRole": ["starter", "high_rotation"], "chanceByLeagueStrength": { "1": 0.30, "2": 0.25, "3": 0.20, "4": 0.16, "5": 0.14 } },
+    "leagueGoalkeeperOfSeason": { "minOverall": 80, "requiresPositionGroup": ["GK"], "requiresRole": ["starter"], "chanceByLeagueStrength": { "1": 0.35, "2": 0.30, "3": 0.25, "4": 0.20, "5": 0.16 } },
+    "goldenBoy":                { "minOverall": 80, "maxAge": 21, "chance": 0.12, "oncePerCareer": true },
+    "ballonDOr":                { "minOverall": 90, "requiresContinentalTitleOrTopScorer": true, "chance": 0.22 },
+    "worldCupGoldenBall":       { "minOverall": 88, "requiresTournamentRun": true, "chance": 0.25 },
+    "worldCupGoldenBoot":       { "minOverall": 86, "requiresPositionGroup": ["ATT"], "requiresTournamentRun": true, "chance": 0.22 }
+  }
+}

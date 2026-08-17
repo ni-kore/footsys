@@ -1,0 +1,277 @@
+{
+  "country": "LUX",
+  "clubs": [
+    {
+      "id": "fc-rodange-91",
+      "league": "lux-tier-1",
+      "name": "FC Rodange 91",
+      "short": "FC Rodange 91",
+      "abbr": "ROD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "rfcu-luxemburg",
+      "league": "lux-tier-1",
+      "name": "RFCU Luxemburg",
+      "short": "RFCU Luxemburg",
+      "abbr": "RFL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "us-hostert",
+      "league": "lux-tier-1",
+      "name": "US Hostert",
+      "short": "US Hostert",
+      "abbr": "HOS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-wiltz-71",
+      "league": "lux-tier-1",
+      "name": "FC Wiltz 71",
+      "short": "FC Wiltz 71",
+      "abbr": "WIL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "victoria-rosport",
+      "league": "lux-tier-1",
+      "name": "Victoria Rosport",
+      "short": "Victoria Rosport",
+      "abbr": "VIR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cs-fola-esch",
+      "league": "lux-tier-1",
+      "name": "CS FOLA Esch",
+      "short": "CS FOLA Esch",
+      "abbr": "CFE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sc-bettembourg",
+      "league": "lux-tier-1",
+      "name": "SC Bettembourg",
+      "short": "SC Bettembourg",
+      "abbr": "BET",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "f91-dudelange",
+      "league": "lux-tier-1",
+      "name": "F91 Dudelange",
+      "short": "F91 Dudelange",
+      "abbr": "F9D",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "jeunesse-esch",
+      "league": "lux-tier-1",
+      "name": "Jeunesse Esch",
+      "short": "Jeunesse Esch",
+      "abbr": "JEE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "us-mondorf",
+      "league": "lux-tier-1",
+      "name": "US Mondorf",
+      "short": "US Mondorf",
+      "abbr": "MON",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "swift-hesperange",
+      "league": "lux-tier-1",
+      "name": "Swift Hesperange",
+      "short": "Swift Hesperange",
+      "abbr": "SWH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "union-titus-petange",
+      "league": "lux-tier-1",
+      "name": "Union Titus Pétange",
+      "short": "Union Titus",
+      "abbr": "UTP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-mondercange",
+      "league": "lux-tier-1",
+      "name": "FC Mondercange",
+      "short": "FC Mondercange",
+      "abbr": "MON",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "progres-niedercorn",
+      "league": "lux-tier-1",
+      "name": "Progrès Niedercorn",
+      "short": "Progrès Niedercorn",
+      "abbr": "PRN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-differdange-03",
+      "league": "lux-tier-1",
+      "name": "FC Differdange 03",
+      "short": "FC Differdange",
+      "abbr": "DIF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "una-strassen",
+      "league": "lux-tier-1",
+      "name": "UNA Strassen",
+      "short": "UNA Strassen",
+      "abbr": "UNS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

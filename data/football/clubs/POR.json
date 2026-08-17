@@ -1,0 +1,668 @@
+{
+  "country": "POR",
+  "clubs": [
+    {
+      "id": "sl-benfica",
+      "league": "por-primeira-liga",
+      "name": "SL Benfica",
+      "short": "Benfica",
+      "abbr": "SLB",
+      "city": "Lissabon",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 5,
+        "continental": 3,
+        "international": 5
+      }
+    },
+    {
+      "id": "fc-porto",
+      "league": "por-primeira-liga",
+      "name": "FC Porto",
+      "short": "Porto",
+      "abbr": "FCP",
+      "city": "Porto",
+      "colors": [
+        "#004B9E",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 5,
+        "continental": 3,
+        "international": 5
+      }
+    },
+    {
+      "id": "sporting-cp",
+      "league": "por-primeira-liga",
+      "name": "Sporting CP",
+      "short": "Sporting",
+      "abbr": "SCP",
+      "city": "Lissabon",
+      "colors": [
+        "#008057",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 5,
+        "continental": 3,
+        "international": 4
+      }
+    },
+    {
+      "id": "sc-braga",
+      "league": "por-primeira-liga",
+      "name": "SC Braga",
+      "short": "Braga",
+      "abbr": "SCB",
+      "city": "Braga",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 2,
+        "international": 3
+      }
+    },
+    {
+      "id": "vitoria-guimaraes",
+      "league": "por-primeira-liga",
+      "name": "Vitória SC",
+      "short": "Guimarães",
+      "abbr": "VSC",
+      "city": "Guimarães",
+      "colors": [
+        "#FFFFFF",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "boavista",
+      "league": "por-primeira-liga",
+      "name": "Boavista FC",
+      "short": "Boavista",
+      "abbr": "BOA",
+      "city": "Porto",
+      "colors": [
+        "#000000",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "rio-ave",
+      "league": "por-primeira-liga",
+      "name": "Rio Ave FC",
+      "short": "Rio Ave",
+      "abbr": "RIO",
+      "city": "Vila do Conde",
+      "colors": [
+        "#008057",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "gil-vicente",
+      "league": "por-primeira-liga",
+      "name": "Gil Vicente FC",
+      "short": "Gil Vicente",
+      "abbr": "GIL",
+      "city": "Barcelos",
+      "colors": [
+        "#E30613",
+        "#004B9E"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "estoril",
+      "league": "por-primeira-liga",
+      "name": "GD Estoril Praia",
+      "short": "Estoril",
+      "abbr": "EST",
+      "city": "Estoril",
+      "colors": [
+        "#FFED00",
+        "#004B9E"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "famalicao",
+      "league": "por-primeira-liga",
+      "name": "FC Famalicão",
+      "short": "Famalicão",
+      "abbr": "FAM",
+      "city": "Famalicão",
+      "colors": [
+        "#FFFFFF",
+        "#004B9E"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "moreirense",
+      "league": "por-primeira-liga",
+      "name": "Moreirense FC",
+      "short": "Moreirense",
+      "abbr": "MOR",
+      "city": "Moreira de Cónegos",
+      "colors": [
+        "#008057",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "casa-pia",
+      "league": "por-primeira-liga",
+      "name": "Casa Pia AC",
+      "short": "Casa Pia",
+      "abbr": "CAS",
+      "city": "Lissabon",
+      "colors": [
+        "#000000",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "belenenses",
+      "league": "por-liga-2",
+      "name": "CF Os Belenenses",
+      "short": "Belenenses",
+      "abbr": "BEL",
+      "city": "Lissabon",
+      "colors": [
+        "#004B9E",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "maritimo",
+      "league": "por-liga-2",
+      "name": "CS Marítimo",
+      "short": "Marítimo",
+      "abbr": "MAR",
+      "city": "Funchal",
+      "colors": [
+        "#008057",
+        "#E30613"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "avs",
+      "league": "por-primeira-liga",
+      "name": "AVS",
+      "short": "AVS",
+      "abbr": "AVS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "cd-nacional",
+      "league": "por-primeira-liga",
+      "name": "CD Nacional",
+      "short": "CD Nacional",
+      "abbr": "NAC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "cd-santa-clara",
+      "league": "por-primeira-liga",
+      "name": "CD Santa Clara",
+      "short": "CD Santa Clara",
+      "abbr": "SAC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "sc-farense",
+      "league": "por-primeira-liga",
+      "name": "SC Farense",
+      "short": "SC Farense",
+      "abbr": "FAR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "sport-lisboa-e-benfica",
+      "league": "por-primeira-liga",
+      "name": "Sport Lisboa e Benfica",
+      "short": "Sport Lisboa",
+      "abbr": "SLE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-arouca",
+      "league": "por-primeira-liga",
+      "name": "FC Arouca",
+      "short": "FC Arouca",
+      "abbr": "ARO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "sporting-clube-de-portugal",
+      "league": "por-primeira-liga",
+      "name": "Sporting Clube de Portugal",
+      "short": "Sporting Clube",
+      "abbr": "SCD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "cf-estrela-da-amadora",
+      "league": "por-primeira-liga",
+      "name": "CF Estrela da Amadora",
+      "short": "CF Estrela",
+      "abbr": "EDA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "cd-tondela",
+      "league": "por-liga-2",
+      "name": "CD Tondela",
+      "short": "CD Tondela",
+      "abbr": "TON",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cd-mafra",
+      "league": "por-liga-2",
+      "name": "CD Mafra",
+      "short": "CD Mafra",
+      "abbr": "MAF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "pacos-de-ferreira",
+      "league": "por-liga-2",
+      "name": "Paços de Ferreira",
+      "short": "Paços de",
+      "abbr": "PDF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "leixoes-sc",
+      "league": "por-liga-2",
+      "name": "Leixões SC",
+      "short": "Leixões",
+      "abbr": "LEI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sl-benfica-b",
+      "league": "por-liga-2",
+      "name": "SL Benfica B",
+      "short": "SL Benfica B",
+      "abbr": "SBB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "academico-de-viseu",
+      "league": "por-liga-2",
+      "name": "Académico de Viseu",
+      "short": "Académico de",
+      "abbr": "ADV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "gd-chaves",
+      "league": "por-liga-2",
+      "name": "GD Chaves",
+      "short": "GD Chaves",
+      "abbr": "GDC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-penafiel",
+      "league": "por-liga-2",
+      "name": "FC Penafiel",
+      "short": "FC Penafiel",
+      "abbr": "PEN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ud-oliveirense",
+      "league": "por-liga-2",
+      "name": "UD Oliveirense",
+      "short": "UD Oliveirense",
+      "abbr": "OLI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "uniao-torreense",
+      "league": "por-liga-2",
+      "name": "União Torreense",
+      "short": "União Torreense",
+      "abbr": "UNT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cd-feirense",
+      "league": "por-liga-2",
+      "name": "CD Feirense",
+      "short": "CD Feirense",
+      "abbr": "FEI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-porto-b",
+      "league": "por-liga-2",
+      "name": "FC Porto B",
+      "short": "FC Porto B",
+      "abbr": "POB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-alverca",
+      "league": "por-liga-2",
+      "name": "FC Alverca",
+      "short": "FC Alverca",
+      "abbr": "ALV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "uniao-leiria",
+      "league": "por-liga-2",
+      "name": "União Leiria",
+      "short": "União Leiria",
+      "abbr": "UNL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-vizela",
+      "league": "por-liga-2",
+      "name": "FC Vizela",
+      "short": "FC Vizela",
+      "abbr": "VIZ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-felgueiras-1932",
+      "league": "por-liga-2",
+      "name": "FC Felgueiras 1932",
+      "short": "FC Felgueiras",
+      "abbr": "FEL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "portimonense-sc",
+      "league": "por-liga-2",
+      "name": "Portimonense SC",
+      "short": "Portimonense",
+      "abbr": "POR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

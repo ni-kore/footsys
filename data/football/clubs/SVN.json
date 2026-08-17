@@ -1,0 +1,175 @@
+{
+  "country": "SVN",
+  "clubs": [
+    {
+      "id": "olimpija-ljubljana",
+      "league": "svn-tier-1",
+      "name": "Olimpija Ljubljana",
+      "short": "Olimpija Ljubljana",
+      "abbr": "OLL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "nd-primorje",
+      "league": "svn-tier-1",
+      "name": "ND Primorje",
+      "short": "ND Primorje",
+      "abbr": "NDP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "nk-radomlje",
+      "league": "svn-tier-1",
+      "name": "NK Radomlje",
+      "short": "NK Radomlje",
+      "abbr": "NKR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-koper",
+      "league": "svn-tier-1",
+      "name": "FC Koper",
+      "short": "FC Koper",
+      "abbr": "KOP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ns-mura",
+      "league": "svn-tier-1",
+      "name": "NŠ Mura",
+      "short": "NŠ Mura",
+      "abbr": "NŠM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "nk-nafta",
+      "league": "svn-tier-1",
+      "name": "NK Nafta",
+      "short": "NK Nafta",
+      "abbr": "NKN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "nk-maribor",
+      "league": "svn-tier-1",
+      "name": "NK Maribor",
+      "short": "NK Maribor",
+      "abbr": "NKM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "nk-domzale",
+      "league": "svn-tier-1",
+      "name": "NK Domžale",
+      "short": "NK Domžale",
+      "abbr": "NKD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "nk-celje",
+      "league": "svn-tier-1",
+      "name": "NK Celje",
+      "short": "NK Celje",
+      "abbr": "NKC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "nk-bravo",
+      "league": "svn-tier-1",
+      "name": "NK Bravo",
+      "short": "NK Bravo",
+      "abbr": "NKB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

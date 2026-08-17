@@ -1,0 +1,413 @@
+{
+  "country": "DEN",
+  "clubs": [
+    {
+      "id": "aarhus-gf",
+      "league": "den-superliga",
+      "name": "Aarhus GF",
+      "short": "Aarhus GF",
+      "abbr": "AAG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-midtjylland",
+      "league": "den-superliga",
+      "name": "FC Midtjylland",
+      "short": "FC Midtjylland",
+      "abbr": "MID",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-nordsj-lland",
+      "league": "den-superliga",
+      "name": "FC Nordsjælland",
+      "short": "FC Nordsjælland",
+      "abbr": "NOR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "aalborg-bk",
+      "league": "den-superliga",
+      "name": "Aalborg BK",
+      "short": "Aalborg BK",
+      "abbr": "AAB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "silkeborg-if",
+      "league": "den-superliga",
+      "name": "Silkeborg IF",
+      "short": "Silkeborg IF",
+      "abbr": "SII",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "s-nderjyske",
+      "league": "den-superliga",
+      "name": "SønderjyskE",
+      "short": "SønderjyskE",
+      "abbr": "SØN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vejle-bk",
+      "league": "den-superliga",
+      "name": "Vejle BK",
+      "short": "Vejle BK",
+      "abbr": "VEB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "randers-fc",
+      "league": "den-superliga",
+      "name": "Randers FC",
+      "short": "Randers",
+      "abbr": "RAN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "viborg-ff",
+      "league": "den-superliga",
+      "name": "Viborg FF",
+      "short": "Viborg FF",
+      "abbr": "VIF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "br-ndby-if",
+      "league": "den-superliga",
+      "name": "Brøndby IF",
+      "short": "Brøndby IF",
+      "abbr": "BRI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "lyngby-bk",
+      "league": "den-superliga",
+      "name": "Lyngby BK",
+      "short": "Lyngby BK",
+      "abbr": "LYB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-k-benhavn",
+      "league": "den-superliga",
+      "name": "FC København",
+      "short": "FC København",
+      "abbr": "KØB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "b-93-k-benhavn",
+      "league": "den-tier-2",
+      "name": "B.93 København",
+      "short": "B.93 København",
+      "abbr": "BKØ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kolding-if",
+      "league": "den-tier-2",
+      "name": "Kolding IF",
+      "short": "Kolding IF",
+      "abbr": "KOI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hvidovre-if",
+      "league": "den-tier-2",
+      "name": "Hvidovre IF",
+      "short": "Hvidovre IF",
+      "abbr": "HVI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hb-k-ge",
+      "league": "den-tier-2",
+      "name": "HB Køge",
+      "short": "HB Køge",
+      "abbr": "HBK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vendsyssel-ff",
+      "league": "den-tier-2",
+      "name": "Vendsyssel FF",
+      "short": "Vendsyssel FF",
+      "abbr": "VEF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-roskilde",
+      "league": "den-tier-2",
+      "name": "FC Roskilde",
+      "short": "FC Roskilde",
+      "abbr": "ROS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "esbjerg-fb",
+      "league": "den-tier-2",
+      "name": "Esbjerg fB",
+      "short": "Esbjerg fB",
+      "abbr": "ESF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "odense-bk",
+      "league": "den-tier-2",
+      "name": "Odense BK",
+      "short": "Odense BK",
+      "abbr": "ODB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ac-horsens",
+      "league": "den-tier-2",
+      "name": "AC Horsens",
+      "short": "AC Horsens",
+      "abbr": "HOR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-fredericia",
+      "league": "den-tier-2",
+      "name": "FC Fredericia",
+      "short": "FC Fredericia",
+      "abbr": "FRE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hiller-d-gi",
+      "league": "den-tier-2",
+      "name": "Hillerød GI",
+      "short": "Hillerød GI",
+      "abbr": "HIG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hobro-ik",
+      "league": "den-tier-2",
+      "name": "Hobro IK",
+      "short": "Hobro IK",
+      "abbr": "HOI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

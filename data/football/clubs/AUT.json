@@ -1,0 +1,991 @@
+{
+  "country": "AUT",
+  "clubs": [
+    {
+      "id": "lask-linz",
+      "league": "aut-bundesliga",
+      "name": "LASK Linz",
+      "short": "LASK Linz",
+      "abbr": "LAL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sturm-graz",
+      "league": "aut-bundesliga",
+      "name": "Sturm Graz",
+      "short": "Sturm Graz",
+      "abbr": "STG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "wsg-tirol",
+      "league": "aut-bundesliga",
+      "name": "WSG Tirol",
+      "short": "WSG Tirol",
+      "abbr": "WST",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "tsv-hartberg",
+      "league": "aut-bundesliga",
+      "name": "TSV Hartberg",
+      "short": "TSV Hartberg",
+      "abbr": "HAR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "wolfsberger-ac",
+      "league": "aut-bundesliga",
+      "name": "Wolfsberger AC",
+      "short": "Wolfsberger",
+      "abbr": "WOL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "scr-altach",
+      "league": "aut-bundesliga",
+      "name": "SCR Altach",
+      "short": "SCR Altach",
+      "abbr": "SCA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sv-ried",
+      "league": "aut-bundesliga",
+      "name": "SV Ried",
+      "short": "SV Ried",
+      "abbr": "RIE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-salzburg",
+      "league": "aut-bundesliga",
+      "name": "FC Salzburg",
+      "short": "FC Salzburg",
+      "abbr": "SAL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "grazer-ak",
+      "league": "aut-bundesliga",
+      "name": "Grazer AK",
+      "short": "Grazer AK",
+      "abbr": "GRA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "austria-wien",
+      "league": "aut-bundesliga",
+      "name": "Austria Wien",
+      "short": "Austria Wien",
+      "abbr": "AUW",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "rapid-wien",
+      "league": "aut-bundesliga",
+      "name": "Rapid Wien",
+      "short": "Rapid Wien",
+      "abbr": "RAW",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "blau-weiss-linz",
+      "league": "aut-bundesliga",
+      "name": "Blau-Weiß Linz",
+      "short": "Blau-Weiß Linz",
+      "abbr": "BWL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-liefering",
+      "league": "aut-tier-2",
+      "name": "FC Liefering",
+      "short": "FC Liefering",
+      "abbr": "LIE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "austria-lustenau",
+      "league": "aut-tier-2",
+      "name": "Austria Lustenau",
+      "short": "Austria Lustenau",
+      "abbr": "AUL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kapfenberger-sv-1919",
+      "league": "aut-tier-2",
+      "name": "Kapfenberger SV 1919",
+      "short": "Kapfenberger SV",
+      "abbr": "KAP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-admira-wacker",
+      "league": "aut-tier-2",
+      "name": "FC Admira Wacker",
+      "short": "FC Admira Wacker",
+      "abbr": "ADW",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sv-stripfing-weiden",
+      "league": "aut-tier-2",
+      "name": "SV Stripfing/Weiden",
+      "short": "SV Stripfing/Weiden",
+      "abbr": "STW",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "first-vienna-fc",
+      "league": "aut-tier-2",
+      "name": "First Vienna FC",
+      "short": "First Vienna",
+      "abbr": "FIV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sku-amstetten",
+      "league": "aut-tier-2",
+      "name": "SKU Amstetten",
+      "short": "SKU Amstetten",
+      "abbr": "SKA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sturm-graz-ii",
+      "league": "aut-tier-2",
+      "name": "Sturm Graz II",
+      "short": "Sturm Graz II",
+      "abbr": "SGI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sk-austria-klagenfurt",
+      "league": "aut-tier-2",
+      "name": "SK Austria Klagenfurt",
+      "short": "SK Austria",
+      "abbr": "SAK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "schwarz-weiss-bregenz",
+      "league": "aut-tier-2",
+      "name": "Schwarz-Weiß Bregenz",
+      "short": "Schwarz-Weiß Bregenz",
+      "abbr": "SWB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "rapid-wien-ii",
+      "league": "aut-tier-2",
+      "name": "Rapid Wien II",
+      "short": "Rapid Wien II",
+      "abbr": "RWI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "austria-wien-ii",
+      "league": "aut-tier-2",
+      "name": "Austria Wien II",
+      "short": "Austria Wien II",
+      "abbr": "AWI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "skn-st-poelten",
+      "league": "aut-tier-2",
+      "name": "SKN St. Pölten",
+      "short": "SKN St. Pölten",
+      "abbr": "SSP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-hertha-wels",
+      "league": "aut-tier-2",
+      "name": "FC Hertha Wels",
+      "short": "FC Hertha Wels",
+      "abbr": "HEW",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "floridsdorfer-ac",
+      "league": "aut-tier-2",
+      "name": "Floridsdorfer AC",
+      "short": "Floridsdorfer",
+      "abbr": "FLO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "dsv-leoben",
+      "league": "aut-tier-3",
+      "name": "DSV Leoben",
+      "short": "DSV Leoben",
+      "abbr": "DSL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "lask-amateure-ooe",
+      "league": "aut-tier-3",
+      "name": "LASK Amateure OÖ",
+      "short": "LASK Amateure OÖ",
+      "abbr": "LAO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sk-treibach",
+      "league": "aut-tier-3",
+      "name": "SK Treibach",
+      "short": "SK Treibach",
+      "abbr": "SKT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sv-wallern",
+      "league": "aut-tier-3",
+      "name": "SV Wallern",
+      "short": "SV Wallern",
+      "abbr": "WAL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sc-weiz",
+      "league": "aut-tier-3",
+      "name": "SC Weiz",
+      "short": "SC Weiz",
+      "abbr": "WEI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "union-voecklamarkt",
+      "league": "aut-tier-3",
+      "name": "Union Vöcklamarkt",
+      "short": "Union Vöcklamarkt",
+      "abbr": "UNV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "deutschlandsberger-sc",
+      "league": "aut-tier-3",
+      "name": "Deutschlandsberger SC",
+      "short": "Deutschlandsberger",
+      "abbr": "DEU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "wsc-hertha",
+      "league": "aut-tier-3",
+      "name": "WSC Hertha",
+      "short": "WSC Hertha",
+      "abbr": "WSH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sv-wildon",
+      "league": "aut-tier-3",
+      "name": "SV Wildon",
+      "short": "SV Wildon",
+      "abbr": "WIL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "union-gurten",
+      "league": "aut-tier-3",
+      "name": "Union Gurten",
+      "short": "Union Gurten",
+      "abbr": "UNG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "askoe-oedt",
+      "league": "aut-tier-3",
+      "name": "ASKÖ Oedt",
+      "short": "ASKÖ Oedt",
+      "abbr": "ASO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vorwaerts-steyr",
+      "league": "aut-tier-3",
+      "name": "Vorwärts Steyr",
+      "short": "Vorwärts Steyr",
+      "abbr": "VOS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "usv-st-anna",
+      "league": "aut-tier-3",
+      "name": "USV St. Anna",
+      "short": "USV St. Anna",
+      "abbr": "USA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-gleisdorf-09",
+      "league": "aut-tier-3",
+      "name": "FC Gleisdorf 09",
+      "short": "FC Gleisdorf 09",
+      "abbr": "GLE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "wolfsberger-ac-ii",
+      "league": "aut-tier-3",
+      "name": "Wolfsberger AC II",
+      "short": "Wolfsberger AC",
+      "abbr": "WOI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sv-ried-ii",
+      "league": "aut-tier-3",
+      "name": "SV Ried II",
+      "short": "SV Ried II",
+      "abbr": "RII",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-marchfeld-donauauen",
+      "league": "aut-tier-3",
+      "name": "FC Marchfeld Donauauen",
+      "short": "FC Marchfeld",
+      "abbr": "MAD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sr-donaufeld",
+      "league": "aut-tier-3",
+      "name": "SR Donaufeld",
+      "short": "SR Donaufeld",
+      "abbr": "SRD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sc-neusiedl-see-1919",
+      "league": "aut-tier-3",
+      "name": "SC Neusiedl/See 1919",
+      "short": "SC Neusiedl/See",
+      "abbr": "NES",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "favoritner-ac",
+      "league": "aut-tier-3",
+      "name": "Favoritner AC",
+      "short": "Favoritner",
+      "abbr": "FAV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "twl-elektra",
+      "league": "aut-tier-3",
+      "name": "TWL Elektra",
+      "short": "TWL Elektra",
+      "abbr": "TWE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "asv-siegendorf",
+      "league": "aut-tier-3",
+      "name": "ASV Siegendorf",
+      "short": "ASV Siegendorf",
+      "abbr": "ASS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sv-oberwart",
+      "league": "aut-tier-3",
+      "name": "SV Oberwart",
+      "short": "SV Oberwart",
+      "abbr": "OBE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sv-gloggnitz",
+      "league": "aut-tier-3",
+      "name": "SV Gloggnitz",
+      "short": "SV Gloggnitz",
+      "abbr": "GLO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sc-wiener-viktoria",
+      "league": "aut-tier-3",
+      "name": "SC Wiener Viktoria",
+      "short": "SC Wiener",
+      "abbr": "WIV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sportunion-mauer",
+      "league": "aut-tier-3",
+      "name": "Sportunion Mauer",
+      "short": "Sportunion Mauer",
+      "abbr": "SPM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-mauerwerk",
+      "league": "aut-tier-3",
+      "name": "FC Mauerwerk",
+      "short": "FC Mauerwerk",
+      "abbr": "MAU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kremser-sc",
+      "league": "aut-tier-3",
+      "name": "Kremser SC",
+      "short": "Kremser",
+      "abbr": "KRE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "wiener-sport-club",
+      "league": "aut-tier-3",
+      "name": "Wiener Sport-Club",
+      "short": "Wiener Sport-Club",
+      "abbr": "WIS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sv-leobendorf",
+      "league": "aut-tier-3",
+      "name": "SV Leobendorf",
+      "short": "SV Leobendorf",
+      "abbr": "LEO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fcm-traiskirchen",
+      "league": "aut-tier-3",
+      "name": "FCM Traiskirchen",
+      "short": "FCM Traiskirchen",
+      "abbr": "FCT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

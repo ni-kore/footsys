@@ -1,0 +1,2102 @@
+[
+  {
+    "code": "ALB",
+    "name": {
+      "de": "Albanien",
+      "en": "Albania"
+    },
+    "confederation": "UEFA",
+    "strength": 2,
+    "iso2": "AL"
+  },
+  {
+    "code": "AND",
+    "name": {
+      "de": "Andorra",
+      "en": "Andorra"
+    },
+    "confederation": "UEFA",
+    "strength": 1,
+    "iso2": "AD"
+  },
+  {
+    "code": "ARM",
+    "name": {
+      "de": "Armenien",
+      "en": "Armenia"
+    },
+    "confederation": "UEFA",
+    "strength": 2,
+    "iso2": "AM"
+  },
+  {
+    "code": "AUT",
+    "name": {
+      "de": "Österreich",
+      "en": "Austria"
+    },
+    "confederation": "UEFA",
+    "strength": 4,
+    "iso2": "AT"
+  },
+  {
+    "code": "AZE",
+    "name": {
+      "de": "Aserbaidschan",
+      "en": "Azerbaijan"
+    },
+    "confederation": "UEFA",
+    "strength": 2,
+    "iso2": "AZ"
+  },
+  {
+    "code": "BLR",
+    "name": {
+      "de": "Belarus",
+      "en": "Belarus"
+    },
+    "confederation": "UEFA",
+    "strength": 2,
+    "iso2": "BY"
+  },
+  {
+    "code": "BEL",
+    "name": {
+      "de": "Belgien",
+      "en": "Belgium"
+    },
+    "confederation": "UEFA",
+    "strength": 5,
+    "iso2": "BE"
+  },
+  {
+    "code": "BIH",
+    "name": {
+      "de": "Bosnien und Herzegowina",
+      "en": "Bosnia and Herzegovina"
+    },
+    "confederation": "UEFA",
+    "strength": 3,
+    "iso2": "BA"
+  },
+  {
+    "code": "BUL",
+    "name": {
+      "de": "Bulgarien",
+      "en": "Bulgaria"
+    },
+    "confederation": "UEFA",
+    "strength": 2,
+    "iso2": "BG"
+  },
+  {
+    "code": "CRO",
+    "name": {
+      "de": "Kroatien",
+      "en": "Croatia"
+    },
+    "confederation": "UEFA",
+    "strength": 5,
+    "iso2": "HR"
+  },
+  {
+    "code": "CYP",
+    "name": {
+      "de": "Zypern",
+      "en": "Cyprus"
+    },
+    "confederation": "UEFA",
+    "strength": 2,
+    "iso2": "CY"
+  },
+  {
+    "code": "CZE",
+    "name": {
+      "de": "Tschechien",
+      "en": "Czechia"
+    },
+    "confederation": "UEFA",
+    "strength": 3,
+    "iso2": "CZ"
+  },
+  {
+    "code": "DEN",
+    "name": {
+      "de": "Dänemark",
+      "en": "Denmark"
+    },
+    "confederation": "UEFA",
+    "strength": 4,
+    "iso2": "DK"
+  },
+  {
+    "code": "ENG",
+    "name": {
+      "de": "England",
+      "en": "England"
+    },
+    "confederation": "UEFA",
+    "strength": 5,
+    "iso2": ""
+  },
+  {
+    "code": "EST",
+    "name": {
+      "de": "Estland",
+      "en": "Estonia"
+    },
+    "confederation": "UEFA",
+    "strength": 1,
+    "iso2": "EE"
+  },
+  {
+    "code": "FRO",
+    "name": {
+      "de": "Färöer",
+      "en": "Faroe Islands"
+    },
+    "confederation": "UEFA",
+    "strength": 1,
+    "iso2": "FO"
+  },
+  {
+    "code": "FIN",
+    "name": {
+      "de": "Finnland",
+      "en": "Finland"
+    },
+    "confederation": "UEFA",
+    "strength": 2,
+    "iso2": "FI"
+  },
+  {
+    "code": "FRA",
+    "name": {
+      "de": "Frankreich",
+      "en": "France"
+    },
+    "confederation": "UEFA",
+    "strength": 5,
+    "iso2": "FR"
+  },
+  {
+    "code": "GEO",
+    "name": {
+      "de": "Georgien",
+      "en": "Georgia"
+    },
+    "confederation": "UEFA",
+    "strength": 3,
+    "iso2": "GE"
+  },
+  {
+    "code": "GER",
+    "name": {
+      "de": "Deutschland",
+      "en": "Germany"
+    },
+    "confederation": "UEFA",
+    "strength": 5,
+    "iso2": "DE"
+  },
+  {
+    "code": "GIB",
+    "name": {
+      "de": "Gibraltar",
+      "en": "Gibraltar"
+    },
+    "confederation": "UEFA",
+    "strength": 1,
+    "iso2": "GI"
+  },
+  {
+    "code": "GRE",
+    "name": {
+      "de": "Griechenland",
+      "en": "Greece"
+    },
+    "confederation": "UEFA",
+    "strength": 3,
+    "iso2": "GR"
+  },
+  {
+    "code": "HUN",
+    "name": {
+      "de": "Ungarn",
+      "en": "Hungary"
+    },
+    "confederation": "UEFA",
+    "strength": 3,
+    "iso2": "HU"
+  },
+  {
+    "code": "ISL",
+    "name": {
+      "de": "Island",
+      "en": "Iceland"
+    },
+    "confederation": "UEFA",
+    "strength": 2,
+    "iso2": "IS"
+  },
+  {
+    "code": "ISR",
+    "name": {
+      "de": "Israel",
+      "en": "Israel"
+    },
+    "confederation": "UEFA",
+    "strength": 2,
+    "iso2": "IL"
+  },
+  {
+    "code": "ITA",
+    "name": {
+      "de": "Italien",
+      "en": "Italy"
+    },
+    "confederation": "UEFA",
+    "strength": 5,
+    "iso2": "IT"
+  },
+  {
+    "code": "KAZ",
+    "name": {
+      "de": "Kasachstan",
+      "en": "Kazakhstan"
+    },
+    "confederation": "UEFA",
+    "strength": 2,
+    "iso2": "KZ"
+  },
+  {
+    "code": "KVX",
+    "name": {
+      "de": "Kosovo",
+      "en": "Kosovo"
+    },
+    "confederation": "UEFA",
+    "strength": 2,
+    "iso2": "XK"
+  },
+  {
+    "code": "LVA",
+    "name": {
+      "de": "Lettland",
+      "en": "Latvia"
+    },
+    "confederation": "UEFA",
+    "strength": 1,
+    "iso2": "LV"
+  },
+  {
+    "code": "LIE",
+    "name": {
+      "de": "Liechtenstein",
+      "en": "Liechtenstein"
+    },
+    "confederation": "UEFA",
+    "strength": 1,
+    "iso2": "LI"
+  },
+  {
+    "code": "LTU",
+    "name": {
+      "de": "Litauen",
+      "en": "Lithuania"
+    },
+    "confederation": "UEFA",
+    "strength": 1,
+    "iso2": "LT"
+  },
+  {
+    "code": "LUX",
+    "name": {
+      "de": "Luxemburg",
+      "en": "Luxembourg"
+    },
+    "confederation": "UEFA",
+    "strength": 2,
+    "iso2": "LU"
+  },
+  {
+    "code": "MLT",
+    "name": {
+      "de": "Malta",
+      "en": "Malta"
+    },
+    "confederation": "UEFA",
+    "strength": 1,
+    "iso2": "MT"
+  },
+  {
+    "code": "MDA",
+    "name": {
+      "de": "Moldau",
+      "en": "Moldova"
+    },
+    "confederation": "UEFA",
+    "strength": 1,
+    "iso2": "MD"
+  },
+  {
+    "code": "MNE",
+    "name": {
+      "de": "Montenegro",
+      "en": "Montenegro"
+    },
+    "confederation": "UEFA",
+    "strength": 2,
+    "iso2": "ME"
+  },
+  {
+    "code": "NED",
+    "name": {
+      "de": "Niederlande",
+      "en": "Netherlands"
+    },
+    "confederation": "UEFA",
+    "strength": 5,
+    "iso2": "NL"
+  },
+  {
+    "code": "MKD",
+    "name": {
+      "de": "Nordmazedonien",
+      "en": "North Macedonia"
+    },
+    "confederation": "UEFA",
+    "strength": 2,
+    "iso2": "MK"
+  },
+  {
+    "code": "NIR",
+    "name": {
+      "de": "Nordirland",
+      "en": "Northern Ireland"
+    },
+    "confederation": "UEFA",
+    "strength": 2,
+    "iso2": ""
+  },
+  {
+    "code": "NOR",
+    "name": {
+      "de": "Norwegen",
+      "en": "Norway"
+    },
+    "confederation": "UEFA",
+    "strength": 3,
+    "iso2": "NO"
+  },
+  {
+    "code": "POL",
+    "name": {
+      "de": "Polen",
+      "en": "Poland"
+    },
+    "confederation": "UEFA",
+    "strength": 3,
+    "iso2": "PL"
+  },
+  {
+    "code": "POR",
+    "name": {
+      "de": "Portugal",
+      "en": "Portugal"
+    },
+    "confederation": "UEFA",
+    "strength": 5,
+    "iso2": "PT"
+  },
+  {
+    "code": "IRL",
+    "name": {
+      "de": "Irland",
+      "en": "Republic of Ireland"
+    },
+    "confederation": "UEFA",
+    "strength": 2,
+    "iso2": "IE"
+  },
+  {
+    "code": "ROU",
+    "name": {
+      "de": "Rumänien",
+      "en": "Romania"
+    },
+    "confederation": "UEFA",
+    "strength": 2,
+    "iso2": "RO"
+  },
+  {
+    "code": "RUS",
+    "name": {
+      "de": "Russland",
+      "en": "Russia"
+    },
+    "confederation": "UEFA",
+    "strength": 3,
+    "iso2": "RU"
+  },
+  {
+    "code": "SMR",
+    "name": {
+      "de": "San Marino",
+      "en": "San Marino"
+    },
+    "confederation": "UEFA",
+    "strength": 1,
+    "iso2": "SM"
+  },
+  {
+    "code": "SCO",
+    "name": {
+      "de": "Schottland",
+      "en": "Scotland"
+    },
+    "confederation": "UEFA",
+    "strength": 3,
+    "iso2": ""
+  },
+  {
+    "code": "SRB",
+    "name": {
+      "de": "Serbien",
+      "en": "Serbia"
+    },
+    "confederation": "UEFA",
+    "strength": 3,
+    "iso2": "RS"
+  },
+  {
+    "code": "SVK",
+    "name": {
+      "de": "Slowakei",
+      "en": "Slovakia"
+    },
+    "confederation": "UEFA",
+    "strength": 3,
+    "iso2": "SK"
+  },
+  {
+    "code": "SVN",
+    "name": {
+      "de": "Slowenien",
+      "en": "Slovenia"
+    },
+    "confederation": "UEFA",
+    "strength": 3,
+    "iso2": "SI"
+  },
+  {
+    "code": "ESP",
+    "name": {
+      "de": "Spanien",
+      "en": "Spain"
+    },
+    "confederation": "UEFA",
+    "strength": 5,
+    "iso2": "ES"
+  },
+  {
+    "code": "SWE",
+    "name": {
+      "de": "Schweden",
+      "en": "Sweden"
+    },
+    "confederation": "UEFA",
+    "strength": 3,
+    "iso2": "SE"
+  },
+  {
+    "code": "SUI",
+    "name": {
+      "de": "Schweiz",
+      "en": "Switzerland"
+    },
+    "confederation": "UEFA",
+    "strength": 4,
+    "iso2": "CH"
+  },
+  {
+    "code": "TUR",
+    "name": {
+      "de": "Türkei",
+      "en": "Türkiye"
+    },
+    "confederation": "UEFA",
+    "strength": 3,
+    "iso2": "TR"
+  },
+  {
+    "code": "UKR",
+    "name": {
+      "de": "Ukraine",
+      "en": "Ukraine"
+    },
+    "confederation": "UEFA",
+    "strength": 3,
+    "iso2": "UA"
+  },
+  {
+    "code": "WAL",
+    "name": {
+      "de": "Wales",
+      "en": "Wales"
+    },
+    "confederation": "UEFA",
+    "strength": 3,
+    "iso2": ""
+  },
+  {
+    "code": "ARG",
+    "name": {
+      "de": "Argentinien",
+      "en": "Argentina"
+    },
+    "confederation": "CONMEBOL",
+    "strength": 5,
+    "iso2": "AR"
+  },
+  {
+    "code": "BOL",
+    "name": {
+      "de": "Bolivien",
+      "en": "Bolivia"
+    },
+    "confederation": "CONMEBOL",
+    "strength": 2,
+    "iso2": "BO"
+  },
+  {
+    "code": "BRA",
+    "name": {
+      "de": "Brasilien",
+      "en": "Brazil"
+    },
+    "confederation": "CONMEBOL",
+    "strength": 5,
+    "iso2": "BR"
+  },
+  {
+    "code": "CHI",
+    "name": {
+      "de": "Chile",
+      "en": "Chile"
+    },
+    "confederation": "CONMEBOL",
+    "strength": 3,
+    "iso2": "CL"
+  },
+  {
+    "code": "COL",
+    "name": {
+      "de": "Kolumbien",
+      "en": "Colombia"
+    },
+    "confederation": "CONMEBOL",
+    "strength": 4,
+    "iso2": "CO"
+  },
+  {
+    "code": "ECU",
+    "name": {
+      "de": "Ecuador",
+      "en": "Ecuador"
+    },
+    "confederation": "CONMEBOL",
+    "strength": 3,
+    "iso2": "EC"
+  },
+  {
+    "code": "PAR",
+    "name": {
+      "de": "Paraguay",
+      "en": "Paraguay"
+    },
+    "confederation": "CONMEBOL",
+    "strength": 3,
+    "iso2": "PY"
+  },
+  {
+    "code": "PER",
+    "name": {
+      "de": "Peru",
+      "en": "Peru"
+    },
+    "confederation": "CONMEBOL",
+    "strength": 3,
+    "iso2": "PE"
+  },
+  {
+    "code": "URU",
+    "name": {
+      "de": "Uruguay",
+      "en": "Uruguay"
+    },
+    "confederation": "CONMEBOL",
+    "strength": 4,
+    "iso2": "UY"
+  },
+  {
+    "code": "VEN",
+    "name": {
+      "de": "Venezuela",
+      "en": "Venezuela"
+    },
+    "confederation": "CONMEBOL",
+    "strength": 2,
+    "iso2": "VE"
+  },
+  {
+    "code": "ATG",
+    "name": {
+      "de": "Antigua und Barbuda",
+      "en": "Antigua and Barbuda"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "AG"
+  },
+  {
+    "code": "ARU",
+    "name": {
+      "de": "Aruba",
+      "en": "Aruba"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "AW"
+  },
+  {
+    "code": "BAH",
+    "name": {
+      "de": "Bahamas",
+      "en": "Bahamas"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "BS"
+  },
+  {
+    "code": "BRB",
+    "name": {
+      "de": "Barbados",
+      "en": "Barbados"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "BB"
+  },
+  {
+    "code": "BLZ",
+    "name": {
+      "de": "Belize",
+      "en": "Belize"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "BZ"
+  },
+  {
+    "code": "BER",
+    "name": {
+      "de": "Bermuda",
+      "en": "Bermuda"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "BM"
+  },
+  {
+    "code": "VGB",
+    "name": {
+      "de": "Britische Jungferninseln",
+      "en": "British Virgin Islands"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "VG"
+  },
+  {
+    "code": "CAN",
+    "name": {
+      "de": "Kanada",
+      "en": "Canada"
+    },
+    "confederation": "CONCACAF",
+    "strength": 3,
+    "iso2": "CA"
+  },
+  {
+    "code": "CAY",
+    "name": {
+      "de": "Kaimaninseln",
+      "en": "Cayman Islands"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "KY"
+  },
+  {
+    "code": "CRC",
+    "name": {
+      "de": "Costa Rica",
+      "en": "Costa Rica"
+    },
+    "confederation": "CONCACAF",
+    "strength": 3,
+    "iso2": "CR"
+  },
+  {
+    "code": "CUB",
+    "name": {
+      "de": "Kuba",
+      "en": "Cuba"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "CU"
+  },
+  {
+    "code": "CUW",
+    "name": {
+      "de": "Curaçao",
+      "en": "Curaçao"
+    },
+    "confederation": "CONCACAF",
+    "strength": 2,
+    "iso2": "CW"
+  },
+  {
+    "code": "DMA",
+    "name": {
+      "de": "Dominica",
+      "en": "Dominica"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "DM"
+  },
+  {
+    "code": "DOM",
+    "name": {
+      "de": "Dominikanische Republik",
+      "en": "Dominican Republic"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "DO"
+  },
+  {
+    "code": "SLV",
+    "name": {
+      "de": "El Salvador",
+      "en": "El Salvador"
+    },
+    "confederation": "CONCACAF",
+    "strength": 2,
+    "iso2": "SV"
+  },
+  {
+    "code": "GRN",
+    "name": {
+      "de": "Grenada",
+      "en": "Grenada"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "GD"
+  },
+  {
+    "code": "GUA",
+    "name": {
+      "de": "Guatemala",
+      "en": "Guatemala"
+    },
+    "confederation": "CONCACAF",
+    "strength": 2,
+    "iso2": "GT"
+  },
+  {
+    "code": "GUY",
+    "name": {
+      "de": "Guyana",
+      "en": "Guyana"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "GY"
+  },
+  {
+    "code": "HAI",
+    "name": {
+      "de": "Haiti",
+      "en": "Haiti"
+    },
+    "confederation": "CONCACAF",
+    "strength": 2,
+    "iso2": "HT"
+  },
+  {
+    "code": "HON",
+    "name": {
+      "de": "Honduras",
+      "en": "Honduras"
+    },
+    "confederation": "CONCACAF",
+    "strength": 2,
+    "iso2": "HN"
+  },
+  {
+    "code": "JAM",
+    "name": {
+      "de": "Jamaika",
+      "en": "Jamaica"
+    },
+    "confederation": "CONCACAF",
+    "strength": 2,
+    "iso2": "JM"
+  },
+  {
+    "code": "MEX",
+    "name": {
+      "de": "Mexiko",
+      "en": "Mexico"
+    },
+    "confederation": "CONCACAF",
+    "strength": 4,
+    "iso2": "MX"
+  },
+  {
+    "code": "MSR",
+    "name": {
+      "de": "Montserrat",
+      "en": "Montserrat"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "MS"
+  },
+  {
+    "code": "NCA",
+    "name": {
+      "de": "Nicaragua",
+      "en": "Nicaragua"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "NI"
+  },
+  {
+    "code": "PAN",
+    "name": {
+      "de": "Panama",
+      "en": "Panama"
+    },
+    "confederation": "CONCACAF",
+    "strength": 2,
+    "iso2": "PA"
+  },
+  {
+    "code": "PUR",
+    "name": {
+      "de": "Puerto Rico",
+      "en": "Puerto Rico"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "PR"
+  },
+  {
+    "code": "SKN",
+    "name": {
+      "de": "St. Kitts und Nevis",
+      "en": "St Kitts and Nevis"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "KN"
+  },
+  {
+    "code": "LCA",
+    "name": {
+      "de": "St. Lucia",
+      "en": "St Lucia"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "LC"
+  },
+  {
+    "code": "VIN",
+    "name": {
+      "de": "St. Vincent und die Grenadinen",
+      "en": "St Vincent and the Grenadines"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "VC"
+  },
+  {
+    "code": "SUR",
+    "name": {
+      "de": "Suriname",
+      "en": "Suriname"
+    },
+    "confederation": "CONCACAF",
+    "strength": 2,
+    "iso2": "SR"
+  },
+  {
+    "code": "TRI",
+    "name": {
+      "de": "Trinidad und Tobago",
+      "en": "Trinidad and Tobago"
+    },
+    "confederation": "CONCACAF",
+    "strength": 2,
+    "iso2": "TT"
+  },
+  {
+    "code": "TCA",
+    "name": {
+      "de": "Turks- und Caicosinseln",
+      "en": "Turks and Caicos Islands"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "TC"
+  },
+  {
+    "code": "USA",
+    "name": {
+      "de": "Vereinigte Staaten",
+      "en": "United States"
+    },
+    "confederation": "CONCACAF",
+    "strength": 4,
+    "iso2": "US"
+  },
+  {
+    "code": "VIR",
+    "name": {
+      "de": "Amerikanische Jungferninseln",
+      "en": "US Virgin Islands"
+    },
+    "confederation": "CONCACAF",
+    "strength": 1,
+    "iso2": "VI"
+  },
+  {
+    "code": "AFG",
+    "name": {
+      "de": "Afghanistan",
+      "en": "Afghanistan"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "AF"
+  },
+  {
+    "code": "AUS",
+    "name": {
+      "de": "Australien",
+      "en": "Australia"
+    },
+    "confederation": "AFC",
+    "strength": 3,
+    "iso2": "AU"
+  },
+  {
+    "code": "BHR",
+    "name": {
+      "de": "Bahrain",
+      "en": "Bahrain"
+    },
+    "confederation": "AFC",
+    "strength": 2,
+    "iso2": "BH"
+  },
+  {
+    "code": "BAN",
+    "name": {
+      "de": "Bangladesch",
+      "en": "Bangladesh"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "BD"
+  },
+  {
+    "code": "BHU",
+    "name": {
+      "de": "Bhutan",
+      "en": "Bhutan"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "BT"
+  },
+  {
+    "code": "BRU",
+    "name": {
+      "de": "Brunei",
+      "en": "Brunei"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "BN"
+  },
+  {
+    "code": "CAM",
+    "name": {
+      "de": "Kambodscha",
+      "en": "Cambodia"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "KH"
+  },
+  {
+    "code": "CHN",
+    "name": {
+      "de": "China",
+      "en": "China PR"
+    },
+    "confederation": "AFC",
+    "strength": 2,
+    "iso2": "CN"
+  },
+  {
+    "code": "TPE",
+    "name": {
+      "de": "Chinesisch Taipeh",
+      "en": "Chinese Taipei"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "TW"
+  },
+  {
+    "code": "GUM",
+    "name": {
+      "de": "Guam",
+      "en": "Guam"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "GU"
+  },
+  {
+    "code": "HKG",
+    "name": {
+      "de": "Hongkong",
+      "en": "Hong Kong"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "HK"
+  },
+  {
+    "code": "IND",
+    "name": {
+      "de": "Indien",
+      "en": "India"
+    },
+    "confederation": "AFC",
+    "strength": 2,
+    "iso2": "IN"
+  },
+  {
+    "code": "IDN",
+    "name": {
+      "de": "Indonesien",
+      "en": "Indonesia"
+    },
+    "confederation": "AFC",
+    "strength": 2,
+    "iso2": "ID"
+  },
+  {
+    "code": "IRN",
+    "name": {
+      "de": "Iran",
+      "en": "Iran"
+    },
+    "confederation": "AFC",
+    "strength": 3,
+    "iso2": "IR"
+  },
+  {
+    "code": "IRQ",
+    "name": {
+      "de": "Irak",
+      "en": "Iraq"
+    },
+    "confederation": "AFC",
+    "strength": 2,
+    "iso2": "IQ"
+  },
+  {
+    "code": "JPN",
+    "name": {
+      "de": "Japan",
+      "en": "Japan"
+    },
+    "confederation": "AFC",
+    "strength": 4,
+    "iso2": "JP"
+  },
+  {
+    "code": "JOR",
+    "name": {
+      "de": "Jordanien",
+      "en": "Jordan"
+    },
+    "confederation": "AFC",
+    "strength": 2,
+    "iso2": "JO"
+  },
+  {
+    "code": "KUW",
+    "name": {
+      "de": "Kuwait",
+      "en": "Kuwait"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "KW"
+  },
+  {
+    "code": "KGZ",
+    "name": {
+      "de": "Kirgisistan",
+      "en": "Kyrgyzstan"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "KG"
+  },
+  {
+    "code": "LAO",
+    "name": {
+      "de": "Laos",
+      "en": "Laos"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "LA"
+  },
+  {
+    "code": "LBN",
+    "name": {
+      "de": "Libanon",
+      "en": "Lebanon"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "LB"
+  },
+  {
+    "code": "MAC",
+    "name": {
+      "de": "Macau",
+      "en": "Macau"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "MO"
+  },
+  {
+    "code": "MAS",
+    "name": {
+      "de": "Malaysia",
+      "en": "Malaysia"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "MY"
+  },
+  {
+    "code": "MDV",
+    "name": {
+      "de": "Malediven",
+      "en": "Maldives"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "MV"
+  },
+  {
+    "code": "MNG",
+    "name": {
+      "de": "Mongolei",
+      "en": "Mongolia"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "MN"
+  },
+  {
+    "code": "MYA",
+    "name": {
+      "de": "Myanmar",
+      "en": "Myanmar"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "MM"
+  },
+  {
+    "code": "NEP",
+    "name": {
+      "de": "Nepal",
+      "en": "Nepal"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "NP"
+  },
+  {
+    "code": "PRK",
+    "name": {
+      "de": "Nordkorea",
+      "en": "Korea DPR"
+    },
+    "confederation": "AFC",
+    "strength": 2,
+    "iso2": "KP"
+  },
+  {
+    "code": "OMA",
+    "name": {
+      "de": "Oman",
+      "en": "Oman"
+    },
+    "confederation": "AFC",
+    "strength": 2,
+    "iso2": "OM"
+  },
+  {
+    "code": "PAK",
+    "name": {
+      "de": "Pakistan",
+      "en": "Pakistan"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "PK"
+  },
+  {
+    "code": "PLE",
+    "name": {
+      "de": "Palästina",
+      "en": "Palestine"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "PS"
+  },
+  {
+    "code": "PHI",
+    "name": {
+      "de": "Philippinen",
+      "en": "Philippines"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "PH"
+  },
+  {
+    "code": "QAT",
+    "name": {
+      "de": "Katar",
+      "en": "Qatar"
+    },
+    "confederation": "AFC",
+    "strength": 3,
+    "iso2": "QA"
+  },
+  {
+    "code": "KSA",
+    "name": {
+      "de": "Saudi-Arabien",
+      "en": "Saudi Arabia"
+    },
+    "confederation": "AFC",
+    "strength": 3,
+    "iso2": "SA"
+  },
+  {
+    "code": "SIN",
+    "name": {
+      "de": "Singapur",
+      "en": "Singapore"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "SG"
+  },
+  {
+    "code": "KOR",
+    "name": {
+      "de": "Südkorea",
+      "en": "Korea Republic"
+    },
+    "confederation": "AFC",
+    "strength": 4,
+    "iso2": "KR"
+  },
+  {
+    "code": "SRI",
+    "name": {
+      "de": "Sri Lanka",
+      "en": "Sri Lanka"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "LK"
+  },
+  {
+    "code": "SYR",
+    "name": {
+      "de": "Syrien",
+      "en": "Syria"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "SY"
+  },
+  {
+    "code": "TJK",
+    "name": {
+      "de": "Tadschikistan",
+      "en": "Tajikistan"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "TJ"
+  },
+  {
+    "code": "THA",
+    "name": {
+      "de": "Thailand",
+      "en": "Thailand"
+    },
+    "confederation": "AFC",
+    "strength": 2,
+    "iso2": "TH"
+  },
+  {
+    "code": "TLS",
+    "name": {
+      "de": "Timor-Leste",
+      "en": "Timor-Leste"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "TL"
+  },
+  {
+    "code": "TKM",
+    "name": {
+      "de": "Turkmenistan",
+      "en": "Turkmenistan"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "TM"
+  },
+  {
+    "code": "UAE",
+    "name": {
+      "de": "Vereinigte Arabische Emirate",
+      "en": "United Arab Emirates"
+    },
+    "confederation": "AFC",
+    "strength": 2,
+    "iso2": "AE"
+  },
+  {
+    "code": "UZB",
+    "name": {
+      "de": "Usbekistan",
+      "en": "Uzbekistan"
+    },
+    "confederation": "AFC",
+    "strength": 2,
+    "iso2": "UZ"
+  },
+  {
+    "code": "VIE",
+    "name": {
+      "de": "Vietnam",
+      "en": "Vietnam"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "VN"
+  },
+  {
+    "code": "YEM",
+    "name": {
+      "de": "Jemen",
+      "en": "Yemen"
+    },
+    "confederation": "AFC",
+    "strength": 1,
+    "iso2": "YE"
+  },
+  {
+    "code": "ALG",
+    "name": {
+      "de": "Algerien",
+      "en": "Algeria"
+    },
+    "confederation": "CAF",
+    "strength": 3,
+    "iso2": "DZ"
+  },
+  {
+    "code": "ANG",
+    "name": {
+      "de": "Angola",
+      "en": "Angola"
+    },
+    "confederation": "CAF",
+    "strength": 2,
+    "iso2": "AO"
+  },
+  {
+    "code": "BEN",
+    "name": {
+      "de": "Benin",
+      "en": "Benin"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "BJ"
+  },
+  {
+    "code": "BOT",
+    "name": {
+      "de": "Botswana",
+      "en": "Botswana"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "BW"
+  },
+  {
+    "code": "BFA",
+    "name": {
+      "de": "Burkina Faso",
+      "en": "Burkina Faso"
+    },
+    "confederation": "CAF",
+    "strength": 2,
+    "iso2": "BF"
+  },
+  {
+    "code": "BDI",
+    "name": {
+      "de": "Burundi",
+      "en": "Burundi"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "BI"
+  },
+  {
+    "code": "CMR",
+    "name": {
+      "de": "Kamerun",
+      "en": "Cameroon"
+    },
+    "confederation": "CAF",
+    "strength": 3,
+    "iso2": "CM"
+  },
+  {
+    "code": "CPV",
+    "name": {
+      "de": "Kap Verde",
+      "en": "Cape Verde"
+    },
+    "confederation": "CAF",
+    "strength": 2,
+    "iso2": "CV"
+  },
+  {
+    "code": "CTA",
+    "name": {
+      "de": "Zentralafrikanische Republik",
+      "en": "Central African Republic"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "CF"
+  },
+  {
+    "code": "CHA",
+    "name": {
+      "de": "Tschad",
+      "en": "Chad"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "TD"
+  },
+  {
+    "code": "COM",
+    "name": {
+      "de": "Komoren",
+      "en": "Comoros"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "KM"
+  },
+  {
+    "code": "CGO",
+    "name": {
+      "de": "Kongo",
+      "en": "Congo"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "CG"
+  },
+  {
+    "code": "COD",
+    "name": {
+      "de": "DR Kongo",
+      "en": "DR Congo"
+    },
+    "confederation": "CAF",
+    "strength": 2,
+    "iso2": "CD"
+  },
+  {
+    "code": "DJI",
+    "name": {
+      "de": "Dschibuti",
+      "en": "Djibouti"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "DJ"
+  },
+  {
+    "code": "EGY",
+    "name": {
+      "de": "Ägypten",
+      "en": "Egypt"
+    },
+    "confederation": "CAF",
+    "strength": 3,
+    "iso2": "EG"
+  },
+  {
+    "code": "EQG",
+    "name": {
+      "de": "Äquatorialguinea",
+      "en": "Equatorial Guinea"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "GQ"
+  },
+  {
+    "code": "ERI",
+    "name": {
+      "de": "Eritrea",
+      "en": "Eritrea"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "ER"
+  },
+  {
+    "code": "SWZ",
+    "name": {
+      "de": "Eswatini",
+      "en": "Eswatini"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "SZ"
+  },
+  {
+    "code": "ETH",
+    "name": {
+      "de": "Äthiopien",
+      "en": "Ethiopia"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "ET"
+  },
+  {
+    "code": "GAB",
+    "name": {
+      "de": "Gabun",
+      "en": "Gabon"
+    },
+    "confederation": "CAF",
+    "strength": 2,
+    "iso2": "GA"
+  },
+  {
+    "code": "GAM",
+    "name": {
+      "de": "Gambia",
+      "en": "Gambia"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "GM"
+  },
+  {
+    "code": "GHA",
+    "name": {
+      "de": "Ghana",
+      "en": "Ghana"
+    },
+    "confederation": "CAF",
+    "strength": 3,
+    "iso2": "GH"
+  },
+  {
+    "code": "GUI",
+    "name": {
+      "de": "Guinea",
+      "en": "Guinea"
+    },
+    "confederation": "CAF",
+    "strength": 2,
+    "iso2": "GN"
+  },
+  {
+    "code": "GNB",
+    "name": {
+      "de": "Guinea-Bissau",
+      "en": "Guinea-Bissau"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "GW"
+  },
+  {
+    "code": "CIV",
+    "name": {
+      "de": "Elfenbeinküste",
+      "en": "Côte d'Ivoire"
+    },
+    "confederation": "CAF",
+    "strength": 3,
+    "iso2": "CI"
+  },
+  {
+    "code": "KEN",
+    "name": {
+      "de": "Kenia",
+      "en": "Kenya"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "KE"
+  },
+  {
+    "code": "LES",
+    "name": {
+      "de": "Lesotho",
+      "en": "Lesotho"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "LS"
+  },
+  {
+    "code": "LBR",
+    "name": {
+      "de": "Liberia",
+      "en": "Liberia"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "LR"
+  },
+  {
+    "code": "LBY",
+    "name": {
+      "de": "Libyen",
+      "en": "Libya"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "LY"
+  },
+  {
+    "code": "MAD",
+    "name": {
+      "de": "Madagaskar",
+      "en": "Madagascar"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "MG"
+  },
+  {
+    "code": "MWI",
+    "name": {
+      "de": "Malawi",
+      "en": "Malawi"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "MW"
+  },
+  {
+    "code": "MLI",
+    "name": {
+      "de": "Mali",
+      "en": "Mali"
+    },
+    "confederation": "CAF",
+    "strength": 2,
+    "iso2": "ML"
+  },
+  {
+    "code": "MTN",
+    "name": {
+      "de": "Mauretanien",
+      "en": "Mauritania"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "MR"
+  },
+  {
+    "code": "MRI",
+    "name": {
+      "de": "Mauritius",
+      "en": "Mauritius"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "MU"
+  },
+  {
+    "code": "MAR",
+    "name": {
+      "de": "Marokko",
+      "en": "Morocco"
+    },
+    "confederation": "CAF",
+    "strength": 4,
+    "iso2": "MA"
+  },
+  {
+    "code": "MOZ",
+    "name": {
+      "de": "Mosambik",
+      "en": "Mozambique"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "MZ"
+  },
+  {
+    "code": "NAM",
+    "name": {
+      "de": "Namibia",
+      "en": "Namibia"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "NA"
+  },
+  {
+    "code": "NIG",
+    "name": {
+      "de": "Niger",
+      "en": "Niger"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "NE"
+  },
+  {
+    "code": "NGA",
+    "name": {
+      "de": "Nigeria",
+      "en": "Nigeria"
+    },
+    "confederation": "CAF",
+    "strength": 3,
+    "iso2": "NG"
+  },
+  {
+    "code": "RWA",
+    "name": {
+      "de": "Ruanda",
+      "en": "Rwanda"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "RW"
+  },
+  {
+    "code": "STP",
+    "name": {
+      "de": "São Tomé und Príncipe",
+      "en": "São Tomé and Príncipe"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "ST"
+  },
+  {
+    "code": "SEN",
+    "name": {
+      "de": "Senegal",
+      "en": "Senegal"
+    },
+    "confederation": "CAF",
+    "strength": 4,
+    "iso2": "SN"
+  },
+  {
+    "code": "SEY",
+    "name": {
+      "de": "Seychellen",
+      "en": "Seychelles"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "SC"
+  },
+  {
+    "code": "SLE",
+    "name": {
+      "de": "Sierra Leone",
+      "en": "Sierra Leone"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "SL"
+  },
+  {
+    "code": "SOM",
+    "name": {
+      "de": "Somalia",
+      "en": "Somalia"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "SO"
+  },
+  {
+    "code": "RSA",
+    "name": {
+      "de": "Südafrika",
+      "en": "South Africa"
+    },
+    "confederation": "CAF",
+    "strength": 2,
+    "iso2": "ZA"
+  },
+  {
+    "code": "SSD",
+    "name": {
+      "de": "Südsudan",
+      "en": "South Sudan"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "SS"
+  },
+  {
+    "code": "SUD",
+    "name": {
+      "de": "Sudan",
+      "en": "Sudan"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "SD"
+  },
+  {
+    "code": "TAN",
+    "name": {
+      "de": "Tansania",
+      "en": "Tanzania"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "TZ"
+  },
+  {
+    "code": "TOG",
+    "name": {
+      "de": "Togo",
+      "en": "Togo"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "TG"
+  },
+  {
+    "code": "TUN",
+    "name": {
+      "de": "Tunesien",
+      "en": "Tunisia"
+    },
+    "confederation": "CAF",
+    "strength": 3,
+    "iso2": "TN"
+  },
+  {
+    "code": "UGA",
+    "name": {
+      "de": "Uganda",
+      "en": "Uganda"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "UG"
+  },
+  {
+    "code": "ZAM",
+    "name": {
+      "de": "Sambia",
+      "en": "Zambia"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "ZM"
+  },
+  {
+    "code": "ZIM",
+    "name": {
+      "de": "Simbabwe",
+      "en": "Zimbabwe"
+    },
+    "confederation": "CAF",
+    "strength": 1,
+    "iso2": "ZW"
+  },
+  {
+    "code": "ASA",
+    "name": {
+      "de": "Amerikanisch-Samoa",
+      "en": "American Samoa"
+    },
+    "confederation": "OFC",
+    "strength": 1,
+    "iso2": "AS"
+  },
+  {
+    "code": "COK",
+    "name": {
+      "de": "Cookinseln",
+      "en": "Cook Islands"
+    },
+    "confederation": "OFC",
+    "strength": 1,
+    "iso2": "CK"
+  },
+  {
+    "code": "FIJ",
+    "name": {
+      "de": "Fidschi",
+      "en": "Fiji"
+    },
+    "confederation": "OFC",
+    "strength": 1,
+    "iso2": "FJ"
+  },
+  {
+    "code": "NCL",
+    "name": {
+      "de": "Neukaledonien",
+      "en": "New Caledonia"
+    },
+    "confederation": "OFC",
+    "strength": 1,
+    "iso2": "NC"
+  },
+  {
+    "code": "NZL",
+    "name": {
+      "de": "Neuseeland",
+      "en": "New Zealand"
+    },
+    "confederation": "OFC",
+    "strength": 2,
+    "iso2": "NZ"
+  },
+  {
+    "code": "PNG",
+    "name": {
+      "de": "Papua-Neuguinea",
+      "en": "Papua New Guinea"
+    },
+    "confederation": "OFC",
+    "strength": 1,
+    "iso2": "PG"
+  },
+  {
+    "code": "SAM",
+    "name": {
+      "de": "Samoa",
+      "en": "Samoa"
+    },
+    "confederation": "OFC",
+    "strength": 1,
+    "iso2": "WS"
+  },
+  {
+    "code": "SOL",
+    "name": {
+      "de": "Salomonen",
+      "en": "Solomon Islands"
+    },
+    "confederation": "OFC",
+    "strength": 1,
+    "iso2": "SB"
+  },
+  {
+    "code": "TAH",
+    "name": {
+      "de": "Tahiti",
+      "en": "Tahiti"
+    },
+    "confederation": "OFC",
+    "strength": 1,
+    "iso2": "PF"
+  },
+  {
+    "code": "TGA",
+    "name": {
+      "de": "Tonga",
+      "en": "Tonga"
+    },
+    "confederation": "OFC",
+    "strength": 1,
+    "iso2": "TO"
+  },
+  {
+    "code": "VAN",
+    "name": {
+      "de": "Vanuatu",
+      "en": "Vanuatu"
+    },
+    "confederation": "OFC",
+    "strength": 1,
+    "iso2": "VU"
+  }
+]

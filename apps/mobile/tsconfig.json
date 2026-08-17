@@ -1,0 +1,14 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "paths": {
+      "@footsys/engine": ["../../packages/engine/src/index.ts"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx", "../../packages/engine/src/**/*.ts"],
+  "exclude": ["node_modules", "../../packages/engine/src/tools/**", "../../packages/engine/src/data-node.ts", "../../packages/engine/src/**/*.test.ts"]
+}

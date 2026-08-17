@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "footsys",
+    "slug": "footsys",
+    "version": "0.1.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0B0B10",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.footsys.app"
+    },
+    "android": {
+      "package": "com.footsys.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0B0B10",
+        "foregroundImage": "./assets/android-icon-foreground.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    }
+  }
+}

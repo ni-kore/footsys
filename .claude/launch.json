@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "footsys",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "app"],
+      "port": 8081
+    },
+    {
+      "name": "footsys-clear",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "app:clear"],
+      "port": 8081
+    }
+  ]
+}

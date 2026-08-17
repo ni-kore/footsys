@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Auszeichnung: Torschützenkönig">
+  <path d="M14 18h13l3 9c5 2 14 4 18 7 4 2.6 5 6 5 9H14V18Z" fill="currentColor" fill-opacity=".92"/>
+  <path d="M14 43h39v4H14z" fill="currentColor" fill-opacity=".55"/>
+  <path d="M27 27c3 1.5 6 2.6 9 3.6M22 22v6" stroke="currentColor" stroke-width="1.8" stroke-opacity=".3" stroke-linecap="round"/>
+  <rect x="16" y="50" width="32" height="6" rx="2" fill="currentColor" fill-opacity=".45"/>
+</svg>

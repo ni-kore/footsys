@@ -1,0 +1,243 @@
+{
+  "country": "CYP",
+  "clubs": [
+    {
+      "id": "omonia-aradippou",
+      "league": "cyp-tier-1",
+      "name": "Omonia Aradippou",
+      "short": "Omonia Aradippou",
+      "abbr": "OMA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "anorthosis-famagusta",
+      "league": "cyp-tier-1",
+      "name": "Anorthosis Famagusta",
+      "short": "Anorthosis Famagusta",
+      "abbr": "ANF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "omonia-29is-maiou",
+      "league": "cyp-tier-1",
+      "name": "Omonia 29is Maiou",
+      "short": "Omonia 29is",
+      "abbr": "O2M",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ael-limassol",
+      "league": "cyp-tier-1",
+      "name": "AEL Limassol",
+      "short": "AEL Limassol",
+      "abbr": "AEL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "karmiotissa-polemidion",
+      "league": "cyp-tier-1",
+      "name": "Karmiotissa Polemidion",
+      "short": "Karmiotissa Polemidion",
+      "abbr": "KAP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "aris-limassol",
+      "league": "cyp-tier-1",
+      "name": "Aris Limassol",
+      "short": "Aris Limassol",
+      "abbr": "ARL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "apollon-limassol",
+      "league": "cyp-tier-1",
+      "name": "Apollon Limassol",
+      "short": "Apollon Limassol",
+      "abbr": "APL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "aek-larnaca",
+      "league": "cyp-tier-1",
+      "name": "AEK Larnaca",
+      "short": "AEK Larnaca",
+      "abbr": "AEL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "omonia-nikosia",
+      "league": "cyp-tier-1",
+      "name": "Omonia Nikosia",
+      "short": "Omonia Nikosia",
+      "abbr": "OMN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ethnikos-achna",
+      "league": "cyp-tier-1",
+      "name": "Ethnikos Achna",
+      "short": "Ethnikos Achna",
+      "abbr": "ETA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "enosis-neon-paralimni",
+      "league": "cyp-tier-1",
+      "name": "Enosis Neon Paralimni",
+      "short": "Enosis Neon",
+      "abbr": "ENP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "apoel-nikosia",
+      "league": "cyp-tier-1",
+      "name": "APOEL Nikosia",
+      "short": "APOEL Nikosia",
+      "abbr": "APN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "paphos-fc",
+      "league": "cyp-tier-1",
+      "name": "Paphos FC",
+      "short": "Paphos",
+      "abbr": "PAP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "nea-salamina",
+      "league": "cyp-tier-1",
+      "name": "Nea Salamina",
+      "short": "Nea Salamina",
+      "abbr": "NES",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

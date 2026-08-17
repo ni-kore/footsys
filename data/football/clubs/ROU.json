@@ -1,0 +1,277 @@
+{
+  "country": "ROU",
+  "clubs": [
+    {
+      "id": "farul-constanta",
+      "league": "rou-superliga",
+      "name": "Farul Constanța",
+      "short": "Farul Constanța",
+      "abbr": "FAC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "unirea-slobozia",
+      "league": "rou-superliga",
+      "name": "Unirea Slobozia",
+      "short": "Unirea Slobozia",
+      "abbr": "UNS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-hermannstadt",
+      "league": "rou-superliga",
+      "name": "FC Hermannstadt",
+      "short": "FC Hermannstadt",
+      "abbr": "HER",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cs-universitatea-craiova",
+      "league": "rou-superliga",
+      "name": "CS Universitatea Craiova",
+      "short": "CS Universitatea",
+      "abbr": "CUC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sepsi-osk",
+      "league": "rou-superliga",
+      "name": "Sepsi OSK",
+      "short": "Sepsi OSK",
+      "abbr": "SEO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-politehnica-iasi",
+      "league": "rou-superliga",
+      "name": "FC Politehnica Iași",
+      "short": "FC Politehnica",
+      "abbr": "POI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "uta-arad",
+      "league": "rou-superliga",
+      "name": "UTA Arad",
+      "short": "UTA Arad",
+      "abbr": "UTA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "rapid-bucuresti",
+      "league": "rou-superliga",
+      "name": "Rapid Bucureşti",
+      "short": "Rapid Bucureşti",
+      "abbr": "RAB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fcsb",
+      "league": "rou-superliga",
+      "name": "FCSB",
+      "short": "FCSB",
+      "abbr": "FCS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "universitatea-cluj",
+      "league": "rou-superliga",
+      "name": "Universitatea Cluj",
+      "short": "Universitatea Cluj",
+      "abbr": "UNC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cfr-cluj",
+      "league": "rou-superliga",
+      "name": "CFR Cluj",
+      "short": "CFR Cluj",
+      "abbr": "CFC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "dinamo-bucuresti",
+      "league": "rou-superliga",
+      "name": "Dinamo Bucureşti",
+      "short": "Dinamo Bucureşti",
+      "abbr": "DIB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-botosani",
+      "league": "rou-superliga",
+      "name": "FC Botoşani",
+      "short": "FC Botoşani",
+      "abbr": "BOT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "otelul-galati",
+      "league": "rou-superliga",
+      "name": "Oţelul Galaţi",
+      "short": "Oţelul Galaţi",
+      "abbr": "OŢG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "petrolul-ploiesti",
+      "league": "rou-superliga",
+      "name": "Petrolul Ploieşti",
+      "short": "Petrolul Ploieşti",
+      "abbr": "PEP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "gloria-buzau",
+      "league": "rou-superliga",
+      "name": "Gloria Buzău",
+      "short": "Gloria Buzău",
+      "abbr": "GLB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

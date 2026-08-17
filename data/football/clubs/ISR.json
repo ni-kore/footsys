@@ -1,0 +1,481 @@
+{
+  "country": "ISR",
+  "clubs": [
+    {
+      "id": "maccabi-bnei-raina",
+      "league": "isr-ligat-haal",
+      "name": "Maccabi Bnei Raina",
+      "short": "Maccabi Bnei",
+      "abbr": "MBR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "maccabi-netanya",
+      "league": "isr-ligat-haal",
+      "name": "Maccabi Netanya",
+      "short": "Maccabi Netanya",
+      "abbr": "MAN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bnei-sachnin-fc",
+      "league": "isr-ligat-haal",
+      "name": "Bnei Sachnin FC",
+      "short": "Bnei Sachnin",
+      "abbr": "BNS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "maccabi-petach-tikva",
+      "league": "isr-ligat-haal",
+      "name": "Maccabi Petach-Tikva",
+      "short": "Maccabi Petach-Tikva",
+      "abbr": "MPT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "maccabi-haifa",
+      "league": "isr-ligat-haal",
+      "name": "Maccabi Haifa",
+      "short": "Maccabi Haifa",
+      "abbr": "MAH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ironi-tiberias",
+      "league": "isr-ligat-haal",
+      "name": "Ironi Tiberias",
+      "short": "Ironi Tiberias",
+      "abbr": "IRT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hapoel-hadera",
+      "league": "isr-ligat-haal",
+      "name": "Hapoel Hadera",
+      "short": "Hapoel Hadera",
+      "abbr": "HAH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hapoel-haifa",
+      "league": "isr-ligat-haal",
+      "name": "Hapoel Haifa",
+      "short": "Hapoel Haifa",
+      "abbr": "HAH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "beitar-jerusalem",
+      "league": "isr-ligat-haal",
+      "name": "Beitar Jerusalem",
+      "short": "Beitar Jerusalem",
+      "abbr": "BEJ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-ashdod",
+      "league": "isr-ligat-haal",
+      "name": "FC Ashdod",
+      "short": "FC Ashdod",
+      "abbr": "ASH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ironi-kiryat-shmona",
+      "league": "isr-ligat-haal",
+      "name": "Ironi Kiryat Shmona",
+      "short": "Ironi Kiryat",
+      "abbr": "IKS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "maccabi-tel-aviv",
+      "league": "isr-ligat-haal",
+      "name": "Maccabi Tel Aviv",
+      "short": "Maccabi Tel Aviv",
+      "abbr": "MTA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hapoel-jerusalem",
+      "league": "isr-ligat-haal",
+      "name": "Hapoel Jerusalem",
+      "short": "Hapoel Jerusalem",
+      "abbr": "HAJ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hapoel-ramat-gan",
+      "league": "isr-tier-2",
+      "name": "Hapoel Ramat Gan",
+      "short": "Hapoel Ramat Gan",
+      "abbr": "HRG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hapoel-kfar-saba",
+      "league": "isr-tier-2",
+      "name": "Hapoel Kfar Saba",
+      "short": "Hapoel Kfar Saba",
+      "abbr": "HKS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "maccabi-kabilio-jaffa",
+      "league": "isr-tier-2",
+      "name": "Maccabi Kabilio Jaffa",
+      "short": "Maccabi Kabilio",
+      "abbr": "MKJ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "maccabi-herzliya",
+      "league": "isr-tier-2",
+      "name": "Maccabi Herzliya",
+      "short": "Maccabi Herzliya",
+      "abbr": "MAH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hapoel-nof-hagalil",
+      "league": "isr-tier-2",
+      "name": "Hapoel Nof HaGalil",
+      "short": "Hapoel Nof",
+      "abbr": "HNH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bnei-yehuda-tel-aviv",
+      "league": "isr-tier-2",
+      "name": "Bnei Yehuda Tel Aviv",
+      "short": "Bnei Yehuda",
+      "abbr": "BYT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ms-kafr-qasim",
+      "league": "isr-tier-2",
+      "name": "MS Kafr Qasim",
+      "short": "MS Kafr Qasim",
+      "abbr": "MKQ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hapoel-rishon-lezion",
+      "league": "isr-tier-2",
+      "name": "Hapoel Rishon LeZion",
+      "short": "Hapoel Rishon",
+      "abbr": "HRL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hapoel-tel-aviv",
+      "league": "isr-tier-2",
+      "name": "Hapoel Tel Aviv",
+      "short": "Hapoel Tel Aviv",
+      "abbr": "HTA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hapoel-petach-tikva",
+      "league": "isr-tier-2",
+      "name": "Hapoel Petach-Tikva",
+      "short": "Hapoel Petach-Tikva",
+      "abbr": "HPT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hapoel-umm-al-fahm",
+      "league": "isr-tier-2",
+      "name": "Hapoel Umm al-Fahm",
+      "short": "Hapoel Umm",
+      "abbr": "HUA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hapoel-afula",
+      "league": "isr-tier-2",
+      "name": "Hapoel Afula",
+      "short": "Hapoel Afula",
+      "abbr": "HAA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hapoel-acre-fc",
+      "league": "isr-tier-2",
+      "name": "Hapoel Acre FC",
+      "short": "Hapoel Acre",
+      "abbr": "HAA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hapoel-kfar-shalem",
+      "league": "isr-tier-2",
+      "name": "Hapoel Kfar Shalem",
+      "short": "Hapoel Kfar",
+      "abbr": "HKS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hapoel-nir-ramat-hasharon",
+      "league": "isr-tier-2",
+      "name": "Hapoel Nir Ramat HaSharon",
+      "short": "Hapoel Nir",
+      "abbr": "HNR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

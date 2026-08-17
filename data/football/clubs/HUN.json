@@ -1,0 +1,209 @@
+{
+  "country": "HUN",
+  "clubs": [
+    {
+      "id": "zalaegerszegi-te",
+      "league": "hun-nb-i",
+      "name": "Zalaegerszegi TE",
+      "short": "Zalaegerszegi TE",
+      "abbr": "ZAT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "mtk-budapest",
+      "league": "hun-nb-i",
+      "name": "MTK Budapest",
+      "short": "MTK Budapest",
+      "abbr": "MTB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "nyiregyhaza-spartacus",
+      "league": "hun-nb-i",
+      "name": "Nyíregyháza Spartacus",
+      "short": "Nyíregyháza Spartacus",
+      "abbr": "NYS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "gyori-eto-fc",
+      "league": "hun-nb-i",
+      "name": "Győri ETO FC",
+      "short": "Győri ETO",
+      "abbr": "GYE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "diosgyoeri-vtk",
+      "league": "hun-nb-i",
+      "name": "Diósgyöri VTK",
+      "short": "Diósgyöri VTK",
+      "abbr": "DIV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "paksi-se",
+      "league": "hun-nb-i",
+      "name": "Paksi SE",
+      "short": "Paksi SE",
+      "abbr": "PAS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kecskemeti-te",
+      "league": "hun-nb-i",
+      "name": "Kecskeméti TE",
+      "short": "Kecskeméti TE",
+      "abbr": "KET",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fehervar-fc",
+      "league": "hun-nb-i",
+      "name": "Fehérvár FC",
+      "short": "Fehérvár",
+      "abbr": "FEH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ujpest-fc",
+      "league": "hun-nb-i",
+      "name": "Újpest FC",
+      "short": "Újpest",
+      "abbr": "ÚJP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "puskas-fc",
+      "league": "hun-nb-i",
+      "name": "Puskás FC",
+      "short": "Puskás",
+      "abbr": "PUS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "debreceni-vsc",
+      "league": "hun-nb-i",
+      "name": "Debreceni VSC",
+      "short": "Debreceni VSC",
+      "abbr": "DEV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ferencvarosi-tc",
+      "league": "hun-nb-i",
+      "name": "Ferencvárosi TC",
+      "short": "Ferencvárosi TC",
+      "abbr": "FET",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

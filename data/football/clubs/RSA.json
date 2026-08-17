@@ -1,0 +1,277 @@
+{
+  "country": "RSA",
+  "clubs": [
+    {
+      "id": "royal-am",
+      "league": "rsa-premiership",
+      "name": "Royal AM",
+      "short": "Royal AM",
+      "abbr": "ROA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cape-town-city-fc",
+      "league": "rsa-premiership",
+      "name": "Cape Town City FC",
+      "short": "Cape Town City",
+      "abbr": "CTC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "marumo-gallants",
+      "league": "rsa-premiership",
+      "name": "Marumo Gallants",
+      "short": "Marumo Gallants",
+      "abbr": "MAG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kaizer-chiefs",
+      "league": "rsa-premiership",
+      "name": "Kaizer Chiefs",
+      "short": "Kaizer Chiefs",
+      "abbr": "KAC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "polokwane-city-fc",
+      "league": "rsa-premiership",
+      "name": "Polokwane City FC",
+      "short": "Polokwane City",
+      "abbr": "POC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "amazulu-fc",
+      "league": "rsa-premiership",
+      "name": "AmaZulu FC",
+      "short": "AmaZulu",
+      "abbr": "AMA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "richards-bay-fc",
+      "league": "rsa-premiership",
+      "name": "Richards Bay FC",
+      "short": "Richards Bay",
+      "abbr": "RIB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ts-galaxy",
+      "league": "rsa-premiership",
+      "name": "TS Galaxy",
+      "short": "TS Galaxy",
+      "abbr": "TSG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "mamelodi-sundowns",
+      "league": "rsa-premiership",
+      "name": "Mamelodi Sundowns",
+      "short": "Mamelodi Sundowns",
+      "abbr": "MAS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "supersport-united",
+      "league": "rsa-premiership",
+      "name": "SuperSport United",
+      "short": "SuperSport United",
+      "abbr": "SUU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "orlando-pirates",
+      "league": "rsa-premiership",
+      "name": "Orlando Pirates",
+      "short": "Orlando Pirates",
+      "abbr": "ORP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "chippa-united",
+      "league": "rsa-premiership",
+      "name": "Chippa United",
+      "short": "Chippa United",
+      "abbr": "CHU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sekhukhune-united",
+      "league": "rsa-premiership",
+      "name": "Sekhukhune United",
+      "short": "Sekhukhune United",
+      "abbr": "SEU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "magesi-fc",
+      "league": "rsa-premiership",
+      "name": "Magesi FC",
+      "short": "Magesi",
+      "abbr": "MAG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "stellenbosch-fc",
+      "league": "rsa-premiership",
+      "name": "Stellenbosch FC",
+      "short": "Stellenbosch",
+      "abbr": "STE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "golden-arrows",
+      "league": "rsa-premiership",
+      "name": "Golden Arrows",
+      "short": "Golden Arrows",
+      "abbr": "GOA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "country": "BUL",
+  "clubs": [
+    {
+      "id": "cherno-more-varna",
+      "league": "bul-tier-1",
+      "name": "Cherno More Varna",
+      "short": "Cherno More",
+      "abbr": "CMV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cska-1948-sofia",
+      "league": "bul-tier-1",
+      "name": "CSKA 1948 Sofia",
+      "short": "CSKA 1948 Sofia",
+      "abbr": "CSS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-krumovgrad",
+      "league": "bul-tier-1",
+      "name": "FK Krumovgrad",
+      "short": "FK Krumovgrad",
+      "abbr": "FKK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "slavia-sofia",
+      "league": "bul-tier-1",
+      "name": "Slavia Sofia",
+      "short": "Slavia Sofia",
+      "abbr": "SLS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "lokomotiv-plovdiv",
+      "league": "bul-tier-1",
+      "name": "Lokomotiv Plovdiv",
+      "short": "Lokomotiv Plovdiv",
+      "abbr": "LOP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "arda-kardzhali",
+      "league": "bul-tier-1",
+      "name": "Arda Kardzhali",
+      "short": "Arda Kardzhali",
+      "abbr": "ARK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "lokomotiv-sofia",
+      "league": "bul-tier-1",
+      "name": "Lokomotiv Sofia",
+      "short": "Lokomotiv Sofia",
+      "abbr": "LOS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "levski-sofia",
+      "league": "bul-tier-1",
+      "name": "Levski Sofia",
+      "short": "Levski Sofia",
+      "abbr": "LES",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "botev-vratsa",
+      "league": "bul-tier-1",
+      "name": "Botev Vratsa",
+      "short": "Botev Vratsa",
+      "abbr": "BOV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "botev-plovdiv",
+      "league": "bul-tier-1",
+      "name": "Botev Plovdiv",
+      "short": "Botev Plovdiv",
+      "abbr": "BOP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "pfc-ludogorets-razgrad",
+      "league": "bul-tier-1",
+      "name": "PFC Ludogorets Razgrad",
+      "short": "PFC Ludogorets",
+      "abbr": "PLR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hebar-pazardzhik",
+      "league": "bul-tier-1",
+      "name": "Hebar Pazardzhik",
+      "short": "Hebar Pazardzhik",
+      "abbr": "HEP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "spartak-varna",
+      "league": "bul-tier-1",
+      "name": "Spartak Varna",
+      "short": "Spartak Varna",
+      "abbr": "SPV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "septemvri-sofia",
+      "league": "bul-tier-1",
+      "name": "Septemvri Sofia",
+      "short": "Septemvri Sofia",
+      "abbr": "SES",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "pfc-beroe",
+      "league": "bul-tier-1",
+      "name": "PFC Beroe",
+      "short": "PFC Beroe",
+      "abbr": "PFB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

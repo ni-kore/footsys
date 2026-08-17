@@ -1,0 +1,30 @@
+{
+  "$comment": "Von Hand gesetzte Zuordnungen für Vereine, die der automatische Abgleich nicht auflösen kann — meist weil Football Manager Kurznamen verwendet ('Man City', 'Nottm Forest', 'Wolves') oder weil es in Argentinien und Brasilien Dutzende Vereine mit demselben Namen gibt. Schlüssel ist unsere club-id, Wert die numerische FM-ID.",
+
+  "manchester-city": "679",
+  "inter": "1135",
+  "as-roma": "1100",
+  "nottingham-forest": "692",
+  "wolverhampton": "740",
+  "west-bromwich-albion": "734",
+  "heart-of-midlothian": "1573",
+  "boca-juniors": "82",
+  "san-lorenzo": "96",
+  "santos": "335",
+  "sl-benfica": "1487",
+  "sport-lisboa-e-benfica": "1487",
+  "uanl-tigres": "104360",
+  "atletico-san-luis": "5661074",
+  "gallos-blancos": "136014",
+  "avs": "2000263090",
+  "ofi-heraklion": "980",
+
+  "independiente": "89",
+  "silkeborg-if": "551",
+  "colon": "102462",
+  "adana-demirspor": "450573",
+  "maghrib-de-fes": "5380013",
+  "zorya-lugansk": "1902",
+  "chernomorets-odessa": "1884",
+  "polissya-zhytomyr": "71100094"
+}

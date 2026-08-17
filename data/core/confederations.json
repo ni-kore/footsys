@@ -1,0 +1,8 @@
+[
+  { "id": "UEFA",     "name": { "de": "UEFA", "en": "UEFA" }, "region": { "de": "Europa", "en": "Europe" }, "strength": 5, "worldCupSlots": 16, "primaryCompetition": "uefa-champions-league", "secondaryCompetition": "uefa-europa-league", "tertiaryCompetition": "uefa-conference-league" },
+  { "id": "CONMEBOL", "name": { "de": "CONMEBOL", "en": "CONMEBOL" }, "region": { "de": "Südamerika", "en": "South America" }, "strength": 4, "worldCupSlots": 6, "primaryCompetition": "copa-libertadores", "secondaryCompetition": "copa-sudamericana", "tertiaryCompetition": null },
+  { "id": "CONCACAF", "name": { "de": "CONCACAF", "en": "CONCACAF" }, "region": { "de": "Nord- & Mittelamerika", "en": "North & Central America" }, "strength": 2, "worldCupSlots": 6, "primaryCompetition": "concacaf-champions-cup", "secondaryCompetition": null, "tertiaryCompetition": null },
+  { "id": "AFC",      "name": { "de": "AFC", "en": "AFC" }, "region": { "de": "Asien", "en": "Asia" }, "strength": 2, "worldCupSlots": 8, "primaryCompetition": "afc-champions-league-elite", "secondaryCompetition": "afc-champions-league-two", "tertiaryCompetition": null },
+  { "id": "CAF",      "name": { "de": "CAF", "en": "CAF" }, "region": { "de": "Afrika", "en": "Africa" }, "strength": 2, "worldCupSlots": 9, "primaryCompetition": "caf-champions-league", "secondaryCompetition": "caf-confederation-cup", "tertiaryCompetition": null },
+  { "id": "OFC",      "name": { "de": "OFC", "en": "OFC" }, "region": { "de": "Ozeanien", "en": "Oceania" }, "strength": 1, "worldCupSlots": 1, "primaryCompetition": "ofc-champions-league", "secondaryCompetition": null, "tertiaryCompetition": null }
+]

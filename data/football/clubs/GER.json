@@ -1,0 +1,2300 @@
+{
+  "country": "GER",
+  "clubs": [
+    {
+      "id": "bayern-munich",
+      "league": "ger-bundesliga",
+      "name": "FC Bayern München",
+      "short": "Bayern",
+      "abbr": "FCB",
+      "city": "München",
+      "colors": [
+        "#DC052D",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 5,
+        "continental": 5,
+        "international": 5
+      }
+    },
+    {
+      "id": "borussia-dortmund",
+      "league": "ger-bundesliga",
+      "name": "Borussia Dortmund",
+      "short": "Dortmund",
+      "abbr": "BVB",
+      "city": "Dortmund",
+      "colors": [
+        "#FDE100",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 4,
+        "international": 5
+      }
+    },
+    {
+      "id": "bayer-leverkusen",
+      "league": "ger-bundesliga",
+      "name": "Bayer 04 Leverkusen",
+      "short": "Leverkusen",
+      "abbr": "B04",
+      "city": "Leverkusen",
+      "colors": [
+        "#E32221",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 4,
+        "international": 3
+      }
+    },
+    {
+      "id": "rb-leipzig",
+      "league": "ger-bundesliga",
+      "name": "RB Leipzig",
+      "short": "Leipzig",
+      "abbr": "RBL",
+      "city": "Leipzig",
+      "colors": [
+        "#DD0741",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 3,
+        "international": 3
+      }
+    },
+    {
+      "id": "eintracht-frankfurt",
+      "league": "ger-bundesliga",
+      "name": "Eintracht Frankfurt",
+      "short": "Frankfurt",
+      "abbr": "SGE",
+      "city": "Frankfurt",
+      "colors": [
+        "#E1000F",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 3,
+        "international": 3
+      }
+    },
+    {
+      "id": "vfb-stuttgart",
+      "league": "ger-bundesliga",
+      "name": "VfB Stuttgart",
+      "short": "Stuttgart",
+      "abbr": "VFB",
+      "city": "Stuttgart",
+      "colors": [
+        "#E32219",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 2,
+        "international": 2
+      }
+    },
+    {
+      "id": "borussia-monchengladbach",
+      "league": "ger-bundesliga",
+      "name": "Borussia Mönchengladbach",
+      "short": "Gladbach",
+      "abbr": "BMG",
+      "city": "Mönchengladbach",
+      "colors": [
+        "#000000",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "vfl-wolfsburg",
+      "league": "ger-bundesliga",
+      "name": "VfL Wolfsburg",
+      "short": "Wolfsburg",
+      "abbr": "WOB",
+      "city": "Wolfsburg",
+      "colors": [
+        "#65B32E",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "werder-bremen",
+      "league": "ger-bundesliga",
+      "name": "SV Werder Bremen",
+      "short": "Werder",
+      "abbr": "SVW",
+      "city": "Bremen",
+      "colors": [
+        "#1D9053",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "sc-freiburg",
+      "league": "ger-bundesliga",
+      "name": "SC Freiburg",
+      "short": "Freiburg",
+      "abbr": "SCF",
+      "city": "Freiburg",
+      "colors": [
+        "#000000",
+        "#E2001A"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 1
+      }
+    },
+    {
+      "id": "tsg-hoffenheim",
+      "league": "ger-bundesliga",
+      "name": "TSG 1899 Hoffenheim",
+      "short": "Hoffenheim",
+      "abbr": "TSG",
+      "city": "Sinsheim",
+      "colors": [
+        "#1961B5",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 1
+      }
+    },
+    {
+      "id": "1-fsv-mainz-05",
+      "league": "ger-bundesliga",
+      "name": "1. FSV Mainz 05",
+      "short": "Mainz",
+      "abbr": "M05",
+      "city": "Mainz",
+      "colors": [
+        "#C3141E",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 1
+      }
+    },
+    {
+      "id": "1-fc-union-berlin",
+      "league": "ger-bundesliga",
+      "name": "1. FC Union Berlin",
+      "short": "Union Berlin",
+      "abbr": "FCU",
+      "city": "Berlin",
+      "colors": [
+        "#EB1923",
+        "#FFEE00"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 1
+      }
+    },
+    {
+      "id": "fc-augsburg",
+      "league": "ger-bundesliga",
+      "name": "FC Augsburg",
+      "short": "Augsburg",
+      "abbr": "FCA",
+      "city": "Augsburg",
+      "colors": [
+        "#BA3733",
+        "#46714D"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "fc-st-pauli",
+      "league": "ger-bundesliga",
+      "name": "FC St. Pauli",
+      "short": "St. Pauli",
+      "abbr": "STP",
+      "city": "Hamburg",
+      "colors": [
+        "#61371F",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "1-fc-heidenheim",
+      "league": "ger-bundesliga",
+      "name": "1. FC Heidenheim",
+      "short": "Heidenheim",
+      "abbr": "FCH",
+      "city": "Heidenheim",
+      "colors": [
+        "#E30613",
+        "#003D7C"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "holstein-kiel",
+      "league": "ger-bundesliga",
+      "name": "Holstein Kiel",
+      "short": "Kiel",
+      "abbr": "KSV",
+      "city": "Kiel",
+      "colors": [
+        "#012B65",
+        "#E2001A"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vfl-bochum",
+      "league": "ger-bundesliga",
+      "name": "VfL Bochum",
+      "short": "Bochum",
+      "abbr": "BOC",
+      "city": "Bochum",
+      "colors": [
+        "#005CA9",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hamburger-sv",
+      "league": "ger-2-bundesliga",
+      "name": "Hamburger SV",
+      "short": "HSV",
+      "abbr": "HSV",
+      "city": "Hamburg",
+      "colors": [
+        "#0A3A80",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "fc-schalke-04",
+      "league": "ger-2-bundesliga",
+      "name": "FC Schalke 04",
+      "short": "Schalke",
+      "abbr": "S04",
+      "city": "Gelsenkirchen",
+      "colors": [
+        "#004D9D",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 3
+      }
+    },
+    {
+      "id": "1-fc-koln",
+      "league": "ger-2-bundesliga",
+      "name": "1. FC Köln",
+      "short": "Köln",
+      "abbr": "KOE",
+      "city": "Köln",
+      "colors": [
+        "#ED1C24",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "hertha-bsc",
+      "league": "ger-2-bundesliga",
+      "name": "Hertha BSC",
+      "short": "Hertha",
+      "abbr": "BSC",
+      "city": "Berlin",
+      "colors": [
+        "#005CA9",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "fortuna-dusseldorf",
+      "league": "ger-2-bundesliga",
+      "name": "Fortuna Düsseldorf",
+      "short": "Düsseldorf",
+      "abbr": "F95",
+      "city": "Düsseldorf",
+      "colors": [
+        "#DA291C",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "1-fc-kaiserslautern",
+      "league": "ger-2-bundesliga",
+      "name": "1. FC Kaiserslautern",
+      "short": "Kaiserslautern",
+      "abbr": "FCK",
+      "city": "Kaiserslautern",
+      "colors": [
+        "#E1000F",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "hannover-96",
+      "league": "ger-2-bundesliga",
+      "name": "Hannover 96",
+      "short": "Hannover",
+      "abbr": "H96",
+      "city": "Hannover",
+      "colors": [
+        "#00963F",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "1-fc-nurnberg",
+      "league": "ger-2-bundesliga",
+      "name": "1. FC Nürnberg",
+      "short": "Nürnberg",
+      "abbr": "FCN",
+      "city": "Nürnberg",
+      "colors": [
+        "#A50034",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "karlsruher-sc",
+      "league": "ger-2-bundesliga",
+      "name": "Karlsruher SC",
+      "short": "Karlsruhe",
+      "abbr": "KSC",
+      "city": "Karlsruhe",
+      "colors": [
+        "#0C2C67",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sc-paderborn-07",
+      "league": "ger-2-bundesliga",
+      "name": "SC Paderborn 07",
+      "short": "Paderborn",
+      "abbr": "SCP",
+      "city": "Paderborn",
+      "colors": [
+        "#00529F",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sv-elversberg",
+      "league": "ger-2-bundesliga",
+      "name": "SV Elversberg",
+      "short": "Elversberg",
+      "abbr": "SVE",
+      "city": "Spiesen-Elversberg",
+      "colors": [
+        "#000000",
+        "#E30613"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "1-fc-magdeburg",
+      "league": "ger-2-bundesliga",
+      "name": "1. FC Magdeburg",
+      "short": "Magdeburg",
+      "abbr": "FCM",
+      "city": "Magdeburg",
+      "colors": [
+        "#0069B4",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sv-darmstadt-98",
+      "league": "ger-2-bundesliga",
+      "name": "SV Darmstadt 98",
+      "short": "Darmstadt",
+      "abbr": "SVD",
+      "city": "Darmstadt",
+      "colors": [
+        "#004E9E",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "eintracht-braunschweig",
+      "league": "ger-2-bundesliga",
+      "name": "Eintracht Braunschweig",
+      "short": "Braunschweig",
+      "abbr": "EBS",
+      "city": "Braunschweig",
+      "colors": [
+        "#FFED00",
+        "#005CA9"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "spvgg-greuther-furth",
+      "league": "ger-2-bundesliga",
+      "name": "SpVgg Greuther Fürth",
+      "short": "Fürth",
+      "abbr": "SGF",
+      "city": "Fürth",
+      "colors": [
+        "#00915B",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "preussen-munster",
+      "league": "ger-2-bundesliga",
+      "name": "SC Preußen Münster",
+      "short": "Münster",
+      "abbr": "SCP",
+      "city": "Münster",
+      "colors": [
+        "#008B47",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ssv-ulm-1846",
+      "league": "ger-2-bundesliga",
+      "name": "SSV Ulm 1846",
+      "short": "Ulm",
+      "abbr": "ULM",
+      "city": "Ulm",
+      "colors": [
+        "#000000",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ssv-jahn-regensburg",
+      "league": "ger-2-bundesliga",
+      "name": "SSV Jahn Regensburg",
+      "short": "Regensburg",
+      "abbr": "SSV",
+      "city": "Regensburg",
+      "colors": [
+        "#C8102E",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "arminia-bielefeld",
+      "league": "ger-3-liga",
+      "name": "DSC Arminia Bielefeld",
+      "short": "Bielefeld",
+      "abbr": "DSC",
+      "city": "Bielefeld",
+      "colors": [
+        "#004E9E",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "dynamo-dresden",
+      "league": "ger-3-liga",
+      "name": "SG Dynamo Dresden",
+      "short": "Dresden",
+      "abbr": "SGD",
+      "city": "Dresden",
+      "colors": [
+        "#FFED00",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "energie-cottbus",
+      "league": "ger-3-liga",
+      "name": "FC Energie Cottbus",
+      "short": "Cottbus",
+      "abbr": "FCE",
+      "city": "Cottbus",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "rot-weiss-essen",
+      "league": "ger-3-liga",
+      "name": "Rot-Weiss Essen",
+      "short": "Essen",
+      "abbr": "RWE",
+      "city": "Essen",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "msv-duisburg",
+      "league": "ger-3-liga",
+      "name": "MSV Duisburg",
+      "short": "Duisburg",
+      "abbr": "MSV",
+      "city": "Duisburg",
+      "colors": [
+        "#005CA9",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "tsv-1860-munchen",
+      "league": "ger-3-liga",
+      "name": "TSV 1860 München",
+      "short": "1860 München",
+      "abbr": "M60",
+      "city": "München",
+      "colors": [
+        "#009EE0",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "alemannia-aachen",
+      "league": "ger-3-liga",
+      "name": "Alemannia Aachen",
+      "short": "Alemannia Aachen",
+      "abbr": "ALA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "erzgebirge-aue",
+      "league": "ger-3-liga",
+      "name": "Erzgebirge Aue",
+      "short": "Erzgebirge Aue",
+      "abbr": "ERA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hannover-96-ii",
+      "league": "ger-3-liga",
+      "name": "Hannover 96 II",
+      "short": "Hannover 96 II",
+      "abbr": "HAI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "borussia-dortmund-ii",
+      "league": "ger-3-liga",
+      "name": "Borussia Dortmund II",
+      "short": "Borussia Dortmund",
+      "abbr": "BDI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "spvgg-unterhaching",
+      "league": "ger-3-liga",
+      "name": "SpVgg Unterhaching",
+      "short": "SpVgg Unterhaching",
+      "abbr": "UNT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sc-verl",
+      "league": "ger-3-liga",
+      "name": "SC Verl",
+      "short": "SC Verl",
+      "abbr": "VER",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sv-wehen-wiesbaden",
+      "league": "ger-3-liga",
+      "name": "SV Wehen Wiesbaden",
+      "short": "SV Wehen",
+      "abbr": "WEW",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sv-sandhausen",
+      "league": "ger-3-liga",
+      "name": "SV Sandhausen",
+      "short": "SV Sandhausen",
+      "abbr": "SAN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vfl-osnabrueck",
+      "league": "ger-3-liga",
+      "name": "VfL Osnabrück",
+      "short": "VfL Osnabrück",
+      "abbr": "OSN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hansa-rostock",
+      "league": "ger-3-liga",
+      "name": "Hansa Rostock",
+      "short": "Hansa Rostock",
+      "abbr": "HAR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vfb-stuttgart-ii",
+      "league": "ger-3-liga",
+      "name": "VfB Stuttgart II",
+      "short": "VfB Stuttgart II",
+      "abbr": "STI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "viktoria-koeln",
+      "league": "ger-3-liga",
+      "name": "Viktoria Köln",
+      "short": "Viktoria Köln",
+      "abbr": "VIK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-ingolstadt-04",
+      "league": "ger-3-liga",
+      "name": "FC Ingolstadt 04",
+      "short": "FC Ingolstadt 04",
+      "abbr": "ING",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "waldhof-mannheim",
+      "league": "ger-3-liga",
+      "name": "Waldhof Mannheim",
+      "short": "Waldhof Mannheim",
+      "abbr": "WAM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "wacker-burghausen",
+      "league": "ger-tier-4",
+      "name": "Wacker Burghausen",
+      "short": "Wacker Burghausen",
+      "abbr": "WAB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bayern-muenchen-ii",
+      "league": "ger-tier-4",
+      "name": "Bayern München II",
+      "short": "Bayern München",
+      "abbr": "BMI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "spvgg-ansbach",
+      "league": "ger-tier-4",
+      "name": "SpVgg Ansbach",
+      "short": "SpVgg Ansbach",
+      "abbr": "ANS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "tsv-aubstadt",
+      "league": "ger-tier-4",
+      "name": "TSV Aubstadt",
+      "short": "TSV Aubstadt",
+      "abbr": "AUB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "viktoria-aschaffenburg",
+      "league": "ger-tier-4",
+      "name": "Viktoria Aschaffenburg",
+      "short": "Viktoria Aschaffenburg",
+      "abbr": "VIA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "eintracht-bamberg",
+      "league": "ger-tier-4",
+      "name": "Eintracht Bamberg",
+      "short": "Eintracht Bamberg",
+      "abbr": "EIB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "spvgg-hankofen-hailing",
+      "league": "ger-tier-4",
+      "name": "SpVgg Hankofen-Hailing",
+      "short": "SpVgg Hankofen-Hailing",
+      "abbr": "HAH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fv-illertissen",
+      "league": "ger-tier-4",
+      "name": "FV Illertissen",
+      "short": "FV Illertissen",
+      "abbr": "FVI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "djk-vilzing",
+      "league": "ger-tier-4",
+      "name": "DJK Vilzing",
+      "short": "DJK Vilzing",
+      "abbr": "DJV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "spvgg-bayreuth",
+      "league": "ger-tier-4",
+      "name": "SpVgg Bayreuth",
+      "short": "SpVgg Bayreuth",
+      "abbr": "BAY",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "tsv-buchbach",
+      "league": "ger-tier-4",
+      "name": "TSV Buchbach",
+      "short": "TSV Buchbach",
+      "abbr": "BUC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "tuerkguecue-muenchen",
+      "league": "ger-tier-4",
+      "name": "Türkgücü München",
+      "short": "Türkgücü München",
+      "abbr": "TÜM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "wuerzburger-kickers",
+      "league": "ger-tier-4",
+      "name": "Würzburger Kickers",
+      "short": "Würzburger Kickers",
+      "abbr": "WÜK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "spvgg-greuther-fuerth-ii",
+      "league": "ger-tier-4",
+      "name": "SpVgg Greuther Fürth II",
+      "short": "SpVgg Greuther",
+      "abbr": "GFI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-augsburg-ii",
+      "league": "ger-tier-4",
+      "name": "FC Augsburg II",
+      "short": "FC Augsburg II",
+      "abbr": "AUI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vfb-luebeck",
+      "league": "ger-tier-4",
+      "name": "VfB Lübeck",
+      "short": "VfB Lübeck",
+      "abbr": "LÜB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sv-todesfelde",
+      "league": "ger-tier-4",
+      "name": "SV Todesfelde",
+      "short": "SV Todesfelde",
+      "abbr": "TOD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sv-meppen",
+      "league": "ger-tier-4",
+      "name": "SV Meppen",
+      "short": "SV Meppen",
+      "abbr": "MEP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "weiche-flensburg-08",
+      "league": "ger-tier-4",
+      "name": "Weiche Flensburg 08",
+      "short": "Weiche Flensburg",
+      "abbr": "WEF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ssv-jeddeloh-ii",
+      "league": "ger-tier-4",
+      "name": "SSV Jeddeloh II",
+      "short": "SSV Jeddeloh II",
+      "abbr": "SJI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-st-pauli-ii",
+      "league": "ger-tier-4",
+      "name": "FC St. Pauli II",
+      "short": "FC St. Pauli II",
+      "abbr": "SPI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-teutonia-05",
+      "league": "ger-tier-4",
+      "name": "FC Teutonia 05",
+      "short": "FC Teutonia 05",
+      "abbr": "TEU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "blau-weiss-lohne",
+      "league": "ger-tier-4",
+      "name": "Blau-Weiß Lohne",
+      "short": "Blau-Weiß Lohne",
+      "abbr": "BWL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "eintracht-norderstedt",
+      "league": "ger-tier-4",
+      "name": "Eintracht Norderstedt",
+      "short": "Eintracht Norderstedt",
+      "abbr": "EIN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vfb-oldenburg",
+      "league": "ger-tier-4",
+      "name": "VfB Oldenburg",
+      "short": "VfB Oldenburg",
+      "abbr": "OLD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "tsv-havelse",
+      "league": "ger-tier-4",
+      "name": "TSV Havelse",
+      "short": "TSV Havelse",
+      "abbr": "HAV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "werder-bremen-ii",
+      "league": "ger-tier-4",
+      "name": "Werder Bremen II",
+      "short": "Werder Bremen II",
+      "abbr": "WBI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bremer-sv",
+      "league": "ger-tier-4",
+      "name": "Bremer SV",
+      "short": "Bremer SV",
+      "abbr": "BRE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hamburger-sv-ii",
+      "league": "ger-tier-4",
+      "name": "Hamburger SV II",
+      "short": "Hamburger SV II",
+      "abbr": "HAI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sv-drochtersen-assel",
+      "league": "ger-tier-4",
+      "name": "SV Drochtersen/Assel",
+      "short": "SV Drochtersen/Assel",
+      "abbr": "DRA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "holstein-kiel-ii",
+      "league": "ger-tier-4",
+      "name": "Holstein Kiel II",
+      "short": "Holstein Kiel II",
+      "abbr": "HKI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kickers-emden",
+      "league": "ger-tier-4",
+      "name": "Kickers Emden",
+      "short": "Kickers Emden",
+      "abbr": "KIE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "chemnitzer-fc",
+      "league": "ger-tier-4",
+      "name": "Chemnitzer FC",
+      "short": "Chemnitzer",
+      "abbr": "CHE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hallescher-fc",
+      "league": "ger-tier-4",
+      "name": "Hallescher FC",
+      "short": "Hallescher",
+      "abbr": "HAL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fsv-63-luckenwalde",
+      "league": "ger-tier-4",
+      "name": "FSV 63 Luckenwalde",
+      "short": "FSV 63",
+      "abbr": "FSL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "zfc-meuselwitz",
+      "league": "ger-tier-4",
+      "name": "ZFC Meuselwitz",
+      "short": "ZFC Meuselwitz",
+      "abbr": "ZFM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bfc-dynamo",
+      "league": "ger-tier-4",
+      "name": "BFC Dynamo",
+      "short": "BFC Dynamo",
+      "abbr": "BFD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-carl-zeiss-jena",
+      "league": "ger-tier-4",
+      "name": "FC Carl Zeiss Jena",
+      "short": "FC Carl",
+      "abbr": "CZJ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hertha-zehlendorf",
+      "league": "ger-tier-4",
+      "name": "Hertha Zehlendorf",
+      "short": "Hertha Zehlendorf",
+      "abbr": "HEZ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fsv-zwickau",
+      "league": "ger-tier-4",
+      "name": "FSV Zwickau",
+      "short": "FSV Zwickau",
+      "abbr": "FSZ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bsg-chemie-leipzig",
+      "league": "ger-tier-4",
+      "name": "BSG Chemie Leipzig",
+      "short": "BSG Chemie",
+      "abbr": "BCL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sv-babelsberg-03",
+      "league": "ger-tier-4",
+      "name": "SV Babelsberg 03",
+      "short": "SV Babelsberg 03",
+      "abbr": "BAB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "rot-weiss-erfurt",
+      "league": "ger-tier-4",
+      "name": "Rot-Weiß Erfurt",
+      "short": "Rot-Weiß Erfurt",
+      "abbr": "RWE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-eilenburg",
+      "league": "ger-tier-4",
+      "name": "FC Eilenburg",
+      "short": "FC Eilenburg",
+      "abbr": "EIL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vfc-plauen",
+      "league": "ger-tier-4",
+      "name": "VFC Plauen",
+      "short": "VFC Plauen",
+      "abbr": "VFP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-viktoria-1889-berlin",
+      "league": "ger-tier-4",
+      "name": "FC Viktoria 1889 Berlin",
+      "short": "FC Viktoria",
+      "abbr": "VIB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "greifswalder-fc",
+      "league": "ger-tier-4",
+      "name": "Greifswalder FC",
+      "short": "Greifswalder",
+      "abbr": "GRE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hertha-bsc-ii",
+      "league": "ger-tier-4",
+      "name": "Hertha BSC II",
+      "short": "Hertha BSC II",
+      "abbr": "HBI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vsg-altglienicke",
+      "league": "ger-tier-4",
+      "name": "VSG Altglienicke",
+      "short": "VSG Altglienicke",
+      "abbr": "VSA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "eintracht-trier",
+      "league": "ger-tier-4",
+      "name": "Eintracht Trier",
+      "short": "Eintracht Trier",
+      "abbr": "EIT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-08-homburg",
+      "league": "ger-tier-4",
+      "name": "FC 08 Homburg",
+      "short": "FC 08 Homburg",
+      "abbr": "HOM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sc-freiburg-ii",
+      "league": "ger-tier-4",
+      "name": "SC Freiburg II",
+      "short": "SC Freiburg II",
+      "abbr": "FRI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kickers-offenbach",
+      "league": "ger-tier-4",
+      "name": "Kickers Offenbach",
+      "short": "Kickers Offenbach",
+      "abbr": "KIO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "stuttgarter-kickers",
+      "league": "ger-tier-4",
+      "name": "Stuttgarter Kickers",
+      "short": "Stuttgarter Kickers",
+      "abbr": "STK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "eintracht-frankfurt-ii",
+      "league": "ger-tier-4",
+      "name": "Eintracht Frankfurt II",
+      "short": "Eintracht Frankfurt",
+      "abbr": "EFI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bahlinger-sc",
+      "league": "ger-tier-4",
+      "name": "Bahlinger SC",
+      "short": "Bahlinger",
+      "abbr": "BAH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-giessen",
+      "league": "ger-tier-4",
+      "name": "FC Gießen",
+      "short": "FC Gießen",
+      "abbr": "GIE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-astoria-walldorf",
+      "league": "ger-tier-4",
+      "name": "FC-Astoria Walldorf",
+      "short": "FC-Astoria Walldorf",
+      "abbr": "ASW",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sgv-freiberg",
+      "league": "ger-tier-4",
+      "name": "SGV Freiberg",
+      "short": "SGV Freiberg",
+      "abbr": "SGF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "goeppinger-sv",
+      "league": "ger-tier-4",
+      "name": "Göppinger SV",
+      "short": "Göppinger SV",
+      "abbr": "GÖP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fsv-frankfurt",
+      "league": "ger-tier-4",
+      "name": "FSV Frankfurt",
+      "short": "FSV Frankfurt",
+      "abbr": "FSF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "tsv-steinbach-haiger",
+      "league": "ger-tier-4",
+      "name": "TSV Steinbach Haiger",
+      "short": "TSV Steinbach",
+      "abbr": "STH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hessen-kassel",
+      "league": "ger-tier-4",
+      "name": "Hessen Kassel",
+      "short": "Hessen Kassel",
+      "abbr": "HEK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sg-barockstadt-fulda-lehnerz",
+      "league": "ger-tier-4",
+      "name": "SG Barockstadt Fulda-Lehnerz",
+      "short": "SG Barockstadt",
+      "abbr": "SBF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-08-villingen",
+      "league": "ger-tier-4",
+      "name": "FC 08 Villingen",
+      "short": "FC 08 Villingen",
+      "abbr": "VIL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-guetersloh",
+      "league": "ger-tier-4",
+      "name": "FC Gütersloh",
+      "short": "FC Gütersloh",
+      "abbr": "GÜT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kfc-uerdingen-05",
+      "league": "ger-tier-4",
+      "name": "KFC Uerdingen 05",
+      "short": "KFC Uerdingen 05",
+      "abbr": "KFU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sportfreunde-lotte",
+      "league": "ger-tier-4",
+      "name": "Sportfreunde Lotte",
+      "short": "Sportfreunde Lotte",
+      "abbr": "SPL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fortuna-koeln",
+      "league": "ger-tier-4",
+      "name": "Fortuna Köln",
+      "short": "Fortuna Köln",
+      "abbr": "FOK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sv-roedinghausen",
+      "league": "ger-tier-4",
+      "name": "SV Rödinghausen",
+      "short": "SV Rödinghausen",
+      "abbr": "RÖD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fortuna-duesseldorf-ii",
+      "league": "ger-tier-4",
+      "name": "Fortuna Düsseldorf II",
+      "short": "Fortuna Düsseldorf",
+      "abbr": "FDI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sc-paderborn-07-ii",
+      "league": "ger-tier-4",
+      "name": "SC Paderborn 07 II",
+      "short": "SC Paderborn",
+      "abbr": "PAI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "eintracht-hohkeppel",
+      "league": "ger-tier-4",
+      "name": "Eintracht Hohkeppel",
+      "short": "Eintracht Hohkeppel",
+      "abbr": "EIH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "rot-weiss-oberhausen",
+      "league": "ger-tier-4",
+      "name": "Rot-Weiß Oberhausen",
+      "short": "Rot-Weiß Oberhausen",
+      "abbr": "RWO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bor-moenchengladbach-ii",
+      "league": "ger-tier-4",
+      "name": "Bor. Mönchengladbach II",
+      "short": "Bor. Mönchengladbach",
+      "abbr": "BMI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "tuerkspor-dortmund",
+      "league": "ger-tier-4",
+      "name": "Türkspor Dortmund",
+      "short": "Türkspor Dortmund",
+      "abbr": "TÜD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "wuppertaler-sv",
+      "league": "ger-tier-4",
+      "name": "Wuppertaler SV",
+      "short": "Wuppertaler SV",
+      "abbr": "WUP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sc-wiedenbrueck",
+      "league": "ger-tier-4",
+      "name": "SC Wiedenbrück",
+      "short": "SC Wiedenbrück",
+      "abbr": "WIE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-schalke-04-ii",
+      "league": "ger-tier-4",
+      "name": "FC Schalke 04 II",
+      "short": "FC Schalke 04 II",
+      "abbr": "SCI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

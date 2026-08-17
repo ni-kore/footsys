@@ -1,0 +1,260 @@
+{
+  "country": "MAR",
+  "clubs": [
+    {
+      "id": "js-soualem",
+      "league": "mar-botola",
+      "name": "JS Soualem",
+      "short": "JS Soualem",
+      "abbr": "JSS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "chabab-mohammedia",
+      "league": "mar-botola",
+      "name": "Chabab Mohammédia",
+      "short": "Chabab Mohammédia",
+      "abbr": "CHM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "far-de-rabat",
+      "league": "mar-botola",
+      "name": "FAR de Rabat",
+      "short": "FAR de Rabat",
+      "abbr": "FDR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "maghrib-de-fes",
+      "league": "mar-botola",
+      "name": "Maghrib de Fès",
+      "short": "Maghrib de Fès",
+      "abbr": "MDF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "wydad-ac",
+      "league": "mar-botola",
+      "name": "Wydad AC",
+      "short": "Wydad",
+      "abbr": "WYD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "union-de-touarga",
+      "league": "mar-botola",
+      "name": "Union de Touarga",
+      "short": "Union de Touarga",
+      "abbr": "UDT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fus-de-rabat",
+      "league": "mar-botola",
+      "name": "FUS de Rabat",
+      "short": "FUS de Rabat",
+      "abbr": "FDR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "raja-casablanca",
+      "league": "mar-botola",
+      "name": "Raja Casablanca",
+      "short": "Raja Casablanca",
+      "abbr": "RAC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "rs-berkane",
+      "league": "mar-botola",
+      "name": "RS Berkane",
+      "short": "RS Berkane",
+      "abbr": "RSB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "moghreb-de-tetouan",
+      "league": "mar-botola",
+      "name": "Moghreb de Tétouan",
+      "short": "Moghreb de",
+      "abbr": "MDT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "olympique-de-safi",
+      "league": "mar-botola",
+      "name": "Olympique de Safi",
+      "short": "Olympique de",
+      "abbr": "ODS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cod-meknes",
+      "league": "mar-botola",
+      "name": "COD Meknés",
+      "short": "COD Meknés",
+      "abbr": "COM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cr-khemis-zemamra",
+      "league": "mar-botola",
+      "name": "CR Khemis Zemamra",
+      "short": "CR Khemis",
+      "abbr": "CKZ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hassania-us-agadir",
+      "league": "mar-botola",
+      "name": "Hassania US Agadir",
+      "short": "Hassania US",
+      "abbr": "HAA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ittihad-tanger",
+      "league": "mar-botola",
+      "name": "Ittihad Tanger",
+      "short": "Ittihad Tanger",
+      "abbr": "ITT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

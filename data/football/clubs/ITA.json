@@ -1,0 +1,1620 @@
+{
+  "country": "ITA",
+  "clubs": [
+    {
+      "id": "inter",
+      "league": "ita-serie-a",
+      "name": "FC Internazionale",
+      "short": "Inter",
+      "abbr": "INT",
+      "city": "Mailand",
+      "colors": [
+        "#0068A8",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 5,
+        "continental": 4,
+        "international": 5
+      }
+    },
+    {
+      "id": "ac-milan",
+      "league": "ita-serie-a",
+      "name": "AC Milan",
+      "short": "Milan",
+      "abbr": "MIL",
+      "city": "Mailand",
+      "colors": [
+        "#FB090B",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 4,
+        "international": 5
+      }
+    },
+    {
+      "id": "juventus",
+      "league": "ita-serie-a",
+      "name": "Juventus FC",
+      "short": "Juventus",
+      "abbr": "JUV",
+      "city": "Turin",
+      "colors": [
+        "#000000",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 4,
+        "international": 5
+      }
+    },
+    {
+      "id": "napoli",
+      "league": "ita-serie-a",
+      "name": "SSC Napoli",
+      "short": "Napoli",
+      "abbr": "NAP",
+      "city": "Neapel",
+      "colors": [
+        "#12A0D7",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 3,
+        "international": 4
+      }
+    },
+    {
+      "id": "as-roma",
+      "league": "ita-serie-a",
+      "name": "AS Rom",
+      "short": "Roma",
+      "abbr": "ROM",
+      "city": "Rom",
+      "colors": [
+        "#8E1F2F",
+        "#F0BC42"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 3,
+        "international": 4
+      }
+    },
+    {
+      "id": "lazio",
+      "league": "ita-serie-a",
+      "name": "SS Lazio",
+      "short": "Lazio",
+      "abbr": "LAZ",
+      "city": "Rom",
+      "colors": [
+        "#87D8F7",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 2,
+        "international": 3
+      }
+    },
+    {
+      "id": "atalanta",
+      "league": "ita-serie-a",
+      "name": "Atalanta BC",
+      "short": "Atalanta",
+      "abbr": "ATA",
+      "city": "Bergamo",
+      "colors": [
+        "#1E71B8",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 3,
+        "international": 3
+      }
+    },
+    {
+      "id": "fiorentina",
+      "league": "ita-serie-a",
+      "name": "ACF Fiorentina",
+      "short": "Fiorentina",
+      "abbr": "FIO",
+      "city": "Florenz",
+      "colors": [
+        "#652F8E",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 2,
+        "international": 3
+      }
+    },
+    {
+      "id": "bologna",
+      "league": "ita-serie-a",
+      "name": "Bologna FC 1909",
+      "short": "Bologna",
+      "abbr": "BOL",
+      "city": "Bologna",
+      "colors": [
+        "#1A2F48",
+        "#A21C24"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "torino",
+      "league": "ita-serie-a",
+      "name": "Torino FC",
+      "short": "Torino",
+      "abbr": "TOR",
+      "city": "Turin",
+      "colors": [
+        "#881600",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "udinese",
+      "league": "ita-serie-a",
+      "name": "Udinese Calcio",
+      "short": "Udinese",
+      "abbr": "UDI",
+      "city": "Udine",
+      "colors": [
+        "#000000",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "genoa",
+      "league": "ita-serie-a",
+      "name": "Genoa CFC",
+      "short": "Genoa",
+      "abbr": "GEN",
+      "city": "Genua",
+      "colors": [
+        "#A21C24",
+        "#003B70"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "como",
+      "league": "ita-serie-a",
+      "name": "Como 1907",
+      "short": "Como",
+      "abbr": "COM",
+      "city": "Como",
+      "colors": [
+        "#003D7C",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "parma",
+      "league": "ita-serie-a",
+      "name": "Parma Calcio 1913",
+      "short": "Parma",
+      "abbr": "PAR",
+      "city": "Parma",
+      "colors": [
+        "#FFE500",
+        "#003D7C"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "cagliari",
+      "league": "ita-serie-a",
+      "name": "Cagliari Calcio",
+      "short": "Cagliari",
+      "abbr": "CAG",
+      "city": "Cagliari",
+      "colors": [
+        "#9F1E33",
+        "#003D7C"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "hellas-verona",
+      "league": "ita-serie-a",
+      "name": "Hellas Verona",
+      "short": "Verona",
+      "abbr": "VER",
+      "city": "Verona",
+      "colors": [
+        "#FFE500",
+        "#00256B"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "lecce",
+      "league": "ita-serie-a",
+      "name": "US Lecce",
+      "short": "Lecce",
+      "abbr": "LEC",
+      "city": "Lecce",
+      "colors": [
+        "#FFE500",
+        "#D2001C"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "empoli",
+      "league": "ita-serie-a",
+      "name": "Empoli FC",
+      "short": "Empoli",
+      "abbr": "EMP",
+      "city": "Empoli",
+      "colors": [
+        "#00579C",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "venezia",
+      "league": "ita-serie-a",
+      "name": "Venezia FC",
+      "short": "Venezia",
+      "abbr": "VEN",
+      "city": "Venedig",
+      "colors": [
+        "#000000",
+        "#F58220"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "monza",
+      "league": "ita-serie-a",
+      "name": "AC Monza",
+      "short": "Monza",
+      "abbr": "MON",
+      "city": "Monza",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "sampdoria",
+      "league": "ita-serie-b",
+      "name": "UC Sampdoria",
+      "short": "Sampdoria",
+      "abbr": "SAM",
+      "city": "Genua",
+      "colors": [
+        "#1B5AA5",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "palermo",
+      "league": "ita-serie-b",
+      "name": "Palermo FC",
+      "short": "Palermo",
+      "abbr": "PAL",
+      "city": "Palermo",
+      "colors": [
+        "#EE7EA6",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 2
+      }
+    },
+    {
+      "id": "sassuolo",
+      "league": "ita-serie-b",
+      "name": "US Sassuolo",
+      "short": "Sassuolo",
+      "abbr": "SAS",
+      "city": "Sassuolo",
+      "colors": [
+        "#00A752",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "spezia",
+      "league": "ita-serie-b",
+      "name": "Spezia Calcio",
+      "short": "Spezia",
+      "abbr": "SPE",
+      "city": "La Spezia",
+      "colors": [
+        "#FFFFFF",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bari",
+      "league": "ita-serie-b",
+      "name": "SSC Bari",
+      "short": "Bari",
+      "abbr": "BAR",
+      "city": "Bari",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "brescia",
+      "league": "ita-serie-b",
+      "name": "Brescia Calcio",
+      "short": "Brescia",
+      "abbr": "BRE",
+      "city": "Brescia",
+      "colors": [
+        "#005BAC",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "frosinone-calcio",
+      "league": "ita-serie-a",
+      "name": "Frosinone Calcio",
+      "short": "Frosinone Calcio",
+      "abbr": "FRC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 2,
+        "international": 1
+      }
+    },
+    {
+      "id": "delfino-pescara",
+      "league": "ita-serie-b",
+      "name": "Delfino Pescara",
+      "short": "Delfino Pescara",
+      "abbr": "DEP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cesena-fc",
+      "league": "ita-serie-b",
+      "name": "Cesena FC",
+      "short": "Cesena",
+      "abbr": "CES",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "calcio-padova",
+      "league": "ita-serie-b",
+      "name": "Calcio Padova",
+      "short": "Calcio Padova",
+      "abbr": "CAP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "virtus-entella",
+      "league": "ita-serie-b",
+      "name": "Virtus Entella",
+      "short": "Virtus Entella",
+      "abbr": "VIE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "juve-stabia",
+      "league": "ita-serie-b",
+      "name": "Juve Stabia",
+      "short": "Juve Stabia",
+      "abbr": "JUS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "mantova-1911-ssd",
+      "league": "ita-serie-b",
+      "name": "Mantova 1911 SSD",
+      "short": "Mantova 1911 SSD",
+      "abbr": "MAS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ac-reggiana-1919",
+      "league": "ita-serie-b",
+      "name": "AC Reggiana 1919",
+      "short": "AC Reggiana 1919",
+      "abbr": "REG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "carrarese-calcio",
+      "league": "ita-serie-b",
+      "name": "Carrarese Calcio",
+      "short": "Carrarese Calcio",
+      "abbr": "CAC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "us-catanzaro",
+      "league": "ita-serie-b",
+      "name": "US Catanzaro",
+      "short": "US Catanzaro",
+      "abbr": "CAT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-suedtirol",
+      "league": "ita-serie-b",
+      "name": "FC Südtirol",
+      "short": "FC Südtirol",
+      "abbr": "SÜD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "us-avellino",
+      "league": "ita-serie-b",
+      "name": "US Avellino",
+      "short": "US Avellino",
+      "abbr": "AVE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "modena-fc",
+      "league": "ita-serie-b",
+      "name": "Modena FC",
+      "short": "Modena",
+      "abbr": "MOD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "feralpisalo",
+      "league": "ita-tier-3",
+      "name": "Feralpisalò",
+      "short": "Feralpisalò",
+      "abbr": "FER",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "novara-calcio",
+      "league": "ita-tier-3",
+      "name": "Novara Calcio",
+      "short": "Novara Calcio",
+      "abbr": "NOC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "uc-albinoleffe",
+      "league": "ita-tier-3",
+      "name": "UC AlbinoLeffe",
+      "short": "UC AlbinoLeffe",
+      "abbr": "UCA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "caldiero-terme",
+      "league": "ita-tier-3",
+      "name": "Caldiero Terme",
+      "short": "Caldiero Terme",
+      "abbr": "CAT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "atalanta-ii",
+      "league": "ita-tier-3",
+      "name": "Atalanta II",
+      "short": "Atalanta II",
+      "abbr": "ATI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "asc-alcione",
+      "league": "ita-tier-3",
+      "name": "ASC Alcione",
+      "short": "ASC Alcione",
+      "abbr": "ASA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "us-triestina",
+      "league": "ita-tier-3",
+      "name": "US Triestina",
+      "short": "US Triestina",
+      "abbr": "TRI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "arzignano-valchiampo",
+      "league": "ita-tier-3",
+      "name": "Arzignano Valchiampo",
+      "short": "Arzignano Valchiampo",
+      "abbr": "ARV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "calcio-lecco-1912",
+      "league": "ita-tier-3",
+      "name": "Calcio Lecco 1912",
+      "short": "Calcio Lecco",
+      "abbr": "CAL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "clodiense-ssd",
+      "league": "ita-tier-3",
+      "name": "Clodiense SSD",
+      "short": "Clodiense SSD",
+      "abbr": "CLS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "aurora-pro-patria",
+      "league": "ita-tier-3",
+      "name": "Aurora Pro Patria",
+      "short": "Aurora Pro",
+      "abbr": "APP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ac-renate",
+      "league": "ita-tier-3",
+      "name": "AC Renate",
+      "short": "AC Renate",
+      "abbr": "REN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "virtus-verona",
+      "league": "ita-tier-3",
+      "name": "Virtus Verona",
+      "short": "Virtus Verona",
+      "abbr": "VIV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-lumezzane",
+      "league": "ita-tier-3",
+      "name": "FC Lumezzane",
+      "short": "FC Lumezzane",
+      "abbr": "LUM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "l-r-vicenza",
+      "league": "ita-tier-3",
+      "name": "L.R. Vicenza",
+      "short": "L.R. Vicenza",
+      "abbr": "LRV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "giana-erminio",
+      "league": "ita-tier-3",
+      "name": "Giana Erminio",
+      "short": "Giana Erminio",
+      "abbr": "GIE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "trento-calcio-1921",
+      "league": "ita-tier-3",
+      "name": "Trento Calcio 1921",
+      "short": "Trento Calcio",
+      "abbr": "TRC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "pro-vercelli",
+      "league": "ita-tier-3",
+      "name": "Pro Vercelli",
+      "short": "Pro Vercelli",
+      "abbr": "PRV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "us-pergolettese",
+      "league": "ita-tier-3",
+      "name": "US Pergolettese",
+      "short": "US Pergolettese",
+      "abbr": "PER",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "spal-2013-ferrara",
+      "league": "ita-tier-3",
+      "name": "SPAL 2013 Ferrara",
+      "short": "SPAL 2013",
+      "abbr": "SPF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ascoli-calcio",
+      "league": "ita-tier-3",
+      "name": "Ascoli Calcio",
+      "short": "Ascoli Calcio",
+      "abbr": "ASC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "asd-pineto-calcio",
+      "league": "ita-tier-3",
+      "name": "ASD Pineto Calcio",
+      "short": "ASD Pineto",
+      "abbr": "APC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "lucchese",
+      "league": "ita-tier-3",
+      "name": "Lucchese",
+      "short": "Lucchese",
+      "abbr": "LUC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ternana-calcio",
+      "league": "ita-tier-3",
+      "name": "Ternana Calcio",
+      "short": "Ternana Calcio",
+      "abbr": "TEC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-legnago-salus",
+      "league": "ita-tier-3",
+      "name": "FC Legnago Salus",
+      "short": "FC Legnago Salus",
+      "abbr": "LES",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "us-pontedera",
+      "league": "ita-tier-3",
+      "name": "US Pontedera",
+      "short": "US Pontedera",
+      "abbr": "PON",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "us-pianese",
+      "league": "ita-tier-3",
+      "name": "US Pianese",
+      "short": "US Pianese",
+      "abbr": "PIA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ac-perugia-calcio",
+      "league": "ita-tier-3",
+      "name": "AC Perugia Calcio",
+      "short": "AC Perugia",
+      "abbr": "PEC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "as-gubbio",
+      "league": "ita-tier-3",
+      "name": "AS Gubbio",
+      "short": "AS Gubbio",
+      "abbr": "GUB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "usd-sestri-levante",
+      "league": "ita-tier-3",
+      "name": "USD Sestri Levante",
+      "short": "USD Sestri",
+      "abbr": "USL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "us-arezzo",
+      "league": "ita-tier-3",
+      "name": "US Arezzo",
+      "short": "US Arezzo",
+      "abbr": "ARE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "campobasso",
+      "league": "ita-tier-3",
+      "name": "Campobasso",
+      "short": "Campobasso",
+      "abbr": "CAM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ac-milan-ii",
+      "league": "ita-tier-3",
+      "name": "AC Milan II",
+      "short": "AC Milan II",
+      "abbr": "MII",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ac-carpi",
+      "league": "ita-tier-3",
+      "name": "AC Carpi",
+      "short": "AC Carpi",
+      "abbr": "CAR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ac-rimini",
+      "league": "ita-tier-3",
+      "name": "AC Rimini",
+      "short": "AC Rimini",
+      "abbr": "RIM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sef-torres-1903",
+      "league": "ita-tier-3",
+      "name": "SEF Torres 1903",
+      "short": "SEF Torres 1903",
+      "abbr": "SET",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vis-pesaro",
+      "league": "ita-tier-3",
+      "name": "Vis Pesaro",
+      "short": "Vis Pesaro",
+      "abbr": "VIP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "giugliano",
+      "league": "ita-tier-3",
+      "name": "Giugliano",
+      "short": "Giugliano",
+      "abbr": "GIU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "taranto-fc",
+      "league": "ita-tier-3",
+      "name": "Taranto FC",
+      "short": "Taranto",
+      "abbr": "TAR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "juventus-ii",
+      "league": "ita-tier-3",
+      "name": "Juventus II",
+      "short": "Juventus II",
+      "abbr": "JUI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "audace-cerignola",
+      "league": "ita-tier-3",
+      "name": "Audace Cerignola",
+      "short": "Audace Cerignola",
+      "abbr": "AUC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "latina-calcio",
+      "league": "ita-tier-3",
+      "name": "Latina Calcio",
+      "short": "Latina Calcio",
+      "abbr": "LAC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "casertana-fc",
+      "league": "ita-tier-3",
+      "name": "Casertana FC",
+      "short": "Casertana",
+      "abbr": "CAS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sorrento-calcio",
+      "league": "ita-tier-3",
+      "name": "Sorrento Calcio",
+      "short": "Sorrento Calcio",
+      "abbr": "SOC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "calcio-catania",
+      "league": "ita-tier-3",
+      "name": "Calcio Catania",
+      "short": "Calcio Catania",
+      "abbr": "CAC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "az-picerno",
+      "league": "ita-tier-3",
+      "name": "AZ Picerno",
+      "short": "AZ Picerno",
+      "abbr": "AZP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "acr-messina",
+      "league": "ita-tier-3",
+      "name": "ACR Messina",
+      "short": "ACR Messina",
+      "abbr": "ACM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "potenza",
+      "league": "ita-tier-3",
+      "name": "Potenza",
+      "short": "Potenza",
+      "abbr": "POT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-turris",
+      "league": "ita-tier-3",
+      "name": "FC Turris",
+      "short": "FC Turris",
+      "abbr": "TUR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ss-monopoli-1966",
+      "league": "ita-tier-3",
+      "name": "SS Monopoli 1966",
+      "short": "SS Monopoli 1966",
+      "abbr": "MON",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-crotone",
+      "league": "ita-tier-3",
+      "name": "FC Crotone",
+      "short": "FC Crotone",
+      "abbr": "CRO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "team-altamura",
+      "league": "ita-tier-3",
+      "name": "Team Altamura",
+      "short": "Team Altamura",
+      "abbr": "TEA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "benevento-calcio",
+      "league": "ita-tier-3",
+      "name": "Benevento Calcio",
+      "short": "Benevento Calcio",
+      "abbr": "BEC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cavese",
+      "league": "ita-tier-3",
+      "name": "Cavese",
+      "short": "Cavese",
+      "abbr": "CAV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "foggia-calcio",
+      "league": "ita-tier-3",
+      "name": "Foggia Calcio",
+      "short": "Foggia Calcio",
+      "abbr": "FOC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "trapani-calcio",
+      "league": "ita-tier-3",
+      "name": "Trapani Calcio",
+      "short": "Trapani Calcio",
+      "abbr": "TRC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

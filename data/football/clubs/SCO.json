@@ -1,0 +1,192 @@
+{
+  "country": "SCO",
+  "clubs": [
+    {
+      "id": "heart-of-midlothian",
+      "league": "sco-premiership",
+      "name": "Heart of Midlothian",
+      "short": "Heart of",
+      "abbr": "HOM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "rangers-fc",
+      "league": "sco-premiership",
+      "name": "Rangers FC",
+      "short": "Rangers",
+      "abbr": "RAN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "motherwell-fc",
+      "league": "sco-premiership",
+      "name": "Motherwell FC",
+      "short": "Motherwell",
+      "abbr": "MOT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ross-county-fc",
+      "league": "sco-premiership",
+      "name": "Ross County FC",
+      "short": "Ross County",
+      "abbr": "ROC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "dundee-united",
+      "league": "sco-premiership",
+      "name": "Dundee United",
+      "short": "Dundee United",
+      "abbr": "DUU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "st-mirren-fc",
+      "league": "sco-premiership",
+      "name": "St. Mirren FC",
+      "short": "St. Mirren",
+      "abbr": "STM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hibernian-fc",
+      "league": "sco-premiership",
+      "name": "Hibernian FC",
+      "short": "Hibernian",
+      "abbr": "HIB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "celtic-fc",
+      "league": "sco-premiership",
+      "name": "Celtic FC",
+      "short": "Celtic",
+      "abbr": "CEL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kilmarnock-fc",
+      "league": "sco-premiership",
+      "name": "Kilmarnock FC",
+      "short": "Kilmarnock",
+      "abbr": "KIL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "st-johnstone-fc",
+      "league": "sco-premiership",
+      "name": "St. Johnstone FC",
+      "short": "St. Johnstone",
+      "abbr": "STJ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "aberdeen-fc",
+      "league": "sco-premiership",
+      "name": "Aberdeen FC",
+      "short": "Aberdeen",
+      "abbr": "ABE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,600 @@
+{
+  "country": "POL",
+  "clubs": [
+    {
+      "id": "jagiellonia-bia-ystok",
+      "league": "pol-ekstraklasa",
+      "name": "Jagiellonia Białystok",
+      "short": "Jagiellonia Białystok",
+      "abbr": "JAB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "puszcza-niepo-omice",
+      "league": "pol-ekstraklasa",
+      "name": "Puszcza Niepołomice",
+      "short": "Puszcza Niepołomice",
+      "abbr": "PUN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "slask-wroc-aw",
+      "league": "pol-ekstraklasa",
+      "name": "Śląsk Wrocław",
+      "short": "Śląsk Wrocław",
+      "abbr": "ŚLW",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "lechia-gdansk",
+      "league": "pol-ekstraklasa",
+      "name": "Lechia Gdańsk",
+      "short": "Lechia Gdańsk",
+      "abbr": "LEG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "gks-katowice",
+      "league": "pol-ekstraklasa",
+      "name": "GKS Katowice",
+      "short": "GKS Katowice",
+      "abbr": "GKK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "radomiak-radom",
+      "league": "pol-ekstraklasa",
+      "name": "Radomiak Radom",
+      "short": "Radomiak Radom",
+      "abbr": "RAR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "pogon-szczecin",
+      "league": "pol-ekstraklasa",
+      "name": "Pogoń Szczecin",
+      "short": "Pogoń Szczecin",
+      "abbr": "POS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "korona-kielce",
+      "league": "pol-ekstraklasa",
+      "name": "Korona Kielce",
+      "short": "Korona Kielce",
+      "abbr": "KOK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "legia-warszawa",
+      "league": "pol-ekstraklasa",
+      "name": "Legia Warszawa",
+      "short": "Legia Warszawa",
+      "abbr": "LEW",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "zag-ebie-lubin",
+      "league": "pol-ekstraklasa",
+      "name": "Zagłębie Lubin",
+      "short": "Zagłębie Lubin",
+      "abbr": "ZAL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ks-cracovia",
+      "league": "pol-ekstraklasa",
+      "name": "KS Cracovia",
+      "short": "KS Cracovia",
+      "abbr": "KSC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "piast-gliwice",
+      "league": "pol-ekstraklasa",
+      "name": "Piast Gliwice",
+      "short": "Piast Gliwice",
+      "abbr": "PIG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "lech-poznan",
+      "league": "pol-ekstraklasa",
+      "name": "Lech Poznań",
+      "short": "Lech Poznań",
+      "abbr": "LEP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "gornik-zabrze",
+      "league": "pol-ekstraklasa",
+      "name": "Górnik Zabrze",
+      "short": "Górnik Zabrze",
+      "abbr": "GÓZ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "motor-lublin",
+      "league": "pol-ekstraklasa",
+      "name": "Motor Lublin",
+      "short": "Motor Lublin",
+      "abbr": "MOL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "rakow-czestochowa",
+      "league": "pol-ekstraklasa",
+      "name": "Raków Częstochowa",
+      "short": "Raków Częstochowa",
+      "abbr": "RAC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fks-stal-mielec",
+      "league": "pol-ekstraklasa",
+      "name": "FKS Stal Mielec",
+      "short": "FKS Stal Mielec",
+      "abbr": "FSM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "widzew-odz",
+      "league": "pol-ekstraklasa",
+      "name": "Widzew Łódź",
+      "short": "Widzew Łódź",
+      "abbr": "WIŁ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "polonia-warszawa",
+      "league": "pol-tier-2",
+      "name": "Polonia Warszawa",
+      "short": "Polonia Warszawa",
+      "abbr": "POW",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "znicz-pruszkow",
+      "league": "pol-tier-2",
+      "name": "Znicz Pruszków",
+      "short": "Znicz Pruszków",
+      "abbr": "ZNP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "odra-opole",
+      "league": "pol-tier-2",
+      "name": "Odra Opole",
+      "short": "Odra Opole",
+      "abbr": "ODO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ruch-chorzow",
+      "league": "pol-tier-2",
+      "name": "Ruch Chorzów",
+      "short": "Ruch Chorzów",
+      "abbr": "RUC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "pogon-siedlce",
+      "league": "pol-tier-2",
+      "name": "Pogoń Siedlce",
+      "short": "Pogoń Siedlce",
+      "abbr": "POS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "chrobry-g-ogow",
+      "league": "pol-tier-2",
+      "name": "Chrobry Głogów",
+      "short": "Chrobry Głogów",
+      "abbr": "CHG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "stal-stalowa-wola",
+      "league": "pol-tier-2",
+      "name": "Stal Stalowa Wola",
+      "short": "Stal Stalowa",
+      "abbr": "SSW",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "gornik-eczna",
+      "league": "pol-tier-2",
+      "name": "Górnik Łęczna",
+      "short": "Górnik Łęczna",
+      "abbr": "GÓŁ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "wis-a-p-ock",
+      "league": "pol-tier-2",
+      "name": "Wisła Płock",
+      "short": "Wisła Płock",
+      "abbr": "WIP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kotwica-ko-obrzeg",
+      "league": "pol-tier-2",
+      "name": "Kotwica Kołobrzeg",
+      "short": "Kotwica Kołobrzeg",
+      "abbr": "KOK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "miedz-legnica",
+      "league": "pol-tier-2",
+      "name": "Miedź Legnica",
+      "short": "Miedź Legnica",
+      "abbr": "MIL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "stal-rzeszow",
+      "league": "pol-tier-2",
+      "name": "Stal Rzeszow",
+      "short": "Stal Rzeszow",
+      "abbr": "STR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "arka-gdynia",
+      "league": "pol-tier-2",
+      "name": "Arka Gdynia",
+      "short": "Arka Gdynia",
+      "abbr": "ARG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ks-odz",
+      "league": "pol-tier-2",
+      "name": "ŁKS Łódź",
+      "short": "ŁKS Łódź",
+      "abbr": "ŁKŁ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "wis-a-krakow",
+      "league": "pol-tier-2",
+      "name": "Wisła Kraków",
+      "short": "Wisła Kraków",
+      "abbr": "WIK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "bruk-bet-termalica-nieciecza",
+      "league": "pol-tier-2",
+      "name": "Bruk-Bet Termalica Nieciecza",
+      "short": "Bruk-Bet Termalica",
+      "abbr": "BBT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "warta-poznan",
+      "league": "pol-tier-2",
+      "name": "Warta Poznań",
+      "short": "Warta Poznań",
+      "abbr": "WAP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,427 @@
+{
+  "$comment": "Katalog der Entscheidungen. Zwei Sorten: 'structural' entsteht aus der Karrieresituation (Jugendangebot, Leihe, Transfer, Vertrag, Karriereende) und bekommt seine Optionen zur Laufzeit aus der Vereinsdatenbank. 'career' sind erzählte Ereignisse mit festen Optionen aus diesem Katalog. Jede Option trägt Modifikatoren; bei 'outcome' entscheidet ein Wurf über Erfolg oder Misserfolg. Zufallsereignisse ohne Entscheidung stehen in random-events.json.",
+
+  "$window": "Wann ein Ereignis auftreten kann: 'summer' = Sommerpause (Default, wenn das Feld fehlt), 'winter' = Winterpause zwischen Hin- und Rückrunde, 'any' = beides.",
+
+  "modifierSchema": {
+    "immediateOverall": "OVR-Änderung sofort",
+    "permanentOverall": "OVR-Änderung, die nicht von der Alterskurve zurückgeholt wird",
+    "deferredOverall": "{ delta, afterSeasons } — greift später",
+    "roleOverride": "starter | high_rotation | low_rotation | substitute",
+    "roleShift": "-1 oder +1 Stufe in roles.order",
+    "roleOverrideSeasons": "wie lange roleOverride/roleShift gilt (Default: 1 Block)",
+    "suspendedSeasons": "gesperrt, keine Einsätze",
+    "forceZeroAppearances": "Block ohne Einsätze",
+    "trophyMultiplier": "{ league, domesticCup, continentalPrimary, continentalSecondary, national } — Faktor auf trophy-odds",
+    "marketValueMultiplier": "Faktor auf den Marktwert",
+    "meters": "{ morale, fanSupport, mediaRelation } — Änderung in Punkten (-100..100)",
+    "nationalTeam": "force | skip — Teilnahme am nächsten Turnier",
+    "switchNationality": "wechselt auf die im Event ermittelte Zweitnationalität",
+    "forceTransfer": "{ scope: home_country | rival | same_league | abroad | free }"
+  },
+
+  "structural": [
+    {
+      "id": "academy_offer",
+      "type": "structural",
+      "trigger": "career_start",
+      "optionsFrom": { "pool": "clubs", "scope": "home_country_then_confederation", "count": 3, "reputationRange": [0, 4] },
+      "title": { "de": "Angebot aus der Jugend", "en": "Youth academy offer" },
+      "text": { "de": "Drei Vereine wollen dich in ihre Nachwuchsabteilung holen. Wo beginnt deine Karriere?", "en": "Three clubs want you in their academy. Where does your career begin?" }
+    },
+    {
+      "id": "loan_offer",
+      "type": "structural",
+      "trigger": "low_playing_time_and_young",
+      "optionsFrom": { "pool": "clubs", "scope": "lower_reputation", "count": 3, "includeStayOption": true },
+      "title": { "de": "Leihe", "en": "Loan move" },
+      "text": { "de": "Dein Verein will, dass du woanders Spielpraxis sammelst.", "en": "Your club wants you to get minutes elsewhere." }
+    },
+    {
+      "id": "transfer_offer",
+      "type": "structural",
+      "trigger": "period_end",
+      "optionsFrom": { "pool": "clubs", "scope": "matching_reputation", "count": 3, "includeStayOption": true },
+      "title": { "de": "Transferfenster", "en": "Transfer window" },
+      "text": { "de": "Es liegen Angebote vor. Bleibst du oder wechselst du?", "en": "Offers are on the table. Stay or move?" }
+    },
+    {
+      "id": "contract_renewal",
+      "type": "structural",
+      "trigger": "contract_expiring",
+      "title": { "de": "Vertragsverlängerung", "en": "Contract renewal" },
+      "text": { "de": "Dein Vertrag läuft aus. Der Verein legt ein Angebot vor.", "en": "Your contract is running out. The club has made an offer." },
+      "options": [
+        { "id": "extend_long", "label": { "de": "Langfristig verlängern", "en": "Sign long-term" }, "modifiers": { "meters": { "fanSupport": 8 }, "marketValueMultiplier": 1.05 } },
+        { "id": "extend_short", "label": { "de": "Kurz verlängern", "en": "Sign short-term" }, "modifiers": { "marketValueMultiplier": 0.95 } },
+        { "id": "run_down", "label": { "de": "Auslaufen lassen", "en": "Run the contract down" }, "modifiers": { "meters": { "fanSupport": -15, "mediaRelation": -10 }, "roleShift": -1 } }
+      ]
+    },
+    {
+      "id": "retirement",
+      "type": "structural",
+      "trigger": "retirement_age_reached",
+      "title": { "de": "Karriereende", "en": "End of career" },
+      "text": { "de": "Es ist so weit. Wie hörst du auf?", "en": "This is it. How do you go out?" },
+      "options": [
+        { "id": "retire_at_club", "label": { "de": "Beim aktuellen Verein aufhören", "en": "Retire at your current club" }, "modifiers": { "meters": { "fanSupport": 20 } } },
+        { "id": "retire_at_home", "label": { "de": "Bei deinem Jugendverein aufhören", "en": "Retire at your boyhood club" }, "modifiers": { "meters": { "fanSupport": 30 } } },
+        { "id": "one_more_year", "label": { "de": "Noch eine Saison dranhängen", "en": "One more season" }, "condition": { "maxAge": 39 }, "modifiers": { "immediateOverall": -3 } }
+      ]
+    }
+  ],
+
+  "career": [
+    {
+      "id": "injury",
+      "weight": 100,
+      "ageRange": [18, 36],
+      "maxPerCareer": 2,
+      "variantsFrom": "progression.injury.types",
+      "title": { "de": "Verletzung", "en": "Injury" },
+      "text": { "de": "Du hast dich verletzt: {injuryLabel}. Die Ärzte raten zu einer langen Pause — der Trainer hofft auf eine schnelle Rückkehr.", "en": "You picked up an injury: {injuryLabel}. The doctors want a long break — the coach hopes for a quick return." },
+      "options": [
+        { "id": "full_recovery", "label": { "de": "Vollständig auskurieren", "en": "Recover fully" }, "modifiers": { "roleOverride": "substitute", "roleOverrideSeasons": 1, "meters": { "morale": -10 } } },
+        { "id": "play_through", "label": { "de": "Früher zurückkommen", "en": "Come back early" }, "outcome": { "successChance": 0.45, "success": { "roleOverride": "starter", "meters": { "morale": 10, "fanSupport": 10 } }, "failure": { "immediateOverall": -4, "roleOverride": "substitute", "roleOverrideSeasons": 2 } } }
+      ]
+    },
+    {
+      "id": "rival_offer",
+      "weight": 80,
+      "ageRange": [22, 33],
+      "requires": { "minOverall": 72, "minFanSupport": 40 },
+      "title": { "de": "Angebot vom Erzrivalen", "en": "Offer from your rivals" },
+      "text": { "de": "{rivalClub} will dich verpflichten — mehr Geld, größere Bühne, und die Fans deines Vereins werden es dir nie verzeihen.", "en": "{rivalClub} want to sign you — more money, a bigger stage, and your own fans will never forgive you." },
+      "options": [
+        { "id": "join_rival", "label": { "de": "Zum Rivalen wechseln", "en": "Join the rivals" }, "modifiers": { "forceTransfer": { "scope": "rival" }, "meters": { "fanSupport": -50, "mediaRelation": 15 }, "marketValueMultiplier": 1.15 } },
+        { "id": "stay_loyal", "label": { "de": "Treu bleiben", "en": "Stay loyal" }, "modifiers": { "meters": { "fanSupport": 30, "morale": 5 }, "trophyMultiplier": { "domesticCup": 1.2 } } }
+      ]
+    },
+    {
+      "id": "return_home",
+      "weight": 60,
+      "ageRange": [28, 37],
+      "requires": { "playingAbroad": true },
+      "title": { "de": "Rückkehr in die Heimat", "en": "Return home" },
+      "text": { "de": "Ein Verein aus deiner Heimat meldet sich. Sportlich ein Rückschritt, emotional eine Rückkehr.", "en": "A club from home is calling. A step down on the pitch, a homecoming off it." },
+      "options": [
+        { "id": "go_home", "label": { "de": "Zurückgehen", "en": "Go home" }, "modifiers": { "forceTransfer": { "scope": "home_country" }, "roleOverride": "starter", "meters": { "morale": 20, "fanSupport": 20 }, "marketValueMultiplier": 0.8 } },
+        { "id": "stay_abroad", "label": { "de": "Im Ausland bleiben", "en": "Stay abroad" }, "modifiers": { "meters": { "morale": -5 } } }
+      ]
+    },
+    {
+      "id": "foreign_grandfather",
+      "weight": 40,
+      "ageRange": [17, 26],
+      "maxPerCareer": 1,
+      "requires": { "notCalledUpYet": true },
+      "title": { "de": "Zweite Nationalität", "en": "Second nationality" },
+      "text": { "de": "Über deinen Großvater bist du für {alternativeCountry} spielberechtigt. Dort wärst du sofort Nationalspieler — zu Hause müsstest du noch warten.", "en": "Through your grandfather you're eligible for {alternativeCountry}. You'd be capped immediately there — at home you'd have to wait." },
+      "options": [
+        { "id": "switch_national_team", "label": { "de": "Verband wechseln", "en": "Switch association" }, "modifiers": { "switchNationality": true, "nationalTeam": "force", "meters": { "mediaRelation": -10 } } },
+        { "id": "keep_waiting", "label": { "de": "Auf die Heimat warten", "en": "Wait for your country" }, "modifiers": { "meters": { "morale": -5, "fanSupport": 10 } } }
+      ]
+    },
+    {
+      "id": "position_change",
+      "weight": 70,
+      "ageRange": [19, 32],
+      "title": { "de": "Positionswechsel", "en": "Position change" },
+      "text": { "de": "Der Trainer sieht dich künftig als {alternativePosition}. Du müsstest dich neu erfinden — dafür wärst du gesetzt.", "en": "The coach sees you as a {alternativePosition} from now on. You'd have to reinvent yourself — but you'd be first choice." },
+      "options": [
+        { "id": "accept_change", "label": { "de": "Position wechseln", "en": "Change position" }, "modifiers": { "changePosition": true, "roleOverride": "starter", "immediateOverall": -2, "deferredOverall": { "delta": 4, "afterSeasons": 1 } } },
+        { "id": "refuse_change", "label": { "de": "Auf deiner Position bleiben", "en": "Stay in your position" }, "modifiers": { "roleShift": -1, "meters": { "morale": -5 } } }
+      ]
+    },
+    {
+      "id": "position_competition",
+      "weight": 90,
+      "ageRange": [20, 34],
+      "title": { "de": "Konkurrenzkampf", "en": "Competition for your place" },
+      "text": { "de": "Der Verein verpflichtet einen Spieler für genau deine Position. Kämpfen oder ausweichen?", "en": "The club signs a player for exactly your position. Fight or find another way?" },
+      "options": [
+        { "id": "compete", "label": { "de": "Um den Platz kämpfen", "en": "Fight for your place" }, "outcome": { "successChance": 0.5, "success": { "roleOverride": "starter", "immediateOverall": 2, "meters": { "morale": 10 } }, "failure": { "roleOverride": "low_rotation", "meters": { "morale": -15 } } } },
+        { "id": "request_move", "label": { "de": "Wechsel fordern", "en": "Ask to leave" }, "modifiers": { "forceTransfer": { "scope": "same_league" }, "meters": { "fanSupport": -15 } } }
+      ]
+    },
+    {
+      "id": "training_extra",
+      "weight": 85,
+      "ageRange": [17, 30],
+      "variants": [
+        { "key": "preseason_camp", "weight": 50, "successChance": 0.65, "successOverall": 4, "failureOverall": -3, "text": { "de": "Ein privates Trainingslager in der Sommerpause statt Urlaub.", "en": "A private training camp instead of a summer holiday." } },
+        { "key": "extra_sessions", "weight": 50, "successChance": 0.70, "successOverall": 3, "failureOverall": -2, "text": { "de": "Zusätzliche Einheiten nach dem Mannschaftstraining.", "en": "Extra sessions after team training." } }
+      ],
+      "title": { "de": "Zusatztraining", "en": "Extra training" },
+      "options": [
+        { "id": "accept", "label": { "de": "Durchziehen", "en": "Do it" }, "outcome": { "fromVariant": true } },
+        { "id": "decline", "label": { "de": "Erholung vorziehen", "en": "Rest instead" }, "modifiers": { "meters": { "morale": 8 } } }
+      ]
+    },
+    {
+      "id": "personal_coach",
+      "weight": 60,
+      "ageRange": [20, 33],
+      "variants": [
+        { "key": "nutrition_plan", "weight": 50, "successChance": 0.6, "successOverall": 3, "failureOverall": -2, "text": { "de": "Ein Ernährungsberater will deine komplette Lebensweise umstellen.", "en": "A nutritionist wants to overhaul how you live." } },
+        { "key": "mental_coach", "weight": 50, "successChance": 0.5, "successOverall": 2, "failureOverall": -2, "text": { "de": "Ein Mentaltrainer bietet dir an, an deiner Nervenstärke zu arbeiten.", "en": "A mental coach offers to work on your nerve." } }
+      ],
+      "title": { "de": "Persönlicher Coach", "en": "Personal coach" },
+      "options": [
+        { "id": "accept", "label": { "de": "Zusammenarbeiten", "en": "Work with them" }, "outcome": { "fromVariant": true, "permanent": true } },
+        { "id": "decline", "label": { "de": "Ablehnen", "en": "Decline" }, "modifiers": {} }
+      ]
+    },
+    {
+      "id": "club_crisis",
+      "weight": 70,
+      "ageRange": [20, 36],
+      "requires": { "maxDomesticReputation": 3 },
+      "title": { "de": "Der Verein steckt in der Krise", "en": "The club is in crisis" },
+      "text": { "de": "Abstiegskampf, Trainerwechsel, Unruhe. Du hast einen Weg raus — oder du bleibst und stellst dich hin.", "en": "Relegation fight, coaching change, chaos. You have a way out — or you stay and front up." },
+      "options": [
+        { "id": "stay_and_fight", "label": { "de": "Bleiben und kämpfen", "en": "Stay and fight" }, "modifiers": { "immediateOverall": -3, "deferredOverall": { "delta": 5, "afterSeasons": 1 }, "meters": { "fanSupport": 25 } } },
+        { "id": "leave_now", "label": { "de": "Sofort wechseln", "en": "Leave now" }, "modifiers": { "forceTransfer": { "scope": "abroad" }, "meters": { "fanSupport": -20 } } }
+      ]
+    },
+    {
+      "id": "controversial_statement",
+      "weight": 55,
+      "ageRange": [19, 35],
+      "title": { "de": "Aussage mit Folgen", "en": "A statement with consequences" },
+      "text": { "de": "Ein Interview von dir schlägt Wellen. Der Verein erwartet eine Entschuldigung.", "en": "An interview of yours has blown up. The club expects an apology." },
+      "options": [
+        { "id": "apologize", "label": { "de": "Entschuldigen", "en": "Apologise" }, "modifiers": { "roleShift": -1, "meters": { "mediaRelation": 10, "fanSupport": -10 } } },
+        { "id": "double_down", "label": { "de": "Dazu stehen", "en": "Stand by it" }, "outcome": { "successChance": 0.4, "success": { "meters": { "fanSupport": 25, "mediaRelation": -15 }, "immediateOverall": 1 }, "failure": { "roleOverride": "substitute", "roleOverrideSeasons": 1, "meters": { "mediaRelation": -25 } } } }
+      ]
+    },
+    {
+      "id": "club_national_team_conflict",
+      "weight": 50,
+      "ageRange": [21, 34],
+      "requires": { "isInternational": true, "upcomingNationalTournament": true },
+      "title": { "de": "Verein gegen Nationalmannschaft", "en": "Club versus country" },
+      "text": { "de": "Dein Verein will nicht, dass du zum Turnier fährst. Der Nationaltrainer wartet auf deine Zusage.", "en": "Your club doesn't want you at the tournament. The national coach is waiting for your answer." },
+      "options": [
+        { "id": "go_anyway", "label": { "de": "Trotzdem fahren", "en": "Go anyway" }, "modifiers": { "nationalTeam": "force", "roleOverride": "substitute", "roleOverrideSeasons": 1 } },
+        { "id": "comply", "label": { "de": "Beim Verein bleiben", "en": "Stay with the club" }, "modifiers": { "nationalTeam": "skip", "meters": { "morale": -15 }, "trophyMultiplier": { "league": 1.3 } } }
+      ]
+    },
+    {
+      "id": "injury_at_peak",
+      "weight": 45,
+      "ageRange": [25, 31],
+      "maxPerCareer": 1,
+      "requires": { "minOverall": 82 },
+      "title": { "de": "Angeschlagen vor dem Endspiel", "en": "Carrying a knock before the final" },
+      "text": { "de": "Vor dem wichtigsten Spiel der Saison bist du nicht fit. Spritze oder Bank?", "en": "You're not fit for the biggest game of the season. Painkillers or the bench?" },
+      "options": [
+        { "id": "play_injured", "label": { "de": "Spielen", "en": "Play" }, "outcome": { "successChance": 0.8, "success": { "trophyMultiplier": { "continentalPrimary": 3.0, "domesticCup": 3.0 }, "meters": { "fanSupport": 25 } }, "failure": { "immediateOverall": -5, "roleOverride": "substitute", "roleOverrideSeasons": 2 } }, "modifiers": { "immediateOverall": -1 } },
+        { "id": "sit_out", "label": { "de": "Aussetzen", "en": "Sit it out" }, "outcome": { "successChance": 0.3, "success": { "trophyMultiplier": { "continentalPrimary": 1.5 } }, "failure": { "meters": { "fanSupport": -10, "morale": -10 } } } }
+      ]
+    },
+    {
+      "id": "decisive_penalty",
+      "weight": 60,
+      "ageRange": [20, 36],
+      "title": { "de": "Der entscheidende Elfmeter", "en": "The decisive penalty" },
+      "text": { "de": "Finale, Elfmeterschießen, dein Verein liegt zurück. Übernimmst du?", "en": "Final, shootout, your side is behind. Do you step up?" },
+      "options": [
+        { "id": "take_it", "label": { "de": "Schießen", "en": "Take it" }, "outcome": { "successChance": 0.5, "success": { "trophyMultiplier": { "domesticCup": 4.0, "continentalPrimary": 4.0 }, "meters": { "fanSupport": 30, "morale": 15 }, "immediateOverall": 2 }, "failure": { "meters": { "fanSupport": -25, "morale": -20 }, "immediateOverall": -2 } } },
+        { "id": "let-someone-else", "label": { "de": "Einem anderen überlassen", "en": "Let someone else take it" }, "modifiers": { "meters": { "fanSupport": -5 } } }
+      ]
+    },
+    {
+      "id": "unexpected_prospect",
+      "weight": 50,
+      "ageRange": [29, 37],
+      "title": { "de": "Das Talent", "en": "The prospect" },
+      "text": { "de": "Ein Siebzehnjähriger aus der eigenen Jugend drängt auf deine Position. Du könntest ihn aufbauen — oder blocken.", "en": "A seventeen-year-old from the academy is pushing for your spot. You could bring him through — or block him." },
+      "options": [
+        { "id": "mentor", "label": { "de": "Ihn aufbauen", "en": "Mentor him" }, "modifiers": { "roleShift": -1, "trophyMultiplier": { "league": 2.0, "domesticCup": 2.0, "continentalPrimary": 2.0 }, "meters": { "fanSupport": 20, "mediaRelation": 15 } } },
+        { "id": "block", "label": { "de": "Platz verteidigen", "en": "Defend your place" }, "outcome": { "successChance": 0.55, "success": { "roleOverride": "starter" }, "failure": { "roleOverride": "low_rotation", "meters": { "fanSupport": -15 } } } }
+      ]
+    },
+    {
+      "id": "tax_trouble",
+      "weight": 35,
+      "ageRange": [24, 36],
+      "maxPerCareer": 1,
+      "requires": { "minMarketValue": 20000000 },
+      "title": { "de": "Steuerermittlungen", "en": "Tax investigation" },
+      "text": { "de": "Gegen dich wird ermittelt. Dein Berater rät zum Vergleich, dein Anwalt zum Prozess.", "en": "You're under investigation. Your agent says settle, your lawyer says fight." },
+      "options": [
+        { "id": "settle", "label": { "de": "Vergleich schließen", "en": "Settle" }, "modifiers": { "marketValueMultiplier": 0.9, "meters": { "mediaRelation": -10 } } },
+        { "id": "fight", "label": { "de": "Vor Gericht gehen", "en": "Go to court" }, "outcome": { "successChance": 0.45, "success": { "meters": { "mediaRelation": 15, "fanSupport": 10 } }, "failure": { "suspendedSeasons": 1, "meters": { "mediaRelation": -30, "fanSupport": -20 } } } }
+      ]
+    },
+    {
+      "id": "fan_backlash",
+      "weight": 45,
+      "ageRange": [20, 36],
+      "requires": { "maxFanSupport": 35 },
+      "title": { "de": "Die Kurve gegen dich", "en": "The stands turn on you" },
+      "text": { "de": "Bei Heimspielen wirst du ausgepfiffen. Ein offenes Gespräch mit den Ultras könnte alles ändern — oder alles verschlimmern.", "en": "You're getting whistled at home. A face-to-face with the ultras could fix everything — or make it worse." },
+      "options": [
+        { "id": "meet_them", "label": { "de": "Das Gespräch suchen", "en": "Meet them" }, "outcome": { "successChance": 0.6, "success": { "meters": { "fanSupport": 40, "morale": 10 } }, "failure": { "meters": { "fanSupport": -15 }, "roleShift": -1 } } },
+        { "id": "ignore", "label": { "de": "Ignorieren", "en": "Ignore it" }, "modifiers": { "meters": { "morale": -10 } } }
+      ]
+    },
+    {
+      "id": "big_money_move",
+      "weight": 55,
+      "ageRange": [26, 35],
+      "requires": { "minOverall": 78 },
+      "title": { "de": "Das Angebot aus dem Osten", "en": "The offer from the east" },
+      "text": { "de": "Ein Verein aus einer finanzstarken, sportlich schwächeren Liga bietet das Vierfache deines Gehalts.", "en": "A club from a rich but weaker league offers four times your salary." },
+      "options": [
+        { "id": "take_the_money", "label": { "de": "Annehmen", "en": "Take it" }, "modifiers": { "forceTransfer": { "scope": "abroad", "leagueStrengthMax": 4 }, "roleOverride": "starter", "marketValueMultiplier": 0.7, "meters": { "mediaRelation": -10 } } },
+        { "id": "stay_competitive", "label": { "de": "Sportlich entscheiden", "en": "Keep competing" }, "modifiers": { "meters": { "fanSupport": 15, "morale": 5 } } }
+      ]
+    },
+    {
+      "id": "captaincy",
+      "weight": 50,
+      "ageRange": [26, 36],
+      "requires": { "minOverall": 78, "minFanSupport": 55 },
+      "maxPerCareer": 1,
+      "title": { "de": "Die Binde", "en": "The armband" },
+      "text": { "de": "Der Trainer bietet dir das Kapitänsamt an. Mehr Verantwortung, mehr Aufmerksamkeit, weniger Ruhe.", "en": "The coach offers you the captaincy. More responsibility, more attention, less peace." },
+      "options": [
+        { "id": "accept_armband", "label": { "de": "Annehmen", "en": "Accept" }, "modifiers": { "setCaptain": true, "roleOverride": "starter", "meters": { "fanSupport": 20, "mediaRelation": 10 }, "trophyMultiplier": { "league": 1.15, "domesticCup": 1.15 } } },
+        { "id": "decline_armband", "label": { "de": "Ablehnen", "en": "Decline" }, "modifiers": { "meters": { "morale": 5 } } }
+      ]
+    },
+    {
+      "id": "winter_form_crisis",
+      "weight": 85,
+      "window": "winter",
+      "ageRange": [18, 36],
+      "requires": { "maxMorale": 40 },
+      "title": { "de": "Halbzeitbilanz", "en": "Half-season review" },
+      "text": { "de": "Die Hinrunde lief schlecht. In der Winterpause entscheidet sich, wie die Rückrunde wird.", "en": "The first half of the season went badly. What you do in the winter break decides the rest." },
+      "options": [
+        { "id": "winter_extra_work", "label": { "de": "Durchbeißen und schuften", "en": "Knuckle down" }, "outcome": { "successChance": 0.6, "success": { "immediateOverall": 2, "roleOverride": "starter", "meters": { "morale": 15 } }, "failure": { "meters": { "morale": -8 } } } },
+        { "id": "winter_switch_off", "label": { "de": "Kopf freibekommen", "en": "Clear your head" }, "modifiers": { "meters": { "morale": 18 }, "appearanceMultiplier": 0.9 } },
+        { "id": "winter_ask_out", "label": { "de": "Wechsel im Winter fordern", "en": "Push for a winter move" }, "modifiers": { "forceTransfer": { "scope": "same_league" }, "meters": { "fanSupport": -12 } } }
+      ]
+    },
+    {
+      "id": "winter_transfer_interest",
+      "weight": 75,
+      "window": "winter",
+      "ageRange": [19, 35],
+      "requires": { "minOverall": 70 },
+      "title": { "de": "Anfrage im Winter", "en": "Winter enquiry" },
+      "text": { "de": "Mitten in der Saison meldet ein anderer Verein Interesse. Ein Wechsel jetzt reißt dich aus dem Rhythmus — aber die Chance kommt vielleicht nicht wieder.", "en": "Another club comes in mid-season. Moving now breaks your rhythm — but the chance might not come again." },
+      "options": [
+        { "id": "move_in_winter", "label": { "de": "Sofort wechseln", "en": "Move now" }, "modifiers": { "forceTransfer": { "scope": "matching" }, "appearanceMultiplier": 0.75, "meters": { "fanSupport": -10 } } },
+        { "id": "wait_for_summer", "label": { "de": "Bis zum Sommer warten", "en": "Wait until summer" }, "modifiers": { "meters": { "morale": 5 }, "marketValueMultiplier": 1.05 } }
+      ]
+    },
+    {
+      "id": "surgery_timing",
+      "weight": 60,
+      "window": "winter",
+      "ageRange": [20, 36],
+      "requires": { "recentInjury": true },
+      "title": { "de": "Operation jetzt oder später", "en": "Operate now or later" },
+      "text": { "de": "Die Blessur aus der Hinrunde braucht einen Eingriff. Jetzt kostet er dich die Rückrunde, später kostet er dich vielleicht mehr.", "en": "The knock from the first half needs surgery. Now costs you the second half, later might cost you more." },
+      "options": [
+        { "id": "operate_now", "label": { "de": "Sofort operieren", "en": "Operate now" }, "modifiers": { "missShare": 0.8, "deferredOverall": { "delta": 2, "afterSeasons": 1 } } },
+        { "id": "delay_surgery", "label": { "de": "Bis Saisonende hinauszögern", "en": "Delay until the summer" }, "outcome": { "successChance": 0.55, "success": { "meters": { "fanSupport": 10 } }, "failure": { "immediateOverall": -4, "missShare": 0.5 } } }
+      ]
+    },
+    {
+      "id": "endorsement_conflict",
+      "weight": 45,
+      "window": "winter",
+      "ageRange": [21, 34],
+      "requires": { "minOverall": 76 },
+      "title": { "de": "Werbedeal", "en": "Endorsement offer" },
+      "text": { "de": "Ein Sponsor bietet dir viel Geld — er ist allerdings Konkurrent des Vereinssponsors.", "en": "A sponsor offers you serious money — but they're a rival of the club's own sponsor." },
+      "options": [
+        { "id": "sign_deal", "label": { "de": "Unterschreiben", "en": "Sign it" }, "modifiers": { "meters": { "mediaRelation": 12, "fanSupport": -8 }, "marketValueMultiplier": 1.05, "appearanceMultiplier": 0.92 } },
+        { "id": "refuse_deal", "label": { "de": "Ablehnen", "en": "Turn it down" }, "modifiers": { "meters": { "morale": 5, "fanSupport": 5 } } }
+      ]
+    },
+    {
+      "id": "tournament_fitness",
+      "weight": 55,
+      "window": "winter",
+      "ageRange": [21, 35],
+      "requires": { "isInternational": true, "upcomingNationalTournament": true },
+      "title": { "de": "Fit werden für das Turnier", "en": "Getting fit for the tournament" },
+      "text": { "de": "Das Turnier im Sommer ist dein Ziel. Der Verein braucht dich aber in der Rückrunde.", "en": "The summer tournament is your goal. But the club needs you for the second half of the season." },
+      "options": [
+        { "id": "prioritise_country", "label": { "de": "Auf das Turnier hinarbeiten", "en": "Build towards the tournament" }, "modifiers": { "appearanceMultiplier": 0.7, "nationalTeam": "force", "meters": { "morale": 8 } } },
+        { "id": "prioritise_club", "label": { "de": "Für den Verein alles geben", "en": "Give everything for the club" }, "modifiers": { "trophyMultiplier": { "league": 1.25, "domesticCup": 1.25 }, "nationalTeam": "skip", "meters": { "fanSupport": 12 } } }
+      ]
+    },
+    {
+      "id": "agent_change",
+      "weight": 40,
+      "window": "any",
+      "ageRange": [19, 33],
+      "maxPerCareer": 2,
+      "title": { "de": "Beraterwechsel", "en": "Change of agent" },
+      "text": { "de": "Eine große Agentur will dich vertreten. Mehr Türen, weniger Kontrolle.", "en": "A big agency wants to represent you. More doors open, less control." },
+      "options": [
+        { "id": "sign_big_agency", "label": { "de": "Zur großen Agentur", "en": "Join the big agency" }, "modifiers": { "marketValueMultiplier": 1.12, "meters": { "mediaRelation": 8, "fanSupport": -5 }, "offerQualityBonus": 1 } },
+        { "id": "keep_agent", "label": { "de": "Beim alten Berater bleiben", "en": "Stay with your agent" }, "modifiers": { "meters": { "morale": 6 } } }
+      ]
+    },
+    {
+      "id": "leadership_group",
+      "weight": 45,
+      "window": "summer",
+      "ageRange": [24, 35],
+      "requires": { "minSeasonsAtClub": 2 },
+      "title": { "de": "Mannschaftsrat", "en": "Leadership group" },
+      "text": { "de": "Die Mannschaft will dich in den Mannschaftsrat wählen. Das heißt: Konflikte austragen, die nicht deine sind.", "en": "The squad wants you in the leadership group. That means owning conflicts that aren't yours." },
+      "options": [
+        { "id": "join_group", "label": { "de": "Annehmen", "en": "Accept" }, "modifiers": { "meters": { "fanSupport": 10, "morale": -3 }, "trophyMultiplier": { "league": 1.1 } } },
+        { "id": "stay_out", "label": { "de": "Rausbleiben", "en": "Stay out of it" }, "modifiers": { "meters": { "morale": 5 } } }
+      ]
+    },
+    {
+      "id": "youth_contract_pressure",
+      "weight": 70,
+      "window": "summer",
+      "ageRange": [17, 20],
+      "maxPerCareer": 1,
+      "title": { "de": "Erster Profivertrag", "en": "First professional contract" },
+      "text": { "de": "Der Verein legt dir den ersten Profivertrag vor — zu schlechten Konditionen, weil du noch nichts gezeigt hast. Andere Vereine warten auf ein Nein.", "en": "The club puts your first professional deal in front of you — on poor terms, because you haven't proven anything. Other clubs are waiting for you to say no." },
+      "options": [
+        { "id": "sign_first_deal", "label": { "de": "Unterschreiben", "en": "Sign it" }, "modifiers": { "meters": { "fanSupport": 10 }, "roleShift": 1 } },
+        { "id": "refuse_first_deal", "label": { "de": "Ablehnen und wechseln", "en": "Refuse and move" }, "outcome": { "successChance": 0.5, "success": { "forceTransfer": { "scope": "better" }, "roleOverride": "high_rotation" }, "failure": { "forceTransfer": { "scope": "same_league" }, "roleOverride": "substitute", "meters": { "morale": -10 } } } }
+      ]
+    },
+    {
+      "id": "adapt_abroad",
+      "weight": 55,
+      "window": "winter",
+      "ageRange": [18, 32],
+      "requires": { "playingAbroad": true, "maxSeasonsAtClub": 1 },
+      "title": { "de": "Ankommen im Ausland", "en": "Settling in abroad" },
+      "text": { "de": "Sprache, Essen, Alltag — nichts fühlt sich vertraut an. Du kannst dich anpassen oder deine Blase behalten.", "en": "Language, food, everyday life — nothing feels familiar. You can adapt, or keep your bubble." },
+      "options": [
+        { "id": "immerse", "label": { "de": "Sprache lernen, einleben", "en": "Learn the language, settle in" }, "modifiers": { "deferredOverall": { "delta": 3, "afterSeasons": 1 }, "meters": { "fanSupport": 15, "morale": -5 } } },
+        { "id": "keep_bubble", "label": { "de": "Unter Landsleuten bleiben", "en": "Stay in your bubble" }, "modifiers": { "meters": { "morale": 8, "fanSupport": -8 }, "appearanceMultiplier": 0.92 } }
+      ]
+    },
+    {
+      "id": "veteran_role",
+      "weight": 60,
+      "window": "summer",
+      "ageRange": [33, 39],
+      "title": { "de": "Die letzten Jahre", "en": "The final years" },
+      "text": { "de": "Du bist kein Stammspieler mehr, aber gebraucht wirst du noch. Die Frage ist wofür.", "en": "You're not a regular any more, but you're still wanted. The question is what for." },
+      "options": [
+        { "id": "chase_titles", "label": { "de": "Nochmal Titel jagen", "en": "Chase one more title" }, "modifiers": { "forceTransfer": { "scope": "better" }, "roleOverride": "low_rotation", "trophyMultiplier": { "league": 1.2, "continentalPrimary": 1.3 } } },
+        { "id": "be_the_leader", "label": { "de": "Anführer eines kleinen Vereins werden", "en": "Lead a smaller club" }, "modifiers": { "forceTransfer": { "scope": "lower" }, "roleOverride": "starter", "meters": { "fanSupport": 20 } } },
+        { "id": "go_out_at_home", "label": { "de": "Zurück in die Heimat", "en": "Go home" }, "modifiers": { "forceTransfer": { "scope": "home_country" }, "roleOverride": "starter", "meters": { "morale": 15, "fanSupport": 15 } } }
+      ]
+    }
+  ]
+}

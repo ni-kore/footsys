@@ -1,0 +1,175 @@
+{
+  "country": "CRO",
+  "clubs": [
+    {
+      "id": "dinamo-zagreb",
+      "league": "cro-hnl",
+      "name": "Dinamo Zagreb",
+      "short": "Dinamo Zagreb",
+      "abbr": "DIZ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "nk-istra-1961",
+      "league": "cro-hnl",
+      "name": "NK Istra 1961",
+      "short": "NK Istra 1961",
+      "abbr": "NKI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hnk-gorica",
+      "league": "cro-hnl",
+      "name": "HNK Gorica",
+      "short": "HNK Gorica",
+      "abbr": "HNG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "nk-varazdin",
+      "league": "cro-hnl",
+      "name": "NK Varaždin",
+      "short": "NK Varaždin",
+      "abbr": "NKV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hnk-rijeka",
+      "league": "cro-hnl",
+      "name": "HNK Rijeka",
+      "short": "HNK Rijeka",
+      "abbr": "HNR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "lokomotiva-zagreb",
+      "league": "cro-hnl",
+      "name": "Lokomotiva Zagreb",
+      "short": "Lokomotiva Zagreb",
+      "abbr": "LOZ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hajduk-split",
+      "league": "cro-hnl",
+      "name": "Hajduk Split",
+      "short": "Hajduk Split",
+      "abbr": "HAS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "slaven-belupo",
+      "league": "cro-hnl",
+      "name": "Slaven Belupo",
+      "short": "Slaven Belupo",
+      "abbr": "SLB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "nk-osijek",
+      "league": "cro-hnl",
+      "name": "NK Osijek",
+      "short": "NK Osijek",
+      "abbr": "NKO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hnk-sibenik",
+      "league": "cro-hnl",
+      "name": "HNK Šibenik",
+      "short": "HNK Šibenik",
+      "abbr": "HNŠ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "country": "MKD",
+  "clubs": [
+    {
+      "id": "fc-struga",
+      "league": "mkd-tier-1",
+      "name": "FC Struga",
+      "short": "FC Struga",
+      "abbr": "STR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "gfk-tikvesh",
+      "league": "mkd-tier-1",
+      "name": "GFK Tikvesh",
+      "short": "GFK Tikvesh",
+      "abbr": "GFT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kf-besa-doberdoll",
+      "league": "mkd-tier-1",
+      "name": "KF Besa Dobërdoll",
+      "short": "KF Besa",
+      "abbr": "KBD",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kf-shkendija-79",
+      "league": "mkd-tier-1",
+      "name": "KF Shkëndija 79",
+      "short": "KF Shkëndija 79",
+      "abbr": "KFS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-rabotnicki",
+      "league": "mkd-tier-1",
+      "name": "FK Rabotnički",
+      "short": "FK Rabotnički",
+      "abbr": "FKR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sileks-kratovo",
+      "league": "mkd-tier-1",
+      "name": "Sileks Kratovo",
+      "short": "Sileks Kratovo",
+      "abbr": "SIK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-pelister",
+      "league": "mkd-tier-1",
+      "name": "FK Pelister",
+      "short": "FK Pelister",
+      "abbr": "FKP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kf-gostivari",
+      "league": "mkd-tier-1",
+      "name": "KF Gostivari",
+      "short": "KF Gostivari",
+      "abbr": "KFG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kf-shkupi",
+      "league": "mkd-tier-1",
+      "name": "KF Shkupi",
+      "short": "KF Shkupi",
+      "abbr": "KFS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-voska-sport",
+      "league": "mkd-tier-1",
+      "name": "FK Voska Sport",
+      "short": "FK Voska Sport",
+      "abbr": "FVS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fk-ap-brera-strumica",
+      "league": "mkd-tier-1",
+      "name": "FK AP Brera Strumica",
+      "short": "FK AP",
+      "abbr": "FAB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vardar-skopje",
+      "league": "mkd-tier-1",
+      "name": "Vardar Skopje",
+      "short": "Vardar Skopje",
+      "abbr": "VAS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

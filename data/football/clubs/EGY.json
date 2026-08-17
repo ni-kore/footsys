@@ -1,0 +1,294 @@
+{
+  "country": "EGY",
+  "clubs": [
+    {
+      "id": "haras-el-hodood",
+      "league": "egy-premier-league",
+      "name": "Haras El Hodood",
+      "short": "Haras El Hodood",
+      "abbr": "HEH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "smouha-sporting-club",
+      "league": "egy-premier-league",
+      "name": "Smouha Sporting Club",
+      "short": "Smouha Sporting",
+      "abbr": "SMS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "al-masry-club",
+      "league": "egy-premier-league",
+      "name": "Al Masry Club",
+      "short": "Al Masry Club",
+      "abbr": "ALM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "el-gouna",
+      "league": "egy-premier-league",
+      "name": "El Gouna",
+      "short": "El Gouna",
+      "abbr": "ELG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "zed-fc",
+      "league": "egy-premier-league",
+      "name": "ZED FC",
+      "short": "ZED",
+      "abbr": "ZED",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "future-fc",
+      "league": "egy-premier-league",
+      "name": "Future FC",
+      "short": "Future",
+      "abbr": "FUT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "enppi",
+      "league": "egy-premier-league",
+      "name": "ENPPI",
+      "short": "ENPPI",
+      "abbr": "ENP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "pharco-fc",
+      "league": "egy-premier-league",
+      "name": "Pharco FC",
+      "short": "Pharco",
+      "abbr": "PHA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ittihad-el-iskandary",
+      "league": "egy-premier-league",
+      "name": "Ittihad El Iskandary",
+      "short": "Ittihad El",
+      "abbr": "IEI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "pyramids-fc",
+      "league": "egy-premier-league",
+      "name": "Pyramids FC",
+      "short": "Pyramids",
+      "abbr": "PYR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "petrojet-fc",
+      "league": "egy-premier-league",
+      "name": "PetroJet FC",
+      "short": "PetroJet",
+      "abbr": "PET",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "zamalek",
+      "league": "egy-premier-league",
+      "name": "Zamalek",
+      "short": "Zamalek",
+      "abbr": "ZAM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "national-bank-sc",
+      "league": "egy-premier-league",
+      "name": "National Bank SC",
+      "short": "National Bank",
+      "abbr": "NAB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ismaily",
+      "league": "egy-premier-league",
+      "name": "Ismaily",
+      "short": "Ismaily",
+      "abbr": "ISM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ghazl-al-mehalla",
+      "league": "egy-premier-league",
+      "name": "Ghazl Al Mehalla",
+      "short": "Ghazl Al Mehalla",
+      "abbr": "GAM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "al-ahly-sc",
+      "league": "egy-premier-league",
+      "name": "Al Ahly SC",
+      "short": "Al Ahly",
+      "abbr": "ALA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ceramica-cleopatra",
+      "league": "egy-premier-league",
+      "name": "Ceramica Cleopatra",
+      "short": "Ceramica Cleopatra",
+      "abbr": "CEC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

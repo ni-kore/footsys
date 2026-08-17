@@ -1,0 +1,9 @@
+node_modules/
+dist/
+build/
+.expo/
+*.log
+.DS_Store
+Thumbs.db
+.cache/
+assets/_source/

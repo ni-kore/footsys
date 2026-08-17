@@ -1,0 +1,583 @@
+{
+  "country": "NED",
+  "clubs": [
+    {
+      "id": "psv-eindhoven",
+      "league": "ned-eredivisie",
+      "name": "PSV Eindhoven",
+      "short": "PSV",
+      "abbr": "PSV",
+      "city": "Eindhoven",
+      "colors": [
+        "#EE2E24",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 5,
+        "continental": 3,
+        "international": 4
+      }
+    },
+    {
+      "id": "ajax",
+      "league": "ned-eredivisie",
+      "name": "AFC Ajax",
+      "short": "Ajax",
+      "abbr": "AJA",
+      "city": "Amsterdam",
+      "colors": [
+        "#D2122E",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 3,
+        "international": 5
+      }
+    },
+    {
+      "id": "feyenoord",
+      "league": "ned-eredivisie",
+      "name": "Feyenoord Rotterdam",
+      "short": "Feyenoord",
+      "abbr": "FEY",
+      "city": "Rotterdam",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 3,
+        "international": 4
+      }
+    },
+    {
+      "id": "az-alkmaar",
+      "league": "ned-eredivisie",
+      "name": "AZ Alkmaar",
+      "short": "AZ",
+      "abbr": "AZ",
+      "city": "Alkmaar",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 2,
+        "international": 2
+      }
+    },
+    {
+      "id": "fc-twente",
+      "league": "ned-eredivisie",
+      "name": "FC Twente",
+      "short": "Twente",
+      "abbr": "TWE",
+      "city": "Enschede",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "fc-utrecht",
+      "league": "ned-eredivisie",
+      "name": "FC Utrecht",
+      "short": "Utrecht",
+      "abbr": "UTR",
+      "city": "Utrecht",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 1
+      }
+    },
+    {
+      "id": "sc-heerenveen",
+      "league": "ned-eredivisie",
+      "name": "SC Heerenveen",
+      "short": "Heerenveen",
+      "abbr": "HEE",
+      "city": "Heerenveen",
+      "colors": [
+        "#005CA9",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "go-ahead-eagles",
+      "league": "ned-eredivisie",
+      "name": "Go Ahead Eagles",
+      "short": "Go Ahead",
+      "abbr": "GAE",
+      "city": "Deventer",
+      "colors": [
+        "#E30613",
+        "#FFED00"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "sparta-rotterdam",
+      "league": "ned-eredivisie",
+      "name": "Sparta Rotterdam",
+      "short": "Sparta",
+      "abbr": "SPA",
+      "city": "Rotterdam",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "nec-nijmegen",
+      "league": "ned-eredivisie",
+      "name": "NEC Nijmegen",
+      "short": "NEC",
+      "abbr": "NEC",
+      "city": "Nijmegen",
+      "colors": [
+        "#E30613",
+        "#008000"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "fortuna-sittard",
+      "league": "ned-eredivisie",
+      "name": "Fortuna Sittard",
+      "short": "Fortuna",
+      "abbr": "FOR",
+      "city": "Sittard",
+      "colors": [
+        "#FFED00",
+        "#009640"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "pec-zwolle",
+      "league": "ned-eredivisie",
+      "name": "PEC Zwolle",
+      "short": "Zwolle",
+      "abbr": "PEC",
+      "city": "Zwolle",
+      "colors": [
+        "#005CA9",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "willem-ii",
+      "league": "ned-eredivisie",
+      "name": "Willem II",
+      "short": "Willem II",
+      "abbr": "WIL",
+      "city": "Tilburg",
+      "colors": [
+        "#E30613",
+        "#005CA9"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "heracles-almelo",
+      "league": "ned-eredivisie",
+      "name": "Heracles Almelo",
+      "short": "Heracles",
+      "abbr": "HER",
+      "city": "Almelo",
+      "colors": [
+        "#000000",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vitesse",
+      "league": "ned-eerste-divisie",
+      "name": "SBV Vitesse",
+      "short": "Vitesse",
+      "abbr": "VIT",
+      "city": "Arnheim",
+      "colors": [
+        "#FFED00",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "de-graafschap",
+      "league": "ned-eerste-divisie",
+      "name": "De Graafschap",
+      "short": "Graafschap",
+      "abbr": "GRA",
+      "city": "Doetinchem",
+      "colors": [
+        "#005CA9",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-groningen",
+      "league": "ned-eredivisie",
+      "name": "FC Groningen",
+      "short": "FC Groningen",
+      "abbr": "GRO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "nac-breda",
+      "league": "ned-eredivisie",
+      "name": "NAC Breda",
+      "short": "NAC Breda",
+      "abbr": "NAB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "almere-city-fc",
+      "league": "ned-eredivisie",
+      "name": "Almere City FC",
+      "short": "Almere City",
+      "abbr": "ALC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "rkc-waalwijk",
+      "league": "ned-eredivisie",
+      "name": "RKC Waalwijk",
+      "short": "RKC Waalwijk",
+      "abbr": "RKW",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 1,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-den-bosch",
+      "league": "ned-eerste-divisie",
+      "name": "FC Den Bosch",
+      "short": "FC Den Bosch",
+      "abbr": "DEB",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-emmen",
+      "league": "ned-eerste-divisie",
+      "name": "FC Emmen",
+      "short": "FC Emmen",
+      "abbr": "EMM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-dordrecht",
+      "league": "ned-eerste-divisie",
+      "name": "FC Dordrecht",
+      "short": "FC Dordrecht",
+      "abbr": "DOR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "helmond-sport",
+      "league": "ned-eerste-divisie",
+      "name": "Helmond Sport",
+      "short": "Helmond Sport",
+      "abbr": "HES",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "mvv",
+      "league": "ned-eerste-divisie",
+      "name": "MVV",
+      "short": "MVV",
+      "abbr": "MVV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sc-cambuur",
+      "league": "ned-eerste-divisie",
+      "name": "SC Cambuur",
+      "short": "SC Cambuur",
+      "abbr": "CAM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "top-oss",
+      "league": "ned-eerste-divisie",
+      "name": "TOP Oss",
+      "short": "TOP Oss",
+      "abbr": "TOO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sbv-excelsior",
+      "league": "ned-eerste-divisie",
+      "name": "SBV Excelsior",
+      "short": "SBV Excelsior",
+      "abbr": "SBE",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "telstar",
+      "league": "ned-eerste-divisie",
+      "name": "Telstar",
+      "short": "Telstar",
+      "abbr": "TEL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ado-den-haag",
+      "league": "ned-eerste-divisie",
+      "name": "ADO Den Haag",
+      "short": "ADO Den Haag",
+      "abbr": "ADH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "vvv-venlo",
+      "league": "ned-eerste-divisie",
+      "name": "VVV-Venlo",
+      "short": "VVV-Venlo",
+      "abbr": "VVV",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fc-volendam",
+      "league": "ned-eerste-divisie",
+      "name": "FC Volendam",
+      "short": "FC Volendam",
+      "abbr": "VOL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "roda-jc-kerkrade",
+      "league": "ned-eerste-divisie",
+      "name": "Roda JC Kerkrade",
+      "short": "Roda JC Kerkrade",
+      "abbr": "RJK",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "jong-psv",
+      "league": "ned-eerste-divisie",
+      "name": "Jong PSV",
+      "short": "Jong PSV",
+      "abbr": "JOP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

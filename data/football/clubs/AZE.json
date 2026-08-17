@@ -1,0 +1,175 @@
+{
+  "country": "AZE",
+  "clubs": [
+    {
+      "id": "araz-naxc-van-pfk",
+      "league": "aze-tier-1",
+      "name": "Araz-Naxçıvan PFK",
+      "short": "Araz-Naxçıvan PFK",
+      "abbr": "ANP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "qarabag-fk",
+      "league": "aze-tier-1",
+      "name": "Qarabağ FK",
+      "short": "Qarabağ",
+      "abbr": "QAF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "neftci-pfk",
+      "league": "aze-tier-1",
+      "name": "Neftçi PFK",
+      "short": "Neftçi PFK",
+      "abbr": "NEP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "turan-tovuz",
+      "league": "aze-tier-1",
+      "name": "Turan Tovuz",
+      "short": "Turan Tovuz",
+      "abbr": "TUT",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sumgay-t-fk",
+      "league": "aze-tier-1",
+      "name": "Sumgayıt FK",
+      "short": "Sumgayıt",
+      "abbr": "SUF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kapaz-pfk",
+      "league": "aze-tier-1",
+      "name": "Kapaz PFK",
+      "short": "Kapaz PFK",
+      "abbr": "KAP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sabah-fk",
+      "league": "aze-tier-1",
+      "name": "Sabah FK",
+      "short": "Sabah",
+      "abbr": "SAF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "samax-fk",
+      "league": "aze-tier-1",
+      "name": "Şamaxı FK",
+      "short": "Şamaxı",
+      "abbr": "ŞAF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "zira-fk",
+      "league": "aze-tier-1",
+      "name": "Zira FK",
+      "short": "Zira",
+      "abbr": "ZIF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "s-bail-fk",
+      "league": "aze-tier-1",
+      "name": "Səbail FK",
+      "short": "Səbail",
+      "abbr": "SƏF",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

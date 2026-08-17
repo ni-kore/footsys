@@ -1,0 +1,158 @@
+{
+  "country": "GIB",
+  "clubs": [
+    {
+      "id": "europa-fc",
+      "league": "gib-tier-1",
+      "name": "Europa FC",
+      "short": "Europa",
+      "abbr": "EUR",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "college-1975-fc",
+      "league": "gib-tier-1",
+      "name": "College 1975 FC",
+      "short": "College 1975",
+      "abbr": "COL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fcb-magpies",
+      "league": "gib-tier-1",
+      "name": "FCB Magpies",
+      "short": "FCB Magpies",
+      "abbr": "FCM",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "lynx-fc",
+      "league": "gib-tier-1",
+      "name": "Lynx FC",
+      "short": "Lynx",
+      "abbr": "LYN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "glacis-united-fc",
+      "league": "gib-tier-1",
+      "name": "Glacis United FC",
+      "short": "Glacis United",
+      "abbr": "GLU",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "lincoln-red-imps",
+      "league": "gib-tier-1",
+      "name": "Lincoln Red Imps",
+      "short": "Lincoln Red Imps",
+      "abbr": "LRI",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "mons-calpe-s-c",
+      "league": "gib-tier-1",
+      "name": "Mons Calpe S.C.",
+      "short": "Mons Calpe S.C.",
+      "abbr": "MCS",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "lions-gibraltar",
+      "league": "gib-tier-1",
+      "name": "Lions Gibraltar",
+      "short": "Lions Gibraltar",
+      "abbr": "LIG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "manchester-62-fc",
+      "league": "gib-tier-1",
+      "name": "Manchester 62 FC",
+      "short": "Manchester 62",
+      "abbr": "MAN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

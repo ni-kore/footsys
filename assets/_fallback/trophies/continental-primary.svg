@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Kontinentaler Hauptwettbewerb">
+  <path d="M20 10h24v14a12 12 0 0 1-24 0V10Z" fill="currentColor" fill-opacity=".92"/>
+  <path d="M20 13c-6 0-9 3-9 8s3 9 9 9" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M44 13c6 0 9 3 9 8s-3 9-9 9" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M32 36v10" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+  <path d="M22 46h20l3 8H19l3-8Z" fill="currentColor" fill-opacity=".7"/>
+  <path d="M26 15h12" stroke="currentColor" stroke-width="2" stroke-opacity=".35" stroke-linecap="round"/>
+</svg>

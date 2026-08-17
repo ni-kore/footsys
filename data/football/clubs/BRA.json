@@ -1,0 +1,29 @@
+{
+  "country": "BRA",
+  "clubs": [
+    { "id": "flamengo", "league": "bra-serie-a", "name": "CR Flamengo", "short": "Flamengo", "abbr": "FLA", "city": "Rio de Janeiro", "colors": ["#E30613", "#000000"], "reputation": { "domestic": 5, "continental": 5, "international": 5 } },
+    { "id": "palmeiras", "league": "bra-serie-a", "name": "SE Palmeiras", "short": "Palmeiras", "abbr": "PAL", "city": "São Paulo", "colors": ["#006437", "#FFFFFF"], "reputation": { "domestic": 5, "continental": 5, "international": 4 } },
+    { "id": "sao-paulo", "league": "bra-serie-a", "name": "São Paulo FC", "short": "São Paulo", "abbr": "SAO", "city": "São Paulo", "colors": ["#E30613", "#000000"], "reputation": { "domestic": 4, "continental": 4, "international": 4 } },
+    { "id": "corinthians", "league": "bra-serie-a", "name": "SC Corinthians", "short": "Corinthians", "abbr": "COR", "city": "São Paulo", "colors": ["#000000", "#FFFFFF"], "reputation": { "domestic": 4, "continental": 3, "international": 4 } },
+    { "id": "fluminense", "league": "bra-serie-a", "name": "Fluminense FC", "short": "Fluminense", "abbr": "FLU", "city": "Rio de Janeiro", "colors": ["#7A1F3D", "#008057"], "reputation": { "domestic": 3, "continental": 4, "international": 3 } },
+    { "id": "botafogo", "league": "bra-serie-a", "name": "Botafogo FR", "short": "Botafogo", "abbr": "BOT", "city": "Rio de Janeiro", "colors": ["#000000", "#FFFFFF"], "reputation": { "domestic": 4, "continental": 4, "international": 3 } },
+    { "id": "atletico-mineiro", "league": "bra-serie-a", "name": "Atlético Mineiro", "short": "Atlético-MG", "abbr": "CAM", "city": "Belo Horizonte", "colors": ["#000000", "#FFFFFF"], "reputation": { "domestic": 4, "continental": 4, "international": 3 } },
+    { "id": "gremio", "league": "bra-serie-a", "name": "Grêmio FBPA", "short": "Grêmio", "abbr": "GRE", "city": "Porto Alegre", "colors": ["#0D80BF", "#000000"], "reputation": { "domestic": 3, "continental": 4, "international": 3 } },
+    { "id": "internacional", "league": "bra-serie-a", "name": "SC Internacional", "short": "Internacional", "abbr": "INT", "city": "Porto Alegre", "colors": ["#E30613", "#FFFFFF"], "reputation": { "domestic": 3, "continental": 3, "international": 3 } },
+    { "id": "cruzeiro", "league": "bra-serie-a", "name": "Cruzeiro EC", "short": "Cruzeiro", "abbr": "CRU", "city": "Belo Horizonte", "colors": ["#003399", "#FFFFFF"], "reputation": { "domestic": 3, "continental": 3, "international": 3 } },
+    { "id": "vasco-da-gama", "league": "bra-serie-a", "name": "CR Vasco da Gama", "short": "Vasco", "abbr": "VAS", "city": "Rio de Janeiro", "colors": ["#000000", "#FFFFFF"], "reputation": { "domestic": 2, "continental": 2, "international": 3 } },
+    { "id": "santos", "league": "bra-serie-a", "name": "Santos FC", "short": "Santos", "abbr": "SAN", "city": "Santos", "colors": ["#FFFFFF", "#000000"], "reputation": { "domestic": 2, "continental": 2, "international": 4 } },
+    { "id": "bahia", "league": "bra-serie-a", "name": "EC Bahia", "short": "Bahia", "abbr": "BAH", "city": "Salvador", "colors": ["#004B9E", "#E30613"], "reputation": { "domestic": 3, "continental": 2, "international": 2 } },
+    { "id": "fortaleza", "league": "bra-serie-a", "name": "Fortaleza EC", "short": "Fortaleza", "abbr": "FOR", "city": "Fortaleza", "colors": ["#004B9E", "#E30613"], "reputation": { "domestic": 3, "continental": 2, "international": 2 } },
+    { "id": "athletico-paranaense", "league": "bra-serie-a", "name": "Athletico Paranaense", "short": "Athletico-PR", "abbr": "CAP", "city": "Curitiba", "colors": ["#E30613", "#000000"], "reputation": { "domestic": 2, "continental": 3, "international": 2 } },
+    { "id": "red-bull-bragantino", "league": "bra-serie-a", "name": "RB Bragantino", "short": "Bragantino", "abbr": "BGT", "city": "Bragança Paulista", "colors": ["#FFFFFF", "#E30613"], "reputation": { "domestic": 2, "continental": 2, "international": 1 } },
+    { "id": "vitoria", "league": "bra-serie-a", "name": "EC Vitória", "short": "Vitória", "abbr": "VIT", "city": "Salvador", "colors": ["#E30613", "#000000"], "reputation": { "domestic": 1, "continental": 1, "international": 1 } },
+    { "id": "juventude", "league": "bra-serie-a", "name": "EC Juventude", "short": "Juventude", "abbr": "JUV", "city": "Caxias do Sul", "colors": ["#008057", "#FFFFFF"], "reputation": { "domestic": 1, "continental": 0, "international": 1 } },
+    { "id": "criciuma", "league": "bra-serie-a", "name": "Criciúma EC", "short": "Criciúma", "abbr": "CRI", "city": "Criciúma", "colors": ["#FFED00", "#000000"], "reputation": { "domestic": 1, "continental": 0, "international": 0 } },
+    { "id": "cuiaba", "league": "bra-serie-a", "name": "Cuiabá EC", "short": "Cuiabá", "abbr": "CUI", "city": "Cuiabá", "colors": ["#FFED00", "#008057"], "reputation": { "domestic": 1, "continental": 0, "international": 0 } },
+    { "id": "coritiba", "league": "bra-serie-b", "name": "Coritiba FC", "short": "Coritiba", "abbr": "CFC", "city": "Curitiba", "colors": ["#008057", "#FFFFFF"], "reputation": { "domestic": 0, "continental": 0, "international": 1 } },
+    { "id": "sport-recife", "league": "bra-serie-b", "name": "Sport Recife", "short": "Sport", "abbr": "SPT", "city": "Recife", "colors": ["#E30613", "#000000"], "reputation": { "domestic": 1, "continental": 0, "international": 1 } },
+    { "id": "ceara", "league": "bra-serie-b", "name": "Ceará SC", "short": "Ceará", "abbr": "CEA", "city": "Fortaleza", "colors": ["#000000", "#FFFFFF"], "reputation": { "domestic": 1, "continental": 0, "international": 1 } },
+    { "id": "goias", "league": "bra-serie-b", "name": "Goiás EC", "short": "Goiás", "abbr": "GOI", "city": "Goiânia", "colors": ["#008057", "#FFFFFF"], "reputation": { "domestic": 0, "continental": 0, "international": 1 } }
+  ]
+}

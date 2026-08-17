@@ -1,0 +1,209 @@
+{
+  "country": "CRC",
+  "clubs": [
+    {
+      "id": "ad-guanacasteca",
+      "league": "crc-primera-division",
+      "name": "AD Guanacasteca",
+      "short": "AD Guanacasteca",
+      "abbr": "ADG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ad-san-carlos",
+      "league": "crc-primera-division",
+      "name": "AD San Carlos",
+      "short": "AD San Carlos",
+      "abbr": "ASC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "puntarenas-fc",
+      "league": "crc-primera-division",
+      "name": "Puntarenas FC",
+      "short": "Puntarenas",
+      "abbr": "PUN",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "municipal-liberia",
+      "league": "crc-primera-division",
+      "name": "Municipal Liberia",
+      "short": "Municipal Liberia",
+      "abbr": "MUL",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cs-cartagines",
+      "league": "crc-primera-division",
+      "name": "CS Cartaginés",
+      "short": "CS Cartaginés",
+      "abbr": "CSC",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "santa-ana",
+      "league": "crc-primera-division",
+      "name": "Santa Ana",
+      "short": "Santa Ana",
+      "abbr": "SAA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sporting-fc",
+      "league": "crc-primera-division",
+      "name": "Sporting FC",
+      "short": "Sporting",
+      "abbr": "SPO",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "deportivo-saprissa",
+      "league": "crc-primera-division",
+      "name": "Deportivo Saprissa",
+      "short": "Deportivo Saprissa",
+      "abbr": "SAP",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ld-alajuelense",
+      "league": "crc-primera-division",
+      "name": "LD Alajuelense",
+      "short": "LD Alajuelense",
+      "abbr": "LDA",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "santos-de-guapiles",
+      "league": "crc-primera-division",
+      "name": "Santos de Guápiles",
+      "short": "Santos de",
+      "abbr": "SDG",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "cs-herediano",
+      "league": "crc-primera-division",
+      "name": "CS Herediano",
+      "short": "CS Herediano",
+      "abbr": "CSH",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "municipal-perez-zeledon",
+      "league": "crc-primera-division",
+      "name": "Municipal Pérez Zeledón",
+      "short": "Municipal Pérez",
+      "abbr": "MPZ",
+      "city": "",
+      "colors": [
+        "#2B2B38",
+        "#E8E8F0"
+      ],
+      "reputation": {
+        "domestic": 0,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}
