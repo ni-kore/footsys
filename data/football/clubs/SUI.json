@@ -13,7 +13,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -30,7 +30,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -47,7 +47,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -64,7 +64,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -81,7 +81,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -98,7 +98,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -115,7 +115,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -132,7 +132,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -149,7 +149,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -166,7 +166,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -183,24 +183,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "fc-schaffhausen",
-      "league": "sui-tier-2",
-      "name": "FC Schaffhausen",
-      "short": "FC Schaffhausen",
-      "abbr": "SCH",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }

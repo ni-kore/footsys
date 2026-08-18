@@ -2,23 +2,6 @@
   "country": "MLT",
   "clubs": [
     {
-      "id": "st-patrick-fc",
-      "league": "mlt-tier-1",
-      "name": "St. Patrick FC",
-      "short": "St. Patrick",
-      "abbr": "STP",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "sliema-wanderers",
       "league": "mlt-tier-1",
       "name": "Sliema Wanderers",
@@ -75,23 +58,6 @@
       "name": "Mosta FC",
       "short": "Mosta",
       "abbr": "MOS",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "gzira-united",
-      "league": "mlt-tier-1",
-      "name": "Gżira United",
-      "short": "Gżira United",
-      "abbr": "GŻU",
       "city": "",
       "colors": [
         "#2B2B38",

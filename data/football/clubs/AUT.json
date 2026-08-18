@@ -13,7 +13,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -30,7 +30,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -47,7 +47,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -64,7 +64,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -81,7 +81,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -98,7 +98,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -115,7 +115,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -132,7 +132,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -149,7 +149,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -166,7 +166,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -183,7 +183,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -200,7 +200,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -228,23 +228,6 @@
       "name": "Austria Lustenau",
       "short": "Austria Lustenau",
       "abbr": "AUL",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "kapfenberger-sv-1919",
-      "league": "aut-tier-2",
-      "name": "Kapfenberger SV 1919",
-      "short": "Kapfenberger SV",
-      "abbr": "KAP",
       "city": "",
       "colors": [
         "#2B2B38",
@@ -359,23 +342,6 @@
       }
     },
     {
-      "id": "schwarz-weiss-bregenz",
-      "league": "aut-tier-2",
-      "name": "Schwarz-Weiß Bregenz",
-      "short": "Schwarz-Weiß Bregenz",
-      "abbr": "SWB",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "rapid-wien-ii",
       "league": "aut-tier-2",
       "name": "Rapid Wien II",
@@ -393,62 +359,11 @@
       }
     },
     {
-      "id": "austria-wien-ii",
-      "league": "aut-tier-2",
-      "name": "Austria Wien II",
-      "short": "Austria Wien II",
-      "abbr": "AWI",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "skn-st-poelten",
       "league": "aut-tier-2",
       "name": "SKN St. Pölten",
       "short": "SKN St. Pölten",
       "abbr": "SSP",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "fc-hertha-wels",
-      "league": "aut-tier-2",
-      "name": "FC Hertha Wels",
-      "short": "FC Hertha Wels",
-      "abbr": "HEW",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "floridsdorfer-ac",
-      "league": "aut-tier-2",
-      "name": "Floridsdorfer AC",
-      "short": "Floridsdorfer",
-      "abbr": "FLO",
       "city": "",
       "colors": [
         "#2B2B38",
@@ -580,23 +495,6 @@
       }
     },
     {
-      "id": "wsc-hertha",
-      "league": "aut-tier-3",
-      "name": "WSC Hertha",
-      "short": "WSC Hertha",
-      "abbr": "WSH",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "sv-wildon",
       "league": "aut-tier-3",
       "name": "SV Wildon",
@@ -687,40 +585,6 @@
       "name": "FC Gleisdorf 09",
       "short": "FC Gleisdorf 09",
       "abbr": "GLE",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "wolfsberger-ac-ii",
-      "league": "aut-tier-3",
-      "name": "Wolfsberger AC II",
-      "short": "Wolfsberger AC",
-      "abbr": "WOI",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "sv-ried-ii",
-      "league": "aut-tier-3",
-      "name": "SV Ried II",
-      "short": "SV Ried II",
-      "abbr": "RII",
       "city": "",
       "colors": [
         "#2B2B38",
@@ -874,23 +738,6 @@
       "name": "SC Wiener Viktoria",
       "short": "SC Wiener",
       "abbr": "WIV",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "sportunion-mauer",
-      "league": "aut-tier-3",
-      "name": "Sportunion Mauer",
-      "short": "Sportunion Mauer",
-      "abbr": "SPM",
       "city": "",
       "colors": [
         "#2B2B38",

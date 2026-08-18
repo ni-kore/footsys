@@ -1,0 +1,10 @@
+{
+  "$comment": "Reihenfolge der Nationen im Auswahlbildschirm, angelehnt an die FIFA-Weltrangliste. Nur die Sortierung hängt davon ab — auf die Simulation wirkt 'strength' aus countries.json.",
+  "top": [
+    "ARG", "ESP", "FRA", "ENG", "BRA", "NED", "POR", "BEL", "ITA", "GER",
+    "CRO", "MAR", "COL", "URU", "USA", "MEX", "SUI", "JPN", "SEN", "DEN",
+    "IRN", "KOR", "AUT", "AUS", "UKR", "ECU", "TUR", "SWE", "WAL", "POL",
+    "RUS", "SRB", "EGY", "ALG", "NGA", "CIV", "SCO", "NOR", "GRE", "CZE",
+    "HUN", "TUN", "CAN", "PAN", "CRC", "PAR", "CHI", "PER", "RSA", "GHA"
+  ]
+}

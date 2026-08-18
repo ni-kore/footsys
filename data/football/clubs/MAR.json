@@ -13,7 +13,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -30,7 +30,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -47,7 +47,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -64,7 +64,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -81,7 +81,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -98,7 +98,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -115,7 +115,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -132,7 +132,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -149,41 +149,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "moghreb-de-tetouan",
-      "league": "mar-botola",
-      "name": "Moghreb de Tétouan",
-      "short": "Moghreb de",
-      "abbr": "MDT",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "olympique-de-safi",
-      "league": "mar-botola",
-      "name": "Olympique de Safi",
-      "short": "Olympique de",
-      "abbr": "ODS",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -200,58 +166,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "cr-khemis-zemamra",
-      "league": "mar-botola",
-      "name": "CR Khemis Zemamra",
-      "short": "CR Khemis",
-      "abbr": "CKZ",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "hassania-us-agadir",
-      "league": "mar-botola",
-      "name": "Hassania US Agadir",
-      "short": "Hassania US",
-      "abbr": "HAA",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "ittihad-tanger",
-      "league": "mar-botola",
-      "name": "Ittihad Tanger",
-      "short": "Ittihad Tanger",
-      "abbr": "ITT",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }

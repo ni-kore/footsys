@@ -13,7 +13,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -30,7 +30,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -47,7 +47,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -64,7 +64,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -81,7 +81,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -98,7 +98,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -115,7 +115,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -132,24 +132,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "ittihad-el-iskandary",
-      "league": "egy-premier-league",
-      "name": "Ittihad El Iskandary",
-      "short": "Ittihad El",
-      "abbr": "IEI",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -166,7 +149,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -183,7 +166,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -200,7 +183,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -217,7 +200,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -234,24 +217,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "ghazl-al-mehalla",
-      "league": "egy-premier-league",
-      "name": "Ghazl Al Mehalla",
-      "short": "Ghazl Al Mehalla",
-      "abbr": "GAM",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -268,7 +234,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -285,7 +251,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }

@@ -19,23 +19,6 @@
       }
     },
     {
-      "id": "rfcu-luxemburg",
-      "league": "lux-tier-1",
-      "name": "RFCU Luxemburg",
-      "short": "RFCU Luxemburg",
-      "abbr": "RFL",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "us-hostert",
       "league": "lux-tier-1",
       "name": "US Hostert",

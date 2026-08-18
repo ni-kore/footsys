@@ -36,23 +36,6 @@
       }
     },
     {
-      "id": "omonia-29is-maiou",
-      "league": "cyp-tier-1",
-      "name": "Omonia 29is Maiou",
-      "short": "Omonia 29is",
-      "abbr": "O2M",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "ael-limassol",
       "league": "cyp-tier-1",
       "name": "AEL Limassol",
@@ -126,23 +109,6 @@
       "name": "AEK Larnaca",
       "short": "AEK Larnaca",
       "abbr": "AEL",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "omonia-nikosia",
-      "league": "cyp-tier-1",
-      "name": "Omonia Nikosia",
-      "short": "Omonia Nikosia",
-      "abbr": "OMN",
       "city": "",
       "colors": [
         "#2B2B38",

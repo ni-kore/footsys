@@ -2,12 +2,12 @@ import {
   clubOf, clubsInConfederation, clubsInCountry, countryOf, countryOfClub, leagueAtTier, leagueOf,
   positionOf, type GameData,
 } from './data';
-import { clamp, roleAtLeast } from './progression';
+import { clamp, clampOverall, roleAtLeast } from './progression';
 import { collectEffects, currentRole, isEligibleForNationalTeam } from './simulation';
 import type { Rng } from './rng';
 import type {
-  CareerEvent, CareerState, Club, EventModifiers, EventOption, EventRequirements, EventVariant,
-  PendingDecision, PendingOption, RandomEvent, ReputationLevel, TransferScope,
+  CareerEvent, CareerState, Club, CountryCode, EventModifiers, EventOption, EventRequirements,
+  EventVariant, PendingDecision, PendingOption, RandomEvent, ReputationLevel, TransferScope,
 } from './types';
 
 /**
@@ -64,10 +64,10 @@ function meetsRequirements(data: GameData, state: CareerState, req?: EventRequir
 function levelForOverall(data: GameData, overall: number, bonus = 0): ReputationLevel {
   const thresholds = data.progression.roles.minOverallForStarter as Record<string, number>;
   let best: ReputationLevel = 0;
-  for (let rep = 0; rep <= 5; rep++) {
+  for (let rep = 0; rep <= 10; rep++) {
     if (overall + 4 >= thresholds[String(rep)]!) best = rep as ReputationLevel;
   }
-  return clamp(best + bonus, 0, 5) as ReputationLevel;
+  return clamp(best + bonus * 2, 0, 10) as ReputationLevel;
 }
 
 export interface OfferOptions {
@@ -112,7 +112,7 @@ export function clubOffers(data: GameData, rng: Rng, state: CareerState, options
 
   // Ein Spieler bekommt keine Angebote von Vereinen weit über seinem Niveau.
   // Ohne diese harte Grenze landet jede Karriere irgendwann bei einem Topklub.
-  const inRange = pool.filter((c) => Math.abs(c.reputation.domestic - target) <= 1);
+  const inRange = pool.filter((c) => Math.abs(c.reputation.domestic - target) <= 2);
   if (inRange.length >= options.count) pool = inRange;
   if (pool.length === 0) pool = data.clubs.filter((c) => c.id !== current?.id);
 
@@ -124,7 +124,7 @@ export function clubOffers(data: GameData, rng: Rng, state: CareerState, options
 
   const weighted = pool.map((club) => {
     const league = leagueOf(data, club);
-    let weight = Math.max(1, 12 - Math.abs(club.reputation.domestic - target) * 5);
+    let weight = Math.max(1, 12 - Math.abs(club.reputation.domestic - target) * 2.5);
     if (league.country === homeCountry) weight *= 2.5;
     else if (countryOf(data, league.country).confederation === homeConfederation) weight *= 1.5;
     if (league.country === state.player.nationality) weight *= 1.5;
@@ -133,20 +133,29 @@ export function clubOffers(data: GameData, rng: Rng, state: CareerState, options
   return rng.weightedSample(weighted, options.count);
 }
 
-/** Die drei Jugendangebote zum Karrierestart. */
+/** So viele Vereine stehen zum Karrierestart zur Wahl. */
+export const ACADEMY_OFFERS = 4;
+
+/** Die Jugendangebote zum Karrierestart. */
 export function academyOffers(data: GameData, rng: Rng, state: CareerState): Club[] {
   const country = countryOf(data, state.player.nationality);
-  let pool = clubsInCountry(data, state.player.nationality);
-  if (pool.length < 3) pool = clubsInConfederation(data, country.confederation);
-  if (pool.length < 3) pool = data.clubs;
 
-  // Kein 16-Jähriger startet bei einem Weltverein — Reputation 5 fällt raus.
-  const eligible = pool.filter((c) => c.reputation.domestic <= 4);
-  const weighted = (eligible.length >= 3 ? eligible : pool).map((club) => ({
+  // Mit zweitem Pass stehen die Vereine beider Heimatländer offen — das ist
+  // der erste spürbare Vorteil einer doppelten Staatsbürgerschaft.
+  let pool = clubsInCountry(data, state.player.nationality);
+  if (state.player.secondNationality) {
+    pool = [...pool, ...clubsInCountry(data, state.player.secondNationality)];
+  }
+  if (pool.length < ACADEMY_OFFERS) pool = clubsInConfederation(data, country.confederation);
+  if (pool.length < ACADEMY_OFFERS) pool = data.clubs;
+
+  // Kein 16-Jähriger startet bei einem Weltverein — die Spitze fällt raus.
+  const eligible = pool.filter((c) => c.reputation.domestic <= 8);
+  const weighted = (eligible.length >= ACADEMY_OFFERS ? eligible : pool).map((club) => ({
     item: club,
-    weight: Math.max(1, 6 - club.reputation.domestic),
+    weight: Math.max(1, 11 - club.reputation.domestic),
   }));
-  return rng.weightedSample(weighted, 3);
+  return rng.weightedSample(weighted, ACADEMY_OFFERS);
 }
 
 // ----------------------------------------------------- Entscheidungsbau
@@ -168,24 +177,25 @@ export function buildAcademyDecision(data: GameData, rng: Rng, state: CareerStat
     eventId: 'academy_offer',
     window: 'start',
     title: event.title,
-    text: event.text.de,
+    text: event.text.en,
     options: academyOffers(data, rng, state).map((c) => clubOption(data, c, 'academy')),
   };
 }
 
 export function buildTransferDecision(
   data: GameData, rng: Rng, state: CareerState, scope: TransferScope = 'matching',
+  count = 3,
 ): PendingDecision {
   const event = data.events.structural.find((e) => e.id === 'transfer_offer')!;
   const bonus = state.activeEffects.find((e) => e.modifiers.offerQualityBonus)?.modifiers.offerQualityBonus ?? 0;
-  const clubs = clubOffers(data, rng, state, { scope, count: 3, qualityBonus: bonus });
+  const clubs = clubOffers(data, rng, state, { scope, count, qualityBonus: bonus });
 
   const options: PendingOption[] = clubs.map((c) => clubOption(data, c, 'transfer'));
   if (state.clubId) {
     const club = clubOf(data, state.clubId);
     options.unshift({
       id: 'stay',
-      label: { de: `Bei ${club.short} bleiben`, en: `Stay at ${club.short}` },
+      label: { de: club.short, en: club.short },
       clubId: club.id,
       subtitle: leagueOf(data, club).name,
     });
@@ -196,7 +206,7 @@ export function buildTransferDecision(
     eventId: 'transfer_offer',
     window: 'summer',
     title: event.title,
-    text: event.text.de,
+    text: event.text.en,
     options,
   };
 }
@@ -211,10 +221,10 @@ export function buildLoanDecision(data: GameData, rng: Rng, state: CareerState):
     eventId: 'loan_offer',
     window: 'summer',
     title: event.title,
-    text: event.text.de,
+    text: event.text.en,
     options: [
       ...clubs.map((c) => clubOption(data, c, 'loan')),
-      { id: 'stay', label: { de: `Bei ${club.short} bleiben`, en: `Stay at ${club.short}` }, clubId: club.id },
+      { id: 'stay', label: { de: club.short, en: club.short }, clubId: club.id },
     ],
   };
 }
@@ -230,7 +240,7 @@ export function buildRetirementDecision(data: GameData, state: CareerState): Pen
     eventId: 'retirement',
     window: 'summer',
     title: event.title,
-    text: event.text.de,
+    text: event.text.en,
     options,
   };
 }
@@ -251,15 +261,27 @@ export function buildCareerDecision(
   });
 
   if (eligible.length === 0) return null;
-  const event = rng.weighted(eligible.map((item) => ({ item, weight: item.weight })));
+
+  // Temperamentvolle Spieler geraten häufiger in heikle Lagen. Das ist der
+  // Preis für das Talent, das über den Fuß hereinkommt.
+  const temperament = state.player.temperament / 100;
+  const riskyWeight = data.progression.traits.temperament.riskyEventWeight as number;
+  const event = rng.weighted(eligible.map((item) => ({
+    item,
+    weight: item.risky ? item.weight * (1 + temperament * (riskyWeight - 1)) : item.weight,
+  })));
   const variant = pickVariant(data, rng, event);
+  const alternativeCountry = event.id === 'foreign_grandfather'
+    ? alternativeNationality(data, rng, state)
+    : undefined;
 
   return {
     kind: 'career',
     eventId: event.id,
     window,
+    ...(alternativeCountry ? { alternativeCountry } : {}),
     title: event.title,
-    text: fillPlaceholders(data, state, variant?.text.de ?? event.text.de, variant),
+    text: fillPlaceholders(data, state, variant?.text.en ?? event.text.en, variant, alternativeCountry),
     ...(variant ? { variantKey: variant.key } : {}),
     options: event.options
       .filter((o) => optionAllowed(state, o))
@@ -286,18 +308,39 @@ function pickVariant(data: GameData, rng: Rng, event: CareerEvent): EventVariant
   return null;
 }
 
+/**
+ * Das Land, in das ein Verbandswechsel führt. Wer einen zweiten Pass hat, für
+ * den steht es von Anfang an fest; alle anderen entdecken ihre Wurzeln erst in
+ * dem Moment — dann wird ein Land aus derselben Konföderation gezogen.
+ */
+function alternativeNationality(data: GameData, rng: Rng, state: CareerState): CountryCode {
+  if (state.player.secondNationality) return state.player.secondNationality;
+
+  const own = countryOf(data, state.player.nationality);
+  const candidates = data.countries.filter(
+    (c) => c.code !== own.code && c.confederation === own.confederation,
+  );
+  if (candidates.length === 0) return own.code;
+  return rng.weighted(candidates.map((item) => ({ item, weight: item.strength }))).code;
+}
+
 function fillPlaceholders(
   data: GameData, state: CareerState, text: string, variant: EventVariant | null,
+  alternativeCountry?: CountryCode,
 ): string {
   const club = state.clubId ? clubOf(data, state.clubId) : null;
   const country = countryOf(data, state.player.nationality);
+  const alternative = alternativeCountry
+    ? countryOf(data, alternativeCountry).name.en
+    : 'another country';
+
   return text
     .replace('{club}', club?.short ?? '')
-    .replace('{country}', country.name.de)
-    .replace('{injuryLabel}', variant?.text.de ?? '')
-    .replace('{rivalClub}', club ? rivalOf(data, club)?.short ?? 'Der Rivale' : 'Der Rivale')
-    .replace('{alternativeCountry}', '')
-    .replace('{alternativePosition}', positionOf(data, state.player.position).name.de);
+    .replace('{country}', country.name.en)
+    .replace('{injuryLabel}', variant?.text.en ?? '')
+    .replace('{rivalClub}', club ? rivalOf(data, club)?.short ?? 'the rivals' : 'the rivals')
+    .replace('{alternativeCountry}', alternative)
+    .replace('{alternativePosition}', positionOf(data, state.player.position).name.en);
 }
 
 /** Der prestigeträchtigste andere Verein derselben Liga gilt als Rivale. */
@@ -341,7 +384,7 @@ export function rollRandomEvents(
   return chosen.map((event) => {
     applyRandomEvent(data, rng, state, event);
     state.randomEventHistory.push({ id: event.id, year: state.year });
-    return { event, text: fillPlaceholders(data, state, event.text.de, null) };
+    return { event, text: fillPlaceholders(data, state, event.text.en, null) };
   });
 }
 
@@ -370,8 +413,8 @@ function applyRandomEvent(data: GameData, rng: Rng, state: CareerState, event: R
 function adjustClubReputation(data: GameData, clubId: string, delta: number): void {
   const club = clubOf(data, clubId);
   club.reputation = {
-    domestic: clamp(club.reputation.domestic + delta, 0, 5) as ReputationLevel,
-    continental: clamp(club.reputation.continental + delta, 0, 5) as ReputationLevel,
+    domestic: clamp(club.reputation.domestic + delta * 2, 0, 10) as ReputationLevel,
+    continental: clamp(club.reputation.continental + delta * 2, 0, 10) as ReputationLevel,
     international: club.reputation.international,
   };
 }
@@ -394,16 +437,27 @@ function moveClubLeague(data: GameData, clubId: string, move: 'promotion' | 'rel
 // ------------------------------------------------- Modifikatoren anwenden
 
 /** Wendet einen Satz Modifikatoren auf den Spielstand an. */
+export interface ModifierContext {
+  /** Ziel eines Verbandswechsels. */
+  alternativeCountry?: CountryCode;
+}
+
 export function applyModifiers(
   data: GameData, rng: Rng, state: CareerState, modifiers: EventModifiers, source: string,
+  context: ModifierContext = {},
 ): void {
   const player = state.player;
 
+  if (modifiers.switchNationality && context.alternativeCountry) {
+    // Der alte Pass bleibt erhalten — man verliert ihn ja nicht.
+    const previous = player.nationality;
+    player.nationality = context.alternativeCountry;
+    player.secondNationality = previous;
+  }
+
   if (modifiers.immediateOverall) player.overall += modifiers.immediateOverall;
   if (modifiers.permanentOverall) player.overall += modifiers.permanentOverall;
-  player.overall = clamp(
-    player.overall, data.progression.career.overallMin, data.progression.career.overallMax,
-  );
+  player.overall = clampOverall(data, player.overall, player.potential);
 
   if (modifiers.deferredOverall) {
     state.deferredOverall.push({
@@ -419,6 +473,12 @@ export function applyModifiers(
 
   if (modifiers.marketValueMultiplier) {
     player.marketValue = Math.round(player.marketValue * modifiers.marketValueMultiplier);
+  }
+  if (modifiers.fansMultiplier) {
+    player.fans = Math.round(Math.min(
+      data.progression.fans.max as number,
+      player.fans * modifiers.fansMultiplier,
+    ));
   }
   if (modifiers.setCaptain) player.isCaptain = true;
   if (modifiers.suspendedSeasons) state.suspensionHalves += modifiers.suspendedSeasons * 2;
@@ -457,10 +517,10 @@ export function applyModifiers(
 /** Löst eine gewählte Option auf: Wurf, Erfolg oder Misserfolg, Modifikatoren. */
 export function resolveOption(
   data: GameData, rng: Rng, state: CareerState, event: CareerEvent, option: EventOption,
-  variantKey?: string,
+  variantKey?: string, context: ModifierContext = {},
 ): { outcome: 'positive' | 'negative' | null } {
   if (!option.outcome) {
-    if (option.modifiers) applyModifiers(data, rng, state, option.modifiers, event.id);
+    if (option.modifiers) applyModifiers(data, rng, state, option.modifiers, event.id, context);
     return { outcome: null };
   }
 
@@ -470,17 +530,23 @@ export function resolveOption(
     chance = variant.successChance;
   }
 
+  // In heiklen Lagen entscheidet ein Hitzkopf öfter falsch.
+  if (event.risky) {
+    const penalty = data.progression.traits.temperament.successPenalty as number;
+    chance = Math.max(0.05, chance - (state.player.temperament / 100) * penalty);
+  }
+
   const success = rng.chance(chance);
 
   if (option.outcome.fromVariant && variant) {
     const delta = success ? variant.successOverall ?? 0 : variant.failureOverall ?? 0;
     const key = option.outcome.permanent ? 'permanentOverall' : 'immediateOverall';
-    applyModifiers(data, rng, state, { [key]: delta }, event.id);
+    applyModifiers(data, rng, state, { [key]: delta }, event.id, context);
   }
 
   const branch = success ? option.outcome.success : option.outcome.failure;
-  if (branch) applyModifiers(data, rng, state, branch, event.id);
-  if (option.modifiers) applyModifiers(data, rng, state, option.modifiers, event.id);
+  if (branch) applyModifiers(data, rng, state, branch, event.id, context);
+  if (option.modifiers) applyModifiers(data, rng, state, option.modifiers, event.id, context);
 
   return { outcome: success ? 'positive' : 'negative' };
 }

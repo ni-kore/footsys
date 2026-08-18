@@ -2,23 +2,6 @@
   "country": "HUN",
   "clubs": [
     {
-      "id": "zalaegerszegi-te",
-      "league": "hun-nb-i",
-      "name": "Zalaegerszegi TE",
-      "short": "Zalaegerszegi TE",
-      "abbr": "ZAT",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "mtk-budapest",
       "league": "hun-nb-i",
       "name": "MTK Budapest",
@@ -41,57 +24,6 @@
       "name": "Nyíregyháza Spartacus",
       "short": "Nyíregyháza Spartacus",
       "abbr": "NYS",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "gyori-eto-fc",
-      "league": "hun-nb-i",
-      "name": "Győri ETO FC",
-      "short": "Győri ETO",
-      "abbr": "GYE",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "diosgyoeri-vtk",
-      "league": "hun-nb-i",
-      "name": "Diósgyöri VTK",
-      "short": "Diósgyöri VTK",
-      "abbr": "DIV",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "paksi-se",
-      "league": "hun-nb-i",
-      "name": "Paksi SE",
-      "short": "Paksi SE",
-      "abbr": "PAS",
       "city": "",
       "colors": [
         "#2B2B38",
@@ -177,23 +109,6 @@
       "name": "Debreceni VSC",
       "short": "Debreceni VSC",
       "abbr": "DEV",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "ferencvarosi-tc",
-      "league": "hun-nb-i",
-      "name": "Ferencvárosi TC",
-      "short": "Ferencvárosi TC",
-      "abbr": "FET",
       "city": "",
       "colors": [
         "#2B2B38",

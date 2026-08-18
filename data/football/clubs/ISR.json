@@ -2,23 +2,6 @@
   "country": "ISR",
   "clubs": [
     {
-      "id": "maccabi-bnei-raina",
-      "league": "isr-ligat-haal",
-      "name": "Maccabi Bnei Raina",
-      "short": "Maccabi Bnei",
-      "abbr": "MBR",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "maccabi-netanya",
       "league": "isr-ligat-haal",
       "name": "Maccabi Netanya",
@@ -313,23 +296,6 @@
       "name": "Bnei Yehuda Tel Aviv",
       "short": "Bnei Yehuda",
       "abbr": "BYT",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "ms-kafr-qasim",
-      "league": "isr-tier-2",
-      "name": "MS Kafr Qasim",
-      "short": "MS Kafr Qasim",
-      "abbr": "MKQ",
       "city": "",
       "colors": [
         "#2B2B38",

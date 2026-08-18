@@ -233,20 +233,6 @@
     }
   },
   {
-    "id": "bel-pro-league",
-    "name": "Jupiler Pro League",
-    "country": "BEL",
-    "tier": 1,
-    "teams": 16,
-    "strength": 3,
-    "cup": "bel-beker-van-belgie",
-    "continentalSlots": {
-      "primary": 2,
-      "secondary": 1,
-      "tertiary": 1
-    }
-  },
-  {
     "id": "tur-super-lig",
     "name": "Süper Lig",
     "country": "TUR",
@@ -360,34 +346,6 @@
     }
   },
   {
-    "id": "nor-eliteserien",
-    "name": "Eliteserien",
-    "country": "NOR",
-    "tier": 1,
-    "teams": 16,
-    "strength": 2,
-    "cup": "nor-cupen",
-    "continentalSlots": {
-      "primary": 1,
-      "secondary": 1,
-      "tertiary": 1
-    }
-  },
-  {
-    "id": "swe-allsvenskan",
-    "name": "Allsvenskan",
-    "country": "SWE",
-    "tier": 1,
-    "teams": 16,
-    "strength": 2,
-    "cup": "swe-svenska-cupen",
-    "continentalSlots": {
-      "primary": 1,
-      "secondary": 1,
-      "tertiary": 1
-    }
-  },
-  {
     "id": "pol-ekstraklasa",
     "name": "Ekstraklasa",
     "country": "POL",
@@ -486,20 +444,6 @@
     }
   },
   {
-    "id": "irl-premier-division",
-    "name": "Premier Division",
-    "country": "IRL",
-    "tier": 1,
-    "teams": 10,
-    "strength": 1,
-    "cup": "irl-fai-cup",
-    "continentalSlots": {
-      "primary": 1,
-      "secondary": 1,
-      "tertiary": 1
-    }
-  },
-  {
     "id": "arg-liga-profesional",
     "name": "Liga Profesional",
     "country": "ARG",
@@ -558,118 +502,6 @@
     }
   },
   {
-    "id": "uru-primera-division",
-    "name": "Primera División",
-    "country": "URU",
-    "tier": 1,
-    "teams": 16,
-    "strength": 3,
-    "cup": "uru-copa-uruguay",
-    "continentalSlots": {
-      "primary": 4,
-      "secondary": 3,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "chi-liga-de-primera",
-    "name": "Liga de Primera",
-    "country": "CHI",
-    "tier": 1,
-    "teams": 16,
-    "strength": 3,
-    "cup": "chi-copa-chile",
-    "continentalSlots": {
-      "primary": 4,
-      "secondary": 3,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "col-liga-betplay",
-    "name": "Liga BetPlay",
-    "country": "COL",
-    "tier": 1,
-    "teams": 20,
-    "strength": 3,
-    "cup": "col-copa-colombia",
-    "continentalSlots": {
-      "primary": 4,
-      "secondary": 4,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "ecu-liga-pro",
-    "name": "LigaPro Serie A",
-    "country": "ECU",
-    "tier": 1,
-    "teams": 16,
-    "strength": 3,
-    "cup": "ecu-copa-ecuador",
-    "continentalSlots": {
-      "primary": 4,
-      "secondary": 4,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "par-primera-division",
-    "name": "Copa de Primera",
-    "country": "PAR",
-    "tier": 1,
-    "teams": 12,
-    "strength": 3,
-    "cup": "par-copa-paraguay",
-    "continentalSlots": {
-      "primary": 4,
-      "secondary": 4,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "per-liga1",
-    "name": "Liga 1",
-    "country": "PER",
-    "tier": 1,
-    "teams": 18,
-    "strength": 2,
-    "cup": "per-copa-peru",
-    "continentalSlots": {
-      "primary": 4,
-      "secondary": 4,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "bol-division-profesional",
-    "name": "División Profesional",
-    "country": "BOL",
-    "tier": 1,
-    "teams": 16,
-    "strength": 2,
-    "cup": "bol-copa-bolivia",
-    "continentalSlots": {
-      "primary": 4,
-      "secondary": 4,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "ven-liga-futve",
-    "name": "Liga FUTVE",
-    "country": "VEN",
-    "tier": 1,
-    "teams": 16,
-    "strength": 1,
-    "cup": "ven-copa-venezuela",
-    "continentalSlots": {
-      "primary": 4,
-      "secondary": 4,
-      "tertiary": 0
-    }
-  },
-  {
     "id": "mex-liga-mx",
     "name": "Liga MX",
     "country": "MEX",
@@ -678,21 +510,6 @@
     "strength": 4,
     "cup": "mex-copa-mx",
     "secondaryCup": "mex-campeon-de-campeones",
-    "continentalSlots": {
-      "primary": 5,
-      "secondary": 0,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "usa-mls",
-    "name": "MLS",
-    "country": "USA",
-    "tier": 1,
-    "teams": 30,
-    "strength": 3,
-    "cup": "usa-us-open-cup",
-    "secondaryCup": "usa-leagues-cup",
     "continentalSlots": {
       "primary": 5,
       "secondary": 0,
@@ -714,90 +531,6 @@
     }
   },
   {
-    "id": "hon-liga-nacional",
-    "name": "Liga Nacional",
-    "country": "HON",
-    "tier": 1,
-    "teams": 10,
-    "strength": 1,
-    "cup": "hon-copa",
-    "continentalSlots": {
-      "primary": 2,
-      "secondary": 0,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "gua-liga-nacional",
-    "name": "Liga Nacional",
-    "country": "GUA",
-    "tier": 1,
-    "teams": 12,
-    "strength": 1,
-    "cup": "gua-copa",
-    "continentalSlots": {
-      "primary": 2,
-      "secondary": 0,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "pan-lpf",
-    "name": "Liga Panameña de Fútbol",
-    "country": "PAN",
-    "tier": 1,
-    "teams": 10,
-    "strength": 1,
-    "cup": "pan-copa",
-    "continentalSlots": {
-      "primary": 1,
-      "secondary": 0,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "slv-primera-division",
-    "name": "Primera División",
-    "country": "SLV",
-    "tier": 1,
-    "teams": 12,
-    "strength": 1,
-    "cup": "slv-copa",
-    "continentalSlots": {
-      "primary": 1,
-      "secondary": 0,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "jam-premier-league",
-    "name": "Jamaica Premier League",
-    "country": "JAM",
-    "tier": 1,
-    "teams": 12,
-    "strength": 1,
-    "cup": "jam-cup",
-    "continentalSlots": {
-      "primary": 1,
-      "secondary": 0,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "can-premier-league",
-    "name": "Canadian Premier League",
-    "country": "CAN",
-    "tier": 1,
-    "teams": 8,
-    "strength": 1,
-    "cup": "can-championship",
-    "continentalSlots": {
-      "primary": 1,
-      "secondary": 0,
-      "tertiary": 0
-    }
-  },
-  {
     "id": "ksa-pro-league",
     "name": "Saudi Pro League",
     "country": "KSA",
@@ -812,91 +545,6 @@
     }
   },
   {
-    "id": "jpn-j1-league",
-    "name": "J1 League",
-    "country": "JPN",
-    "tier": 1,
-    "teams": 20,
-    "strength": 3,
-    "cup": "jpn-emperors-cup",
-    "secondaryCup": "jpn-levain-cup",
-    "continentalSlots": {
-      "primary": 3,
-      "secondary": 1,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "kor-k-league-1",
-    "name": "K League 1",
-    "country": "KOR",
-    "tier": 1,
-    "teams": 12,
-    "strength": 3,
-    "cup": "kor-fa-cup",
-    "continentalSlots": {
-      "primary": 3,
-      "secondary": 1,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "chn-super-league",
-    "name": "Chinese Super League",
-    "country": "CHN",
-    "tier": 1,
-    "teams": 16,
-    "strength": 2,
-    "cup": "chn-fa-cup",
-    "continentalSlots": {
-      "primary": 2,
-      "secondary": 1,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "qat-stars-league",
-    "name": "Qatar Stars League",
-    "country": "QAT",
-    "tier": 1,
-    "teams": 12,
-    "strength": 2,
-    "cup": "qat-emir-cup",
-    "continentalSlots": {
-      "primary": 2,
-      "secondary": 1,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "uae-pro-league",
-    "name": "UAE Pro League",
-    "country": "UAE",
-    "tier": 1,
-    "teams": 14,
-    "strength": 2,
-    "cup": "uae-presidents-cup",
-    "continentalSlots": {
-      "primary": 2,
-      "secondary": 1,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "irn-persian-gulf-pro-league",
-    "name": "Persian Gulf Pro League",
-    "country": "IRN",
-    "tier": 1,
-    "teams": 16,
-    "strength": 2,
-    "cup": "irn-hazfi-cup",
-    "continentalSlots": {
-      "primary": 2,
-      "secondary": 1,
-      "tertiary": 0
-    }
-  },
-  {
     "id": "aus-a-league",
     "name": "A-League Men",
     "country": "AUS",
@@ -906,48 +554,6 @@
     "cup": "aus-cup",
     "continentalSlots": {
       "primary": 2,
-      "secondary": 1,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "ind-super-league",
-    "name": "Indian Super League",
-    "country": "IND",
-    "tier": 1,
-    "teams": 13,
-    "strength": 1,
-    "cup": "ind-super-cup",
-    "continentalSlots": {
-      "primary": 1,
-      "secondary": 1,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "tha-league-1",
-    "name": "Thai League 1",
-    "country": "THA",
-    "tier": 1,
-    "teams": 16,
-    "strength": 1,
-    "cup": "tha-fa-cup",
-    "continentalSlots": {
-      "primary": 1,
-      "secondary": 1,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "uzb-super-league",
-    "name": "Uzbekistan Super League",
-    "country": "UZB",
-    "tier": 1,
-    "teams": 14,
-    "strength": 1,
-    "cup": "uzb-cup",
-    "continentalSlots": {
-      "primary": 1,
       "secondary": 1,
       "tertiary": 0
     }
@@ -988,20 +594,6 @@
     "teams": 16,
     "strength": 2,
     "cup": "alg-coupe",
-    "continentalSlots": {
-      "primary": 2,
-      "secondary": 2,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "tun-ligue-1",
-    "name": "Ligue Professionnelle 1",
-    "country": "TUN",
-    "tier": 1,
-    "teams": 16,
-    "strength": 2,
-    "cup": "tun-coupe",
     "continentalSlots": {
       "primary": 2,
       "secondary": 2,
@@ -1051,78 +643,8 @@
     }
   },
   {
-    "id": "civ-ligue-1",
-    "name": "Ligue 1",
-    "country": "CIV",
-    "tier": 1,
-    "teams": 14,
-    "strength": 1,
-    "cup": "civ-coupe",
-    "continentalSlots": {
-      "primary": 1,
-      "secondary": 1,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "sen-ligue-1",
-    "name": "Ligue 1",
-    "country": "SEN",
-    "tier": 1,
-    "teams": 14,
-    "strength": 1,
-    "cup": "sen-coupe",
-    "continentalSlots": {
-      "primary": 1,
-      "secondary": 1,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "ang-girabola",
-    "name": "Girabola",
-    "country": "ANG",
-    "tier": 1,
-    "teams": 16,
-    "strength": 1,
-    "cup": "ang-taca",
-    "continentalSlots": {
-      "primary": 1,
-      "secondary": 1,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "nzl-national-league",
-    "name": "National League",
-    "country": "NZL",
-    "tier": 1,
-    "teams": 10,
-    "strength": 1,
-    "cup": "nzl-chatham-cup",
-    "continentalSlots": {
-      "primary": 2,
-      "secondary": 0,
-      "tertiary": 0
-    }
-  },
-  {
-    "id": "fij-premier-league",
-    "name": "Fiji Premier League",
-    "country": "FIJ",
-    "tier": 1,
-    "teams": 8,
-    "strength": 1,
-    "cup": "fij-cup",
-    "continentalSlots": {
-      "primary": 1,
-      "secondary": 0,
-      "tertiary": 0
-    }
-  },
-  {
     "id": "ger-tier-4",
-    "name": "Deutschland · 4. Liga",
+    "name": "Germany · Tier 4",
     "country": "GER",
     "tier": 4,
     "teams": 18,
@@ -1136,7 +658,7 @@
   },
   {
     "id": "eng-tier-4",
-    "name": "England · 4. Liga",
+    "name": "England · Tier 4",
     "country": "ENG",
     "tier": 4,
     "teams": 18,
@@ -1150,7 +672,7 @@
   },
   {
     "id": "eng-tier-5",
-    "name": "England · 5. Liga",
+    "name": "England · Tier 5",
     "country": "ENG",
     "tier": 5,
     "teams": 18,
@@ -1164,7 +686,7 @@
   },
   {
     "id": "ita-tier-3",
-    "name": "Italien · 3. Liga",
+    "name": "Italy · Tier 3",
     "country": "ITA",
     "tier": 3,
     "teams": 18,
@@ -1178,7 +700,7 @@
   },
   {
     "id": "aut-tier-2",
-    "name": "Österreich · 2. Liga",
+    "name": "Austria · Tier 2",
     "country": "AUT",
     "tier": 2,
     "teams": 18,
@@ -1192,7 +714,7 @@
   },
   {
     "id": "aut-tier-3",
-    "name": "Österreich · 3. Liga",
+    "name": "Austria · Tier 3",
     "country": "AUT",
     "tier": 3,
     "teams": 18,
@@ -1206,7 +728,7 @@
   },
   {
     "id": "alb-tier-1",
-    "name": "Albanien · 1. Liga",
+    "name": "Albania · Tier 1",
     "country": "ALB",
     "tier": 1,
     "teams": 18,
@@ -1220,7 +742,7 @@
   },
   {
     "id": "and-tier-1",
-    "name": "Andorra · 1. Liga",
+    "name": "Andorra · Tier 1",
     "country": "AND",
     "tier": 1,
     "teams": 18,
@@ -1234,7 +756,7 @@
   },
   {
     "id": "arm-tier-1",
-    "name": "Armenien · 1. Liga",
+    "name": "Armenia · Tier 1",
     "country": "ARM",
     "tier": 1,
     "teams": 18,
@@ -1248,7 +770,7 @@
   },
   {
     "id": "aze-tier-1",
-    "name": "Aserbaidschan · 1. Liga",
+    "name": "Azerbaijan · Tier 1",
     "country": "AZE",
     "tier": 1,
     "teams": 18,
@@ -1262,7 +784,7 @@
   },
   {
     "id": "bih-tier-1",
-    "name": "Bosnien und Herzegowina · 1. Liga",
+    "name": "Bosnia and Herzegovina · Tier 1",
     "country": "BIH",
     "tier": 1,
     "teams": 18,
@@ -1276,7 +798,7 @@
   },
   {
     "id": "bul-tier-1",
-    "name": "Bulgarien · 1. Liga",
+    "name": "Bulgaria · Tier 1",
     "country": "BUL",
     "tier": 1,
     "teams": 18,
@@ -1290,7 +812,7 @@
   },
   {
     "id": "cyp-tier-1",
-    "name": "Zypern · 1. Liga",
+    "name": "Cyprus · Tier 1",
     "country": "CYP",
     "tier": 1,
     "teams": 18,
@@ -1304,7 +826,7 @@
   },
   {
     "id": "cze-tier-2",
-    "name": "Tschechien · 2. Liga",
+    "name": "Czechia · Tier 2",
     "country": "CZE",
     "tier": 2,
     "teams": 18,
@@ -1318,7 +840,7 @@
   },
   {
     "id": "den-tier-2",
-    "name": "Dänemark · 2. Liga",
+    "name": "Denmark · Tier 2",
     "country": "DEN",
     "tier": 2,
     "teams": 18,
@@ -1332,7 +854,7 @@
   },
   {
     "id": "gib-tier-1",
-    "name": "Gibraltar · 1. Liga",
+    "name": "Gibraltar · Tier 1",
     "country": "GIB",
     "tier": 1,
     "teams": 18,
@@ -1345,22 +867,8 @@
     }
   },
   {
-    "id": "kvx-tier-1",
-    "name": "Kosovo · 1. Liga",
-    "country": "KVX",
-    "tier": 1,
-    "teams": 18,
-    "strength": 2,
-    "cup": null,
-    "continentalSlots": {
-      "primary": 0,
-      "secondary": 0,
-      "tertiary": 0
-    }
-  },
-  {
     "id": "lux-tier-1",
-    "name": "Luxemburg · 1. Liga",
+    "name": "Luxembourg · Tier 1",
     "country": "LUX",
     "tier": 1,
     "teams": 18,
@@ -1374,7 +882,7 @@
   },
   {
     "id": "mlt-tier-1",
-    "name": "Malta · 1. Liga",
+    "name": "Malta · Tier 1",
     "country": "MLT",
     "tier": 1,
     "teams": 18,
@@ -1388,7 +896,7 @@
   },
   {
     "id": "mda-tier-1",
-    "name": "Moldau · 1. Liga",
+    "name": "Moldova · Tier 1",
     "country": "MDA",
     "tier": 1,
     "teams": 18,
@@ -1402,7 +910,7 @@
   },
   {
     "id": "mne-tier-1",
-    "name": "Montenegro · 1. Liga",
+    "name": "Montenegro · Tier 1",
     "country": "MNE",
     "tier": 1,
     "teams": 18,
@@ -1416,7 +924,7 @@
   },
   {
     "id": "mkd-tier-1",
-    "name": "Nordmazedonien · 1. Liga",
+    "name": "North Macedonia · Tier 1",
     "country": "MKD",
     "tier": 1,
     "teams": 18,
@@ -1430,7 +938,7 @@
   },
   {
     "id": "nir-tier-1",
-    "name": "Nordirland · 1. Liga",
+    "name": "Northern Ireland · Tier 1",
     "country": "NIR",
     "tier": 1,
     "teams": 18,
@@ -1444,7 +952,7 @@
   },
   {
     "id": "pol-tier-2",
-    "name": "Polen · 2. Liga",
+    "name": "Poland · Tier 2",
     "country": "POL",
     "tier": 2,
     "teams": 18,
@@ -1458,7 +966,7 @@
   },
   {
     "id": "smr-tier-1",
-    "name": "San Marino · 1. Liga",
+    "name": "San Marino · Tier 1",
     "country": "SMR",
     "tier": 1,
     "teams": 18,
@@ -1472,7 +980,7 @@
   },
   {
     "id": "svk-tier-1",
-    "name": "Slowakei · 1. Liga",
+    "name": "Slovakia · Tier 1",
     "country": "SVK",
     "tier": 1,
     "teams": 18,
@@ -1486,7 +994,7 @@
   },
   {
     "id": "svn-tier-1",
-    "name": "Slowenien · 1. Liga",
+    "name": "Slovenia · Tier 1",
     "country": "SVN",
     "tier": 1,
     "teams": 18,
@@ -1500,7 +1008,7 @@
   },
   {
     "id": "sui-tier-2",
-    "name": "Schweiz · 2. Liga",
+    "name": "Switzerland · Tier 2",
     "country": "SUI",
     "tier": 2,
     "teams": 18,
@@ -1514,7 +1022,7 @@
   },
   {
     "id": "wal-tier-1",
-    "name": "Wales · 1. Liga",
+    "name": "Wales · Tier 1",
     "country": "WAL",
     "tier": 1,
     "teams": 18,
@@ -1528,7 +1036,7 @@
   },
   {
     "id": "nga-tier-2",
-    "name": "Nigeria · 2. Liga",
+    "name": "Nigeria · Tier 2",
     "country": "NGA",
     "tier": 2,
     "teams": 18,
@@ -1542,7 +1050,7 @@
   },
   {
     "id": "isr-tier-2",
-    "name": "Israel · 2. Liga",
+    "name": "Israel · Tier 2",
     "country": "ISR",
     "tier": 2,
     "teams": 18,

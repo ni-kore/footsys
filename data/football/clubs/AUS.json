@@ -36,23 +36,6 @@
       }
     },
     {
-      "id": "auckland-fc",
-      "league": "aus-a-league",
-      "name": "Auckland FC",
-      "short": "Auckland",
-      "abbr": "AUC",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "brisbane-roar",
       "league": "aus-a-league",
       "name": "Brisbane Roar",
@@ -177,40 +160,6 @@
       "name": "Sydney FC",
       "short": "Sydney",
       "abbr": "SYD",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "sieger-ef",
-      "league": "aus-a-league",
-      "name": "Sieger EF",
-      "short": "Sieger EF",
-      "abbr": "SIE",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "n-n",
-      "league": "aus-a-league",
-      "name": "N.N.",
-      "short": "N.N.",
-      "abbr": "NN",
       "city": "",
       "colors": [
         "#2B2B38",

@@ -36,23 +36,6 @@
       }
     },
     {
-      "id": "fc-ararat",
-      "league": "arm-tier-1",
-      "name": "FC Ararat",
-      "short": "FC Ararat",
-      "abbr": "ARA",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "fc-alashkert",
       "league": "arm-tier-1",
       "name": "FC Alashkert",

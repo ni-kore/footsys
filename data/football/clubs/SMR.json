@@ -121,23 +121,6 @@
       }
     },
     {
-      "id": "san-marino-academy",
-      "league": "smr-tier-1",
-      "name": "San Marino Academy",
-      "short": "San Marino",
-      "abbr": "SMA",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "ss-murata",
       "league": "smr-tier-1",
       "name": "SS Murata",

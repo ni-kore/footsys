@@ -70,23 +70,6 @@
       }
     },
     {
-      "id": "glacis-united-fc",
-      "league": "gib-tier-1",
-      "name": "Glacis United FC",
-      "short": "Glacis United",
-      "abbr": "GLU",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "lincoln-red-imps",
       "league": "gib-tier-1",
       "name": "Lincoln Red Imps",

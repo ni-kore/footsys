@@ -292,12 +292,12 @@ function shortName(name: string): string {
  * Feintuning passiert von Hand und bleibt beim nächsten Import erhalten.
  */
 function estimateReputation(tier: number, leagueStrength: number): Club['reputation'] {
-  const base = Math.max(0, Math.round(leagueStrength - (tier - 1) * 1.5) - 2);
-  const domestic = Math.min(4, Math.max(0, base)) as ReputationLevel;
+  const base = Math.max(0, Math.round(leagueStrength - (tier - 1) * 1.5) - 2) * 2;
+  const domestic = Math.min(8, Math.max(0, base)) as ReputationLevel;
   return {
     domestic,
-    continental: Math.max(0, domestic - 1) as ReputationLevel,
-    international: Math.max(0, domestic - 2) as ReputationLevel,
+    continental: Math.max(0, domestic - 2) as ReputationLevel,
+    international: Math.max(0, domestic - 4) as ReputationLevel,
   };
 }
 

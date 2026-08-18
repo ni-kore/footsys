@@ -13,9 +13,9 @@
         "#FEBE10"
       ],
       "reputation": {
-        "domestic": 5,
-        "continental": 5,
-        "international": 5
+        "domestic": 10,
+        "continental": 10,
+        "international": 10
       }
     },
     {
@@ -30,9 +30,9 @@
         "#004D98"
       ],
       "reputation": {
-        "domestic": 5,
-        "continental": 5,
-        "international": 5
+        "domestic": 10,
+        "continental": 10,
+        "international": 10
       }
     },
     {
@@ -47,9 +47,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 3,
-        "continental": 2,
-        "international": 3
+        "domestic": 6,
+        "continental": 5,
+        "international": 6
       }
     },
     {
@@ -64,9 +64,9 @@
         "#005187"
       ],
       "reputation": {
-        "domestic": 3,
-        "continental": 2,
-        "international": 3
+        "domestic": 6,
+        "continental": 5,
+        "international": 6
       }
     },
     {
@@ -81,9 +81,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
-        "international": 3
+        "domestic": 5,
+        "continental": 3,
+        "international": 6
       }
     },
     {
@@ -98,9 +98,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 3,
-        "continental": 2,
-        "international": 3
+        "domestic": 6,
+        "continental": 5,
+        "international": 6
       }
     },
     {
@@ -115,9 +115,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 2,
-        "international": 4
+        "domestic": 5,
+        "continental": 5,
+        "international": 8
       }
     },
     {
@@ -132,9 +132,9 @@
         "#F18E00"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
-        "international": 3
+        "domestic": 5,
+        "continental": 3,
+        "international": 6
       }
     },
     {
@@ -149,9 +149,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
-        "international": 2
+        "domestic": 4,
+        "continental": 3,
+        "international": 4
       }
     },
     {
@@ -166,9 +166,9 @@
         "#E53027"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 1
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -183,9 +183,9 @@
         "#0A346F"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 1
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -200,9 +200,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 1
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -217,9 +217,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
-        "international": 2
+        "domestic": 4,
+        "continental": 3,
+        "international": 4
       }
     },
     {
@@ -234,9 +234,9 @@
         "#000000"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 1
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -251,9 +251,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 2
+        "domestic": 3,
+        "continental": 1,
+        "international": 4
       }
     },
     {
@@ -268,9 +268,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 1
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -285,9 +285,9 @@
         "#0067B1"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 1
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -319,9 +319,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 1
+        "domestic": 1,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -336,9 +336,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 2
+        "domestic": 3,
+        "continental": 1,
+        "international": 4
       }
     },
     {
@@ -353,9 +353,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 1
+        "domestic": 1,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -370,9 +370,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 1
+        "domestic": 1,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -387,9 +387,9 @@
         "#B4053C"
       ],
       "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 1
+        "domestic": 1,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -404,9 +404,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 1
+        "domestic": 1,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -421,9 +421,9 @@
         "#0066B3"
       ],
       "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 1
+        "domestic": 1,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -438,9 +438,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 1
+        "domestic": 1,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -472,9 +472,9 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 3,
-        "continental": 2,
-        "international": 1
+        "domestic": 6,
+        "continental": 4,
+        "international": 2
       }
     },
     {
@@ -489,9 +489,9 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 3,
-        "continental": 2,
-        "international": 1
+        "domestic": 6,
+        "continental": 4,
+        "international": 2
       }
     },
     {
@@ -506,9 +506,9 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 3,
-        "continental": 2,
-        "international": 1
+        "domestic": 6,
+        "continental": 4,
+        "international": 2
       }
     },
     {

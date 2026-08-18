@@ -9,7 +9,7 @@
  *   npm run sim -- --runs 500 --mode normal --position ST --country GER
  */
 
-import { careerTotals, createCareer, decide, titleName } from '../career';
+import { acknowledge, careerTotals, createCareer, decide, kickOff, titleName } from '../career';
 import { loadGameData } from '../data-node';
 import { Rng } from '../rng';
 import type { CareerState, GameMode, PositionId } from '../types';
@@ -45,16 +45,19 @@ function playCareer(data: ReturnType<typeof loadGameData>, args: Args, seed: str
       surname: 'Test',
       shirtNumber: 10,
       strongFoot: 'right',
+  weakFoot: 3,
       nationality: args.country,
       position: args.position,
+      formationId: '4-2-3-1',
     },
   });
 
   let guard = 0;
-  while (state.pending && !state.retired) {
-    if (guard++ > 300) throw new Error('Karriere endet nicht — Endlosschleife in advance()');
-    const option = chooser.pick(state.pending.options);
-    state = decide(data, state, option.id);
+  while (!state.retired && (state.pending || state.pendingReport || state.pendingKickoff)) {
+    if (guard++ > 3000) throw new Error('Karriere endet nicht — Endlosschleife');
+    if (state.pendingKickoff) state = kickOff(data, state);
+    else if (state.pendingReport) state = acknowledge(data, state);
+    else state = decide(data, state, chooser.pick(state.pending!.options).id);
   }
   return state;
 }

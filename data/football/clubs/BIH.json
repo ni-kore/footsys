@@ -2,23 +2,6 @@
   "country": "BIH",
   "clubs": [
     {
-      "id": "nk-gosk-gabela",
-      "league": "bih-tier-1",
-      "name": "NK GOŠK Gabela",
-      "short": "NK GOŠK Gabela",
-      "abbr": "NGG",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "radnik-bijeljina",
       "league": "bih-tier-1",
       "name": "Radnik Bijeljina",
@@ -41,23 +24,6 @@
       "name": "Željezničar Sarajevo",
       "short": "Željezničar Sarajevo",
       "abbr": "ŽES",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "siroki-brijeg",
-      "league": "bih-tier-1",
-      "name": "Široki Brijeg",
-      "short": "Široki Brijeg",
-      "abbr": "ŠIB",
       "city": "",
       "colors": [
         "#2B2B38",

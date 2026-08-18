@@ -1,26 +1,35 @@
 import React, { useCallback, useRef, useState } from 'react';
 import { SafeAreaView, StatusBar, StyleSheet, View } from 'react-native';
 import {
-  createCareer, decide,
+  acknowledge, createCareer, decide, kickOff,
   type CareerState, type GameData, type GameMode, type PlayerIdentity,
 } from '@footsys/engine';
 import { freshGameData } from './src/game-data';
+import { installWebStyles } from './src/web-styles';
 import { color } from './src/theme';
-import { StartScreen } from './src/screens/StartScreen';
+import { IdentityScreen } from './src/screens/IdentityScreen';
+import { DecisionScreen } from './src/screens/DecisionScreen';
+import { CareerStartScreen } from './src/screens/CareerStartScreen';
+import { KickoffScreen } from './src/screens/KickoffScreen';
+import { CareerLayout } from './src/components/CareerLayout';
+import { ReportScreen } from './src/screens/ReportScreen';
 import { CareerScreen } from './src/screens/CareerScreen';
 import { EndScreen } from './src/screens/EndScreen';
-import { DecisionSheet } from './src/screens/DecisionSheet';
 
 /**
  * footsys.
  *
- * Die Engine hält den gesamten Spielstand; die App ist nur Anzeige und
- * Eingabe. Jede Entscheidung erzeugt einen neuen Zustand — es wird nichts
- * an Ort und Stelle verändert.
+ * Immer genau ein Bildschirm. Die Engine hält nach jedem Schritt an, und erst
+ * eine Eingabe bringt den nächsten: Identität → Entscheidung → Bericht →
+ * Entscheidung → … → Karriereende. Die Karriereübersicht liegt darüber und
+ * unterbricht den Ablauf nicht.
  */
+installWebStyles();
+
 export default function App() {
   const dataRef = useRef<GameData | null>(null);
   const [state, setState] = useState<CareerState | null>(null);
+  const [careerOpen, setCareerOpen] = useState(false);
 
   const start = useCallback((identity: PlayerIdentity, mode: GameMode) => {
     // Frische Daten je Karriere: Auf- und Abstiege verändern die Vereine.
@@ -35,7 +44,20 @@ export default function App() {
     setState((current) => (current && data ? decide(data, current, optionId) : current));
   }, []);
 
-  const restart = useCallback(() => setState(null), []);
+  const advance = useCallback(() => {
+    const data = dataRef.current;
+    setState((current) => (current && data ? acknowledge(data, current) : current));
+  }, []);
+
+  const startSeason = useCallback(() => {
+    const data = dataRef.current;
+    setState((current) => (current && data ? kickOff(data, current) : current));
+  }, []);
+
+  const restart = useCallback(() => {
+    setState(null);
+    setCareerOpen(false);
+  }, []);
 
   const data = dataRef.current;
 
@@ -43,21 +65,41 @@ export default function App() {
     <View style={styles.root}>
       <StatusBar barStyle="light-content" backgroundColor={color.bg.root} />
       <SafeAreaView style={styles.root}>
-        {!state || !data ? (
-          <StartScreen onStart={start} />
-        ) : state.retired ? (
-          <EndScreen data={data} state={state} onRestart={restart} />
-        ) : (
-          <>
-            <CareerScreen data={data} state={state} />
-            {state.pending ? (
-              <DecisionSheet data={data} decision={state.pending} onChoose={choose} />
-            ) : null}
-          </>
-        )}
+        {renderScreen()}
       </SafeAreaView>
     </View>
   );
+
+  function renderScreen() {
+    if (!state || !data) return <IdentityScreen onStart={start} />;
+    if (state.retired) return <EndScreen data={data} state={state} onRestart={restart} />;
+
+    if (careerOpen) {
+      return <CareerScreen data={data} state={state} onClose={() => setCareerOpen(false)} />;
+    }
+
+    // Der Auftakt liegt über allem: dort gibt es noch keinen Verein und
+    // damit auch noch keine Spielerkarte.
+    if (state.pending?.eventId === 'academy_offer') {
+      return (
+        <CareerStartScreen data={data} state={state} decision={state.pending} onChoose={choose} />
+      );
+    }
+
+    // Alles Laufende teilt sich dieselbe Fläche: links die Spielerkarte,
+    // rechts das, was gerade ansteht.
+    return (
+      <CareerLayout data={data} state={state} onOpenCareer={() => setCareerOpen(true)}>
+        {state.pendingKickoff ? (
+          <KickoffScreen data={data} state={state} onStart={startSeason} />
+        ) : state.pendingReport ? (
+          <ReportScreen data={data} report={state.pendingReport} onContinue={advance} />
+        ) : state.pending ? (
+          <DecisionScreen data={data} decision={state.pending} onChoose={choose} />
+        ) : null}
+      </CareerLayout>
+    );
+  }
 }
 
 const styles = StyleSheet.create({

@@ -104,23 +104,6 @@
       }
     },
     {
-      "id": "sporting-fc",
-      "league": "crc-primera-division",
-      "name": "Sporting FC",
-      "short": "Sporting",
-      "abbr": "SPO",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "deportivo-saprissa",
       "league": "crc-primera-division",
       "name": "Deportivo Saprissa",

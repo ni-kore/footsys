@@ -13,9 +13,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 5,
-        "continental": 5,
-        "international": 5
+        "domestic": 10,
+        "continental": 10,
+        "international": 10
       }
     },
     {
@@ -30,9 +30,9 @@
         "#000000"
       ],
       "reputation": {
-        "domestic": 4,
-        "continental": 4,
-        "international": 5
+        "domestic": 9,
+        "continental": 9,
+        "international": 10
       }
     },
     {
@@ -47,9 +47,9 @@
         "#000000"
       ],
       "reputation": {
-        "domestic": 4,
-        "continental": 4,
-        "international": 3
+        "domestic": 8,
+        "continental": 8,
+        "international": 6
       }
     },
     {
@@ -64,9 +64,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 4,
-        "continental": 3,
-        "international": 3
+        "domestic": 8,
+        "continental": 6,
+        "international": 6
       }
     },
     {
@@ -81,9 +81,9 @@
         "#000000"
       ],
       "reputation": {
-        "domestic": 3,
-        "continental": 3,
-        "international": 3
+        "domestic": 6,
+        "continental": 6,
+        "international": 6
       }
     },
     {
@@ -98,9 +98,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 3,
-        "continental": 2,
-        "international": 2
+        "domestic": 6,
+        "continental": 4,
+        "international": 4
       }
     },
     {
@@ -115,9 +115,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
-        "international": 2
+        "domestic": 4,
+        "continental": 3,
+        "international": 4
       }
     },
     {
@@ -132,9 +132,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
-        "international": 2
+        "domestic": 4,
+        "continental": 3,
+        "international": 4
       }
     },
     {
@@ -149,9 +149,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
-        "international": 2
+        "domestic": 4,
+        "continental": 3,
+        "international": 4
       }
     },
     {
@@ -166,9 +166,9 @@
         "#E2001A"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
-        "international": 1
+        "domestic": 4,
+        "continental": 2,
+        "international": 2
       }
     },
     {
@@ -183,9 +183,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
-        "international": 1
+        "domestic": 4,
+        "continental": 2,
+        "international": 2
       }
     },
     {
@@ -200,9 +200,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
-        "international": 1
+        "domestic": 4,
+        "continental": 2,
+        "international": 2
       }
     },
     {
@@ -217,9 +217,9 @@
         "#FFEE00"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
-        "international": 1
+        "domestic": 4,
+        "continental": 2,
+        "international": 2
       }
     },
     {
@@ -234,9 +234,9 @@
         "#46714D"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 1
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -251,9 +251,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 2
+        "domestic": 3,
+        "continental": 1,
+        "international": 4
       }
     },
     {
@@ -268,7 +268,7 @@
         "#003D7C"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -285,7 +285,7 @@
         "#E2001A"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -302,7 +302,7 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -319,9 +319,9 @@
         "#000000"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 2
+        "domestic": 3,
+        "continental": 1,
+        "international": 4
       }
     },
     {
@@ -336,9 +336,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 3
+        "domestic": 3,
+        "continental": 1,
+        "international": 6
       }
     },
     {
@@ -353,9 +353,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 2
+        "domestic": 3,
+        "continental": 1,
+        "international": 4
       }
     },
     {
@@ -370,9 +370,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 2
+        "domestic": 3,
+        "continental": 1,
+        "international": 4
       }
     },
     {
@@ -387,9 +387,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 1
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -404,9 +404,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 1
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -421,9 +421,9 @@
         "#000000"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 1
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -438,9 +438,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 1
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -455,7 +455,7 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -472,7 +472,7 @@
         "#000000"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -665,23 +665,6 @@
       }
     },
     {
-      "id": "rot-weiss-essen",
-      "league": "ger-3-liga",
-      "name": "Rot-Weiss Essen",
-      "short": "Essen",
-      "abbr": "RWE",
-      "city": "Essen",
-      "colors": [
-        "#E30613",
-        "#FFFFFF"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "msv-duisburg",
       "league": "ger-3-liga",
       "name": "MSV Duisburg",
@@ -710,9 +693,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 1
+        "domestic": 1,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -721,23 +704,6 @@
       "name": "Alemannia Aachen",
       "short": "Alemannia Aachen",
       "abbr": "ALA",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "erzgebirge-aue",
-      "league": "ger-3-liga",
-      "name": "Erzgebirge Aue",
-      "short": "Erzgebirge Aue",
-      "abbr": "ERA",
       "city": "",
       "colors": [
         "#2B2B38",
@@ -770,7 +736,7 @@
       "id": "borussia-dortmund-ii",
       "league": "ger-3-liga",
       "name": "Borussia Dortmund II",
-      "short": "Borussia Dortmund",
+      "short": "Borussia Dortmund II",
       "abbr": "BDI",
       "city": "",
       "colors": [
@@ -974,7 +940,7 @@
       "id": "bayern-muenchen-ii",
       "league": "ger-tier-4",
       "name": "Bayern München II",
-      "short": "Bayern München",
+      "short": "Bayern München II",
       "abbr": "BMI",
       "city": "",
       "colors": [
@@ -1178,7 +1144,7 @@
       "id": "spvgg-greuther-fuerth-ii",
       "league": "ger-tier-4",
       "name": "SpVgg Greuther Fürth II",
-      "short": "SpVgg Greuther",
+      "short": "SpVgg Greuther II",
       "abbr": "GFI",
       "city": "",
       "colors": [
@@ -1277,23 +1243,6 @@
       }
     },
     {
-      "id": "ssv-jeddeloh-ii",
-      "league": "ger-tier-4",
-      "name": "SSV Jeddeloh II",
-      "short": "SSV Jeddeloh II",
-      "abbr": "SJI",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "fc-st-pauli-ii",
       "league": "ger-tier-4",
       "name": "FC St. Pauli II",
@@ -1350,23 +1299,6 @@
       "name": "Eintracht Norderstedt",
       "short": "Eintracht Norderstedt",
       "abbr": "EIN",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "vfb-oldenburg",
-      "league": "ger-tier-4",
-      "name": "VfB Oldenburg",
-      "short": "VfB Oldenburg",
-      "abbr": "OLD",
       "city": "",
       "colors": [
         "#2B2B38",
@@ -1875,7 +1807,7 @@
       "id": "eintracht-frankfurt-ii",
       "league": "ger-tier-4",
       "name": "Eintracht Frankfurt II",
-      "short": "Eintracht Frankfurt",
+      "short": "Eintracht Frankfurt II",
       "abbr": "EFI",
       "city": "",
       "colors": [
@@ -1911,23 +1843,6 @@
       "name": "FC Gießen",
       "short": "FC Gießen",
       "abbr": "GIE",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "fc-astoria-walldorf",
-      "league": "ger-tier-4",
-      "name": "FC-Astoria Walldorf",
-      "short": "FC-Astoria Walldorf",
-      "abbr": "ASW",
       "city": "",
       "colors": [
         "#2B2B38",
@@ -2147,25 +2062,8 @@
       "id": "fortuna-duesseldorf-ii",
       "league": "ger-tier-4",
       "name": "Fortuna Düsseldorf II",
-      "short": "Fortuna Düsseldorf",
+      "short": "Fortuna Düsseldorf II",
       "abbr": "FDI",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "sc-paderborn-07-ii",
-      "league": "ger-tier-4",
-      "name": "SC Paderborn 07 II",
-      "short": "SC Paderborn",
-      "abbr": "PAI",
       "city": "",
       "colors": [
         "#2B2B38",
@@ -2215,7 +2113,7 @@
       "id": "bor-moenchengladbach-ii",
       "league": "ger-tier-4",
       "name": "Bor. Mönchengladbach II",
-      "short": "Bor. Mönchengladbach",
+      "short": "Bor. Mönchengladbach II",
       "abbr": "BMI",
       "city": "",
       "colors": [
@@ -2268,23 +2166,6 @@
       "name": "SC Wiedenbrück",
       "short": "SC Wiedenbrück",
       "abbr": "WIE",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "fc-schalke-04-ii",
-      "league": "ger-tier-4",
-      "name": "FC Schalke 04 II",
-      "short": "FC Schalke 04 II",
-      "abbr": "SCI",
       "city": "",
       "colors": [
         "#2B2B38",

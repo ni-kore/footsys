@@ -30,7 +30,6 @@ import clubsHUN from '../../../data/football/clubs/HUN.json';
 import clubsISR from '../../../data/football/clubs/ISR.json';
 import clubsITA from '../../../data/football/clubs/ITA.json';
 import clubsKSA from '../../../data/football/clubs/KSA.json';
-import clubsKVX from '../../../data/football/clubs/KVX.json';
 import clubsLUX from '../../../data/football/clubs/LUX.json';
 import clubsMAR from '../../../data/football/clubs/MAR.json';
 import clubsMDA from '../../../data/football/clubs/MDA.json';
@@ -85,7 +84,6 @@ export const clubFiles = [
   clubsISR,
   clubsITA,
   clubsKSA,
-  clubsKVX,
   clubsLUX,
   clubsMAR,
   clubsMDA,

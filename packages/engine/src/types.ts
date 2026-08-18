@@ -20,8 +20,8 @@ export type ConfederationId = 'UEFA' | 'CONMEBOL' | 'CONCACAF' | 'AFC' | 'CAF' |
 /** FIFA-Ländercode, dreistellig, z. B. "GER". */
 export type CountryCode = string;
 
-/** 0 = unbedeutend, 5 = Weltspitze. Wird für Vereine verwendet. */
-export type ReputationLevel = 0 | 1 | 2 | 3 | 4 | 5;
+/** 0 = unbedeutend, 10 = Weltspitze. Wird für Vereine verwendet. */
+export type ReputationLevel = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 
 /** 1 = sehr schwach, 5 = Weltklasse. Wird für Nationen und Ligen verwendet. */
 export type StrengthLevel = 1 | 2 | 3 | 4 | 5;
@@ -90,6 +90,10 @@ export interface Formation {
   /** 0 = extrem defensiv, 1 = extrem offensiv. */
   attackingBias: number;
   historic?: boolean;
+  /** Systeme, die zu jeder Spielweise passen. Betrifft nur das 4-4-2. */
+  neutral?: boolean;
+  /** Im Karrierestart auswählbar. Die übrigen Systeme bleiben für später hinterlegt. */
+  selectable?: boolean;
   slots: FormationSlot[];
 }
 
@@ -226,6 +230,8 @@ export interface EventModifiers {
   assistMultiplier?: number;
   /** Anteil der nächsten Halbserie, der verletzungsbedingt ausfällt (0–1). */
   missShare?: number;
+  /** Faktor auf die Anhängerschaft. */
+  fansMultiplier?: number;
   /** Nur Zufallsereignisse. */
   clubReputationDelta?: number;
   leagueMove?: 'promotion' | 'relegation';
@@ -295,6 +301,8 @@ export interface CareerEvent {
   requires?: EventRequirements;
   variants?: EventVariant[];
   variantsFrom?: string;
+  /** Heikle Lage — tritt bei temperamentvollen Spielern häufiger ein. */
+  risky?: boolean;
   title: LocalizedText;
   text: LocalizedText;
   options: EventOption[];
@@ -334,8 +342,23 @@ export interface PlayerIdentity {
   surname: string;
   shirtNumber: number;
   strongFoot: 'left' | 'right';
+  /**
+   * Beidfüßigkeit, 1–5. Wer den zweiten Fuß beherrscht, ist im Abschluss
+   * gefährlicher und passt in mehr Systeme.
+   */
+  weakFoot: 1 | 2 | 3 | 4 | 5;
   nationality: CountryCode;
+  /**
+   * Zweiter Pass. Erweitert den Kreis der Jugendvereine und ist das Land, in
+   * das ein Verbandswechsel später führt.
+   */
+  secondNationality?: CountryCode;
   position: PositionId;
+  /**
+   * Bevorzugtes System. Bestimmt, welche Positionen überhaupt wählbar sind,
+   * und wirkt über den Offensivgrad der Formation auf Tore und Vorlagen.
+   */
+  formationId: string;
 }
 
 export interface PlayerState extends PlayerIdentity {
@@ -351,9 +374,30 @@ export interface PlayerState extends PlayerIdentity {
   developmentProfile: DevelopmentProfileId;
   isCaptain: boolean;
   meters: Meters;
+  /**
+   * Anhängerschaft in Köpfen. Beginnt bei zwei und wächst mit Leistung und
+   * Bühne. Die Stimmung dieser Leute steht im Meter `fanSupport`.
+   */
+  fans: number;
+
   /** Länderspiele insgesamt. */
   caps: number;
   nationalGoals: number;
+
+  /**
+   * 0–100. Steigt mit dem linken Fuß und einem starken zweiten Fuß. Solche
+   * Spieler sind begabter, geraten aber öfter in heikle Situationen.
+   */
+  temperament: number;
+
+  /** Verband, für den gespielt wird. Ab dem A-Länderspiel bindend. */
+  nationalTeam: CountryCode | null;
+  /** Alter beim ersten A-Länderspiel — davor sind Wechsel erlaubt. */
+  firstSeniorCapAge: number | null;
+  /** Saisons je Land, aus denen sich eine Einbürgerung ergeben kann. */
+  seasonsInCountry: Record<CountryCode, number>;
+  /** Der beste Spieler aller Zeiten, freigeschaltet über den Namen. */
+  legend: boolean;
 }
 
 /** Ergebnis einer Halbserie — die kleinste simulierte Einheit. */
@@ -407,6 +451,8 @@ export interface PendingOption {
 export interface PendingDecision {
   kind: 'structural' | 'career';
   eventId: string;
+  /** Beim Verbandswechsel: das Land, um das es geht. */
+  alternativeCountry?: CountryCode;
   window: 'summer' | 'winter' | 'start';
   title: LocalizedText;
   text: string;
@@ -420,6 +466,40 @@ export interface TimelineEntry {
   type: 'transfer' | 'loan' | 'title' | 'award' | 'random_event' | 'decision' | 'injury' | 'retirement';
   text: string;
   detail?: string;
+}
+
+/** Ergebnis einer Halbserie oder einer ganzen Saison, für die Anzeige. */
+export interface PeriodReport {
+  kind: 'half' | 'season';
+  year: number;
+  half: SeasonHalf;
+  clubId: string;
+  leagueId: string;
+  role: SquadRole;
+  appearances: number;
+  goals: number;
+  assists: number;
+  cleanSheets: number;
+  overallBefore: number;
+  overallAfter: number;
+  marketValueBefore: number;
+  marketValueAfter: number;
+  randomEvents: { id: string; title: LocalizedText; text: string; tone: string }[];
+  /** Auf welcher Position gespielt wurde. */
+  position: PositionId;
+  /** Anhängerschaft vor und nach der Halbserie. */
+  fansBefore: number;
+  fansAfter: number;
+  /** Offensivgrad des Trainers in dieser Halbserie, 0–1. */
+  coachBias: number;
+  /** Wie gut das Lieblingssystem dazu passte, 0,7–1. */
+  formationFit: number;
+  /** Nur bei kind === 'season'. */
+  titles: string[];
+  awards: string[];
+  nationalCaps: number;
+  nationalGoals: number;
+  age: number;
 }
 
 export interface CareerState {
@@ -443,6 +523,14 @@ export interface CareerState {
   currentSeasonNationalGoals: number;
   seasons: SeasonRecord[];
   pending: PendingDecision | null;
+  /** Ergebnis der zuletzt simulierten Halbserie, wartet auf Bestätigung. */
+  pendingReport: PeriodReport | null;
+  /** Die Saison wartet auf den Anpfiff. */
+  pendingKickoff: boolean;
+  /** Ob die laufende Saison schon angepfiffen wurde. */
+  seasonStarted: boolean;
+  /** Welche Entscheidung nach dem Bericht ansteht. */
+  reportContext: 'winter' | 'summer' | null;
   /** Von einem Ereignis erzwungener Wechsel, der beim nächsten Schritt ausgeführt wird. */
   pendingTransfer: { scope: TransferScope; leagueStrengthMax?: number } | null;
   activeEffects: ActiveEffect[];
@@ -451,6 +539,9 @@ export interface CareerState {
   randomEventHistory: { id: string; year: number }[];
   suspensionHalves: number;
   lastInjuryYear: number | null;
+  /** Spielweise des Trainers und Passung aus der zuletzt gerechneten Halbserie. */
+  lastCoachBias: number;
+  lastFormationFit: number;
   timeline: TimelineEntry[];
   retired: boolean;
 }

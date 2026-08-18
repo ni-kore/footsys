@@ -36,23 +36,6 @@
       }
     },
     {
-      "id": "olympique-akbou",
-      "league": "alg-ligue-1",
-      "name": "Olympique Akbou",
-      "short": "Olympique Akbou",
-      "abbr": "OLA",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "nc-magra",
       "league": "alg-ligue-1",
       "name": "NC Magra",

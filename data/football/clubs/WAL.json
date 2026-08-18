@@ -87,23 +87,6 @@
       }
     },
     {
-      "id": "cardiff-metropolitan",
-      "league": "wal-tier-1",
-      "name": "Cardiff Metropolitan",
-      "short": "Cardiff Metropolitan",
-      "abbr": "CAM",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "haverfordwest-county",
       "league": "wal-tier-1",
       "name": "Haverfordwest County",

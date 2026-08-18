@@ -1,5 +1,7 @@
 import { clubOf, countryOf, countryOfClub, leagueOf, positionOf, type GameData } from './data';
-import { byNumericKey, clamp, computeRole, interpolate, marketValue, roleAtLeast, seasonOverallDelta, shiftRole, stepTable } from './progression';
+import { activeAssociation, recordSeasonInCountry } from './national-team';
+import { fanInfluence } from './fans';
+import { byNumericKey, clamp, clampOverall, computeRole, interpolate, marketValue, roleAtLeast, seasonOverallDelta, shiftRole, stepTable } from './progression';
 import type { Rng } from './rng';
 import type {
   CareerState, ClubCompetition, EventModifiers, HalfSeasonRecord, NationalCompetition,
@@ -121,34 +123,71 @@ export function simulateHalf(data: GameData, rng: Rng, state: CareerState): Half
     return record;
   }
 
+  // Die Spielweise des Trainers wird je Halbserie neu gezogen. Sie bestimmt,
+  // wie viele Chancen entstehen — und wie gut das Lieblingssystem des Spielers
+  // dazu passt. Wer die Fünferkette liebt und bei einem Offensivtrainer landet,
+  // steht seltener auf dem Platz.
+  const fitConfig = data.progression.formationFit;
+  const formation = data.formations.find((f) => f.id === state.player.formationId);
+  const playerBias = formation ? formation.attackingBias : 0.5;
+  const [coachMin, coachMax] = fitConfig.coachBiasRange as [number, number];
+  const coachBias = rng.float(coachMin, coachMax);
+  // Das 4-4-2 ist das System, mit dem jeder Trainer etwas anfangen kann.
+  const neutralSystem = formation?.neutral === true;
+  // Beidfüßige Spieler sind vielseitiger — bei ihnen fällt ein unpassendes
+  // System weniger ins Gewicht.
+  const weakFootConfig = data.progression.weakFoot;
+  const relief = (weakFootConfig.fitRelief as Record<string, number>)[String(state.player.weakFoot)] ?? 0;
+  const weakFootOutput = (weakFootConfig.outputMultiplier as Record<string, number>)[String(state.player.weakFoot)] ?? 1;
+
+  const biasGap = neutralSystem ? 0 : Math.abs(coachBias - playerBias) * (1 - relief);
+  const fit = clamp(1 - biasGap * (fitConfig.penaltyPerGap as number), fitConfig.minMultiplier as number, 1);
+
+  const attackMultiplier = 0.82 + coachBias * 0.42;
+  const defenceMultiplier = 1.15 - coachBias * 0.3;
+
+  state.lastCoachBias = coachBias;
+  state.lastFormationFit = fit;
+
   const matches = matchesInHalf(data, state);
   const shareRange = data.progression.roles.appearanceShare[role] as [number, number];
   const availability = 1 - clamp(effects.missShare ?? 0, 0, 1);
 
   const appearances = Math.round(
-    matches * rng.float(shareRange[0], shareRange[1]) * availability * (effects.appearanceMultiplier ?? 1),
+    matches * rng.float(shareRange[0], shareRange[1]) * availability
+    * (effects.appearanceMultiplier ?? 1) * fit,
   );
   record.appearances = Math.max(0, appearances);
 
   const teamQuality = season.teamQualityMultiplier[String(club.reputation.domestic)] as number;
   const output = data.progression.roles.outputMultiplier[role] as number;
-  const [varMin, varMax] = season.variance as [number, number];
+
+  // Linksfüßer gelten als kreativer, aber unbeständiger; Rechtsfüßer liefern
+  // verlässlicher ab. Das zeigt sich in den Vorlagen und in der Schwankung.
+  const footTraits = data.progression.traits.strongFoot[state.player.strongFoot];
+  const [baseMin, baseMax] = season.variance as [number, number];
+  const spread = ((baseMax - baseMin) / 2) * (footTraits.varianceFactor as number);
+  const varMin = 1 - spread;
+  const varMax = 1 + spread;
 
   const goalRate = stepTable(season.goalRateByOverall.table, state.player.overall);
   const assistRate = stepTable(season.assistRateByOverall.table, state.player.overall);
 
   record.goals = Math.round(
     record.appearances * goalRate * position.goalFactor * teamQuality * output *
-    (effects.goalMultiplier ?? 1) * rng.float(varMin, varMax),
+    (effects.goalMultiplier ?? 1) * attackMultiplier * weakFootOutput * rng.float(varMin, varMax),
   );
   record.assists = Math.round(
     record.appearances * assistRate * position.assistFactor * teamQuality * output *
-    (effects.assistMultiplier ?? 1) * rng.float(varMin, varMax),
+    (effects.assistMultiplier ?? 1) * attackMultiplier * weakFootOutput
+    * (footTraits.assistFactor as number) * rng.float(varMin, varMax),
   );
 
   if (position.tracksCleanSheets) {
     const rate = stepTable(season.cleanSheetRateByOverall.table, state.player.overall);
-    record.cleanSheets = Math.round(record.appearances * rate * teamQuality * rng.float(varMin, varMax));
+    record.cleanSheets = Math.round(
+      record.appearances * rate * teamQuality * defenceMultiplier * rng.float(varMin, varMax),
+    );
   }
 
   simulateNationalTeamHalf(data, rng, state, effects, record.appearances > 0);
@@ -159,12 +198,24 @@ function simulateNationalTeamHalf(
   data: GameData, rng: Rng, state: CareerState, effects: EventModifiers, played: boolean,
 ): void {
   if (effects.nationalTeam === 'skip' || !played) return;
-  if (!isEligibleForNationalTeam(data, state)) return;
+
+  const association = activeAssociation(data, state);
+  if (!association) return;
 
   const [min, max] = data.progression.nationalTeam.capsPerSeason as [number, number];
   const caps = Math.round(rng.int(min, max) / 2);
+  if (caps === 0) return;
+
   const position = positionOf(data, state.player.position);
   const goals = Math.round(caps * position.goalFactor * 0.35 * rng.float(0.6, 1.4));
+
+  state.player.nationalTeam = association;
+  // Ab dem festgelegten Alter zählen die Spiele als A-Länderspiele und binden
+  // den Verband.
+  const lockAge = data.progression.nationalTeam.aTeamLockAge as number;
+  if (state.player.firstSeniorCapAge === null && state.player.age >= lockAge) {
+    state.player.firstSeniorCapAge = state.player.age;
+  }
 
   state.currentSeasonCaps += caps;
   state.currentSeasonNationalGoals += goals;
@@ -173,9 +224,7 @@ function simulateNationalTeamHalf(
 }
 
 export function isEligibleForNationalTeam(data: GameData, state: CareerState): boolean {
-  const country = countryOf(data, state.player.nationality);
-  const threshold = data.progression.nationalTeam.minOverallByCountryStrength[String(country.strength)] as number;
-  return state.player.overall >= threshold;
+  return activeAssociation(data, state) !== null;
 }
 
 // ------------------------------------------------------ Saisonabschluss
@@ -227,6 +276,7 @@ export function closeSeason(data: GameData, rng: Rng, state: CareerState): Seaso
 }
 
 function applyEndOfSeasonProgression(data: GameData, rng: Rng, state: CareerState, role: SquadRole): void {
+  recordSeasonInCountry(data, state);
   state.player.age += 1;
 
   const poorPlayingTime = role === 'substitute' || role === 'low_rotation';
@@ -245,9 +295,10 @@ function applyEndOfSeasonProgression(data: GameData, rng: Rng, state: CareerStat
   // Sehr hohe Moral gibt einen kleinen Schub.
   if (state.player.meters.morale > 85) overall += 1;
 
-  state.player.overall = clamp(
-    overall, data.progression.career.overallMin, data.progression.career.overallMax,
-  );
+  // Eine große Anhängerschaft trägt oder erdrückt, je nach Stimmung.
+  overall += fanInfluence(data, state);
+
+  state.player.overall = clampOverall(data, overall, state.player.potential);
 
   driftMeters(data, state);
   state.player.marketValue = marketValue(data, rng, state.player.overall, state.player.age);
@@ -324,7 +375,8 @@ function rollNationalTitles(data: GameData, rng: Rng, state: CareerState, effect
   if (effects.nationalTeam === 'skip') return [];
   if (state.currentSeasonCaps === 0) return [];
 
-  const country = countryOf(data, state.player.nationality);
+  const association = state.player.nationalTeam ?? state.player.nationality;
+  const country = countryOf(data, association);
   const odds = data.trophyOdds.national;
   const difficulty = odds.confederationDifficulty[country.confederation] as number;
   const titles: string[] = [];

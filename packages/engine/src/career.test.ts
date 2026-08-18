@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { careerTotals, createCareer, decide } from './career';
+import { acknowledge, careerTotals, createCareer, decide, kickOff } from './career';
 import { loadGameData } from './data-node';
+import { ACADEMY_OFFERS } from './events';
 import { Rng } from './rng';
 import { computeRole } from './progression';
 import type { CareerState, GameData, PlayerIdentity } from './index';
@@ -10,8 +11,10 @@ const identity: PlayerIdentity = {
   surname: 'Kofidis',
   shirtNumber: 10,
   strongFoot: 'right',
+  weakFoot: 3,
   nationality: 'GER',
   position: 'AM',
+  formationId: '4-2-3-1',
 };
 
 /** Spielt eine Karriere zu Ende und trifft dabei reproduzierbare Entscheidungen. */
@@ -19,9 +22,12 @@ function playThrough(data: GameData, seed: string): CareerState {
   const chooser = new Rng(`${seed}:choices`);
   let state = createCareer(data, { seed, mode: 'normal', identity });
   let guard = 0;
-  while (state.pending && !state.retired) {
-    assert.ok(guard++ < 300, 'Karriere endet nicht');
-    state = decide(data, state, chooser.pick(state.pending.options).id);
+  // Die Engine hält nach jedem Schritt an: Bericht bestätigen oder wählen.
+  while (!state.retired && (state.pending || state.pendingReport || state.pendingKickoff)) {
+    assert.ok(guard++ < 2000, 'Karriere endet nicht');
+    if (state.pendingKickoff) state = kickOff(data, state);
+    else if (state.pendingReport) state = acknowledge(data, state);
+    else state = decide(data, state, chooser.pick(state.pending!.options).id);
   }
   return state;
 }
@@ -33,14 +39,14 @@ describe('Karriere-Engine', () => {
     const state = createCareer(data, { seed: 'test-1', mode: 'normal', identity });
 
     assert.equal(state.pending?.eventId, 'academy_offer');
-    assert.equal(state.pending?.options.length, 3);
+    assert.equal(state.pending?.options.length, ACADEMY_OFFERS);
     assert.equal(state.player.age, 16);
     assert.equal(state.clubId, null);
 
     for (const option of state.pending!.options) {
       const club = data.clubById.get(option.clubId!)!;
       assert.equal(data.leagueById.get(club.league)!.country, 'GER');
-      assert.ok(club.reputation.domestic <= 4, 'Kein Weltverein als Jugendangebot');
+      assert.ok(club.reputation.domestic <= 8, 'Kein Weltverein als Jugendangebot');
     }
   });
 

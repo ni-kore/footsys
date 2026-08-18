@@ -19,23 +19,6 @@
       }
     },
     {
-      "id": "gfk-tikvesh",
-      "league": "mkd-tier-1",
-      "name": "GFK Tikvesh",
-      "short": "GFK Tikvesh",
-      "abbr": "GFT",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "kf-besa-doberdoll",
       "league": "mkd-tier-1",
       "name": "KF Besa Dobërdoll",
@@ -143,40 +126,6 @@
       "name": "KF Shkupi",
       "short": "KF Shkupi",
       "abbr": "KFS",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "fk-voska-sport",
-      "league": "mkd-tier-1",
-      "name": "FK Voska Sport",
-      "short": "FK Voska Sport",
-      "abbr": "FVS",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "fk-ap-brera-strumica",
-      "league": "mkd-tier-1",
-      "name": "FK AP Brera Strumica",
-      "short": "FK AP",
-      "abbr": "FAB",
       "city": "",
       "colors": [
         "#2B2B38",

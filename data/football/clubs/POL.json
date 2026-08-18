@@ -155,23 +155,6 @@
       }
     },
     {
-      "id": "zag-ebie-lubin",
-      "league": "pol-ekstraklasa",
-      "name": "Zagłębie Lubin",
-      "short": "Zagłębie Lubin",
-      "abbr": "ZAL",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "ks-cracovia",
       "league": "pol-ekstraklasa",
       "name": "KS Cracovia",
@@ -398,23 +381,6 @@
       "name": "Chrobry Głogów",
       "short": "Chrobry Głogów",
       "abbr": "CHG",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "stal-stalowa-wola",
-      "league": "pol-tier-2",
-      "name": "Stal Stalowa Wola",
-      "short": "Stal Stalowa",
-      "abbr": "SSW",
       "city": "",
       "colors": [
         "#2B2B38",

@@ -17,10 +17,10 @@ data/                      Stack-neutrale Spieldaten (reines JSON)
     positions.json         17 Positionen inkl. Platzkoordinaten
     formations.json        22 Formationen mit Slot-Belegung
   football/
-    leagues.json           110 Ligen (Land, Tier, Pokal, Kontinentalplätze)
+    leagues.json           75 Ligen (Land, Tier, Pokal, Kontinentalplätze)
     cups.json              81 nationale Pokalwettbewerbe
     competitions.json      Kontinental- und Nationalwettbewerbe, Einzelauszeichnungen
-    clubs/<FIFA>.json      1.275 Vereine je Land, nach Liga gruppiert
+    clubs/<FIFA>.json      1.164 Vereine je Land, nach Liga gruppiert
   game/
     progression.json       Entwicklungskurven, Rollen-Schwellen, Marktwert, Verletzungen
     trophy-odds.json       Titelwahrscheinlichkeiten nach Reputation
@@ -42,7 +42,7 @@ apps/mobile/               Expo-App (iPhone, iPad, Web)
   src/theme.ts             Tokens aus design/tokens.json
   src/game-data.ts         gebündelte Spieldaten, je Karriere eine eigene Kopie
   src/components/          Karte, Meter, Ring, Segment-Control, Wappen, Spielfeld
-  src/screens/             Start, Karriere-Hub, Entscheidungsblatt, Vitrine
+  src/screens/             Identität, Entscheidung, Bericht, Karriere, Vitrine
 packages/engine/src/       Spiel-Logik (rein funktional, deterministisch per Seed)
   types.ts                 Typen zu allen Datendateien und zum Spielstand
   rng.ts                   Deterministischer Zufallsgenerator
@@ -88,20 +88,24 @@ auf Apples Rechnern in der Cloud und braucht nur ein Apple-Entwicklerkonto.
 `npm run sim` spielt hunderte Karrieren mit zufälligen Entscheidungen durch und
 gibt die Verteilung aus — das ist das Werkzeug fürs Balancing.
 
-## Zeitmodell
+## Ablauf
 
-Kleinste simulierte Einheit ist die **Halbserie**. Daraus ergibt sich:
+Die Engine hält nach **jedem** Schritt an. Es läuft nie mehr als eine Halbserie
+auf einmal durch — jeder Zwischenstand bekommt einen eigenen Bildschirm, der
+erst auf eine Eingabe hin weitergeht:
 
-- Hin- und Rückrunde werden getrennt gerechnet, Statistiken addieren sich zur Saison
-- In der **Winterpause** können Entscheidungen anstehen (Wintertransfer,
-  Formkrise, OP-Termin, Turniervorbereitung) — mit 45 % Wahrscheinlichkeit
-- In der **Sommerpause** steht immer eine Entscheidung an: Transfer, Leihe,
-  Vertrag, Karriereende oder ein erzähltes Karriereereignis
-- Nach jeder Halbserie treten 0–2 **Zufallsereignisse** ein, die niemand wählt:
-  Trainerwechsel, Formhoch, Verletzung, Abstieg, Investoreneinstieg, Rote Karte
+    Identität → Entscheidung → Halbserien-Bericht → [Winterentscheidung]
+              → Saison-Bericht → Sommerentscheidung → … → Karriereende
 
-Eine typische Karriere umfasst damit rund 27 Entscheidungen und 36
-Zufallsereignisse über gut 20 Saisons.
+- Kleinste simulierte Einheit ist die **Halbserie**; Hin- und Rückrunde werden
+  getrennt gerechnet und in je einem Bericht gezeigt
+- In der **Winterpause** steht mit 45 % eine Entscheidung an, in der
+  **Sommerpause** immer
+- Nach jeder Halbserie treten 0–2 **Zufallsereignisse** ein: Trainerwechsel,
+  Formhoch, Verletzung, Abstieg, Investoreneinstieg, Rote Karte
+
+Die Oberfläche ist englisch. Die Daten führen weiterhin deutsche und englische
+Texte — eine deutsche Fassung wäre ein Sprachschalter, keine Übersetzungsrunde.
 
 ## Verstecktes Potenzial
 

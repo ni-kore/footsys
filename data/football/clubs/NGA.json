@@ -138,45 +138,11 @@
       }
     },
     {
-      "id": "kwara-united-fc",
-      "league": "nga-npfl",
-      "name": "Kwara United FC",
-      "short": "Kwara United",
-      "abbr": "KWU",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "niger-tornadoes-fc",
       "league": "nga-npfl",
       "name": "Niger Tornadoes FC",
       "short": "Niger Tornadoes",
       "abbr": "NIT",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "nasarawa-united-fc",
-      "league": "nga-npfl",
-      "name": "Nasarawa United FC",
-      "short": "Nasarawa United",
-      "abbr": "NAU",
       "city": "",
       "colors": [
         "#2B2B38",
@@ -206,62 +172,11 @@
       }
     },
     {
-      "id": "plateau-united-fc",
-      "league": "nga-npfl",
-      "name": "Plateau United FC",
-      "short": "Plateau United",
-      "abbr": "PLU",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "katsina-united-fc",
-      "league": "nga-npfl",
-      "name": "Katsina United FC",
-      "short": "Katsina United",
-      "abbr": "KAU",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "sunshine-stars-fc",
       "league": "nga-npfl",
       "name": "Sunshine Stars FC",
       "short": "Sunshine Stars",
       "abbr": "SUS",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "bayelsa-united-fc",
-      "league": "nga-npfl",
-      "name": "Bayelsa United FC",
-      "short": "Bayelsa United",
-      "abbr": "BAU",
       "city": "",
       "colors": [
         "#2B2B38",
@@ -291,79 +206,11 @@
       }
     },
     {
-      "id": "akwa-united-fc",
-      "league": "nga-npfl",
-      "name": "Akwa United FC",
-      "short": "Akwa United",
-      "abbr": "AKU",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "rangers-international-fc",
-      "league": "nga-npfl",
-      "name": "Rangers International FC",
-      "short": "Rangers International",
-      "abbr": "RAI",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "el-kanemi-warriors-fc",
       "league": "nga-npfl",
       "name": "El-Kanemi Warriors FC",
       "short": "El-Kanemi Warriors",
       "abbr": "EKW",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "adamawa-united-fc",
-      "league": "nga-tier-2",
-      "name": "Adamawa United FC",
-      "short": "Adamawa United",
-      "abbr": "ADU",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "kada-warriors-fc",
-      "league": "nga-tier-2",
-      "name": "Kada Warriors FC",
-      "short": "Kada Warriors",
-      "abbr": "KAW",
       "city": "",
       "colors": [
         "#2B2B38",
@@ -410,23 +257,6 @@
       }
     },
     {
-      "id": "solution-fc",
-      "league": "nga-tier-2",
-      "name": "Solution FC",
-      "short": "Solution",
-      "abbr": "SOL",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "rovers-fc",
       "league": "nga-tier-2",
       "name": "Rovers FC",
@@ -444,45 +274,11 @@
       }
     },
     {
-      "id": "beyond-limits-fc",
-      "league": "nga-tier-2",
-      "name": "Beyond Limits FC",
-      "short": "Beyond Limits",
-      "abbr": "BEL",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "dakkada-fc",
       "league": "nga-tier-2",
       "name": "Dakkada FC",
       "short": "Dakkada",
       "abbr": "DAK",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "barau-fc",
-      "league": "nga-tier-2",
-      "name": "Barau FC",
-      "short": "Barau",
-      "abbr": "BAR",
       "city": "",
       "colors": [
         "#2B2B38",
@@ -563,40 +359,6 @@
       }
     },
     {
-      "id": "godswill-akpabio-fc",
-      "league": "nga-tier-2",
-      "name": "Godswill Akpabio FC",
-      "short": "Godswill Akpabio",
-      "abbr": "GOA",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "ijele-fc",
-      "league": "nga-tier-2",
-      "name": "Ijele FC",
-      "short": "Ijele",
-      "abbr": "IJE",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "inter-lagos-fc",
       "league": "nga-tier-2",
       "name": "Inter Lagos FC",
@@ -619,23 +381,6 @@
       "name": "Kun Khalifa FC",
       "short": "Kun Khalifa",
       "abbr": "KUK",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "abs-fc",
-      "league": "nga-tier-2",
-      "name": "ABS FC",
-      "short": "ABS",
-      "abbr": "ABS",
       "city": "",
       "colors": [
         "#2B2B38",
@@ -716,40 +461,6 @@
       }
     },
     {
-      "id": "igbajo-fc",
-      "league": "nga-tier-2",
-      "name": "Igbajo FC",
-      "short": "Igbajo",
-      "abbr": "IGB",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "basira-fc",
-      "league": "nga-tier-2",
-      "name": "Basira FC",
-      "short": "Basira",
-      "abbr": "BAS",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "yobe-desert-stars-fc",
       "league": "nga-tier-2",
       "name": "Yobe Desert Stars FC",
@@ -801,45 +512,11 @@
       }
     },
     {
-      "id": "zamfara-united-fc",
-      "league": "nga-tier-2",
-      "name": "Zamfara United FC",
-      "short": "Zamfara United",
-      "abbr": "ZAU",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "wikki-tourists-fc",
       "league": "nga-tier-2",
       "name": "Wikki Tourists FC",
       "short": "Wikki Tourists",
       "abbr": "WIT",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "abakaliki-fc",
-      "league": "nga-tier-2",
-      "name": "Abakaliki FC",
-      "short": "Abakaliki",
-      "abbr": "ABA",
       "city": "",
       "colors": [
         "#2B2B38",
@@ -869,45 +546,11 @@
       }
     },
     {
-      "id": "doma-united-fc",
-      "league": "nga-tier-2",
-      "name": "Doma United FC",
-      "short": "Doma United",
-      "abbr": "DOU",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "smart-city-fc",
       "league": "nga-tier-2",
       "name": "Smart City FC",
       "short": "Smart City",
       "abbr": "SMC",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "gombe-united-fc",
-      "league": "nga-tier-2",
-      "name": "Gombe United FC",
-      "short": "Gombe United",
-      "abbr": "GOU",
       "city": "",
       "colors": [
         "#2B2B38",

@@ -19,23 +19,6 @@
       }
     },
     {
-      "id": "nd-primorje",
-      "league": "svn-tier-1",
-      "name": "ND Primorje",
-      "short": "ND Primorje",
-      "abbr": "NDP",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "nk-radomlje",
       "league": "svn-tier-1",
       "name": "NK Radomlje",

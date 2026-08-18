@@ -53,23 +53,6 @@
       }
     },
     {
-      "id": "egnatia-rrogozhine",
-      "league": "alb-tier-1",
-      "name": "Egnatia Rrogozhine",
-      "short": "Egnatia Rrogozhine",
-      "abbr": "EGR",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "kf-laci",
       "league": "alb-tier-1",
       "name": "KF Laçi",

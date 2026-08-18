@@ -2,253 +2,1117 @@
   {
     "id": "4-4-2",
     "label": "4-4-2",
-    "name": { "de": "Flaches 4-4-2", "en": "Flat 4-4-2" },
+    "name": {
+      "de": "Flaches 4-4-2",
+      "en": "Flat 4-4-2"
+    },
     "attackingBias": 0.5,
     "slots": [
-      { "pos": "GK" }, { "pos": "LB" }, { "pos": "CB", "x": 38 }, { "pos": "CB", "x": 62 }, { "pos": "RB" },
-      { "pos": "LM" }, { "pos": "CM", "x": 38 }, { "pos": "CM", "x": 62 }, { "pos": "RM" },
-      { "pos": "ST", "x": 38 }, { "pos": "ST", "x": 62 }
-    ]
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "LB"
+      },
+      {
+        "pos": "CB",
+        "x": 38
+      },
+      {
+        "pos": "CB",
+        "x": 62
+      },
+      {
+        "pos": "RB"
+      },
+      {
+        "pos": "LM"
+      },
+      {
+        "pos": "CM",
+        "x": 38
+      },
+      {
+        "pos": "CM",
+        "x": 62
+      },
+      {
+        "pos": "RM"
+      },
+      {
+        "pos": "ST",
+        "x": 38
+      },
+      {
+        "pos": "ST",
+        "x": 62
+      }
+    ],
+    "selectable": true,
+    "neutral": true
   },
   {
     "id": "4-4-2-diamond",
-    "label": "4-4-2 Raute",
-    "name": { "de": "4-4-2 mit Raute", "en": "4-4-2 Diamond" },
+    "label": "4-4-2 Diamond",
+    "name": {
+      "de": "4-4-2 mit Raute",
+      "en": "4-4-2 Diamond"
+    },
     "attackingBias": 0.55,
     "slots": [
-      { "pos": "GK" }, { "pos": "LB" }, { "pos": "CB", "x": 38 }, { "pos": "CB", "x": 62 }, { "pos": "RB" },
-      { "pos": "DM" }, { "pos": "CM", "x": 25 }, { "pos": "CM", "x": 75 }, { "pos": "AM" },
-      { "pos": "ST", "x": 38 }, { "pos": "ST", "x": 62 }
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "LB"
+      },
+      {
+        "pos": "CB",
+        "x": 38
+      },
+      {
+        "pos": "CB",
+        "x": 62
+      },
+      {
+        "pos": "RB"
+      },
+      {
+        "pos": "DM"
+      },
+      {
+        "pos": "CM",
+        "x": 25
+      },
+      {
+        "pos": "CM",
+        "x": 75
+      },
+      {
+        "pos": "AM"
+      },
+      {
+        "pos": "ST",
+        "x": 38
+      },
+      {
+        "pos": "ST",
+        "x": 62
+      }
     ]
   },
   {
     "id": "4-4-1-1",
     "label": "4-4-1-1",
-    "name": { "de": "4-4-1-1", "en": "4-4-1-1" },
+    "name": {
+      "de": "4-4-1-1",
+      "en": "4-4-1-1"
+    },
     "attackingBias": 0.45,
     "slots": [
-      { "pos": "GK" }, { "pos": "LB" }, { "pos": "CB", "x": 38 }, { "pos": "CB", "x": 62 }, { "pos": "RB" },
-      { "pos": "LM" }, { "pos": "CM", "x": 38 }, { "pos": "CM", "x": 62 }, { "pos": "RM" },
-      { "pos": "SS" }, { "pos": "ST" }
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "LB"
+      },
+      {
+        "pos": "CB",
+        "x": 38
+      },
+      {
+        "pos": "CB",
+        "x": 62
+      },
+      {
+        "pos": "RB"
+      },
+      {
+        "pos": "LM"
+      },
+      {
+        "pos": "CM",
+        "x": 38
+      },
+      {
+        "pos": "CM",
+        "x": 62
+      },
+      {
+        "pos": "RM"
+      },
+      {
+        "pos": "SS"
+      },
+      {
+        "pos": "ST"
+      }
     ]
   },
   {
     "id": "4-3-3",
     "label": "4-3-3",
-    "name": { "de": "4-3-3", "en": "4-3-3" },
+    "name": {
+      "de": "4-3-3",
+      "en": "4-3-3"
+    },
     "attackingBias": 0.7,
     "slots": [
-      { "pos": "GK" }, { "pos": "LB" }, { "pos": "CB", "x": 38 }, { "pos": "CB", "x": 62 }, { "pos": "RB" },
-      { "pos": "DM" }, { "pos": "CM", "x": 32 }, { "pos": "CM", "x": 68 },
-      { "pos": "LW" }, { "pos": "ST" }, { "pos": "RW" }
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "LB"
+      },
+      {
+        "pos": "CB",
+        "x": 38
+      },
+      {
+        "pos": "CB",
+        "x": 62
+      },
+      {
+        "pos": "RB"
+      },
+      {
+        "pos": "DM"
+      },
+      {
+        "pos": "CM",
+        "x": 32
+      },
+      {
+        "pos": "CM",
+        "x": 68
+      },
+      {
+        "pos": "LW"
+      },
+      {
+        "pos": "ST"
+      },
+      {
+        "pos": "RW"
+      }
     ]
   },
   {
     "id": "4-3-3-false-nine",
-    "label": "4-3-3 falsche Neun",
-    "name": { "de": "4-3-3 mit falscher Neun", "en": "4-3-3 False Nine" },
+    "label": "4-3-3 False 9",
+    "name": {
+      "de": "4-3-3 mit falscher Neun",
+      "en": "4-3-3 False Nine"
+    },
     "attackingBias": 0.75,
     "slots": [
-      { "pos": "GK" }, { "pos": "LB" }, { "pos": "CB", "x": 38 }, { "pos": "CB", "x": 62 }, { "pos": "RB" },
-      { "pos": "DM" }, { "pos": "CM", "x": 32 }, { "pos": "CM", "x": 68 },
-      { "pos": "LW" }, { "pos": "CF", "y": 80 }, { "pos": "RW" }
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "LB"
+      },
+      {
+        "pos": "CB",
+        "x": 38
+      },
+      {
+        "pos": "CB",
+        "x": 62
+      },
+      {
+        "pos": "RB"
+      },
+      {
+        "pos": "DM"
+      },
+      {
+        "pos": "CM",
+        "x": 32
+      },
+      {
+        "pos": "CM",
+        "x": 68
+      },
+      {
+        "pos": "LW"
+      },
+      {
+        "pos": "CF",
+        "y": 80
+      },
+      {
+        "pos": "RW"
+      }
     ]
   },
   {
     "id": "4-2-3-1",
     "label": "4-2-3-1",
-    "name": { "de": "4-2-3-1", "en": "4-2-3-1" },
+    "name": {
+      "de": "4-2-3-1",
+      "en": "4-2-3-1"
+    },
     "attackingBias": 0.6,
     "slots": [
-      { "pos": "GK" }, { "pos": "LB" }, { "pos": "CB", "x": 38 }, { "pos": "CB", "x": 62 }, { "pos": "RB" },
-      { "pos": "DM", "x": 38 }, { "pos": "DM", "x": 62 },
-      { "pos": "LW", "y": 68 }, { "pos": "AM" }, { "pos": "RW", "y": 68 },
-      { "pos": "ST" }
-    ]
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "LB"
+      },
+      {
+        "pos": "CB",
+        "x": 38
+      },
+      {
+        "pos": "CB",
+        "x": 62
+      },
+      {
+        "pos": "RB"
+      },
+      {
+        "pos": "DM",
+        "x": 38
+      },
+      {
+        "pos": "DM",
+        "x": 62
+      },
+      {
+        "pos": "LW",
+        "y": 68
+      },
+      {
+        "pos": "AM"
+      },
+      {
+        "pos": "RW",
+        "y": 68
+      },
+      {
+        "pos": "ST"
+      }
+    ],
+    "selectable": true
   },
   {
     "id": "4-1-4-1",
     "label": "4-1-4-1",
-    "name": { "de": "4-1-4-1", "en": "4-1-4-1" },
+    "name": {
+      "de": "4-1-4-1",
+      "en": "4-1-4-1"
+    },
     "attackingBias": 0.4,
     "slots": [
-      { "pos": "GK" }, { "pos": "LB" }, { "pos": "CB", "x": 38 }, { "pos": "CB", "x": 62 }, { "pos": "RB" },
-      { "pos": "DM" },
-      { "pos": "LM", "y": 62 }, { "pos": "CM", "x": 38, "y": 62 }, { "pos": "CM", "x": 62, "y": 62 }, { "pos": "RM", "y": 62 },
-      { "pos": "ST" }
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "LB"
+      },
+      {
+        "pos": "CB",
+        "x": 38
+      },
+      {
+        "pos": "CB",
+        "x": 62
+      },
+      {
+        "pos": "RB"
+      },
+      {
+        "pos": "DM"
+      },
+      {
+        "pos": "LM",
+        "y": 62
+      },
+      {
+        "pos": "CM",
+        "x": 38,
+        "y": 62
+      },
+      {
+        "pos": "CM",
+        "x": 62,
+        "y": 62
+      },
+      {
+        "pos": "RM",
+        "y": 62
+      },
+      {
+        "pos": "ST"
+      }
     ]
   },
   {
     "id": "4-5-1",
     "label": "4-5-1",
-    "name": { "de": "4-5-1", "en": "4-5-1" },
+    "name": {
+      "de": "4-5-1",
+      "en": "4-5-1"
+    },
     "attackingBias": 0.3,
     "slots": [
-      { "pos": "GK" }, { "pos": "LB" }, { "pos": "CB", "x": 38 }, { "pos": "CB", "x": 62 }, { "pos": "RB" },
-      { "pos": "LM" }, { "pos": "CM", "x": 32 }, { "pos": "DM" }, { "pos": "CM", "x": 68 }, { "pos": "RM" },
-      { "pos": "ST" }
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "LB"
+      },
+      {
+        "pos": "CB",
+        "x": 38
+      },
+      {
+        "pos": "CB",
+        "x": 62
+      },
+      {
+        "pos": "RB"
+      },
+      {
+        "pos": "LM"
+      },
+      {
+        "pos": "CM",
+        "x": 32
+      },
+      {
+        "pos": "DM"
+      },
+      {
+        "pos": "CM",
+        "x": 68
+      },
+      {
+        "pos": "RM"
+      },
+      {
+        "pos": "ST"
+      }
     ]
   },
   {
     "id": "4-2-2-2",
     "label": "4-2-2-2",
-    "name": { "de": "4-2-2-2", "en": "4-2-2-2" },
+    "name": {
+      "de": "4-2-2-2",
+      "en": "4-2-2-2"
+    },
     "attackingBias": 0.65,
     "slots": [
-      { "pos": "GK" }, { "pos": "LB" }, { "pos": "CB", "x": 38 }, { "pos": "CB", "x": 62 }, { "pos": "RB" },
-      { "pos": "DM", "x": 38 }, { "pos": "DM", "x": 62 },
-      { "pos": "AM", "x": 30 }, { "pos": "AM", "x": 70 },
-      { "pos": "ST", "x": 38 }, { "pos": "ST", "x": 62 }
-    ]
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "LB"
+      },
+      {
+        "pos": "CB",
+        "x": 38
+      },
+      {
+        "pos": "CB",
+        "x": 62
+      },
+      {
+        "pos": "RB"
+      },
+      {
+        "pos": "DM",
+        "x": 38
+      },
+      {
+        "pos": "DM",
+        "x": 62
+      },
+      {
+        "pos": "AM",
+        "x": 30
+      },
+      {
+        "pos": "AM",
+        "x": 70
+      },
+      {
+        "pos": "ST",
+        "x": 38
+      },
+      {
+        "pos": "ST",
+        "x": 62
+      }
+    ],
+    "selectable": true
   },
   {
     "id": "4-3-1-2",
     "label": "4-3-1-2",
-    "name": { "de": "4-3-1-2", "en": "4-3-1-2" },
+    "name": {
+      "de": "4-3-1-2",
+      "en": "4-3-1-2"
+    },
     "attackingBias": 0.6,
     "slots": [
-      { "pos": "GK" }, { "pos": "LB" }, { "pos": "CB", "x": 38 }, { "pos": "CB", "x": 62 }, { "pos": "RB" },
-      { "pos": "CM", "x": 25 }, { "pos": "DM" }, { "pos": "CM", "x": 75 },
-      { "pos": "AM" },
-      { "pos": "ST", "x": 38 }, { "pos": "ST", "x": 62 }
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "LB"
+      },
+      {
+        "pos": "CB",
+        "x": 38
+      },
+      {
+        "pos": "CB",
+        "x": 62
+      },
+      {
+        "pos": "RB"
+      },
+      {
+        "pos": "CM",
+        "x": 25
+      },
+      {
+        "pos": "DM"
+      },
+      {
+        "pos": "CM",
+        "x": 75
+      },
+      {
+        "pos": "AM"
+      },
+      {
+        "pos": "ST",
+        "x": 38
+      },
+      {
+        "pos": "ST",
+        "x": 62
+      }
     ]
   },
   {
     "id": "4-2-4",
     "label": "4-2-4",
-    "name": { "de": "4-2-4", "en": "4-2-4" },
+    "name": {
+      "de": "4-2-4",
+      "en": "4-2-4"
+    },
     "attackingBias": 0.9,
     "slots": [
-      { "pos": "GK" }, { "pos": "LB" }, { "pos": "CB", "x": 38 }, { "pos": "CB", "x": 62 }, { "pos": "RB" },
-      { "pos": "CM", "x": 38 }, { "pos": "CM", "x": 62 },
-      { "pos": "LW" }, { "pos": "ST", "x": 38 }, { "pos": "ST", "x": 62 }, { "pos": "RW" }
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "LB"
+      },
+      {
+        "pos": "CB",
+        "x": 38
+      },
+      {
+        "pos": "CB",
+        "x": 62
+      },
+      {
+        "pos": "RB"
+      },
+      {
+        "pos": "CM",
+        "x": 38
+      },
+      {
+        "pos": "CM",
+        "x": 62
+      },
+      {
+        "pos": "LW"
+      },
+      {
+        "pos": "ST",
+        "x": 38
+      },
+      {
+        "pos": "ST",
+        "x": 62
+      },
+      {
+        "pos": "RW"
+      }
     ]
   },
   {
     "id": "3-5-2",
     "label": "3-5-2",
-    "name": { "de": "3-5-2", "en": "3-5-2" },
+    "name": {
+      "de": "3-5-2",
+      "en": "3-5-2"
+    },
     "attackingBias": 0.55,
     "slots": [
-      { "pos": "GK" }, { "pos": "CB", "x": 30 }, { "pos": "CB", "x": 50 }, { "pos": "CB", "x": 70 },
-      { "pos": "LWB" }, { "pos": "CM", "x": 32 }, { "pos": "DM" }, { "pos": "CM", "x": 68 }, { "pos": "RWB" },
-      { "pos": "ST", "x": 38 }, { "pos": "ST", "x": 62 }
-    ]
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "CB",
+        "x": 30
+      },
+      {
+        "pos": "CB",
+        "x": 50
+      },
+      {
+        "pos": "CB",
+        "x": 70
+      },
+      {
+        "pos": "LWB"
+      },
+      {
+        "pos": "CM",
+        "x": 32
+      },
+      {
+        "pos": "DM"
+      },
+      {
+        "pos": "CM",
+        "x": 68
+      },
+      {
+        "pos": "RWB"
+      },
+      {
+        "pos": "ST",
+        "x": 38
+      },
+      {
+        "pos": "ST",
+        "x": 62
+      }
+    ],
+    "selectable": true
   },
   {
     "id": "3-4-3",
     "label": "3-4-3",
-    "name": { "de": "3-4-3", "en": "3-4-3" },
+    "name": {
+      "de": "3-4-3",
+      "en": "3-4-3"
+    },
     "attackingBias": 0.8,
     "slots": [
-      { "pos": "GK" }, { "pos": "CB", "x": 30 }, { "pos": "CB", "x": 50 }, { "pos": "CB", "x": 70 },
-      { "pos": "LWB" }, { "pos": "CM", "x": 38 }, { "pos": "CM", "x": 62 }, { "pos": "RWB" },
-      { "pos": "LW" }, { "pos": "ST" }, { "pos": "RW" }
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "CB",
+        "x": 30
+      },
+      {
+        "pos": "CB",
+        "x": 50
+      },
+      {
+        "pos": "CB",
+        "x": 70
+      },
+      {
+        "pos": "LWB"
+      },
+      {
+        "pos": "CM",
+        "x": 38
+      },
+      {
+        "pos": "CM",
+        "x": 62
+      },
+      {
+        "pos": "RWB"
+      },
+      {
+        "pos": "LW"
+      },
+      {
+        "pos": "ST"
+      },
+      {
+        "pos": "RW"
+      }
     ]
   },
   {
     "id": "3-4-2-1",
     "label": "3-4-2-1",
-    "name": { "de": "3-4-2-1", "en": "3-4-2-1" },
+    "name": {
+      "de": "3-4-2-1",
+      "en": "3-4-2-1"
+    },
     "attackingBias": 0.6,
     "slots": [
-      { "pos": "GK" }, { "pos": "CB", "x": 30 }, { "pos": "CB", "x": 50 }, { "pos": "CB", "x": 70 },
-      { "pos": "LWB" }, { "pos": "CM", "x": 38 }, { "pos": "CM", "x": 62 }, { "pos": "RWB" },
-      { "pos": "AM", "x": 35 }, { "pos": "AM", "x": 65 },
-      { "pos": "ST" }
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "CB",
+        "x": 30
+      },
+      {
+        "pos": "CB",
+        "x": 50
+      },
+      {
+        "pos": "CB",
+        "x": 70
+      },
+      {
+        "pos": "LWB"
+      },
+      {
+        "pos": "CM",
+        "x": 38
+      },
+      {
+        "pos": "CM",
+        "x": 62
+      },
+      {
+        "pos": "RWB"
+      },
+      {
+        "pos": "AM",
+        "x": 35
+      },
+      {
+        "pos": "AM",
+        "x": 65
+      },
+      {
+        "pos": "ST"
+      }
     ]
   },
   {
     "id": "3-4-1-2",
     "label": "3-4-1-2",
-    "name": { "de": "3-4-1-2", "en": "3-4-1-2" },
+    "name": {
+      "de": "3-4-1-2",
+      "en": "3-4-1-2"
+    },
     "attackingBias": 0.65,
     "slots": [
-      { "pos": "GK" }, { "pos": "CB", "x": 30 }, { "pos": "CB", "x": 50 }, { "pos": "CB", "x": 70 },
-      { "pos": "LWB" }, { "pos": "CM", "x": 38 }, { "pos": "CM", "x": 62 }, { "pos": "RWB" },
-      { "pos": "AM" },
-      { "pos": "ST", "x": 38 }, { "pos": "ST", "x": 62 }
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "CB",
+        "x": 30
+      },
+      {
+        "pos": "CB",
+        "x": 50
+      },
+      {
+        "pos": "CB",
+        "x": 70
+      },
+      {
+        "pos": "LWB"
+      },
+      {
+        "pos": "CM",
+        "x": 38
+      },
+      {
+        "pos": "CM",
+        "x": 62
+      },
+      {
+        "pos": "RWB"
+      },
+      {
+        "pos": "AM"
+      },
+      {
+        "pos": "ST",
+        "x": 38
+      },
+      {
+        "pos": "ST",
+        "x": 62
+      }
     ]
   },
   {
     "id": "3-6-1",
     "label": "3-6-1",
-    "name": { "de": "3-6-1", "en": "3-6-1" },
+    "name": {
+      "de": "3-6-1",
+      "en": "3-6-1"
+    },
     "attackingBias": 0.35,
     "slots": [
-      { "pos": "GK" }, { "pos": "CB", "x": 30 }, { "pos": "CB", "x": 50 }, { "pos": "CB", "x": 70 },
-      { "pos": "LWB" }, { "pos": "DM", "x": 38 }, { "pos": "DM", "x": 62 }, { "pos": "RWB" },
-      { "pos": "AM", "x": 35 }, { "pos": "AM", "x": 65 },
-      { "pos": "ST" }
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "CB",
+        "x": 30
+      },
+      {
+        "pos": "CB",
+        "x": 50
+      },
+      {
+        "pos": "CB",
+        "x": 70
+      },
+      {
+        "pos": "LWB"
+      },
+      {
+        "pos": "DM",
+        "x": 38
+      },
+      {
+        "pos": "DM",
+        "x": 62
+      },
+      {
+        "pos": "RWB"
+      },
+      {
+        "pos": "AM",
+        "x": 35
+      },
+      {
+        "pos": "AM",
+        "x": 65
+      },
+      {
+        "pos": "ST"
+      }
     ]
   },
   {
     "id": "5-3-2",
     "label": "5-3-2",
-    "name": { "de": "5-3-2", "en": "5-3-2" },
+    "name": {
+      "de": "5-3-2",
+      "en": "5-3-2"
+    },
     "attackingBias": 0.3,
     "slots": [
-      { "pos": "GK" }, { "pos": "LWB", "y": 28 }, { "pos": "CB", "x": 32 }, { "pos": "CB", "x": 50 }, { "pos": "CB", "x": 68 }, { "pos": "RWB", "y": 28 },
-      { "pos": "CM", "x": 32 }, { "pos": "DM" }, { "pos": "CM", "x": 68 },
-      { "pos": "ST", "x": 38 }, { "pos": "ST", "x": 62 }
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "LWB",
+        "y": 28
+      },
+      {
+        "pos": "CB",
+        "x": 32
+      },
+      {
+        "pos": "CB",
+        "x": 50
+      },
+      {
+        "pos": "CB",
+        "x": 68
+      },
+      {
+        "pos": "RWB",
+        "y": 28
+      },
+      {
+        "pos": "CM",
+        "x": 32
+      },
+      {
+        "pos": "DM"
+      },
+      {
+        "pos": "CM",
+        "x": 68
+      },
+      {
+        "pos": "ST",
+        "x": 38
+      },
+      {
+        "pos": "ST",
+        "x": 62
+      }
     ]
   },
   {
     "id": "5-4-1",
     "label": "5-4-1",
-    "name": { "de": "5-4-1", "en": "5-4-1" },
+    "name": {
+      "de": "5-4-1",
+      "en": "5-4-1"
+    },
     "attackingBias": 0.2,
     "slots": [
-      { "pos": "GK" }, { "pos": "LWB", "y": 28 }, { "pos": "CB", "x": 32 }, { "pos": "CB", "x": 50 }, { "pos": "CB", "x": 68 }, { "pos": "RWB", "y": 28 },
-      { "pos": "LM" }, { "pos": "CM", "x": 38 }, { "pos": "CM", "x": 62 }, { "pos": "RM" },
-      { "pos": "ST" }
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "LWB",
+        "y": 28
+      },
+      {
+        "pos": "CB",
+        "x": 32
+      },
+      {
+        "pos": "CB",
+        "x": 50
+      },
+      {
+        "pos": "CB",
+        "x": 68
+      },
+      {
+        "pos": "RWB",
+        "y": 28
+      },
+      {
+        "pos": "LM"
+      },
+      {
+        "pos": "CM",
+        "x": 38
+      },
+      {
+        "pos": "CM",
+        "x": 62
+      },
+      {
+        "pos": "RM"
+      },
+      {
+        "pos": "ST"
+      }
     ]
   },
   {
     "id": "5-2-1-2",
     "label": "5-2-1-2",
-    "name": { "de": "5-2-1-2", "en": "5-2-1-2" },
+    "name": {
+      "de": "5-2-1-2",
+      "en": "5-2-1-2"
+    },
     "attackingBias": 0.35,
     "slots": [
-      { "pos": "GK" }, { "pos": "LWB", "y": 28 }, { "pos": "CB", "x": 32 }, { "pos": "CB", "x": 50 }, { "pos": "CB", "x": 68 }, { "pos": "RWB", "y": 28 },
-      { "pos": "CM", "x": 38 }, { "pos": "CM", "x": 62 },
-      { "pos": "AM" },
-      { "pos": "ST", "x": 38 }, { "pos": "ST", "x": 62 }
-    ]
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "LWB",
+        "y": 28
+      },
+      {
+        "pos": "CB",
+        "x": 32
+      },
+      {
+        "pos": "CB",
+        "x": 50
+      },
+      {
+        "pos": "CB",
+        "x": 68
+      },
+      {
+        "pos": "RWB",
+        "y": 28
+      },
+      {
+        "pos": "CM",
+        "x": 38
+      },
+      {
+        "pos": "CM",
+        "x": 62
+      },
+      {
+        "pos": "AM"
+      },
+      {
+        "pos": "ST",
+        "x": 38
+      },
+      {
+        "pos": "ST",
+        "x": 62
+      }
+    ],
+    "selectable": true
   },
   {
     "id": "4-1-2-1-2-narrow",
-    "label": "4-1-2-1-2 eng",
-    "name": { "de": "4-1-2-1-2 (eng)", "en": "4-1-2-1-2 Narrow" },
+    "label": "4-1-2-1-2 Narrow",
+    "name": {
+      "de": "4-1-2-1-2 (eng)",
+      "en": "4-1-2-1-2 Narrow"
+    },
     "attackingBias": 0.55,
     "slots": [
-      { "pos": "GK" }, { "pos": "LB" }, { "pos": "CB", "x": 38 }, { "pos": "CB", "x": 62 }, { "pos": "RB" },
-      { "pos": "DM" }, { "pos": "CM", "x": 35 }, { "pos": "CM", "x": 65 }, { "pos": "AM" },
-      { "pos": "SS", "x": 42 }, { "pos": "ST", "x": 58 }
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "LB"
+      },
+      {
+        "pos": "CB",
+        "x": 38
+      },
+      {
+        "pos": "CB",
+        "x": 62
+      },
+      {
+        "pos": "RB"
+      },
+      {
+        "pos": "DM"
+      },
+      {
+        "pos": "CM",
+        "x": 35
+      },
+      {
+        "pos": "CM",
+        "x": 65
+      },
+      {
+        "pos": "AM"
+      },
+      {
+        "pos": "SS",
+        "x": 42
+      },
+      {
+        "pos": "ST",
+        "x": 58
+      }
     ]
   },
   {
     "id": "3-3-3-1",
     "label": "3-3-3-1",
-    "name": { "de": "3-3-3-1", "en": "3-3-3-1" },
+    "name": {
+      "de": "3-3-3-1",
+      "en": "3-3-3-1"
+    },
     "attackingBias": 0.7,
     "slots": [
-      { "pos": "GK" }, { "pos": "CB", "x": 30 }, { "pos": "CB", "x": 50 }, { "pos": "CB", "x": 70 },
-      { "pos": "DM", "x": 30 }, { "pos": "DM", "x": 50 }, { "pos": "DM", "x": 70 },
-      { "pos": "LW", "y": 68 }, { "pos": "AM" }, { "pos": "RW", "y": 68 },
-      { "pos": "ST" }
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "CB",
+        "x": 30
+      },
+      {
+        "pos": "CB",
+        "x": 50
+      },
+      {
+        "pos": "CB",
+        "x": 70
+      },
+      {
+        "pos": "DM",
+        "x": 30
+      },
+      {
+        "pos": "DM",
+        "x": 50
+      },
+      {
+        "pos": "DM",
+        "x": 70
+      },
+      {
+        "pos": "LW",
+        "y": 68
+      },
+      {
+        "pos": "AM"
+      },
+      {
+        "pos": "RW",
+        "y": 68
+      },
+      {
+        "pos": "ST"
+      }
     ]
   },
   {
     "id": "4-4-2-libero",
-    "label": "4-4-2 mit Libero",
-    "name": { "de": "Libero-System", "en": "Sweeper System" },
+    "label": "Sweeper System",
+    "name": {
+      "de": "Libero-System",
+      "en": "Sweeper System"
+    },
     "attackingBias": 0.4,
     "historic": true,
     "slots": [
-      { "pos": "GK" }, { "pos": "SW" }, { "pos": "LB" }, { "pos": "CB", "x": 38, "y": 24 }, { "pos": "CB", "x": 62, "y": 24 }, { "pos": "RB" },
-      { "pos": "LM" }, { "pos": "CM" }, { "pos": "RM" },
-      { "pos": "ST", "x": 38 }, { "pos": "ST", "x": 62 }
+      {
+        "pos": "GK"
+      },
+      {
+        "pos": "SW"
+      },
+      {
+        "pos": "LB"
+      },
+      {
+        "pos": "CB",
+        "x": 38,
+        "y": 24
+      },
+      {
+        "pos": "CB",
+        "x": 62,
+        "y": 24
+      },
+      {
+        "pos": "RB"
+      },
+      {
+        "pos": "LM"
+      },
+      {
+        "pos": "CM"
+      },
+      {
+        "pos": "RM"
+      },
+      {
+        "pos": "ST",
+        "x": 38
+      },
+      {
+        "pos": "ST",
+        "x": 62
+      }
     ]
   }
 ]

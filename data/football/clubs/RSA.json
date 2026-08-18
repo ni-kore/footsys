@@ -155,62 +155,11 @@
       }
     },
     {
-      "id": "supersport-united",
-      "league": "rsa-premiership",
-      "name": "SuperSport United",
-      "short": "SuperSport United",
-      "abbr": "SUU",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "orlando-pirates",
       "league": "rsa-premiership",
       "name": "Orlando Pirates",
       "short": "Orlando Pirates",
       "abbr": "ORP",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "chippa-united",
-      "league": "rsa-premiership",
-      "name": "Chippa United",
-      "short": "Chippa United",
-      "abbr": "CHU",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "sekhukhune-united",
-      "league": "rsa-premiership",
-      "name": "Sekhukhune United",
-      "short": "Sekhukhune United",
-      "abbr": "SEU",
       "city": "",
       "colors": [
         "#2B2B38",

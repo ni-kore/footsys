@@ -13,9 +13,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 5,
-        "continental": 3,
-        "international": 5
+        "domestic": 10,
+        "continental": 7,
+        "international": 10
       }
     },
     {
@@ -30,9 +30,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 5,
-        "continental": 3,
-        "international": 5
+        "domestic": 10,
+        "continental": 7,
+        "international": 10
       }
     },
     {
@@ -47,9 +47,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 5,
-        "continental": 3,
-        "international": 4
+        "domestic": 10,
+        "continental": 7,
+        "international": 8
       }
     },
     {
@@ -64,9 +64,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 3,
-        "continental": 2,
-        "international": 3
+        "domestic": 6,
+        "continental": 5,
+        "international": 6
       }
     },
     {
@@ -81,9 +81,9 @@
         "#000000"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
-        "international": 2
+        "domestic": 4,
+        "continental": 3,
+        "international": 4
       }
     },
     {
@@ -98,9 +98,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 2
+        "domestic": 3,
+        "continental": 1,
+        "international": 4
       }
     },
     {
@@ -115,9 +115,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 1
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -132,9 +132,9 @@
         "#004B9E"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 1
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -149,9 +149,9 @@
         "#004B9E"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 1
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -166,9 +166,9 @@
         "#004B9E"
       ],
       "reputation": {
-        "domestic": 1,
-        "continental": 0,
-        "international": 1
+        "domestic": 2,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -183,7 +183,7 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 1,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -217,9 +217,9 @@
         "#FFFFFF"
       ],
       "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 1
+        "domestic": 1,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -234,9 +234,9 @@
         "#E30613"
       ],
       "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 1
+        "domestic": 1,
+        "continental": 1,
+        "international": 2
       }
     },
     {
@@ -251,8 +251,8 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
+        "domestic": 4,
+        "continental": 2,
         "international": 0
       }
     },
@@ -268,8 +268,8 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
+        "domestic": 4,
+        "continental": 2,
         "international": 0
       }
     },
@@ -285,8 +285,8 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
+        "domestic": 4,
+        "continental": 2,
         "international": 0
       }
     },
@@ -302,8 +302,8 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
+        "domestic": 4,
+        "continental": 2,
         "international": 0
       }
     },
@@ -319,8 +319,8 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
+        "domestic": 4,
+        "continental": 2,
         "international": 0
       }
     },
@@ -336,8 +336,8 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
+        "domestic": 4,
+        "continental": 2,
         "international": 0
       }
     },
@@ -353,8 +353,8 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
+        "domestic": 4,
+        "continental": 2,
         "international": 0
       }
     },
@@ -370,8 +370,8 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 1,
+        "domestic": 4,
+        "continental": 2,
         "international": 0
       }
     },
@@ -478,45 +478,11 @@
       }
     },
     {
-      "id": "gd-chaves",
-      "league": "por-liga-2",
-      "name": "GD Chaves",
-      "short": "GD Chaves",
-      "abbr": "GDC",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "fc-penafiel",
       "league": "por-liga-2",
       "name": "FC Penafiel",
       "short": "FC Penafiel",
       "abbr": "PEN",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "ud-oliveirense",
-      "league": "por-liga-2",
-      "name": "UD Oliveirense",
-      "short": "UD Oliveirense",
-      "abbr": "OLI",
       "city": "",
       "colors": [
         "#2B2B38",

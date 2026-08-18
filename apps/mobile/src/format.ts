@@ -1,63 +1,51 @@
-import type { CountryCode, SquadRole } from '@footsys/engine';
-import countries from '../../../data/core/countries.json';
+import type { SquadRole } from '@footsys/engine';
 
-/** Marktwert kurz: 1,2 Mio. € / 850 Tsd. € */
+/** Market value, short: €1.2M / €850K */
 export function money(value: number): string {
   if (value >= 1_000_000) {
     const millions = value / 1_000_000;
-    return `${millions >= 100 ? Math.round(millions) : millions.toFixed(1).replace('.', ',')} Mio. €`;
+    return `€${millions >= 100 ? Math.round(millions) : millions.toFixed(1)}M`;
   }
-  return `${Math.round(value / 1000)} Tsd. €`;
+  return `€${Math.round(value / 1000)}K`;
 }
 
 const ROLE_LABEL: Record<SquadRole, string> = {
-  starter: 'Stammspieler',
+  starter: 'First choice',
   high_rotation: 'Rotation',
-  low_rotation: 'Ergänzung',
-  substitute: 'Ersatzbank',
+  low_rotation: 'Fringe player',
+  substitute: 'Benchwarmer',
 };
 
 export function roleLabel(role: SquadRole): string {
   return ROLE_LABEL[role];
 }
 
-/** Saison als „26/27". */
+/**
+ * Anhängerschaft in Köpfen: 2, 4.7K, 13.6M, 210M. Ab einer Million wird
+ * gerundet — auf den einzelnen Fan kommt es dann nicht mehr an.
+ */
+export function fans(count: number): string {
+  if (count >= 1_000_000) {
+    const millions = count / 1_000_000;
+    return `${millions >= 100 ? Math.round(millions) : millions.toFixed(1)}M`;
+  }
+  if (count >= 1000) return `${Math.round(count / 1000)}K`;
+  return String(count);
+}
+
+/** Season as "26/27". */
 export function seasonLabel(year: number): string {
   return `${String(year % 100).padStart(2, '0')}/${String((year + 1) % 100).padStart(2, '0')}`;
 }
 
-/**
- * Flaggen-Emoji zum FIFA-Code.
- *
- * Der FIFA-Code ist nicht der ISO-Code — aus dem FIFA-Code allein lässt sich
- * keine Flagge ableiten (ARM wäre sonst Argentinien). Die Zuordnung steht
- * deshalb als `iso2` in den Länderdaten. Die vier britischen Verbände haben
- * keinen ISO-Code und bekommen ihre Unicode-Sonderflaggen.
- */
-const BRITISH_FLAGS: Record<string, string> = {
-  ENG: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
-  SCO: '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
-  WAL: '🏴󠁧󠁢󠁷󠁬󠁳󠁿',
-  NIR: '🇬🇧',
-};
-
-const ISO_BY_FIFA = new Map<string, string>();
-for (const country of countries) {
-  ISO_BY_FIFA.set(country.code, country.iso2 ?? '');
+/** Signed number for deltas: +3, -2, — */
+export function delta(value: number): string {
+  const rounded = Math.round(value);
+  if (rounded === 0) return '—';
+  return rounded > 0 ? `+${rounded}` : String(rounded);
 }
 
-export function flag(code: CountryCode): string {
-  const british = BRITISH_FLAGS[code];
-  if (british) return british;
-
-  const iso = ISO_BY_FIFA.get(code);
-  if (!iso || iso.length !== 2) return code;
-
-  const base = 0x1f1e6;
-  return String.fromCodePoint(base + iso.charCodeAt(0) - 65, base + iso.charCodeAt(1) - 65);
-}
-
-/** Kontrastfarbe für Text auf einer Vereinsfarbe. */
+/** Readable text colour on a club colour. */
 export function readableOn(hex: string): string {
   const value = hex.replace('#', '');
   const r = parseInt(value.slice(0, 2), 16);

@@ -223,23 +223,6 @@
       }
     },
     {
-      "id": "dynamo-ceske-budejovice",
-      "league": "cze-fortuna-liga",
-      "name": "Dynamo České Budějovice",
-      "short": "Dynamo České",
-      "abbr": "DČB",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "sigma-olomouc",
       "league": "cze-fortuna-liga",
       "name": "Sigma Olomouc",
@@ -308,23 +291,6 @@
       }
     },
     {
-      "id": "sigma-olomouc-b",
-      "league": "cze-tier-2",
-      "name": "Sigma Olomouc B",
-      "short": "Sigma Olomouc B",
-      "abbr": "SOB",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
       "id": "mfk-vyskov",
       "league": "cze-tier-2",
       "name": "MFK Vyškov",
@@ -381,57 +347,6 @@
       "name": "FK MAS Táborsko",
       "short": "FK MAS Táborsko",
       "abbr": "FMT",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "slavia-praha-b",
-      "league": "cze-tier-2",
-      "name": "Slavia Praha B",
-      "short": "Slavia Praha B",
-      "abbr": "SPB",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "ac-sparta-praha-b",
-      "league": "cze-tier-2",
-      "name": "AC Sparta Praha B",
-      "short": "AC Sparta",
-      "abbr": "SPB",
-      "city": "",
-      "colors": [
-        "#2B2B38",
-        "#E8E8F0"
-      ],
-      "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
-      }
-    },
-    {
-      "id": "banik-ostrava-b",
-      "league": "cze-tier-2",
-      "name": "Baník Ostrava B",
-      "short": "Baník Ostrava B",
-      "abbr": "BOB",
       "city": "",
       "colors": [
         "#2B2B38",

@@ -46,6 +46,19 @@ export function clamp(value: number, min: number, max: number): number {
   return Math.max(min, Math.min(max, value));
 }
 
+/**
+ * Deckelt den OVR. Neben der harten Ober- und Untergrenze wirkt das versteckte
+ * Potenzial: Ereignisse dürfen kurzfristig darüber hinausschieben, aber nur um
+ * den in progression.json erlaubten Betrag. Ohne diese Grenze hebeln
+ * Trainingslager und Formhochs das Potenzial komplett aus.
+ */
+export function clampOverall(data: GameData, value: number, potential: number): number {
+  const career = data.progression.career;
+  const overshoot = data.progression.potential.overshootAllowed as number;
+  const ceiling = Math.min(career.overallMax as number, potential + overshoot);
+  return clamp(value, career.overallMin as number, ceiling);
+}
+
 // ---------------------------------------------------------- Entwicklung
 
 export function pickDevelopmentProfile(rng: Rng, data: GameData, position: PositionId): DevelopmentProfileId {
@@ -59,14 +72,43 @@ export function pickDevelopmentProfile(rng: Rng, data: GameData, position: Posit
 /**
  * Verstecktes Leistungsmaximum. Es entscheidet mehr über eine Karriere als
  * jede einzelne Entscheidung — und der Spieler bekommt es nie zu sehen.
+ *
+ * Fuß und Beidfüßigkeit zahlen darauf ein: Linksfüßer gelten als begabter,
+ * und wer beide Füße beherrscht, hat mehr Möglichkeiten. Beides kostet
+ * Temperament, siehe `pickTemperament`.
  */
-export function pickPotential(rng: Rng, data: GameData, profile: DevelopmentProfileId): number {
+export function pickPotential(
+  rng: Rng, data: GameData, profile: DevelopmentProfileId,
+  strongFoot: 'left' | 'right' = 'right', weakFoot = 3,
+): number {
   const config = data.progression.potential;
   const bucket = rng.weighted(
     (config.distribution as { range: Range; weight: number }[]).map((entry) => ({ item: entry, weight: entry.weight })),
   );
-  const bonus = (config.lateBloomerBonus as Record<string, number>)[profile] ?? 0;
-  return clamp(rng.float(bucket.range[0], bucket.range[1]) + bonus, 50, 99);
+  const profileBonus = (config.lateBloomerBonus as Record<string, number>)[profile] ?? 0;
+
+  const traits = data.progression.traits;
+  const foot = traits.strongFoot[strongFoot];
+  const footBonus = rng.chance(foot.talentChance as number) ? (foot.talentBonus as number) : 0;
+  const weakFootBonus = Math.max(0, weakFoot - 2) * (traits.weakFoot.talentPerStarAboveTwo as number);
+
+  return clamp(
+    rng.float(bucket.range[0], bucket.range[1]) + profileBonus + footBonus + weakFootBonus,
+    50, 99,
+  );
+}
+
+/**
+ * Temperament, 0–100. Der Preis für das Talent aus dem Fuß: solche Spieler
+ * geraten häufiger in heikle Lagen und entscheiden sie öfter falsch.
+ */
+export function pickTemperament(
+  data: GameData, strongFoot: 'left' | 'right', weakFoot: number,
+): number {
+  const traits = data.progression.traits;
+  const base = traits.strongFoot[strongFoot].temperament as number;
+  const fromWeakFoot = Math.max(0, weakFoot - 2) * (traits.weakFoot.temperamentPerStarAboveTwo as number);
+  return clamp(base + fromWeakFoot, 0, 100);
 }
 
 /**
@@ -131,7 +173,7 @@ export function computeRole(data: GameData, ctx: RoleContext): SquadRole {
   const roles = data.progression.roles;
   let reputation = ctx.clubReputation;
   if (ctx.onLoan) {
-    reputation = clamp(reputation + roles.loanReputationBonus, 0, 5) as ReputationLevel;
+    reputation = clamp(reputation + roles.loanReputationBonus, 0, 10) as ReputationLevel;
   }
 
   let threshold = roles.minOverallForStarter[String(reputation)] as number;
