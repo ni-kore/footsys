@@ -321,7 +321,7 @@ const styles = StyleSheet.create({
   },
   ageText: { fontSize: 12, fontWeight: '700', color: color.text.secondary },
 
-  clubCell: { flexDirection: 'row', alignItems: 'center', gap: space[3], zIndex: 10 },
+  clubCell: { flexDirection: 'row', alignItems: 'center', gap: space[3] },
   loanArrow: { width: 12, flexShrink: 0 },
   clubName: { ...font.bodyStrong, flex: 1, minWidth: 28 },
   clubNameMuted: { color: color.text.muted, fontWeight: '400' },

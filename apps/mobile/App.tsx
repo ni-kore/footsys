@@ -13,6 +13,7 @@ import { DecisionScreen } from './src/screens/DecisionScreen';
 import { CareerStartScreen } from './src/screens/CareerStartScreen';
 import { KickoffScreen } from './src/screens/KickoffScreen';
 import { CareerLayout } from './src/components/CareerLayout';
+import { TooltipHost } from './src/components/Tooltip';
 import { ReportScreen } from './src/screens/ReportScreen';
 import { EndScreen } from './src/screens/EndScreen';
 
@@ -60,12 +61,14 @@ export default function App() {
   const data = dataRef.current;
 
   return (
-    <View style={styles.root}>
-      <StatusBar barStyle="light-content" backgroundColor={color.bg.root} />
-      <SafeAreaView style={styles.root}>
-        {renderScreen()}
-      </SafeAreaView>
-    </View>
+    <TooltipHost>
+      <View style={styles.root}>
+        <StatusBar barStyle="light-content" backgroundColor={color.bg.root} />
+        <SafeAreaView style={styles.root}>
+          {renderScreen()}
+        </SafeAreaView>
+      </View>
+    </TooltipHost>
   );
 
   function renderScreen() {

@@ -173,11 +173,10 @@ const styles = StyleSheet.create({
     flex: 1, flexDirection: 'row', flexWrap: 'wrap',
     gap: space[4], alignItems: 'center',
     paddingVertical: space[2], paddingHorizontal: space[2],
-    zIndex: 30,
   },
   // Das Symbol steht auf halber Höhe des ganzen Eintrags, nicht an der
   // ersten Zeile.
-  columns: { flexDirection: 'row', gap: space[4], zIndex: 20 },
+  columns: { flexDirection: 'row', gap: space[4] },
   // Derselbe Rahmen wie bei den Flächen der Spielerkarte.
   column: {
     flex: 1, gap: space[3], minWidth: 0, padding: space[3],

@@ -211,7 +211,6 @@ const styles = StyleSheet.create({
   // sobald der erste Titel dazukommt.
   trophies: {
     gap: space[2], padding: space[3],
-    zIndex: 20,
     backgroundColor: color.surface[2],
     borderRadius: radius.md,
     borderWidth: 1, borderColor: color.border.default,
@@ -220,7 +219,7 @@ const styles = StyleSheet.create({
   },
   trophyRow: {
     flexDirection: 'row', flexWrap: 'wrap', gap: space[4], alignItems: 'center',
-    paddingVertical: space[1], zIndex: 30,
+    paddingVertical: space[1],
   },
   moreTrophies: {
     height: 30, paddingHorizontal: 8,
