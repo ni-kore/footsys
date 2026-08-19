@@ -4,19 +4,19 @@
   "modifierSchema": {
     "immediateOverall": "OVR-Änderung sofort",
     "permanentOverall": "OVR-Änderung, die nicht von der Alterskurve zurückgeholt wird",
-    "deferredOverall": "{ delta, afterSeasons } — greift später",
+    "deferredOverall": "{ delta, afterSeasons }. Greift später",
     "roleOverride": "starter | high_rotation | low_rotation | substitute",
     "roleShift": "-1 oder +1 Stufe in roles.order",
     "roleOverrideSeasons": "wie lange roleOverride/roleShift gilt (Default: 1 Block)",
     "suspendedSeasons": "gesperrt, keine Einsätze",
     "forceZeroAppearances": "Block ohne Einsätze",
-    "trophyMultiplier": "{ league, domesticCup, continentalPrimary, continentalSecondary, national } — Faktor auf trophy-odds",
+    "trophyMultiplier": "{ league, domesticCup, continentalPrimary, continentalSecondary, national }. Faktor auf trophy-odds",
     "marketValueMultiplier": "Faktor auf den Marktwert",
-    "meters": "{ morale, fanSupport, mediaRelation } — Änderung in Punkten (-100..100)",
-    "nationalTeam": "force | skip — Teilnahme am nächsten Turnier",
+    "meters": "{ morale, fanSupport, mediaRelation }. Änderung in Punkten (-100..100)",
+    "nationalTeam": "force | skip. Teilnahme am nächsten Turnier",
     "switchNationality": "wechselt auf die im Event ermittelte Zweitnationalität",
     "forceTransfer": "{ scope: home_country | rival | same_league | abroad | free }",
-    "fansMultiplier": "Faktor auf die Anhängerschaft — Treue bringt Fans, ein Wechsel zum Rivalen kostet welche."
+    "fansMultiplier": "Faktor auf die Anhängerschaft. Treue bringt Fans, ein Wechsel zum Rivalen kostet welche."
   },
   "structural": [
     {
@@ -195,6 +195,30 @@
         "de": "Mehr als ein Verband will dich. Die Entscheidung bindet dich, sobald du ein A-Länderspiel bestreitest.",
         "en": "More than one association wants you. Once you play a senior international, the choice is final."
       }
+    },
+    {
+      "id": "media_partner_offer",
+      "window": "summer",
+      "title": {
+        "de": "Ein Sender meldet sich",
+        "en": "Someone wants to tell your story"
+      },
+      "text": {
+        "de": "Ein Medienhaus will regelmäßig über dich berichten. Mehr Aufmerksamkeit bringt Fans und macht andere Vereine neugierig, aber du stehst dann auch bei jedem Fehler im Bild.",
+        "en": "A media outlet wants to follow you. More coverage brings fans and makes other clubs curious, but every mistake ends up on screen as well."
+      }
+    },
+    {
+      "id": "kit_supplier_offer",
+      "window": "summer",
+      "title": {
+        "de": "Ein Ausrüster bietet an",
+        "en": "A kit supplier comes calling"
+      },
+      "text": {
+        "de": "Ein Ausrüster will dich unter Vertrag nehmen. Das bringt weniger Aufmerksamkeit als ein Sender, öffnet dafür Türen zu Vereinen, die dieselbe Marke tragen.",
+        "en": "A kit supplier wants to sign you. It brings less attention than a broadcaster, but it opens doors at clubs wearing the same brand."
+      }
     }
   ],
   "career": [
@@ -212,8 +236,8 @@
         "en": "Injury"
       },
       "text": {
-        "de": "Du hast dich verletzt: {injuryLabel}. Die Ärzte raten zu einer langen Pause — der Trainer hofft auf eine schnelle Rückkehr.",
-        "en": "You picked up an injury: {injuryLabel}. The doctors want a long break — the coach hopes for a quick return."
+        "de": "Du hast dich verletzt: {injuryLabel}. Die Ärzte raten zu einer langen Pause. Der Trainer hofft auf eine schnelle Rückkehr.",
+        "en": "You picked up an injury: {injuryLabel}. The doctors want a long break. The coach hopes for a quick return."
       },
       "options": [
         {
@@ -270,8 +294,8 @@
         "en": "Offer from your rivals"
       },
       "text": {
-        "de": "{rivalClub} will dich verpflichten — mehr Geld, größere Bühne, und die Fans deines Vereins werden es dir nie verzeihen.",
-        "en": "{rivalClub} want to sign you — more money, a bigger stage, and your own fans will never forgive you."
+        "de": "{rivalClub} will dich verpflichten. Mehr Geld, größere Bühne, und die Fans deines Vereins werden es dir nie verzeihen.",
+        "en": "{rivalClub} want to sign you. More money, a bigger stage, and your own fans will never forgive you."
       },
       "options": [
         {
@@ -380,8 +404,8 @@
         "en": "Second nationality"
       },
       "text": {
-        "de": "Über deinen Großvater bist du für {alternativeCountry} spielberechtigt. Dort wärst du sofort Nationalspieler — zu Hause müsstest du noch warten.",
-        "en": "Through your grandfather you're eligible for {alternativeCountry}. You'd be capped immediately there — at home you'd have to wait."
+        "de": "Über deinen Großvater bist du für {alternativeCountry} spielberechtigt. Dort wärst du sofort Nationalspieler. Zu Hause müsstest du noch warten.",
+        "en": "Through your grandfather you're eligible for {alternativeCountry}. You'd be capped immediately there. At home you'd have to wait."
       },
       "options": [
         {
@@ -425,8 +449,8 @@
         "en": "Position change"
       },
       "text": {
-        "de": "Der Trainer sieht dich künftig als {alternativePosition}. Du müsstest dich neu erfinden — dafür wärst du gesetzt.",
-        "en": "The coach sees you as a {alternativePosition} from now on. You'd have to reinvent yourself — but you'd be first choice."
+        "de": "Der Trainer sieht dich künftig als {alternativePosition}. Du müsstest dich neu erfinden. Dafür wärst du gesetzt.",
+        "en": "The coach sees you as a {alternativePosition} from now on. You'd have to reinvent yourself, but you'd be first choice."
       },
       "options": [
         {
@@ -649,8 +673,8 @@
         "en": "The club is in crisis"
       },
       "text": {
-        "de": "Abstiegskampf, Trainerwechsel, Unruhe. Du hast einen Weg raus — oder du bleibst und stellst dich hin.",
-        "en": "Relegation fight, coaching change, chaos. You have a way out — or you stay and front up."
+        "de": "Abstiegskampf, Trainerwechsel, Unruhe. Du hast einen Weg raus, oder du bleibst und stellst dich hin.",
+        "en": "Relegation fight, coaching change, chaos. You have a way out, or you stay and front up."
       },
       "options": [
         {
@@ -942,8 +966,8 @@
         "en": "The prospect"
       },
       "text": {
-        "de": "Ein Siebzehnjähriger aus der eigenen Jugend drängt auf deine Position. Du könntest ihn aufbauen — oder blocken.",
-        "en": "A seventeen-year-old from the academy is pushing for your spot. You could bring him through — or block him."
+        "de": "Ein Siebzehnjähriger aus der eigenen Jugend drängt auf deine Position. Du könntest ihn aufbauen, oder blocken.",
+        "en": "A seventeen-year-old from the academy is pushing for your spot. You could bring him through, or block him."
       },
       "options": [
         {
@@ -1061,8 +1085,8 @@
         "en": "The stands turn on you"
       },
       "text": {
-        "de": "Bei Heimspielen wirst du ausgepfiffen. Ein offenes Gespräch mit den Ultras könnte alles ändern — oder alles verschlimmern.",
-        "en": "You're getting whistled at home. A face-to-face with the ultras could fix everything — or make it worse."
+        "de": "Bei Heimspielen wirst du ausgepfiffen. Ein offenes Gespräch mit den Ultras könnte alles ändern, oder alles verschlimmern.",
+        "en": "You're getting whistled at home. A face-to-face with the ultras could fix everything, or make it worse."
       },
       "options": [
         {
@@ -1300,8 +1324,8 @@
         "en": "Winter enquiry"
       },
       "text": {
-        "de": "Mitten in der Saison meldet ein anderer Verein Interesse. Ein Wechsel jetzt reißt dich aus dem Rhythmus — aber die Chance kommt vielleicht nicht wieder.",
-        "en": "Another club comes in mid-season. Moving now breaks your rhythm — but the chance might not come again."
+        "de": "Mitten in der Saison meldet ein anderer Verein Interesse. Ein Wechsel jetzt reißt dich aus dem Rhythmus, aber die Chance kommt vielleicht nicht wieder.",
+        "en": "Another club comes in mid-season. Moving now breaks your rhythm, but the chance might not come again."
       },
       "options": [
         {
@@ -1406,8 +1430,8 @@
         "en": "Endorsement offer"
       },
       "text": {
-        "de": "Ein Sponsor bietet dir viel Geld — er ist allerdings Konkurrent des Vereinssponsors.",
-        "en": "A sponsor offers you serious money — but they're a rival of the club's own sponsor."
+        "de": "Ein Sponsor bietet dir viel Geld. Er ist allerdings Konkurrent des Vereinssponsors.",
+        "en": "A sponsor offers you serious money, but they're a rival of the club's own sponsor."
       },
       "options": [
         {
@@ -1608,8 +1632,8 @@
         "en": "First professional contract"
       },
       "text": {
-        "de": "Der Verein legt dir den ersten Profivertrag vor — zu schlechten Konditionen, weil du noch nichts gezeigt hast. Andere Vereine warten auf ein Nein.",
-        "en": "The club puts your first professional deal in front of you — on poor terms, because you haven't proven anything. Other clubs are waiting for you to say no."
+        "de": "Der Verein legt dir den ersten Profivertrag vor, zu schlechten Konditionen, weil du noch nichts gezeigt hast. Andere Vereine warten auf ein Nein.",
+        "en": "The club puts your first professional deal in front of you, on poor terms, because you haven't proven anything. Other clubs are waiting for you to say no."
       },
       "options": [
         {
@@ -1669,8 +1693,8 @@
         "en": "Settling in abroad"
       },
       "text": {
-        "de": "Sprache, Essen, Alltag — nichts fühlt sich vertraut an. Du kannst dich anpassen oder deine Blase behalten.",
-        "en": "Language, food, everyday life — nothing feels familiar. You can adapt, or keep your bubble."
+        "de": "Sprache, Essen, Alltag. Nichts fühlt sich vertraut an. Du kannst dich anpassen oder deine Blase behalten.",
+        "en": "Language, food, everyday life. Nothing feels familiar. You can adapt, or keep your bubble."
       },
       "options": [
         {
@@ -1771,6 +1795,183 @@
               "morale": 15,
               "fanSupport": 15
             }
+          }
+        }
+      ]
+    },
+    {
+      "id": "break_focus",
+      "weight": 90,
+      "window": "any",
+      "ageRange": [
+        15,
+        45
+      ],
+      "maxPerCareer": 99,
+      "title": {
+        "de": "Wie nutzt du die Pause?",
+        "en": "How do you use the break?"
+      },
+      "text": {
+        "de": "Ein paar Wochen ohne Pflichtspiel. Was du damit machst, merkt man erst im Frühjahr.",
+        "en": "A few weeks without a competitive match. What you do with them shows up months later."
+      },
+      "options": [
+        {
+          "id": "train_hard",
+          "label": {
+            "de": "Durchtrainieren",
+            "en": "Train through it"
+          },
+          "modifiers": {
+            "permanentOverall": 0.15,
+            "meters": {
+              "morale": -6
+            }
+          }
+        },
+        {
+          "id": "rest_properly",
+          "label": {
+            "de": "Richtig ausruhen",
+            "en": "Rest properly"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 10
+            },
+            "appearanceMultiplier": 1.04
+          }
+        },
+        {
+          "id": "go_public",
+          "label": {
+            "de": "Termine wahrnehmen",
+            "en": "Take the public appearances"
+          },
+          "modifiers": {
+            "meters": {
+              "mediaRelation": 10,
+              "morale": -3
+            },
+            "fansMultiplier": 1.03
+          }
+        }
+      ]
+    },
+    {
+      "id": "training_focus",
+      "weight": 90,
+      "window": "any",
+      "ageRange": [
+        15,
+        45
+      ],
+      "maxPerCareer": 99,
+      "title": {
+        "de": "Woran arbeitest du?",
+        "en": "What do you work on?"
+      },
+      "text": {
+        "de": "Der Trainerstab lässt dir die Wahl, worauf du die nächsten Monate setzt.",
+        "en": "The coaching staff lets you choose what the next months are about."
+      },
+      "options": [
+        {
+          "id": "sharpen_strength",
+          "label": {
+            "de": "Die eigene Stärke schärfen",
+            "en": "Sharpen what you already do well"
+          },
+          "modifiers": {
+            "permanentOverall": 0.12
+          }
+        },
+        {
+          "id": "fix_weakness",
+          "label": {
+            "de": "Die Schwäche angehen",
+            "en": "Work on the weak side"
+          },
+          "modifiers": {
+            "deferredOverall": {
+              "delta": 0.35,
+              "afterSeasons": 1
+            },
+            "meters": {
+              "morale": -4
+            }
+          }
+        },
+        {
+          "id": "lead_the_room",
+          "label": {
+            "de": "Verantwortung übernehmen",
+            "en": "Take charge in the dressing room"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 6,
+              "fanSupport": 6
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "off_pitch_time",
+      "weight": 80,
+      "window": "any",
+      "ageRange": [
+        15,
+        45
+      ],
+      "maxPerCareer": 99,
+      "title": {
+        "de": "Neben dem Platz",
+        "en": "Away from the pitch"
+      },
+      "text": {
+        "de": "Es bleibt Zeit für etwas, das nichts mit Fußball zu tun hat. Oder eben doch.",
+        "en": "There is room for something that has nothing to do with football. Or everything."
+      },
+      "options": [
+        {
+          "id": "family_first",
+          "label": {
+            "de": "Zu Hause bleiben",
+            "en": "Stay close to home"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 12
+            }
+          }
+        },
+        {
+          "id": "study_the_game",
+          "label": {
+            "de": "Spiele studieren",
+            "en": "Study the game"
+          },
+          "modifiers": {
+            "deferredOverall": {
+              "delta": 0.25,
+              "afterSeasons": 1
+            }
+          }
+        },
+        {
+          "id": "meet_the_fans",
+          "label": {
+            "de": "Unter die Leute gehen",
+            "en": "Get out among the supporters"
+          },
+          "modifiers": {
+            "meters": {
+              "fanSupport": 12
+            },
+            "fansMultiplier": 1.04
           }
         }
       ]

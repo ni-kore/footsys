@@ -361,6 +361,24 @@ export interface PlayerIdentity {
   formationId: string;
 }
 
+/**
+ * Ein Partner: Sender, Zeitung, Fankanal oder Ausrüster.
+ *
+ * Die Reichweite 1 bis 10 sagt, wie weit die Marke trägt. Ein Regionalsender
+ * bringt ein paar hundert Leute mehr, ein Weltkonzern Millionen.
+ */
+export interface Partner {
+  id: string;
+  name: string;
+  /** Pfad des Logos unterhalb von assets/. */
+  logo: string;
+  reach: number;
+  /** Helle Logos brauchen einen dunklen Untergrund, sonst verschwinden sie. */
+  light: boolean;
+}
+
+export type PartnerKind = 'media' | 'kit';
+
 export interface PlayerState extends PlayerIdentity {
   age: number;
   /** Intern als Fließkommazahl geführt, für die Anzeige gerundet. */
@@ -380,9 +398,21 @@ export interface PlayerState extends PlayerIdentity {
    */
   fans: number;
 
+  /**
+   * Anhänger, die über die Nationalmannschaft dazugekommen sind. Sie stecken
+   * in `fans` mit drin und werden hier nur getrennt mitgezählt.
+   */
+  nationalFans: number;
+
+  /** Medienpartner, der über einen berichtet. Keiner heißt null. */
+  mediaPartner: string | null;
+  /** Ausrüster, der einen ausstattet. */
+  kitSupplier: string | null;
+
   /** Länderspiele insgesamt. */
   caps: number;
   nationalGoals: number;
+  nationalAssists: number;
 
   /**
    * 0–100. Steigt mit dem linken Fuß und einem starken zweiten Fuß. Solche
@@ -410,6 +440,10 @@ export interface HalfSeasonRecord {
   goals: number;
   assists: number;
   cleanSheets: number;
+  /** Länderspiele dieser Halbserie und was dabei heraussprang. */
+  caps: number;
+  nationalGoals: number;
+  nationalAssists: number;
   /** Zufallsereignisse, die in dieser Halbserie passiert sind. */
   randomEventIds: string[];
 }
@@ -426,6 +460,10 @@ export interface SeasonRecord {
   goals: number;
   assists: number;
   cleanSheets: number;
+  /** Anhängerschaft am Ende dieser Saison. */
+  fans: number;
+  /** Vorlagen im Nationaltrikot. */
+  nationalAssists: number;
   titles: string[];
   awards: string[];
   nationalCaps: number;
@@ -445,6 +483,10 @@ export interface PendingOption {
   label: LocalizedText;
   /** Bei Vereinsentscheidungen: der Verein hinter der Option. */
   clubId?: string;
+  /** Bei Partnerentscheidungen: die Marke hinter der Option. */
+  partnerId?: string;
+  /** Kurzes Kennzeichen der Option, etwa "Stay" oder "Move". */
+  tag?: string;
   subtitle?: string;
 }
 
@@ -521,8 +563,14 @@ export interface CareerState {
   currentSeasonHalves: HalfSeasonRecord[];
   currentSeasonCaps: number;
   currentSeasonNationalGoals: number;
+  currentSeasonNationalAssists: number;
   seasons: SeasonRecord[];
-  pending: PendingDecision | null;
+  /**
+   * Die Entscheidungen, die gerade anstehen. Eine bei der Jugendakademie und
+   * beim Karriereende, drei in jeder Pause. Sie werden gemeinsam beantwortet:
+   * bis zum Anpfiff lässt sich jede noch ändern.
+   */
+  pendingSet: PendingDecision[];
   /** Ergebnis der zuletzt simulierten Halbserie, wartet auf Bestätigung. */
   pendingReport: PeriodReport | null;
   /** Die Saison wartet auf den Anpfiff. */

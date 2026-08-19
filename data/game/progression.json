@@ -837,18 +837,20 @@
     "startOverall": 64,
     "developmentProfile": "early",
     "temperament": 0,
-    "weakFoot": 5
+    "weakFoot": 5,
+    "fansMultiplier": 4,
+    "$fansComment": "Nur dieser eine Name zieht so viele Menschen an, dass die Obergrenze von 700 Millionen überhaupt erreichbar wird."
   },
   "fans": {
     "$comment": "Fans sind eine gezählte Größe, keine Stimmung — die steckt im Meter \"fanSupport\". Man beginnt mit zwei und kann im besten Fall die halbe Welt hinter sich haben. Wie viele dazukommen, hängt an der Leistung und daran, wie weit der Verein strahlt: ein Tor für einen Viertligisten sehen ein paar hundert Leute, eines für einen Weltverein Millionen.",
     "start": 2,
     "max": 700000000,
-    "perAppearance": 400,
-    "perGoal": 4000,
-    "perAssist": 2000,
-    "perCleanSheet": 1500,
-    "perTitle": 60000,
-    "perAward": 40000,
+    "perAppearance": 80,
+    "perGoal": 800,
+    "perAssist": 400,
+    "perCleanSheet": 300,
+    "perTitle": 12000,
+    "perAward": 8000,
     "reachByClubReputation": {
       "0": 0.05,
       "1": 0.12,
@@ -881,6 +883,23 @@
       "$comment": "Ab so vielen Fans lässt der Verein nicht mehr ohne Weiteres gehen — im Transferfenster liegen dann weniger fremde Angebote auf dem Tisch.",
       "fans": 10000000,
       "reducedOffers": 2
-    }
+    },
+    "national": {
+      "$comment": "Ein Länderspiel sieht ein ganzes Land, nicht nur eine Stadt. Deshalb zählt es eigenständig und richtet sich nach der Stärke des Verbands.",
+      "perCap": 500,
+      "perGoal": 3600,
+      "perAssist": 1800,
+      "reachByStrength": {
+        "1": 0.6,
+        "2": 2,
+        "3": 6,
+        "4": 16,
+        "5": 36
+      }
+    },
+    "regularMax": 400000000,
+    "$maxComment": "max gilt nur für den Ausnahmespieler aus easterEgg. Alle anderen enden bei regularMax.",
+    "multiplierDamping": 0.45,
+    "$dampingComment": "Faktoren aus Entscheidungen wirken nur zu diesem Anteil auf den Bestand."
   }
 }

@@ -115,6 +115,9 @@ export function simulateHalf(data: GameData, rng: Rng, state: CareerState): Half
     goals: 0,
     assists: 0,
     cleanSheets: 0,
+    caps: 0,
+    nationalGoals: 0,
+    nationalAssists: 0,
     randomEventIds: [],
   };
 
@@ -190,14 +193,14 @@ export function simulateHalf(data: GameData, rng: Rng, state: CareerState): Half
     );
   }
 
-  simulateNationalTeamHalf(data, rng, state, effects, record.appearances > 0);
+  simulateNationalTeamHalf(data, rng, state, effects, record);
   return record;
 }
 
 function simulateNationalTeamHalf(
-  data: GameData, rng: Rng, state: CareerState, effects: EventModifiers, played: boolean,
+  data: GameData, rng: Rng, state: CareerState, effects: EventModifiers, half: HalfSeasonRecord,
 ): void {
-  if (effects.nationalTeam === 'skip' || !played) return;
+  if (effects.nationalTeam === 'skip' || half.appearances === 0) return;
 
   const association = activeAssociation(data, state);
   if (!association) return;
@@ -208,6 +211,7 @@ function simulateNationalTeamHalf(
 
   const position = positionOf(data, state.player.position);
   const goals = Math.round(caps * position.goalFactor * 0.35 * rng.float(0.6, 1.4));
+  const assists = Math.round(caps * position.assistFactor * 0.3 * rng.float(0.6, 1.4));
 
   state.player.nationalTeam = association;
   // Ab dem festgelegten Alter zählen die Spiele als A-Länderspiele und binden
@@ -219,8 +223,16 @@ function simulateNationalTeamHalf(
 
   state.currentSeasonCaps += caps;
   state.currentSeasonNationalGoals += goals;
+  state.currentSeasonNationalAssists += assists;
   state.player.caps += caps;
   state.player.nationalGoals += goals;
+  state.player.nationalAssists += assists;
+
+  // Auch die Halbserie merkt sich das: die Anhängerschaft wird je Halbserie
+  // gerechnet und braucht die Länderspiele dieser Wochen.
+  half.caps += caps;
+  half.nationalGoals += goals;
+  half.nationalAssists += assists;
 }
 
 export function isEligibleForNationalTeam(data: GameData, state: CareerState): boolean {
@@ -263,10 +275,14 @@ export function closeSeason(data: GameData, rng: Rng, state: CareerState): Seaso
     goals,
     assists,
     cleanSheets,
+    // Wird nach dem Abschluss überschrieben: die Fans der Saison werden erst
+    // danach gerechnet.
+    fans: state.player.fans,
     titles,
     awards,
     nationalCaps: state.currentSeasonCaps,
     nationalGoals: state.currentSeasonNationalGoals,
+    nationalAssists: state.currentSeasonNationalAssists,
     halves: [...halves],
   };
   if (state.activeLoan) record.loanFrom = state.activeLoan.parentClubId;

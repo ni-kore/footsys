@@ -1,38 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { awardName, titleName, type GameData, type PeriodReport } from '@footsys/engine';
-import { delta, fans as formatFans, money, roleLabel, seasonLabel } from '../format';
+import { roleLabel, roleTone, seasonLabel } from '../format';
 import { color, font, radius, space } from '../theme';
-import { Button, ClubBadge, Label, StatCard } from '../components/ui';
-import { AssistIcon, CardIcon, CleanSheetIcon, FansIcon, GoalIcon } from '../components/icons';
+import { Button, ClubBlock } from '../components/ui';
+import { CardIcon } from '../components/icons';
+import { Fade } from '../components/motion';
 
-/** Wie der Trainer die Halbserie über spielen ließ. */
-function coachApproach(bias: number): string {
-  if (bias >= 0.7) return 'very attacking';
-  if (bias >= 0.55) return 'attacking';
-  if (bias >= 0.4) return 'balanced';
-  if (bias >= 0.3) return 'cautious';
-  return 'very defensive';
-}
-
-/** Wie gut das Lieblingssystem des Spielers dazu passte. */
-function fitLabel(fit: number): { text: string; tone: string } {
-  if (fit >= 0.95) return { text: 'a perfect fit for you', tone: color.status.positive };
-  if (fit >= 0.85) return { text: 'a decent fit for you', tone: color.status.positive };
-  if (fit >= 0.78) return { text: 'not really your game', tone: color.status.warning };
-  return { text: 'the wrong system for you', tone: color.status.negative };
-}
-
-const TONE_COLOR: Record<string, string> = {
-  positive: color.status.positive,
-  negative: color.status.negative,
-  neutral: color.text.secondary,
-};
+/** Ein Ereignis, wie es im Bericht steht. */
+type Happening = PeriodReport['randomEvents'][number];
 
 /**
  * Was in einer Halbserie passiert ist. Der Bildschirm bleibt stehen, bis er
- * bestätigt wird — sonst rauscht die Karriere vorbei, ohne dass man etwas
- * mitbekommt.
+ * bestätigt wird. Die Zahlen dazu stehen dauerhaft darüber und zählen dort
+ * hoch, sobald der Bericht erscheint.
  */
 export function ReportScreen({ data, report, onContinue }: {
   data: GameData;
@@ -41,118 +22,172 @@ export function ReportScreen({ data, report, onContinue }: {
 }) {
   const club = data.clubById.get(report.clubId);
   const league = data.leagueById.get(report.leagueId);
-  const overallChange = report.overallAfter - report.overallBefore;
   const isSeason = report.kind === 'season';
-  const isKeeper = data.positionById.get(report.position)?.group === 'GK';
-  const fit = fitLabel(report.formationFit);
+
+  // Was gut lief, steht links, was schieflief, rechts. Was sich nicht
+  // einordnen lässt, steht darunter über die ganze Breite.
+  const good = report.randomEvents.filter((event) => event.tone === 'positive');
+  const bad = report.randomEvents.filter((event) => event.tone === 'negative');
+  const rest = report.randomEvents.filter(
+    (event) => event.tone !== 'positive' && event.tone !== 'negative',
+  );
 
   return (
     <View style={styles.screen}>
       <View style={{ gap: space[2] }}>
-        <Label>
-          {isSeason
-            ? `Season ${seasonLabel(report.year)} · second half`
-            : `Season ${seasonLabel(report.year)} · first half`}
-        </Label>
-        <Text style={styles.title}>{isSeason ? 'Season review' : 'Half-season review'}</Text>
-
-        <View style={styles.clubLine}>
-          {club ? <ClubBadge clubId={club.id} colors={club.colors} abbr={club.abbr} size={26} /> : null}
-          <Text style={font.bodyStrong}>{club?.short ?? ''}</Text>
-          <Text style={font.caption}>{league?.name ?? ''}</Text>
-          <Text style={styles.roleChip}>{roleLabel(report.role).toUpperCase()}</Text>
-        </View>
-
-        <Text style={font.caption}>
-          The coach played {coachApproach(report.coachBias)} —{' '}
-          <Text style={{ color: fit.tone }}>{fit.text}</Text>
+        <Text style={styles.title}>
+          {isSeason ? 'Season review' : 'Half-season review'}
         </Text>
-      </View>
 
-      <View style={styles.grid}>
-        <StatCard grow value={report.appearances} label="Apps" />
-        {/* Der Torhüter schießt keine Tore — bei ihm steht die weiße Weste. */}
-        {isKeeper ? (
-          <StatCard grow value={report.cleanSheets} label="Clean sheets" icon={<CleanSheetIcon />} />
-        ) : (
-          <StatCard grow value={report.goals} label="Goals" icon={<GoalIcon />} />
-        )}
-        <StatCard grow value={report.assists} label="Assists" icon={<AssistIcon />} />
-        <StatCard
-          grow
-          value={formatFans(report.fansAfter)}
-          label="Fans"
-          icon={<FansIcon />}
-          tint={report.fansAfter >= report.fansBefore ? color.status.positive : color.status.negative}
+        {/* Derselbe Block wie links auf der Spielerkarte. */}
+        <ClubBlock
+          {...(club ? { clubId: club.id } : {})}
+          name={club?.name ?? ''}
+          colors={club ? club.colors : ['#2B2B38', '#2B2B38']}
+          abbr={club?.abbr ?? ''}
+          {...(league ? { league: league.name } : {})}
+          status={roleLabel(report.role)}
+          statusTone={roleTone(report.role)}
         />
-        {report.nationalCaps > 0 ? <StatCard grow value={report.nationalCaps} label="Caps" /> : null}
-        {report.nationalGoals > 0 ? <StatCard grow value={report.nationalGoals} label="Int. goals" /> : null}
-        {isSeason ? (
-          <StatCard
-            grow
-            value={delta(overallChange)}
-            label="OVR change"
-            tint={overallChange >= 0 ? color.status.positive : color.status.negative}
-          />
-        ) : null}
-        {isSeason ? <StatCard grow value={money(report.marketValueAfter)} label="Value" /> : null}
       </View>
 
       {report.titles.length > 0 || report.awards.length > 0 ? (
-        <View style={styles.silverware}>
+        <Fade style={styles.silverware} delay={120}>
           <Text style={font.title}>Silverware</Text>
           {report.titles.map((id) => (
-            <Text key={id} style={styles.trophyLine}>🏆  {titleName(data, id)}</Text>
+            <Text key={id} style={styles.trophyLine}>{titleName(data, id)}</Text>
           ))}
           {report.awards.map((id) => (
-            <Text key={id} style={styles.trophyLine}>★  {awardName(data, id)}</Text>
+            <Text key={id} style={styles.trophyLine}>{awardName(data, id)}</Text>
           ))}
-        </View>
+        </Fade>
       ) : null}
 
       {report.randomEvents.length > 0 ? (
         <View style={{ gap: space[3] }}>
           <Text style={font.title}>What happened</Text>
-          {report.randomEvents.map((event) => (
-            <View key={event.id} style={styles.eventRow}>
-              {event.id === 'red_card_ban' ? (
-                <View style={styles.eventIcon}><CardIcon size={14} /></View>
-              ) : (
-                <View style={[styles.eventDot, { backgroundColor: TONE_COLOR[event.tone] ?? color.text.muted }]} />
-              )}
-              <View style={{ flex: 1, gap: 2 }}>
-                <Text style={font.bodyStrong}>{event.title.en}</Text>
-                <Text style={[font.caption, { lineHeight: 18 }]}>{event.text}</Text>
-              </View>
+
+          <View style={styles.columns}>
+            <Column
+              label="Went well"
+              tone={color.status.positive}
+              sign="+"
+              events={good}
+              empty="Nothing stood out"
+            />
+            <Column
+              label="Went wrong"
+              tone={color.status.negative}
+              sign="−"
+              events={bad}
+              empty="Nothing went against you"
+            />
+          </View>
+
+          {rest.length > 0 ? (
+            <View style={{ gap: space[3] }}>
+              {rest.map((event, index) => (
+                <Happening key={event.id} event={event} delay={index * 90} />
+              ))}
             </View>
-          ))}
+          ) : null}
         </View>
       ) : null}
 
       <View style={{ alignItems: 'flex-start', marginTop: 'auto' }}>
-        <Button
-          label={isSeason ? 'Into the new season' : 'Into the second half'}
-          onPress={onContinue}
-        />
+        {/* Von hier geht es nicht direkt aufs Feld, sondern zu den
+            Entscheidungen, die vor der nächsten Halbserie zu treffen sind. */}
+        <Button label="Your decisions" onPress={onContinue} />
       </View>
     </View>
+  );
+}
+
+/** Eine der beiden Spalten: was gut lief oder was schieflief. */
+function Column({ label, tone, sign, events, empty }: {
+  label: string;
+  tone: string;
+  /** Vorzeichen vor jedem Eintrag der Spalte. */
+  sign: string;
+  events: Happening[];
+  empty: string;
+}) {
+  return (
+    <View style={styles.column}>
+      <Text style={[styles.columnLabel, { color: tone }]}>{label}</Text>
+      {events.length > 0 ? (
+        events.map((event, index) => (
+          <Happening
+            key={event.id}
+            event={event}
+            sign={sign}
+            tone={tone}
+            delay={140 + index * 90}
+          />
+        ))
+      ) : (
+        <Text style={styles.columnEmpty}>{empty}</Text>
+      )}
+    </View>
+  );
+}
+
+/**
+ * Ein einzelnes Vorkommnis. Ob es gut oder schlecht war, sagt das Vorzeichen
+ * davor; der Text selbst bleibt in der normalen Farbe und damit lesbar.
+ */
+function Happening({ event, sign, tone, delay }: {
+  event: Happening;
+  sign?: string;
+  tone?: string;
+  delay: number;
+}) {
+  return (
+    <Fade delay={delay} style={styles.eventRow}>
+      {/* Wo sonst das Vorzeichen steht, steht bei einem Platzverweis die
+          Karte. Sie füllt denselben Platz, damit die Zeilen daneben nicht
+          verrutschen. */}
+      {event.id === 'red_card_ban' ? (
+        <View style={styles.signSlot}><CardIcon size={13} /></View>
+      ) : sign ? (
+        <Text style={[styles.sign, tone ? { color: tone } : null]}>{sign}</Text>
+      ) : null}
+      <View style={{ flex: 1, gap: 2 }}>
+        <Text style={font.bodyStrong}>{event.title.en}</Text>
+        <Text style={[font.caption, { lineHeight: 18 }]}>{event.text}</Text>
+      </View>
+    </Fade>
   );
 }
 
 const styles = StyleSheet.create({
   screen: { flex: 1, gap: space[4] },
   title: { fontSize: 26, fontWeight: '700', color: color.text.primary, letterSpacing: -0.4 },
-  clubLine: { flexDirection: 'row', alignItems: 'center', gap: space[2], flexWrap: 'wrap' },
-  roleChip: {
-    ...font.micro, textTransform: 'uppercase',
-    borderWidth: 1, borderColor: color.border.default, borderRadius: radius.pill,
-    paddingHorizontal: 8, paddingVertical: 2,
-  },
-  grid: { flexDirection: 'row', flexWrap: 'wrap', gap: space[2] },
   silverware: { gap: space[2] },
   trophyLine: { ...font.body, color: color.rating.elite },
-  eventRow: { flexDirection: 'row', gap: space[3], alignItems: 'flex-start' },
-  eventDot: { width: 8, height: 8, borderRadius: 4, marginTop: 6 },
-  eventIcon: { width: 14, marginTop: 2, marginLeft: -3 },
+  // Das Symbol steht auf halber Höhe des ganzen Eintrags, nicht an der
+  // ersten Zeile.
+  columns: { flexDirection: 'row', gap: space[4] },
+  // Derselbe Rahmen wie bei den Flächen der Spielerkarte.
+  column: {
+    flex: 1, gap: space[3], minWidth: 0, padding: space[3],
+    backgroundColor: color.surface[2],
+    borderRadius: radius.md,
+    borderWidth: 1, borderColor: color.border.default,
+  },
+  columnLabel: { ...font.micro, textTransform: 'uppercase' },
+  columnEmpty: { ...font.caption, color: color.text.muted },
+  eventRow: { flexDirection: 'row', gap: space[2], alignItems: 'center' },
+  // Das Vorzeichen steht auf der Zeile der Überschrift, nicht auf halber
+  // Höhe des ganzen Eintrags.
+  // Dieselbe Zeilenhöhe wie die Überschrift: so liegen beide Mitten
+  // aufeinander, unabhängig von der Schriftgröße des Zeichens.
+  sign: {
+    fontSize: 15, fontWeight: '700', lineHeight: 18, width: 10, textAlign: 'center',
+    alignSelf: 'flex-start',
+  },
+  signSlot: {
+    width: 10, height: 18, alignSelf: 'flex-start',
+    alignItems: 'center', justifyContent: 'center',
+  },
 });
-

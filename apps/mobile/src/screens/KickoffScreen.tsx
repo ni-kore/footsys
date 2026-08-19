@@ -6,8 +6,9 @@ import { color, font, space } from '../theme';
 import { Button, ClubBadge, Label } from '../components/ui';
 
 /**
- * Zwischen der Vereinswahl und dem ersten Spiel steht ein Moment: man sieht,
- * wo man gelandet ist, und pfeift die Saison selbst an.
+ * Zwischen der Jugendakademie und dem ersten Spiel steht ein Moment: man
+ * sieht, wo man gelandet ist, und pfeift selbst an. Das passiert genau einmal.
+ * Jede weitere Saison beginnt mit der Entscheidung, die zu ihr geführt hat.
  */
 export function KickoffScreen({ data, state, onStart }: {
   data: GameData;
@@ -16,15 +17,12 @@ export function KickoffScreen({ data, state, onStart }: {
 }) {
   const club = state.clubId ? data.clubById.get(state.clubId) : null;
   const league = club ? data.leagueById.get(club.league) : null;
-  const first = state.seasons.length === 0;
 
   return (
     <View style={styles.screen}>
       <View style={{ gap: space[2] }}>
         <Label>Season {seasonLabel(state.year)}</Label>
-        <Text style={styles.title}>
-          {first ? 'Your first season' : 'A new season'}
-        </Text>
+        <Text style={styles.title}>Your first season</Text>
       </View>
 
       {club ? (
@@ -38,9 +36,7 @@ export function KickoffScreen({ data, state, onStart }: {
       ) : null}
 
       <Text style={styles.lead}>
-        {first
-          ? 'Pre-season is over. Nothing has been decided yet.'
-          : 'A new campaign, a fresh table, the same question every week.'}
+        Pre-season is over. Nothing has been decided yet.
       </Text>
 
       <View style={{ alignItems: 'flex-start', marginTop: 'auto' }}>

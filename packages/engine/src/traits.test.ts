@@ -25,11 +25,11 @@ function playThrough(data: GameData, seed: string, id: PlayerIdentity): CareerSt
   const chooser = new Rng(`${seed}:choices`);
   let state = createCareer(data, { seed, mode: 'normal', identity: id });
   let guard = 0;
-  while (!state.retired && (state.pending || state.pendingReport || state.pendingKickoff)) {
+  while (!state.retired && (state.pendingSet.length > 0 || state.pendingReport || state.pendingKickoff)) {
     assert.ok(guard++ < 2000, 'Karriere endet nicht');
     if (state.pendingKickoff) state = kickOff(data, state);
     else if (state.pendingReport) state = acknowledge(data, state);
-    else state = decide(data, state, chooser.pick(state.pending!.options).id);
+    else state = decide(data, state, state.pendingSet.map((d) => chooser.pick(d.options).id));
   }
   return state;
 }

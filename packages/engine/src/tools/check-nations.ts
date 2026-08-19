@@ -15,7 +15,7 @@ for (const country of data.countries) {
         nationality: country.code, position: 'ST', formationId: '4-2-3-1',
       },
     });
-    const options = state.pending?.options ?? [];
+    const options = state.pendingSet[0]?.options ?? [];
     if (options.length < 3) problems.push(`${country.code}: nur ${options.length} Angebote`);
   } catch (error) {
     problems.push(`${country.code}: ${(error as Error).message}`);
@@ -31,7 +31,7 @@ for (const code of sample) {
     seed: 'sample-' + code, mode: 'normal',
     identity: { surname: 'T', shirtNumber: 9, strongFoot: 'right', weakFoot: 3, nationality: code, position: 'ST', formationId: '4-2-3-1' },
   });
-  const offers = (state.pending?.options ?? [])
+  const offers = (state.pendingSet[0]?.options ?? [])
     .map((o) => data.clubById.get(o.clubId!)?.short)
     .join(', ');
   console.log(`  ${code} → ${offers}`);

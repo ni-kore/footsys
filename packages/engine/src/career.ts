@@ -1,15 +1,17 @@
 import { clubOf, countryOf, leagueOf, positionOf, type GameData } from './data';
 import {
-  buildAcademyDecision, buildCareerDecision, buildLoanDecision, buildRetirementDecision,
-  buildTransferDecision, clubOffers, resolveOption, rollRandomEvents,
+  buildAcademyDecision, buildCareerDecision, buildLoanDecision, buildPartnerDecision,
+  buildRetirementDecision, buildTransferDecision, clubOffers, resolveOption, rollRandomEvents,
 } from './events';
+import { partnerOffersNow } from './partners';
 import { marketValue, pickDevelopmentProfile, pickPotential, pickTemperament } from './progression';
 import { callingAssociations, canStillSwitch } from './national-team';
 import { Rng } from './rng';
 import { ageEffects, closeSeason, simulateHalf } from './simulation';
 import { clubHoldsOn, updateFans } from './fans';
 import type {
-  CareerState, GameMode, PeriodReport, PlayerIdentity, TimelineEntry, TransferScope,
+  CareerState, GameMode, PendingDecision, PendingOption, PeriodReport, PlayerIdentity,
+  TimelineEntry, TransferScope,
 } from './types';
 
 /**
@@ -25,9 +27,6 @@ import type {
  *   decide(optionId)    → simuliert eine Halbserie, liefert deren Bericht
  *   acknowledge()       → schließt den Bericht, liefert Entscheidung oder nächsten Bericht
  */
-
-/** Wahrscheinlichkeit, dass in der Winterpause eine Entscheidung ansteht. */
-const WINTER_DECISION_CHANCE = 0.45;
 
 /** Ab dieser Saisonzahl beim Verein ohne Einsatzzeit wird eine Leihe angeboten. */
 const LOAN_OFFER_CHANCE = 0.7;
@@ -78,8 +77,12 @@ export function createCareer(data: GameData, options: CareerOptions): CareerStat
         mediaRelation: meters.mediaRelation.start,
       },
       fans: data.progression.fans.start as number,
+      mediaPartner: null,
+      kitSupplier: null,
       caps: 0,
       nationalGoals: 0,
+      nationalAssists: 0,
+      nationalFans: 0,
       temperament: legend
         ? (egg.temperament as number)
         : pickTemperament(data, options.identity.strongFoot, weakFoot),
@@ -96,8 +99,9 @@ export function createCareer(data: GameData, options: CareerOptions): CareerStat
     currentSeasonHalves: [],
     currentSeasonCaps: 0,
     currentSeasonNationalGoals: 0,
+    currentSeasonNationalAssists: 0,
     seasons: [],
-    pending: null,
+    pendingSet: [],
     pendingReport: null,
     pendingKickoff: false,
     seasonStarted: false,
@@ -116,22 +120,50 @@ export function createCareer(data: GameData, options: CareerOptions): CareerStat
   };
 
   state.player.marketValue = marketValue(data, rng, state.player.overall, state.player.age);
-  state.pending = buildAcademyDecision(data, rng, state);
+  state.pendingSet = [buildAcademyDecision(data, rng, state)];
   state.rngState = rng.state;
   return state;
 }
 
-/** Verarbeitet eine Entscheidung und simuliert genau eine Halbserie weiter. */
-export function decide(data: GameData, state: CareerState, optionId: string): CareerState {
-  if (!state.pending) throw new Error('Es steht keine Entscheidung an');
+/**
+ * Beantwortet die anstehenden Entscheidungen und simuliert eine Halbserie.
+ *
+ * Ein einzelner Bezeichner beantwortet eine einzelne Entscheidung, eine Liste
+ * den ganzen Satz einer Pause. Bis hierher lässt sich jede Wahl noch ändern;
+ * erst dieser Aufruf macht sie verbindlich.
+ */
+export function decide(
+  data: GameData, state: CareerState, choice: string | string[],
+): CareerState {
+  if (state.pendingSet.length === 0) throw new Error('Es steht keine Entscheidung an');
+  const ids = Array.isArray(choice) ? choice : [choice];
+
   const next = structuredClone(state);
   const rng = new Rng(next.rngState);
-  const decision = next.pending!;
-  const option = decision.options.find((o) => o.id === optionId);
-  if (!option) throw new Error(`Unbekannte Option ${optionId}`);
-
-  next.pending = null;
+  const set = next.pendingSet;
+  next.pendingSet = [];
   next.step += 1;
+
+  for (const [index, decision] of set.entries()) {
+    const optionId = ids[index];
+    if (optionId === undefined) break;
+    const option = decision.options.find((o) => o.id === optionId);
+    if (!option) throw new Error('Unbekannte Option ' + optionId);
+    applyDecision(data, rng, next, decision, option);
+    if (next.retired) break;
+  }
+
+  executePendingTransfer(data, rng, next);
+  simulateStep(data, rng, next);
+  next.rngState = rng.state;
+  return next;
+}
+
+/** Wendet genau eine getroffene Entscheidung an. */
+function applyDecision(
+  data: GameData, rng: Rng, next: CareerState,
+  decision: PendingDecision, option: PendingOption,
+): void {
 
   switch (decision.eventId) {
     case 'academy_offer':
@@ -146,6 +178,19 @@ export function decide(data: GameData, state: CareerState, optionId: string): Ca
       if (option.id !== 'stay') startLoan(data, next, option.clubId!);
       break;
 
+    case 'media_partner_offer':
+    case 'kit_supplier_offer': {
+      const partnerId = option.id.startsWith('partner:') ? option.id.slice(8) : null;
+      const media = decision.eventId === 'media_partner_offer';
+      if (partnerId) {
+        if (media) next.player.mediaPartner = partnerId;
+        else next.player.kitSupplier = partnerId;
+        const name = data.partnerById.get(partnerId)?.name ?? partnerId;
+        log(next, 'decision', (media ? 'Signed with ' : 'Kitted out by ') + name);
+      }
+      break;
+    }
+
     case 'national_team_choice':
       next.player.nationalTeam = option.id.replace('association:', '');
       log(next, 'decision', 'Chose to represent ' + countryOf(data, next.player.nationalTeam).name.en);
@@ -154,15 +199,14 @@ export function decide(data: GameData, state: CareerState, optionId: string): Ca
     case 'retirement':
       if (option.id !== 'one_more_year') {
         retire(data, next, option.id === 'retire_at_home');
-        next.rngState = rng.state;
-        return next;
+        return;
       }
       break;
 
     default: {
       const event = data.careerEventById.get(decision.eventId);
       if (event) {
-        const eventOption = event.options.find((o) => o.id === optionId);
+        const eventOption = event.options.find((o) => o.id === option.id);
         if (eventOption) {
           resolveOption(data, rng, next, event, eventOption, decision.variantKey, {
             ...(decision.alternativeCountry
@@ -176,10 +220,6 @@ export function decide(data: GameData, state: CareerState, optionId: string): Ca
     }
   }
 
-  executePendingTransfer(data, rng, next);
-  simulateStep(data, rng, next);
-  next.rngState = rng.state;
-  return next;
 }
 
 /** Pfeift die Saison an und rechnet die Hinrunde. */
@@ -211,23 +251,22 @@ export function acknowledge(data: GameData, state: CareerState): CareerState {
 
   if (context === 'winter') {
     executePendingTransfer(data, rng, next);
-    if (rng.chance(WINTER_DECISION_CHANCE)) {
-      next.pending = buildCareerDecision(data, rng, next, 'winter');
-    }
+    startDecisionSet(data, rng, next, 'winter');
   } else if (context === 'summer') {
     endLoanIfDue(data, next);
     executePendingTransfer(data, rng, next);
 
     if (shouldOfferRetirement(data, next)) {
-      next.pending = buildRetirementDecision(data, next);
+      // Über das Ende der Karriere wird allein entschieden.
+      next.pendingSet = [buildRetirementDecision(data, next)];
     } else if (next.player.age >= data.progression.career.latestRetirementAge) {
       retire(data, next, false);
     } else {
-      next.pending = buildSummerDecision(data, rng, next);
+      startDecisionSet(data, rng, next, 'summer');
     }
   }
 
-  if (!next.pending && !next.retired) simulateStep(data, rng, next);
+  if (next.pendingSet.length === 0 && !next.retired) simulateStep(data, rng, next);
   next.rngState = rng.state;
   return next;
 }
@@ -236,15 +275,16 @@ export function acknowledge(data: GameData, state: CareerState): CareerState {
 
 /** Rechnet genau eine Halbserie und legt den Bericht ab. */
 function simulateStep(data: GameData, rng: Rng, state: CareerState): void {
-  if (state.retired || state.pending || state.pendingReport || state.pendingKickoff) return;
+  if (state.retired || state.pendingSet.length > 0 || state.pendingReport || state.pendingKickoff) return;
   if (!state.clubId) {
-    state.pending = buildAcademyDecision(data, rng, state);
+    state.pendingSet = [buildAcademyDecision(data, rng, state)];
     return;
   }
 
-  // Eine neue Saison läuft nicht von selbst los. Wer gerade einen Verein
-  // gewählt hat, soll erst sehen, wo er gelandet ist.
-  if (state.half === 1 && !state.seasonStarted) {
+  // Nur die allererste Saison wird von Hand angepfiffen: nach der
+  // Jugendakademie soll man erst sehen, wo man gelandet ist. Danach tragen die
+  // Entscheidungen von selbst in die nächste Spielzeit.
+  if (state.half === 1 && !state.seasonStarted && state.seasons.length === 0) {
     state.pendingKickoff = true;
     return;
   }
@@ -311,6 +351,7 @@ function simulateStep(data: GameData, rng: Rng, state: CareerState): void {
   const seasonNationalGoals = state.currentSeasonNationalGoals;
   const outcome = closeSeason(data, rng, state);
   updateFans(data, state, half, outcome.titles.length, outcome.awards.length);
+  outcome.record.fans = state.player.fans;
   state.seasons.push(outcome.record);
   for (const title of outcome.titles) log(state, 'title', titleName(data, title));
   for (const award of outcome.awards) log(state, 'award', awardName(data, award));
@@ -340,6 +381,7 @@ function simulateStep(data: GameData, rng: Rng, state: CareerState): void {
   state.currentSeasonHalves = [];
   state.currentSeasonCaps = 0;
   state.currentSeasonNationalGoals = 0;
+  state.currentSeasonNationalAssists = 0;
   state.half = 1;
   state.seasonStarted = false;
   state.year += 1;
@@ -378,9 +420,57 @@ function buildAssociationDecision(data: GameData, state: CareerState) {
   };
 }
 
-function buildSummerDecision(data: GameData, rng: Rng, state: CareerState) {
+/** So viele Entscheidungen stehen in jeder Pause an. */
+const DECISIONS_PER_BREAK = 3;
+
+/**
+ * Legt den Satz Entscheidungen einer Pause an.
+ *
+ * Erst kommt, was ohnehin ansteht: die Wahl des Verbands, ein Angebot einer
+ * Marke, eine Leihe, ein Vereinswechsel. Aufgefüllt wird mit dem, was das
+ * Leben sonst so bringt. Reicht der Vorrat an ungespielten Ereignissen nicht,
+ * dürfen alte wiederkommen: über zwanzig Jahre hinweg wiederholt sich manches.
+ */
+function startDecisionSet(
+  data: GameData, rng: Rng, state: CareerState, window: 'summer' | 'winter',
+): void {
+  const set: PendingDecision[] = [];
+  const taken = new Set<string>();
+
+  const add = (decision: PendingDecision | null | undefined): boolean => {
+    if (!decision || taken.has(decision.eventId)) return false;
+    taken.add(decision.eventId);
+    set.push(decision);
+    return true;
+  };
+
+  if (window === 'summer') for (const decision of dueSummerDecisions(data, rng, state)) add(decision);
+
+  // Auffüllen: zuerst Ungespieltes, dann Wiederholungen, zuletzt ein
+  // Vereinsangebot als sichere Bank.
+  for (let attempt = 0; set.length < DECISIONS_PER_BREAK && attempt < 12; attempt += 1) {
+    const repeatable = attempt >= 4;
+    const filled = add(buildCareerDecision(data, rng, state, window, { repeatable, exclude: taken }));
+    if (!filled && attempt >= 8) add(buildTransferDecision(data, rng, state));
+  }
+
+  state.pendingSet = set;
+}
+
+/** Was im Sommer ohnehin ansteht, in der Reihenfolge seiner Dringlichkeit. */
+function dueSummerDecisions(data: GameData, rng: Rng, state: CareerState): PendingDecision[] {
+  const due: PendingDecision[] = [];
+
   const association = buildAssociationDecision(data, state);
-  if (association) return association;
+  if (association) due.push(association);
+
+  // Marken melden sich von selbst, wenn man auffällt. Passiert das nicht,
+  // geht es ohne sie weiter: Partner sind ein Zusatz, keine Stufe.
+  for (const kind of ['media', 'kit'] as const) {
+    if (!partnerOffersNow(data, rng, state, kind)) continue;
+    const decision = buildPartnerDecision(data, rng, state, kind);
+    if (decision) due.push(decision);
+  }
 
   const periodLength = data.progression.career.modes[state.mode].periodLengthSeasons as number;
   const lastSeason = state.seasons[state.seasons.length - 1];
@@ -389,20 +479,18 @@ function buildSummerDecision(data: GameData, rng: Rng, state: CareerState) {
   // Junge Spieler ohne Einsatzzeit bekommen zuerst ein Leihangebot.
   if (state.player.age <= 20 && lowMinutes && !state.activeLoan && rng.chance(LOAN_OFFER_CHANCE)) {
     state.seasonsSinceMajorDecision = 0;
-    return buildLoanDecision(data, rng, state);
-  }
-
-  if (state.seasonsSinceMajorDecision >= periodLength) {
+    due.push(buildLoanDecision(data, rng, state));
+  } else if (state.seasonsSinceMajorDecision >= periodLength) {
     state.seasonsSinceMajorDecision = 0;
     // Wer eine große Anhängerschaft hat, wird vom Verein gehalten: es liegen
     // weniger fremde Angebote auf dem Tisch.
     const offers = clubHoldsOn(data, state)
       ? (data.progression.fans.clubHoldsFrom.reducedOffers as number)
       : 3;
-    return buildTransferDecision(data, rng, state, 'matching', offers);
+    due.push(buildTransferDecision(data, rng, state, 'matching', offers));
   }
 
-  return buildCareerDecision(data, rng, state, 'summer') ?? buildTransferDecision(data, rng, state);
+  return due;
 }
 
 function shouldOfferRetirement(data: GameData, state: CareerState): boolean {
@@ -459,7 +547,7 @@ function executePendingTransfer(data: GameData, rng: Rng, state: CareerState): v
 
 function retire(data: GameData, state: CareerState, atHome: boolean): void {
   state.retired = true;
-  state.pending = null;
+  state.pendingSet = [];
   state.pendingReport = null;
   const where = atHome ? ' back home' : state.clubId ? ' at ' + clubOf(data, state.clubId).short : '';
   log(state, 'retirement', 'Retired' + where);
@@ -516,6 +604,21 @@ export function careerTotals(state: CareerState) {
     }),
     { appearances: 0, goals: 0, assists: 0, cleanSheets: 0, titles: 0, awards: 0, caps: 0, nationalGoals: 0, peakOverall: 0 },
   );
+}
+
+/**
+ * Karrieresummen einschließlich der laufenden Saison. Die Spielerkarte zeigt
+ * damit auch mitten in der Spielzeit, wo eine Karriere gerade steht.
+ */
+export function liveTotals(state: CareerState) {
+  const totals = careerTotals(state);
+  for (const half of state.currentSeasonHalves) {
+    totals.appearances += half.appearances;
+    totals.goals += half.goals;
+    totals.assists += half.assists;
+    totals.cleanSheets += half.cleanSheets;
+  }
+  return totals;
 }
 
 export type { PeriodReport };

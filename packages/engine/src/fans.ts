@@ -1,4 +1,5 @@
 import { clubOf, type GameData } from './data';
+import { partnerFanFactor } from './partners';
 import { clamp } from './progression';
 import type { CareerState, HalfSeasonRecord } from './types';
 
@@ -14,6 +15,29 @@ import type { CareerState, HalfSeasonRecord } from './types';
  * \`fanSupport\`. Aus beidem zusammen entsteht der Druck, der eine Karriere
  * trägt oder erdrückt.
  */
+
+/**
+ * Was die Länderspiele einer Halbserie an Anhängern bringen.
+ *
+ * Ein Länderspiel schaut ein ganzes Land, nicht nur eine Stadt. Wie viele das
+ * sind, hängt an der Stärke des Verbands: für eine Weltmacht spielt man vor
+ * Millionen, für einen kleinen Verband vor deutlich weniger.
+ */
+function nationalGain(data: GameData, state: CareerState, half: HalfSeasonRecord): number {
+  const code = state.player.nationalTeam;
+  if (!code || half.caps === 0) return 0;
+
+  const country = data.countryByCode.get(code);
+  if (!country) return 0;
+
+  const config = data.progression.fans.national;
+  const reach = (config.reachByStrength as Record<string, number>)[String(country.strength)] ?? 1;
+  const raw = half.caps * (config.perCap as number)
+    + half.nationalGoals * (config.perGoal as number)
+    + half.nationalAssists * (config.perAssist as number);
+
+  return raw * reach;
+}
 
 /** Reichweite des Vereins, in dem gespielt wird. */
 function reach(data: GameData, state: CareerState): number {
@@ -47,7 +71,20 @@ export function updateFans(
     + (player.meters.fanSupport / 100)
       * ((config.moodBonus.atHundred as number) - (config.moodBonus.atZero as number));
 
-  let fans = player.fans + performance * reach(data, state) * mood;
+  // Wer berichtet wird und wer ausgestattet wird, wird häufiger gesehen.
+  const partners = partnerFanFactor(data, state);
+
+  // Ein Name zieht Menschen an wie kein anderer. Ohne diesen Faktor bliebe
+  // die Obergrenze von 700 Millionen für jeden unerreichbar.
+  const legend = player.legend ? (data.progression.easterEgg.fansMultiplier as number) : 1;
+
+  // Was im Verein passiert, und daneben das, was im Nationaltrikot passiert.
+  const fromNational = nationalGain(data, state, half) * mood * partners * legend;
+  player.nationalFans += Math.round(fromNational);
+
+  let fans = player.fans
+    + performance * reach(data, state) * mood * partners * legend
+    + fromNational;
 
   // Unter einer gewissen Stimmung wandern Anhänger ab.
   const churn = config.churn;
@@ -57,7 +94,10 @@ export function updateFans(
     fans *= 1 - severity * (churn.maxShare as number);
   }
 
-  player.fans = Math.round(clamp(fans, 0, config.max as number));
+  // Die volle Zahl erreicht nur der Ausnahmespieler. Alle anderen enden
+  // darunter, egal wie lang und gut die Karriere läuft.
+  const ceiling = player.legend ? (config.max as number) : (config.regularMax as number);
+  player.fans = Math.round(clamp(fans, 0, ceiling));
 }
 
 /**

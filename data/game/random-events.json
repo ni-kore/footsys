@@ -1,233 +1,517 @@
 {
   "$comment": "Zufallsereignisse ohne Entscheidung. Sie passieren zwischen den Halbserien, werden dem Spieler gemeldet und wirken direkt auf die Berechnung. Sie sind der Grund, warum sich zwei Karrieren mit identischen Entscheidungen trotzdem unterschiedlich anfühlen. 'window': half_end = nach jeder Halbserie, season_end = nur nach der Rückrunde, any = beides.",
-
   "config": {
     "$comment": "Wie viele Zufallsereignisse pro Halbserie gezogen werden.",
-    "countWeights": { "0": 35, "1": 45, "2": 20 },
+    "countWeights": {
+      "0": 35,
+      "1": 45,
+      "2": 20
+    },
     "minSeasonsBetweenSameEvent": 3
   },
-
   "extraModifiers": {
     "$comment": "Zusätzlich zu den Modifikatoren aus events.json.",
     "clubReputationDelta": "verändert die Reputation des aktuellen Vereins dauerhaft (-1 / +1)",
-    "leagueMove": "promotion | relegation — Verein wechselt die Spielklasse",
+    "leagueMove": "promotion | relegation. Verein wechselt die Spielklasse",
     "rerollRole": "Rolle wird nach dem Ereignis neu bestimmt",
     "appearanceMultiplier": "Faktor auf die Einsätze der nächsten Halbserie",
     "goalMultiplier": "Faktor auf die Tore der nächsten Halbserie",
     "assistMultiplier": "Faktor auf die Vorlagen der nächsten Halbserie",
     "missShare": "Anteil der nächsten Halbserie, der ausfällt (0–1)"
   },
-
   "events": [
     {
       "id": "coach_change",
       "weight": 90,
       "window": "any",
       "tone": "neutral",
-      "title": { "de": "Trainerwechsel", "en": "New coach" },
-      "text": { "de": "{club} entlässt den Trainer. Der Neue hat eigene Vorstellungen — deine Rolle wird neu verteilt.", "en": "{club} sack the coach. The new one has his own ideas — your place is up for grabs again." },
-      "effects": { "rerollRole": true, "meters": { "morale": -3 } }
+      "title": {
+        "de": "Trainerwechsel",
+        "en": "New coach"
+      },
+      "text": {
+        "de": "{club} entlässt den Trainer. Der Neue hat eigene Vorstellungen. Deine Rolle wird neu verteilt.",
+        "en": "{club} sack the coach. The new one has his own ideas. Your place is up for grabs again."
+      },
+      "effects": {
+        "rerollRole": true,
+        "meters": {
+          "morale": -3
+        }
+      }
     },
     {
       "id": "hot_streak",
       "weight": 80,
       "window": "half_end",
-      "requires": { "minRole": "high_rotation" },
+      "requires": {
+        "minRole": "high_rotation"
+      },
       "tone": "positive",
-      "title": { "de": "Lauf", "en": "Purple patch" },
-      "text": { "de": "Dir gelingt gerade alles. Die Presse redet über dich.", "en": "Everything is coming off for you. The press has noticed." },
-      "effects": { "goalMultiplier": 1.45, "assistMultiplier": 1.35, "meters": { "morale": 10, "mediaRelation": 8 } }
+      "title": {
+        "de": "Lauf",
+        "en": "Purple patch"
+      },
+      "text": {
+        "de": "Dir gelingt gerade alles. Die Presse redet über dich.",
+        "en": "Everything is coming off for you. The press has noticed."
+      },
+      "effects": {
+        "goalMultiplier": 1.45,
+        "assistMultiplier": 1.35,
+        "meters": {
+          "morale": 10,
+          "mediaRelation": 8
+        }
+      }
     },
     {
       "id": "cold_streak",
       "weight": 80,
       "window": "half_end",
       "tone": "negative",
-      "title": { "de": "Formtief", "en": "Loss of form" },
-      "text": { "de": "Nichts will fallen. Der Trainer stellt dich in Frage.", "en": "Nothing is dropping for you. The coach is starting to doubt you." },
-      "effects": { "goalMultiplier": 0.55, "assistMultiplier": 0.65, "meters": { "morale": -10 } }
+      "title": {
+        "de": "Formtief",
+        "en": "Loss of form"
+      },
+      "text": {
+        "de": "Nichts will fallen. Der Trainer stellt dich in Frage.",
+        "en": "Nothing is dropping for you. The coach is starting to doubt you."
+      },
+      "effects": {
+        "goalMultiplier": 0.55,
+        "assistMultiplier": 0.65,
+        "meters": {
+          "morale": -10
+        }
+      }
     },
     {
       "id": "minor_injury",
       "weight": 85,
       "window": "any",
       "tone": "negative",
-      "title": { "de": "Kleinere Blessur", "en": "Knock" },
-      "text": { "de": "Eine Muskelverhärtung wirft dich für ein paar Wochen zurück.", "en": "A muscle strain sets you back a few weeks." },
-      "effects": { "missShare": 0.25, "meters": { "morale": -5 } }
+      "title": {
+        "de": "Kleinere Blessur",
+        "en": "Knock"
+      },
+      "text": {
+        "de": "Eine Muskelverhärtung wirft dich für ein paar Wochen zurück.",
+        "en": "A muscle strain sets you back a few weeks."
+      },
+      "effects": {
+        "missShare": 0.25,
+        "meters": {
+          "morale": -5
+        }
+      }
     },
     {
       "id": "red_card_ban",
       "weight": 55,
       "window": "half_end",
       "tone": "negative",
-      "title": { "de": "Rote Karte", "en": "Sent off" },
-      "text": { "de": "Grobes Foulspiel, Platzverweis, drei Spiele Sperre.", "en": "Serious foul play, straight red, three-match ban." },
-      "effects": { "missShare": 0.12, "meters": { "mediaRelation": -8, "fanSupport": -3 } }
+      "title": {
+        "de": "Rote Karte",
+        "en": "Sent off"
+      },
+      "text": {
+        "de": "Grobes Foulspiel, Platzverweis, drei Spiele Sperre.",
+        "en": "Serious foul play, straight red, three-match ban."
+      },
+      "effects": {
+        "missShare": 0.12,
+        "meters": {
+          "mediaRelation": -8,
+          "fanSupport": -3
+        }
+      }
     },
     {
       "id": "club_takeover",
       "weight": 35,
       "window": "season_end",
-      "requires": { "maxDomesticReputation": 6 },
+      "requires": {
+        "maxDomesticReputation": 6
+      },
       "tone": "positive",
-      "title": { "de": "Investor steigt ein", "en": "New owners" },
-      "text": { "de": "Bei {club} steigt ein Investor ein. Plötzlich sind ganz andere Spieler möglich.", "en": "An investor buys into {club}. Suddenly very different signings are possible." },
-      "effects": { "clubReputationDelta": 1, "meters": { "morale": 5 } }
+      "title": {
+        "de": "Investor steigt ein",
+        "en": "New owners"
+      },
+      "text": {
+        "de": "Bei {club} steigt ein Investor ein. Plötzlich sind ganz andere Spieler möglich.",
+        "en": "An investor buys into {club}. Suddenly very different signings are possible."
+      },
+      "effects": {
+        "clubReputationDelta": 1,
+        "meters": {
+          "morale": 5
+        }
+      }
     },
     {
       "id": "financial_trouble",
       "weight": 40,
       "window": "season_end",
-      "requires": { "maxDomesticReputation": 8 },
+      "requires": {
+        "maxDomesticReputation": 8
+      },
       "tone": "negative",
-      "title": { "de": "Finanzielle Schieflage", "en": "Financial trouble" },
-      "text": { "de": "{club} muss sparen. Die besten Spieler werden verkauft.", "en": "{club} have to cut costs. The best players are being sold." },
-      "effects": { "clubReputationDelta": -1, "meters": { "morale": -5 } }
+      "title": {
+        "de": "Finanzielle Schieflage",
+        "en": "Financial trouble"
+      },
+      "text": {
+        "de": "{club} muss sparen. Die besten Spieler werden verkauft.",
+        "en": "{club} have to cut costs. The best players are being sold."
+      },
+      "effects": {
+        "clubReputationDelta": -1,
+        "meters": {
+          "morale": -5
+        }
+      }
     },
     {
       "id": "promotion",
       "weight": 45,
       "window": "season_end",
-      "requires": { "minLeagueTier": 2, "minDomesticReputation": 4 },
+      "requires": {
+        "minLeagueTier": 2,
+        "minDomesticReputation": 4
+      },
       "tone": "positive",
-      "title": { "de": "Aufstieg", "en": "Promotion" },
-      "text": { "de": "{club} steigt auf. Nächste Saison eine Klasse höher.", "en": "{club} go up. Next season is a division higher." },
-      "effects": { "leagueMove": "promotion", "meters": { "morale": 15, "fanSupport": 15 } }
+      "title": {
+        "de": "Aufstieg",
+        "en": "Promotion"
+      },
+      "text": {
+        "de": "{club} steigt auf. Nächste Saison eine Klasse höher.",
+        "en": "{club} go up. Next season is a division higher."
+      },
+      "effects": {
+        "leagueMove": "promotion",
+        "meters": {
+          "morale": 15,
+          "fanSupport": 15
+        }
+      }
     },
     {
       "id": "relegation",
       "weight": 45,
       "window": "season_end",
-      "requires": { "maxDomesticReputation": 4 },
+      "requires": {
+        "maxDomesticReputation": 4
+      },
       "tone": "negative",
-      "title": { "de": "Abstieg", "en": "Relegation" },
-      "text": { "de": "{club} steigt ab. Eine Klasse tiefer, und die halbe Mannschaft geht.", "en": "{club} go down. A division lower, and half the squad is leaving." },
-      "effects": { "leagueMove": "relegation", "meters": { "morale": -15, "fanSupport": -5 } }
+      "title": {
+        "de": "Abstieg",
+        "en": "Relegation"
+      },
+      "text": {
+        "de": "{club} steigt ab. Eine Klasse tiefer, und die halbe Mannschaft geht.",
+        "en": "{club} go down. A division lower, and half the squad is leaving."
+      },
+      "effects": {
+        "leagueMove": "relegation",
+        "meters": {
+          "morale": -15,
+          "fanSupport": -5
+        }
+      }
     },
     {
       "id": "national_debut",
       "weight": 70,
       "window": "half_end",
-      "requires": { "eligibleForNationalTeam": true, "notCalledUpYet": true },
+      "requires": {
+        "eligibleForNationalTeam": true,
+        "notCalledUpYet": true
+      },
       "tone": "positive",
-      "title": { "de": "Nationalmannschaft", "en": "International call-up" },
-      "text": { "de": "Du wirst erstmals für {country} nominiert.", "en": "You get your first call-up for {country}." },
-      "effects": { "meters": { "morale": 15, "mediaRelation": 10 }, "marketValueMultiplier": 1.1 }
+      "title": {
+        "de": "Nationalmannschaft",
+        "en": "International call-up"
+      },
+      "text": {
+        "de": "Du wirst erstmals für {country} nominiert.",
+        "en": "You get your first call-up for {country}."
+      },
+      "effects": {
+        "meters": {
+          "morale": 15,
+          "mediaRelation": 10
+        },
+        "marketValueMultiplier": 1.1
+      }
     },
     {
       "id": "fan_favourite",
       "weight": 55,
       "window": "season_end",
-      "requires": { "minSeasonsAtClub": 3 },
+      "requires": {
+        "minSeasonsAtClub": 3
+      },
       "tone": "positive",
-      "title": { "de": "Publikumsliebling", "en": "Fan favourite" },
-      "text": { "de": "Die Kurve hat einen Gesang für dich.", "en": "The stands have a song for you." },
-      "effects": { "meters": { "fanSupport": 20, "morale": 8 } }
+      "title": {
+        "de": "Publikumsliebling",
+        "en": "Fan favourite"
+      },
+      "text": {
+        "de": "Die Kurve hat einen Gesang für dich.",
+        "en": "The stands have a song for you."
+      },
+      "effects": {
+        "meters": {
+          "fanSupport": 20,
+          "morale": 8
+        }
+      }
     },
     {
       "id": "transfer_rumours",
       "weight": 70,
       "window": "half_end",
-      "requires": { "minOverall": 72 },
+      "requires": {
+        "minOverall": 72
+      },
       "tone": "neutral",
-      "title": { "de": "Wechselgerüchte", "en": "Transfer rumours" },
-      "text": { "de": "Die Presse schreibt dich weg. Die Fans sind irritiert.", "en": "The press has you leaving. The fans aren't happy." },
-      "effects": { "meters": { "fanSupport": -8, "mediaRelation": 5 }, "marketValueMultiplier": 1.05 }
+      "title": {
+        "de": "Wechselgerüchte",
+        "en": "Transfer rumours"
+      },
+      "text": {
+        "de": "Die Presse schreibt dich weg. Die Fans sind irritiert.",
+        "en": "The press has you leaving. The fans aren't happy."
+      },
+      "effects": {
+        "meters": {
+          "fanSupport": -8,
+          "mediaRelation": 5
+        },
+        "marketValueMultiplier": 1.05
+      }
     },
     {
       "id": "sponsor_deal",
       "weight": 45,
       "window": "season_end",
-      "requires": { "minOverall": 76 },
+      "requires": {
+        "minOverall": 76
+      },
       "tone": "positive",
-      "title": { "de": "Ausrüstervertrag", "en": "Boot deal" },
-      "text": { "de": "Ein Sportartikelhersteller nimmt dich unter Vertrag.", "en": "A sportswear brand signs you up." },
-      "effects": { "meters": { "mediaRelation": 10 }, "marketValueMultiplier": 1.03 }
+      "title": {
+        "de": "Ausrüstervertrag",
+        "en": "Boot deal"
+      },
+      "text": {
+        "de": "Ein Sportartikelhersteller nimmt dich unter Vertrag.",
+        "en": "A sportswear brand signs you up."
+      },
+      "effects": {
+        "meters": {
+          "mediaRelation": 10
+        },
+        "marketValueMultiplier": 1.03
+      }
     },
     {
       "id": "captain_injury",
       "weight": 40,
       "window": "half_end",
-      "requires": { "minOverall": 74, "minRole": "high_rotation", "notCaptain": true },
+      "requires": {
+        "minOverall": 74,
+        "minRole": "high_rotation",
+        "notCaptain": true
+      },
       "tone": "positive",
-      "title": { "de": "Binde für den Rest der Serie", "en": "Armband for the rest of the run" },
-      "text": { "de": "Der Kapitän fällt aus, du führst die Mannschaft.", "en": "The captain is out, you lead the side." },
-      "effects": { "roleOverride": "starter", "meters": { "morale": 10, "fanSupport": 8 } }
+      "title": {
+        "de": "Binde für den Rest der Serie",
+        "en": "Armband for the rest of the run"
+      },
+      "text": {
+        "de": "Der Kapitän fällt aus, du führst die Mannschaft.",
+        "en": "The captain is out, you lead the side."
+      },
+      "effects": {
+        "roleOverride": "starter",
+        "meters": {
+          "morale": 10,
+          "fanSupport": 8
+        }
+      }
     },
     {
       "id": "training_ground_bust_up",
       "weight": 50,
       "window": "half_end",
       "tone": "negative",
-      "title": { "de": "Streit im Training", "en": "Bust-up in training" },
-      "text": { "de": "Eine Auseinandersetzung mit einem Mitspieler landet in der Zeitung.", "en": "A row with a team-mate ends up in the papers." },
-      "effects": { "meters": { "mediaRelation": -12, "morale": -8 }, "appearanceMultiplier": 0.85 }
+      "title": {
+        "de": "Streit im Training",
+        "en": "Bust-up in training"
+      },
+      "text": {
+        "de": "Eine Auseinandersetzung mit einem Mitspieler landet in der Zeitung.",
+        "en": "A row with a team-mate ends up in the papers."
+      },
+      "effects": {
+        "meters": {
+          "mediaRelation": -12,
+          "morale": -8
+        },
+        "appearanceMultiplier": 0.85
+      }
     },
     {
       "id": "record_run",
       "weight": 30,
       "window": "season_end",
-      "requires": { "minOverall": 82, "minRole": "starter" },
+      "requires": {
+        "minOverall": 82,
+        "minRole": "starter"
+      },
       "tone": "positive",
-      "title": { "de": "Serie", "en": "On a run" },
-      "text": { "de": "Du triffst in sieben Spielen nacheinander — das gab es hier lange nicht.", "en": "You score in seven straight games — this club hasn't seen that in years." },
-      "effects": { "goalMultiplier": 1.25, "meters": { "fanSupport": 15, "mediaRelation": 12 }, "marketValueMultiplier": 1.08 }
+      "title": {
+        "de": "Serie",
+        "en": "On a run"
+      },
+      "text": {
+        "de": "Du triffst in sieben Spielen nacheinander. Das gab es hier lange nicht.",
+        "en": "You score in seven straight games. This club hasn't seen that in years."
+      },
+      "effects": {
+        "goalMultiplier": 1.25,
+        "meters": {
+          "fanSupport": 15,
+          "mediaRelation": 12
+        },
+        "marketValueMultiplier": 1.08
+      }
     },
     {
       "id": "winter_camp_boost",
       "weight": 50,
       "window": "winter",
       "tone": "positive",
-      "title": { "de": "Starkes Trainingslager", "en": "Strong winter camp" },
-      "text": { "de": "Du kommst topfit aus der Winterpause.", "en": "You come out of the winter break in top shape." },
-      "effects": { "immediateOverall": 1, "meters": { "morale": 8 } }
+      "title": {
+        "de": "Starkes Trainingslager",
+        "en": "Strong winter camp"
+      },
+      "text": {
+        "de": "Du kommst topfit aus der Winterpause.",
+        "en": "You come out of the winter break in top shape."
+      },
+      "effects": {
+        "immediateOverall": 1,
+        "meters": {
+          "morale": 8
+        }
+      }
     },
     {
       "id": "family_matter",
       "weight": 35,
       "window": "any",
       "tone": "neutral",
-      "title": { "de": "Familiäre Belastung", "en": "Family matter" },
-      "text": { "de": "Etwas außerhalb des Platzes beschäftigt dich.", "en": "Something off the pitch is weighing on you." },
-      "effects": { "meters": { "morale": -12 }, "goalMultiplier": 0.8 }
+      "title": {
+        "de": "Familiäre Belastung",
+        "en": "Family matter"
+      },
+      "text": {
+        "de": "Etwas außerhalb des Platzes beschäftigt dich.",
+        "en": "Something off the pitch is weighing on you."
+      },
+      "effects": {
+        "meters": {
+          "morale": -12
+        },
+        "goalMultiplier": 0.8
+      }
     },
     {
       "id": "youth_academy_honour",
       "weight": 25,
       "window": "season_end",
-      "requires": { "minSeasonsAtClub": 5, "minOverall": 80 },
+      "requires": {
+        "minSeasonsAtClub": 5,
+        "minOverall": 80
+      },
       "tone": "positive",
-      "title": { "de": "Vereinsikone", "en": "Club icon" },
-      "text": { "de": "{club} benennt die Trainingsakademie nach dir.", "en": "{club} name the academy after you." },
-      "effects": { "meters": { "fanSupport": 25 } }
+      "title": {
+        "de": "Vereinsikone",
+        "en": "Club icon"
+      },
+      "text": {
+        "de": "{club} benennt die Trainingsakademie nach dir.",
+        "en": "{club} name the academy after you."
+      },
+      "effects": {
+        "meters": {
+          "fanSupport": 25
+        }
+      }
     },
     {
       "id": "referee_controversy",
       "weight": 40,
       "window": "half_end",
       "tone": "neutral",
-      "title": { "de": "Schiedsrichter-Debatte", "en": "Refereeing storm" },
-      "text": { "de": "Eine strittige Szene mit dir steht tagelang in der Kritik.", "en": "A contentious moment involving you dominates the news for days." },
-      "effects": { "meters": { "mediaRelation": -6, "fanSupport": 4 } }
+      "title": {
+        "de": "Schiedsrichter-Debatte",
+        "en": "Refereeing storm"
+      },
+      "text": {
+        "de": "Eine strittige Szene mit dir steht tagelang in der Kritik.",
+        "en": "A contentious moment involving you dominates the news for days."
+      },
+      "effects": {
+        "meters": {
+          "mediaRelation": -6,
+          "fanSupport": 4
+        }
+      }
     },
     {
       "id": "new_signing_competition",
       "weight": 60,
       "window": "season_end",
       "tone": "negative",
-      "title": { "de": "Neuzugang für deine Position", "en": "A signing for your position" },
-      "text": { "de": "{club} verpflichtet einen Spieler mit deinem Profil.", "en": "{club} sign a player with your profile." },
-      "effects": { "rerollRole": true, "meters": { "morale": -6 } }
+      "title": {
+        "de": "Neuzugang für deine Position",
+        "en": "A signing for your position"
+      },
+      "text": {
+        "de": "{club} verpflichtet einen Spieler mit deinem Profil.",
+        "en": "{club} sign a player with your profile."
+      },
+      "effects": {
+        "rerollRole": true,
+        "meters": {
+          "morale": -6
+        }
+      }
     },
     {
       "id": "charity_work",
       "weight": 30,
       "window": "season_end",
       "tone": "positive",
-      "title": { "de": "Soziales Engagement", "en": "Charity work" },
-      "text": { "de": "Deine Stiftungsarbeit wird öffentlich gewürdigt.", "en": "Your foundation work gets public recognition." },
-      "effects": { "meters": { "mediaRelation": 15, "fanSupport": 10 } }
+      "title": {
+        "de": "Soziales Engagement",
+        "en": "Charity work"
+      },
+      "text": {
+        "de": "Deine Stiftungsarbeit wird öffentlich gewürdigt.",
+        "en": "Your foundation work gets public recognition."
+      },
+      "effects": {
+        "meters": {
+          "mediaRelation": 15,
+          "fanSupport": 10
+        }
+      }
     }
   ]
 }

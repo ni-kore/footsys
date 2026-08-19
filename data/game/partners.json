@@ -1,0 +1,736 @@
+{
+  "$comment": "Erzeugt von scripts/generate-partners.js. Die Reichweite 1 bis 10 darf von Hand angepasst werden, sie bleibt beim nächsten Lauf erhalten.",
+  "rules": {
+    "$comment": "Partner sind ein Zusatz, kein Muss: sie kommen von selbst, wenn man auffällt, und wirken danach im Hintergrund.",
+    "media": {
+      "$comment": "Berichterstattung bringt Fans und macht andere Vereine aufmerksam.",
+      "minOverall": 62,
+      "minFans": 50000,
+      "chancePerSummer": 0.35,
+      "fansPerReach": 0.07,
+      "clubInterestFromReach": 6
+    },
+    "kit": {
+      "$comment": "Ein Ausrüster bringt weniger Fans, öffnet dafür Türen zu größeren Vereinen.",
+      "minOverall": 66,
+      "minFans": 250000,
+      "chancePerSummer": 0.3,
+      "fansPerReach": 0.035,
+      "clubInterestFromReach": 5
+    },
+    "offers": 2,
+    "reachSpread": 3,
+    "reachPerOverall": 0.12
+  },
+  "media": [
+    {
+      "id": "2m",
+      "name": "2M",
+      "logo": "mediapartner/2M_media.png",
+      "reach": 7,
+      "light": true
+    },
+    {
+      "id": "7dimanche",
+      "name": "7 Dimanche",
+      "logo": "mediapartner/7dimanche_media.png",
+      "reach": 3,
+      "light": true
+    },
+    {
+      "id": "90-minutos-de-futbol",
+      "name": "90 Minutos de Fútbol",
+      "logo": "mediapartner/90 Minutos de Fútbol_media.png",
+      "reach": 4,
+      "light": false
+    },
+    {
+      "id": "abc",
+      "name": "ABC",
+      "logo": "mediapartner/ABC_media.png",
+      "reach": 6,
+      "light": false
+    },
+    {
+      "id": "abc-deporte",
+      "name": "ABC Deporte",
+      "logo": "mediapartner/ABC Deporte_media.png",
+      "reach": 5,
+      "light": false
+    },
+    {
+      "id": "aekfans21",
+      "name": "AEKfans21",
+      "logo": "mediapartner/AEKfans21_media.png",
+      "reach": 2,
+      "light": false
+    },
+    {
+      "id": "aftv",
+      "name": "AFTV",
+      "logo": "mediapartner/AFTV_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "atv-belgium",
+      "name": "ATV Belgium",
+      "logo": "mediapartner/336px-ATV_Belgium_logo.svg_media.png",
+      "reach": 3,
+      "light": true
+    },
+    {
+      "id": "avs",
+      "name": "AVS",
+      "logo": "mediapartner/AVS_logo_media.png",
+      "reach": 6,
+      "light": false
+    },
+    {
+      "id": "bet365",
+      "name": "Bet365",
+      "logo": "mediapartner/Bet365_media.png",
+      "reach": 5,
+      "light": false
+    },
+    {
+      "id": "betclic",
+      "name": "Betclic",
+      "logo": "mediapartner/Betclic_media.png",
+      "reach": 5,
+      "light": true
+    },
+    {
+      "id": "betfan",
+      "name": "BETFAN",
+      "logo": "mediapartner/BETFAN_media.png",
+      "reach": 5,
+      "light": false
+    },
+    {
+      "id": "betking",
+      "name": "BetKing",
+      "logo": "mediapartner/BetKing_media.png",
+      "reach": 5,
+      "light": true
+    },
+    {
+      "id": "betsson",
+      "name": "Betsson",
+      "logo": "mediapartner/Betsson_media.png",
+      "reach": 5,
+      "light": false
+    },
+    {
+      "id": "brf",
+      "name": "BRF",
+      "logo": "mediapartner/512px-BRF_logo.svg_media.png",
+      "reach": 4,
+      "light": false
+    },
+    {
+      "id": "bruzz",
+      "name": "BRUZZ",
+      "logo": "mediapartner/512px-BRUZZ_logo.svg_media.png",
+      "reach": 4,
+      "light": false
+    },
+    {
+      "id": "bx1",
+      "name": "BX1",
+      "logo": "mediapartner/bx1_media.png",
+      "reach": 4,
+      "light": false
+    },
+    {
+      "id": "canal-c",
+      "name": "Canal C",
+      "logo": "mediapartner/800px-Canal_C_logo_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "canal-zoom",
+      "name": "Canal Zoom",
+      "logo": "mediapartner/800px-Canal_Zoom_logo_media.png",
+      "reach": 3,
+      "light": true
+    },
+    {
+      "id": "celtic-fans-tv",
+      "name": "Celtic Fans TV",
+      "logo": "mediapartner/Celtic Fans TV_media.png",
+      "reach": 2,
+      "light": true
+    },
+    {
+      "id": "celtic-tv",
+      "name": "Celtic TV",
+      "logo": "mediapartner/Celtic TV_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "clyde-1-superscoreboard",
+      "name": "Clyde 1 Superscoreboard",
+      "logo": "mediapartner/Clyde 1 Superscoreboard_media.png",
+      "reach": 4,
+      "light": false
+    },
+    {
+      "id": "cnn-indonesia",
+      "name": "CNN Indonesia",
+      "logo": "mediapartner/CNN Indonesia_media.png",
+      "reach": 7,
+      "light": false
+    },
+    {
+      "id": "cnn-international",
+      "name": "CNN International",
+      "logo": "mediapartner/CNN International_media.png",
+      "reach": 9,
+      "light": false
+    },
+    {
+      "id": "cnn-turk",
+      "name": "CNN Türk",
+      "logo": "mediapartner/CNN Türk_media.png",
+      "reach": 7,
+      "light": false
+    },
+    {
+      "id": "danske-spil-oddset",
+      "name": "Danske Spil Oddset",
+      "logo": "mediapartner/Danske Spil Oddset_media.png",
+      "reach": 5,
+      "light": false
+    },
+    {
+      "id": "diario-marca",
+      "name": "Diario MARCA",
+      "logo": "mediapartner/Diario MARCA_media.png",
+      "reach": 7,
+      "light": false
+    },
+    {
+      "id": "diario-sport",
+      "name": "Diario Sport",
+      "logo": "mediapartner/Diario Sport_media.png",
+      "reach": 7,
+      "light": false
+    },
+    {
+      "id": "el-show-de-ferro",
+      "name": "El Show De Ferro",
+      "logo": "mediapartner/El Show De Ferro_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "eleven",
+      "name": "Eleven Sports",
+      "logo": "mediapartner/eleven_media.png",
+      "reach": 6,
+      "light": true
+    },
+    {
+      "id": "fanaposten",
+      "name": "Fanaposten",
+      "logo": "mediapartner/Fanaposten_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "fcb-tv",
+      "name": "FCB-TV",
+      "logo": "mediapartner/FCB-TV_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "fcz-tv",
+      "name": "FCZ TV",
+      "logo": "mediapartner/FCZ TV_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "focus",
+      "name": "Focus TV",
+      "logo": "mediapartner/600px-Focus_logo_media.png",
+      "reach": 3,
+      "light": true
+    },
+    {
+      "id": "football-fancast",
+      "name": "Football Fancast",
+      "logo": "mediapartner/Football Fancast_media.png",
+      "reach": 2,
+      "light": true
+    },
+    {
+      "id": "football-fandom",
+      "name": "Football Fandom",
+      "logo": "mediapartner/Football Fandom_media.png",
+      "reach": 2,
+      "light": false
+    },
+    {
+      "id": "fox-deportes-usa",
+      "name": "FOX Deportes USA",
+      "logo": "mediapartner/FOX Deportes USA_media.png",
+      "reach": 8,
+      "light": true
+    },
+    {
+      "id": "fox-radio-chile",
+      "name": "FOX Radio Chile",
+      "logo": "mediapartner/FOX Radio Chile_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "fox-sports",
+      "name": "Fox Sports",
+      "logo": "mediapartner/Fox_Sports_2012_media.png",
+      "reach": 9,
+      "light": true
+    },
+    {
+      "id": "fox-sports-americas",
+      "name": "Fox Sports Américas",
+      "logo": "mediapartner/Fox_Sports_Américas_media.png",
+      "reach": 8,
+      "light": false
+    },
+    {
+      "id": "fox-tv",
+      "name": "FOX TV",
+      "logo": "mediapartner/FOX TV_media.png",
+      "reach": 7,
+      "light": false
+    },
+    {
+      "id": "grenz-echo",
+      "name": "Grenz-Echo",
+      "logo": "mediapartner/grenz-echo_media.png",
+      "reach": 4,
+      "light": false
+    },
+    {
+      "id": "heart-and-hand",
+      "name": "Heart and Hand",
+      "logo": "mediapartner/Heart and Hand_media.png",
+      "reach": 2,
+      "light": false
+    },
+    {
+      "id": "hespress",
+      "name": "Hespress",
+      "logo": "mediapartner/Hespress_media.png",
+      "reach": 6,
+      "light": false
+    },
+    {
+      "id": "hln",
+      "name": "Het Laatste Nieuws",
+      "logo": "mediapartner/hln_media.png",
+      "reach": 6,
+      "light": true
+    },
+    {
+      "id": "nieuwsblad",
+      "name": "Het Nieuwsblad",
+      "logo": "mediapartner/nieuwsblad_media.png",
+      "reach": 6,
+      "light": true
+    },
+    {
+      "id": "joe",
+      "name": "JOE",
+      "logo": "mediapartner/JOE_media.png",
+      "reach": 4,
+      "light": false
+    },
+    {
+      "id": "kana-sportowy",
+      "name": "Kanał Sportowy",
+      "logo": "mediapartner/Kanał Sportowy_media.png",
+      "reach": 4,
+      "light": false
+    },
+    {
+      "id": "l-avenir",
+      "name": "L'Avenir",
+      "logo": "mediapartner/l avenir_media.png",
+      "reach": 6,
+      "light": true
+    },
+    {
+      "id": "websitelogo-lecho",
+      "name": "L'Echo",
+      "logo": "mediapartner/websitelogo-lecho_media.png",
+      "reach": 5,
+      "light": false
+    },
+    {
+      "id": "la-libe",
+      "name": "La Libre",
+      "logo": "mediapartner/la libe_media.png",
+      "reach": 6,
+      "light": false
+    },
+    {
+      "id": "le-soir",
+      "name": "Le Soir",
+      "logo": "mediapartner/le soir_media.png",
+      "reach": 6,
+      "light": false
+    },
+    {
+      "id": "marca-tv",
+      "name": "MARCA TV",
+      "logo": "mediapartner/MARCA TV_media.png",
+      "reach": 6,
+      "light": false
+    },
+    {
+      "id": "mls-soccer",
+      "name": "MLS Soccer",
+      "logo": "mediapartner/MLS Soccer_media.png",
+      "reach": 6,
+      "light": true
+    },
+    {
+      "id": "pandit-football",
+      "name": "Pandit Football",
+      "logo": "mediapartner/Pandit Football_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "paok-tv",
+      "name": "PAOK TV",
+      "logo": "mediapartner/PAOK TV_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "plays-sports",
+      "name": "Play Sports",
+      "logo": "mediapartner/plays sports_media.png",
+      "reach": 6,
+      "light": false
+    },
+    {
+      "id": "play4",
+      "name": "Play4",
+      "logo": "mediapartner/Play4_2021.svg_media.png",
+      "reach": 6,
+      "light": false
+    },
+    {
+      "id": "psv-inside-tv",
+      "name": "PSV Inside TV",
+      "logo": "mediapartner/PSV Inside TV_media.png",
+      "reach": 3,
+      "light": true
+    },
+    {
+      "id": "psv-tv",
+      "name": "PSV TV",
+      "logo": "mediapartner/PSV TV_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "radio-marca",
+      "name": "Radio MARCA",
+      "logo": "mediapartner/Radio MARCA_media.png",
+      "reach": 6,
+      "light": false
+    },
+    {
+      "id": "rangers-tv",
+      "name": "Rangers TV",
+      "logo": "mediapartner/Rangers TV_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "ranks-fc-podcast",
+      "name": "Ranks FC Podcast",
+      "logo": "mediapartner/Ranks FC Podcast_media.png",
+      "reach": 2,
+      "light": false
+    },
+    {
+      "id": "ringtv",
+      "name": "RingTV",
+      "logo": "mediapartner/800px-RingTV_logo.svg_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "rmc",
+      "name": "RMC Sport",
+      "logo": "mediapartner/rmc_media.png",
+      "reach": 6,
+      "light": true
+    },
+    {
+      "id": "robtv",
+      "name": "RobTV",
+      "logo": "mediapartner/336px-RobTV_logo.svg_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "rtbf",
+      "name": "RTBF",
+      "logo": "mediapartner/rtbf_media.png",
+      "reach": 7,
+      "light": false
+    },
+    {
+      "id": "rtbf-la-une",
+      "name": "RTBF La Une",
+      "logo": "mediapartner/RTBF_La_Une_logo.svg_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "rtc-tele-liege",
+      "name": "RTC Télé Liège",
+      "logo": "mediapartner/512px-RTC_Télé_Liège_logo.svg_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "rtl",
+      "name": "RTL",
+      "logo": "mediapartner/rtl_media.png",
+      "reach": 7,
+      "light": true
+    },
+    {
+      "id": "rtl-tvi-logo",
+      "name": "RTL TVI",
+      "logo": "mediapartner/RTL-TVI_Logo_2023.svg_media.png",
+      "reach": 6,
+      "light": false
+    },
+    {
+      "id": "rtv",
+      "name": "RTV",
+      "logo": "mediapartner/600px-RTV_logo_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "scarves-around-the-funnel",
+      "name": "Scarves Around the Funnel",
+      "logo": "mediapartner/Scarves Around the Funnel_media.png",
+      "reach": 2,
+      "light": false
+    },
+    {
+      "id": "sky-bet",
+      "name": "Sky Bet",
+      "logo": "mediapartner/Sky_Bet_2020_media.png",
+      "reach": 5,
+      "light": false
+    },
+    {
+      "id": "sky-deutschland",
+      "name": "Sky Deutschland",
+      "logo": "mediapartner/Sky_Deutschland_2020 copy_media.png",
+      "reach": 8,
+      "light": false
+    },
+    {
+      "id": "sky-sports",
+      "name": "Sky Sports",
+      "logo": "mediapartner/Sky_Sports_2017_media.png",
+      "reach": 9,
+      "light": false
+    },
+    {
+      "id": "sky-sports-scotland",
+      "name": "Sky Sports Scotland",
+      "logo": "mediapartner/Sky Sports Scotland_media.png",
+      "reach": 7,
+      "light": false
+    },
+    {
+      "id": "sport-cz",
+      "name": "SPORT.CZ",
+      "logo": "mediapartner/SPORT.CZ_media.png",
+      "reach": 6,
+      "light": false
+    },
+    {
+      "id": "sport-voetbalmagazine",
+      "name": "Sport/Voetbalmagazine",
+      "logo": "mediapartner/sport voetbalmagazine_media.png",
+      "reach": 5,
+      "light": true
+    },
+    {
+      "id": "sporz",
+      "name": "Sporza",
+      "logo": "mediapartner/sporz_media.png",
+      "reach": 6,
+      "light": false
+    },
+    {
+      "id": "talking-baws",
+      "name": "Talking Baws",
+      "logo": "mediapartner/Talking Baws_media.png",
+      "reach": 2,
+      "light": false
+    },
+    {
+      "id": "telenet-play-sports",
+      "name": "Telenet Play Sports",
+      "logo": "mediapartner/800px-Telenet_Play_Sports_logo_media.png",
+      "reach": 6,
+      "light": true
+    },
+    {
+      "id": "the-calcioland-podcast",
+      "name": "The Calcioland Podcast",
+      "logo": "mediapartner/The Calcioland Podcast_media.png",
+      "reach": 2,
+      "light": false
+    },
+    {
+      "id": "the-non-league-football-show",
+      "name": "The Non League Football Show",
+      "logo": "mediapartner/The Non League Football Show_media.png",
+      "reach": 2,
+      "light": true
+    },
+    {
+      "id": "the-transfer-window-podcast",
+      "name": "The Transfer Window Podcast",
+      "logo": "mediapartner/The Transfer Window Podcast_media.png",
+      "reach": 2,
+      "light": false
+    },
+    {
+      "id": "the-united-stand",
+      "name": "The United Stand",
+      "logo": "mediapartner/The United Stand_media.png",
+      "reach": 2,
+      "light": false
+    },
+    {
+      "id": "tvcom-bw",
+      "name": "TV Com",
+      "logo": "mediapartner/TVCOM_BW_logo_actuel_media.png",
+      "reach": 3,
+      "light": false
+    },
+    {
+      "id": "tvl-belgium",
+      "name": "TVL Belgium",
+      "logo": "mediapartner/336px-TVL_Belgium_logo.svg_media.png",
+      "reach": 3,
+      "light": true
+    },
+    {
+      "id": "tvo-belgium",
+      "name": "TVO Belgium",
+      "logo": "mediapartner/336px-TVO_Belgium_logo.svg_media.png",
+      "reach": 3,
+      "light": true
+    },
+    {
+      "id": "u-bet",
+      "name": "U BET",
+      "logo": "mediapartner/U BET_media.png",
+      "reach": 5,
+      "light": false
+    },
+    {
+      "id": "unibet",
+      "name": "Unibet",
+      "logo": "mediapartner/Unibet_media.png",
+      "reach": 5,
+      "light": false
+    },
+    {
+      "id": "vedia",
+      "name": "Vedia",
+      "logo": "mediapartner/Vedia_logo_media.png",
+      "reach": 4,
+      "light": true
+    },
+    {
+      "id": "voetbalkrant",
+      "name": "Voetbalkrant",
+      "logo": "mediapartner/voetbalkrant_media.png",
+      "reach": 5,
+      "light": true
+    },
+    {
+      "id": "voo",
+      "name": "VOO",
+      "logo": "mediapartner/VOO_logo.svg_media.png",
+      "reach": 4,
+      "light": false
+    },
+    {
+      "id": "vrt-1",
+      "name": "VRT 1",
+      "logo": "mediapartner/VRT_1_2023.svg_media.png",
+      "reach": 7,
+      "light": false
+    },
+    {
+      "id": "vtm",
+      "name": "VTM",
+      "logo": "mediapartner/vtm_media.png",
+      "reach": 7,
+      "light": true
+    },
+    {
+      "id": "walfoot",
+      "name": "Walfoot",
+      "logo": "mediapartner/walfoot_media.png",
+      "reach": 5,
+      "light": true
+    },
+    {
+      "id": "willam-hill",
+      "name": "William Hill",
+      "logo": "mediapartner/Willam Hill_media.png",
+      "reach": 5,
+      "light": true
+    }
+  ],
+  "kit": [
+    {
+      "id": "fila",
+      "name": "Fila",
+      "logo": "mediapartner/Fila_1973_media.png",
+      "reach": 6,
+      "light": false
+    },
+    {
+      "id": "jako",
+      "name": "Jako",
+      "logo": "mediapartner/Jako_media.png",
+      "reach": 5,
+      "light": false
+    },
+    {
+      "id": "vans",
+      "name": "Vans",
+      "logo": "mediapartner/Vans_media.png",
+      "reach": 6,
+      "light": false
+    }
+  ]
+}

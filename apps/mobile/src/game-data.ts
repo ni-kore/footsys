@@ -19,6 +19,7 @@ import trophyOdds from '../../../data/game/trophy-odds.json';
 import meters from '../../../data/game/meters.json';
 import events from '../../../data/game/events.json';
 import randomEvents from '../../../data/game/random-events.json';
+import partners from '../../../data/game/partners.json';
 
 import { clubFiles } from './club-files';
 
@@ -37,6 +38,7 @@ function buildRaw(): RawGameData {
     meters,
     events,
     randomEvents,
+    partners,
   } as unknown as RawGameData;
 }
 

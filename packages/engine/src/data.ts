@@ -1,7 +1,7 @@
 import type {
   CareerEvent, Club, ClubFile, ClubCompetition, Confederation, ConfederationId, Country,
-  CountryCode, DomesticCup, Formation, IndividualAward, League, NationalCompetition, Position,
-  PositionId, RandomEvent, StructuralEvent,
+  CountryCode, DomesticCup, Formation, IndividualAward, League, NationalCompetition, Partner,
+  Position, PositionId, RandomEvent, StructuralEvent,
 } from './types';
 
 /**
@@ -27,6 +27,7 @@ export interface RawGameData {
   meters: any;
   events: { structural: StructuralEvent[]; career: CareerEvent[] };
   randomEvents: { config: any; events: RandomEvent[] };
+  partners: { rules: any; media: Partner[]; kit: Partner[] };
 }
 
 /** Indizierte, abfragebereite Spieldaten. */
@@ -43,6 +44,7 @@ export interface GameData extends RawGameData {
   positionById: Map<PositionId, Position>;
   careerEventById: Map<string, CareerEvent>;
   randomEventById: Map<string, RandomEvent>;
+  partnerById: Map<string, Partner>;
 }
 
 export function createGameData(raw: RawGameData): GameData {
@@ -73,6 +75,9 @@ export function createGameData(raw: RawGameData): GameData {
     positionById: new Map(raw.positions.map((p) => [p.id, p])),
     careerEventById: new Map(raw.events.career.map((e) => [e.id, e])),
     randomEventById: new Map(raw.randomEvents.events.map((e) => [e.id, e])),
+    partnerById: new Map(
+      [...raw.partners.media, ...raw.partners.kit].map((p) => [p.id, p]),
+    ),
   };
 }
 

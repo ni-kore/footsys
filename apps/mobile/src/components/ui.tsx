@@ -5,6 +5,10 @@ import { color, font, meterColor, radius, space } from '../theme';
 import { readableOn } from '../format';
 import { clubBadges } from '../club-badges';
 import { flagImages } from '../flags';
+import { associationLogos } from '../association-logos';
+import { partnerLogos } from '../partner-logos';
+import { LoanIcon } from './icons';
+import { useCountUp } from './motion';
 
 /** Card with a hairline border — the base surface of the whole interface. */
 export function Card({ children, style }: { children: React.ReactNode; style?: StyleProp<ViewStyle> }) {
@@ -32,7 +36,12 @@ export function StatTile({ label, value, tone }: { label: string; value: string 
  * indicator characters and falls back to two letters. Bundled images look the
  * same everywhere.
  */
-export function Flag({ code, size = 18 }: { code: string; size?: number }) {
+export function Flag({ code, size = 18, muted }: {
+  code: string;
+  size?: number;
+  /** Blass, solange die Entscheidung für dieses Land nicht gefallen ist. */
+  muted?: boolean;
+}) {
   const image = flagImages[code];
   if (!image) {
     return <Text style={[styles.flagFallback, { fontSize: size * 0.6 }]}>{code}</Text>;
@@ -40,7 +49,11 @@ export function Flag({ code, size = 18 }: { code: string; size?: number }) {
   return (
     <Image
       source={image}
-      style={{ width: size * 1.5, height: size, borderRadius: 2, backgroundColor: color.surface[2] }}
+      style={{
+        width: size * 1.5, height: size, borderRadius: 2,
+        backgroundColor: color.surface[2],
+        opacity: muted ? 0.3 : 1,
+      }}
       resizeMode="cover"
       accessibilityLabel={code}
     />
@@ -51,13 +64,15 @@ export function Flag({ code, size = 18 }: { code: string; size?: number }) {
  * Balkenanzeige aus der Design-Referenz. Die Stufenzahl ist frei: Meter der
  * Karriere laufen über fünf, die Vereinsreputation über zehn.
  */
-export function Meter({ value, label, steps = 5 }: {
+export function Meter({ value, label, steps = 5, fill }: {
   value: number; label?: string; steps?: number;
+  /** Streckt die Stufen über die volle verfuegbare Breite. */
+  fill?: boolean;
 }) {
   const filled = Math.round((value / 100) * steps);
   const tone = meterColor(value);
   return (
-    <View>
+    <View style={fill ? { flex: 1 } : undefined}>
       {label ? <Label>{label}</Label> : null}
       <View style={styles.meterRow}>
         {Array.from({ length: steps }, (_, i) => (
@@ -66,6 +81,7 @@ export function Meter({ value, label, steps = 5 }: {
             style={[
               styles.meterSegment,
               steps > 5 && styles.meterSegmentNarrow,
+              fill && styles.meterSegmentFill,
               { backgroundColor: i < filled ? tone : color.meter.empty },
             ]}
           />
@@ -81,30 +97,67 @@ export function Meter({ value, label, steps = 5 }: {
  * Die Färbung folgt den Stufen, die man aus Fußballspielen kennt — Bronze,
  * Silber, Gold, und darüber die Ausnahmeklasse.
  */
-export function StatCard({ value, label, tint, size = 'normal', icon, grow }: {
-  value: string | number;
+export function StatCard({
+  value, label, tint, size = 'normal', icon, inlineIcon, grow, filled, count, format, style,
+}: {
+  value?: string | number;
   label: string;
   tint?: string;
-  size?: 'normal' | 'wide';
+  size?: 'normal' | 'wide' | 'hero';
   /** Wappen oder Flagge über dem Wert. */
   icon?: React.ReactNode;
+  /**
+   * Symbol neben dem Wert statt darüber. Die Karte bleibt damit so flach wie
+   * eine ohne Symbol, und ob eines da ist, ändert nichts an ihrer Höhe.
+   */
+  inlineIcon?: React.ReactNode;
   /** Füllt die Breite im Raster statt sich an den Inhalt zu schmiegen. */
   grow?: boolean;
+  /** Fläche in der Stufenfarbe statt nur der Rand. */
+  filled?: boolean;
+  /** Zahl, die bei jeder Änderung weich auf den neuen Stand zählt. */
+  count?: number;
+  format?: (value: number) => string;
+  style?: StyleProp<ViewStyle>;
 }) {
+  const counted = useCountUp(count ?? 0);
+  const shown = count === undefined
+    ? value
+    : format
+      ? format(counted)
+      : String(Math.round(counted));
+
+  const front = filled && tint ? readableOn(tint) : tint;
+
   return (
     <View
       style={[
         styles.statCard,
         size === 'wide' && styles.statCardWide,
         grow && styles.statCardGrow,
+        size === 'hero' && styles.statCardHero,
         tint ? { borderColor: tint } : null,
+        filled && tint ? { backgroundColor: tint } : null,
+        style,
       ]}
     >
       {icon ? <View style={styles.statCardIcon}>{icon}</View> : null}
-      <Text style={[styles.statCardValue, tint ? { color: tint } : null]} numberOfLines={1}>
-        {value}
+      <View style={styles.statCardLine}>
+        {inlineIcon}
+        <Text
+          style={[
+            styles.statCardValue,
+            size === 'hero' && styles.statCardValueHero,
+            front ? { color: front } : null,
+          ]}
+          numberOfLines={1}
+        >
+          {shown}
+        </Text>
+      </View>
+      <Text style={[styles.statCardLabel, filled && front ? { color: front, opacity: 0.72 } : null]}>
+        {label}
       </Text>
-      <Text style={styles.statCardLabel}>{label}</Text>
     </View>
   );
 }
@@ -239,6 +292,108 @@ export function ClubBadge({ clubId, colors, abbr, size = 40 }: {
   );
 }
 
+/**
+ * Wappen eines Verbands.
+ *
+ * Die Nationalmannschaft ist der Verband, nicht das Land, deshalb steht hier
+ * sein Wappen und nicht die Flagge. Für Verbände ohne hinterlegtes Wappen
+ * bleibt die Flagge stehen, damit die Stelle nie leer ist.
+ */
+export function AssociationMark({ code, size = 16 }: { code: string; size?: number }) {
+  const logo = associationLogos[code];
+  if (!logo) return <Flag code={code} size={Math.round(size * 0.85)} />;
+  return (
+    <Image
+      source={logo}
+      style={{ width: size, height: size }}
+      resizeMode="contain"
+      accessibilityLabel={code}
+    />
+  );
+}
+
+/**
+ * Logo eines Partners.
+ *
+ * Die Vorlagen kommen aus aller Welt und sind unterschiedlich gebaut: manche
+ * hell, viele schwarz auf durchsichtig. Auf dem dunklen Untergrund der App
+ * wären die schwarzen unsichtbar, deshalb steht jedes Logo auf einer hellen
+ * Fläche, so wie auf einem Trikotärmel.
+ */
+export function PartnerLogo({ partnerId, light, size = 30 }: {
+  partnerId: string;
+  /** Helles Logo: dann steht es auf dunklem Grund. */
+  light?: boolean;
+  size?: number;
+}) {
+  const logo = partnerLogos[partnerId];
+  if (!logo) return null;
+  return (
+    <View
+      style={[
+        styles.partnerLogo,
+        light && styles.partnerLogoDark,
+        { height: size, width: size * 1.9 },
+      ]}
+    >
+      <Image
+        source={logo}
+        style={{ width: '100%', height: '100%' }}
+        resizeMode="contain"
+        accessibilityLabel={partnerId}
+      />
+    </View>
+  );
+}
+
+/**
+ * Der Verein, wie er überall steht: Wappen, voller Name, darunter die Liga
+ * und darunter, sobald gespielt wurde, die eigene Rolle in der Mannschaft.
+ */
+export function ClubBlock({
+  clubId, name, colors, abbr, league, status, statusTone, loan, badgeSize = 30, style,
+}: {
+  clubId?: string;
+  name: string;
+  colors: [string, string];
+  abbr: string;
+  league?: string;
+  status?: string;
+  statusTone?: string;
+  /** Beschriftung des Leihkennzeichens, etwa "On loan from Girona". */
+  loan?: string;
+  badgeSize?: number;
+  style?: StyleProp<ViewStyle>;
+}) {
+  return (
+    <View style={[styles.clubBlock, style]}>
+      {/* Der abknickende Pfeil sagt vor dem Wappen: hier ist der Spieler nur
+          zu Gast. Dieselbe Sprache wie in der Saisontabelle. */}
+      {loan ? <View style={styles.clubBlockArrow}><LoanIcon size={12} /></View> : null}
+      <ClubBadge clubId={clubId} colors={colors} abbr={abbr} size={badgeSize} />
+      <View style={styles.clubBlockText}>
+        <Text style={styles.clubBlockName}>{name}</Text>
+        {league ? <Text style={styles.clubBlockLine}>{league}</Text> : null}
+      </View>
+      {loan ? (
+        <View style={styles.clubBlockLoan}>
+          <Text style={styles.clubBlockLoanText}>{loan}</Text>
+        </View>
+      ) : null}
+      {/* Die eigene Rolle steht rechts im Kasten, auf halber Höhe zwischen
+          Vereinsname und Liga. */}
+      {status ? (
+        <Text
+          style={[styles.clubBlockStatus, statusTone ? { color: statusTone } : null]}
+          numberOfLines={1}
+        >
+          {status}
+        </Text>
+      ) : null}
+    </View>
+  );
+}
+
 export function Button({ label, onPress, variant = 'primary', disabled, wide }: {
   label: string; onPress: () => void; variant?: 'primary' | 'secondary'; disabled?: boolean; wide?: boolean;
 }) {
@@ -348,6 +503,7 @@ const styles = StyleSheet.create({
   tileValue: { fontSize: 24, fontWeight: '700', color: color.text.primary, marginTop: space[1] },
   meterRow: { flexDirection: 'row', gap: 3, marginTop: space[1] },
   meterSegment: { width: 7, height: 16, borderRadius: radius.xs },
+  meterSegmentFill: { flex: 1, width: undefined },
   meterSegmentNarrow: { width: 5, height: 14 },
   statCard: {
     minWidth: 62, paddingHorizontal: space[2], paddingVertical: space[1],
@@ -357,10 +513,38 @@ const styles = StyleSheet.create({
     alignItems: 'center', justifyContent: 'center',
   },
   statCardWide: { minWidth: 84, flexBasis: 116 },
+  statCardHero: { minWidth: 104, paddingVertical: space[3] },
   statCardGrow: { flexGrow: 1, flexBasis: 74, paddingVertical: space[2] },
   statCardIcon: { marginBottom: 2 },
+  statCardLine: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   statCardValue: { fontSize: 17, fontWeight: '700', color: color.text.primary },
+  statCardValueHero: { fontSize: 21, letterSpacing: -0.3 },
   statCardLabel: { ...font.micro, textTransform: 'uppercase', marginTop: -1 },
+  partnerLogoDark: { backgroundColor: color.bg.root, borderWidth: 1, borderColor: color.border.default },
+  partnerLogo: {
+    backgroundColor: '#F2F2F4',
+    borderRadius: radius.sm,
+    padding: 4,
+    alignItems: 'center', justifyContent: 'center',
+  },
+  clubBlock: {
+    flexDirection: 'row', alignItems: 'center', gap: space[3], flexWrap: 'wrap',
+    paddingHorizontal: space[3], paddingVertical: space[2],
+    minHeight: 54,
+    backgroundColor: color.surface[2],
+    borderRadius: radius.md,
+    borderWidth: 1, borderColor: color.border.default,
+  },
+  clubBlockText: { flex: 1, gap: 1, minWidth: 120 },
+  clubBlockArrow: { width: 12, flexShrink: 0, marginRight: -space[1] },
+  clubBlockName: { fontSize: 15, fontWeight: '700', color: color.text.primary },
+  clubBlockLoan: {
+    borderRadius: radius.pill, borderWidth: 1, borderColor: color.border.default,
+    paddingHorizontal: 7, paddingVertical: 2, flexShrink: 0,
+  },
+  clubBlockLoanText: { ...font.micro, textTransform: 'uppercase' },
+  clubBlockLine: { ...font.micro, textTransform: 'uppercase' },
+  clubBlockStatus: { ...font.micro, textTransform: 'uppercase', textAlign: 'right' },
   shirtNumber: {
     minWidth: 40, height: 38, paddingHorizontal: space[2],
     borderRadius: radius.md,

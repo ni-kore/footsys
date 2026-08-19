@@ -2,12 +2,14 @@ import {
   clubOf, clubsInConfederation, clubsInCountry, countryOf, countryOfClub, leagueAtTier, leagueOf,
   positionOf, type GameData,
 } from './data';
+import { offerReputationBonus, partnerOffers } from './partners';
 import { clamp, clampOverall, roleAtLeast } from './progression';
 import { collectEffects, currentRole, isEligibleForNationalTeam } from './simulation';
 import type { Rng } from './rng';
 import type {
   CareerEvent, CareerState, Club, CountryCode, EventModifiers, EventOption, EventRequirements,
-  EventVariant, PendingDecision, PendingOption, RandomEvent, ReputationLevel, TransferScope,
+  EventVariant, PartnerKind, PendingDecision, PendingOption, RandomEvent, ReputationLevel,
+  TransferScope,
 } from './types';
 
 /**
@@ -77,11 +79,56 @@ export interface OfferOptions {
   qualityBonus?: number;
 }
 
+/**
+ * Eine Marke klopft an. Man kann zusagen oder es lassen; wer ablehnt, verliert
+ * nichts außer der Wirkung.
+ */
+export function buildPartnerDecision(
+  data: GameData, rng: Rng, state: CareerState, kind: PartnerKind,
+): PendingDecision | null {
+  const offers = partnerOffers(data, rng, state, kind);
+  if (offers.length === 0) return null;
+
+  const event = data.events.structural.find(
+    (e) => e.id === (kind === 'media' ? 'media_partner_offer' : 'kit_supplier_offer'),
+  );
+  if (!event) return null;
+
+  return {
+    kind: 'structural',
+    eventId: event.id,
+    window: 'summer',
+    title: event.title,
+    text: event.text.en,
+    options: [
+      ...offers.map((partner) => ({
+        id: 'partner:' + partner.id,
+        label: { de: partner.name, en: partner.name },
+        partnerId: partner.id,
+        subtitle: reachLabel(partner.reach),
+      })),
+      { id: 'decline', label: { de: 'Keinen Vertrag', en: 'Sign with nobody' } },
+    ],
+  };
+}
+
+/** Wie weit eine Marke trägt, in Worten. */
+function reachLabel(reach: number): string {
+  if (reach >= 9) return 'Worldwide reach';
+  if (reach >= 7) return 'National reach';
+  if (reach >= 5) return 'Wide reach';
+  if (reach >= 3) return 'Regional reach';
+  return 'Small but loyal following';
+}
+
 /** Kandidatenvereine für ein Angebot, gewichtet nach Passung zum Spielerniveau. */
 export function clubOffers(data: GameData, rng: Rng, state: CareerState, options: OfferOptions): Club[] {
   const current = state.clubId ? clubOf(data, state.clubId) : null;
   const currentLeague = current ? leagueOf(data, current) : null;
-  const target = levelForOverall(data, state.player.overall, options.qualityBonus ?? 0);
+  // Ein Partner sorgt dafür, dass man gesehen wird: die angebotenen Vereine
+  // dürfen dann eine Stufe darüber liegen.
+  const bonus = (options.qualityBonus ?? 0) + offerReputationBonus(data, state);
+  const target = levelForOverall(data, state.player.overall, bonus);
 
   let pool: Club[];
   switch (options.scope) {
@@ -160,12 +207,13 @@ export function academyOffers(data: GameData, rng: Rng, state: CareerState): Clu
 
 // ----------------------------------------------------- Entscheidungsbau
 
-function clubOption(data: GameData, club: Club, prefix: string): PendingOption {
+function clubOption(data: GameData, club: Club, prefix: string, tag?: string): PendingOption {
   const league = leagueOf(data, club);
   return {
     id: `${prefix}:${club.id}`,
     label: { de: club.short, en: club.short },
     clubId: club.id,
+    ...(tag ? { tag } : {}),
     subtitle: league.name,
   };
 }
@@ -190,13 +238,15 @@ export function buildTransferDecision(
   const bonus = state.activeEffects.find((e) => e.modifiers.offerQualityBonus)?.modifiers.offerQualityBonus ?? 0;
   const clubs = clubOffers(data, rng, state, { scope, count, qualityBonus: bonus });
 
-  const options: PendingOption[] = clubs.map((c) => clubOption(data, c, 'transfer'));
+  // Ein Kennzeichen sagt, was die Wahl bedeutet: hier bleiben oder gehen.
+  const options: PendingOption[] = clubs.map((c) => clubOption(data, c, 'transfer', 'Move'));
   if (state.clubId) {
     const club = clubOf(data, state.clubId);
     options.unshift({
       id: 'stay',
       label: { de: club.short, en: club.short },
       clubId: club.id,
+      tag: 'Stay',
       subtitle: leagueOf(data, club).name,
     });
   }
@@ -223,8 +273,14 @@ export function buildLoanDecision(data: GameData, rng: Rng, state: CareerState):
     title: event.title,
     text: event.text.en,
     options: [
-      ...clubs.map((c) => clubOption(data, c, 'loan')),
-      { id: 'stay', label: { de: club.short, en: club.short }, clubId: club.id },
+      ...clubs.map((c) => clubOption(data, c, 'loan', 'On loan')),
+      {
+        id: 'stay',
+        label: { de: club.short, en: club.short },
+        clubId: club.id,
+        tag: 'Stay',
+        subtitle: leagueOf(data, club).name,
+      },
     ],
   };
 }
@@ -248,14 +304,21 @@ export function buildRetirementDecision(data: GameData, state: CareerState): Pen
 /** Wählt ein passendes Karriere-Ereignis für das angegebene Fenster. */
 export function buildCareerDecision(
   data: GameData, rng: Rng, state: CareerState, window: 'summer' | 'winter',
+  options: { repeatable?: boolean; exclude?: Set<string> } = {},
 ): PendingDecision | null {
   const eligible = data.events.career.filter((event) => {
     const eventWindow = event.window ?? 'summer';
     if (eventWindow !== 'any' && eventWindow !== window) return false;
     if (state.player.age < event.ageRange[0] || state.player.age > event.ageRange[1]) return false;
+    if (options.exclude?.has(event.id)) return false;
 
-    const used = state.eventHistory.filter((e) => e.id === event.id).length;
-    if (used >= (event.maxPerCareer ?? 1)) return false;
+    // In jeder Pause stehen drei Entscheidungen an. Der Vorrat an Ereignissen
+    // reicht dafür nicht ein Karriereleben lang, deshalb darf die Sperre
+    // fallen, sobald nichts Neues mehr übrig ist.
+    if (!options.repeatable) {
+      const used = state.eventHistory.filter((e) => e.id === event.id).length;
+      if (used >= (event.maxPerCareer ?? 1)) return false;
+    }
 
     return meetsRequirements(data, state, event.requires);
   });
@@ -475,10 +538,14 @@ export function applyModifiers(
     player.marketValue = Math.round(player.marketValue * modifiers.marketValueMultiplier);
   }
   if (modifiers.fansMultiplier) {
-    player.fans = Math.round(Math.min(
-      data.progression.fans.max as number,
-      player.fans * modifiers.fansMultiplier,
-    ));
+    // Gedämpft, weil in jeder Pause mehrere Entscheidungen anfallen und sich
+    // Faktoren auf den Bestand sonst über zwanzig Jahre hochschaukeln.
+    const damping = data.progression.fans.multiplierDamping as number;
+    const factor = 1 + (modifiers.fansMultiplier - 1) * damping;
+    const ceiling = player.legend
+      ? (data.progression.fans.max as number)
+      : (data.progression.fans.regularMax as number);
+    player.fans = Math.round(Math.min(ceiling, player.fans * factor));
   }
   if (modifiers.setCaptain) player.isCaptain = true;
   if (modifiers.suspendedSeasons) state.suspensionHalves += modifiers.suspendedSeasons * 2;

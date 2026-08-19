@@ -644,7 +644,7 @@
   },
   {
     "id": "ger-tier-4",
-    "name": "Germany · Tier 4",
+    "name": "Regionalliga",
     "country": "GER",
     "tier": 4,
     "teams": 18,
@@ -658,7 +658,7 @@
   },
   {
     "id": "eng-tier-4",
-    "name": "England · Tier 4",
+    "name": "League Two",
     "country": "ENG",
     "tier": 4,
     "teams": 18,
@@ -672,7 +672,7 @@
   },
   {
     "id": "eng-tier-5",
-    "name": "England · Tier 5",
+    "name": "National League",
     "country": "ENG",
     "tier": 5,
     "teams": 18,
@@ -686,7 +686,7 @@
   },
   {
     "id": "ita-tier-3",
-    "name": "Italy · Tier 3",
+    "name": "Serie C",
     "country": "ITA",
     "tier": 3,
     "teams": 18,
@@ -700,7 +700,7 @@
   },
   {
     "id": "aut-tier-2",
-    "name": "Austria · Tier 2",
+    "name": "2. Liga",
     "country": "AUT",
     "tier": 2,
     "teams": 18,
@@ -714,7 +714,7 @@
   },
   {
     "id": "aut-tier-3",
-    "name": "Austria · Tier 3",
+    "name": "Regionalliga",
     "country": "AUT",
     "tier": 3,
     "teams": 18,
@@ -728,7 +728,7 @@
   },
   {
     "id": "alb-tier-1",
-    "name": "Albania · Tier 1",
+    "name": "Kategoria Superiore",
     "country": "ALB",
     "tier": 1,
     "teams": 18,
@@ -742,7 +742,7 @@
   },
   {
     "id": "and-tier-1",
-    "name": "Andorra · Tier 1",
+    "name": "Primera Divisió",
     "country": "AND",
     "tier": 1,
     "teams": 18,
@@ -756,7 +756,7 @@
   },
   {
     "id": "arm-tier-1",
-    "name": "Armenia · Tier 1",
+    "name": "Armenian Premier League",
     "country": "ARM",
     "tier": 1,
     "teams": 18,
@@ -770,7 +770,7 @@
   },
   {
     "id": "aze-tier-1",
-    "name": "Azerbaijan · Tier 1",
+    "name": "Premyer Liqasi",
     "country": "AZE",
     "tier": 1,
     "teams": 18,
@@ -784,7 +784,7 @@
   },
   {
     "id": "bih-tier-1",
-    "name": "Bosnia and Herzegovina · Tier 1",
+    "name": "Premijer Liga",
     "country": "BIH",
     "tier": 1,
     "teams": 18,
@@ -798,7 +798,7 @@
   },
   {
     "id": "bul-tier-1",
-    "name": "Bulgaria · Tier 1",
+    "name": "Parva Liga",
     "country": "BUL",
     "tier": 1,
     "teams": 18,
@@ -812,7 +812,7 @@
   },
   {
     "id": "cyp-tier-1",
-    "name": "Cyprus · Tier 1",
+    "name": "Cypriot First Division",
     "country": "CYP",
     "tier": 1,
     "teams": 18,
@@ -826,7 +826,7 @@
   },
   {
     "id": "cze-tier-2",
-    "name": "Czechia · Tier 2",
+    "name": "Národní Liga",
     "country": "CZE",
     "tier": 2,
     "teams": 18,
@@ -840,7 +840,7 @@
   },
   {
     "id": "den-tier-2",
-    "name": "Denmark · Tier 2",
+    "name": "1. Division",
     "country": "DEN",
     "tier": 2,
     "teams": 18,
@@ -854,7 +854,7 @@
   },
   {
     "id": "gib-tier-1",
-    "name": "Gibraltar · Tier 1",
+    "name": "Gibraltar Football League",
     "country": "GIB",
     "tier": 1,
     "teams": 18,
@@ -868,7 +868,7 @@
   },
   {
     "id": "lux-tier-1",
-    "name": "Luxembourg · Tier 1",
+    "name": "National Division",
     "country": "LUX",
     "tier": 1,
     "teams": 18,
@@ -882,7 +882,7 @@
   },
   {
     "id": "mlt-tier-1",
-    "name": "Malta · Tier 1",
+    "name": "Maltese Premier League",
     "country": "MLT",
     "tier": 1,
     "teams": 18,
@@ -896,7 +896,7 @@
   },
   {
     "id": "mda-tier-1",
-    "name": "Moldova · Tier 1",
+    "name": "Super Liga",
     "country": "MDA",
     "tier": 1,
     "teams": 18,
@@ -910,7 +910,7 @@
   },
   {
     "id": "mne-tier-1",
-    "name": "Montenegro · Tier 1",
+    "name": "Prva Crnogorska Liga",
     "country": "MNE",
     "tier": 1,
     "teams": 18,
@@ -924,7 +924,7 @@
   },
   {
     "id": "mkd-tier-1",
-    "name": "North Macedonia · Tier 1",
+    "name": "Prva Liga",
     "country": "MKD",
     "tier": 1,
     "teams": 18,
@@ -938,7 +938,7 @@
   },
   {
     "id": "nir-tier-1",
-    "name": "Northern Ireland · Tier 1",
+    "name": "NIFL Premiership",
     "country": "NIR",
     "tier": 1,
     "teams": 18,
@@ -952,7 +952,7 @@
   },
   {
     "id": "pol-tier-2",
-    "name": "Poland · Tier 2",
+    "name": "I liga",
     "country": "POL",
     "tier": 2,
     "teams": 18,
@@ -966,7 +966,7 @@
   },
   {
     "id": "smr-tier-1",
-    "name": "San Marino · Tier 1",
+    "name": "Campionato Sammarinese",
     "country": "SMR",
     "tier": 1,
     "teams": 18,
@@ -980,7 +980,7 @@
   },
   {
     "id": "svk-tier-1",
-    "name": "Slovakia · Tier 1",
+    "name": "Slovak First League",
     "country": "SVK",
     "tier": 1,
     "teams": 18,
@@ -994,7 +994,7 @@
   },
   {
     "id": "svn-tier-1",
-    "name": "Slovenia · Tier 1",
+    "name": "PrvaLiga",
     "country": "SVN",
     "tier": 1,
     "teams": 18,
@@ -1008,7 +1008,7 @@
   },
   {
     "id": "sui-tier-2",
-    "name": "Switzerland · Tier 2",
+    "name": "Challenge League",
     "country": "SUI",
     "tier": 2,
     "teams": 18,
@@ -1022,7 +1022,7 @@
   },
   {
     "id": "wal-tier-1",
-    "name": "Wales · Tier 1",
+    "name": "Cymru Premier",
     "country": "WAL",
     "tier": 1,
     "teams": 18,
@@ -1036,7 +1036,7 @@
   },
   {
     "id": "nga-tier-2",
-    "name": "Nigeria · Tier 2",
+    "name": "Nigeria National League",
     "country": "NGA",
     "tier": 2,
     "teams": 18,
@@ -1050,7 +1050,7 @@
   },
   {
     "id": "isr-tier-2",
-    "name": "Israel · Tier 2",
+    "name": "Liga Leumit",
     "country": "ISR",
     "tier": 2,
     "teams": 18,

@@ -6,3 +6,9 @@ declare module '*.svg' {
   const content: React.FC<SvgProps>;
   export default content;
 }
+
+/** Rasterbilder werden vom Bundler zu einer Quellen-Kennung. */
+declare module '*.png' {
+  const content: number;
+  export default content;
+}

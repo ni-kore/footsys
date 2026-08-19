@@ -7,3 +7,4 @@ build/
 Thumbs.db
 .cache/
 assets/_source/
+.cache/
