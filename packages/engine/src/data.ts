@@ -28,6 +28,7 @@ export interface RawGameData {
   events: { structural: StructuralEvent[]; career: CareerEvent[] };
   randomEvents: { config: any; events: RandomEvent[] };
   partners: { rules: any; media: Partner[]; kit: Partner[] };
+  teamSeason: any;
 }
 
 /** Indizierte, abfragebereite Spieldaten. */

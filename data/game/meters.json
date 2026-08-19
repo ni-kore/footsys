@@ -1,50 +1,304 @@
 {
   "$comment": "Sichtbare Karrieremeter. Werden in der UI als 5-stufige Balken dargestellt (component.meter aus design/tokens.json) und von Karriere-Events verändert. Sie sind Voraussetzung für einige Events und beeinflussen Angebote.",
-
   "meters": {
     "morale": {
-      "label": { "de": "Moral", "en": "Morale" },
+      "label": {
+        "de": "Moral",
+        "en": "Morale"
+      },
       "start": 60,
       "min": 0,
       "max": 100,
-      "driftPerSeason": { "$comment": "Zieht ohne Einfluss langsam Richtung Mittelwert.", "toward": 60, "amount": 4 },
+      "driftPerSeason": {
+        "$comment": "Zieht ohne Einfluss langsam Richtung Mittelwert.",
+        "toward": 60,
+        "amount": 4
+      },
       "effects": [
-        { "below": 25, "modifiers": { "roleShift": -1 } },
-        { "above": 85, "modifiers": { "immediateOverall": 1 } }
+        {
+          "below": 25,
+          "modifiers": {
+            "roleShift": -1
+          }
+        },
+        {
+          "above": 85,
+          "modifiers": {
+            "immediateOverall": 1
+          }
+        }
       ],
-      "influencedBy": ["playingTime", "titles", "injuries", "events"]
+      "influencedBy": [
+        "playingTime",
+        "titles",
+        "injuries",
+        "events"
+      ]
     },
     "fanSupport": {
-      "label": { "de": "Rückhalt bei den Fans", "en": "Fan support" },
+      "label": {
+        "de": "Rückhalt bei den Fans",
+        "en": "Fan support"
+      },
       "start": 50,
       "min": 0,
       "max": 100,
-      "driftPerSeason": { "toward": 50, "amount": 3 },
+      "driftPerSeason": {
+        "toward": 50,
+        "amount": 3
+      },
       "effects": [
-        { "below": 30, "unlocksEvent": "fan_backlash" },
-        { "above": 75, "modifiers": { "marketValueMultiplier": 1.05 } }
+        {
+          "below": 30,
+          "unlocksEvent": "fan_backlash"
+        },
+        {
+          "above": 75,
+          "modifiers": {
+            "marketValueMultiplier": 1.05
+          }
+        }
       ],
-      "influencedBy": ["goals", "loyalty", "titles", "events"],
-      "resetOnTransfer": { "$comment": "Beim Vereinswechsel neu — die neuen Fans kennen dich noch nicht.", "to": 50 }
+      "influencedBy": [
+        "goals",
+        "loyalty",
+        "titles",
+        "events"
+      ],
+      "resetOnTransfer": {
+        "$comment": "Beim Vereinswechsel neu — die neuen Fans kennen dich noch nicht.",
+        "to": 50
+      }
     },
     "mediaRelation": {
-      "label": { "de": "Verhältnis zur Presse", "en": "Media relations" },
+      "label": {
+        "de": "Verhältnis zur Presse",
+        "en": "Media relations"
+      },
       "start": 55,
       "min": 0,
       "max": 100,
-      "driftPerSeason": { "toward": 55, "amount": 3 },
+      "driftPerSeason": {
+        "toward": 55,
+        "amount": 3
+      },
       "effects": [
-        { "below": 25, "modifiers": { "marketValueMultiplier": 0.92 } },
-        { "above": 80, "modifiers": { "awardChanceMultiplier": 1.15 } }
+        {
+          "below": 25,
+          "modifiers": {
+            "marketValueMultiplier": 0.92
+          }
+        },
+        {
+          "above": 80,
+          "modifiers": {
+            "awardChanceMultiplier": 1.15
+          }
+        }
       ],
-      "influencedBy": ["events", "awards", "nationalTeam"]
+      "influencedBy": [
+        "events",
+        "awards",
+        "nationalTeam"
+      ]
     }
   },
-
   "display": {
     "$comment": "Abbildung des 0–100-Werts auf die fünf Balkensegmente der UI und deren Farbe.",
     "steps": 5,
-    "thresholds": [20, 40, 60, 80, 100],
-    "colorByStep": ["status.negative", "status.negative", "status.warning", "status.positive", "status.positive"]
+    "thresholds": [
+      20,
+      40,
+      60,
+      80,
+      100
+    ],
+    "colorByStep": [
+      "status.negative",
+      "status.negative",
+      "status.warning",
+      "status.positive",
+      "status.positive"
+    ]
+  },
+  "curves": {
+    "$comment": "Meter erzeugen nichts aus dem Nichts, sie verstärken oder dämpfen, was ohnehin geschieht. Stützstellen als Wertepaare 0 bis 100 auf Faktor.",
+    "morale": {
+      "$comment": "Moral wirkt auf das Vertrauen des Trainers, auf die Schwankung der Leistung und auf das Wachstum.",
+      "playingTime": [
+        [
+          0,
+          0.78
+        ],
+        [
+          25,
+          0.88
+        ],
+        [
+          50,
+          1
+        ],
+        [
+          75,
+          1.08
+        ],
+        [
+          100,
+          1.14
+        ]
+      ],
+      "variance": {
+        "$comment": "Faktor auf die Streuung: schlechte Laune macht unbeständig.",
+        "points": [
+          [
+            0,
+            1.35
+          ],
+          [
+            40,
+            1.12
+          ],
+          [
+            60,
+            1
+          ],
+          [
+            100,
+            0.88
+          ]
+        ]
+      },
+      "growth": [
+        [
+          0,
+          0.75
+        ],
+        [
+          25,
+          0.9
+        ],
+        [
+          50,
+          1
+        ],
+        [
+          75,
+          1.1
+        ],
+        [
+          100,
+          1.2
+        ]
+      ]
+    },
+    "fanSupport": {
+      "$comment": "Rückhalt wirkt auf die Leistung vor eigenem Publikum, auf die Anziehungskraft bei Wechseln und darauf, wie lange ein Verein an einem festhält.",
+      "output": [
+        [
+          0,
+          0.9
+        ],
+        [
+          30,
+          0.96
+        ],
+        [
+          50,
+          1
+        ],
+        [
+          75,
+          1.05
+        ],
+        [
+          100,
+          1.1
+        ]
+      ],
+      "transferPull": [
+        [
+          0,
+          0.8
+        ],
+        [
+          50,
+          1
+        ],
+        [
+          100,
+          1.25
+        ]
+      ],
+      "dropProtection": {
+        "$comment": "Faktor auf die Wahrscheinlichkeit, die Rolle zu verlieren.",
+        "points": [
+          [
+            0,
+            1.3
+          ],
+          [
+            50,
+            1
+          ],
+          [
+            100,
+            0.75
+          ]
+        ]
+      }
+    },
+    "mediaRelation": {
+      "$comment": "Das Verhältnis zur Presse wirkt auf Auszeichnungen, auf die Güte der Angebote und darauf, wie oft Medienereignisse auftauchen.",
+      "awards": [
+        [
+          0,
+          0.7
+        ],
+        [
+          30,
+          0.88
+        ],
+        [
+          55,
+          1
+        ],
+        [
+          80,
+          1.15
+        ],
+        [
+          100,
+          1.3
+        ]
+      ],
+      "offerQuality": [
+        [
+          0,
+          0.85
+        ],
+        [
+          55,
+          1
+        ],
+        [
+          100,
+          1.2
+        ]
+      ],
+      "mediaEvents": [
+        [
+          0,
+          1.3
+        ],
+        [
+          55,
+          1
+        ],
+        [
+          100,
+          1.25
+        ]
+      ]
+    }
   }
 }

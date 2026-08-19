@@ -11,6 +11,7 @@ import {
   valueTint,
 } from './ui';
 import { AppsIcon, AssistIcon, CleanSheetIcon, FansIcon, GoalIcon } from './icons';
+import { Trophy } from './Trophy';
 
 /**
  * Die Spielerkarte. Sie steht auf jedem Bildschirm links und zeigt in
@@ -136,14 +137,11 @@ export function PlayerCard({ data, state, style }: {
         {cabinet.length > 0 ? (
           <View style={styles.trophyRow}>
             {shownTrophies.map(([id, count]) => (
-              <View key={id} style={styles.trophy}>
-                <Text style={styles.trophyName} numberOfLines={1}>{titleName(data, id)}</Text>
-                {count > 1 ? <Text style={styles.trophyCount}>{count}</Text> : null}
-              </View>
+              <Trophy key={id} count={count} size={30} label={titleName(data, id)} />
             ))}
             {hiddenTrophies > 0 ? (
-              <View style={styles.trophy}>
-                <Text style={styles.trophyName}>+{hiddenTrophies}</Text>
+              <View style={styles.moreTrophies}>
+                <Text style={styles.moreTrophiesText}>+{hiddenTrophies}</Text>
               </View>
             ) : null}
           </View>
@@ -192,7 +190,7 @@ function PartnerPanel({ data, state, kind, label }: {
 }
 
 /** So viele Titel stehen in der Vitrine, danach zählt eine Zahl weiter. */
-const TROPHY_SLOTS = 6;
+const TROPHY_SLOTS = 8;
 
 const styles = StyleSheet.create({
   card: { gap: space[3] },
@@ -213,14 +211,23 @@ const styles = StyleSheet.create({
   // sobald der erste Titel dazukommt.
   trophies: {
     gap: space[2], padding: space[3],
+    zIndex: 20,
     backgroundColor: color.surface[2],
     borderRadius: radius.md,
     borderWidth: 1, borderColor: color.border.default,
     // Feste Höhe für zwei Reihen: die Fläche wächst nicht mit dem Erfolg.
-    height: 92,
-    overflow: 'hidden',
+    height: 132,
   },
-  trophyRow: { flexDirection: 'row', flexWrap: 'wrap', gap: space[2] },
+  trophyRow: {
+    flexDirection: 'row', flexWrap: 'wrap', gap: space[4], alignItems: 'center',
+    paddingVertical: space[1], zIndex: 30,
+  },
+  moreTrophies: {
+    height: 30, paddingHorizontal: 8,
+    borderRadius: radius.pill, borderWidth: 1, borderColor: color.border.default,
+    alignItems: 'center', justifyContent: 'center',
+  },
+  moreTrophiesText: { ...font.micro, color: color.text.secondary },
   trophy: {
     flexDirection: 'row', alignItems: 'center', gap: 6,
     borderRadius: radius.pill, borderWidth: 1, borderColor: color.rating.elite,
@@ -237,12 +244,12 @@ const styles = StyleSheet.create({
     borderRadius: radius.md,
     borderWidth: 1, borderColor: color.border.default,
     // Auch hier eine feste Höhe: mit Logo so groß wie ohne.
-    height: 78,
+    height: 104,
     overflow: 'hidden',
   },
   partnerRow: { flexDirection: 'row', alignItems: 'center', gap: space[2], flex: 1 },
   partnerName: { ...font.bodyStrong, flex: 1 },
   partnerEmpty: { ...font.caption, color: color.text.muted },
 
-  meters: { flexDirection: 'row', gap: space[3], marginTop: 'auto' },
+  meters: { flexDirection: 'row', gap: space[3] },
 });

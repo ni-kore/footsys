@@ -1,0 +1,126 @@
+{
+  "$comment": "Wie eine Mannschaft ihre Saison spielt. Titel folgen aus dem Tabellenplatz und aus Pokalrunden, nicht mehr aus einem einzelnen Wurf gegen die Vereinsreputation. Der Verein bleibt dabei der bestimmende Teil, der eigene Beitrag verschiebt nur.",
+  "position": {
+    "$comment": "Erwarteter Tabellenplatz als Anteil der Ligagröße, nach heimischer Reputation 0 bis 10. 0.05 heißt: ein Verein dieser Stufe wird im Mittel unter den besten fünf Prozent erwartet.",
+    "shareByReputation": {
+      "0": 0.86,
+      "1": 0.8,
+      "2": 0.72,
+      "3": 0.62,
+      "4": 0.52,
+      "5": 0.42,
+      "6": 0.32,
+      "7": 0.24,
+      "8": 0.16,
+      "9": 0.1,
+      "10": 0.06
+    },
+    "$spread": "Streuung des Platzes als Anteil der Ligagröße. Hier steckt das Glück: eine Saison kann geraten oder danebengehen.",
+    "spreadShare": 0.11,
+    "$minSpread": "Auch in kleinen Ligen bleibt etwas Zufall.",
+    "minSpread": 1.4
+  },
+  "contribution": {
+    "$comment": "Der eigene Beitrag verschiebt den Tabellenplatz um Plätze. Er wächst mit Einsatzzeit und mit dem Abstand zum Niveau, das ein Stammspieler dieses Vereins normalerweise hat.",
+    "$maxShift": "Höchste Verschiebung in Plätzen, bei voller Einsatzzeit und deutlich über Kaderniveau.",
+    "maxShift": 4.5,
+    "$perOverallPoint": "Plätze je Punkt OVR über dem Kaderniveau, vor Gewichtung.",
+    "perOverallPoint": 0.42,
+    "$minutesFloor": "Unter diesem Einsatzanteil trägt man nichts bei.",
+    "minutesFloor": 0.15,
+    "$positionWeight": "Wie stark eine Position den Ausgang einer Saison verschiebt. Ein Stürmer trägt sichtbarer, ein Innenverteidiger leiser.",
+    "positionWeight": {
+      "GK": 0.85,
+      "DEF": 0.8,
+      "MID": 1,
+      "ATT": 1.15
+    },
+    "$bigClubDamping": "Bei einem Spitzenverein fällt der Einzelne weniger ins Gewicht, die Mannschaft gewinnt ohnehin. Faktor je heimischer Reputation.",
+    "bigClubDamping": {
+      "0": 1.5,
+      "1": 1.45,
+      "2": 1.35,
+      "3": 1.25,
+      "4": 1.15,
+      "5": 1,
+      "6": 0.9,
+      "7": 0.8,
+      "8": 0.7,
+      "9": 0.6,
+      "10": 0.5
+    }
+  },
+  "domesticCup": {
+    "$comment": "Der Pokal ist ein Ausscheidungswettbewerb, deshalb entscheidet er sich in Runden. Je Runde eine Siegchance, abgeleitet aus der Stärke der Mannschaft in dieser Saison. Der Zufall ist hier größer als in der Liga.",
+    "rounds": 5,
+    "$winPerRound": "Siegchance je Runde nach heimischer Reputation. Sechs Siege in Folge sind auch für die Größten selten.",
+    "winPerRoundByReputation": {
+      "0": 0.42,
+      "1": 0.46,
+      "2": 0.5,
+      "3": 0.55,
+      "4": 0.6,
+      "5": 0.65,
+      "6": 0.7,
+      "7": 0.74,
+      "8": 0.78,
+      "9": 0.81,
+      "10": 0.84
+    },
+    "$seasonBonus": "Eine starke Saison hilft auch im Pokal. Zuschlag auf die Rundenchance je Platz, den der eigene Beitrag gutmacht.",
+    "seasonBonusPerShift": 0.012
+  },
+  "continental": {
+    "$comment": "Für Europapokal und Entsprechendes gilt dasselbe, nur mit weniger Runden und stärkeren Gegnern. Wer teilnimmt, ergibt sich aus dem Tabellenplatz der Vorsaison.",
+    "rounds": 4,
+    "winPerRoundByReputation": {
+      "0": 0.3,
+      "1": 0.33,
+      "2": 0.36,
+      "3": 0.4,
+      "4": 0.44,
+      "5": 0.49,
+      "6": 0.54,
+      "7": 0.59,
+      "8": 0.64,
+      "9": 0.68,
+      "10": 0.72
+    },
+    "seasonBonusPerShift": 0.01,
+    "$secondaryEasier": "Der zweite und dritte Wettbewerb sind leichter zu gewinnen als der erste.",
+    "secondaryRoundBonus": 0.09,
+    "tertiaryRoundBonus": 0.15
+  },
+  "superCup": {
+    "$comment": "Ein Spiel, ungefähr Münzwurf mit leichtem Vorteil für den stärkeren Verein.",
+    "winChanceByReputation": {
+      "0": 0.4,
+      "1": 0.42,
+      "2": 0.44,
+      "3": 0.46,
+      "4": 0.48,
+      "5": 0.5,
+      "6": 0.53,
+      "7": 0.56,
+      "8": 0.59,
+      "9": 0.62,
+      "10": 0.65
+    }
+  },
+  "clubWorldCup": {
+    "$comment": "Nur für den Sieger des ersten kontinentalen Wettbewerbs der Vorsaison.",
+    "winChanceByReputation": {
+      "0": 0.2,
+      "1": 0.22,
+      "2": 0.25,
+      "3": 0.28,
+      "4": 0.32,
+      "5": 0.36,
+      "6": 0.4,
+      "7": 0.45,
+      "8": 0.5,
+      "9": 0.55,
+      "10": 0.6
+    }
+  }
+}

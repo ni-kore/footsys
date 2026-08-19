@@ -135,7 +135,8 @@
         "domestic": 4,
         "continental": 2,
         "international": 0
-      }
+      },
+      "kitSupplier": "nike"
     },
     {
       "id": "uanl-tigres",

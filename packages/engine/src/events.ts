@@ -2,8 +2,10 @@ import {
   clubOf, clubsInConfederation, clubsInCountry, countryOf, countryOfClub, leagueAtTier, leagueOf,
   positionOf, type GameData,
 } from './data';
+import { meterFactor } from './meters';
+import { optionSummary } from './outcome';
 import { offerReputationBonus, partnerOffers } from './partners';
-import { clamp, clampOverall, roleAtLeast } from './progression';
+import { clamp, clampOverall, interpolate, roleAtLeast } from './progression';
 import { collectEffects, currentRole, isEligibleForNationalTeam } from './simulation';
 import type { Rng } from './rng';
 import type {
@@ -121,13 +123,62 @@ function reachLabel(reach: number): string {
   return 'Small but loyal following';
 }
 
+/** Wie viele Reputationsstufen die Angebote über dem eigenen Niveau liegen. */
+export function interestQuality(data: GameData, state: CareerState): number {
+  const table = data.progression.marketInterest.qualityByInterest as [number, number][];
+  const pull = meterFactor(data, state, 'fanSupport', 'transferPull')
+    * meterFactor(data, state, 'mediaRelation', 'offerQuality');
+  return Math.round(interpolate(table, state.player.marketInterest) * pull);
+}
+
+/** Wie viele Vereine gerade anklopfen. */
+export function interestOfferCount(data: GameData, state: CareerState): number {
+  const table = data.progression.marketInterest.offerCountByInterest as [number, number][];
+  return Math.max(1, Math.round(interpolate(table, state.player.marketInterest)));
+}
+
+/**
+ * Die Wahl, wohin es geht.
+ *
+ * Wer sich für einen Wechsel entschieden hat, soll nicht zugeteilt bekommen,
+ * wo er landet. Deshalb folgt auf jede Entscheidung, die einen Wechsel
+ * auslöst, diese Karte mit den Vereinen, die in Frage kommen.
+ */
+export function buildDestinationDecision(
+  data: GameData, rng: Rng, state: CareerState,
+  scope: TransferScope, leagueStrengthMax?: number,
+): PendingDecision | null {
+  const event = data.events.structural.find((e) => e.id === 'transfer_destination');
+  if (!event) return null;
+
+  const options: Parameters<typeof clubOffers>[3] = {
+    scope,
+    count: Math.max(2, interestOfferCount(data, state)),
+  };
+  if (leagueStrengthMax !== undefined) options.leagueStrengthMax = leagueStrengthMax;
+
+  const clubs = clubOffers(data, rng, state, options);
+  if (clubs.length === 0) return null;
+
+  return {
+    kind: 'structural',
+    eventId: 'transfer_destination',
+    window: 'summer',
+    title: event.title,
+    text: event.text.en,
+    options: clubs.map((club) => clubOption(data, club, 'destination', 'Move')),
+  };
+}
+
 /** Kandidatenvereine für ein Angebot, gewichtet nach Passung zum Spielerniveau. */
 export function clubOffers(data: GameData, rng: Rng, state: CareerState, options: OfferOptions): Club[] {
   const current = state.clubId ? clubOf(data, state.clubId) : null;
   const currentLeague = current ? leagueOf(data, current) : null;
-  // Ein Partner sorgt dafür, dass man gesehen wird: die angebotenen Vereine
-  // dürfen dann eine Stufe darüber liegen.
-  const bonus = (options.qualityBonus ?? 0) + offerReputationBonus(data, state);
+  // Ein Partner sorgt dafür, dass man gesehen wird, und wer gerade begehrt
+  // ist, bekommt Angebote von weiter oben.
+  const bonus = (options.qualityBonus ?? 0)
+    + offerReputationBonus(data, state)
+    + interestQuality(data, state);
   const target = levelForOverall(data, state.player.overall, bonus);
 
   let pool: Club[];
@@ -168,6 +219,11 @@ export function clubOffers(data: GameData, rng: Rng, state: CareerState, options
   // schwerer — sonst springt jede Karriere wahllos über den Globus.
   const homeCountry = currentLeague?.country ?? state.player.nationality;
   const homeConfederation = countryOf(data, homeCountry).confederation;
+  // Wer dieselbe Marke trägt wie ein Verein, taucht dort eher auf einem Zettel
+  // auf: die Ausrüster reden miteinander.
+  const ownSupplier = state.player.kitSupplier
+    ? data.partnerById.get(state.player.kitSupplier)?.id
+    : undefined;
 
   const weighted = pool.map((club) => {
     const league = leagueOf(data, club);
@@ -175,6 +231,7 @@ export function clubOffers(data: GameData, rng: Rng, state: CareerState, options
     if (league.country === homeCountry) weight *= 2.5;
     else if (countryOf(data, league.country).confederation === homeConfederation) weight *= 1.5;
     if (league.country === state.player.nationality) weight *= 1.5;
+    if (ownSupplier && club.kitSupplier === ownSupplier) weight *= 1.8;
     return { item: club, weight };
   });
   return rng.weightedSample(weighted, options.count);
@@ -304,9 +361,15 @@ export function buildRetirementDecision(data: GameData, state: CareerState): Pen
 /** Wählt ein passendes Karriere-Ereignis für das angegebene Fenster. */
 export function buildCareerDecision(
   data: GameData, rng: Rng, state: CareerState, window: 'summer' | 'winter',
-  options: { repeatable?: boolean; exclude?: Set<string> } = {},
+  options: { repeatable?: boolean; exclude?: Set<string>; onlyTriggered?: boolean } = {},
 ): PendingDecision | null {
   const eligible = data.events.career.filter((event) => {
+    // Ausgelöste Ereignisse kommen nur, wenn ihre Tatsache gerade zutrifft.
+    const triggers = event.triggeredBy ?? [];
+    const fits = triggers.length > 0 && triggers.some((fact) => state.facts.includes(fact));
+    if (options.onlyTriggered && !fits) return false;
+    if (!options.onlyTriggered && triggers.length > 0 && !fits) return false;
+
     const eventWindow = event.window ?? 'summer';
     if (eventWindow !== 'any' && eventWindow !== window) return false;
     if (state.player.age < event.ageRange[0] || state.player.age > event.ageRange[1]) return false;
@@ -333,22 +396,51 @@ export function buildCareerDecision(
     item,
     weight: item.risky ? item.weight * (1 + temperament * (riskyWeight - 1)) : item.weight,
   })));
+  return buildEventDecision(data, rng, state, event, window);
+}
+
+/**
+ * Baut die Entscheidung zu einem bestimmten Ereignis.
+ *
+ * Wird auch für angestoßene Ereignisse gebraucht: dort steht der Auslöser
+ * schon fest, es muss nur noch gewürfelt werden, in welcher Ausprägung.
+ */
+export function buildEventDecision(
+  data: GameData, rng: Rng, state: CareerState, event: CareerEvent,
+  window: 'summer' | 'winter' = 'summer',
+): PendingDecision {
   const variant = pickVariant(data, rng, event);
   const alternativeCountry = event.id === 'foreign_grandfather'
     ? alternativeNationality(data, rng, state)
     : undefined;
 
+  const filled = fillPlaceholders(
+    data, state, variant?.text.en ?? event.text.en, variant, alternativeCountry,
+  );
+
   return {
     kind: 'career',
     eventId: event.id,
     window,
+    ...(event.category ? { category: event.category } : {}),
     ...(alternativeCountry ? { alternativeCountry } : {}),
     title: event.title,
-    text: fillPlaceholders(data, state, variant?.text.en ?? event.text.en, variant, alternativeCountry),
+    text: filled.text,
+    ...(filled.highlights.length > 0 ? { highlights: filled.highlights } : {}),
     ...(variant ? { variantKey: variant.key } : {}),
     options: event.options
       .filter((o) => optionAllowed(state, o))
-      .map((o) => ({ id: o.id, label: o.label })),
+      .map((o) => {
+        // Was die Wahl bedeutet, kommt aus ihren Wirkungen, nicht aus einem
+        // zweiten Text, der auseinanderlaufen könnte.
+        const outcome = optionSummary(o);
+        return {
+          id: o.id,
+          label: o.label,
+          ...(o.motif ? { motif: o.motif } : {}),
+          ...(outcome.length > 0 ? { outcome } : {}),
+        };
+      }),
   };
 }
 
@@ -387,23 +479,42 @@ function alternativeNationality(data: GameData, rng: Rng, state: CareerState): C
   return rng.weighted(candidates.map((item) => ({ item, weight: item.strength }))).code;
 }
 
+/**
+ * Setzt die Namen in den Text und merkt sich, welche das waren.
+ *
+ * Bisher war der Vereinsname nach dem Einsetzen nicht mehr auffindbar. Jetzt
+ * kommt er zusätzlich als Liste zurück, damit die Oberfläche ihn hervorheben
+ * kann, ohne raten zu müssen.
+ */
 function fillPlaceholders(
   data: GameData, state: CareerState, text: string, variant: EventVariant | null,
   alternativeCountry?: CountryCode,
-): string {
+): { text: string; highlights: string[] } {
   const club = state.clubId ? clubOf(data, state.clubId) : null;
   const country = countryOf(data, state.player.nationality);
   const alternative = alternativeCountry
     ? countryOf(data, alternativeCountry).name.en
     : 'another country';
+  const rival = club ? rivalOf(data, club)?.short ?? 'the rivals' : 'the rivals';
+  const position = positionOf(data, state.player.position).name.en;
 
-  return text
-    .replace('{club}', club?.short ?? '')
-    .replace('{country}', country.name.en)
-    .replace('{injuryLabel}', variant?.text.en ?? '')
-    .replace('{rivalClub}', club ? rivalOf(data, club)?.short ?? 'the rivals' : 'the rivals')
-    .replace('{alternativeCountry}', alternative)
-    .replace('{alternativePosition}', positionOf(data, state.player.position).name.en);
+  const names: Record<string, string> = {
+    '{club}': club?.short ?? '',
+    '{country}': country.name.en,
+    '{rivalClub}': rival,
+    '{alternativeCountry}': alternative,
+    '{alternativePosition}': position,
+  };
+
+  const highlights: string[] = [];
+  let filled = text.replace('{injuryLabel}', variant?.text.en ?? '');
+  for (const [token, name] of Object.entries(names)) {
+    if (!filled.includes(token) || !name) continue;
+    filled = filled.split(token).join(name);
+    highlights.push(name);
+  }
+
+  return { text: filled, highlights };
 }
 
 /** Der prestigeträchtigste andere Verein derselben Liga gilt als Rivale. */
@@ -447,7 +558,7 @@ export function rollRandomEvents(
   return chosen.map((event) => {
     applyRandomEvent(data, rng, state, event);
     state.randomEventHistory.push({ id: event.id, year: state.year });
-    return { event, text: fillPlaceholders(data, state, event.text.en, null) };
+    return { event, text: fillPlaceholders(data, state, event.text.en, null).text };
   });
 }
 
@@ -547,6 +658,22 @@ export function applyModifiers(
       : (data.progression.fans.regularMax as number);
     player.fans = Math.round(Math.min(ceiling, player.fans * factor));
   }
+  if (modifiers.marketInterestDelta) {
+    player.marketInterest = clamp(player.marketInterest + modifiers.marketInterestDelta, 0, 100);
+  }
+
+  // Manche Wahl zieht später etwas nach sich: das Tattoo entzündet sich, die
+  // zu früh beendete Reha kommt als Rückfall zurück.
+  if (modifiers.schedules) {
+    const plan = modifiers.schedules;
+    if (rng.chance(plan.chance ?? 1)) {
+      state.scheduledEvents.push({
+        eventId: plan.eventId,
+        halvesRemaining: plan.afterHalves ?? 1,
+      });
+    }
+  }
+
   if (modifiers.setCaptain) player.isCaptain = true;
   if (modifiers.suspendedSeasons) state.suspensionHalves += modifiers.suspendedSeasons * 2;
   if (modifiers.changePosition) {

@@ -1,10 +1,13 @@
 import { clubOf, countryOf, countryOfClub, leagueOf, positionOf, type GameData } from './data';
 import { activeAssociation, recordSeasonInCountry } from './national-team';
 import { fanInfluence } from './fans';
+import { meterFactor } from './meters';
+import { reachOf } from './partners';
+import { simulateTeamSeason } from './team-season';
 import { byNumericKey, clamp, clampOverall, computeRole, interpolate, marketValue, roleAtLeast, seasonOverallDelta, shiftRole, stepTable } from './progression';
 import type { Rng } from './rng';
 import type {
-  CareerState, ClubCompetition, EventModifiers, HalfSeasonRecord, NationalCompetition,
+  CareerFact, CareerState, EventModifiers, HalfSeasonRecord, NationalCompetition,
   SeasonRecord, SquadRole,
 } from './types';
 
@@ -118,6 +121,7 @@ export function simulateHalf(data: GameData, rng: Rng, state: CareerState): Half
     caps: 0,
     nationalGoals: 0,
     nationalAssists: 0,
+    minutesShare: 0,
     randomEventIds: [],
   };
 
@@ -156,11 +160,17 @@ export function simulateHalf(data: GameData, rng: Rng, state: CareerState): Half
   const shareRange = data.progression.roles.appearanceShare[role] as [number, number];
   const availability = 1 - clamp(effects.missShare ?? 0, 0, 1);
 
+  // Wer gut drauf ist, spielt mehr: der Trainer vertraut ihm. Wer die Fans
+  // hinter sich hat, wird seltener aussortiert.
+  const trust = meterFactor(data, state, 'morale', 'playingTime')
+    * (2 - meterFactor(data, state, 'fanSupport', 'dropProtection'));
+
+  const share = clamp(rng.float(shareRange[0], shareRange[1]) * trust, 0, 1);
   const appearances = Math.round(
-    matches * rng.float(shareRange[0], shareRange[1]) * availability
-    * (effects.appearanceMultiplier ?? 1) * fit,
+    matches * share * availability * (effects.appearanceMultiplier ?? 1) * fit,
   );
   record.appearances = Math.max(0, appearances);
+  record.minutesShare = matches > 0 ? clamp(record.appearances / matches, 0, 1) : 0;
 
   const teamQuality = season.teamQualityMultiplier[String(club.reputation.domestic)] as number;
   const output = data.progression.roles.outputMultiplier[role] as number;
@@ -169,20 +179,27 @@ export function simulateHalf(data: GameData, rng: Rng, state: CareerState): Half
   // verlässlicher ab. Das zeigt sich in den Vorlagen und in der Schwankung.
   const footTraits = data.progression.traits.strongFoot[state.player.strongFoot];
   const [baseMin, baseMax] = season.variance as [number, number];
-  const spread = ((baseMax - baseMin) / 2) * (footTraits.varianceFactor as number);
+  // Schlechte Laune macht unbeständig, gute Laune verlässlich.
+  const spread = ((baseMax - baseMin) / 2)
+    * (footTraits.varianceFactor as number)
+    * meterFactor(data, state, 'morale', 'variance');
   const varMin = 1 - spread;
   const varMax = 1 + spread;
+
+  // Vor eigenem Publikum spielt es sich anders, je nachdem wie es zu einem steht.
+  const backing = meterFactor(data, state, 'fanSupport', 'output');
 
   const goalRate = stepTable(season.goalRateByOverall.table, state.player.overall);
   const assistRate = stepTable(season.assistRateByOverall.table, state.player.overall);
 
   record.goals = Math.round(
     record.appearances * goalRate * position.goalFactor * teamQuality * output *
-    (effects.goalMultiplier ?? 1) * attackMultiplier * weakFootOutput * rng.float(varMin, varMax),
+    (effects.goalMultiplier ?? 1) * attackMultiplier * weakFootOutput * backing
+    * rng.float(varMin, varMax),
   );
   record.assists = Math.round(
     record.appearances * assistRate * position.assistFactor * teamQuality * output *
-    (effects.assistMultiplier ?? 1) * attackMultiplier * weakFootOutput
+    (effects.assistMultiplier ?? 1) * attackMultiplier * weakFootOutput * backing
     * (footTraits.assistFactor as number) * rng.float(varMin, varMax),
   );
 
@@ -260,9 +277,20 @@ export function closeSeason(data: GameData, rng: Rng, state: CareerState): Seaso
   const cleanSheets = sum(halves, (h) => h.cleanSheets);
   const role = halves[halves.length - 1]?.role ?? 'substitute';
 
-  const titles = appearances > 0 ? rollClubTitles(data, rng, state, effects) : [];
+  // Wie viel man selbst auf dem Platz stand, entscheidet mit, wie die
+  // Mannschaft die Saison spielt.
+  const minutesShare = halves.length > 0
+    ? sum(halves, (h) => h.minutesShare) / halves.length
+    : 0;
+
+  const team = simulateTeamSeason(data, rng, state, minutesShare);
+  const titles = [...team.titles];
   titles.push(...rollNationalTitles(data, rng, state, effects));
   const awards = appearances > 0 ? rollAwards(data, rng, state, role, goals, assists) : [];
+
+  // Der Tabellenplatz entscheidet, woran der Verein im kommenden Jahr
+  // international teilnimmt.
+  state.continentalEntry = team.nextEntry;
 
   const record: SeasonRecord = {
     year: state.year,
@@ -283,23 +311,57 @@ export function closeSeason(data: GameData, rng: Rng, state: CareerState): Seaso
     nationalCaps: state.currentSeasonCaps,
     nationalGoals: state.currentSeasonNationalGoals,
     nationalAssists: state.currentSeasonNationalAssists,
+    team,
     halves: [...halves],
   };
   if (state.activeLoan) record.loanFrom = state.activeLoan.parentClubId;
 
-  applyEndOfSeasonProgression(data, rng, state, role);
+  applyEndOfSeasonProgression(data, rng, state, role, minutesShare);
   return { record, titles, awards };
 }
 
-function applyEndOfSeasonProgression(data: GameData, rng: Rng, state: CareerState, role: SquadRole): void {
+/**
+ * Wie sehr das Umfeld einen Spieler formt.
+ *
+ * Wer täglich gegen stärkere Leute trainiert, in einer starken Liga spielt und
+ * international antritt, entwickelt sich schneller. Wer nicht spielt, lernt das
+ * Wichtigste nicht. Beides zieht gegeneinander, und daraus entsteht die
+ * eigentliche Weichenstellung einer Karriere: Stammspieler beim Mittelklasse-
+ * verein oder Reservist beim Großen.
+ */
+function environmentFactor(data: GameData, state: CareerState, minutesShare: number): number {
+  const config = data.progression.growthEnvironment;
+  if (!config || !state.clubId) return 1;
+
+  const club = clubOf(data, state.clubId);
+  const league = leagueOf(data, club);
+
+  const squad = (config.byClubReputation as Record<string, number>)[String(club.reputation.domestic)] ?? 1;
+  const strength = (config.byLeagueStrength as Record<string, number>)[String(league.strength)] ?? 1;
+  const european = state.continentalEntry !== 'none' ? (config.continentalBonus as number) : 1;
+
+  const minutes = interpolate(config.byMinutesShare as [number, number][], minutesShare);
+
+  return squad * strength * european * minutes;
+}
+
+function applyEndOfSeasonProgression(
+  data: GameData, rng: Rng, state: CareerState, role: SquadRole, minutesShare: number,
+): void {
   recordSeasonInCountry(data, state);
   state.player.age += 1;
 
   const poorPlayingTime = role === 'substitute' || role === 'low_rotation';
-  const delta = seasonOverallDelta(
+  const base = seasonOverallDelta(
     data, rng, state.player.developmentProfile, state.player.age, poorPlayingTime, state.seasons.length,
     state.player.overall, state.player.potential,
   );
+
+  // Umfeld und Moral wirken nur auf Wachstum, nicht auf Verfall: wer im Alter
+  // abbaut, baut auch bei bester Laune ab.
+  const delta = base > 0
+    ? base * environmentFactor(data, state, minutesShare) * meterFactor(data, state, 'morale', 'growth')
+    : base;
 
   let overall = state.player.overall + delta;
 
@@ -317,7 +379,27 @@ function applyEndOfSeasonProgression(data: GameData, rng: Rng, state: CareerStat
   state.player.overall = clampOverall(data, overall, state.player.potential);
 
   driftMeters(data, state);
+  applyPartnerMeters(data, state);
   state.player.marketValue = marketValue(data, rng, state.player.overall, state.player.age);
+}
+
+/**
+ * Was die Partner mit den Metern machen.
+ *
+ * Ein Medienpartner berichtet, das hebt das Verhältnis zur Presse. Ein
+ * Ausrüster stattet aus, das tut der Laune und dem Rückhalt gut. Beides
+ * richtet sich nach der Reichweite der Marke.
+ */
+function applyPartnerMeters(data: GameData, state: CareerState): void {
+  const media = reachOf(data, state, 'media');
+  const kit = reachOf(data, state, 'kit');
+  const meters = state.player.meters;
+
+  if (media > 0) meters.mediaRelation = clamp(meters.mediaRelation + media * 0.8, 0, 100);
+  if (kit > 0) {
+    meters.morale = clamp(meters.morale + kit * 0.35, 0, 100);
+    meters.fanSupport = clamp(meters.fanSupport + kit * 0.3, 0, 100);
+  }
 }
 
 function driftMeters(data: GameData, state: CareerState): void {
@@ -331,61 +413,6 @@ function driftMeters(data: GameData, state: CareerState): void {
 }
 
 // ------------------------------------------------------------- Titel
-
-function rollClubTitles(data: GameData, rng: Rng, state: CareerState, effects: EventModifiers): string[] {
-  const club = clubOf(data, state.clubId!);
-  const league = leagueOf(data, club);
-  const country = countryOfClub(data, club);
-  const odds = data.trophyOdds.club;
-  const multiplier = effects.trophyMultiplier ?? {};
-  const titles: string[] = [];
-
-  const lastSeason = state.seasons[state.seasons.length - 1];
-  const wonLastSeason = (id: string): boolean => lastSeason?.titles.includes(id) ?? false;
-
-  if (rng.chance(odds.league.byDomesticReputation[club.reputation.domestic] * (multiplier.league ?? 1))) {
-    titles.push(league.id);
-  }
-  if (league.cup && rng.chance(odds.domesticCup.byDomesticReputation[club.reputation.domestic] * (multiplier.domesticCup ?? 1))) {
-    titles.push(league.cup);
-  }
-  if (league.secondaryCup && wonLastSeason(league.id) &&
-      rng.chance(odds.domesticSuperCup.byDomesticReputation[club.reputation.domestic])) {
-    titles.push(league.secondaryCup);
-  }
-
-  const primary = competitionFor(data, country.confederation, 'continental_primary');
-  const secondary = competitionFor(data, country.confederation, 'continental_secondary');
-  const tertiary = competitionFor(data, country.confederation, 'continental_tertiary');
-
-  if (primary && league.continentalSlots.primary > 0 &&
-      rng.chance(odds.continentalPrimary.byContinentalReputation[club.reputation.continental] * (multiplier.continentalPrimary ?? 1))) {
-    titles.push(primary.id);
-  } else if (secondary && league.continentalSlots.secondary > 0 &&
-      rng.chance(odds.continentalSecondary.byContinentalReputation[club.reputation.continental] * (multiplier.continentalSecondary ?? 1))) {
-    titles.push(secondary.id);
-  } else if (tertiary && league.continentalSlots.tertiary > 0 &&
-      rng.chance(odds.continentalTertiary.byContinentalReputation[club.reputation.continental])) {
-    titles.push(tertiary.id);
-  }
-
-  if (primary && wonLastSeason(primary.id) &&
-      rng.chance(odds.clubWorldCup.byInternationalReputation[club.reputation.international])) {
-    titles.push('fifa-club-world-cup');
-  }
-
-  return titles;
-}
-
-function competitionFor(
-  data: GameData, confederation: string, level: ClubCompetition['level'],
-): ClubCompetition | null {
-  // Frauenwettbewerbe stehen in denselben Daten und dürfen hier nicht greifen,
-  // solange footsys nur Männerkarrieren kennt.
-  return data.competitions.club.find(
-    (c) => c.confederation === confederation && c.level === level && c.gender !== 'women',
-  ) ?? null;
-}
 
 function rollNationalTitles(data: GameData, rng: Rng, state: CareerState, effects: EventModifiers): string[] {
   if (effects.nationalTeam === 'skip') return [];
@@ -441,7 +468,7 @@ function rollAwards(
   const position = positionOf(data, state.player.position);
   const awards: string[] = [];
   const config = data.trophyOdds.individual;
-  const mediaBonus = state.player.meters.mediaRelation > 80 ? 1.15 : 1;
+  const mediaBonus = meterFactor(data, state, 'mediaRelation', 'awards');
 
   const check = (
     key: string, awardId: string, extra: () => boolean = () => true,

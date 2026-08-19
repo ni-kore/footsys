@@ -67,7 +67,8 @@
         "domestic": 2,
         "continental": 0,
         "international": 0
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "fk-rostov",

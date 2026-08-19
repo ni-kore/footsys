@@ -135,7 +135,8 @@
         "domestic": 2,
         "continental": 0,
         "international": 0
-      }
+      },
+      "kitSupplier": "puma"
     },
     {
       "id": "fk-obolon",

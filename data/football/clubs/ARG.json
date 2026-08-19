@@ -16,7 +16,8 @@
         "domestic": 10,
         "continental": 10,
         "international": 10
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "boca-juniors",
@@ -33,7 +34,8 @@
         "domestic": 10,
         "continental": 10,
         "international": 10
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "racing-club",

@@ -1,11 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { awardName, titleName, type GameData, type PeriodReport } from '@footsys/engine';
+import { titleName, type GameData, type PeriodReport } from '@footsys/engine';
 import { roleLabel, roleTone, seasonLabel } from '../format';
 import { color, font, radius, space } from '../theme';
 import { Button, ClubBlock } from '../components/ui';
 import { CardIcon } from '../components/icons';
 import { Fade } from '../components/motion';
+import { Trophy } from '../components/Trophy';
 
 /** Ein Ereignis, wie es im Bericht steht. */
 type Happening = PeriodReport['randomEvents'][number];
@@ -26,6 +27,7 @@ export function ReportScreen({ data, report, onContinue }: {
 
   // Was gut lief, steht links, was schieflief, rechts. Was sich nicht
   // einordnen lässt, steht darunter über die ganze Breite.
+  const won = [...report.titles, ...report.awards];
   const good = report.randomEvents.filter((event) => event.tone === 'positive');
   const bad = report.randomEvents.filter((event) => event.tone === 'negative');
   const rest = report.randomEvents.filter(
@@ -51,19 +53,7 @@ export function ReportScreen({ data, report, onContinue }: {
         />
       </View>
 
-      {report.titles.length > 0 || report.awards.length > 0 ? (
-        <Fade style={styles.silverware} delay={120}>
-          <Text style={font.title}>Silverware</Text>
-          {report.titles.map((id) => (
-            <Text key={id} style={styles.trophyLine}>{titleName(data, id)}</Text>
-          ))}
-          {report.awards.map((id) => (
-            <Text key={id} style={styles.trophyLine}>{awardName(data, id)}</Text>
-          ))}
-        </Fade>
-      ) : null}
-
-      {report.randomEvents.length > 0 ? (
+      {report.randomEvents.length > 0 || won.length > 0 ? (
         <View style={{ gap: space[3] }}>
           <Text style={font.title}>What happened</Text>
 
@@ -84,10 +74,24 @@ export function ReportScreen({ data, report, onContinue }: {
             />
           </View>
 
+          {/* Was gewonnen wurde, steht als Bilder unter der linken Spalte,
+              nicht darin: Titel sind das Ergebnis der Saison, nicht ein
+              Vorkommnis daraus. */}
+          {won.length > 0 ? (
+            <View style={styles.columns}>
+              <Fade style={styles.trophyRow} delay={220}>
+                {won.map((id) => (
+                  <Trophy key={id} size={34} label={titleName(data, id)} />
+                ))}
+              </Fade>
+              <View style={{ flex: 1 }} />
+            </View>
+          ) : null}
+
           {rest.length > 0 ? (
             <View style={{ gap: space[3] }}>
               {rest.map((event, index) => (
-                <Happening key={event.id} event={event} delay={index * 90} />
+                <Happening key={event.id} event={event} delay={index * 130} />
               ))}
             </View>
           ) : null}
@@ -122,7 +126,7 @@ function Column({ label, tone, sign, events, empty }: {
             event={event}
             sign={sign}
             tone={tone}
-            delay={140 + index * 90}
+            delay={180 + index * 130}
           />
         ))
       ) : (
@@ -163,11 +167,17 @@ function Happening({ event, sign, tone, delay }: {
 const styles = StyleSheet.create({
   screen: { flex: 1, gap: space[4] },
   title: { fontSize: 26, fontWeight: '700', color: color.text.primary, letterSpacing: -0.4 },
-  silverware: { gap: space[2] },
-  trophyLine: { ...font.body, color: color.rating.elite },
+  // Der Hinweis an einer Trophäe schwebt nach oben heraus, deshalb muss diese
+  // Reihe über ihren Nachbarn liegen.
+  trophyRow: {
+    flex: 1, flexDirection: 'row', flexWrap: 'wrap',
+    gap: space[4], alignItems: 'center',
+    paddingVertical: space[2], paddingHorizontal: space[2],
+    zIndex: 30,
+  },
   // Das Symbol steht auf halber Höhe des ganzen Eintrags, nicht an der
   // ersten Zeile.
-  columns: { flexDirection: 'row', gap: space[4] },
+  columns: { flexDirection: 'row', gap: space[4], zIndex: 20 },
   // Derselbe Rahmen wie bei den Flächen der Spielerkarte.
   column: {
     flex: 1, gap: space[3], minWidth: 0, padding: space[3],

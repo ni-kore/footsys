@@ -16,7 +16,8 @@
         "domestic": 10,
         "continental": 10,
         "international": 10
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "fc-barcelona",
@@ -33,7 +34,8 @@
         "domestic": 10,
         "continental": 10,
         "international": 10
-      }
+      },
+      "kitSupplier": "nike"
     },
     {
       "id": "athletic-club",
@@ -50,7 +52,8 @@
         "domestic": 6,
         "continental": 5,
         "international": 6
-      }
+      },
+      "kitSupplier": "castore"
     },
     {
       "id": "villarreal",
@@ -67,7 +70,8 @@
         "domestic": 6,
         "continental": 5,
         "international": 6
-      }
+      },
+      "kitSupplier": "joma"
     },
     {
       "id": "real-betis",
@@ -84,7 +88,8 @@
         "domestic": 5,
         "continental": 3,
         "international": 6
-      }
+      },
+      "kitSupplier": "hummel"
     },
     {
       "id": "real-sociedad",
@@ -101,7 +106,8 @@
         "domestic": 6,
         "continental": 5,
         "international": 6
-      }
+      },
+      "kitSupplier": "macron"
     },
     {
       "id": "sevilla",
@@ -118,7 +124,8 @@
         "domestic": 5,
         "continental": 5,
         "international": 8
-      }
+      },
+      "kitSupplier": "castore"
     },
     {
       "id": "valencia",
@@ -135,7 +142,8 @@
         "domestic": 5,
         "continental": 3,
         "international": 6
-      }
+      },
+      "kitSupplier": "puma"
     },
     {
       "id": "celta-vigo",
@@ -152,7 +160,8 @@
         "domestic": 4,
         "continental": 3,
         "international": 4
-      }
+      },
+      "kitSupplier": "hummel"
     },
     {
       "id": "rayo-vallecano",
@@ -169,7 +178,8 @@
         "domestic": 2,
         "continental": 1,
         "international": 2
-      }
+      },
+      "kitSupplier": "umbro"
     },
     {
       "id": "osasuna",
@@ -186,7 +196,8 @@
         "domestic": 2,
         "continental": 1,
         "international": 2
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "getafe",
@@ -203,7 +214,8 @@
         "domestic": 2,
         "continental": 1,
         "international": 2
-      }
+      },
+      "kitSupplier": "joma"
     },
     {
       "id": "girona",
@@ -220,7 +232,8 @@
         "domestic": 4,
         "continental": 3,
         "international": 4
-      }
+      },
+      "kitSupplier": "puma"
     },
     {
       "id": "mallorca",

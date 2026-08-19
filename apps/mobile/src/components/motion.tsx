@@ -9,8 +9,13 @@ import { Animated, type StyleProp, type ViewStyle } from 'react-native';
  * Animated-Schnittstelle und verhält sich auf Web und Gerät gleich.
  */
 
-/** Zählt weich auf den neuen Stand, in beide Richtungen. */
-export function useCountUp(target: number, duration = 750): number {
+/**
+ * Zählt weich auf den neuen Stand, in beide Richtungen.
+ *
+ * Große Sprünge laufen länger als kleine: ein Zuwachs von zehntausend auf zwei
+ * Millionen soll das Gewicht bekommen, das ihm zusteht.
+ */
+export function useCountUp(target: number, duration = 1400): number {
   const [display, setDisplay] = useState(target);
   const current = useRef(target);
 
@@ -18,10 +23,14 @@ export function useCountUp(target: number, duration = 750): number {
     const from = current.current;
     if (from === target) return;
 
+    // Bis zum Doppelten der Grunddauer, je nach Größe des Sprungs.
+    const magnitude = Math.min(1, Math.log10(1 + Math.abs(target - from)) / 6);
+    const span = duration * (0.75 + magnitude);
+
     let frame = 0;
     const started = Date.now();
     const tick = () => {
-      const progress = Math.min(1, (Date.now() - started) / duration);
+      const progress = Math.min(1, (Date.now() - started) / span);
       // Zum Ende hin auslaufen, damit die letzte Ziffer nicht flackert.
       const eased = 1 - (1 - progress) ** 3;
       current.current = progress < 1 ? from + (target - from) * eased : target;
@@ -57,16 +66,16 @@ export function StepTransition({ stepKey, children, style }: {
   useEffect(() => {
     if (visible === stepKey) return;
     Animated.parallel([
-      Animated.timing(opacity, { toValue: 0, duration: 140, useNativeDriver: true }),
-      Animated.timing(lift, { toValue: -8, duration: 140, useNativeDriver: true }),
+      Animated.timing(opacity, { toValue: 0, duration: 220, useNativeDriver: true }),
+      Animated.timing(lift, { toValue: -10, duration: 220, useNativeDriver: true }),
     ]).start(() => setVisible(stepKey));
   }, [stepKey, visible, opacity, lift]);
 
   useEffect(() => {
-    lift.setValue(12);
+    lift.setValue(14);
     Animated.parallel([
-      Animated.timing(opacity, { toValue: 1, duration: 280, useNativeDriver: true }),
-      Animated.timing(lift, { toValue: 0, duration: 280, useNativeDriver: true }),
+      Animated.timing(opacity, { toValue: 1, duration: 420, useNativeDriver: true }),
+      Animated.timing(lift, { toValue: 0, duration: 420, useNativeDriver: true }),
     ]).start();
   }, [visible, opacity, lift]);
 
@@ -88,8 +97,8 @@ export function Fade({ children, delay = 0, style }: {
 
   useEffect(() => {
     Animated.parallel([
-      Animated.timing(opacity, { toValue: 1, duration: 260, delay, useNativeDriver: true }),
-      Animated.timing(lift, { toValue: 0, duration: 260, delay, useNativeDriver: true }),
+      Animated.timing(opacity, { toValue: 1, duration: 380, delay, useNativeDriver: true }),
+      Animated.timing(lift, { toValue: 0, duration: 380, delay, useNativeDriver: true }),
     ]).start();
   }, [opacity, lift, delay]);
 
@@ -107,7 +116,7 @@ export function Fade({ children, delay = 0, style }: {
 export function usePressScale() {
   const scale = useRef(new Animated.Value(1)).current;
   const to = (value: number) =>
-    Animated.spring(scale, { toValue: value, useNativeDriver: true, speed: 40, bounciness: 4 }).start();
+    Animated.spring(scale, { toValue: value, useNativeDriver: true, speed: 26, bounciness: 5 }).start();
   return {
     scale,
     onPressIn: () => to(0.98),

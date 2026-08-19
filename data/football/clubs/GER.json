@@ -16,7 +16,8 @@
         "domestic": 10,
         "continental": 10,
         "international": 10
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "borussia-dortmund",
@@ -33,7 +34,8 @@
         "domestic": 9,
         "continental": 9,
         "international": 10
-      }
+      },
+      "kitSupplier": "puma"
     },
     {
       "id": "bayer-leverkusen",
@@ -50,7 +52,8 @@
         "domestic": 8,
         "continental": 8,
         "international": 6
-      }
+      },
+      "kitSupplier": "castore"
     },
     {
       "id": "rb-leipzig",
@@ -67,7 +70,8 @@
         "domestic": 8,
         "continental": 6,
         "international": 6
-      }
+      },
+      "kitSupplier": "nike"
     },
     {
       "id": "eintracht-frankfurt",
@@ -84,7 +88,8 @@
         "domestic": 6,
         "continental": 6,
         "international": 6
-      }
+      },
+      "kitSupplier": "nike"
     },
     {
       "id": "vfb-stuttgart",
@@ -101,7 +106,8 @@
         "domestic": 6,
         "continental": 4,
         "international": 4
-      }
+      },
+      "kitSupplier": "jako"
     },
     {
       "id": "borussia-monchengladbach",
@@ -118,7 +124,8 @@
         "domestic": 4,
         "continental": 3,
         "international": 4
-      }
+      },
+      "kitSupplier": "puma"
     },
     {
       "id": "vfl-wolfsburg",
@@ -135,7 +142,8 @@
         "domestic": 4,
         "continental": 3,
         "international": 4
-      }
+      },
+      "kitSupplier": "nike"
     },
     {
       "id": "werder-bremen",
@@ -152,7 +160,8 @@
         "domestic": 4,
         "continental": 3,
         "international": 4
-      }
+      },
+      "kitSupplier": "hummel"
     },
     {
       "id": "sc-freiburg",
@@ -169,7 +178,8 @@
         "domestic": 4,
         "continental": 2,
         "international": 2
-      }
+      },
+      "kitSupplier": "nike"
     },
     {
       "id": "tsg-hoffenheim",
@@ -186,7 +196,8 @@
         "domestic": 4,
         "continental": 2,
         "international": 2
-      }
+      },
+      "kitSupplier": "joma"
     },
     {
       "id": "1-fsv-mainz-05",
@@ -220,7 +231,8 @@
         "domestic": 4,
         "continental": 2,
         "international": 2
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "fc-augsburg",
@@ -237,7 +249,8 @@
         "domestic": 2,
         "continental": 1,
         "international": 2
-      }
+      },
+      "kitSupplier": "nike"
     },
     {
       "id": "fc-st-pauli",
@@ -254,7 +267,8 @@
         "domestic": 3,
         "continental": 1,
         "international": 4
-      }
+      },
+      "kitSupplier": "puma"
     },
     {
       "id": "1-fc-heidenheim",
@@ -271,7 +285,8 @@
         "domestic": 2,
         "continental": 0,
         "international": 0
-      }
+      },
+      "kitSupplier": "nike"
     },
     {
       "id": "holstein-kiel",
@@ -322,7 +337,8 @@
         "domestic": 3,
         "continental": 1,
         "international": 4
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "fc-schalke-04",
@@ -339,7 +355,8 @@
         "domestic": 3,
         "continental": 1,
         "international": 6
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "1-fc-koln",
@@ -356,7 +373,8 @@
         "domestic": 3,
         "continental": 1,
         "international": 4
-      }
+      },
+      "kitSupplier": "hummel"
     },
     {
       "id": "hertha-bsc",
@@ -373,7 +391,8 @@
         "domestic": 3,
         "continental": 1,
         "international": 4
-      }
+      },
+      "kitSupplier": "nike"
     },
     {
       "id": "fortuna-dusseldorf",
@@ -407,7 +426,8 @@
         "domestic": 2,
         "continental": 1,
         "international": 2
-      }
+      },
+      "kitSupplier": "nike"
     },
     {
       "id": "hannover-96",

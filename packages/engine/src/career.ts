@@ -3,6 +3,8 @@ import {
   buildAcademyDecision, buildCareerDecision, buildLoanDecision, buildPartnerDecision,
   buildRetirementDecision, buildTransferDecision, clubOffers, resolveOption, rollRandomEvents,
 } from './events';
+import { collectFacts, collectSeasonFacts } from './facts';
+import { buildDestinationDecision, buildEventDecision, interestOfferCount } from './events';
 import { partnerOffersNow } from './partners';
 import { marketValue, pickDevelopmentProfile, pickPotential, pickTemperament } from './progression';
 import { callingAssociations, canStillSwitch } from './national-team';
@@ -79,6 +81,7 @@ export function createCareer(data: GameData, options: CareerOptions): CareerStat
       fans: data.progression.fans.start as number,
       mediaPartner: null,
       kitSupplier: null,
+      marketInterest: data.progression.marketInterest.start as number,
       caps: 0,
       nationalGoals: 0,
       nationalAssists: 0,
@@ -100,6 +103,9 @@ export function createCareer(data: GameData, options: CareerOptions): CareerStat
     currentSeasonCaps: 0,
     currentSeasonNationalGoals: 0,
     currentSeasonNationalAssists: 0,
+    continentalEntry: 'none',
+    facts: [],
+    scheduledEvents: [],
     seasons: [],
     pendingSet: [],
     pendingReport: null,
@@ -153,7 +159,21 @@ export function decide(
     if (next.retired) break;
   }
 
-  executePendingTransfer(data, rng, next);
+  // Hat eine Wahl einen Wechsel ausgelöst, folgt zuerst die Frage, wohin.
+  // Zugeteilt wird niemand.
+  if (next.pendingTransfer && !next.retired) {
+    const transfer = next.pendingTransfer;
+    const destination = buildDestinationDecision(
+      data, rng, next, transfer.scope as TransferScope, transfer.leagueStrengthMax,
+    );
+    next.pendingTransfer = null;
+    if (destination) {
+      next.pendingSet = [destination];
+      next.rngState = rng.state;
+      return next;
+    }
+  }
+
   simulateStep(data, rng, next);
   next.rngState = rng.state;
   return next;
@@ -176,6 +196,10 @@ function applyDecision(
 
     case 'loan_offer':
       if (option.id !== 'stay') startLoan(data, next, option.clubId!);
+      break;
+
+    case 'transfer_destination':
+      joinClub(data, next, option.clubId!, 'transfer');
       break;
 
     case 'media_partner_offer':
@@ -250,11 +274,17 @@ export function acknowledge(data: GameData, state: CareerState): CareerState {
   next.reportContext = null;
 
   if (context === 'winter') {
-    executePendingTransfer(data, rng, next);
+    if (offerDestination(data, rng, next)) {
+      next.rngState = rng.state;
+      return next;
+    }
     startDecisionSet(data, rng, next, 'winter');
   } else if (context === 'summer') {
     endLoanIfDue(data, next);
-    executePendingTransfer(data, rng, next);
+    if (offerDestination(data, rng, next)) {
+      next.rngState = rng.state;
+      return next;
+    }
 
     if (shouldOfferRetirement(data, next)) {
       // Über das Ende der Karriere wird allein entschieden.
@@ -295,7 +325,9 @@ function simulateStep(data: GameData, rng: Rng, state: CareerState): void {
 
   const half = simulateHalf(data, rng, state);
   state.currentSeasonHalves.push(half);
+  state.facts = collectFacts(data, state, half);
   ageEffects(state);
+  countDownScheduled(state);
 
   const club = clubOf(data, half.clubId);
   const base = {
@@ -350,6 +382,8 @@ function simulateStep(data: GameData, rng: Rng, state: CareerState): void {
   const seasonCaps = state.currentSeasonCaps;
   const seasonNationalGoals = state.currentSeasonNationalGoals;
   const outcome = closeSeason(data, rng, state);
+  state.facts = [...state.facts, ...collectSeasonFacts(outcome.titles)];
+  updateMarketInterest(data, state, outcome);
   updateFans(data, state, half, outcome.titles.length, outcome.awards.length);
   outcome.record.fans = state.player.fans;
   state.seasons.push(outcome.record);
@@ -444,6 +478,17 @@ function startDecisionSet(
     return true;
   };
 
+  // Was eine frühere Wahl angestoßen hat, kommt zuerst: es ist fällig.
+  for (const due of dueScheduled(state)) {
+    const decision = buildScheduledDecision(data, rng, state, due.eventId);
+    if (add(decision)) state.scheduledEvents = state.scheduledEvents.filter((e) => e !== due);
+  }
+
+  // Dann, was aus dem Bericht folgt.
+  for (let attempt = 0; set.length < DECISIONS_PER_BREAK && attempt < 6; attempt += 1) {
+    if (!add(buildCareerDecision(data, rng, state, window, { onlyTriggered: true, exclude: taken }))) break;
+  }
+
   if (window === 'summer') for (const decision of dueSummerDecisions(data, rng, state)) add(decision);
 
   // Auffüllen: zuerst Ungespieltes, dann Wiederholungen, zuletzt ein
@@ -486,7 +531,7 @@ function dueSummerDecisions(data: GameData, rng: Rng, state: CareerState): Pendi
     // weniger fremde Angebote auf dem Tisch.
     const offers = clubHoldsOn(data, state)
       ? (data.progression.fans.clubHoldsFrom.reducedOffers as number)
-      : 3;
+      : interestOfferCount(data, state);
     due.push(buildTransferDecision(data, rng, state, 'matching', offers));
   }
 
@@ -531,6 +576,24 @@ function endLoanIfDue(data: GameData, state: CareerState): void {
   log(state, 'transfer', 'Back at ' + parent.short);
 }
 
+/**
+ * Steht ein Wechsel an, kommt zuerst die Frage, wohin. Erst wenn dabei nichts
+ * Passendes herauskommt, wird zugeteilt.
+ */
+function offerDestination(data: GameData, rng: Rng, state: CareerState): boolean {
+  if (!state.pendingTransfer || state.retired) return false;
+
+  const transfer = state.pendingTransfer;
+  const decision = buildDestinationDecision(
+    data, rng, state, transfer.scope as TransferScope, transfer.leagueStrengthMax,
+  );
+  state.pendingTransfer = null;
+  if (!decision) return false;
+
+  state.pendingSet = [decision];
+  return true;
+}
+
 function executePendingTransfer(data: GameData, rng: Rng, state: CareerState): void {
   if (!state.pendingTransfer || !state.clubId) return;
   const scope = state.pendingTransfer.scope as TransferScope;
@@ -565,12 +628,68 @@ function log(state: CareerState, type: TimelineEntry['type'], text: string, deta
   });
 }
 
+/** Zählt angestoßene Ereignisse eine Halbserie herunter. */
+function countDownScheduled(state: CareerState): void {
+  state.scheduledEvents = state.scheduledEvents.map(
+    (entry) => ({ ...entry, halvesRemaining: entry.halvesRemaining - 1 }),
+  );
+}
+
+/** Was jetzt fällig ist. */
+function dueScheduled(state: CareerState) {
+  return state.scheduledEvents.filter((entry) => entry.halvesRemaining <= 0);
+}
+
+/** Baut die Entscheidung zu einem angestoßenen Ereignis. */
+function buildScheduledDecision(
+  data: GameData, rng: Rng, state: CareerState, eventId: string,
+): PendingDecision | null {
+  const event = data.careerEventById.get(eventId);
+  if (!event) return null;
+  return buildEventDecision(data, rng, state, event);
+}
+
+/**
+ * Wie begehrt man gerade ist.
+ *
+ * Das Interesse verfällt langsam und wird von Leistung, Titeln, Auszeichnungen
+ * und Länderspielen gespeist. Es entscheidet, wie viele Vereine im Sommer
+ * anklopfen und von welcher Stufe sie kommen.
+ */
+function updateMarketInterest(
+  data: GameData, state: CareerState,
+  outcome: { record: { goals: number; assists: number; nationalCaps: number }; titles: string[]; awards: string[] },
+): void {
+  const config = data.progression.marketInterest;
+  const club = state.clubId ? clubOf(data, state.clubId) : null;
+  const starterLevel = club
+    ? ((data.progression.roles.minOverallForStarter as Record<string, number>)[
+        String(club.reputation.domestic)
+      ] ?? 70)
+    : 70;
+
+  let interest = state.player.marketInterest - (config.decayPerSeason as number);
+  interest += outcome.record.goals * (config.perGoal as number);
+  interest += outcome.record.assists * (config.perAssist as number);
+  interest += outcome.titles.length * (config.perTitle as number);
+  interest += outcome.awards.length * (config.perAward as number);
+  interest += outcome.record.nationalCaps * (config.perCap as number);
+  interest += (state.player.overall - starterLevel) * (config.overallWeight as number);
+
+  state.player.marketInterest = Math.max(0, Math.min(100, Math.round(interest)));
+}
+
 export function titleName(data: GameData, id: string): string {
   return data.leagueById.get(id)?.name
     ?? data.cupById.get(id)?.name
     ?? data.competitions.club.find((c) => c.id === id)?.name
     ?? data.competitions.national.find((c) => c.id === id)?.name
     ?? id;
+}
+
+/** Wurde dieser Titel mit der Nationalmannschaft gewonnen? */
+export function isNationalTitle(data: GameData, id: string): boolean {
+  return data.competitions.national.some((c) => c.id === id);
 }
 
 export function awardName(data: GameData, id: string): string {

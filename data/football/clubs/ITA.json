@@ -16,7 +16,8 @@
         "domestic": 10,
         "continental": 9,
         "international": 10
-      }
+      },
+      "kitSupplier": "nike"
     },
     {
       "id": "ac-milan",
@@ -33,7 +34,8 @@
         "domestic": 9,
         "continental": 9,
         "international": 10
-      }
+      },
+      "kitSupplier": "puma"
     },
     {
       "id": "juventus",
@@ -50,7 +52,8 @@
         "domestic": 9,
         "continental": 9,
         "international": 10
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "napoli",
@@ -67,7 +70,8 @@
         "domestic": 8,
         "continental": 7,
         "international": 8
-      }
+      },
+      "kitSupplier": "emporio-armani-ea7"
     },
     {
       "id": "as-roma",
@@ -84,7 +88,8 @@
         "domestic": 7,
         "continental": 7,
         "international": 8
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "lazio",
@@ -101,7 +106,8 @@
         "domestic": 6,
         "continental": 5,
         "international": 6
-      }
+      },
+      "kitSupplier": "mizuno"
     },
     {
       "id": "atalanta",
@@ -118,7 +124,8 @@
         "domestic": 8,
         "continental": 6,
         "international": 6
-      }
+      },
+      "kitSupplier": "joma"
     },
     {
       "id": "fiorentina",
@@ -135,7 +142,8 @@
         "domestic": 6,
         "continental": 5,
         "international": 6
-      }
+      },
+      "kitSupplier": "kappa"
     },
     {
       "id": "bologna",
@@ -152,7 +160,8 @@
         "domestic": 4,
         "continental": 3,
         "international": 4
-      }
+      },
+      "kitSupplier": "macron"
     },
     {
       "id": "torino",
@@ -169,7 +178,8 @@
         "domestic": 4,
         "continental": 3,
         "international": 4
-      }
+      },
+      "kitSupplier": "joma"
     },
     {
       "id": "udinese",
@@ -186,7 +196,8 @@
         "domestic": 3,
         "continental": 1,
         "international": 4
-      }
+      },
+      "kitSupplier": "macron"
     },
     {
       "id": "genoa",
@@ -203,7 +214,8 @@
         "domestic": 3,
         "continental": 1,
         "international": 4
-      }
+      },
+      "kitSupplier": "kappa"
     },
     {
       "id": "como",

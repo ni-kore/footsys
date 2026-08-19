@@ -16,7 +16,8 @@
         "domestic": 10,
         "continental": 7,
         "international": 10
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "fc-porto",
@@ -33,7 +34,8 @@
         "domestic": 10,
         "continental": 7,
         "international": 10
-      }
+      },
+      "kitSupplier": "new-balance"
     },
     {
       "id": "sporting-cp",
@@ -50,7 +52,8 @@
         "domestic": 10,
         "continental": 7,
         "international": 8
-      }
+      },
+      "kitSupplier": "nike"
     },
     {
       "id": "sc-braga",

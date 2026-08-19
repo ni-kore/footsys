@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { ScrollView, StyleSheet, useWindowDimensions, View } from 'react-native';
 import type { CareerState, GameData } from '@footsys/engine';
 import { fansDelta, seasonLabel } from '../format';
@@ -39,6 +39,10 @@ export function CareerLayout({ data, state, children }: {
   children: React.ReactNode;
 }) {
   const { width } = useWindowDimensions();
+  // Die Spielerkarte gibt die Höhe vor, die rechte Fläche übernimmt sie.
+  // Damit sind beide immer gleich hoch, ohne eine Zahl im Quelltext, und ein
+  // Transferfenster mit vier Vereinen macht nichts größer: es rollt.
+  const [panelHeight, setPanelHeight] = useState(0);
   // Zwei Flächen nebeneinander brauchen je gut 500 Punkte. Darunter bleibt für
   // die Spielerkarte zu wenig übrig und ihre Zeilen brechen um, deshalb steht
   // alles erst ab Tabletbreite quer nebeneinander.
@@ -83,14 +87,17 @@ export function CareerLayout({ data, state, children }: {
       contentContainerStyle={styles.content}
     >
       <View style={twoColumn ? styles.twoColumn : styles.oneColumn}>
-        <View style={twoColumn ? styles.stretch : undefined}>
+        <View
+          style={twoColumn ? styles.column : undefined}
+          onLayout={(event) => setPanelHeight(event.nativeEvent.layout.height)}
+        >
           <PlayerCard
             data={data}
             state={state}
             {...(twoColumn ? { style: styles.stretch } : {})}
           />
         </View>
-        <View style={twoColumn ? styles.stretch : undefined}>
+        <View style={twoColumn ? [styles.column, { height: panelHeight }] : undefined}>
           <Card style={[styles.action, twoColumn && styles.stretch]}>
             <View style={styles.strip}>
               <Label>{shown.label}</Label>
@@ -113,9 +120,17 @@ export function CareerLayout({ data, state, children }: {
               </View>
             </View>
 
-            <StepTransition stepKey={stepKey} style={styles.stretch}>
-              {children}
-            </StepTransition>
+            {/* Was über die feste Höhe hinausgeht, rollt hier, statt die
+                Fläche wachsen zu lassen. */}
+            <ScrollView
+              style={styles.stretch}
+              contentContainerStyle={styles.actionContent}
+              showsVerticalScrollIndicator={false}
+            >
+              <StepTransition stepKey={stepKey} style={styles.stretch}>
+                {children}
+              </StepTransition>
+            </ScrollView>
           </Card>
         </View>
       </View>
@@ -131,10 +146,12 @@ const styles = StyleSheet.create({
     padding: space[4], paddingBottom: space[9], gap: space[4],
     maxWidth: 1100, alignSelf: 'center', width: '100%',
   },
-  twoColumn: { flexDirection: 'row', gap: space[4], alignItems: 'stretch', marginTop: space[4] },
+  twoColumn: { flexDirection: 'row', gap: space[4], alignItems: 'flex-start', marginTop: space[4] },
+  column: { flex: 1 },
   oneColumn: { gap: space[4], marginTop: space[4] },
   stretch: { flex: 1 },
   action: { gap: space[4] },
+  actionContent: { flexGrow: 1 },
   strip: { gap: space[2] },
   stripRow: { flexDirection: 'row', flexWrap: 'wrap', gap: space[2] },
 });

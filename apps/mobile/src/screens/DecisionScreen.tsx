@@ -7,6 +7,15 @@ import type { Club, GameData, PendingDecision } from '@footsys/engine';
 import { color, font, radius, space } from '../theme';
 import { Button, ClubBadge, Label, Meter, PartnerLogo } from '../components/ui';
 import { Fade, usePressScale } from '../components/motion';
+import { CardImage } from '../components/CardImage';
+import { Highlighted } from '../components/Highlighted';
+
+/** Gut, schlecht oder weder noch. */
+function toneColor(tone: 'positive' | 'negative' | 'neutral'): string {
+  if (tone === 'positive') return color.status.positive;
+  if (tone === 'negative') return color.status.negative;
+  return color.text.secondary;
+}
 
 const WINDOW_LABEL: Record<PendingDecision['window'], string> = {
   start: 'Career start',
@@ -54,10 +63,16 @@ export function DecisionScreen({ data, decisions, startLabel, onConfirm }: {
   };
 
   const choose = (page: number, optionId: string) => {
-    setChoices((previous) => previous.map((old, i) => (i === page ? optionId : old)));
-    // Nach der Wahl weiterblättern, solange noch etwas offen ist.
-    const nextOpen = decisions.findIndex((_, i) => i !== page && choices[i] === null);
-    if (nextOpen >= 0) setTimeout(() => goTo(nextOpen), 260);
+    // Nach der Wahl bleibt die Karte stehen. Erst wenn man das Ergebnis
+    // gelesen hat, geht es weiter, und zwar von Hand. Ein leerer Bezeichner
+    // nimmt die Wahl zurück und holt die anderen Möglichkeiten wieder.
+    setChoices((previous) => previous.map((old, i) => (i === page ? (optionId || null) : old)));
+  };
+
+  /** Zur nächsten Karte, die noch offen ist, sonst zur nächsten überhaupt. */
+  const goNext = (page: number) => {
+    const open = decisions.findIndex((_, i) => i !== page && choices[i] === null);
+    goTo(open >= 0 ? open : page + 1);
   };
 
   const onLayout = (event: LayoutChangeEvent) => {
@@ -176,7 +191,9 @@ export function DecisionScreen({ data, decisions, startLabel, onConfirm }: {
                   data={data}
                   decision={decision}
                   chosen={choices[page] ?? null}
+                  last={page === decisions.length - 1}
                   onChoose={(optionId) => choose(page, optionId)}
+                  onNext={() => goNext(page)}
                 />
               </View>
             ))}
@@ -199,27 +216,41 @@ export function DecisionScreen({ data, decisions, startLabel, onConfirm }: {
  * Eine einzelne Entscheidung: der Sachverhalt und die Möglichkeiten dazu.
  * Sie steht in einem eigenen Rahmen, mit Abstand zu ihren Nachbarn.
  */
-function DecisionCard({ data, decision, chosen, onChoose }: {
+function DecisionCard({ data, decision, chosen, last, onChoose, onNext }: {
   data: GameData;
   decision: PendingDecision;
   chosen: string | null;
+  /** Die letzte Karte der Pause bekommt keinen Weiterknopf. */
+  last: boolean;
   onChoose: (optionId: string) => void;
+  onNext: () => void;
 }) {
+  const picked = decision.options.find((option) => option.id === chosen);
+
+  // Sobald gewählt ist, verschwinden die anderen Möglichkeiten. Ein Druck auf
+  // die getroffene Wahl nimmt sie zurück und holt die Liste wieder.
+  const shown = picked ? [picked] : decision.options;
+
   return (
     <View style={styles.card}>
-      <View style={{ gap: space[2] }}>
+      <View style={styles.headText}>
         <Text style={styles.title}>{decision.title.en}</Text>
-        <Text style={styles.lead}>{decision.text}</Text>
+        <Highlighted
+          style={styles.lead}
+          text={decision.text}
+          terms={decision.highlights ?? []}
+        />
       </View>
 
       <View style={styles.options}>
-        {decision.options.map((option, index) => (
-          <Fade key={option.id} delay={60 + index * 60}>
+        {shown.map((option, index) => (
+          <Fade key={option.id} delay={picked ? 0 : 80 + index * 110}>
             <Option
               label={option.label.en}
               selected={chosen === option.id}
               {...(option.subtitle ? { subtitle: option.subtitle } : {})}
               {...(option.tag ? { tag: option.tag } : {})}
+              {...(option.motif ? { motif: option.motif } : {})}
               {...(option.clubId ? { club: data.clubById.get(option.clubId) } : {})}
               {...(option.partnerId
                 ? {
@@ -227,21 +258,48 @@ function DecisionCard({ data, decision, chosen, onChoose }: {
                     partnerLight: data.partnerById.get(option.partnerId)?.light ?? false,
                   }
                 : {})}
-              onPress={() => onChoose(option.id)}
+              onPress={() => onChoose(picked ? '' : option.id)}
             />
           </Fade>
         ))}
+
+        {/* Was die Wahl bedeutet, als Text unter der Antwort. */}
+        {picked && picked.outcome && picked.outcome.length > 0 ? (
+          <Fade delay={120}>
+            <View style={styles.outcome}>
+              {/* Ein Absatz, in dem jede Aussage ihre eigene Farbe trägt: was
+                  hilft, steht grün da, was etwas kostet, rot. */}
+              <Text style={styles.outcomeLine}>
+                {picked.outcome.map((line, index) => (
+                  <Text key={line.text} style={{ color: toneColor(line.tone) }}>
+                    {index > 0 ? ' ' : ''}{line.text}
+                  </Text>
+                ))}
+              </Text>
+            </View>
+          </Fade>
+        ) : null}
+
+        {picked && !last ? (
+          <Fade delay={200} style={styles.nextRow}>
+            <Button label="Next decision" variant="secondary" onPress={onNext} />
+          </Fade>
+        ) : null}
       </View>
     </View>
   );
 }
 
 /** Eine Wahlmöglichkeit. Sie gibt unter dem Finger kurz nach. */
-function Option({ label, subtitle, tag, club, partnerId, partnerLight, selected, onPress }: {
+function Option({
+  label, subtitle, tag, motif, club, partnerId, partnerLight, selected, onPress,
+}: {
   label: string;
   subtitle?: string;
   /** Kurzes Kennzeichen links neben der Reputation. */
   tag?: string;
+  /** Motiv für das Bild links auf der Antwort. */
+  motif?: string;
   club?: Club | undefined;
   partnerId?: string;
   partnerLight?: boolean;
@@ -264,12 +322,22 @@ function Option({ label, subtitle, tag, club, partnerId, partnerLight, selected,
         accessibilityRole="radio"
         accessibilityState={{ selected }}
       >
+        {/* Bild links, rechte Kante schräg abgeschnitten. Vereine und Marken
+            zeigen stattdessen ihr eigenes Zeichen. */}
         {club ? (
-          <ClubBadge clubId={club.id} colors={club.colors} abbr={club.abbr} size={44} />
+          <View style={styles.emblem}>
+            <ClubBadge clubId={club.id} colors={club.colors} abbr={club.abbr} size={44} />
+          </View>
         ) : partnerId ? (
-          <PartnerLogo partnerId={partnerId} light={partnerLight} size={30} />
+          <View style={styles.emblem}>
+            <PartnerLogo partnerId={partnerId} light={partnerLight} size={30} />
+          </View>
+        ) : motif ? (
+          <CardImage motif={motif} width={86} height={74} />
         ) : (
-          <View style={[styles.bullet, selected && styles.bulletSelected]} />
+          <View style={styles.emblem}>
+            <View style={[styles.bullet, selected && styles.bulletSelected]} />
+          </View>
         )}
 
         <View style={{ flex: 1, gap: 3 }}>
@@ -313,26 +381,41 @@ const styles = StyleSheet.create({
   card: {
     gap: space[4],
     marginHorizontal: GUTTER / 2,
-    padding: space[3],
+    paddingRight: space[3],
+    paddingBottom: space[3],
+    overflow: 'hidden',
     borderRadius: radius.lg,
     borderWidth: 1, borderColor: color.border.default,
   },
+  // Kopf mit Bild: der Text beginnt neben dem Bild und bekommt eigenen Rand.
+  headText: { gap: space[2], padding: space[4], paddingBottom: space[1], minWidth: 0 },
   title: { fontSize: 22, fontWeight: '700', color: color.text.primary, letterSpacing: -0.4 },
   lead: { ...font.body, color: color.text.secondary, lineHeight: 21 },
 
-  options: { gap: space[2] },
+  options: { gap: space[2], paddingLeft: space[3] },
+  // Das Ergebnis ist keine zweite Antwort, sondern der Kommentar zur Wahl:
+  // kein Rahmen, nur der Text in der Farbe der Zustimmung.
+  outcome: {
+    gap: space[2], paddingHorizontal: space[3], paddingVertical: space[2], marginTop: space[1],
+  },
+  outcomeLine: { ...font.body, lineHeight: 20 },
+  nextRow: { alignItems: 'flex-end', marginTop: space[1] },
   option: {
     flexDirection: 'row', alignItems: 'center', gap: space[3],
-    minHeight: 66, padding: space[3],
+    minHeight: 74,
+    // Links sitzt das Bild bündig an der Kante, deshalb nur rechts Polsterung.
+    paddingRight: space[3],
     backgroundColor: color.surface[2],
     borderRadius: radius.lg,
     borderWidth: 1, borderColor: color.border.default,
+    overflow: 'hidden',
   },
+  emblem: { paddingLeft: space[3], paddingVertical: space[3] },
   optionPressed: { backgroundColor: color.surface[3] },
   // Die getroffene Wahl bleibt sichtbar, bis der Anpfiff sie festschreibt.
   optionSelected: { borderColor: color.accent.base, backgroundColor: color.accent.subtle },
   bullet: {
-    width: 10, height: 10, borderRadius: 5, marginHorizontal: 14,
+    width: 10, height: 10, borderRadius: 5, marginHorizontal: 12,
     backgroundColor: color.surface[3],
   },
   bulletSelected: { backgroundColor: color.accent.base },

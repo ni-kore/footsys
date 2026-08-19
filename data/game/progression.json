@@ -901,5 +901,107 @@
     "$maxComment": "max gilt nur für den Ausnahmespieler aus easterEgg. Alle anderen enden bei regularMax.",
     "multiplierDamping": 0.45,
     "$dampingComment": "Faktoren aus Entscheidungen wirken nur zu diesem Anteil auf den Bestand."
+  },
+  "growthEnvironment": {
+    "$comment": "Wer bei einem besseren Verein spielt, wird besser: bessere Mitspieler, bessere Trainer, härtere Spiele. Wer nicht spielt, lernt das Wichtigste nicht. Beide Faktoren wirken nur auf Wachstum, nicht auf den Verfall im Alter.",
+    "byClubReputation": {
+      "0": 0.82,
+      "1": 0.86,
+      "2": 0.9,
+      "3": 0.94,
+      "4": 0.98,
+      "5": 1.02,
+      "6": 1.06,
+      "7": 1.1,
+      "8": 1.15,
+      "9": 1.2,
+      "10": 1.26
+    },
+    "byLeagueStrength": {
+      "1": 0.9,
+      "2": 0.95,
+      "3": 1,
+      "4": 1.06,
+      "5": 1.12
+    },
+    "$continentalBonus": "Europapokalabende sind ein Trainingsprogramm für sich.",
+    "continentalBonus": 1.06,
+    "$byMinutesShare": "Anteil der möglichen Spiele auf dem Platz, abgebildet auf den Wachstumsfaktor. Auf der Bank wächst man kaum.",
+    "byMinutesShare": [
+      [
+        0,
+        0.45
+      ],
+      [
+        0.15,
+        0.62
+      ],
+      [
+        0.35,
+        0.85
+      ],
+      [
+        0.6,
+        1
+      ],
+      [
+        0.85,
+        1.08
+      ],
+      [
+        1,
+        1.12
+      ]
+    ]
+  },
+  "marketInterest": {
+    "$comment": "Wie begehrt ein Spieler gerade ist, 0 bis 100. Wächst mit Leistung und Presse, verfällt langsam und bestimmt Zahl und Güte der Angebote.",
+    "start": 30,
+    "decayPerSeason": 8,
+    "perGoal": 1.1,
+    "perAssist": 0.7,
+    "perTitle": 6,
+    "perAward": 9,
+    "perCap": 0.5,
+    "$overallWeight": "Zuschlag je Punkt OVR über dem Niveau eines Stammspielers beim aktuellen Verein.",
+    "overallWeight": 1.4,
+    "$offerCount": "Wie viele Vereine anklopfen, nach Marktinteresse.",
+    "offerCountByInterest": [
+      [
+        0,
+        1
+      ],
+      [
+        25,
+        2
+      ],
+      [
+        55,
+        3
+      ],
+      [
+        80,
+        4
+      ]
+    ],
+    "$qualityBonus": "Wie viele Reputationsstufen die Angebote darüber liegen dürfen.",
+    "qualityByInterest": [
+      [
+        0,
+        -1
+      ],
+      [
+        35,
+        0
+      ],
+      [
+        65,
+        1
+      ],
+      [
+        88,
+        2
+      ]
+    ]
   }
 }

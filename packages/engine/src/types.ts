@@ -139,6 +139,8 @@ export interface Club {
   abbr: string;
   city: string;
   colors: [string, string];
+  /** Ausrüster nach heutigem Stand, sofern bekannt. */
+  kitSupplier?: string;
   reputation: ClubReputation;
 }
 
@@ -232,6 +234,10 @@ export interface EventModifiers {
   missShare?: number;
   /** Faktor auf die Anhängerschaft. */
   fansMultiplier?: number;
+  /** Änderung des Marktinteresses in Punkten. */
+  marketInterestDelta?: number;
+  /** Stößt ein Ereignis an, das später fällig wird. */
+  schedules?: { eventId: string; chance?: number; afterHalves?: number };
   /** Nur Zufallsereignisse. */
   clubReputationDelta?: number;
   leagueMove?: 'promotion' | 'relegation';
@@ -253,6 +259,8 @@ export interface EventOutcome {
 }
 
 export interface EventOption {
+  /** Motiv für das Bild auf dieser Antwort. */
+  motif?: string;
   id: string;
   label: LocalizedText;
   condition?: { minAge?: number; maxAge?: number };
@@ -293,6 +301,13 @@ export interface EventRequirements {
 }
 
 export interface CareerEvent {
+  /** Art der Entscheidung, bestimmt das Bild auf der Karte. */
+  category?: string;
+  /**
+   * Worauf dieses Ereignis reagiert. Steht hier etwas, kommt es bevorzugt und
+   * nur dann, wenn die Tatsache gerade zutrifft.
+   */
+  triggeredBy?: CareerFact[];
   id: string;
   weight: number;
   window?: EventWindow;
@@ -367,6 +382,50 @@ export interface PlayerIdentity {
  * Die Reichweite 1 bis 10 sagt, wie weit die Marke trägt. Ein Regionalsender
  * bringt ein paar hundert Leute mehr, ein Weltkonzern Millionen.
  */
+/** Die drei sichtbaren Meter. */
+export type MeterKey = 'morale' | 'fanSupport' | 'mediaRelation';
+
+/** Woran ein Verein im kommenden Jahr international teilnimmt. */
+export type ContinentalEntry = 'primary' | 'secondary' | 'tertiary' | 'none';
+
+/** Wie die Mannschaft ihre Saison gespielt hat. */
+export interface TeamSeason {
+  /** Tabellenplatz in der Liga. */
+  position: number;
+  teams: number;
+  /** Wie viele Plätze der eigene Beitrag ausgemacht hat. */
+  contributionShift: number;
+  titles: string[];
+  /** Startplatz für das kommende Jahr. */
+  nextEntry: ContinentalEntry;
+}
+
+/**
+ * Was in einer Halbserie geschehen ist, in einer Form, auf die Ereignisse
+ * reagieren können. Aus dem Bericht werden damit die nächsten Entscheidungen.
+ */
+export type CareerFact =
+  | 'was_injured'
+  | 'lost_starting_spot'
+  | 'won_starting_spot'
+  | 'scoring_run'
+  | 'goal_drought'
+  | 'new_coach'
+  | 'won_title'
+  | 'relegated'
+  | 'promoted'
+  | 'first_call_up'
+  | 'benched'
+  | 'suspended'
+  | 'transfer_interest';
+
+/** Ein Ereignis, das später fällig wird, weil eine Wahl es angestoßen hat. */
+export interface ScheduledEvent {
+  eventId: string;
+  /** Halbserien bis zur Fälligkeit. */
+  halvesRemaining: number;
+}
+
 export interface Partner {
   id: string;
   name: string;
@@ -378,6 +437,12 @@ export interface Partner {
 }
 
 export type PartnerKind = 'media' | 'kit';
+
+/** Eine Aussage darüber, was eine Wahl bedeutet, samt ihrem Ton. */
+export interface OutcomeLine {
+  text: string;
+  tone: 'positive' | 'negative' | 'neutral';
+}
 
 export interface PlayerState extends PlayerIdentity {
   age: number;
@@ -408,6 +473,12 @@ export interface PlayerState extends PlayerIdentity {
   mediaPartner: string | null;
   /** Ausrüster, der einen ausstattet. */
   kitSupplier: string | null;
+
+  /**
+   * Wie begehrt man gerade ist, 0 bis 100. Wächst mit Leistung, Presse und
+   * Ereignissen, verfällt langsam. Bestimmt Zahl und Güte der Angebote.
+   */
+  marketInterest: number;
 
   /** Länderspiele insgesamt. */
   caps: number;
@@ -444,6 +515,8 @@ export interface HalfSeasonRecord {
   caps: number;
   nationalGoals: number;
   nationalAssists: number;
+  /** Anteil der möglichen Spiele, in denen man auf dem Platz stand. */
+  minutesShare: number;
   /** Zufallsereignisse, die in dieser Halbserie passiert sind. */
   randomEventIds: string[];
 }
@@ -462,6 +535,8 @@ export interface SeasonRecord {
   cleanSheets: number;
   /** Anhängerschaft am Ende dieser Saison. */
   fans: number;
+  /** Wie die Mannschaft diese Saison gespielt hat. */
+  team?: TeamSeason;
   /** Vorlagen im Nationaltrikot. */
   nationalAssists: number;
   titles: string[];
@@ -487,6 +562,10 @@ export interface PendingOption {
   partnerId?: string;
   /** Kurzes Kennzeichen der Option, etwa "Stay" oder "Move". */
   tag?: string;
+  /** Motiv für das Bild auf dieser Antwort. */
+  motif?: string;
+  /** Was diese Wahl bedeutet, in Worten, jede Aussage mit ihrem Ton. */
+  outcome?: OutcomeLine[];
   subtitle?: string;
 }
 
@@ -499,6 +578,13 @@ export interface PendingDecision {
   title: LocalizedText;
   text: string;
   variantKey?: string;
+  /** Art der Entscheidung, bestimmt das Bild auf der Karte. */
+  category?: string;
+  /**
+   * Namen im Text, die hervorgehoben gehören: Vereine, Länder, Positionen.
+   * Die Oberfläche färbt sie ein, statt den Text zu zerlegen.
+   */
+  highlights?: string[];
   options: PendingOption[];
 }
 
@@ -564,6 +650,13 @@ export interface CareerState {
   currentSeasonCaps: number;
   currentSeasonNationalGoals: number;
   currentSeasonNationalAssists: number;
+
+  /** Woran der Verein diese Saison international teilnimmt. */
+  continentalEntry: ContinentalEntry;
+  /** Was in der zuletzt gerechneten Halbserie geschehen ist. */
+  facts: CareerFact[];
+  /** Angestoßene Ereignisse, die noch fällig werden. */
+  scheduledEvents: ScheduledEvent[];
   seasons: SeasonRecord[];
   /**
    * Die Entscheidungen, die gerade anstehen. Eine bei der Jugendakademie und

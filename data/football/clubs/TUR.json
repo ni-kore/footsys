@@ -16,7 +16,8 @@
         "domestic": 2,
         "continental": 0,
         "international": 0
-      }
+      },
+      "kitSupplier": "puma"
     },
     {
       "id": "hatayspor",
@@ -118,7 +119,8 @@
         "domestic": 2,
         "continental": 0,
         "international": 0
-      }
+      },
+      "kitSupplier": "puma"
     },
     {
       "id": "adana-demirspor",
@@ -237,7 +239,8 @@
         "domestic": 2,
         "continental": 0,
         "international": 0
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "caykur-rizespor",

@@ -16,7 +16,8 @@
         "domestic": 10,
         "continental": 10,
         "international": 10
-      }
+      },
+      "kitSupplier": "nike"
     },
     {
       "id": "olympique-marseille",
@@ -33,7 +34,8 @@
         "domestic": 8,
         "continental": 7,
         "international": 8
-      }
+      },
+      "kitSupplier": "puma"
     },
     {
       "id": "as-monaco",
@@ -50,7 +52,8 @@
         "domestic": 8,
         "continental": 7,
         "international": 8
-      }
+      },
+      "kitSupplier": "kappa"
     },
     {
       "id": "olympique-lyon",
@@ -67,7 +70,8 @@
         "domestic": 7,
         "continental": 5,
         "international": 8
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "lille",
@@ -84,7 +88,8 @@
         "domestic": 6,
         "continental": 5,
         "international": 6
-      }
+      },
+      "kitSupplier": "new-balance"
     },
     {
       "id": "nice",
@@ -101,7 +106,8 @@
         "domestic": 6,
         "continental": 4,
         "international": 4
-      }
+      },
+      "kitSupplier": "macron"
     },
     {
       "id": "rc-lens",
@@ -118,7 +124,8 @@
         "domestic": 4,
         "continental": 3,
         "international": 4
-      }
+      },
+      "kitSupplier": "puma"
     },
     {
       "id": "rennes",
@@ -135,7 +142,8 @@
         "domestic": 4,
         "continental": 3,
         "international": 4
-      }
+      },
+      "kitSupplier": "puma"
     },
     {
       "id": "strasbourg",

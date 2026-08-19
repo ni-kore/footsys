@@ -20,6 +20,7 @@ import meters from '../../../data/game/meters.json';
 import events from '../../../data/game/events.json';
 import randomEvents from '../../../data/game/random-events.json';
 import partners from '../../../data/game/partners.json';
+import teamSeason from '../../../data/game/team-season.json';
 
 import { clubFiles } from './club-files';
 
@@ -39,6 +40,7 @@ function buildRaw(): RawGameData {
     events,
     randomEvents,
     partners,
+    teamSeason,
   } as unknown as RawGameData;
 }
 

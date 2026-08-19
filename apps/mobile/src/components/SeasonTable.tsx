@@ -1,9 +1,13 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { liveTotals, type CareerState, type GameData } from '@footsys/engine';
+import {
+  isNationalTitle, liveTotals, titleName, trophyCabinet,
+  type CareerState, type GameData,
+} from '@footsys/engine';
 import { fansDelta, readableOn } from '../format';
 import { color, font, radius, space } from '../theme';
 import { AssociationMark, Card, ClubBadge, Flag, Label, overallTint } from './ui';
+import { Trophy } from './Trophy';
 import { AppsIcon, AssistIcon, CleanSheetIcon, FansIcon, GoalIcon, LoanIcon } from './icons';
 
 /** Eine Zeile der Tabelle, egal ob abgeschlossene oder laufende Saison. */
@@ -19,6 +23,8 @@ interface Row {
   cleanSheets: number;
   /** Zuwachs an Anhängern in dieser Saison, nicht der Bestand. */
   fans: number;
+  /** Was in dieser Saison gewonnen wurde. */
+  titles: string[];
   /** Die laufende Saison steht blasser da, sie ist noch nicht entschieden. */
   running: boolean;
 }
@@ -50,6 +56,7 @@ export function SeasonTable({ data, state }: { data: GameData; state: CareerStat
       assists: season.assists,
       cleanSheets: season.cleanSheets,
       fans: season.fans - previousFans,
+      titles: [...season.titles, ...season.awards].filter((id) => !isNationalTitle(data, id)),
       running: false,
     };
     previousFans = season.fans;
@@ -76,6 +83,7 @@ export function SeasonTable({ data, state }: { data: GameData; state: CareerStat
       overall: state.player.overall,
       ...running,
       fans: state.player.fans - previousFans,
+      titles: [],
       running: true,
     });
   }
@@ -91,6 +99,10 @@ export function SeasonTable({ data, state }: { data: GameData; state: CareerStat
     }),
   );
   const clubColumn = { minWidth: clubWidth };
+
+  // Titel mit der Nationalmannschaft, über die ganze Laufbahn gezählt.
+  const nationalTitles = [...trophyCabinet(state).entries()]
+    .filter(([id]) => isNationalTitle(data, id));
 
   const totals = liveTotals(state);
   const passports = [state.player.nationality, state.player.secondNationality]
@@ -153,6 +165,11 @@ export function SeasonTable({ data, state }: { data: GameData; state: CareerStat
               {row.loanFrom ? (
                 <View style={styles.loan}><Text style={styles.loanText}>On loan</Text></View>
               ) : null}
+              {/* Was in dieser Saison gewonnen wurde, direkt neben dem Verein.
+                  Über die Jahre wird die Liste damit zur Chronik. */}
+              {row.titles.map((id) => (
+                <Trophy key={id} size={18} label={titleName(data, id)} />
+              ))}
             </View>
 
             <View style={styles.cellOverall}>
@@ -234,6 +251,11 @@ export function SeasonTable({ data, state }: { data: GameData; state: CareerStat
           {nationalTeam ? (
             <Text style={styles.clubName}>{nationalTeam.name.en}</Text>
           ) : null}
+          {/* Was mit der Nationalmannschaft gewonnen wurde, steht hier und
+              nicht beim Verein. */}
+          {nationalTitles.map(([id, count]) => (
+            <Trophy key={id} size={18} count={count} label={titleName(data, id)} />
+          ))}
         </View>
         <View style={styles.cellOverall} />
         <View style={styles.cellNumber}>
@@ -274,7 +296,7 @@ const styles = StyleSheet.create({
 
   row: {
     flexDirection: 'row', alignItems: 'center', gap: space[2],
-    minHeight: 34,
+    minHeight: 38,
     borderBottomWidth: 1, borderBottomColor: color.border.subtle,
   },
   // Die laufende Saison ist noch offen und steht deshalb zurückhaltender da.
@@ -291,14 +313,15 @@ const styles = StyleSheet.create({
     width: 72, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 4,
   },
 
+  // Das Alter ist eine Angabe, keine Auszeichnung: neutral statt grün.
   ageBox: {
     width: 28, height: 22, borderRadius: radius.sm,
-    backgroundColor: color.accent.subtle,
+    backgroundColor: color.surface[3],
     alignItems: 'center', justifyContent: 'center',
   },
-  ageText: { fontSize: 12, fontWeight: '700', color: color.accent.onSubtle },
+  ageText: { fontSize: 12, fontWeight: '700', color: color.text.secondary },
 
-  clubCell: { flexDirection: 'row', alignItems: 'center', gap: space[2] },
+  clubCell: { flexDirection: 'row', alignItems: 'center', gap: space[3], zIndex: 10 },
   loanArrow: { width: 12, flexShrink: 0 },
   clubName: { ...font.bodyStrong, flex: 1, minWidth: 28 },
   clubNameMuted: { color: color.text.muted, fontWeight: '400' },

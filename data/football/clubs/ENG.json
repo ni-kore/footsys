@@ -16,7 +16,8 @@
         "domestic": 10,
         "continental": 10,
         "international": 10
-      }
+      },
+      "kitSupplier": "puma"
     },
     {
       "id": "liverpool",
@@ -33,7 +34,8 @@
         "domestic": 10,
         "continental": 10,
         "international": 10
-      }
+      },
+      "kitSupplier": "nike"
     },
     {
       "id": "arsenal",
@@ -50,7 +52,8 @@
         "domestic": 10,
         "continental": 9,
         "international": 10
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "chelsea",
@@ -67,7 +70,8 @@
         "domestic": 9,
         "continental": 7,
         "international": 10
-      }
+      },
+      "kitSupplier": "nike"
     },
     {
       "id": "tottenham-hotspur",
@@ -84,7 +88,8 @@
         "domestic": 7,
         "continental": 7,
         "international": 8
-      }
+      },
+      "kitSupplier": "nike"
     },
     {
       "id": "newcastle-united",
@@ -101,7 +106,8 @@
         "domestic": 6,
         "continental": 5,
         "international": 6
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "aston-villa",
@@ -118,7 +124,8 @@
         "domestic": 6,
         "continental": 6,
         "international": 6
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "brighton",
@@ -135,7 +142,8 @@
         "domestic": 4,
         "continental": 3,
         "international": 4
-      }
+      },
+      "kitSupplier": "nike"
     },
     {
       "id": "west-ham-united",
@@ -152,7 +160,8 @@
         "domestic": 5,
         "continental": 3,
         "international": 6
-      }
+      },
+      "kitSupplier": "umbro"
     },
     {
       "id": "crystal-palace",
@@ -169,7 +178,8 @@
         "domestic": 4,
         "continental": 3,
         "international": 4
-      }
+      },
+      "kitSupplier": "macron"
     },
     {
       "id": "everton",
@@ -186,7 +196,8 @@
         "domestic": 3,
         "continental": 1,
         "international": 4
-      }
+      },
+      "kitSupplier": "castore"
     },
     {
       "id": "fulham",
@@ -203,7 +214,8 @@
         "domestic": 4,
         "continental": 3,
         "international": 4
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "brentford",
@@ -220,7 +232,8 @@
         "domestic": 4,
         "continental": 1,
         "international": 2
-      }
+      },
+      "kitSupplier": "umbro"
     },
     {
       "id": "nottingham-forest",
@@ -237,7 +250,8 @@
         "domestic": 4,
         "continental": 3,
         "international": 4
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "wolverhampton",
@@ -254,7 +268,8 @@
         "domestic": 3,
         "continental": 1,
         "international": 4
-      }
+      },
+      "kitSupplier": "sudu"
     },
     {
       "id": "bournemouth",
@@ -271,7 +286,8 @@
         "domestic": 4,
         "continental": 1,
         "international": 2
-      }
+      },
+      "kitSupplier": "umbro"
     },
     {
       "id": "leicester-city",
@@ -288,7 +304,8 @@
         "domestic": 3,
         "continental": 1,
         "international": 6
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "ipswich-town",
@@ -322,7 +339,8 @@
         "domestic": 2,
         "continental": 1,
         "international": 2
-      }
+      },
+      "kitSupplier": "puma"
     },
     {
       "id": "leeds-united",
@@ -339,7 +357,8 @@
         "domestic": 3,
         "continental": 1,
         "international": 6
-      }
+      },
+      "kitSupplier": "adidas"
     },
     {
       "id": "burnley",

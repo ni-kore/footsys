@@ -12,3 +12,9 @@ declare module '*.png' {
   const content: number;
   export default content;
 }
+
+/** Fotos für die Entscheidungskarten. */
+declare module '*.jpg' {
+  const content: number;
+  export default content;
+}

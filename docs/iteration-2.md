@@ -1,6 +1,6 @@
 # footsys, zweite Ausbaustufe
 
-Plan für den nächsten Umbau. Noch nichts davon ist gebaut.
+Plan für den Umbau, und darunter in Abschnitt 7, was davon gebaut ist.
 
 Das Ziel in einem Satz: eine Karriere soll sich anfühlen wie eine Laufbahn,
 in der die eigenen Entscheidungen etwas bewirken, nicht wie eine Folge
@@ -353,3 +353,52 @@ machen daraus ein Spiel, das man gern noch einmal startet.
 Trophäenbilder und ruhigere Bewegung aus Schritt sieben sind klein und
 unabhängig vom Rest. Sie lassen sich vorziehen, wenn du früher etwas sehen
 willst.
+
+---
+
+## 7. Was davon gebaut ist
+
+Stand nach dem Umbau. Gemessen wird mit `npx tsx packages/engine/src/tools/balance.ts`.
+
+| Schritt | Zustand |
+| --- | --- |
+| Mannschaftssaison und Titel | gebaut, `packages/engine/src/team-season.ts` |
+| Umfeld formt die Entwicklung | gebaut, `growthEnvironment` in `progression.json` |
+| Meter als Verstärker | gebaut, Kurven in `meters.json`, `meters.ts` |
+| Entscheidungen aus dem Bericht | gebaut, `facts.ts` und `triggeredBy` |
+| Ketten | gebaut, `schedules` und `scheduledEvents` |
+| Ereignisvorrat | 62 Karriereereignisse, davon 31 neu |
+| Marktinteresse | gebaut, bestimmt Zahl und Güte der Angebote |
+| Ausrüster je Verein | 96 Vereine, 14 Marken, `scripts/assign-kit-suppliers.js` |
+| Partner ins Gefüge | gebaut, wirken auf Medienbindung, Moral, Rückhalt |
+| Zielwahl beim Wechsel | gebaut, `transfer_destination` |
+| Ruhigere Bewegung | gebaut, Zahlen 1300 bis 2800 ms je nach Sprung |
+| Trophäen als Bilder | gebaut, Platzhalter `22.png`, mit Hinweis beim Darüberfahren |
+| Bilder an den Antworten | 9 Motive von Commons, Nachweise in `assets/events/CREDITS.md` |
+| Ergebnis der Wahl | gebaut, `outcome.ts`, entsteht aus den Wirkungen |
+| Hervorhebung im Text | gebaut, Engine liefert die Namen mit |
+
+Messwerte über 120 Karrieren mit zufälligen Entscheidungen:
+
+| Größe | Wert |
+| --- | --- |
+| Spitzen-OVR | p10 67, p50 74, p90 86 |
+| Titel | p50 3, p90 16 |
+| ohne Titel | 21 Prozent |
+| mit Kontinentaltitel | 29 Prozent |
+| Fans | p50 410 Tsd., p90 42 Mio. |
+| bester Tabellenplatz | p50 4 |
+
+Das trifft die Zieltabelle aus Abschnitt 3 recht genau. Wer klug wählt, liegt
+darüber: derselbe Lauf mit immer dem stärksten Angebot bringt eine Karriere in
+die Weltspitze.
+
+### Was noch offen ist
+
+- **Bilder**: 9 von 22 Motiven sind belegt. Die Suche auf Commons liefert für
+  den Rest nichts Brauchbares, das gehört von Hand ausgesucht.
+- **Trophäenbilder**: alle Titel zeigen die Meisterschale, bis die 2460 Dateien
+  zugeordnet sind.
+- **Verbandslogos**: 50 von 246 zugeordnet, der Rest über die Kontaktbögen.
+- **Wettbewerbsnamen** stehen teils deutsch in den Daten, das fällt jetzt im
+  Hinweis an der Trophäe auf.

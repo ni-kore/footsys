@@ -35,6 +35,7 @@ export function loadGameData(): GameData {
     events: read('game/events.json'),
     randomEvents: read('game/random-events.json'),
     partners: read('game/partners.json'),
+    teamSeason: read('game/team-season.json'),
   };
 
   return createGameData(raw);

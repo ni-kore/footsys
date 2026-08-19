@@ -219,6 +219,18 @@
         "de": "Ein Ausrüster will dich unter Vertrag nehmen. Das bringt weniger Aufmerksamkeit als ein Sender, öffnet dafür Türen zu Vereinen, die dieselbe Marke tragen.",
         "en": "A kit supplier wants to sign you. It brings less attention than a broadcaster, but it opens doors at clubs wearing the same brand."
       }
+    },
+    {
+      "id": "transfer_destination",
+      "window": "summer",
+      "title": {
+        "de": "Wohin?",
+        "en": "Where to?"
+      },
+      "text": {
+        "de": "Der Wechsel ist beschlossen. Jetzt zählt nur noch, bei wem du unterschreibst.",
+        "en": "The move is decided. All that is left is whose shirt you put on."
+      }
     }
   ],
   "career": [
@@ -252,7 +264,8 @@
             "meters": {
               "morale": -10
             }
-          }
+          },
+          "motif": "hospital"
         },
         {
           "id": "play_through",
@@ -274,9 +287,11 @@
               "roleOverride": "substitute",
               "roleOverrideSeasons": 2
             }
-          }
+          },
+          "motif": "ball"
         }
-      ]
+      ],
+      "category": "injury"
     },
     {
       "id": "rival_offer",
@@ -314,7 +329,8 @@
             },
             "marketValueMultiplier": 1.15,
             "fansMultiplier": 0.55
-          }
+          },
+          "motif": "travel"
         },
         {
           "id": "stay_loyal",
@@ -331,10 +347,12 @@
               "domesticCup": 1.2
             },
             "fansMultiplier": 1.35
-          }
+          },
+          "motif": "dressing_room"
         }
       ],
-      "risky": true
+      "risky": true,
+      "category": "transfer"
     },
     {
       "id": "return_home",
@@ -372,7 +390,8 @@
             },
             "marketValueMultiplier": 0.8,
             "fansMultiplier": 1.15
-          }
+          },
+          "motif": "travel"
         },
         {
           "id": "stay_abroad",
@@ -384,9 +403,11 @@
             "meters": {
               "morale": -5
             }
-          }
+          },
+          "motif": "travel"
         }
-      ]
+      ],
+      "category": "club"
     },
     {
       "id": "foreign_grandfather",
@@ -420,7 +441,8 @@
             "meters": {
               "mediaRelation": -10
             }
-          }
+          },
+          "motif": "dressing_room"
         },
         {
           "id": "keep_waiting",
@@ -433,9 +455,11 @@
               "morale": -5,
               "fanSupport": 10
             }
-          }
+          },
+          "motif": "media"
         }
-      ]
+      ],
+      "category": "media"
     },
     {
       "id": "position_change",
@@ -467,7 +491,8 @@
               "delta": 4,
               "afterSeasons": 1
             }
-          }
+          },
+          "motif": "training"
         },
         {
           "id": "refuse_change",
@@ -480,9 +505,11 @@
             "meters": {
               "morale": -5
             }
-          }
+          },
+          "motif": "dressing_room"
         }
-      ]
+      ],
+      "category": "training"
     },
     {
       "id": "position_competition",
@@ -521,7 +548,8 @@
                 "morale": -15
               }
             }
-          }
+          },
+          "motif": "training"
         },
         {
           "id": "request_move",
@@ -536,10 +564,12 @@
             "meters": {
               "fanSupport": -15
             }
-          }
+          },
+          "motif": "travel"
         }
       ],
-      "risky": true
+      "risky": true,
+      "category": "training"
     },
     {
       "id": "training_extra",
@@ -585,7 +615,8 @@
           },
           "outcome": {
             "fromVariant": true
-          }
+          },
+          "motif": "training"
         },
         {
           "id": "decline",
@@ -597,9 +628,11 @@
             "meters": {
               "morale": 8
             }
-          }
+          },
+          "motif": "hospital"
         }
-      ]
+      ],
+      "category": "training"
     },
     {
       "id": "personal_coach",
@@ -646,7 +679,8 @@
           "outcome": {
             "fromVariant": true,
             "permanent": true
-          }
+          },
+          "motif": "training"
         },
         {
           "id": "decline",
@@ -654,9 +688,11 @@
             "de": "Ablehnen",
             "en": "Decline"
           },
-          "modifiers": {}
+          "modifiers": {},
+          "motif": "training"
         }
-      ]
+      ],
+      "category": "training"
     },
     {
       "id": "club_crisis",
@@ -693,7 +729,8 @@
               "fanSupport": 25
             },
             "fansMultiplier": 1.3
-          }
+          },
+          "motif": "dressing_room"
         },
         {
           "id": "leave_now",
@@ -709,9 +746,11 @@
               "fanSupport": -20
             },
             "fansMultiplier": 0.75
-          }
+          },
+          "motif": "travel"
         }
-      ]
+      ],
+      "category": "training"
     },
     {
       "id": "controversial_statement",
@@ -742,7 +781,8 @@
               "fanSupport": -10
             },
             "fansMultiplier": 0.9
-          }
+          },
+          "motif": "media"
         },
         {
           "id": "double_down",
@@ -769,10 +809,12 @@
           },
           "modifiers": {
             "fansMultiplier": 1.2
-          }
+          },
+          "motif": "media"
         }
       ],
-      "risky": true
+      "risky": true,
+      "category": "media"
     },
     {
       "id": "club_national_team_conflict",
@@ -804,7 +846,8 @@
             "nationalTeam": "force",
             "roleOverride": "substitute",
             "roleOverrideSeasons": 1
-          }
+          },
+          "motif": "travel"
         },
         {
           "id": "comply",
@@ -820,10 +863,12 @@
             "trophyMultiplier": {
               "league": 1.3
             }
-          }
+          },
+          "motif": "dressing_room"
         }
       ],
-      "risky": true
+      "risky": true,
+      "category": "national"
     },
     {
       "id": "injury_at_peak",
@@ -870,7 +915,8 @@
           },
           "modifiers": {
             "immediateOverall": -1
-          }
+          },
+          "motif": "ball"
         },
         {
           "id": "sit_out",
@@ -891,9 +937,11 @@
                 "morale": -10
               }
             }
-          }
+          },
+          "motif": "hospital"
         }
-      ]
+      ],
+      "category": "injury"
     },
     {
       "id": "decisive_penalty",
@@ -937,7 +985,8 @@
               },
               "immediateOverall": -2
             }
-          }
+          },
+          "motif": "dressing_room"
         },
         {
           "id": "let-someone-else",
@@ -949,10 +998,12 @@
             "meters": {
               "fanSupport": -5
             }
-          }
+          },
+          "motif": "dressing_room"
         }
       ],
-      "risky": true
+      "risky": true,
+      "category": "club"
     },
     {
       "id": "unexpected_prospect",
@@ -988,7 +1039,8 @@
               "mediaRelation": 15
             },
             "fansMultiplier": 1.2
-          }
+          },
+          "motif": "dressing_room"
         },
         {
           "id": "block",
@@ -1007,9 +1059,11 @@
                 "fanSupport": -15
               }
             }
-          }
+          },
+          "motif": "dressing_room"
         }
-      ]
+      ],
+      "category": "club"
     },
     {
       "id": "tax_trouble",
@@ -1042,7 +1096,8 @@
             "meters": {
               "mediaRelation": -10
             }
-          }
+          },
+          "motif": "contract"
         },
         {
           "id": "fight",
@@ -1065,10 +1120,12 @@
                 "fanSupport": -20
               }
             }
-          }
+          },
+          "motif": "travel"
         }
       ],
-      "risky": true
+      "risky": true,
+      "category": "contract"
     },
     {
       "id": "fan_backlash",
@@ -1109,7 +1166,8 @@
               },
               "roleShift": -1
             }
-          }
+          },
+          "motif": "dressing_room"
         },
         {
           "id": "ignore",
@@ -1121,10 +1179,12 @@
             "meters": {
               "morale": -10
             }
-          }
+          },
+          "motif": "dressing_room"
         }
       ],
-      "risky": true
+      "risky": true,
+      "category": "club"
     },
     {
       "id": "big_money_move",
@@ -1162,7 +1222,8 @@
               "mediaRelation": -10
             },
             "fansMultiplier": 0.7
-          }
+          },
+          "motif": "contract"
         },
         {
           "id": "stay_competitive",
@@ -1175,9 +1236,11 @@
               "fanSupport": 15,
               "morale": 5
             }
-          }
+          },
+          "motif": "dressing_room"
         }
-      ]
+      ],
+      "category": "transfer"
     },
     {
       "id": "captaincy",
@@ -1218,7 +1281,8 @@
               "domesticCup": 1.15
             },
             "fansMultiplier": 1.25
-          }
+          },
+          "motif": "dressing_room"
         },
         {
           "id": "decline_armband",
@@ -1230,9 +1294,11 @@
             "meters": {
               "morale": 5
             }
-          }
+          },
+          "motif": "dressing_room"
         }
-      ]
+      ],
+      "category": "transfer"
     },
     {
       "id": "winter_form_crisis",
@@ -1274,7 +1340,8 @@
                 "morale": -8
               }
             }
-          }
+          },
+          "motif": "training"
         },
         {
           "id": "winter_switch_off",
@@ -1287,7 +1354,8 @@
               "morale": 18
             },
             "appearanceMultiplier": 0.9
-          }
+          },
+          "motif": "dressing_room"
         },
         {
           "id": "winter_ask_out",
@@ -1303,10 +1371,12 @@
               "fanSupport": -12
             },
             "fansMultiplier": 0.8
-          }
+          },
+          "motif": "travel"
         }
       ],
-      "risky": true
+      "risky": true,
+      "category": "club"
     },
     {
       "id": "winter_transfer_interest",
@@ -1342,7 +1412,8 @@
             "meters": {
               "fanSupport": -10
             }
-          }
+          },
+          "motif": "travel"
         },
         {
           "id": "wait_for_summer",
@@ -1355,9 +1426,11 @@
               "morale": 5
             },
             "marketValueMultiplier": 1.05
-          }
+          },
+          "motif": "travel"
         }
-      ]
+      ],
+      "category": "transfer"
     },
     {
       "id": "surgery_timing",
@@ -1391,7 +1464,8 @@
               "delta": 2,
               "afterSeasons": 1
             }
-          }
+          },
+          "motif": "hospital"
         },
         {
           "id": "delay_surgery",
@@ -1410,9 +1484,11 @@
               "immediateOverall": -4,
               "missShare": 0.5
             }
-          }
+          },
+          "motif": "hospital"
         }
-      ]
+      ],
+      "category": "club"
     },
     {
       "id": "endorsement_conflict",
@@ -1448,7 +1524,8 @@
             "marketValueMultiplier": 1.05,
             "appearanceMultiplier": 0.92,
             "fansMultiplier": 1.1
-          }
+          },
+          "motif": "travel"
         },
         {
           "id": "refuse_deal",
@@ -1461,10 +1538,12 @@
               "morale": 5,
               "fanSupport": 5
             }
-          }
+          },
+          "motif": "travel"
         }
       ],
-      "risky": true
+      "risky": true,
+      "category": "transfer"
     },
     {
       "id": "tournament_fitness",
@@ -1499,7 +1578,8 @@
             "meters": {
               "morale": 8
             }
-          }
+          },
+          "motif": "hospital"
         },
         {
           "id": "prioritise_club",
@@ -1516,9 +1596,11 @@
             "meters": {
               "fanSupport": 12
             }
-          }
+          },
+          "motif": "dressing_room"
         }
-      ]
+      ],
+      "category": "injury"
     },
     {
       "id": "agent_change",
@@ -1551,7 +1633,8 @@
               "fanSupport": -5
             },
             "offerQualityBonus": 1
-          }
+          },
+          "motif": "travel"
         },
         {
           "id": "keep_agent",
@@ -1563,10 +1646,12 @@
             "meters": {
               "morale": 6
             }
-          }
+          },
+          "motif": "contract"
         }
       ],
-      "risky": true
+      "risky": true,
+      "category": "contract"
     },
     {
       "id": "leadership_group",
@@ -1602,7 +1687,8 @@
             "trophyMultiplier": {
               "league": 1.1
             }
-          }
+          },
+          "motif": "travel"
         },
         {
           "id": "stay_out",
@@ -1614,9 +1700,11 @@
             "meters": {
               "morale": 5
             }
-          }
+          },
+          "motif": "dressing_room"
         }
-      ]
+      ],
+      "category": "club"
     },
     {
       "id": "youth_contract_pressure",
@@ -1647,7 +1735,8 @@
               "fanSupport": 10
             },
             "roleShift": 1
-          }
+          },
+          "motif": "media"
         },
         {
           "id": "refuse_first_deal",
@@ -1672,9 +1761,11 @@
                 "morale": -10
               }
             }
-          }
+          },
+          "motif": "travel"
         }
-      ]
+      ],
+      "category": "media"
     },
     {
       "id": "adapt_abroad",
@@ -1712,7 +1803,8 @@
               "fanSupport": 15,
               "morale": -5
             }
-          }
+          },
+          "motif": "dressing_room"
         },
         {
           "id": "keep_bubble",
@@ -1726,9 +1818,11 @@
               "fanSupport": -8
             },
             "appearanceMultiplier": 0.92
-          }
+          },
+          "motif": "dressing_room"
         }
-      ]
+      ],
+      "category": "club"
     },
     {
       "id": "veteran_role",
@@ -1762,7 +1856,8 @@
               "league": 1.2,
               "continentalPrimary": 1.3
             }
-          }
+          },
+          "motif": "dressing_room"
         },
         {
           "id": "be_the_leader",
@@ -1778,7 +1873,8 @@
             "meters": {
               "fanSupport": 20
             }
-          }
+          },
+          "motif": "dressing_room"
         },
         {
           "id": "go_out_at_home",
@@ -1795,9 +1891,11 @@
               "morale": 15,
               "fanSupport": 15
             }
-          }
+          },
+          "motif": "travel"
         }
-      ]
+      ],
+      "category": "club"
     },
     {
       "id": "break_focus",
@@ -1828,7 +1926,8 @@
             "meters": {
               "morale": -6
             }
-          }
+          },
+          "motif": "training"
         },
         {
           "id": "rest_properly",
@@ -1841,7 +1940,8 @@
               "morale": 10
             },
             "appearanceMultiplier": 1.04
-          }
+          },
+          "motif": "hospital"
         },
         {
           "id": "go_public",
@@ -1855,9 +1955,11 @@
               "morale": -3
             },
             "fansMultiplier": 1.03
-          }
+          },
+          "motif": "media"
         }
-      ]
+      ],
+      "category": "training"
     },
     {
       "id": "training_focus",
@@ -1885,7 +1987,8 @@
           },
           "modifiers": {
             "permanentOverall": 0.12
-          }
+          },
+          "motif": "training"
         },
         {
           "id": "fix_weakness",
@@ -1901,7 +2004,8 @@
             "meters": {
               "morale": -4
             }
-          }
+          },
+          "motif": "training"
         },
         {
           "id": "lead_the_room",
@@ -1914,9 +2018,11 @@
               "morale": 6,
               "fanSupport": 6
             }
-          }
+          },
+          "motif": "dressing_room"
         }
-      ]
+      ],
+      "category": "training"
     },
     {
       "id": "off_pitch_time",
@@ -1946,7 +2052,8 @@
             "meters": {
               "morale": 12
             }
-          }
+          },
+          "motif": "travel"
         },
         {
           "id": "study_the_game",
@@ -1959,7 +2066,8 @@
               "delta": 0.25,
               "afterSeasons": 1
             }
-          }
+          },
+          "motif": "training"
         },
         {
           "id": "meet_the_fans",
@@ -1972,9 +2080,1784 @@
               "fanSupport": 12
             },
             "fansMultiplier": 1.04
-          }
+          },
+          "motif": "dressing_room"
         }
-      ]
+      ],
+      "category": "personal"
+    },
+    {
+      "id": "tattoo_with_cousin",
+      "weight": 55,
+      "window": "any",
+      "ageRange": [
+        17,
+        32
+      ],
+      "maxPerCareer": 2,
+      "title": {
+        "de": "Dein Cousin will ein Tattoo",
+        "en": "Your cousin wants a tattoo"
+      },
+      "text": {
+        "de": "Dein Cousin hat einen Termin bei einem Studio, das er über einen Bekannten kennt, und will dich mitnehmen. Der Verein weiß nichts davon.",
+        "en": "Your cousin has an appointment at a studio a friend told him about, and he wants you along. The club knows nothing about it."
+      },
+      "options": [
+        {
+          "id": "go_along",
+          "label": {
+            "de": "Mitgehen",
+            "en": "Go along"
+          },
+          "risky": true,
+          "modifiers": {
+            "meters": {
+              "morale": 8
+            },
+            "schedules": {
+              "eventId": "tattoo_infection",
+              "chance": 0.3,
+              "afterHalves": 1
+            }
+          },
+          "motif": "travel"
+        },
+        {
+          "id": "club_doctor_first",
+          "label": {
+            "de": "Erst den Vereinsarzt fragen",
+            "en": "Ask the club doctor first"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 2
+            }
+          },
+          "motif": "hospital"
+        },
+        {
+          "id": "skip_it",
+          "label": {
+            "de": "Sein lassen",
+            "en": "Give it a miss"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": -3
+            }
+          },
+          "motif": "dressing_room"
+        }
+      ],
+      "category": "personal"
+    },
+    {
+      "id": "tattoo_infection",
+      "weight": 0,
+      "window": "any",
+      "ageRange": [
+        17,
+        40
+      ],
+      "maxPerCareer": 99,
+      "title": {
+        "de": "Die Stelle entzündet sich",
+        "en": "The tattoo gets infected"
+      },
+      "text": {
+        "de": "Die frische Tätowierung ist heiß und geschwollen. Der Vereinsarzt ist wenig begeistert und redet von Antibiotika und Pause.",
+        "en": "The fresh tattoo is hot and swollen. The club doctor is not amused and starts talking about antibiotics and rest."
+      },
+      "options": [
+        {
+          "id": "rest_it",
+          "label": {
+            "de": "Pause machen",
+            "en": "Sit it out"
+          },
+          "modifiers": {
+            "missShare": 0.35,
+            "meters": {
+              "morale": -8
+            }
+          },
+          "motif": "hospital"
+        },
+        {
+          "id": "play_through",
+          "label": {
+            "de": "Durchspielen",
+            "en": "Play through it"
+          },
+          "risky": true,
+          "modifiers": {
+            "appearanceMultiplier": 0.9,
+            "goalMultiplier": 0.85,
+            "meters": {
+              "morale": -4,
+              "mediaRelation": -5
+            }
+          },
+          "motif": "gym"
+        }
+      ],
+      "category": "injury"
+    },
+    {
+      "id": "wisdom_teeth",
+      "weight": 45,
+      "window": "winter",
+      "ageRange": [
+        17,
+        26
+      ],
+      "maxPerCareer": 1,
+      "title": {
+        "de": "Die Weisheitszähne müssen raus",
+        "en": "The wisdom teeth have to come out"
+      },
+      "text": {
+        "de": "Seit Wochen pocht es. Der Zahnarzt will operieren, der Trainer will dich auf dem Platz.",
+        "en": "It has been throbbing for weeks. The dentist wants to operate, the coach wants you on the pitch."
+      },
+      "options": [
+        {
+          "id": "operate_now",
+          "label": {
+            "de": "Sofort operieren",
+            "en": "Get it done now"
+          },
+          "modifiers": {
+            "missShare": 0.2,
+            "meters": {
+              "morale": 5
+            }
+          },
+          "motif": "hospital"
+        },
+        {
+          "id": "wait_summer",
+          "label": {
+            "de": "Bis zum Sommer warten",
+            "en": "Wait until summer"
+          },
+          "modifiers": {
+            "goalMultiplier": 0.94,
+            "meters": {
+              "morale": -6
+            }
+          },
+          "motif": "hospital"
+        }
+      ],
+      "category": "injury"
+    },
+    {
+      "id": "sleep_trouble",
+      "weight": 50,
+      "window": "any",
+      "ageRange": [
+        18,
+        36
+      ],
+      "maxPerCareer": 3,
+      "title": {
+        "de": "Du schläfst schlecht",
+        "en": "You are sleeping badly"
+      },
+      "text": {
+        "de": "Seit dem letzten Auswärtsspiel liegst du nachts wach. Der Verein bietet einen Schlafcoach an, was in der Kabine für Sprüche sorgt.",
+        "en": "Since the last away game you have been lying awake. The club offers a sleep coach, which the dressing room finds hilarious."
+      },
+      "options": [
+        {
+          "id": "take_coach",
+          "label": {
+            "de": "Das Angebot annehmen",
+            "en": "Take the offer"
+          },
+          "modifiers": {
+            "permanentOverall": 0.2,
+            "meters": {
+              "morale": 4
+            }
+          },
+          "motif": "dressing_room"
+        },
+        {
+          "id": "tough_it_out",
+          "label": {
+            "de": "Aussitzen",
+            "en": "Tough it out"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": -6
+            },
+            "appearanceMultiplier": 0.96
+          },
+          "motif": "dressing_room"
+        }
+      ],
+      "category": "personal"
+    },
+    {
+      "id": "diet_overhaul",
+      "weight": 45,
+      "window": "summer",
+      "ageRange": [
+        19,
+        34
+      ],
+      "maxPerCareer": 2,
+      "title": {
+        "de": "Ernährung umstellen",
+        "en": "Change how you eat"
+      },
+      "text": {
+        "de": "Ein Ernährungsberater legt dir einen Plan hin, der alles streicht, was du magst. Dafür verspricht er dir zwei Jahre mehr Karriere.",
+        "en": "A nutritionist hands you a plan that cuts everything you like. In return he promises you two more years of career."
+      },
+      "options": [
+        {
+          "id": "follow_plan",
+          "label": {
+            "de": "Durchziehen",
+            "en": "Follow it"
+          },
+          "modifiers": {
+            "deferredOverall": {
+              "delta": 0.8,
+              "afterSeasons": 1
+            },
+            "meters": {
+              "morale": -5
+            }
+          },
+          "motif": "training"
+        },
+        {
+          "id": "half_way",
+          "label": {
+            "de": "Halb so wild nehmen",
+            "en": "Do half of it"
+          },
+          "modifiers": {
+            "deferredOverall": {
+              "delta": 0.3,
+              "afterSeasons": 1
+            }
+          },
+          "motif": "training"
+        },
+        {
+          "id": "ignore",
+          "label": {
+            "de": "Ignorieren",
+            "en": "Ignore it"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 4
+            }
+          },
+          "motif": "training"
+        }
+      ],
+      "category": "training"
+    },
+    {
+      "id": "long_haul_back",
+      "weight": 40,
+      "window": "any",
+      "ageRange": [
+        20,
+        36
+      ],
+      "maxPerCareer": 3,
+      "requires": {
+        "isInternational": true
+      },
+      "title": {
+        "de": "Der Rücken nach dem Langstreckenflug",
+        "en": "Your back after the long flight"
+      },
+      "text": {
+        "de": "Zwölf Stunden Rückflug vom Länderspiel, und seitdem zieht es im unteren Rücken. Am Wochenende ist Pflichtspiel.",
+        "en": "Twelve hours back from international duty, and your lower back has hurt ever since. There is a match at the weekend."
+      },
+      "options": [
+        {
+          "id": "sit_out",
+          "label": {
+            "de": "Aussetzen",
+            "en": "Sit this one out"
+          },
+          "modifiers": {
+            "missShare": 0.15
+          },
+          "motif": "hospital"
+        },
+        {
+          "id": "painkillers",
+          "label": {
+            "de": "Schmerzmittel nehmen",
+            "en": "Take painkillers"
+          },
+          "risky": true,
+          "modifiers": {
+            "schedules": {
+              "eventId": "back_flares_up",
+              "chance": 0.35,
+              "afterHalves": 1
+            },
+            "meters": {
+              "morale": 3
+            }
+          },
+          "motif": "hospital"
+        }
+      ],
+      "category": "injury"
+    },
+    {
+      "id": "back_flares_up",
+      "weight": 0,
+      "window": "any",
+      "ageRange": [
+        18,
+        40
+      ],
+      "maxPerCareer": 99,
+      "title": {
+        "de": "Der Rücken meldet sich zurück",
+        "en": "Your back comes back at you"
+      },
+      "text": {
+        "de": "Was du weggedrückt hast, ist wieder da, diesmal deutlicher. Der Arzt spricht von Wochen, nicht von Tagen.",
+        "en": "What you pushed through is back, and louder. The doctor talks about weeks, not days."
+      },
+      "options": [
+        {
+          "id": "proper_break",
+          "label": {
+            "de": "Richtig auskurieren",
+            "en": "Take a proper break"
+          },
+          "modifiers": {
+            "missShare": 0.45,
+            "meters": {
+              "morale": -6
+            }
+          },
+          "motif": "hospital"
+        },
+        {
+          "id": "manage_it",
+          "label": {
+            "de": "Verwalten",
+            "en": "Manage it"
+          },
+          "modifiers": {
+            "appearanceMultiplier": 0.85,
+            "permanentOverall": -0.4
+          },
+          "motif": "hospital"
+        }
+      ],
+      "category": "injury"
+    },
+    {
+      "id": "child_born",
+      "weight": 40,
+      "window": "any",
+      "ageRange": [
+        22,
+        36
+      ],
+      "maxPerCareer": 2,
+      "title": {
+        "de": "Du wirst Vater",
+        "en": "You become a father"
+      },
+      "text": {
+        "de": "Das Kind kommt mitten in der Saison. Die ersten Wochen wirst du wenig schlafen und viel denken.",
+        "en": "The baby arrives in the middle of the season. The first weeks will be short on sleep and long on thinking."
+      },
+      "options": [
+        {
+          "id": "time_off",
+          "label": {
+            "de": "Ein paar Spiele aussetzen",
+            "en": "Miss a few games"
+          },
+          "modifiers": {
+            "missShare": 0.12,
+            "meters": {
+              "morale": 14
+            }
+          },
+          "motif": "ball"
+        },
+        {
+          "id": "keep_playing",
+          "label": {
+            "de": "Weiterspielen",
+            "en": "Keep playing"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 6
+            },
+            "goalMultiplier": 0.94
+          },
+          "motif": "ball"
+        }
+      ],
+      "category": "personal"
+    },
+    {
+      "id": "homesick",
+      "weight": 45,
+      "window": "winter",
+      "ageRange": [
+        18,
+        30
+      ],
+      "maxPerCareer": 2,
+      "requires": {
+        "playingAbroad": true
+      },
+      "title": {
+        "de": "Heimweh",
+        "en": "Homesick"
+      },
+      "text": {
+        "de": "Die Sprache, das Essen, die dunklen Nachmittage. Zu Hause wäre jetzt alles einfacher.",
+        "en": "The language, the food, the dark afternoons. Everything would be easier at home right now."
+      },
+      "options": [
+        {
+          "id": "bring_family",
+          "label": {
+            "de": "Familie nachholen",
+            "en": "Bring the family over"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 12
+            }
+          },
+          "motif": "travel"
+        },
+        {
+          "id": "learn_language",
+          "label": {
+            "de": "Die Sprache lernen",
+            "en": "Learn the language"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 6,
+              "fanSupport": 8
+            },
+            "permanentOverall": 0.2
+          },
+          "motif": "dressing_room"
+        },
+        {
+          "id": "ask_to_leave",
+          "label": {
+            "de": "Um einen Wechsel bitten",
+            "en": "Ask to leave"
+          },
+          "modifiers": {
+            "forceTransfer": {
+              "scope": "home_country"
+            },
+            "meters": {
+              "morale": 8,
+              "fanSupport": -10
+            }
+          },
+          "motif": "travel"
+        }
+      ],
+      "category": "personal"
+    },
+    {
+      "id": "new_agent",
+      "weight": 45,
+      "window": "summer",
+      "ageRange": [
+        19,
+        34
+      ],
+      "maxPerCareer": 3,
+      "title": {
+        "de": "Ein anderer Berater klopft an",
+        "en": "Another agent comes calling"
+      },
+      "text": {
+        "de": "Er verspricht mehr Geld, größere Vereine und weniger Ärger. Dein jetziger Berater hat dich immerhin hierhergebracht.",
+        "en": "He promises more money, bigger clubs and less hassle. Your current agent did get you this far, though."
+      },
+      "options": [
+        {
+          "id": "switch",
+          "label": {
+            "de": "Wechseln",
+            "en": "Switch"
+          },
+          "risky": true,
+          "modifiers": {
+            "marketInterestDelta": 12,
+            "meters": {
+              "morale": -4
+            },
+            "schedules": {
+              "eventId": "agent_fallout",
+              "chance": 0.3,
+              "afterHalves": 2
+            }
+          },
+          "motif": "contract"
+        },
+        {
+          "id": "stay_loyal",
+          "label": {
+            "de": "Bleiben",
+            "en": "Stay put"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 5
+            }
+          },
+          "motif": "dressing_room"
+        }
+      ],
+      "category": "contract"
+    },
+    {
+      "id": "agent_fallout",
+      "weight": 0,
+      "window": "any",
+      "ageRange": [
+        18,
+        40
+      ],
+      "maxPerCareer": 99,
+      "title": {
+        "de": "Streit mit dem Berater",
+        "en": "Falling out with your agent"
+      },
+      "text": {
+        "de": "Die Versprechen von damals sind nicht eingetroffen, dafür liegt eine Rechnung auf dem Tisch, die niemand erklärt hat.",
+        "en": "None of the promises came true, but there is an invoice on the table nobody explained."
+      },
+      "options": [
+        {
+          "id": "pay_and_go",
+          "label": {
+            "de": "Zahlen und trennen",
+            "en": "Pay up and part ways"
+          },
+          "modifiers": {
+            "marketValueMultiplier": 0.97,
+            "meters": {
+              "morale": -3
+            }
+          },
+          "motif": "travel"
+        },
+        {
+          "id": "fight_it",
+          "label": {
+            "de": "Vor Gericht gehen",
+            "en": "Take it to court"
+          },
+          "risky": true,
+          "modifiers": {
+            "meters": {
+              "morale": -10,
+              "mediaRelation": -12
+            },
+            "marketInterestDelta": -10
+          },
+          "motif": "contract"
+        }
+      ],
+      "category": "contract"
+    },
+    {
+      "id": "wage_late",
+      "weight": 35,
+      "window": "winter",
+      "ageRange": [
+        18,
+        38
+      ],
+      "maxPerCareer": 2,
+      "requires": {
+        "maxDomesticReputation": 5
+      },
+      "title": {
+        "de": "Das Gehalt kommt zu spät",
+        "en": "The wages are late"
+      },
+      "text": {
+        "de": "Zum zweiten Mal in Folge ist am Monatsende nichts angekommen. In der Kabine wird über Streik geredet.",
+        "en": "For the second month running nothing has arrived. The dressing room is talking about refusing to train."
+      },
+      "options": [
+        {
+          "id": "join_protest",
+          "label": {
+            "de": "Mitmachen",
+            "en": "Join the protest"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 4,
+              "fanSupport": -8
+            },
+            "appearanceMultiplier": 0.9
+          },
+          "motif": "travel"
+        },
+        {
+          "id": "stay_out",
+          "label": {
+            "de": "Sich raushalten",
+            "en": "Stay out of it"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": -5,
+              "fanSupport": 4
+            }
+          },
+          "motif": "dressing_room"
+        },
+        {
+          "id": "speak_publicly",
+          "label": {
+            "de": "Öffentlich Stellung nehmen",
+            "en": "Say it publicly"
+          },
+          "risky": true,
+          "modifiers": {
+            "meters": {
+              "mediaRelation": 10,
+              "morale": -6
+            },
+            "marketInterestDelta": 6
+          },
+          "motif": "media"
+        }
+      ],
+      "category": "contract"
+    },
+    {
+      "id": "investor_arrives",
+      "weight": 35,
+      "window": "summer",
+      "ageRange": [
+        18,
+        36
+      ],
+      "maxPerCareer": 2,
+      "title": {
+        "de": "Ein Investor steigt ein",
+        "en": "An investor buys in"
+      },
+      "text": {
+        "de": "Auf einmal ist Geld da. Der Kader wird umgebaut, und niemand weiß, wer im Herbst noch hier ist.",
+        "en": "Suddenly there is money. The squad is being rebuilt, and nobody knows who will still be here in autumn."
+      },
+      "options": [
+        {
+          "id": "embrace",
+          "label": {
+            "de": "Sich anbieten",
+            "en": "Put yourself forward"
+          },
+          "modifiers": {
+            "marketInterestDelta": 8,
+            "meters": {
+              "morale": 4
+            }
+          },
+          "motif": "dressing_room"
+        },
+        {
+          "id": "wait_and_see",
+          "label": {
+            "de": "Abwarten",
+            "en": "Wait and see"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": -2
+            }
+          },
+          "motif": "dressing_room"
+        }
+      ],
+      "category": "club"
+    },
+    {
+      "id": "training_camp_row",
+      "weight": 40,
+      "window": "summer",
+      "ageRange": [
+        18,
+        36
+      ],
+      "maxPerCareer": 3,
+      "title": {
+        "de": "Ärger im Trainingslager",
+        "en": "Trouble at the training camp"
+      },
+      "text": {
+        "de": "Nach dem dritten Tag im selben Hotel liegen die Nerven blank. Zwei Mitspieler gehen aufeinander los, und du stehst daneben.",
+        "en": "After three days in the same hotel everyone is on edge. Two team-mates go at each other, and you are standing right there."
+      },
+      "options": [
+        {
+          "id": "break_it_up",
+          "label": {
+            "de": "Dazwischengehen",
+            "en": "Break it up"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 6
+            },
+            "setCaptain": false
+          },
+          "motif": "dressing_room"
+        },
+        {
+          "id": "pick_a_side",
+          "label": {
+            "de": "Partei ergreifen",
+            "en": "Take a side"
+          },
+          "risky": true,
+          "modifiers": {
+            "meters": {
+              "morale": -8
+            },
+            "roleShift": -1
+          },
+          "motif": "dressing_room"
+        },
+        {
+          "id": "walk_away",
+          "label": {
+            "de": "Weggehen",
+            "en": "Walk away"
+          },
+          "modifiers": {},
+          "motif": "dressing_room"
+        }
+      ],
+      "category": "club"
+    },
+    {
+      "id": "misquoted",
+      "weight": 50,
+      "window": "any",
+      "ageRange": [
+        18,
+        38
+      ],
+      "maxPerCareer": 3,
+      "title": {
+        "de": "Falsch zitiert",
+        "en": "Misquoted"
+      },
+      "text": {
+        "de": "Aus einem Halbsatz über den Trainer ist eine Schlagzeile geworden, die du so nie gesagt hast.",
+        "en": "Half a sentence about the coach has turned into a headline you never said."
+      },
+      "options": [
+        {
+          "id": "demand_correction",
+          "label": {
+            "de": "Richtigstellung verlangen",
+            "en": "Demand a correction"
+          },
+          "modifiers": {
+            "meters": {
+              "mediaRelation": -8,
+              "morale": 4
+            }
+          },
+          "motif": "media"
+        },
+        {
+          "id": "let_it_go",
+          "label": {
+            "de": "Laufen lassen",
+            "en": "Let it go"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": -4
+            }
+          },
+          "motif": "travel"
+        },
+        {
+          "id": "own_it",
+          "label": {
+            "de": "Dazu stehen",
+            "en": "Own it"
+          },
+          "risky": true,
+          "modifiers": {
+            "meters": {
+              "mediaRelation": 10,
+              "morale": -6
+            },
+            "marketInterestDelta": 5
+          },
+          "motif": "media"
+        }
+      ],
+      "category": "media"
+    },
+    {
+      "id": "video_goes_viral",
+      "weight": 40,
+      "window": "any",
+      "ageRange": [
+        17,
+        32
+      ],
+      "maxPerCareer": 2,
+      "title": {
+        "de": "Ein Video geht viral",
+        "en": "A video goes viral"
+      },
+      "text": {
+        "de": "Ein Trick aus dem Aufwärmen ist über Nacht überall. Zwei Millionen Aufrufe, und plötzlich kennt dich jeder.",
+        "en": "A trick from the warm-up is everywhere overnight. Two million views, and suddenly everyone knows you."
+      },
+      "options": [
+        {
+          "id": "ride_it",
+          "label": {
+            "de": "Die Welle mitnehmen",
+            "en": "Ride the wave"
+          },
+          "modifiers": {
+            "fansMultiplier": 1.25,
+            "meters": {
+              "mediaRelation": 8
+            },
+            "marketInterestDelta": 8
+          },
+          "motif": "media"
+        },
+        {
+          "id": "stay_quiet",
+          "label": {
+            "de": "Ruhig bleiben",
+            "en": "Keep your head down"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 4
+            },
+            "fansMultiplier": 1.05
+          },
+          "motif": "dressing_room"
+        }
+      ],
+      "category": "media"
+    },
+    {
+      "id": "social_media_slip",
+      "weight": 35,
+      "window": "any",
+      "ageRange": [
+        17,
+        30
+      ],
+      "maxPerCareer": 2,
+      "risky": true,
+      "title": {
+        "de": "Ein Ausrutscher im Netz",
+        "en": "A slip online"
+      },
+      "text": {
+        "de": "Ein alter Beitrag von dir macht die Runde. Er ist zehn Jahre alt und liest sich heute schlecht.",
+        "en": "An old post of yours is doing the rounds. It is ten years old and reads badly today."
+      },
+      "options": [
+        {
+          "id": "apologise",
+          "label": {
+            "de": "Sich entschuldigen",
+            "en": "Apologise"
+          },
+          "modifiers": {
+            "meters": {
+              "mediaRelation": 4,
+              "morale": -4
+            }
+          },
+          "motif": "media"
+        },
+        {
+          "id": "delete_quietly",
+          "label": {
+            "de": "Still löschen",
+            "en": "Delete it quietly"
+          },
+          "modifiers": {
+            "meters": {
+              "mediaRelation": -8
+            },
+            "fansMultiplier": 0.92
+          },
+          "motif": "media"
+        }
+      ],
+      "category": "media"
+    },
+    {
+      "id": "documentary",
+      "weight": 30,
+      "window": "summer",
+      "ageRange": [
+        20,
+        34
+      ],
+      "maxPerCareer": 1,
+      "requires": {
+        "minOverall": 74
+      },
+      "title": {
+        "de": "Eine Dokumentation über dich",
+        "en": "A documentary about you"
+      },
+      "text": {
+        "de": "Ein Team will dich eine Saison lang begleiten, auch dann, wenn es nicht läuft.",
+        "en": "A crew wants to follow you for a season, including the parts where it goes wrong."
+      },
+      "options": [
+        {
+          "id": "full_access",
+          "label": {
+            "de": "Alles zeigen",
+            "en": "Give them everything"
+          },
+          "risky": true,
+          "modifiers": {
+            "fansMultiplier": 1.4,
+            "meters": {
+              "mediaRelation": 15,
+              "morale": -6
+            },
+            "marketInterestDelta": 12
+          },
+          "motif": "media"
+        },
+        {
+          "id": "limited",
+          "label": {
+            "de": "Nur das Sportliche",
+            "en": "Only the football"
+          },
+          "modifiers": {
+            "fansMultiplier": 1.15,
+            "meters": {
+              "mediaRelation": 6
+            }
+          },
+          "motif": "media"
+        },
+        {
+          "id": "decline_doc",
+          "label": {
+            "de": "Ablehnen",
+            "en": "Say no"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 3
+            }
+          },
+          "motif": "media"
+        }
+      ],
+      "category": "media"
+    },
+    {
+      "id": "react_lost_spot",
+      "weight": 90,
+      "window": "any",
+      "ageRange": [
+        17,
+        38
+      ],
+      "maxPerCareer": 99,
+      "triggeredBy": [
+        "lost_starting_spot"
+      ],
+      "title": {
+        "de": "Du sitzt plötzlich draußen",
+        "en": "Suddenly you are out of the team"
+      },
+      "text": {
+        "de": "Zwei Spiele auf der Bank, und der Trainer sagt nichts dazu. Irgendetwas musst du damit machen.",
+        "en": "Two games on the bench and the coach has said nothing about it. You have to do something with that."
+      },
+      "options": [
+        {
+          "id": "ask_for_talk",
+          "label": {
+            "de": "Um ein Gespräch bitten",
+            "en": "Ask for a conversation"
+          },
+          "modifiers": {
+            "rerollRole": true,
+            "meters": {
+              "morale": 4
+            }
+          },
+          "motif": "dressing_room"
+        },
+        {
+          "id": "work_harder",
+          "label": {
+            "de": "Im Training antworten",
+            "en": "Answer in training"
+          },
+          "modifiers": {
+            "deferredOverall": {
+              "delta": 0.5,
+              "afterSeasons": 1
+            },
+            "meters": {
+              "morale": -3
+            }
+          },
+          "motif": "training"
+        },
+        {
+          "id": "push_for_exit",
+          "label": {
+            "de": "Auf einen Wechsel drängen",
+            "en": "Push for a move"
+          },
+          "modifiers": {
+            "marketInterestDelta": 10,
+            "meters": {
+              "fanSupport": -8
+            }
+          },
+          "motif": "travel"
+        }
+      ],
+      "category": "club"
+    },
+    {
+      "id": "react_scoring_run",
+      "weight": 90,
+      "window": "any",
+      "ageRange": [
+        17,
+        38
+      ],
+      "maxPerCareer": 99,
+      "triggeredBy": [
+        "scoring_run"
+      ],
+      "title": {
+        "de": "Du triffst nach Belieben",
+        "en": "You cannot stop scoring"
+      },
+      "text": {
+        "de": "Sechs Spiele, acht Tore. Die Presse ruft an, der Verein will verlängern, und dein Berater sagt, du sollst warten.",
+        "en": "Six games, eight goals. The press are calling, the club wants to extend, and your agent says wait."
+      },
+      "options": [
+        {
+          "id": "sign_extension",
+          "label": {
+            "de": "Sofort verlängern",
+            "en": "Extend now"
+          },
+          "modifiers": {
+            "meters": {
+              "fanSupport": 12,
+              "morale": 6
+            },
+            "marketValueMultiplier": 1.08
+          },
+          "motif": "contract"
+        },
+        {
+          "id": "let_it_run",
+          "label": {
+            "de": "Laufen lassen",
+            "en": "Let it run"
+          },
+          "risky": true,
+          "modifiers": {
+            "marketInterestDelta": 15,
+            "meters": {
+              "fanSupport": -5
+            }
+          },
+          "motif": "training"
+        },
+        {
+          "id": "talk_to_press",
+          "label": {
+            "de": "Mit der Presse reden",
+            "en": "Talk to the press"
+          },
+          "modifiers": {
+            "meters": {
+              "mediaRelation": 10
+            },
+            "fansMultiplier": 1.15
+          },
+          "motif": "media"
+        }
+      ],
+      "category": "training"
+    },
+    {
+      "id": "react_drought",
+      "weight": 85,
+      "window": "any",
+      "ageRange": [
+        17,
+        38
+      ],
+      "maxPerCareer": 99,
+      "triggeredBy": [
+        "goal_drought"
+      ],
+      "title": {
+        "de": "Der Ball will nicht rein",
+        "en": "The ball will not go in"
+      },
+      "text": {
+        "de": "Eine halbe Saison ohne Tor. Im Stadion wird es still, wenn du den Ball bekommst.",
+        "en": "Half a season without a goal. The stadium goes quiet when the ball reaches you."
+      },
+      "options": [
+        {
+          "id": "extra_shooting",
+          "label": {
+            "de": "Nach dem Training bleiben",
+            "en": "Stay behind and shoot"
+          },
+          "modifiers": {
+            "goalMultiplier": 1.2,
+            "meters": {
+              "morale": -2
+            }
+          },
+          "motif": "training"
+        },
+        {
+          "id": "see_psychologist",
+          "label": {
+            "de": "Mit einem Psychologen arbeiten",
+            "en": "Work with a psychologist"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 12
+            },
+            "deferredOverall": {
+              "delta": 0.4,
+              "afterSeasons": 1
+            }
+          },
+          "motif": "training"
+        },
+        {
+          "id": "drop_deeper",
+          "label": {
+            "de": "Tiefer spielen",
+            "en": "Drop deeper"
+          },
+          "modifiers": {
+            "assistMultiplier": 1.25,
+            "goalMultiplier": 0.9
+          },
+          "motif": "training"
+        }
+      ],
+      "category": "training"
+    },
+    {
+      "id": "react_injury_return",
+      "weight": 90,
+      "window": "any",
+      "ageRange": [
+        17,
+        38
+      ],
+      "maxPerCareer": 99,
+      "triggeredBy": [
+        "was_injured"
+      ],
+      "title": {
+        "de": "Zurück auf dem Platz",
+        "en": "Back on the pitch"
+      },
+      "text": {
+        "de": "Die Reha läuft nach Plan. Der Trainer fragt, ob es für die Bank reicht, der Arzt schüttelt den Kopf.",
+        "en": "The rehab is on schedule. The coach asks if you could make the bench, the doctor shakes his head."
+      },
+      "options": [
+        {
+          "id": "take_time",
+          "label": {
+            "de": "Sich Zeit lassen",
+            "en": "Take the time"
+          },
+          "modifiers": {
+            "missShare": 0.25,
+            "meters": {
+              "morale": 3
+            }
+          },
+          "motif": "hospital"
+        },
+        {
+          "id": "come_back_early",
+          "label": {
+            "de": "Früher zurückkommen",
+            "en": "Come back early"
+          },
+          "risky": true,
+          "modifiers": {
+            "meters": {
+              "morale": 6,
+              "fanSupport": 6
+            },
+            "schedules": {
+              "eventId": "injury_relapse",
+              "chance": 0.4,
+              "afterHalves": 1
+            }
+          },
+          "motif": "hospital"
+        }
+      ],
+      "category": "injury"
+    },
+    {
+      "id": "injury_relapse",
+      "weight": 0,
+      "window": "any",
+      "ageRange": [
+        17,
+        40
+      ],
+      "maxPerCareer": 99,
+      "title": {
+        "de": "Rückfall",
+        "en": "A relapse"
+      },
+      "text": {
+        "de": "Dieselbe Stelle, derselbe Schmerz, nur schlimmer. Diesmal redet niemand mehr von ein paar Wochen.",
+        "en": "Same spot, same pain, only worse. This time nobody is talking about a few weeks."
+      },
+      "options": [
+        {
+          "id": "full_rehab",
+          "label": {
+            "de": "Diesmal richtig",
+            "en": "Do it properly this time"
+          },
+          "modifiers": {
+            "missShare": 0.6,
+            "meters": {
+              "morale": -10
+            },
+            "permanentOverall": -0.5
+          },
+          "motif": "hospital"
+        },
+        {
+          "id": "surgery",
+          "label": {
+            "de": "Operieren lassen",
+            "en": "Have the operation"
+          },
+          "modifiers": {
+            "forceZeroAppearances": true,
+            "deferredOverall": {
+              "delta": 0.5,
+              "afterSeasons": 1
+            },
+            "meters": {
+              "morale": -12
+            }
+          },
+          "motif": "hospital"
+        }
+      ],
+      "category": "injury"
+    },
+    {
+      "id": "react_new_coach",
+      "weight": 85,
+      "window": "any",
+      "ageRange": [
+        17,
+        38
+      ],
+      "maxPerCareer": 99,
+      "triggeredBy": [
+        "new_coach"
+      ],
+      "title": {
+        "de": "Der Neue hat eigene Vorstellungen",
+        "en": "The new coach has his own ideas"
+      },
+      "text": {
+        "de": "Anderes System, andere Sprache, andere Lieblinge. In den ersten Wochen entscheidet sich, wo du stehst.",
+        "en": "Different system, different language, different favourites. The first weeks decide where you stand."
+      },
+      "options": [
+        {
+          "id": "adapt",
+          "label": {
+            "de": "Sich anpassen",
+            "en": "Adapt to him"
+          },
+          "modifiers": {
+            "rerollRole": true,
+            "meters": {
+              "morale": -3
+            }
+          },
+          "motif": "dressing_room"
+        },
+        {
+          "id": "stick_to_game",
+          "label": {
+            "de": "Bei deinem Spiel bleiben",
+            "en": "Stick to your game"
+          },
+          "risky": true,
+          "modifiers": {
+            "goalMultiplier": 1.1,
+            "roleShift": -1
+          },
+          "motif": "ball"
+        },
+        {
+          "id": "seek_him_out",
+          "label": {
+            "de": "Das Gespräch suchen",
+            "en": "Seek him out"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 6
+            },
+            "appearanceMultiplier": 1.06
+          },
+          "motif": "dressing_room"
+        }
+      ],
+      "category": "club"
+    },
+    {
+      "id": "react_bench",
+      "weight": 80,
+      "window": "any",
+      "ageRange": [
+        17,
+        24
+      ],
+      "maxPerCareer": 99,
+      "triggeredBy": [
+        "benched"
+      ],
+      "title": {
+        "de": "Zu wenig Spiele",
+        "en": "Not enough football"
+      },
+      "text": {
+        "de": "Ein paar Minuten hier, eine Einwechslung dort. In deinem Alter ist das verlorene Zeit.",
+        "en": "A few minutes here, a substitute appearance there. At your age that is time lost."
+      },
+      "options": [
+        {
+          "id": "ask_for_loan",
+          "label": {
+            "de": "Um eine Leihe bitten",
+            "en": "Ask for a loan"
+          },
+          "modifiers": {
+            "forceTransfer": {
+              "scope": "lower"
+            },
+            "meters": {
+              "morale": 5
+            }
+          },
+          "motif": "travel"
+        },
+        {
+          "id": "stay_and_train",
+          "label": {
+            "de": "Bleiben und trainieren",
+            "en": "Stay and train"
+          },
+          "modifiers": {
+            "deferredOverall": {
+              "delta": 0.6,
+              "afterSeasons": 1
+            },
+            "meters": {
+              "morale": -6
+            }
+          },
+          "motif": "training"
+        }
+      ],
+      "category": "club"
+    },
+    {
+      "id": "react_interest",
+      "weight": 80,
+      "window": "summer",
+      "ageRange": [
+        18,
+        34
+      ],
+      "maxPerCareer": 99,
+      "triggeredBy": [
+        "transfer_interest"
+      ],
+      "title": {
+        "de": "Ein Scout sitzt auf der Tribüne",
+        "en": "A scout in the stands"
+      },
+      "text": {
+        "de": "Seit Wochen sitzt derselbe Mann oben und schreibt mit. Dein Berater weiß, für wen er arbeitet, sagt es aber nicht.",
+        "en": "The same man has been up there for weeks, taking notes. Your agent knows who he works for and will not say."
+      },
+      "options": [
+        {
+          "id": "play_for_him",
+          "label": {
+            "de": "Für ihn spielen",
+            "en": "Play for him"
+          },
+          "risky": true,
+          "modifiers": {
+            "goalMultiplier": 1.15,
+            "assistMultiplier": 0.9,
+            "marketInterestDelta": 8
+          },
+          "motif": "ball"
+        },
+        {
+          "id": "ignore_stands",
+          "label": {
+            "de": "Nicht hinsehen",
+            "en": "Do not look up"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 4
+            },
+            "permanentOverall": 0.15
+          },
+          "motif": "travel"
+        }
+      ],
+      "category": "transfer"
+    },
+    {
+      "id": "react_first_cap",
+      "weight": 85,
+      "window": "any",
+      "ageRange": [
+        17,
+        34
+      ],
+      "maxPerCareer": 2,
+      "triggeredBy": [
+        "first_call_up"
+      ],
+      "title": {
+        "de": "Die erste Berufung",
+        "en": "Your first call-up"
+      },
+      "text": {
+        "de": "Der Brief liegt im Spind. Zu Hause weinen sie, und dein Verein rechnet aus, wie viele Spiele du deshalb verpasst.",
+        "en": "The letter is in your locker. At home they are crying, and your club is counting the games you will miss."
+      },
+      "options": [
+        {
+          "id": "go_all_in",
+          "label": {
+            "de": "Alles darauf setzen",
+            "en": "Put everything into it"
+          },
+          "modifiers": {
+            "nationalTeam": "force",
+            "meters": {
+              "morale": 15,
+              "mediaRelation": 8
+            },
+            "fansMultiplier": 1.2
+          },
+          "motif": "travel"
+        },
+        {
+          "id": "club_first",
+          "label": {
+            "de": "Der Verein geht vor",
+            "en": "The club comes first"
+          },
+          "modifiers": {
+            "meters": {
+              "fanSupport": 10
+            },
+            "appearanceMultiplier": 1.05
+          },
+          "motif": "dressing_room"
+        }
+      ],
+      "category": "national"
+    },
+    {
+      "id": "react_title",
+      "weight": 70,
+      "window": "summer",
+      "ageRange": [
+        17,
+        38
+      ],
+      "maxPerCareer": 99,
+      "triggeredBy": [
+        "won_title"
+      ],
+      "title": {
+        "de": "Nach dem Titel",
+        "en": "After the title"
+      },
+      "text": {
+        "de": "Die Feier ist vorbei, die Angebote liegen auf dem Tisch. Ein Titel öffnet Türen, aber nicht ewig.",
+        "en": "The party is over and the offers are on the table. A title opens doors, but not forever."
+      },
+      "options": [
+        {
+          "id": "cash_in",
+          "label": {
+            "de": "Jetzt wechseln",
+            "en": "Move now"
+          },
+          "modifiers": {
+            "marketInterestDelta": 14,
+            "meters": {
+              "fanSupport": -10
+            }
+          },
+          "motif": "travel"
+        },
+        {
+          "id": "defend_it",
+          "label": {
+            "de": "Titel verteidigen",
+            "en": "Defend it"
+          },
+          "modifiers": {
+            "meters": {
+              "fanSupport": 12,
+              "morale": 8
+            },
+            "trophyMultiplier": {
+              "league": 1.1
+            }
+          },
+          "motif": "dressing_room"
+        }
+      ],
+      "category": "club"
+    },
+    {
+      "id": "penalty_duty",
+      "weight": 45,
+      "window": "summer",
+      "ageRange": [
+        19,
+        36
+      ],
+      "maxPerCareer": 2,
+      "requires": {
+        "minRole": "high_rotation"
+      },
+      "title": {
+        "de": "Wer schießt die Elfmeter?",
+        "en": "Who takes the penalties?"
+      },
+      "text": {
+        "de": "Der bisherige Schütze ist weg. Der Trainer schaut in die Runde, und alle schauen zu Boden.",
+        "en": "The old taker has left. The coach looks around the room and everyone studies their boots."
+      },
+      "options": [
+        {
+          "id": "take_them",
+          "label": {
+            "de": "Übernehmen",
+            "en": "Take them"
+          },
+          "risky": true,
+          "modifiers": {
+            "goalMultiplier": 1.18,
+            "meters": {
+              "morale": -3
+            }
+          },
+          "motif": "training"
+        },
+        {
+          "id": "leave_them",
+          "label": {
+            "de": "Anderen überlassen",
+            "en": "Leave them to someone else"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 3
+            }
+          },
+          "motif": "travel"
+        }
+      ],
+      "category": "training"
+    },
+    {
+      "id": "armband_offer",
+      "weight": 40,
+      "window": "summer",
+      "ageRange": [
+        24,
+        36
+      ],
+      "maxPerCareer": 1,
+      "requires": {
+        "minSeasonsAtClub": 2,
+        "notCaptain": true,
+        "minRole": "starter"
+      },
+      "title": {
+        "de": "Die Binde",
+        "en": "The armband"
+      },
+      "text": {
+        "de": "Der Trainer fragt, ob du Kapitän sein willst. Es bedeutet Verantwortung, Interviews und Ärger, den andere machen.",
+        "en": "The coach asks if you want to be captain. It means responsibility, interviews and trouble other people cause."
+      },
+      "options": [
+        {
+          "id": "take_armband",
+          "label": {
+            "de": "Annehmen",
+            "en": "Take it"
+          },
+          "modifiers": {
+            "setCaptain": true,
+            "meters": {
+              "morale": 10,
+              "fanSupport": 10,
+              "mediaRelation": 5
+            }
+          },
+          "motif": "dressing_room"
+        },
+        {
+          "id": "decline_armband",
+          "label": {
+            "de": "Ablehnen",
+            "en": "Turn it down"
+          },
+          "modifiers": {
+            "meters": {
+              "morale": 3
+            }
+          },
+          "motif": "dressing_room"
+        }
+      ],
+      "category": "club"
+    },
+    {
+      "id": "bad_investment",
+      "weight": 35,
+      "window": "summer",
+      "ageRange": [
+        23,
+        38
+      ],
+      "maxPerCareer": 2,
+      "risky": true,
+      "requires": {
+        "minMarketValue": 3000000
+      },
+      "title": {
+        "de": "Das Investment geht schief",
+        "en": "The investment goes wrong"
+      },
+      "text": {
+        "de": "Das Restaurant, an dem du dich beteiligt hast, macht zu. Der Anteil ist weg, und die Zeitung weiß es schon.",
+        "en": "The restaurant you put money into is closing. The stake is gone, and the papers already know."
+      },
+      "options": [
+        {
+          "id": "cut_losses",
+          "label": {
+            "de": "Schluss machen",
+            "en": "Cut your losses"
+          },
+          "modifiers": {
+            "marketValueMultiplier": 0.96,
+            "meters": {
+              "morale": -5
+            }
+          },
+          "motif": "contract"
+        },
+        {
+          "id": "double_down",
+          "label": {
+            "de": "Nachschießen",
+            "en": "Put more in"
+          },
+          "risky": true,
+          "modifiers": {
+            "meters": {
+              "morale": -10,
+              "mediaRelation": -6
+            }
+          },
+          "motif": "contract"
+        }
+      ],
+      "category": "contract"
     }
   ],
   "$risky": "Mit \"risky\" markierte Ereignisse treten bei temperamentvollen Spielern häufiger auf, und ihre riskanten Optionen gehen dort öfter schief."
