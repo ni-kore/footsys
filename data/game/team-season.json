@@ -1,24 +1,24 @@
 {
-  "$comment": "Wie eine Mannschaft ihre Saison spielt. Titel folgen aus dem Tabellenplatz und aus Pokalrunden, nicht mehr aus einem einzelnen Wurf gegen die Vereinsreputation. Der Verein bleibt dabei der bestimmende Teil, der eigene Beitrag verschiebt nur.",
+  "$comment": "Wie eine Mannschaft ihre Saison spielt. Die Liga wird wirklich gespielt: jeder Verein der Spielklasse bekommt eine Saisonstärke aus Reputation und Form, danach steht die Tabelle. Der eigene Platz ist der Rang darin, verschoben um den Beitrag des Spielers. Es gibt also je Saison genau einen Meister, und wer bei einem kleinen Verein spielt, muss an allen Großen vorbei.",
   "position": {
-    "$comment": "Erwarteter Tabellenplatz als Anteil der Ligagröße, nach heimischer Reputation 0 bis 10. 0.05 heißt: ein Verein dieser Stufe wird im Mittel unter den besten fünf Prozent erwartet.",
-    "shareByReputation": {
-      "0": 0.86,
-      "1": 0.8,
-      "2": 0.72,
-      "3": 0.62,
-      "4": 0.52,
-      "5": 0.42,
-      "6": 0.32,
-      "7": 0.24,
-      "8": 0.16,
-      "9": 0.1,
-      "10": 0.06
+    "$comment": "Die Tabelle entsteht aus dem Vergleich aller Vereine einer Spielklasse. strengthByReputation gibt die Saisonstärke je heimischer Reputation, formSpread die Streuung der Form in denselben Einheiten.",
+    "strengthByReputation": {
+      "0": 0,
+      "1": 8,
+      "2": 16,
+      "3": 25,
+      "4": 34,
+      "5": 43,
+      "6": 52,
+      "7": 61,
+      "8": 70,
+      "9": 79,
+      "10": 88
     },
-    "$spread": "Streuung des Platzes als Anteil der Ligagröße. Hier steckt das Glück: eine Saison kann geraten oder danebengehen.",
-    "spreadShare": 0.11,
-    "$minSpread": "Auch in kleinen Ligen bleibt etwas Zufall.",
-    "minSpread": 1.4
+    "$formSpread": "Etwa anderthalb Reputationsstufen: eine gute Saison hebt einen Verein über den nächsthöheren, drei Stufen überspringt man nicht.",
+    "formSpread": 14,
+    "$fieldReputation": "Reputation der Vereine, die in den Daten fehlen. Sie füllen die Tabelle auf die volle Ligagröße auf, damit eine dünn besetzte Liga nicht leichter zu gewinnen ist.",
+    "fieldReputation": 1
   },
   "contribution": {
     "$comment": "Der eigene Beitrag verschiebt den Tabellenplatz um Plätze. Er wächst mit Einsatzzeit und mit dem Abstand zum Niveau, das ein Stammspieler dieses Vereins normalerweise hat.",
@@ -53,20 +53,13 @@
   "domesticCup": {
     "$comment": "Der Pokal ist ein Ausscheidungswettbewerb, deshalb entscheidet er sich in Runden. Je Runde eine Siegchance, abgeleitet aus der Stärke der Mannschaft in dieser Saison. Der Zufall ist hier größer als in der Liga.",
     "rounds": 5,
-    "$winPerRound": "Siegchance je Runde nach heimischer Reputation. Sechs Siege in Folge sind auch für die Größten selten.",
-    "winPerRoundByReputation": {
-      "0": 0.42,
-      "1": 0.46,
-      "2": 0.5,
-      "3": 0.55,
-      "4": 0.6,
-      "5": 0.65,
-      "6": 0.7,
-      "7": 0.74,
-      "8": 0.78,
-      "9": 0.81,
-      "10": 0.84
-    },
+    "$winPerRound": "Siegchance je Runde, gemessen am eigenen Feld: im Pokal spielt man gegen die eigene Liga, nicht gegen die Welt. Ausschlaggebend ist der Anteil der Ligakonkurrenz, der schwächer ist.",
+    "winPerRoundBase": 0.35,
+    "winPerRoundPerRank": 0.45,
+    "winPerRoundRange": [
+      0.2,
+      0.85
+    ],
     "$seasonBonus": "Eine starke Saison hilft auch im Pokal. Zuschlag auf die Rundenchance je Platz, den der eigene Beitrag gutmacht.",
     "seasonBonusPerShift": 0.012
   },

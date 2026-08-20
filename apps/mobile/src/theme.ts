@@ -13,7 +13,9 @@ export const layout = tokens.layout;
 
 /** Farbe für einen Bewertungswert 0–100. */
 export function ratingColor(value: number): string {
-  if (value >= 85) return color.rating.elite;
+  // Ab 85 nicht mehr das Markengrün, sondern das Gold der Spitzenstufe:
+  // dieselbe Sprache wie auf der Wertkarte.
+  if (value >= 85) return color.tier.elite;
   if (value >= 75) return color.rating.strong;
   if (value >= 62) return color.rating.average;
   if (value >= 50) return color.rating.weak;

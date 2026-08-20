@@ -1,0 +1,277 @@
+{
+  "country": "NOR",
+  "clubs": [
+    {
+      "id": "bodo-glimt",
+      "league": "nor-eliteserien",
+      "name": "FK Bodø/Glimt",
+      "short": "Bodø/Glimt",
+      "abbr": "BOD",
+      "city": "Bodø",
+      "colors": [
+        "#FFD500",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 8,
+        "continental": 4,
+        "international": 4
+      }
+    },
+    {
+      "id": "molde-fk",
+      "league": "nor-eliteserien",
+      "name": "Molde FK",
+      "short": "Molde",
+      "abbr": "MOL",
+      "city": "Molde",
+      "colors": [
+        "#003DA5",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 7,
+        "continental": 3,
+        "international": 3
+      }
+    },
+    {
+      "id": "rosenborg-bk",
+      "league": "nor-eliteserien",
+      "name": "Rosenborg BK",
+      "short": "Rosenborg",
+      "abbr": "RBK",
+      "city": "Trondheim",
+      "colors": [
+        "#FFFFFF",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 7,
+        "continental": 2,
+        "international": 4
+      }
+    },
+    {
+      "id": "sk-brann",
+      "league": "nor-eliteserien",
+      "name": "SK Brann",
+      "short": "Brann",
+      "abbr": "BRA",
+      "city": "Bergen",
+      "colors": [
+        "#C8102E",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 6,
+        "continental": 2,
+        "international": 2
+      }
+    },
+    {
+      "id": "viking-fk",
+      "league": "nor-eliteserien",
+      "name": "Viking FK",
+      "short": "Viking",
+      "abbr": "VIK",
+      "city": "Stavanger",
+      "colors": [
+        "#002F87",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 5,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "lillestrom-sk",
+      "league": "nor-eliteserien",
+      "name": "Lillestrøm SK",
+      "short": "Lillestrøm",
+      "abbr": "LSK",
+      "city": "Lillestrøm",
+      "colors": [
+        "#FFE000",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 1,
+        "international": 1
+      }
+    },
+    {
+      "id": "valerenga",
+      "league": "nor-eliteserien",
+      "name": "Vålerenga Fotball",
+      "short": "Vålerenga",
+      "abbr": "VIF",
+      "city": "Oslo",
+      "colors": [
+        "#003DA5",
+        "#C8102E"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "tromso-il",
+      "league": "nor-eliteserien",
+      "name": "Tromsø IL",
+      "short": "Tromsø",
+      "abbr": "TIL",
+      "city": "Tromsø",
+      "colors": [
+        "#DA291C",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 1,
+        "international": 1
+      }
+    },
+    {
+      "id": "sarpsborg-08",
+      "league": "nor-eliteserien",
+      "name": "Sarpsborg 08 FF",
+      "short": "Sarpsborg 08",
+      "abbr": "SAR",
+      "city": "Sarpsborg",
+      "colors": [
+        "#003DA5",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "fredrikstad-fk",
+      "league": "nor-eliteserien",
+      "name": "Fredrikstad FK",
+      "short": "Fredrikstad",
+      "abbr": "FFK",
+      "city": "Fredrikstad",
+      "colors": [
+        "#C8102E",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "fk-haugesund",
+      "league": "nor-eliteserien",
+      "name": "FK Haugesund",
+      "short": "Haugesund",
+      "abbr": "HAU",
+      "city": "Haugesund",
+      "colors": [
+        "#FFFFFF",
+        "#003DA5"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "stromsgodset",
+      "league": "nor-eliteserien",
+      "name": "Strømsgodset IF",
+      "short": "Strømsgodset",
+      "abbr": "SIF",
+      "city": "Drammen",
+      "colors": [
+        "#0033A0",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "sandefjord-fotball",
+      "league": "nor-eliteserien",
+      "name": "Sandefjord Fotball",
+      "short": "Sandefjord",
+      "abbr": "SAN",
+      "city": "Sandefjord",
+      "colors": [
+        "#0033A0",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kristiansund-bk",
+      "league": "nor-eliteserien",
+      "name": "Kristiansund BK",
+      "short": "Kristiansund",
+      "abbr": "KBK",
+      "city": "Kristiansund",
+      "colors": [
+        "#005BAA",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "hamkam",
+      "league": "nor-eliteserien",
+      "name": "Hamarkameratene",
+      "short": "HamKam",
+      "abbr": "HAM",
+      "city": "Hamar",
+      "colors": [
+        "#009639",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kfum-oslo",
+      "league": "nor-eliteserien",
+      "name": "KFUM Oslo",
+      "short": "KFUM Oslo",
+      "abbr": "KFU",
+      "city": "Oslo",
+      "colors": [
+        "#E4002B",
+        "#003DA5"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

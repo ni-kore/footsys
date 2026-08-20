@@ -10,8 +10,8 @@
  * derselben Marke werden zu einem Eintrag zusammengefasst, die neueste
  * gewinnt.
  *
- * Vorhandene Einträge behalten ihre Reichweite: wer sie in der JSON von Hand
- * angehoben hat, verliert das beim nächsten Lauf nicht.
+ * Vorhandene Einträge behalten ihre Reichweite und ihre Bindung: wer sie in
+ * der JSON von Hand angepasst hat, verliert das beim nächsten Lauf nicht.
  *
  *   node scripts/generate-partners.js
  */
@@ -200,17 +200,23 @@ const previous = new Map();
 if (fs.existsSync(dataTarget)) {
   const old = JSON.parse(fs.readFileSync(dataTarget, 'utf8'));
   for (const entry of [...(old.media ?? []), ...(old.kit ?? [])]) {
-    previous.set(entry.id, entry.reach);
+    previous.set(entry.id, entry);
   }
 }
 
 function finish(entry) {
-  const reach = previous.get(entry.id)
+  const before = previous.get(entry.id);
+  const reach = before?.reach
     ?? KIT_BRANDS[entry.id]
     ?? (entry.kind === 'kit' ? 4 : reachFor(entry.id, entry.name));
   const logo = entry.folder + '/' + entry.file;
   const light = isLight(path.join(repoRoot, 'assets', logo));
-  return { id: entry.id, name: entry.name, logo, reach, light };
+  // Ein Vereinssender oder eine Landeszeitung meldet sich nur dort, wo sie
+  // hingehört. Die Zuordnung steht in der JSON und bleibt hier erhalten.
+  const scope = {};
+  if (before?.club) scope.club = before.club;
+  else if (before?.country) scope.country = before.country;
+  return { id: entry.id, ...scope, name: entry.name, logo, reach, light };
 }
 
 const partners = {

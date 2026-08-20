@@ -2,6 +2,23 @@
   "country": "HUN",
   "clubs": [
     {
+      "id": "ferencvarosi-tc",
+      "league": "hun-nb-i",
+      "name": "Ferencvarosi TC",
+      "short": "Ferencvaros",
+      "abbr": "FTC",
+      "city": "Budapest",
+      "colors": [
+        "#00713C",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 2,
+        "international": 2
+      }
+    },
+    {
       "id": "mtk-budapest",
       "league": "hun-nb-i",
       "name": "MTK Budapest",
@@ -13,7 +30,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 0,
+        "domestic": 1,
         "continental": 0,
         "international": 0
       }
@@ -30,7 +47,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 0,
+        "domestic": 1,
         "continental": 0,
         "international": 0
       }
@@ -47,7 +64,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 0,
+        "domestic": 1,
         "continental": 0,
         "international": 0
       }
@@ -64,7 +81,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 0,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -81,7 +98,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 0,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }
@@ -98,9 +115,9 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 0,
-        "continental": 0,
-        "international": 0
+        "domestic": 3,
+        "continental": 1,
+        "international": 1
       }
     },
     {
@@ -115,7 +132,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 0,
+        "domestic": 2,
         "continental": 0,
         "international": 0
       }

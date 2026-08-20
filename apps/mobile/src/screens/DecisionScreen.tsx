@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 import type { Club, GameData, PendingDecision } from '@footsys/engine';
 import { color, font, radius, space } from '../theme';
-import { Button, ClubBadge, Label, Meter, PartnerLogo } from '../components/ui';
+import { Button, ClubBadge, Flag, Label, Meter, PartnerLogo } from '../components/ui';
 import { Fade, usePressScale } from '../components/motion';
 import { CardImage } from '../components/CardImage';
 import { Highlighted } from '../components/Highlighted';
@@ -252,6 +252,7 @@ function DecisionCard({ data, decision, chosen, last, onChoose, onNext }: {
               {...(option.tag ? { tag: option.tag } : {})}
               {...(option.motif ? { motif: option.motif } : {})}
               {...(option.clubId ? { club: data.clubById.get(option.clubId) } : {})}
+              {...(option.countryCode ? { countryCode: option.countryCode } : {})}
               {...(option.partnerId
                 ? {
                     partnerId: option.partnerId,
@@ -292,7 +293,7 @@ function DecisionCard({ data, decision, chosen, last, onChoose, onNext }: {
 
 /** Eine Wahlmöglichkeit. Sie gibt unter dem Finger kurz nach. */
 function Option({
-  label, subtitle, tag, motif, club, partnerId, partnerLight, selected, onPress,
+  label, subtitle, tag, motif, club, partnerId, partnerLight, countryCode, selected, onPress,
 }: {
   label: string;
   subtitle?: string;
@@ -303,6 +304,8 @@ function Option({
   club?: Club | undefined;
   partnerId?: string;
   partnerLight?: boolean;
+  /** Bei der Verbandswahl: die Flagge steht für die Antwort. */
+  countryCode?: string;
   selected: boolean;
   onPress: () => void;
 }) {
@@ -324,7 +327,13 @@ function Option({
       >
         {/* Bild links, rechte Kante schräg abgeschnitten. Vereine und Marken
             zeigen stattdessen ihr eigenes Zeichen. */}
-        {club ? (
+        {countryCode ? (
+          // Bei der Verbandswahl ist die Flagge die Antwort — sie steht
+          // deshalb so groß da wie sonst ein Wappen.
+          <View style={styles.emblem}>
+            <Flag code={countryCode} size={34} />
+          </View>
+        ) : club ? (
           <View style={styles.emblem}>
             <ClubBadge clubId={club.id} colors={club.colors} abbr={club.abbr} size={44} />
           </View>

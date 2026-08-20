@@ -1,0 +1,277 @@
+{
+  "country": "SWE",
+  "clubs": [
+    {
+      "id": "malmo-ff",
+      "league": "swe-allsvenskan",
+      "name": "Malmö FF",
+      "short": "Malmö FF",
+      "abbr": "MFF",
+      "city": "Malmö",
+      "colors": [
+        "#6CACE4",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 8,
+        "continental": 3,
+        "international": 4
+      }
+    },
+    {
+      "id": "aik-solna",
+      "league": "swe-allsvenskan",
+      "name": "AIK Fotboll",
+      "short": "AIK",
+      "abbr": "AIK",
+      "city": "Stockholm",
+      "colors": [
+        "#000000",
+        "#FFD700"
+      ],
+      "reputation": {
+        "domestic": 6,
+        "continental": 1,
+        "international": 3
+      }
+    },
+    {
+      "id": "ifk-goteborg",
+      "league": "swe-allsvenskan",
+      "name": "IFK Göteborg",
+      "short": "IFK Göteborg",
+      "abbr": "IFK",
+      "city": "Göteborg",
+      "colors": [
+        "#0033A0",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 6,
+        "continental": 1,
+        "international": 4
+      }
+    },
+    {
+      "id": "djurgardens-if",
+      "league": "swe-allsvenskan",
+      "name": "Djurgårdens IF",
+      "short": "Djurgården",
+      "abbr": "DIF",
+      "city": "Stockholm",
+      "colors": [
+        "#005BAA",
+        "#87CEEB"
+      ],
+      "reputation": {
+        "domestic": 6,
+        "continental": 2,
+        "international": 3
+      }
+    },
+    {
+      "id": "hammarby-if",
+      "league": "swe-allsvenskan",
+      "name": "Hammarby IF",
+      "short": "Hammarby",
+      "abbr": "HMB",
+      "city": "Stockholm",
+      "colors": [
+        "#009B48",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 6,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "bk-hacken",
+      "league": "swe-allsvenskan",
+      "name": "BK Häcken",
+      "short": "Häcken",
+      "abbr": "HAC",
+      "city": "Göteborg",
+      "colors": [
+        "#FFD700",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 5,
+        "continental": 1,
+        "international": 1
+      }
+    },
+    {
+      "id": "if-elfsborg",
+      "league": "swe-allsvenskan",
+      "name": "IF Elfsborg",
+      "short": "Elfsborg",
+      "abbr": "ELF",
+      "city": "Borås",
+      "colors": [
+        "#FFD700",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 5,
+        "continental": 1,
+        "international": 1
+      }
+    },
+    {
+      "id": "ifk-norrkoping",
+      "league": "swe-allsvenskan",
+      "name": "IFK Norrköping",
+      "short": "Norrköping",
+      "abbr": "NKP",
+      "city": "Norrköping",
+      "colors": [
+        "#0033A0",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "kalmar-ff",
+      "league": "swe-allsvenskan",
+      "name": "Kalmar FF",
+      "short": "Kalmar",
+      "abbr": "KFF",
+      "city": "Kalmar",
+      "colors": [
+        "#E4002B",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "mjallby-aif",
+      "league": "swe-allsvenskan",
+      "name": "Mjällby AIF",
+      "short": "Mjällby",
+      "abbr": "MJA",
+      "city": "Sölvesborg",
+      "colors": [
+        "#FFE000",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "gais-goteborg",
+      "league": "swe-allsvenskan",
+      "name": "GAIS",
+      "short": "GAIS",
+      "abbr": "GAI",
+      "city": "Göteborg",
+      "colors": [
+        "#009639",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "halmstads-bk",
+      "league": "swe-allsvenskan",
+      "name": "Halmstads BK",
+      "short": "Halmstad",
+      "abbr": "HBK",
+      "city": "Halmstad",
+      "colors": [
+        "#003DA5",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 0,
+        "international": 1
+      }
+    },
+    {
+      "id": "ifk-varnamo",
+      "league": "swe-allsvenskan",
+      "name": "IFK Värnamo",
+      "short": "Värnamo",
+      "abbr": "VAR",
+      "city": "Värnamo",
+      "colors": [
+        "#0033A0",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "degerfors-if",
+      "league": "swe-allsvenskan",
+      "name": "Degerfors IF",
+      "short": "Degerfors",
+      "abbr": "DEG",
+      "city": "Degerfors",
+      "colors": [
+        "#E4002B",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "brommapojkarna",
+      "league": "swe-allsvenskan",
+      "name": "IF Brommapojkarna",
+      "short": "Brommapojkarna",
+      "abbr": "BRO",
+      "city": "Stockholm",
+      "colors": [
+        "#E4002B",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "ik-sirius",
+      "league": "swe-allsvenskan",
+      "name": "IK Sirius",
+      "short": "Sirius",
+      "abbr": "SIR",
+      "city": "Uppsala",
+      "colors": [
+        "#0033A0",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

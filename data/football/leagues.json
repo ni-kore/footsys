@@ -1061,5 +1061,47 @@
       "secondary": 0,
       "tertiary": 0
     }
+  },
+  {
+    "id": "bel-pro-league",
+    "name": "Pro League",
+    "country": "BEL",
+    "tier": 1,
+    "teams": 16,
+    "strength": 3,
+    "cup": "bel-beker-van-belgie",
+    "continentalSlots": {
+      "primary": 2,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "nor-eliteserien",
+    "name": "Eliteserien",
+    "country": "NOR",
+    "tier": 1,
+    "teams": 16,
+    "strength": 3,
+    "cup": "nor-cupen",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
+  },
+  {
+    "id": "swe-allsvenskan",
+    "name": "Allsvenskan",
+    "country": "SWE",
+    "tier": 1,
+    "teams": 16,
+    "strength": 2,
+    "cup": "swe-svenska-cupen",
+    "continentalSlots": {
+      "primary": 1,
+      "secondary": 1,
+      "tertiary": 1
+    }
   }
 ]

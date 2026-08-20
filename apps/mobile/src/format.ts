@@ -1,4 +1,4 @@
-import type { SquadRole } from '@footsys/engine';
+import type { PeriodReport, SquadRole } from '@footsys/engine';
 import { color } from './theme';
 
 /** Market value, short: €1.2M / €850K */
@@ -75,4 +75,72 @@ export function readableOn(hex: string): string {
   const b = parseInt(value.slice(4, 6), 16);
   const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
   return luminance > 0.6 ? '#101018' : '#FFFFFF';
+}
+
+/** Positionen, bei denen die Zahl der Spiele ohne Gegentor etwas aussagt. */
+const KEEPS_CLEAN_SHEETS = new Set(['GK', 'SW', 'CB', 'LB', 'RB', 'LWB', 'RWB']);
+
+/** Wenn sich sonst nichts bewegt hat, sagt wenigstens die Rolle etwas. */
+const QUIET_BY_ROLE: Record<SquadRole, string> = {
+  starter: 'You kept your place, and that was the whole story.',
+  high_rotation: 'In the side, out of the side, and nothing else to report.',
+  low_rotation: 'You waited for your turn more often than you got it.',
+  substitute: 'You spent it watching from the bench.',
+};
+
+function count(value: number, one: string, many = one + 's'): string {
+  return `${value} ${value === 1 ? one : many}`;
+}
+
+/** Aufzählung mit Komma und abschließendem „and". */
+function list(parts: string[]): string {
+  if (parts.length <= 1) return parts[0] ?? '';
+  return parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1];
+}
+
+/**
+ * Der Bericht in zwei Sätzen, aus nichts als den Zahlen.
+ *
+ * Er steht da, wenn sonst nichts passiert ist: eine ruhige Spielzeit ist auch
+ * eine Spielzeit, und ein leerer Bildschirm sagt darüber nichts. Der zweite
+ * Satz nimmt sich das, was sich am deutlichsten bewegt hat — und wenn sich
+ * nichts bewegt hat, sagt er das.
+ */
+export function periodSummary(report: PeriodReport): { title: string; text: string } {
+  const period = report.kind === 'season' ? 'season' : 'half-season';
+  const growth = Math.round(report.overallAfter) - Math.round(report.overallBefore);
+  const gainedFans = Math.round(report.fansAfter - report.fansBefore);
+  const valueFactor = report.marketValueBefore > 0
+    ? report.marketValueAfter / report.marketValueBefore
+    : 1;
+
+  const title = report.appearances === 0
+    ? `A ${period} on the sidelines`
+    : growth >= 2
+      ? 'Quiet, but you got better'
+      : growth <= -1
+        ? 'A quiet one, and it cost you'
+        : `A ${period} without a story`;
+
+  const parts = [count(report.appearances, 'appearance')];
+  if (report.goals > 0) parts.push(count(report.goals, 'goal'));
+  if (report.assists > 0) parts.push(count(report.assists, 'assist'));
+  if (report.cleanSheets > 0 && KEEPS_CLEAN_SHEETS.has(report.position)) {
+    parts.push(count(report.cleanSheets, 'clean sheet'));
+  }
+  if (report.nationalCaps > 0) parts.push(count(report.nationalCaps, 'cap') + ' for your country');
+
+  const played = report.appearances === 0 ? 'Not a single minute.' : list(parts) + '.';
+
+  // Das Auffälligste zuerst: erst das Können, dann der Marktwert, dann der
+  // Zulauf. Zahlen, die sich kaum bewegt haben, bleiben unerwähnt.
+  const moved = growth !== 0
+    ? `Your overall went ${growth > 0 ? 'up' : 'down'} ${Math.abs(growth)}.`
+    : valueFactor >= 1.15 || valueFactor <= 0.85
+      ? `Your value ${valueFactor > 1 ? 'rose' : 'fell'} to ${money(report.marketValueAfter)}.`
+      : gainedFans >= 1000
+        ? `${fansDelta(gainedFans)} fans came along anyway.`
+        : QUIET_BY_ROLE[report.role];
+
+  return { title, text: `${played} ${moved}` };
 }

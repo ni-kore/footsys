@@ -1,4 +1,4 @@
-import type { GameData } from './data';
+import { clubOf, leagueOf, type GameData } from './data';
 import type { CareerState, Partner, PartnerKind } from './types';
 import type { Rng } from './rng';
 
@@ -26,6 +26,29 @@ function list(data: GameData, kind: PartnerKind): Partner[] {
 
 function rules(data: GameData, kind: PartnerKind) {
   return data.partners.rules[kind];
+}
+
+/** Bis wann der laufende Vertrag gilt. */
+function runsUntil(state: CareerState, kind: PartnerKind): number | null {
+  return kind === 'media' ? state.player.mediaPartnerUntil : state.player.kitSupplierUntil;
+}
+
+/**
+ * Wo eine Marke überhaupt anklopft.
+ *
+ * Ein Vereinssender begleitet den eigenen Verein, keinen anderen: PAOK TV
+ * dreht nicht über einen Spieler in Valencia. Eine Landeszeitung berichtet im
+ * eigenen Land — und über einen Landsmann auch, wenn er im Ausland spielt.
+ * Alles andere ist international.
+ */
+export function partnerFits(data: GameData, state: CareerState, partner: Partner): boolean {
+  // Auf Leihe zählt auch der Stammverein: sein Sender begleitet einen weiter.
+  if (partner.club) return state.clubId === partner.club || state.contractClubId === partner.club;
+  if (!partner.country) return true;
+  if (partner.country === state.player.nationality) return true;
+  if (partner.country === state.player.secondNationality) return true;
+  if (!state.clubId) return false;
+  return leagueOf(data, clubOf(data, state.clubId)).country === partner.country;
 }
 
 /** Der Partner, den ein Spieler gerade hat. */
@@ -78,10 +101,23 @@ export function partnerOffersNow(
   data: GameData, rng: Rng, state: CareerState, kind: PartnerKind,
 ): boolean {
   const config = rules(data, kind);
+  // Ein laufender Vertrag ist ein laufender Vertrag: solange er gilt, klopft
+  // niemand an. Erst wenn er ausläuft, steht die Frage wieder im Raum.
+  const until = runsUntil(state, kind);
+  if (until !== null && state.year < until) return false;
   if (state.player.overall < (config.minOverall as number)) return false;
   if (state.player.fans < (config.minFans as number)) return false;
   if (list(data, kind).length === 0) return false;
+  // Wer gerade eine Marke hat, deren Vertrag ausläuft, wird sowieso gefragt.
+  if (partnerOf(data, state, kind)) return true;
   return rng.chance(config.chancePerSummer as number);
+}
+
+/** Wie viele Saisons ein neuer Vertrag läuft. */
+export function contractSeasons(data: GameData, rng: Rng, kind: PartnerKind): number {
+  const config = rules(data, kind);
+  const [min, max] = config.contractSeasons as [number, number];
+  return min + Math.floor(rng.next() * (max - min + 1));
 }
 
 /**
@@ -101,10 +137,10 @@ export function partnerOffers(
   const target = (state.player.overall - 55) * (config.reachPerOverall as number);
   const spread = config.reachSpread as number;
 
-  const pool = list(data, kind)
+  const eligible = list(data, kind)
     .filter((partner) => partner.id !== current)
-    .filter((partner) => Math.abs(partner.reach - target) <= spread);
+    .filter((partner) => partnerFits(data, state, partner));
 
-  const candidates = pool.length > 0 ? pool : list(data, kind).filter((p) => p.id !== current);
-  return rng.sample(candidates, config.offers as number);
+  const pool = eligible.filter((partner) => Math.abs(partner.reach - target) <= spread);
+  return rng.sample(pool.length > 0 ? pool : eligible, config.offers as number);
 }

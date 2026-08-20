@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { titleName, type GameData, type PeriodReport } from '@footsys/engine';
-import { roleLabel, roleTone, seasonLabel } from '../format';
+import { periodSummary, roleLabel, roleTone, seasonLabel } from '../format';
 import { color, font, radius, space } from '../theme';
 import { Button, ClubBlock } from '../components/ui';
 import { CardIcon } from '../components/icons';
@@ -34,6 +34,13 @@ export function ReportScreen({ data, report, onContinue }: {
     (event) => event.tone !== 'positive' && event.tone !== 'negative',
   );
 
+  // Auch eine Spielzeit, in der nichts passiert ist, ist eine Spielzeit. Statt
+  // eines leeren Bildschirms steht dann der Bericht selbst da — aus nichts als
+  // den Zahlen der Halbserie.
+  const quiet = report.randomEvents.length === 0 && won.length === 0
+    ? periodSummary(report)
+    : null;
+
   return (
     <View style={styles.screen}>
       <View style={{ gap: space[2] }}>
@@ -53,50 +60,55 @@ export function ReportScreen({ data, report, onContinue }: {
         />
       </View>
 
-      {report.randomEvents.length > 0 || won.length > 0 ? (
-        <View style={{ gap: space[3] }}>
-          <Text style={font.title}>What happened</Text>
+      <View style={{ gap: space[3] }}>
+        <Text style={font.title}>What happened</Text>
 
-          <View style={styles.columns}>
-            <Column
-              label="Went well"
-              tone={color.status.positive}
-              sign="+"
-              events={good}
-              empty="Nothing stood out"
-            />
-            <Column
-              label="Went wrong"
-              tone={color.status.negative}
-              sign="−"
-              events={bad}
-              empty="Nothing went against you"
-            />
-          </View>
-
-          {/* Was gewonnen wurde, steht als Bilder unter der linken Spalte,
-              nicht darin: Titel sind das Ergebnis der Saison, nicht ein
-              Vorkommnis daraus. */}
-          {won.length > 0 ? (
-            <View style={styles.columns}>
-              <Fade style={styles.trophyRow} delay={220}>
-                {won.map((id) => (
-                  <Trophy key={id} size={34} label={titleName(data, id)} />
-                ))}
-              </Fade>
-              <View style={{ flex: 1 }} />
-            </View>
-          ) : null}
-
-          {rest.length > 0 ? (
-            <View style={{ gap: space[3] }}>
-              {rest.map((event, index) => (
-                <Happening key={event.id} event={event} delay={index * 130} />
-              ))}
-            </View>
-          ) : null}
+        <View style={styles.columns}>
+          <Column
+            label="Went well"
+            tone={color.status.positive}
+            sign="+"
+            events={good}
+            empty="Nothing stood out"
+          />
+          <Column
+            label="Went wrong"
+            tone={color.status.negative}
+            sign="−"
+            events={bad}
+            empty="Nothing went against you"
+          />
         </View>
-      ) : null}
+
+        {/* Was gewonnen wurde, steht als Bilder unter der linken Spalte,
+            nicht darin: Titel sind das Ergebnis der Saison, nicht ein
+            Vorkommnis daraus. */}
+        {won.length > 0 ? (
+          <View style={styles.columns}>
+            <Fade style={styles.trophyRow} delay={220}>
+              {won.map((id) => (
+                <Trophy key={id} size={34} label={titleName(data, id)} />
+              ))}
+            </Fade>
+            <View style={{ flex: 1 }} />
+          </View>
+        ) : null}
+
+        {rest.length > 0 ? (
+          <View style={{ gap: space[3] }}>
+            {rest.map((event, index) => (
+              <Happening key={event.id} event={event} delay={index * 130} />
+            ))}
+          </View>
+        ) : null}
+
+        {quiet ? (
+          <Fade delay={220} style={styles.quiet}>
+            <Text style={font.bodyStrong}>{quiet.title}</Text>
+            <Text style={[font.caption, { lineHeight: 18 }]}>{quiet.text}</Text>
+          </Fade>
+        ) : null}
+      </View>
 
       <View style={{ alignItems: 'flex-start', marginTop: 'auto' }}>
         {/* Von hier geht es nicht direkt aufs Feld, sondern zu den
@@ -187,6 +199,9 @@ const styles = StyleSheet.create({
   columnLabel: { ...font.micro, textTransform: 'uppercase' },
   columnEmpty: { ...font.caption, color: color.text.muted },
   eventRow: { flexDirection: 'row', gap: space[2], alignItems: 'center' },
+  // Der Bericht einer ruhigen Spielzeit steht über die ganze Breite, ohne
+  // Vorzeichen: er ist weder gut noch schlecht.
+  quiet: { gap: 2 },
   // Das Vorzeichen steht auf der Zeile der Überschrift, nicht auf halber
   // Höhe des ganzen Eintrags.
   // Dieselbe Zeilenhöhe wie die Überschrift: so liegen beide Mitten

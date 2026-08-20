@@ -13,7 +13,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
+        "domestic": 1,
         "continental": 0,
         "international": 0
       }
@@ -81,7 +81,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
+        "domestic": 1,
         "continental": 0,
         "international": 0
       }
@@ -98,7 +98,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
+        "domestic": 1,
         "continental": 0,
         "international": 0
       }
@@ -132,9 +132,9 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 0,
-        "international": 0
+        "domestic": 6,
+        "continental": 4,
+        "international": 4
       },
       "kitSupplier": "puma"
     },
@@ -150,7 +150,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
+        "domestic": 1,
         "continental": 0,
         "international": 0
       }
@@ -184,9 +184,9 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 0,
-        "international": 0
+        "domestic": 3,
+        "continental": 1,
+        "international": 1
       }
     },
     {
@@ -201,7 +201,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
+        "domestic": 1,
         "continental": 0,
         "international": 0
       }
@@ -235,9 +235,9 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 0,
-        "international": 0
+        "domestic": 6,
+        "continental": 4,
+        "international": 4
       }
     },
     {
@@ -252,7 +252,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
+        "domestic": 1,
         "continental": 0,
         "international": 0
       }

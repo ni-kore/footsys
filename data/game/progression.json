@@ -8,42 +8,57 @@
     "earliestRetirementAge": 30,
     "latestRetirementAge": 40,
     "defaultRetirementAge": 38,
+    "$modes": "Wie oft die Simulation anhält. seasonsPerStop zählt Saisons zwischen zwei Pausen, in denen entschieden wird; 0 heißt: es wird gar nicht angehalten.",
     "modes": {
-      "intense": {
-        "periodLengthSeasons": 1,
-        "label": {
-          "de": "Intensiv",
-          "en": "Intense"
-        },
-        "description": {
-          "de": "Entscheidung in jeder Saison.",
-          "en": "A decision every season."
-        }
-      },
       "normal": {
-        "periodLengthSeasons": 2,
+        "seasonsPerStop": 1,
+        "winterBreak": true,
         "label": {
           "de": "Normal",
           "en": "Normal"
         },
         "description": {
-          "de": "Entscheidung alle zwei Saisons.",
-          "en": "A decision every two seasons."
+          "de": "Jede Pause, Winter wie Sommer.",
+          "en": "Every break, winter and summer."
         }
       },
-      "express": {
-        "periodLengthSeasons": 3,
+      "fast": {
+        "seasonsPerStop": 1,
+        "winterBreak": false,
         "label": {
-          "de": "Express",
-          "en": "Express"
+          "de": "Schnell",
+          "en": "Fast"
         },
         "description": {
-          "de": "Entscheidung alle drei Saisons.",
-          "en": "A decision every three seasons."
+          "de": "Nur zur Sommerpause.",
+          "en": "Summer breaks only."
+        }
+      },
+      "very_fast": {
+        "seasonsPerStop": 3,
+        "winterBreak": false,
+        "label": {
+          "de": "Sehr schnell",
+          "en": "Very fast"
+        },
+        "description": {
+          "de": "Nur alle drei Saisons.",
+          "en": "Every three seasons."
+        }
+      },
+      "instant": {
+        "seasonsPerStop": 0,
+        "winterBreak": false,
+        "label": {
+          "de": "Sofort",
+          "en": "Instant"
+        },
+        "description": {
+          "de": "Die ganze Laufbahn in einem Zug.",
+          "en": "The whole career in one go."
         }
       }
-    },
-    "$modes": "footsys spielt nur im Rhythmus \"normal\". Die anderen Einträge bleiben als Balancing-Referenz stehen, werden aber nicht angeboten."
+    }
   },
   "potential": {
     "$comment": "Verstecktes Leistungsmaximum, beim Karrierestart einmal gezogen. Der Spieler erfährt es nie direkt — er merkt nur, dass die Kurve abflacht. Das ist der Grund, warum nicht jede Karriere in der Weltspitze endet.",
@@ -951,6 +966,99 @@
       [
         1,
         1.12
+      ]
+    ]
+  },
+  "offers": {
+    "$comment": "Woher Angebote kommen. Eine Karriere soll sich von unten nach oben arbeiten: Angebote kommen aus der Spielklasse, in die man gerade gehört, und aus dem Umfeld, in dem man gerade spielt.",
+    "$reputationForOverall": "OVR auf die Reputationsstufe des Vereins, der realistisch anfragt. Bewusst strenger als die Kaderrollen-Schwellen: bei einem Weltverein unterschreibt man nicht mit 84.",
+    "reputationForOverall": [
+      [
+        50,
+        0
+      ],
+      [
+        62,
+        2
+      ],
+      [
+        68,
+        4
+      ],
+      [
+        73,
+        5
+      ],
+      [
+        77,
+        6
+      ],
+      [
+        81,
+        7
+      ],
+      [
+        85,
+        8
+      ],
+      [
+        88,
+        9
+      ],
+      [
+        91,
+        10
+      ]
+    ],
+    "$reputationWindow": "Wie weit ein Angebot von der eigenen Stufe abweichen darf — nach oben knapper als nach unten.",
+    "reputationWindow": {
+      "up": 1,
+      "down": 3
+    },
+    "$reputationPerQualityBonus": "Wie viele Stufen Marktinteresse und Partner zusätzlich öffnen.",
+    "reputationPerQualityBonus": 1,
+    "$leagueStrengthForOverall": "OVR auf die Stärke der Liga, in der ein Spieler dieser Klasse zu Hause ist (5 = Topliga, 1 = schwächste).",
+    "leagueStrengthForOverall": [
+      [
+        45,
+        1
+      ],
+      [
+        58,
+        2
+      ],
+      [
+        67,
+        3
+      ],
+      [
+        74,
+        4
+      ],
+      [
+        80,
+        5
+      ]
+    ],
+    "$strengthPerQualityBonus": "Wie weit Marktinteresse und Partner über die eigene Spielklasse hinaustragen.",
+    "strengthPerQualityBonus": 0.45,
+    "$quietMarketByInterest": "Wahrscheinlichkeit, dass im Sommer überhaupt niemand anklopft.",
+    "quietMarketByInterest": [
+      [
+        0,
+        0.28
+      ],
+      [
+        25,
+        0.08
+      ],
+      [
+        50,
+        0.02
+      ],
+      [
+        70,
+        0
       ]
     ]
   },

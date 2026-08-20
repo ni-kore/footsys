@@ -10,6 +10,7 @@ import clubsARM from '../../../data/football/clubs/ARM.json';
 import clubsAUS from '../../../data/football/clubs/AUS.json';
 import clubsAUT from '../../../data/football/clubs/AUT.json';
 import clubsAZE from '../../../data/football/clubs/AZE.json';
+import clubsBEL from '../../../data/football/clubs/BEL.json';
 import clubsBIH from '../../../data/football/clubs/BIH.json';
 import clubsBRA from '../../../data/football/clubs/BRA.json';
 import clubsBUL from '../../../data/football/clubs/BUL.json';
@@ -40,6 +41,7 @@ import clubsMNE from '../../../data/football/clubs/MNE.json';
 import clubsNED from '../../../data/football/clubs/NED.json';
 import clubsNGA from '../../../data/football/clubs/NGA.json';
 import clubsNIR from '../../../data/football/clubs/NIR.json';
+import clubsNOR from '../../../data/football/clubs/NOR.json';
 import clubsPOL from '../../../data/football/clubs/POL.json';
 import clubsPOR from '../../../data/football/clubs/POR.json';
 import clubsROU from '../../../data/football/clubs/ROU.json';
@@ -51,6 +53,7 @@ import clubsSRB from '../../../data/football/clubs/SRB.json';
 import clubsSUI from '../../../data/football/clubs/SUI.json';
 import clubsSVK from '../../../data/football/clubs/SVK.json';
 import clubsSVN from '../../../data/football/clubs/SVN.json';
+import clubsSWE from '../../../data/football/clubs/SWE.json';
 import clubsTUR from '../../../data/football/clubs/TUR.json';
 import clubsUKR from '../../../data/football/clubs/UKR.json';
 import clubsWAL from '../../../data/football/clubs/WAL.json';
@@ -64,6 +67,7 @@ export const clubFiles = [
   clubsAUS,
   clubsAUT,
   clubsAZE,
+  clubsBEL,
   clubsBIH,
   clubsBRA,
   clubsBUL,
@@ -94,6 +98,7 @@ export const clubFiles = [
   clubsNED,
   clubsNGA,
   clubsNIR,
+  clubsNOR,
   clubsPOL,
   clubsPOR,
   clubsROU,
@@ -105,6 +110,7 @@ export const clubFiles = [
   clubsSUI,
   clubsSVK,
   clubsSVN,
+  clubsSWE,
   clubsTUR,
   clubsUKR,
   clubsWAL,

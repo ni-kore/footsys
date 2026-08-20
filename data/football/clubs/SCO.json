@@ -13,9 +13,9 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 0,
-        "international": 0
+        "domestic": 3,
+        "continental": 1,
+        "international": 1
       }
     },
     {
@@ -30,9 +30,9 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 0,
-        "international": 0
+        "domestic": 6,
+        "continental": 4,
+        "international": 4
       },
       "kitSupplier": "castore"
     },
@@ -65,7 +65,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
+        "domestic": 1,
         "continental": 0,
         "international": 0
       }
@@ -116,9 +116,9 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 0,
-        "international": 0
+        "domestic": 3,
+        "continental": 1,
+        "international": 1
       }
     },
     {
@@ -133,9 +133,9 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
-        "continental": 0,
-        "international": 0
+        "domestic": 6,
+        "continental": 4,
+        "international": 4
       },
       "kitSupplier": "adidas"
     },
@@ -168,7 +168,7 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
+        "domestic": 1,
         "continental": 0,
         "international": 0
       }
@@ -185,7 +185,24 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 2,
+        "domestic": 3,
+        "continental": 1,
+        "international": 1
+      }
+    },
+    {
+      "id": "dundee-fc",
+      "league": "sco-premiership",
+      "name": "Dundee FC",
+      "short": "Dundee",
+      "abbr": "DEE",
+      "city": "Dundee",
+      "colors": [
+        "#0B1560",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
         "continental": 0,
         "international": 0
       }

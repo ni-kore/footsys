@@ -8,7 +8,12 @@
       "minFans": 50000,
       "chancePerSummer": 0.35,
       "fansPerReach": 0.07,
-      "clubInterestFromReach": 6
+      "clubInterestFromReach": 6,
+      "$contractSeasons": "So lange läuft ein Vertrag, bevor die Frage wieder ansteht.",
+      "contractSeasons": [
+        4,
+        7
+      ]
     },
     "kit": {
       "$comment": "Ein Ausrüster bringt weniger Fans, öffnet dafür Türen zu größeren Vereinen.",
@@ -16,7 +21,11 @@
       "minFans": 250000,
       "chancePerSummer": 0.3,
       "fansPerReach": 0.035,
-      "clubInterestFromReach": 5
+      "clubInterestFromReach": 5,
+      "contractSeasons": [
+        5,
+        8
+      ]
     },
     "offers": 2,
     "reachSpread": 3,
@@ -25,6 +34,7 @@
   "media": [
     {
       "id": "2m",
+      "country": "MAR",
       "name": "2M",
       "logo": "mediapartner/2M_media.png",
       "reach": 7,
@@ -32,6 +42,7 @@
     },
     {
       "id": "7dimanche",
+      "country": "FRA",
       "name": "7 Dimanche",
       "logo": "mediapartner/7dimanche_media.png",
       "reach": 3,
@@ -39,6 +50,7 @@
     },
     {
       "id": "90-minutos-de-futbol",
+      "country": "ESP",
       "name": "90 Minutos de Fútbol",
       "logo": "mediapartner/90 Minutos de Fútbol_media.png",
       "reach": 4,
@@ -46,6 +58,7 @@
     },
     {
       "id": "abc",
+      "country": "ESP",
       "name": "ABC",
       "logo": "mediapartner/ABC_media.png",
       "reach": 6,
@@ -53,6 +66,7 @@
     },
     {
       "id": "abc-deporte",
+      "country": "ESP",
       "name": "ABC Deporte",
       "logo": "mediapartner/ABC Deporte_media.png",
       "reach": 5,
@@ -60,6 +74,7 @@
     },
     {
       "id": "aekfans21",
+      "club": "aek-athen",
       "name": "AEKfans21",
       "logo": "mediapartner/AEKfans21_media.png",
       "reach": 2,
@@ -67,6 +82,7 @@
     },
     {
       "id": "aftv",
+      "club": "arsenal",
       "name": "AFTV",
       "logo": "mediapartner/AFTV_media.png",
       "reach": 3,
@@ -74,6 +90,7 @@
     },
     {
       "id": "atv-belgium",
+      "country": "BEL",
       "name": "ATV Belgium",
       "logo": "mediapartner/336px-ATV_Belgium_logo.svg_media.png",
       "reach": 3,
@@ -81,6 +98,7 @@
     },
     {
       "id": "avs",
+      "country": "POR",
       "name": "AVS",
       "logo": "mediapartner/AVS_logo_media.png",
       "reach": 6,
@@ -102,6 +120,7 @@
     },
     {
       "id": "betfan",
+      "country": "POL",
       "name": "BETFAN",
       "logo": "mediapartner/BETFAN_media.png",
       "reach": 5,
@@ -109,6 +128,7 @@
     },
     {
       "id": "betking",
+      "country": "NGA",
       "name": "BetKing",
       "logo": "mediapartner/BetKing_media.png",
       "reach": 5,
@@ -123,6 +143,7 @@
     },
     {
       "id": "brf",
+      "country": "BEL",
       "name": "BRF",
       "logo": "mediapartner/512px-BRF_logo.svg_media.png",
       "reach": 4,
@@ -130,6 +151,7 @@
     },
     {
       "id": "bruzz",
+      "country": "BEL",
       "name": "BRUZZ",
       "logo": "mediapartner/512px-BRUZZ_logo.svg_media.png",
       "reach": 4,
@@ -137,6 +159,7 @@
     },
     {
       "id": "bx1",
+      "country": "BEL",
       "name": "BX1",
       "logo": "mediapartner/bx1_media.png",
       "reach": 4,
@@ -144,6 +167,7 @@
     },
     {
       "id": "canal-c",
+      "country": "BEL",
       "name": "Canal C",
       "logo": "mediapartner/800px-Canal_C_logo_media.png",
       "reach": 3,
@@ -151,6 +175,7 @@
     },
     {
       "id": "canal-zoom",
+      "country": "BEL",
       "name": "Canal Zoom",
       "logo": "mediapartner/800px-Canal_Zoom_logo_media.png",
       "reach": 3,
@@ -158,6 +183,7 @@
     },
     {
       "id": "celtic-fans-tv",
+      "club": "celtic-fc",
       "name": "Celtic Fans TV",
       "logo": "mediapartner/Celtic Fans TV_media.png",
       "reach": 2,
@@ -165,6 +191,7 @@
     },
     {
       "id": "celtic-tv",
+      "club": "celtic-fc",
       "name": "Celtic TV",
       "logo": "mediapartner/Celtic TV_media.png",
       "reach": 3,
@@ -172,6 +199,7 @@
     },
     {
       "id": "clyde-1-superscoreboard",
+      "country": "SCO",
       "name": "Clyde 1 Superscoreboard",
       "logo": "mediapartner/Clyde 1 Superscoreboard_media.png",
       "reach": 4,
@@ -179,6 +207,7 @@
     },
     {
       "id": "cnn-indonesia",
+      "country": "IDN",
       "name": "CNN Indonesia",
       "logo": "mediapartner/CNN Indonesia_media.png",
       "reach": 7,
@@ -193,6 +222,7 @@
     },
     {
       "id": "cnn-turk",
+      "country": "TUR",
       "name": "CNN Türk",
       "logo": "mediapartner/CNN Türk_media.png",
       "reach": 7,
@@ -200,6 +230,7 @@
     },
     {
       "id": "danske-spil-oddset",
+      "country": "DEN",
       "name": "Danske Spil Oddset",
       "logo": "mediapartner/Danske Spil Oddset_media.png",
       "reach": 5,
@@ -207,6 +238,7 @@
     },
     {
       "id": "diario-marca",
+      "country": "ESP",
       "name": "Diario MARCA",
       "logo": "mediapartner/Diario MARCA_media.png",
       "reach": 7,
@@ -214,6 +246,7 @@
     },
     {
       "id": "diario-sport",
+      "country": "ESP",
       "name": "Diario Sport",
       "logo": "mediapartner/Diario Sport_media.png",
       "reach": 7,
@@ -221,6 +254,7 @@
     },
     {
       "id": "el-show-de-ferro",
+      "country": "FRA",
       "name": "El Show De Ferro",
       "logo": "mediapartner/El Show De Ferro_media.png",
       "reach": 3,
@@ -228,6 +262,7 @@
     },
     {
       "id": "eleven",
+      "country": "BEL",
       "name": "Eleven Sports",
       "logo": "mediapartner/eleven_media.png",
       "reach": 6,
@@ -235,6 +270,7 @@
     },
     {
       "id": "fanaposten",
+      "country": "NOR",
       "name": "Fanaposten",
       "logo": "mediapartner/Fanaposten_media.png",
       "reach": 3,
@@ -242,6 +278,7 @@
     },
     {
       "id": "fcb-tv",
+      "club": "fc-basel-1893",
       "name": "FCB-TV",
       "logo": "mediapartner/FCB-TV_media.png",
       "reach": 3,
@@ -249,6 +286,7 @@
     },
     {
       "id": "fcz-tv",
+      "country": "SUI",
       "name": "FCZ TV",
       "logo": "mediapartner/FCZ TV_media.png",
       "reach": 3,
@@ -256,6 +294,7 @@
     },
     {
       "id": "focus",
+      "country": "GER",
       "name": "Focus TV",
       "logo": "mediapartner/600px-Focus_logo_media.png",
       "reach": 3,
@@ -263,6 +302,7 @@
     },
     {
       "id": "football-fancast",
+      "country": "ENG",
       "name": "Football Fancast",
       "logo": "mediapartner/Football Fancast_media.png",
       "reach": 2,
@@ -270,6 +310,7 @@
     },
     {
       "id": "football-fandom",
+      "country": "ENG",
       "name": "Football Fandom",
       "logo": "mediapartner/Football Fandom_media.png",
       "reach": 2,
@@ -277,6 +318,7 @@
     },
     {
       "id": "fox-deportes-usa",
+      "country": "USA",
       "name": "FOX Deportes USA",
       "logo": "mediapartner/FOX Deportes USA_media.png",
       "reach": 8,
@@ -284,6 +326,7 @@
     },
     {
       "id": "fox-radio-chile",
+      "country": "CHI",
       "name": "FOX Radio Chile",
       "logo": "mediapartner/FOX Radio Chile_media.png",
       "reach": 3,
@@ -305,6 +348,7 @@
     },
     {
       "id": "fox-tv",
+      "country": "TUR",
       "name": "FOX TV",
       "logo": "mediapartner/FOX TV_media.png",
       "reach": 7,
@@ -312,6 +356,7 @@
     },
     {
       "id": "grenz-echo",
+      "country": "BEL",
       "name": "Grenz-Echo",
       "logo": "mediapartner/grenz-echo_media.png",
       "reach": 4,
@@ -319,6 +364,7 @@
     },
     {
       "id": "heart-and-hand",
+      "club": "rangers-fc",
       "name": "Heart and Hand",
       "logo": "mediapartner/Heart and Hand_media.png",
       "reach": 2,
@@ -326,6 +372,7 @@
     },
     {
       "id": "hespress",
+      "country": "MAR",
       "name": "Hespress",
       "logo": "mediapartner/Hespress_media.png",
       "reach": 6,
@@ -333,6 +380,7 @@
     },
     {
       "id": "hln",
+      "country": "BEL",
       "name": "Het Laatste Nieuws",
       "logo": "mediapartner/hln_media.png",
       "reach": 6,
@@ -340,6 +388,7 @@
     },
     {
       "id": "nieuwsblad",
+      "country": "BEL",
       "name": "Het Nieuwsblad",
       "logo": "mediapartner/nieuwsblad_media.png",
       "reach": 6,
@@ -347,6 +396,7 @@
     },
     {
       "id": "joe",
+      "country": "BEL",
       "name": "JOE",
       "logo": "mediapartner/JOE_media.png",
       "reach": 4,
@@ -354,6 +404,7 @@
     },
     {
       "id": "kana-sportowy",
+      "country": "POL",
       "name": "Kanał Sportowy",
       "logo": "mediapartner/Kanał Sportowy_media.png",
       "reach": 4,
@@ -361,6 +412,7 @@
     },
     {
       "id": "l-avenir",
+      "country": "BEL",
       "name": "L'Avenir",
       "logo": "mediapartner/l avenir_media.png",
       "reach": 6,
@@ -368,6 +420,7 @@
     },
     {
       "id": "websitelogo-lecho",
+      "country": "BEL",
       "name": "L'Echo",
       "logo": "mediapartner/websitelogo-lecho_media.png",
       "reach": 5,
@@ -375,6 +428,7 @@
     },
     {
       "id": "la-libe",
+      "country": "BEL",
       "name": "La Libre",
       "logo": "mediapartner/la libe_media.png",
       "reach": 6,
@@ -382,6 +436,7 @@
     },
     {
       "id": "le-soir",
+      "country": "BEL",
       "name": "Le Soir",
       "logo": "mediapartner/le soir_media.png",
       "reach": 6,
@@ -389,6 +444,7 @@
     },
     {
       "id": "marca-tv",
+      "country": "ESP",
       "name": "MARCA TV",
       "logo": "mediapartner/MARCA TV_media.png",
       "reach": 6,
@@ -396,6 +452,7 @@
     },
     {
       "id": "mls-soccer",
+      "country": "USA",
       "name": "MLS Soccer",
       "logo": "mediapartner/MLS Soccer_media.png",
       "reach": 6,
@@ -403,6 +460,7 @@
     },
     {
       "id": "pandit-football",
+      "country": "IDN",
       "name": "Pandit Football",
       "logo": "mediapartner/Pandit Football_media.png",
       "reach": 3,
@@ -410,6 +468,7 @@
     },
     {
       "id": "paok-tv",
+      "club": "paok-saloniki",
       "name": "PAOK TV",
       "logo": "mediapartner/PAOK TV_media.png",
       "reach": 3,
@@ -417,6 +476,7 @@
     },
     {
       "id": "plays-sports",
+      "country": "BEL",
       "name": "Play Sports",
       "logo": "mediapartner/plays sports_media.png",
       "reach": 6,
@@ -424,6 +484,7 @@
     },
     {
       "id": "play4",
+      "country": "BEL",
       "name": "Play4",
       "logo": "mediapartner/Play4_2021.svg_media.png",
       "reach": 6,
@@ -431,6 +492,7 @@
     },
     {
       "id": "psv-inside-tv",
+      "club": "psv-eindhoven",
       "name": "PSV Inside TV",
       "logo": "mediapartner/PSV Inside TV_media.png",
       "reach": 3,
@@ -438,6 +500,7 @@
     },
     {
       "id": "psv-tv",
+      "club": "psv-eindhoven",
       "name": "PSV TV",
       "logo": "mediapartner/PSV TV_media.png",
       "reach": 3,
@@ -445,6 +508,7 @@
     },
     {
       "id": "radio-marca",
+      "country": "ESP",
       "name": "Radio MARCA",
       "logo": "mediapartner/Radio MARCA_media.png",
       "reach": 6,
@@ -452,6 +516,7 @@
     },
     {
       "id": "rangers-tv",
+      "club": "rangers-fc",
       "name": "Rangers TV",
       "logo": "mediapartner/Rangers TV_media.png",
       "reach": 3,
@@ -459,6 +524,7 @@
     },
     {
       "id": "ranks-fc-podcast",
+      "country": "ENG",
       "name": "Ranks FC Podcast",
       "logo": "mediapartner/Ranks FC Podcast_media.png",
       "reach": 2,
@@ -466,6 +532,7 @@
     },
     {
       "id": "ringtv",
+      "country": "BEL",
       "name": "RingTV",
       "logo": "mediapartner/800px-RingTV_logo.svg_media.png",
       "reach": 3,
@@ -473,6 +540,7 @@
     },
     {
       "id": "rmc",
+      "country": "FRA",
       "name": "RMC Sport",
       "logo": "mediapartner/rmc_media.png",
       "reach": 6,
@@ -480,6 +548,7 @@
     },
     {
       "id": "robtv",
+      "country": "BEL",
       "name": "RobTV",
       "logo": "mediapartner/336px-RobTV_logo.svg_media.png",
       "reach": 3,
@@ -487,6 +556,7 @@
     },
     {
       "id": "rtbf",
+      "country": "BEL",
       "name": "RTBF",
       "logo": "mediapartner/rtbf_media.png",
       "reach": 7,
@@ -494,6 +564,7 @@
     },
     {
       "id": "rtbf-la-une",
+      "country": "BEL",
       "name": "RTBF La Une",
       "logo": "mediapartner/RTBF_La_Une_logo.svg_media.png",
       "reach": 3,
@@ -501,6 +572,7 @@
     },
     {
       "id": "rtc-tele-liege",
+      "country": "BEL",
       "name": "RTC Télé Liège",
       "logo": "mediapartner/512px-RTC_Télé_Liège_logo.svg_media.png",
       "reach": 3,
@@ -515,6 +587,7 @@
     },
     {
       "id": "rtl-tvi-logo",
+      "country": "BEL",
       "name": "RTL TVI",
       "logo": "mediapartner/RTL-TVI_Logo_2023.svg_media.png",
       "reach": 6,
@@ -522,6 +595,7 @@
     },
     {
       "id": "rtv",
+      "country": "BEL",
       "name": "RTV",
       "logo": "mediapartner/600px-RTV_logo_media.png",
       "reach": 3,
@@ -529,6 +603,7 @@
     },
     {
       "id": "scarves-around-the-funnel",
+      "country": "SCO",
       "name": "Scarves Around the Funnel",
       "logo": "mediapartner/Scarves Around the Funnel_media.png",
       "reach": 2,
@@ -536,6 +611,7 @@
     },
     {
       "id": "sky-bet",
+      "country": "ENG",
       "name": "Sky Bet",
       "logo": "mediapartner/Sky_Bet_2020_media.png",
       "reach": 5,
@@ -543,6 +619,7 @@
     },
     {
       "id": "sky-deutschland",
+      "country": "GER",
       "name": "Sky Deutschland",
       "logo": "mediapartner/Sky_Deutschland_2020 copy_media.png",
       "reach": 8,
@@ -550,6 +627,7 @@
     },
     {
       "id": "sky-sports",
+      "country": "ENG",
       "name": "Sky Sports",
       "logo": "mediapartner/Sky_Sports_2017_media.png",
       "reach": 9,
@@ -557,6 +635,7 @@
     },
     {
       "id": "sky-sports-scotland",
+      "country": "SCO",
       "name": "Sky Sports Scotland",
       "logo": "mediapartner/Sky Sports Scotland_media.png",
       "reach": 7,
@@ -564,6 +643,7 @@
     },
     {
       "id": "sport-cz",
+      "country": "CZE",
       "name": "SPORT.CZ",
       "logo": "mediapartner/SPORT.CZ_media.png",
       "reach": 6,
@@ -571,6 +651,7 @@
     },
     {
       "id": "sport-voetbalmagazine",
+      "country": "BEL",
       "name": "Sport/Voetbalmagazine",
       "logo": "mediapartner/sport voetbalmagazine_media.png",
       "reach": 5,
@@ -578,6 +659,7 @@
     },
     {
       "id": "sporz",
+      "country": "BEL",
       "name": "Sporza",
       "logo": "mediapartner/sporz_media.png",
       "reach": 6,
@@ -585,6 +667,7 @@
     },
     {
       "id": "talking-baws",
+      "country": "SCO",
       "name": "Talking Baws",
       "logo": "mediapartner/Talking Baws_media.png",
       "reach": 2,
@@ -592,6 +675,7 @@
     },
     {
       "id": "telenet-play-sports",
+      "country": "BEL",
       "name": "Telenet Play Sports",
       "logo": "mediapartner/800px-Telenet_Play_Sports_logo_media.png",
       "reach": 6,
@@ -599,6 +683,7 @@
     },
     {
       "id": "the-calcioland-podcast",
+      "country": "ITA",
       "name": "The Calcioland Podcast",
       "logo": "mediapartner/The Calcioland Podcast_media.png",
       "reach": 2,
@@ -606,6 +691,7 @@
     },
     {
       "id": "the-non-league-football-show",
+      "country": "ENG",
       "name": "The Non League Football Show",
       "logo": "mediapartner/The Non League Football Show_media.png",
       "reach": 2,
@@ -613,6 +699,7 @@
     },
     {
       "id": "the-transfer-window-podcast",
+      "country": "ENG",
       "name": "The Transfer Window Podcast",
       "logo": "mediapartner/The Transfer Window Podcast_media.png",
       "reach": 2,
@@ -620,6 +707,7 @@
     },
     {
       "id": "the-united-stand",
+      "club": "manchester-united",
       "name": "The United Stand",
       "logo": "mediapartner/The United Stand_media.png",
       "reach": 2,
@@ -627,6 +715,7 @@
     },
     {
       "id": "tvcom-bw",
+      "country": "BEL",
       "name": "TV Com",
       "logo": "mediapartner/TVCOM_BW_logo_actuel_media.png",
       "reach": 3,
@@ -634,6 +723,7 @@
     },
     {
       "id": "tvl-belgium",
+      "country": "BEL",
       "name": "TVL Belgium",
       "logo": "mediapartner/336px-TVL_Belgium_logo.svg_media.png",
       "reach": 3,
@@ -641,6 +731,7 @@
     },
     {
       "id": "tvo-belgium",
+      "country": "BEL",
       "name": "TVO Belgium",
       "logo": "mediapartner/336px-TVO_Belgium_logo.svg_media.png",
       "reach": 3,
@@ -662,6 +753,7 @@
     },
     {
       "id": "vedia",
+      "country": "BEL",
       "name": "Vedia",
       "logo": "mediapartner/Vedia_logo_media.png",
       "reach": 4,
@@ -669,6 +761,7 @@
     },
     {
       "id": "voetbalkrant",
+      "country": "BEL",
       "name": "Voetbalkrant",
       "logo": "mediapartner/voetbalkrant_media.png",
       "reach": 5,
@@ -676,6 +769,7 @@
     },
     {
       "id": "voo",
+      "country": "BEL",
       "name": "VOO",
       "logo": "mediapartner/VOO_logo.svg_media.png",
       "reach": 4,
@@ -683,6 +777,7 @@
     },
     {
       "id": "vrt-1",
+      "country": "BEL",
       "name": "VRT 1",
       "logo": "mediapartner/VRT_1_2023.svg_media.png",
       "reach": 7,
@@ -690,6 +785,7 @@
     },
     {
       "id": "vtm",
+      "country": "BEL",
       "name": "VTM",
       "logo": "mediapartner/vtm_media.png",
       "reach": 7,
@@ -697,6 +793,7 @@
     },
     {
       "id": "walfoot",
+      "country": "BEL",
       "name": "Walfoot",
       "logo": "mediapartner/walfoot_media.png",
       "reach": 5,
@@ -704,6 +801,7 @@
     },
     {
       "id": "willam-hill",
+      "country": "ENG",
       "name": "William Hill",
       "logo": "mediapartner/Willam Hill_media.png",
       "reach": 5,

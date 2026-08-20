@@ -4,14 +4,14 @@ import {
 } from './data';
 import { meterFactor } from './meters';
 import { optionSummary } from './outcome';
-import { offerReputationBonus, partnerOffers } from './partners';
+import { offerReputationBonus, partnerFits, partnerOf, partnerOffers } from './partners';
 import { clamp, clampOverall, interpolate, roleAtLeast } from './progression';
 import { collectEffects, currentRole, isEligibleForNationalTeam } from './simulation';
 import type { Rng } from './rng';
 import type {
   CareerEvent, CareerState, Club, CountryCode, EventModifiers, EventOption, EventRequirements,
-  EventVariant, PartnerKind, PendingDecision, PendingOption, RandomEvent, ReputationLevel,
-  TransferScope,
+  EventVariant, PartnerKind, PendingDecision, PendingOption, PositionId, RandomEvent,
+  ReputationLevel, TransferKind, TransferScope,
 } from './types';
 
 /**
@@ -59,19 +59,38 @@ function meetsRequirements(data: GameData, state: CareerState, req?: EventRequir
   }
 
   if (req.upcomingNationalTournament && !isEligibleForNationalTeam(data, state)) return false;
+  if (req.hasMediaPartner !== undefined && (player.mediaPartner !== null) !== req.hasMediaPartner) {
+    return false;
+  }
   return true;
 }
 
 // -------------------------------------------------------- Vereinsauswahl
 
-/** Reputationsstufe, auf der ein Spieler mit diesem OVR realistisch Stammspieler wäre. */
-function levelForOverall(data: GameData, overall: number, bonus = 0): ReputationLevel {
-  const thresholds = data.progression.roles.minOverallForStarter as Record<string, number>;
-  let best: ReputationLevel = 0;
-  for (let rep = 0; rep <= 10; rep++) {
-    if (overall + 4 >= thresholds[String(rep)]!) best = rep as ReputationLevel;
-  }
-  return clamp(best + bonus * 2, 0, 10) as ReputationLevel;
+/**
+ * Spielklasse, in die ein Spieler mit diesem OVR gerade gehört (5 = Topliga).
+ *
+ * Das ist die Leitplanke der ganzen Karriere: Angebote kommen aus der Klasse,
+ * in die man gehört, nicht von irgendwo auf der Welt. Wer besser wird, wird
+ * von weiter oben angerufen; wer nachlässt, von weiter unten.
+ */
+export function strengthForOverall(data: GameData, overall: number, bonus = 0): number {
+  const table = data.progression.offers.leagueStrengthForOverall as [number, number][];
+  const perBonus = data.progression.offers.strengthPerQualityBonus as number;
+  return clamp(interpolate(table, overall) + bonus * perBonus, 1, 5);
+}
+
+/**
+ * Reputationsstufe des Vereins, der bei diesem OVR realistisch anfragt.
+ *
+ * Bewusst eine eigene Leiter, nicht die der Kaderrollen: dort geht es darum,
+ * wo man noch spielen würde, hier darum, wer überhaupt anruft. Bei einem
+ * Weltverein unterschreibt man nicht mit 84 — dafür braucht es die 90.
+ */
+function levelForOverall(data: GameData, overall: number, bonus = 0): number {
+  const table = data.progression.offers.reputationForOverall as [number, number][];
+  const perBonus = data.progression.offers.reputationPerQualityBonus as number;
+  return clamp(interpolate(table, overall) + bonus * perBonus, 0, 10);
 }
 
 export interface OfferOptions {
@@ -84,12 +103,18 @@ export interface OfferOptions {
 /**
  * Eine Marke klopft an. Man kann zusagen oder es lassen; wer ablehnt, verliert
  * nichts außer der Wirkung.
+ *
+ * Läuft gerade ein Vertrag aus, steht die bisherige Marke mit an erster
+ * Stelle: verlängern ist die naheliegende Antwort, nicht die versteckte.
  */
 export function buildPartnerDecision(
   data: GameData, rng: Rng, state: CareerState, kind: PartnerKind,
 ): PendingDecision | null {
   const offers = partnerOffers(data, rng, state, kind);
-  if (offers.length === 0) return null;
+  const current = partnerOf(data, state, kind);
+  // Ein Vereinssender, dessen Verein man verlassen hat, verlängert nicht.
+  const canExtend = current !== null && partnerFits(data, state, current);
+  if (offers.length === 0 && !canExtend) return null;
 
   const event = data.events.structural.find(
     (e) => e.id === (kind === 'media' ? 'media_partner_offer' : 'kit_supplier_offer'),
@@ -103,6 +128,13 @@ export function buildPartnerDecision(
     title: event.title,
     text: event.text.en,
     options: [
+      ...(canExtend ? [{
+        id: 'partner:' + current!.id,
+        label: { de: current!.name, en: current!.name },
+        partnerId: current!.id,
+        tag: 'Extend',
+        subtitle: reachLabel(current!.reach),
+      }] : []),
       ...offers.map((partner) => ({
         id: 'partner:' + partner.id,
         label: { de: partner.name, en: partner.name },
@@ -146,9 +178,12 @@ export function interestOfferCount(data: GameData, state: CareerState): number {
  */
 export function buildDestinationDecision(
   data: GameData, rng: Rng, state: CareerState,
-  scope: TransferScope, leagueStrengthMax?: number,
+  scope: TransferScope, leagueStrengthMax?: number, kind: TransferKind = 'transfer',
 ): PendingDecision | null {
-  const event = data.events.structural.find((e) => e.id === 'transfer_destination');
+  // Eine Leihe braucht einen Verein, der einen verleiht.
+  const loan = kind === 'loan' && !!state.clubId;
+  const eventId = loan ? 'loan_destination' : 'transfer_destination';
+  const event = data.events.structural.find((e) => e.id === eventId);
   if (!event) return null;
 
   const options: Parameters<typeof clubOffers>[3] = {
@@ -162,12 +197,32 @@ export function buildDestinationDecision(
 
   return {
     kind: 'structural',
-    eventId: 'transfer_destination',
+    eventId,
     window: 'summer',
     title: event.title,
     text: event.text.en,
-    options: clubs.map((club) => clubOption(data, club, 'destination', 'Move')),
+    options: clubs.map((club) => clubOption(data, club, 'destination', loan ? 'On loan' : 'Move')),
   };
+}
+
+/** Entscheidungen, bei denen man sich von sich aus einen Verein aussucht. */
+const CLUB_MOVE_EVENTS = new Set([
+  'academy_offer', 'transfer_offer', 'loan_offer', 'transfer_destination', 'loan_destination',
+]);
+
+/**
+ * Ändert diese Entscheidung womöglich den Verein? In einer Pause darf nur
+ * eine davon anstehen — sonst sucht man sich zweimal hintereinander einen
+ * Klub aus und der erste war umsonst.
+ */
+export function movesClub(data: GameData, decision: PendingDecision): boolean {
+  if (CLUB_MOVE_EVENTS.has(decision.eventId)) return true;
+  const event = data.careerEventById.get(decision.eventId);
+  return (event?.options ?? []).some((option) => Boolean(
+    option.modifiers?.forceTransfer
+    ?? option.outcome?.success?.forceTransfer
+    ?? option.outcome?.failure?.forceTransfer,
+  ));
 }
 
 /** Kandidatenvereine für ein Angebot, gewichtet nach Passung zum Spielerniveau. */
@@ -208,15 +263,32 @@ export function clubOffers(data: GameData, rng: Rng, state: CareerState, options
     pool = pool.filter((c) => leagueOf(data, c).strength <= options.leagueStrengthMax!);
   }
 
-  // Ein Spieler bekommt keine Angebote von Vereinen weit über seinem Niveau.
-  // Ohne diese harte Grenze landet jede Karriere irgendwann bei einem Topklub.
-  const inRange = pool.filter((c) => Math.abs(c.reputation.domestic - target) <= 2);
-  if (inRange.length >= options.count) pool = inRange;
+  // Ein Spieler bekommt keine Angebote von Vereinen weit über seinem Niveau —
+  // und keine aus einer Spielklasse, die nichts mit seiner zu tun hat. Wer
+  // sich in einer europäischen zweiten Liga bewiesen hat, bekommt keinen Anruf
+  // aus einer Liga zwei Stufen darunter: dort fragt schlicht niemand an.
+  //
+  // Nach oben ist das Fenster enger als nach unten: absteigen kann man weit,
+  // aufsteigen immer nur um eine Stufe.
+  const window = data.progression.offers.reputationWindow as { up: number; down: number };
+  const deserved = strengthForOverall(data, state.player.overall, bonus);
+  const fits = (club: Club, extra: number, strengthRange: number): boolean => {
+    const gap = club.reputation.domestic - target;
+    return gap <= window.up + extra && -gap <= window.down + extra
+      && Math.abs(leagueOf(data, club).strength - deserved) <= strengthRange;
+  };
+
+  // Erst eng, dann Stufe für Stufe weiter — bis genug Vereine übrig bleiben.
+  for (const [extra, strengthRange] of [[0, 1], [1, 1.5], [2, 2.5]] as const) {
+    const inRange = pool.filter((c) => fits(c, extra, strengthRange));
+    if (inRange.length >= options.count) { pool = inRange; break; }
+  }
   if (pool.length === 0) pool = data.clubs.filter((c) => c.id !== current?.id);
 
-  // Je näher an der Zielstufe, desto wahrscheinlicher das Angebot. Zusätzlich
-  // wiegen Vereine aus dem aktuellen Land und der aktuellen Konföderation
-  // schwerer — sonst springt jede Karriere wahllos über den Globus.
+  // Je näher an Zielstufe und Spielklasse, desto wahrscheinlicher das Angebot.
+  // Zusätzlich wiegt das gewohnte Umfeld schwer: dieselbe Liga zuerst, dann
+  // dasselbe Land, dann derselbe Kontinent — sonst springt jede Karriere
+  // wahllos über den Globus.
   const homeCountry = currentLeague?.country ?? state.player.nationality;
   const homeConfederation = countryOf(data, homeCountry).confederation;
   // Wer dieselbe Marke trägt wie ein Verein, taucht dort eher auf einem Zettel
@@ -228,8 +300,14 @@ export function clubOffers(data: GameData, rng: Rng, state: CareerState, options
   const weighted = pool.map((club) => {
     const league = leagueOf(data, club);
     let weight = Math.max(1, 12 - Math.abs(club.reputation.domestic - target) * 2.5);
-    if (league.country === homeCountry) weight *= 2.5;
-    else if (countryOf(data, league.country).confederation === homeConfederation) weight *= 1.5;
+    // Eine Spielklasse Unterschied ist der übliche Schritt, zwei die Ausnahme,
+    // drei kommt nicht vor.
+    const step = Math.abs(league.strength - deserved);
+    weight *= step <= 0.5 ? 2.2 : step <= 1.5 ? 1 : step <= 2.5 ? 0.12 : 0.02;
+    weight *= currentLeague && league.id === currentLeague.id ? 3.5
+      : league.country === homeCountry ? 2.5
+        : countryOf(data, league.country).confederation === homeConfederation ? 1.6
+          : 0.35;
     if (league.country === state.player.nationality) weight *= 1.5;
     if (ownSupplier && club.kitSupplier === ownSupplier) weight *= 1.8;
     return { item: club, weight };
@@ -255,9 +333,12 @@ export function academyOffers(data: GameData, rng: Rng, state: CareerState): Clu
 
   // Kein 16-Jähriger startet bei einem Weltverein — die Spitze fällt raus.
   const eligible = pool.filter((c) => c.reputation.domestic <= 8);
+  // Und kaum einer startet ganz oben: eine Karriere soll sich von unten nach
+  // oben arbeiten, deshalb wiegen die kleineren Spielklassen schwerer. Ganz
+  // ausgeschlossen ist die Jugend eines großen Vereins damit nicht.
   const weighted = (eligible.length >= ACADEMY_OFFERS ? eligible : pool).map((club) => ({
     item: club,
-    weight: Math.max(1, 11 - club.reputation.domestic),
+    weight: Math.max(1, 11 - club.reputation.domestic) * (6 - leagueOf(data, club).strength),
   }));
   return rng.weightedSample(weighted, ACADEMY_OFFERS);
 }
@@ -383,6 +464,10 @@ export function buildCareerDecision(
       if (used >= (event.maxPerCareer ?? 1)) return false;
     }
 
+    // Ein Torwart bleibt Torwart: wo es keine verwandte Position gibt, ist
+    // nichts zu entscheiden.
+    if (needsAlternativePosition(event) && relatedPositions(data, state).length === 0) return false;
+
     return meetsRequirements(data, state, event.requires);
   });
 
@@ -414,8 +499,14 @@ export function buildEventDecision(
     ? alternativeNationality(data, rng, state)
     : undefined;
 
+  // Auf welche Position es ginge, steht schon auf der Karte — sonst kündigt
+  // der Text etwas anderes an, als am Ende passiert.
+  const related = needsAlternativePosition(event) ? relatedPositions(data, state) : [];
+  const alternativePosition = related.length > 0 ? rng.pick(related) : undefined;
+
   const filled = fillPlaceholders(
-    data, state, variant?.text.en ?? event.text.en, variant, alternativeCountry,
+    data, state, variant?.text.en ?? event.text.en, variant,
+    alternativeCountry, alternativePosition,
   );
 
   return {
@@ -424,6 +515,7 @@ export function buildEventDecision(
     window,
     ...(event.category ? { category: event.category } : {}),
     ...(alternativeCountry ? { alternativeCountry } : {}),
+    ...(alternativePosition ? { alternativePosition } : {}),
     title: event.title,
     text: filled.text,
     ...(filled.highlights.length > 0 ? { highlights: filled.highlights } : {}),
@@ -442,6 +534,25 @@ export function buildEventDecision(
         };
       }),
   };
+}
+
+/** Positionen, auf die dieser Spieler umschulen könnte. */
+function relatedPositions(data: GameData, state: CareerState): PositionId[] {
+  return positionOf(data, state.player.position).related;
+}
+
+/** Kündigt dieses Ereignis eine andere Position an oder wechselt es dorthin? */
+function needsAlternativePosition(event: CareerEvent): boolean {
+  const texts = [
+    ...Object.values(event.text ?? {}),
+    ...(event.variants ?? []).flatMap((variant) => Object.values(variant.text ?? {})),
+  ];
+  if (texts.some((text) => String(text).includes('{alternativePosition}'))) return true;
+  return (event.options ?? []).some((option) => (
+    option.modifiers?.changePosition
+    ?? option.outcome?.success?.changePosition
+    ?? option.outcome?.failure?.changePosition
+  ) === true);
 }
 
 function optionAllowed(state: CareerState, option: EventOption): boolean {
@@ -489,6 +600,7 @@ function alternativeNationality(data: GameData, rng: Rng, state: CareerState): C
 function fillPlaceholders(
   data: GameData, state: CareerState, text: string, variant: EventVariant | null,
   alternativeCountry?: CountryCode,
+  alternativePosition?: PositionId,
 ): { text: string; highlights: string[] } {
   const club = state.clubId ? clubOf(data, state.clubId) : null;
   const country = countryOf(data, state.player.nationality);
@@ -496,7 +608,8 @@ function fillPlaceholders(
     ? countryOf(data, alternativeCountry).name.en
     : 'another country';
   const rival = club ? rivalOf(data, club)?.short ?? 'the rivals' : 'the rivals';
-  const position = positionOf(data, state.player.position).name.en;
+  // Gefragt ist die neue Position — die eigene kennt der Spieler.
+  const position = alternativePosition ? positionOf(data, alternativePosition).name.en : '';
 
   const names: Record<string, string> = {
     '{club}': club?.short ?? '',
@@ -504,6 +617,7 @@ function fillPlaceholders(
     '{rivalClub}': rival,
     '{alternativeCountry}': alternative,
     '{alternativePosition}': position,
+    '{mediaPartner}': partnerOf(data, state, 'media')?.name ?? '',
   };
 
   const highlights: string[] = [];
@@ -614,6 +728,7 @@ function moveClubLeague(data: GameData, clubId: string, move: 'promotion' | 'rel
 export interface ModifierContext {
   /** Ziel eines Verbandswechsels. */
   alternativeCountry?: CountryCode;
+  alternativePosition?: PositionId;
 }
 
 export function applyModifiers(
@@ -676,9 +791,9 @@ export function applyModifiers(
 
   if (modifiers.setCaptain) player.isCaptain = true;
   if (modifiers.suspendedSeasons) state.suspensionHalves += modifiers.suspendedSeasons * 2;
-  if (modifiers.changePosition) {
-    const position = positionOf(data, player.position);
-    if (position.related.length > 0) player.position = rng.pick(position.related);
+  // Gewechselt wird auf die Position, die auf der Karte stand.
+  if (modifiers.changePosition && context.alternativePosition) {
+    player.position = context.alternativePosition;
   }
   if (modifiers.missShare && modifiers.missShare >= 0.2) state.lastInjuryYear = state.year;
   if (modifiers.forceTransfer) {
@@ -687,6 +802,7 @@ export function applyModifiers(
       ...(modifiers.forceTransfer.leagueStrengthMax !== undefined
         ? { leagueStrengthMax: modifiers.forceTransfer.leagueStrengthMax }
         : {}),
+      ...(modifiers.forceTransfer.kind ? { kind: modifiers.forceTransfer.kind } : {}),
     };
   }
 

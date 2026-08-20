@@ -1,0 +1,277 @@
+{
+  "country": "BEL",
+  "clubs": [
+    {
+      "id": "club-brugge",
+      "league": "bel-pro-league",
+      "name": "Club Brugge KV",
+      "short": "Club Brugge",
+      "abbr": "CLU",
+      "city": "Brugge",
+      "colors": [
+        "#0A5AA5",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 8,
+        "continental": 5,
+        "international": 6
+      }
+    },
+    {
+      "id": "rsc-anderlecht",
+      "league": "bel-pro-league",
+      "name": "RSC Anderlecht",
+      "short": "Anderlecht",
+      "abbr": "AND",
+      "city": "Brussels",
+      "colors": [
+        "#62267A",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 8,
+        "continental": 4,
+        "international": 6
+      }
+    },
+    {
+      "id": "union-saint-gilloise",
+      "league": "bel-pro-league",
+      "name": "Royale Union Saint-Gilloise",
+      "short": "Union SG",
+      "abbr": "USG",
+      "city": "Brussels",
+      "colors": [
+        "#FFD500",
+        "#003366"
+      ],
+      "reputation": {
+        "domestic": 7,
+        "continental": 4,
+        "international": 3
+      }
+    },
+    {
+      "id": "krc-genk",
+      "league": "bel-pro-league",
+      "name": "KRC Genk",
+      "short": "Genk",
+      "abbr": "GNK",
+      "city": "Genk",
+      "colors": [
+        "#1560BD",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 7,
+        "continental": 3,
+        "international": 4
+      }
+    },
+    {
+      "id": "royal-antwerp",
+      "league": "bel-pro-league",
+      "name": "Royal Antwerp FC",
+      "short": "Antwerp",
+      "abbr": "ANT",
+      "city": "Antwerp",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 6,
+        "continental": 3,
+        "international": 3
+      }
+    },
+    {
+      "id": "kaa-gent",
+      "league": "bel-pro-league",
+      "name": "KAA Gent",
+      "short": "Gent",
+      "abbr": "GNT",
+      "city": "Gent",
+      "colors": [
+        "#003D7C",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 6,
+        "continental": 3,
+        "international": 4
+      }
+    },
+    {
+      "id": "standard-liege",
+      "league": "bel-pro-league",
+      "name": "Standard Liège",
+      "short": "Standard",
+      "abbr": "STA",
+      "city": "Liège",
+      "colors": [
+        "#E3001B",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 6,
+        "continental": 2,
+        "international": 4
+      }
+    },
+    {
+      "id": "cercle-brugge",
+      "league": "bel-pro-league",
+      "name": "Cercle Brugge KSV",
+      "short": "Cercle Brugge",
+      "abbr": "CER",
+      "city": "Brugge",
+      "colors": [
+        "#007A33",
+        "#000000"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 1,
+        "international": 1
+      }
+    },
+    {
+      "id": "kv-mechelen",
+      "league": "bel-pro-league",
+      "name": "KV Mechelen",
+      "short": "Mechelen",
+      "abbr": "MEC",
+      "city": "Mechelen",
+      "colors": [
+        "#D2001C",
+        "#FFD100"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 1,
+        "international": 2
+      }
+    },
+    {
+      "id": "sporting-charleroi",
+      "league": "bel-pro-league",
+      "name": "Sporting Charleroi",
+      "short": "Charleroi",
+      "abbr": "CHA",
+      "city": "Charleroi",
+      "colors": [
+        "#000000",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 4,
+        "continental": 1,
+        "international": 1
+      }
+    },
+    {
+      "id": "kvc-westerlo",
+      "league": "bel-pro-league",
+      "name": "KVC Westerlo",
+      "short": "Westerlo",
+      "abbr": "WES",
+      "city": "Westerlo",
+      "colors": [
+        "#FFE000",
+        "#004A99"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "oh-leuven",
+      "league": "bel-pro-league",
+      "name": "Oud-Heverlee Leuven",
+      "short": "OH Leuven",
+      "abbr": "OHL",
+      "city": "Leuven",
+      "colors": [
+        "#FFFFFF",
+        "#003DA5"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "sint-truiden",
+      "league": "bel-pro-league",
+      "name": "Sint-Truidense VV",
+      "short": "Sint-Truiden",
+      "abbr": "STV",
+      "city": "Sint-Truiden",
+      "colors": [
+        "#FFDD00",
+        "#004A99"
+      ],
+      "reputation": {
+        "domestic": 3,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "kv-kortrijk",
+      "league": "bel-pro-league",
+      "name": "KV Kortrijk",
+      "short": "Kortrijk",
+      "abbr": "KOR",
+      "city": "Kortrijk",
+      "colors": [
+        "#E2001A",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "beerschot",
+      "league": "bel-pro-league",
+      "name": "K Beerschot VA",
+      "short": "Beerschot",
+      "abbr": "BEE",
+      "city": "Antwerp",
+      "colors": [
+        "#63277F",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 2,
+        "continental": 0,
+        "international": 0
+      }
+    },
+    {
+      "id": "dender-eh",
+      "league": "bel-pro-league",
+      "name": "FCV Dender EH",
+      "short": "Dender",
+      "abbr": "DEN",
+      "city": "Denderleeuw",
+      "colors": [
+        "#E2001A",
+        "#FFFFFF"
+      ],
+      "reputation": {
+        "domestic": 1,
+        "continental": 0,
+        "international": 0
+      }
+    }
+  ]
+}

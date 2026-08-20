@@ -73,7 +73,16 @@ export default function App() {
 
   function renderScreen() {
     if (!state || !data) return <IdentityScreen onStart={start} />;
-    if (state.retired) return <EndScreen data={data} state={state} onRestart={restart} />;
+
+    // Am Ende bleibt die Laufbahn stehen, wie sie war: Spielerkarte links,
+    // Saison für Saison darunter. Rechts steht nur noch, dass es vorbei ist.
+    if (state.retired) {
+      return (
+        <CareerLayout data={data} state={state}>
+          <EndScreen state={state} onRestart={restart} />
+        </CareerLayout>
+      );
+    }
 
     // Der Auftakt liegt über allem: dort gibt es noch keinen Verein und
     // damit auch noch keine Spielerkarte.

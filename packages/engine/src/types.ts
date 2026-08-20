@@ -191,7 +191,14 @@ export const ROLE_ORDER: SquadRole[] = ['substitute', 'low_rotation', 'high_rota
 
 export type DevelopmentProfileId = 'early' | 'normal' | 'late' | 'goalkeeper';
 
-export type GameMode = 'intense' | 'normal' | 'express';
+/**
+ * Wie oft die Simulation anhält.
+ *
+ * `normal` fragt in jeder Pause, `fast` nur zur Sommerpause, `very_fast` nur
+ * alle paar Saisons, `instant` gar nicht — dann entscheidet die Engine selbst
+ * und rechnet die Laufbahn in einem Zug zu Ende.
+ */
+export type GameMode = 'normal' | 'fast' | 'very_fast' | 'instant';
 
 /** Die Saison besteht aus Hinrunde (1) und Rückrunde (2). */
 export type SeasonHalf = 1 | 2;
@@ -225,7 +232,8 @@ export interface EventModifiers {
   switchNationality?: boolean;
   changePosition?: boolean;
   setCaptain?: boolean;
-  forceTransfer?: { scope: TransferScope; leagueStrengthMax?: number };
+  /** `kind` entscheidet, ob daraus ein Wechsel oder eine Leihe wird. */
+  forceTransfer?: { scope: TransferScope; leagueStrengthMax?: number; kind?: TransferKind };
   /** Faktoren auf die nächste Halbserie. */
   appearanceMultiplier?: number;
   goalMultiplier?: number;
@@ -249,6 +257,9 @@ export interface EventModifiers {
 export type TransferScope =
   | 'home_country' | 'rival' | 'same_league' | 'abroad' | 'free'
   | 'matching' | 'better' | 'lower';
+
+/** Ein Vereinswechsel ist entweder endgültig oder auf Zeit. */
+export type TransferKind = 'transfer' | 'loan';
 
 export interface EventOutcome {
   successChance?: number;
@@ -298,6 +309,8 @@ export interface EventRequirements {
   notCaptain?: boolean;
   recentInjury?: boolean;
   upcomingNationalTournament?: boolean;
+  /** Nur mit laufendem Medienpartner — ohne ihn gibt es nichts zu drehen. */
+  hasMediaPartner?: boolean;
 }
 
 export interface CareerEvent {
@@ -429,6 +442,13 @@ export interface ScheduledEvent {
 export interface Partner {
   id: string;
   name: string;
+  /**
+   * Wo diese Marke überhaupt anklopft. Ein Vereinssender meldet sich nur beim
+   * eigenen Verein, eine Landeszeitung nur im eigenen Land. Ohne beides ist
+   * die Marke international und kommt überall in Frage.
+   */
+  club?: string;
+  country?: CountryCode;
   /** Pfad des Logos unterhalb von assets/. */
   logo: string;
   reach: number;
@@ -471,8 +491,12 @@ export interface PlayerState extends PlayerIdentity {
 
   /** Medienpartner, der über einen berichtet. Keiner heißt null. */
   mediaPartner: string | null;
+  /** Bis zu diesem Jahr läuft der Vertrag mit dem Medienpartner. */
+  mediaPartnerUntil: number | null;
   /** Ausrüster, der einen ausstattet. */
   kitSupplier: string | null;
+  /** Bis zu diesem Jahr läuft der Vertrag mit dem Ausrüster. */
+  kitSupplierUntil: number | null;
 
   /**
    * Wie begehrt man gerade ist, 0 bis 100. Wächst mit Leistung, Presse und
@@ -560,6 +584,8 @@ export interface PendingOption {
   clubId?: string;
   /** Bei Partnerentscheidungen: die Marke hinter der Option. */
   partnerId?: string;
+  /** Bei der Verbandswahl: das Land hinter der Option. */
+  countryCode?: CountryCode;
   /** Kurzes Kennzeichen der Option, etwa "Stay" oder "Move". */
   tag?: string;
   /** Motiv für das Bild auf dieser Antwort. */
@@ -574,6 +600,8 @@ export interface PendingDecision {
   eventId: string;
   /** Beim Verbandswechsel: das Land, um das es geht. */
   alternativeCountry?: CountryCode;
+  /** Beim Positionswechsel: die Position, um die es geht. */
+  alternativePosition?: PositionId;
   window: 'summer' | 'winter' | 'start';
   title: LocalizedText;
   text: string;
@@ -645,7 +673,6 @@ export interface CareerState {
   contractClubId: string | null;
   activeLoan: { parentClubId: string; loanClubId: string; returnYear: number } | null;
   seasonsAtClub: number;
-  seasonsSinceMajorDecision: number;
   currentSeasonHalves: HalfSeasonRecord[];
   currentSeasonCaps: number;
   currentSeasonNationalGoals: number;
@@ -673,7 +700,13 @@ export interface CareerState {
   /** Welche Entscheidung nach dem Bericht ansteht. */
   reportContext: 'winter' | 'summer' | null;
   /** Von einem Ereignis erzwungener Wechsel, der beim nächsten Schritt ausgeführt wird. */
-  pendingTransfer: { scope: TransferScope; leagueStrengthMax?: number } | null;
+  pendingTransfer: { scope: TransferScope; leagueStrengthMax?: number; kind?: TransferKind } | null;
+  /**
+   * Was aus übersprungenen Berichten noch zu zeigen ist. In den schnellen
+   * Rhythmen bleibt mancher Bericht ungezeigt — was darin stand, wandert in
+   * den nächsten, statt verloren zu gehen.
+   */
+  carried: { randomEvents: PeriodReport['randomEvents']; titles: string[]; awards: string[] };
   activeEffects: ActiveEffect[];
   deferredOverall: { delta: number; dueYear: number }[];
   eventHistory: { id: string; year: number }[];

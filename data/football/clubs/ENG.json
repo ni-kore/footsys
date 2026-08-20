@@ -74,6 +74,24 @@
       "kitSupplier": "nike"
     },
     {
+      "id": "manchester-united",
+      "league": "eng-premier-league",
+      "name": "Manchester United",
+      "short": "Man United",
+      "abbr": "MUN",
+      "city": "Manchester",
+      "colors": [
+        "#DA020E",
+        "#FBE122"
+      ],
+      "reputation": {
+        "domestic": 8,
+        "continental": 7,
+        "international": 10
+      },
+      "kitSupplier": "adidas"
+    },
+    {
       "id": "tottenham-hotspur",
       "league": "eng-premier-league",
       "name": "Tottenham Hotspur",
@@ -617,7 +635,7 @@
     },
     {
       "id": "hull-city-afc",
-      "league": "eng-premier-league",
+      "league": "eng-championship",
       "name": "Hull City AFC",
       "short": "Hull City AFC",
       "abbr": "HUC",
@@ -627,8 +645,8 @@
         "#E8E8F0"
       ],
       "reputation": {
-        "domestic": 6,
-        "continental": 4,
+        "domestic": 1,
+        "continental": 1,
         "international": 2
       }
     },

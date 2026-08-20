@@ -231,9 +231,157 @@
         "de": "Der Wechsel ist beschlossen. Jetzt zählt nur noch, bei wem du unterschreibst.",
         "en": "The move is decided. All that is left is whose shirt you put on."
       }
+    },
+    {
+      "id": "loan_destination",
+      "window": "summer",
+      "title": {
+        "de": "Wohin auf Leihe?",
+        "en": "Out on loan, but where?"
+      },
+      "text": {
+        "de": "Die Leihe ist abgemacht. Jetzt zählt nur noch, wo du deine Spiele bekommst.",
+        "en": "The loan is agreed. All that is left is where you get your minutes."
+      }
     }
   ],
   "career": [
+    {
+      "id": "career_documentary",
+      "weight": 110,
+      "ageRange": [
+        21,
+        36
+      ],
+      "maxPerCareer": 2,
+      "requires": {
+        "hasMediaPartner": true
+      },
+      "title": {
+        "de": "Die Doku über dich",
+        "en": "Behind the career"
+      },
+      "text": {
+        "de": "{mediaPartner} will eine Doku über dich drehen: eine Saison lang Kabine, Reha, Zuhause. Das bringt dich zu Leuten, die nie ein Spiel von dir gesehen haben — und zeigt jeden schlechten Tag mit.",
+        "en": "{mediaPartner} wants to make a documentary about you: a season in the dressing room, in rehab, at home. It reaches people who have never watched you play — and it shows every bad day too."
+      },
+      "options": [
+        {
+          "id": "full_access",
+          "label": {
+            "de": "Alles zeigen",
+            "en": "Let them film everything"
+          },
+          "outcome": {
+            "successChance": 0.65,
+            "success": {
+              "fansMultiplier": 1.6,
+              "marketInterestDelta": 14,
+              "meters": {
+                "mediaRelation": 14,
+                "fanSupport": 10
+              }
+            },
+            "failure": {
+              "fansMultiplier": 1.15,
+              "marketInterestDelta": 4,
+              "meters": {
+                "mediaRelation": -8,
+                "morale": -10,
+                "fanSupport": -6
+              }
+            }
+          },
+          "motif": "media"
+        },
+        {
+          "id": "controlled_access",
+          "label": {
+            "de": "Nur das Sportliche",
+            "en": "Football only"
+          },
+          "modifiers": {
+            "fansMultiplier": 1.25,
+            "marketInterestDelta": 6,
+            "meters": {
+              "mediaRelation": 5
+            }
+          },
+          "motif": "training"
+        },
+        {
+          "id": "no_documentary",
+          "label": {
+            "de": "Keine Kamera",
+            "en": "No cameras"
+          },
+          "modifiers": {
+            "meters": {
+              "mediaRelation": -10,
+              "morale": 4
+            }
+          },
+          "motif": "dressing_room"
+        }
+      ],
+      "risky": true,
+      "category": "media"
+    },
+    {
+      "id": "partner_exclusive",
+      "weight": 100,
+      "ageRange": [
+        20,
+        36
+      ],
+      "maxPerCareer": 3,
+      "requires": {
+        "hasMediaPartner": true
+      },
+      "title": {
+        "de": "Das Exklusivinterview",
+        "en": "The exclusive"
+      },
+      "text": {
+        "de": "{mediaPartner} will das große Gespräch: offen über Verein, Trainer und deine Pläne. Offenheit bringt Zuschauer, in der Kabine kommt sie nicht überall gut an.",
+        "en": "{mediaPartner} wants the big interview: open talk about the club, the coach and your plans. Being candid brings viewers, but it does not go down well everywhere in the dressing room."
+      },
+      "options": [
+        {
+          "id": "speak_freely",
+          "label": {
+            "de": "Offen reden",
+            "en": "Speak freely"
+          },
+          "modifiers": {
+            "fansMultiplier": 1.3,
+            "marketInterestDelta": 10,
+            "meters": {
+              "mediaRelation": 10,
+              "fanSupport": 6,
+              "morale": -4
+            }
+          },
+          "motif": "media"
+        },
+        {
+          "id": "stay_diplomatic",
+          "label": {
+            "de": "Zurückhaltend bleiben",
+            "en": "Keep it diplomatic"
+          },
+          "modifiers": {
+            "fansMultiplier": 1.08,
+            "meters": {
+              "mediaRelation": 3,
+              "morale": 3
+            }
+          },
+          "motif": "contract"
+        }
+      ],
+      "category": "media"
+    },
     {
       "id": "injury",
       "weight": 100,
@@ -3509,7 +3657,8 @@
           },
           "modifiers": {
             "forceTransfer": {
-              "scope": "lower"
+              "scope": "lower",
+              "kind": "loan"
             },
             "meters": {
               "morale": 5

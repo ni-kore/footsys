@@ -128,6 +128,9 @@ export function StatCard({
       : String(Math.round(counted));
 
   const front = filled && tint ? readableOn(tint) : tint;
+  // Die Spitzenstufe bekommt eine hellere, breitere Kante — dieselbe Karte,
+  // aber sie liegt sichtbar eine Stufe höher.
+  const elite = isEliteTint(tint);
 
   return (
     <View
@@ -138,6 +141,7 @@ export function StatCard({
         size === 'hero' && styles.statCardHero,
         tint ? { borderColor: tint } : null,
         filled && tint ? { backgroundColor: tint } : null,
+        elite && styles.statCardElite,
         style,
       ]}
     >
@@ -184,25 +188,32 @@ export function PositionDot({ abbr }: { abbr: string }) {
  * Farbstufen wie in den EA-Titeln: Bronze für den Durchschnitt, Silber für
  * gute, Gold für sehr gute Spieler — darüber die Ausnahmeklasse im Markengrün.
  */
+/**
+ * Die Stufe einer Wertkarte, wie man sie von Sammelkarten kennt.
+ *
+ * Bronze, Silber, Gold — und darüber eine eigene Stufe für die Spitze. Ab 85
+ * wird das Gold heller und die Karte bekommt eine zweite, noch hellere Kante:
+ * ein Ausnahmespieler soll sich nicht nur um eine Zahl von einem sehr guten
+ * unterscheiden.
+ */
 export function overallTint(overall: number): string {
-  if (overall >= 85) return color.accent.base;
-  if (overall >= 75) return TIER.gold;
-  if (overall >= 65) return TIER.silver;
-  return TIER.bronze;
+  if (overall >= 85) return color.tier.elite;
+  if (overall >= 75) return color.tier.gold;
+  if (overall >= 65) return color.tier.silver;
+  return color.tier.bronze;
 }
 
 export function valueTint(marketValue: number): string {
-  if (marketValue >= 50_000_000) return color.accent.base;
-  if (marketValue >= 10_000_000) return TIER.gold;
-  if (marketValue >= 1_000_000) return TIER.silver;
-  return TIER.bronze;
+  if (marketValue >= 50_000_000) return color.tier.elite;
+  if (marketValue >= 10_000_000) return color.tier.gold;
+  if (marketValue >= 1_000_000) return color.tier.silver;
+  return color.tier.bronze;
 }
 
-const TIER = {
-  bronze: '#B08D57',
-  silver: '#C9CBD4',
-  gold: '#F5C542',
-};
+/** Ab hier trägt die Karte die helle Kante der Spitzenstufe. */
+export function isEliteTint(tint?: string): boolean {
+  return tint === color.tier.elite;
+}
 
 /** Ring with a number in the middle — for overall and percentages. */
 export function Ring({ value, max = 99, size = 76, caption }: {
@@ -514,6 +525,8 @@ const styles = StyleSheet.create({
   },
   statCardWide: { minWidth: 84, flexBasis: 116 },
   statCardHero: { minWidth: 104, paddingVertical: space[3] },
+  // Die Spitzenstufe: hellere Kante um das ohnehin hellere Gold.
+  statCardElite: { borderWidth: 2, borderColor: color.tier.eliteEdge },
   statCardGrow: { flexGrow: 1, flexBasis: 74, paddingVertical: space[2] },
   statCardIcon: { marginBottom: 2 },
   statCardLine: { flexDirection: 'row', alignItems: 'center', gap: 6 },

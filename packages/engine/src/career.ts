@@ -1,12 +1,15 @@
 import { clubOf, countryOf, leagueOf, positionOf, type GameData } from './data';
 import {
   buildAcademyDecision, buildCareerDecision, buildLoanDecision, buildPartnerDecision,
-  buildRetirementDecision, buildTransferDecision, clubOffers, resolveOption, rollRandomEvents,
+  buildRetirementDecision, buildTransferDecision, clubOffers, movesClub, resolveOption,
+  rollRandomEvents,
 } from './events';
 import { collectFacts, collectSeasonFacts } from './facts';
 import { buildDestinationDecision, buildEventDecision, interestOfferCount } from './events';
-import { partnerOffersNow } from './partners';
-import { marketValue, pickDevelopmentProfile, pickPotential, pickTemperament } from './progression';
+import { contractSeasons, partnerFits, partnerOf, partnerOffersNow } from './partners';
+import {
+  interpolate, marketValue, pickDevelopmentProfile, pickPotential, pickTemperament,
+} from './progression';
 import { callingAssociations, canStillSwitch } from './national-team';
 import { Rng } from './rng';
 import { ageEffects, closeSeason, simulateHalf } from './simulation';
@@ -80,7 +83,9 @@ export function createCareer(data: GameData, options: CareerOptions): CareerStat
       },
       fans: data.progression.fans.start as number,
       mediaPartner: null,
+      mediaPartnerUntil: null,
       kitSupplier: null,
+      kitSupplierUntil: null,
       marketInterest: data.progression.marketInterest.start as number,
       caps: 0,
       nationalGoals: 0,
@@ -98,7 +103,6 @@ export function createCareer(data: GameData, options: CareerOptions): CareerStat
     contractClubId: null,
     activeLoan: null,
     seasonsAtClub: 0,
-    seasonsSinceMajorDecision: 0,
     currentSeasonHalves: [],
     currentSeasonCaps: 0,
     currentSeasonNationalGoals: 0,
@@ -114,6 +118,7 @@ export function createCareer(data: GameData, options: CareerOptions): CareerStat
     reportContext: null,
     pendingTransfer: null,
     activeEffects: [],
+    carried: { randomEvents: [], titles: [], awards: [] },
     deferredOverall: [],
     eventHistory: [],
     randomEventHistory: [],
@@ -127,6 +132,9 @@ export function createCareer(data: GameData, options: CareerOptions): CareerStat
 
   state.player.marketValue = marketValue(data, rng, state.player.overall, state.player.age);
   state.pendingSet = [buildAcademyDecision(data, rng, state)];
+  // Im Sofortlauf wird nichts gefragt, auch nicht der erste Verein: die
+  // Laufbahn ist fertig, sobald sie beginnt.
+  if (options.mode === 'instant') simulateStep(data, rng, state);
   state.rngState = rng.state;
   return state;
 }
@@ -146,37 +154,52 @@ export function decide(
 
   const next = structuredClone(state);
   const rng = new Rng(next.rngState);
-  const set = next.pendingSet;
-  next.pendingSet = [];
-  next.step += 1;
+
+  if (!resolveSet(data, rng, next, ids)) simulateStep(data, rng, next);
+  next.rngState = rng.state;
+  return next;
+}
+
+/**
+ * Wendet die Antworten auf den anstehenden Satz an.
+ *
+ * Gibt zurück, ob daraus sofort die nächste Entscheidung folgt — die Frage
+ * nach dem Ziel eines angestoßenen Wechsels. Dann wird nicht weitergerechnet.
+ */
+function resolveSet(data: GameData, rng: Rng, state: CareerState, ids: string[]): boolean {
+  const set = state.pendingSet;
+  const clubBefore = state.clubId;
+  state.pendingSet = [];
+  state.step += 1;
 
   for (const [index, decision] of set.entries()) {
     const optionId = ids[index];
     if (optionId === undefined) break;
     const option = decision.options.find((o) => o.id === optionId);
     if (!option) throw new Error('Unbekannte Option ' + optionId);
-    applyDecision(data, rng, next, decision, option);
-    if (next.retired) break;
+    applyDecision(data, rng, state, decision, option);
+    if (state.retired) break;
   }
+
+  // Wer sich in dieser Pause schon einen Verein ausgesucht hat, sucht sich
+  // keinen zweiten: ein angestoßener Wechsel verfällt dann.
+  if (state.clubId !== clubBefore) state.pendingTransfer = null;
 
   // Hat eine Wahl einen Wechsel ausgelöst, folgt zuerst die Frage, wohin.
   // Zugeteilt wird niemand.
-  if (next.pendingTransfer && !next.retired) {
-    const transfer = next.pendingTransfer;
+  if (state.pendingTransfer && !state.retired) {
+    const transfer = state.pendingTransfer;
     const destination = buildDestinationDecision(
-      data, rng, next, transfer.scope as TransferScope, transfer.leagueStrengthMax,
+      data, rng, state, transfer.scope as TransferScope, transfer.leagueStrengthMax, transfer.kind,
     );
-    next.pendingTransfer = null;
+    state.pendingTransfer = null;
     if (destination) {
-      next.pendingSet = [destination];
-      next.rngState = rng.state;
-      return next;
+      state.pendingSet = [destination];
+      return true;
     }
   }
 
-  simulateStep(data, rng, next);
-  next.rngState = rng.state;
-  return next;
+  return false;
 }
 
 /** Wendet genau eine getroffene Entscheidung an. */
@@ -202,15 +225,30 @@ function applyDecision(
       joinClub(data, next, option.clubId!, 'transfer');
       break;
 
+    case 'loan_destination':
+      startLoan(data, next, option.clubId!);
+      break;
+
     case 'media_partner_offer':
     case 'kit_supplier_offer': {
       const partnerId = option.id.startsWith('partner:') ? option.id.slice(8) : null;
       const media = decision.eventId === 'media_partner_offer';
+      const kind = media ? 'media' : 'kit';
+      // Unterschrieben wird auf Jahre, nicht auf eine Saison: eine Marke
+      // begleitet eine Karriere, sie fragt nicht jeden Sommer neu.
+      const until = next.year + contractSeasons(data, rng, kind);
+
       if (partnerId) {
-        if (media) next.player.mediaPartner = partnerId;
-        else next.player.kitSupplier = partnerId;
+        const extended = partnerId === (media ? next.player.mediaPartner : next.player.kitSupplier);
+        if (media) { next.player.mediaPartner = partnerId; next.player.mediaPartnerUntil = until; }
+        else { next.player.kitSupplier = partnerId; next.player.kitSupplierUntil = until; }
         const name = data.partnerById.get(partnerId)?.name ?? partnerId;
-        log(next, 'decision', (media ? 'Signed with ' : 'Kitted out by ') + name);
+        const verb = extended ? 'Extended with ' : media ? 'Signed with ' : 'Kitted out by ';
+        log(next, 'decision', verb + name, until - next.year + ' seasons');
+      } else {
+        // Abgelehnt heißt beendet: wer nicht verlängert, steht ohne da.
+        if (media) { next.player.mediaPartner = null; next.player.mediaPartnerUntil = null; }
+        else { next.player.kitSupplier = null; next.player.kitSupplierUntil = null; }
       }
       break;
     }
@@ -235,6 +273,9 @@ function applyDecision(
           resolveOption(data, rng, next, event, eventOption, decision.variantKey, {
             ...(decision.alternativeCountry
               ? { alternativeCountry: decision.alternativeCountry }
+              : {}),
+            ...(decision.alternativePosition
+              ? { alternativePosition: decision.alternativePosition }
               : {}),
           });
           next.eventHistory.push({ id: event.id, year: next.year });
@@ -273,52 +314,144 @@ export function acknowledge(data: GameData, state: CareerState): CareerState {
   next.pendingReport = null;
   next.reportContext = null;
 
-  if (context === 'winter') {
-    if (offerDestination(data, rng, next)) {
-      next.rngState = rng.state;
-      return next;
-    }
-    startDecisionSet(data, rng, next, 'winter');
-  } else if (context === 'summer') {
-    endLoanIfDue(data, next);
-    if (offerDestination(data, rng, next)) {
-      next.rngState = rng.state;
-      return next;
-    }
-
-    if (shouldOfferRetirement(data, next)) {
-      // Über das Ende der Karriere wird allein entschieden.
-      next.pendingSet = [buildRetirementDecision(data, next)];
-    } else if (next.player.age >= data.progression.career.latestRetirementAge) {
-      retire(data, next, false);
-    } else {
-      startDecisionSet(data, rng, next, 'summer');
-    }
-  }
-
+  if (context) openBreak(data, rng, next, context, false);
   if (next.pendingSet.length === 0 && !next.retired) simulateStep(data, rng, next);
   next.rngState = rng.state;
   return next;
 }
 
+/**
+ * Wickelt eine Pause ab.
+ *
+ * Was ohnehin passiert, passiert in jedem Rhythmus: eine Leihe läuft aus, ein
+ * angestoßener Wechsel will ein Ziel, eine Laufbahn endet. `silent` heißt:
+ * hier stehen keine Entscheidungen an, die Pause wird durchgerechnet.
+ */
+function openBreak(
+  data: GameData, rng: Rng, state: CareerState,
+  window: 'summer' | 'winter', silent: boolean,
+): void {
+  if (window === 'winter') {
+    if (offerDestination(data, rng, state)) return;
+    if (!silent) startDecisionSet(data, rng, state, 'winter');
+    return;
+  }
+
+  endLoanIfDue(data, state);
+  if (offerDestination(data, rng, state)) return;
+
+  if (state.player.age >= data.progression.career.latestRetirementAge) {
+    retire(data, state, false);
+    return;
+  }
+  // Über das Ende der Karriere wird allein entschieden — und immer gefragt,
+  // auch wenn die Pause sonst übersprungen würde.
+  if (shouldOfferRetirement(data, state)) {
+    state.pendingSet = [buildRetirementDecision(data, state)];
+    return;
+  }
+
+  if (!silent) startDecisionSet(data, rng, state, 'summer');
+}
+
 // ------------------------------------------------------------ Ein Schritt
 
-/** Rechnet genau eine Halbserie und legt den Bericht ab. */
+/** Hält die Simulation in der Winterpause an? */
+function stopsInWinter(data: GameData, state: CareerState): boolean {
+  return Boolean(data.progression.career.modes[state.mode].winterBreak);
+}
+
+/** Hält sie zum Saisonende an? */
+function stopsAtSeasonEnd(data: GameData, state: CareerState): boolean {
+  if (state.mode === 'instant') return false;
+  const every = data.progression.career.modes[state.mode].seasonsPerStop as number;
+  return every <= 1 || state.seasons.length % every === 0;
+}
+
+/**
+ * Rechnet weiter, bis etwas ansteht.
+ *
+ * Im gewohnten Rhythmus ist das nach jeder Halbserie der Fall. In den
+ * schnelleren Gangarten läuft die Schleife über Pausen hinweg durch, und im
+ * Sofortlauf beantwortet die Engine sogar die Entscheidungen selbst — dann
+ * hält sie erst am Karriereende an.
+ */
 function simulateStep(data: GameData, rng: Rng, state: CareerState): void {
-  if (state.retired || state.pendingSet.length > 0 || state.pendingReport || state.pendingKickoff) return;
-  if (!state.clubId) {
-    state.pendingSet = [buildAcademyDecision(data, rng, state)];
-    return;
-  }
+  let guard = 0;
 
-  // Nur die allererste Saison wird von Hand angepfiffen: nach der
-  // Jugendakademie soll man erst sehen, wo man gelandet ist. Danach tragen die
-  // Entscheidungen von selbst in die nächste Spielzeit.
-  if (state.half === 1 && !state.seasonStarted && state.seasons.length === 0) {
-    state.pendingKickoff = true;
-    return;
-  }
+  while (guard++ < 5000) {
+    if (state.retired || state.pendingReport || state.pendingKickoff) return;
 
+    if (state.pendingSet.length > 0) {
+      // Im Sofortlauf wählt niemand mehr: die Engine wirft für den Spieler.
+      if (state.mode !== 'instant') return;
+      resolveSet(data, rng, state, state.pendingSet.map((d) => autoPick(rng, d).id));
+      continue;
+    }
+
+    if (!state.clubId) {
+      state.pendingSet = [buildAcademyDecision(data, rng, state)];
+      continue;
+    }
+
+    // Nur die allererste Saison wird von Hand angepfiffen: nach der
+    // Jugendakademie soll man erst sehen, wo man gelandet ist. Danach tragen
+    // die Entscheidungen von selbst in die nächste Spielzeit.
+    if (
+      state.half === 1 && !state.seasonStarted && state.seasons.length === 0
+      && state.mode !== 'instant'
+    ) {
+      state.pendingKickoff = true;
+      return;
+    }
+
+    const window = playHalf(data, rng, state);
+    const stops = window === 'winter' ? stopsInWinter(data, state) : stopsAtSeasonEnd(data, state);
+
+    if (stops) {
+      state.reportContext = window;
+      state.carried = { randomEvents: [], titles: [], awards: [] };
+      return;
+    }
+
+    // Ungezeigt heißt nicht ungeschehen: der Bericht wandert in den nächsten.
+    const report = state.pendingReport!;
+    state.carried = {
+      randomEvents: report.randomEvents,
+      titles: report.titles,
+      awards: report.awards,
+    };
+    state.pendingReport = null;
+    // Übersprungen wird die Pause nur in den schnellen Gangarten. Im
+    // Sofortlauf wird sehr wohl entschieden — nur eben nicht vom Spieler,
+    // sonst bliebe eine Laufbahn ihr Leben lang beim ersten Verein.
+    openBreak(data, rng, state, window, state.mode !== 'instant');
+  }
+}
+
+/** Wie oft die Engine im Sofortlauf beim Verein bleibt, wenn sie darf. */
+const AUTO_STAY_CHANCE = 0.65;
+
+/**
+ * Die Wahl der Engine, wenn niemand sonst wählt.
+ *
+ * Sie greift öfter zum Bleiben als zum Gehen — sonst zieht eine Laufbahn in
+ * jedem Sommer weiter und käme auf zwanzig Vereine.
+ */
+function autoPick(rng: Rng, decision: PendingDecision): PendingOption {
+  const stay = decision.options.find((option) => option.id === 'stay');
+  const others = decision.options.filter((option) => option.id !== 'stay');
+  if (stay && (others.length === 0 || rng.chance(AUTO_STAY_CHANCE))) return stay;
+  return rng.pick(others.length > 0 ? others : decision.options);
+}
+
+/**
+ * Rechnet genau eine Halbserie und legt ihren Bericht ab.
+ *
+ * Gibt zurück, welche Pause folgt. Ob deren Bericht gezeigt wird, entscheidet
+ * der Rhythmus — hier entsteht er in jedem Fall.
+ */
+function playHalf(data: GameData, rng: Rng, state: CareerState): 'summer' | 'winter' {
   const overallBefore = state.player.overall;
   const marketValueBefore = state.player.marketValue;
   const fansBefore = state.player.fans;
@@ -362,17 +495,19 @@ function simulateStep(data: GameData, rng: Rng, state: CareerState): void {
       overallAfter: state.player.overall,
       marketValueBefore,
       marketValueAfter: state.player.marketValue,
-      randomEvents: randoms.map((r) => ({
-        id: r.event.id, title: r.event.title, text: r.text, tone: r.event.tone,
-      })),
-      titles: [],
-      awards: [],
+      randomEvents: [
+        ...state.carried.randomEvents,
+        ...randoms.map((r) => ({
+          id: r.event.id, title: r.event.title, text: r.text, tone: r.event.tone,
+        })),
+      ],
+      titles: state.carried.titles,
+      awards: state.carried.awards,
       nationalCaps: state.currentSeasonCaps,
       nationalGoals: state.currentSeasonNationalGoals,
     };
-    state.reportContext = 'winter';
     state.half = 2;
-    return;
+    return 'winter';
   }
 
   const randoms = rollRandomEvents(data, rng, state, 'season_end');
@@ -402,15 +537,17 @@ function simulateStep(data: GameData, rng: Rng, state: CareerState): void {
     overallAfter: state.player.overall,
     marketValueBefore,
     marketValueAfter: state.player.marketValue,
-    randomEvents: randoms.map((r) => ({
-      id: r.event.id, title: r.event.title, text: r.text, tone: r.event.tone,
-    })),
-    titles: outcome.titles,
-    awards: outcome.awards,
+    randomEvents: [
+      ...state.carried.randomEvents,
+      ...randoms.map((r) => ({
+        id: r.event.id, title: r.event.title, text: r.text, tone: r.event.tone,
+      })),
+    ],
+    titles: [...state.carried.titles, ...outcome.titles],
+    awards: [...state.carried.awards, ...outcome.awards],
     nationalCaps: seasonCaps,
     nationalGoals: seasonNationalGoals,
   };
-  state.reportContext = 'summer';
 
   state.currentSeasonHalves = [];
   state.currentSeasonCaps = 0;
@@ -420,7 +557,7 @@ function simulateStep(data: GameData, rng: Rng, state: CareerState): void {
   state.seasonStarted = false;
   state.year += 1;
   state.seasonsAtClub += 1;
-  state.seasonsSinceMajorDecision += 1;
+  return 'summer';
 }
 
 /**
@@ -448,14 +585,26 @@ function buildAssociationDecision(data: GameData, state: CareerState) {
       return {
         id: 'association:' + code,
         label: { de: country.name.de, en: country.name.en },
+        countryCode: code,
+        tag: code,
         subtitle: 'World ranking tier ' + country.strength,
       };
     }),
   };
 }
 
-/** So viele Entscheidungen stehen in jeder Pause an. */
-const DECISIONS_PER_BREAK = 3;
+/**
+ * Wie viel eine Pause neben dem Vereinsangebot noch bringt.
+ *
+ * Nicht jede Pause ist gleich voll: mal steht nur der Wechsel an, mal kommt
+ * das halbe Leben dazwischen. Das Angebot selbst zählt hier nicht mit — es
+ * ist die Frage, die eine Karriere trägt, und kommt in jedem Sommer.
+ */
+const DECISION_COUNT_WEIGHTS: [number, number][] = [[0, 28], [1, 40], [2, 32]];
+
+function drawDecisionCount(rng: Rng): number {
+  return rng.weighted(DECISION_COUNT_WEIGHTS.map(([count, weight]) => ({ item: count, weight })));
+}
 
 /**
  * Legt den Satz Entscheidungen einer Pause an.
@@ -470,9 +619,23 @@ function startDecisionSet(
 ): void {
   const set: PendingDecision[] = [];
   const taken = new Set<string>();
+  const limit = drawDecisionCount(rng);
+  let optional = 0;
 
-  const add = (decision: PendingDecision | null | undefined): boolean => {
+  // In einer Pause wechselt man höchstens einmal den Verein. Steht schon eine
+  // Entscheidung an, die den Klub ändern kann, bleibt jede weitere draußen —
+  // sonst wählt man zweimal hintereinander aus und die erste Wahl war umsonst.
+  let clubMoveTaken = false;
+
+  // Was fällig ist, kommt auch dann, wenn die Pause sonst ruhig bleibt: die
+  // Folge einer früheren Wahl und das Angebot eines Vereins warten nicht.
+  const add = (decision: PendingDecision | null | undefined, due = false): boolean => {
     if (!decision || taken.has(decision.eventId)) return false;
+    if (!due && optional >= limit) return false;
+    const movesClubs = movesClub(data, decision);
+    if (movesClubs && clubMoveTaken) return false;
+    if (movesClubs) clubMoveTaken = true;
+    if (!due) optional += 1;
     taken.add(decision.eventId);
     set.push(decision);
     return true;
@@ -481,19 +644,25 @@ function startDecisionSet(
   // Was eine frühere Wahl angestoßen hat, kommt zuerst: es ist fällig.
   for (const due of dueScheduled(state)) {
     const decision = buildScheduledDecision(data, rng, state, due.eventId);
-    if (add(decision)) state.scheduledEvents = state.scheduledEvents.filter((e) => e !== due);
+    if (add(decision, true)) state.scheduledEvents = state.scheduledEvents.filter((e) => e !== due);
+  }
+
+  // Das Vereinsangebot steht über allem anderen: es ist der eine Punkt, an
+  // dem eine Karriere jedes Jahr eine Richtung bekommt.
+  if (window === 'summer') {
+    const summer = dueSummerDecisions(data, rng, state, !clubMoveTaken);
+    add(summer.offer, true);
+    for (const decision of summer.others) add(decision);
   }
 
   // Dann, was aus dem Bericht folgt.
-  for (let attempt = 0; set.length < DECISIONS_PER_BREAK && attempt < 6; attempt += 1) {
+  for (let attempt = 0; optional < limit && attempt < 6; attempt += 1) {
     if (!add(buildCareerDecision(data, rng, state, window, { onlyTriggered: true, exclude: taken }))) break;
   }
 
-  if (window === 'summer') for (const decision of dueSummerDecisions(data, rng, state)) add(decision);
-
   // Auffüllen: zuerst Ungespieltes, dann Wiederholungen, zuletzt ein
   // Vereinsangebot als sichere Bank.
-  for (let attempt = 0; set.length < DECISIONS_PER_BREAK && attempt < 12; attempt += 1) {
+  for (let attempt = 0; optional < limit && attempt < 12; attempt += 1) {
     const repeatable = attempt >= 4;
     const filled = add(buildCareerDecision(data, rng, state, window, { repeatable, exclude: taken }));
     if (!filled && attempt >= 8) add(buildTransferDecision(data, rng, state));
@@ -502,40 +671,61 @@ function startDecisionSet(
   state.pendingSet = set;
 }
 
-/** Was im Sommer ohnehin ansteht, in der Reihenfolge seiner Dringlichkeit. */
-function dueSummerDecisions(data: GameData, rng: Rng, state: CareerState): PendingDecision[] {
-  const due: PendingDecision[] = [];
+/**
+ * Was im Sommer ohnehin ansteht.
+ *
+ * `offer` ist der Verein, der anklopft — die eine Frage, die in jedem Sommer
+ * gestellt wird und deshalb vor allem anderen steht. `others` ist, was sich
+ * sonst von selbst meldet und nur mitkommt, wenn in der Pause Platz ist.
+ *
+ * `allowClubMove` ist falsch, wenn der Satz schon eine Entscheidung enthält,
+ * die den Verein ändern kann. Leihe und Angebot bleiben dann ganz außen vor —
+ * samt ihrer Zähler, damit sie nicht verfallen, sondern später kommen.
+ */
+function dueSummerDecisions(
+  data: GameData, rng: Rng, state: CareerState, allowClubMove: boolean,
+): { offer: PendingDecision | null; others: PendingDecision[] } {
+  const others: PendingDecision[] = [];
 
   const association = buildAssociationDecision(data, state);
-  if (association) due.push(association);
+  if (association) others.push(association);
 
   // Marken melden sich von selbst, wenn man auffällt. Passiert das nicht,
   // geht es ohne sie weiter: Partner sind ein Zusatz, keine Stufe.
   for (const kind of ['media', 'kit'] as const) {
     if (!partnerOffersNow(data, rng, state, kind)) continue;
     const decision = buildPartnerDecision(data, rng, state, kind);
-    if (decision) due.push(decision);
+    if (decision) others.push(decision);
   }
 
-  const periodLength = data.progression.career.modes[state.mode].periodLengthSeasons as number;
   const lastSeason = state.seasons[state.seasons.length - 1];
   const lowMinutes = lastSeason?.role === 'substitute' || lastSeason?.role === 'low_rotation';
 
+  if (!allowClubMove) return { offer: null, others };
+
   // Junge Spieler ohne Einsatzzeit bekommen zuerst ein Leihangebot.
   if (state.player.age <= 20 && lowMinutes && !state.activeLoan && rng.chance(LOAN_OFFER_CHANCE)) {
-    state.seasonsSinceMajorDecision = 0;
-    due.push(buildLoanDecision(data, rng, state));
-  } else if (state.seasonsSinceMajorDecision >= periodLength) {
-    state.seasonsSinceMajorDecision = 0;
-    // Wer eine große Anhängerschaft hat, wird vom Verein gehalten: es liegen
-    // weniger fremde Angebote auf dem Tisch.
-    const offers = clubHoldsOn(data, state)
-      ? (data.progression.fans.clubHoldsFrom.reducedOffers as number)
-      : interestOfferCount(data, state);
-    due.push(buildTransferDecision(data, rng, state, 'matching', offers));
+    return { offer: buildLoanDecision(data, rng, state), others };
   }
 
-  return due;
+  // In jedem Sommer liegt ein Angebot auf dem Tisch — bleiben oder gehen ist
+  // die Frage, die eine Karriere trägt. Nur wen gerade niemand auf dem Zettel
+  // hat, bei dem klingelt es auch mal nicht.
+  if (rng.chance(quietMarketChance(data, state))) return { offer: null, others };
+
+  // Wer eine große Anhängerschaft hat, wird vom Verein gehalten: es liegen
+  // weniger fremde Angebote auf dem Tisch.
+  const count = clubHoldsOn(data, state)
+    ? (data.progression.fans.clubHoldsFrom.reducedOffers as number)
+    : interestOfferCount(data, state);
+
+  return { offer: buildTransferDecision(data, rng, state, 'matching', count), others };
+}
+
+/** Wie wahrscheinlich es ist, dass in diesem Sommer niemand anfragt. */
+function quietMarketChance(data: GameData, state: CareerState): number {
+  const table = data.progression.offers.quietMarketByInterest as [number, number][];
+  return interpolate(table, state.player.marketInterest);
 }
 
 function shouldOfferRetirement(data: GameData, state: CareerState): boolean {
@@ -555,6 +745,23 @@ function joinClub(data: GameData, state: CareerState, clubId: string, kind: 'tra
   state.player.isCaptain = false;
   state.player.meters.fanSupport = data.meters.meters.fanSupport.resetOnTransfer.to;
   log(state, kind, 'Signed for ' + club.short, leagueOf(data, club).name);
+  dropUnfittingPartners(data, state);
+}
+
+/**
+ * Ein Vereinssender bleibt beim Verein, nicht beim Spieler.
+ *
+ * Wer geht, verliert ihn — der Kanal dreht weiter über die Mannschaft, die er
+ * begleitet. Landesweite und internationale Marken bleiben.
+ */
+function dropUnfittingPartners(data: GameData, state: CareerState): void {
+  for (const kind of ['media', 'kit'] as const) {
+    const partner = partnerOf(data, state, kind);
+    if (!partner || partnerFits(data, state, partner)) continue;
+    if (kind === 'media') { state.player.mediaPartner = null; state.player.mediaPartnerUntil = null; }
+    else { state.player.kitSupplier = null; state.player.kitSupplierUntil = null; }
+    log(state, 'decision', partner.name + ' stays behind');
+  }
 }
 
 function startLoan(data: GameData, state: CareerState, clubId: string): void {
@@ -585,7 +792,7 @@ function offerDestination(data: GameData, rng: Rng, state: CareerState): boolean
 
   const transfer = state.pendingTransfer;
   const decision = buildDestinationDecision(
-    data, rng, state, transfer.scope as TransferScope, transfer.leagueStrengthMax,
+    data, rng, state, transfer.scope as TransferScope, transfer.leagueStrengthMax, transfer.kind,
   );
   state.pendingTransfer = null;
   if (!decision) return false;

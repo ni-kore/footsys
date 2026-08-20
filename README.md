@@ -2,8 +2,9 @@
 
 Fußball-Karriere-Simulator. Du erstellst einen Spieler mit wenigen Variablen
 (Name, Nummer, Fuß, Nationalität, Position) und begleitest seine Karriere von
-16 bis zum Karriereende. In jeder Pause triffst du drei Entscheidungen, die den
-Verlauf verändern.
+16 bis zum Karriereende. In jedem Sommer liegt ein Vereinsangebot auf dem
+Tisch, dazu kommt, was das Leben sonst bringt — mal nichts, mal zwei
+Entscheidungen, die den Verlauf verändern.
 
 Ziel-Plattform: iOS. Entwicklung aktuell unter Windows.
 
@@ -64,14 +65,15 @@ data/                      Stack-neutrale Spieldaten (reines JSON)
     leagues.json           75 Ligen mit ihren echten Namen (Land, Tier, Pokal)
     cups.json              81 nationale Pokalwettbewerbe
     competitions.json      24 Klub-, 9 Länder- und 10 Einzelauszeichnungen
-    clubs/<FIFA>.json      1.164 Vereine in 52 Ländern, nach Liga gruppiert
+    clubs/<FIFA>.json      1.218 Vereine in 55 Ländern, nach Liga gruppiert
   game/
     progression.json       Entwicklung, Rollen, Marktwert, Anhänger, Marktinteresse
     team-season.json       Tabellenplatz, Titel, europäische Startplätze
     events.json            62 Karriere-Entscheidungen und 9 strukturelle
     random-events.json     22 Zufallsereignisse ohne Entscheidung
     meters.json            Moral, Fan-Rückhalt, Presse samt Wirkungskurven
-    partners.json          98 Medienpartner, 3 Ausrüster, Regeln für Angebote
+    partners.json          98 Medienpartner, 3 Ausrüster, Bindung an Verein
+                           oder Land, Regeln für Angebote
     trophy-odds.json       Titelwahrscheinlichkeiten nach Reputation
 design/
   DESIGN.md                Designsprache und Responsive-Verhalten (iPhone/iPad)
@@ -98,7 +100,7 @@ apps/mobile/               Expo-App (iPhone, iPad, Web)
     CardImage.tsx          angeschnittenes Bild für die Antworten
     motion.tsx             Zählen, Blenden, Übergänge
   src/screens/             Identität, Karrierestart, Entscheidung, Auftakt,
-                           Saisonbericht, Karriereende
+                           Saisonbericht, Karriereende (schlicht)
 packages/engine/src/       Spiel-Logik (rein funktional, deterministisch per Seed)
   types.ts                 Typen zu allen Datendateien und zum Spielstand
   rng.ts                   Deterministischer Zufallsgenerator
@@ -126,26 +128,59 @@ Projekt später auf natives SwiftUI wechselt, wird nur sie portiert.
 
 ## Ablauf
 
-Die Engine hält nach **jedem** Schritt an. Es läuft nie mehr als eine Halbserie
-auf einmal durch — jeder Zwischenstand bekommt einen eigenen Bildschirm, der
-erst auf eine Eingabe hin weitergeht:
+Die Engine hält an, wo der gewählte Rhythmus es vorsieht. Jeder Zwischenstand
+bekommt einen eigenen Bildschirm, der erst auf eine Eingabe hin weitergeht:
 
     Identität → Vereinswahl → Auftakt → Entscheidungen → Halbserien-Bericht
               → Entscheidungen → Saison-Bericht → … → Karriereende
 
 - Kleinste simulierte Einheit ist die **Halbserie**; Hin- und Rückrunde werden
   getrennt gerechnet und in je einem Bericht gezeigt
-- Jede Pause bringt **drei Entscheidungen** als Kartenstapel: er lässt sich nach
-  links und rechts schieben, jede Wahl ist bis zum Anpfiff noch änderbar
+- In jeder **Sommerpause** fragt ein Verein an — bleiben oder gehen ist die
+  Frage, die eine Karriere trägt. Nur wen gerade niemand auf dem Zettel hat,
+  bei dem klingelt es auch mal nicht
+- Dazu kommen **null bis zwei weitere Entscheidungen** als Kartenstapel: er
+  lässt sich nach links und rechts schieben, jede Wahl ist bis zum Anpfiff noch
+  änderbar. In einer Pause steht höchstens eine Vereinsfrage an — man sucht
+  sich nicht zweimal hintereinander einen Klub aus
+- Angebote kommen aus der **eigenen Spielklasse und Gegend**: meist dieselbe
+  oder eine benachbarte Liga, ganz überwiegend derselbe Kontinent. Eine
+  Karriere arbeitet sich von unten nach oben — und wer nachlässt, bekommt die
+  Anrufe von weiter unten
 - Nach jeder Halbserie treten zusätzlich **Zufallsereignisse** ein:
   Trainerwechsel, Formhoch, Verletzung, Abstieg, Investoreneinstieg, Rote Karte
 - Erzwingt ein Ereignis einen Wechsel, wählst du das Ziel selbst
 - Der **Saisonauftakt** wird nur vor der allerersten Saison gezeigt
+- Am Ende bleibt die Laufbahn stehen, wie sie war — Spielerkarte und
+  Saisontabelle. Eine eigene Zusammenfassung gibt es vorerst nicht
+
+### Gangart
+
+Vor dem Start wird gewählt, wie oft die Simulation anhält
+(`data/game/progression.json`, `career.modes`):
+
+| Gangart | Hält an |
+| --- | --- |
+| **Normal** | jede Pause, Winter wie Sommer |
+| **Fast** | nur zur Sommerpause |
+| **Very fast** | nur alle drei Saisons |
+| **Instant** | gar nicht — die Engine entscheidet selbst und rechnet die ganze Laufbahn in einem Zug |
+
+Übersprungen wird nur das Fragen und Zeigen: was in einem ungezeigten Bericht
+stand, wandert in den nächsten, und eine auslaufende Leihe oder ein
+Karriereende passiert in jeder Gangart.
 
 Die Oberfläche ist englisch. Die Daten führen weiterhin deutsche und englische
 Texte — eine deutsche Fassung wäre ein Sprachschalter, keine Übersetzungsrunde.
 
 ## Wie eine Saison entschieden wird
+
+Die Liga wird gespielt, nicht gewürfelt: jeder Verein der Spielklasse bekommt
+eine Saisonstärke aus seiner Reputation und einer Portion Form, danach steht
+die Tabelle. Der eigene Platz ist der Rang darin, verschoben um den Beitrag des
+Spielers. Deshalb gibt es je Saison genau einen Meister, und wer bei einem
+kleinen Verein spielt, muss an allen Großen vorbei. Der Pokal misst sich am
+eigenen Feld — dort spielt man gegen die eigene Liga, nicht gegen die Welt.
 
 Nicht der Spieler holt den Titel, sondern die Mannschaft. `team-season.ts`
 würfelt zuerst den Tabellenplatz aus der Reputation des Vereins und verschiebt
@@ -164,7 +199,14 @@ Rundherum:
 - **Marktinteresse.** Leistung und Schlagzeilen bestimmen, wie viele und wie
   gute Angebote im Sommer auf dem Tisch liegen
 - **Partner.** Medienpartner und Ausrüster bringen Anhänger und bessere
-  Angebote, garantiert ist dabei nichts
+  Angebote, garantiert ist dabei nichts. Unterschrieben wird auf vier bis
+  sieben Saisons — solange fragt niemand nach; erst zum Vertragsende steht die
+  Marke wieder zur Wahl, samt Verlängerung. Wer eine Marke hat, bekommt eigene
+  Entscheidungen dazu: die Doku über die eigene Laufbahn, das Exklusivinterview
+- **Wer anfragt.** Ein Vereinssender meldet sich nur beim eigenen Verein
+  (`club` in `partners.json`), eine Landesmarke im eigenen Land oder bei einem
+  Landsmann (`country`); ohne beides ist die Marke international. Wer den
+  Verein wechselt, verliert dessen Sender
 - **Anhänger.** Die Obergrenze liegt regulär bei 400 Millionen; die 700
   Millionen erreicht nur PELLE PELLE
 
@@ -197,7 +239,7 @@ endet ohne einen einzigen Titel.
 - Konföderationen, Länder, Positionen, Formationen: vollständig
 - Ligen und Pokale: die relevanten Wettbewerbe aller Konföderationen, mit ihren
   echten Namen
-- Vereine: 1.164 in 52 Ländern; wählbar ist nur, wovon ein Wappen vorliegt
+- Vereine: 1.218 in 55 Ländern; wählbar ist nur, wovon ein Wappen vorliegt
 - Ausrüster sind für 96 Spitzenvereine fest hinterlegt, die Logos dazu fehlen
   noch
 - Trophäenbilder sind noch nicht zugeordnet: alle Titel zeigen denselben

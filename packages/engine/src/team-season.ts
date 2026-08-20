@@ -1,7 +1,9 @@
 import { clubOf, countryOfClub, leagueOf, positionOf, type GameData } from './data';
 import { clamp } from './progression';
 import type { Rng } from './rng';
-import type { CareerState, ClubCompetition, ContinentalEntry, TeamSeason } from './types';
+import type {
+  CareerState, Club, ClubCompetition, ContinentalEntry, League, TeamSeason,
+} from './types';
 
 /**
  * Die Saison der Mannschaft.
@@ -10,10 +12,11 @@ import type { CareerState, ClubCompetition, ContinentalEntry, TeamSeason } from 
  * Titel. Der Spieler kam darin nicht vor: ein Ergänzungsspieler beim
  * Spitzenklub wurde genauso oft Meister wie dessen bester Mann.
  *
- * Jetzt wird zuerst gespielt und dann gezählt. Die Mannschaft landet auf einem
- * Tabellenplatz, der sich aus der Stärke des Vereins, dem eigenen Beitrag und
- * einer ordentlichen Portion Zufall ergibt. Titel, Europapokalplätze und
- * Pokalrunden folgen daraus.
+ * Jetzt wird zuerst gespielt und dann gezählt. Die ganze Liga bekommt eine
+ * Tabelle: jeder Verein der Spielklasse spielt seine Saison mit seiner Stärke
+ * und seiner Form, der eigene Platz ist der Rang darin. Es gibt also je Saison
+ * genau einen Meister, und ob man es wird, hängt daran, wer sonst noch in der
+ * Liga steht. Titel, Europapokalplätze und Pokalrunden folgen daraus.
  *
  * Der Verein bleibt der bestimmende Teil. Wer bei einem Großen spielt, gewinnt
  * Titel, auch ohne herausragend zu sein. Der eigene Beitrag verschiebt den
@@ -47,6 +50,56 @@ function noise(rng: Rng): number {
 }
 
 /**
+ * Die Liga wird gespielt, nicht gewürfelt.
+ *
+ * Jeder Verein der Spielklasse bekommt eine Saisonstärke aus seiner Reputation
+ * und einer Portion Form; sortiert ergibt das die Tabelle, und der eigene Rang
+ * darin ist der Platz. Damit gibt es je Saison genau einen Meister, und ob man
+ * es wird, hängt daran, wer sonst noch in der Liga steht: bei einem kleinen
+ * Verein muss man an allen Großen vorbei, nicht nur an einer Schwelle.
+ *
+ * Kennt die Datenbank weniger Vereine als die Liga Plätze hat, füllen
+ * namenlose Mitbewerber auf — sonst wäre eine dünn besetzte Liga leicht zu
+ * gewinnen.
+ */
+function leaguePosition(
+  data: GameData, rng: Rng, league: League, club: Club, shift: number,
+): number {
+  const config = data.teamSeason.position;
+  const table = config.strengthByReputation as Record<string, number>;
+  const form = config.formSpread as number;
+  const strengthOf = (reputation: number): number => table[String(reputation)] ?? 0;
+
+  const field = data.clubsByLeague.get(league.id) ?? [];
+  const own = strengthOf(club.reputation.domestic) + noise(rng) * form;
+
+  let better = 0;
+  for (const other of field) {
+    if (other.id === club.id) continue;
+    if (strengthOf(other.reputation.domestic) + noise(rng) * form > own) better += 1;
+  }
+  const filler = config.fieldReputation as number;
+  for (let i = field.length; i < league.teams; i += 1) {
+    if (strengthOf(filler) + noise(rng) * form > own) better += 1;
+  }
+
+  // Erst steht die Tabelle, dann kommt der Spieler dazu: sein Beitrag hebt
+  // oder senkt den Platz um wenige Ränge. Er wirkt also auf das Ergebnis der
+  // Mannschaft, nicht auf die Kräfteverhältnisse der ganzen Liga.
+  return clamp(Math.round(better + 1 - shift), 1, league.teams);
+}
+
+/** Anteil der Ligakonkurrenz, der schwächer ist als der eigene Verein. */
+function strongerShare(data: GameData, league: League, club: Club): number {
+  const field = data.clubsByLeague.get(league.id) ?? [];
+  const rivals = field.filter((c) => c.id !== club.id);
+  if (rivals.length === 0) return 0.5;
+  const weaker = rivals.filter((c) => c.reputation.domestic < club.reputation.domestic).length;
+  const equal = rivals.filter((c) => c.reputation.domestic === club.reputation.domestic).length;
+  return (weaker + equal / 2) / rivals.length;
+}
+
+/**
  * Rechnet die Saison der Mannschaft und liefert Platz, Titel und die
  * Startplätze für das kommende Jahr.
  */
@@ -60,15 +113,8 @@ export function simulateTeamSeason(
   const rep = String(club.reputation.domestic);
 
   // ------------------------------------------------------------- Tabelle
-  const share = (config.position.shareByReputation as Record<string, number>)[rep] ?? 0.5;
-  const expected = league.teams * share;
-  const spread = Math.max(
-    config.position.minSpread as number,
-    league.teams * (config.position.spreadShare as number),
-  );
-
   const shift = contributionShift(data, state, minutesShare);
-  const position = Math.round(clamp(expected - shift + noise(rng) * spread, 1, league.teams));
+  const position = leaguePosition(data, rng, league, club, shift);
 
   const titles: string[] = [];
   if (position === 1) titles.push(league.id);
@@ -76,8 +122,12 @@ export function simulateTeamSeason(
   // --------------------------------------------------------------- Pokal
   const cup = config.domesticCup;
   if (league.cup) {
-    const base = (cup.winPerRoundByReputation as Record<string, number>)[rep] ?? 0.5;
-    const perRound = clamp(base + shift * (cup.seasonBonusPerShift as number), 0.05, 0.95);
+    // Im Pokal trifft man auf die eigene Liga. Wer dort zu den Größten zählt,
+    // kommt Runde für Runde weiter — auch wenn er im Weltmaßstab klein ist.
+    const [low, high] = cup.winPerRoundRange as [number, number];
+    const base = (cup.winPerRoundBase as number)
+      + (cup.winPerRoundPerRank as number) * strongerShare(data, league, club);
+    const perRound = clamp(base + shift * (cup.seasonBonusPerShift as number), low, high);
     if (winsAllRounds(rng, cup.rounds as number, perRound)) titles.push(league.cup);
   }
 

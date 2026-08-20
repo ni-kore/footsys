@@ -49,6 +49,7 @@ const SUPPLIERS = {
 
   // England
   'manchester-city': 'puma',
+  'manchester-united': 'adidas',
   liverpool: 'nike',
   arsenal: 'adidas',
   chelsea: 'nike',

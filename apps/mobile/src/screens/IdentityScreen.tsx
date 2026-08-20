@@ -18,11 +18,10 @@ const logo = require('../../../../assets/footsys-icon.png');
 const DEFAULT_FORMATION = '4-2-3-1';
 
 /**
- * footsys kennt nur einen Rhythmus: Entscheidung alle zwei Saisons, dazu die
- * Winterpausen. Eine Auswahl dafür wäre eine Frage, die der Spieler beim
- * ersten Start nicht beantworten kann.
+ * Wie oft die Simulation anhält. Die Beschreibungen stehen in den Daten, die
+ * Reihenfolge hier: von der ausführlichen Laufbahn bis zum Durchlauf am Stück.
  */
-const GAME_MODE: GameMode = 'normal';
+const PACES: GameMode[] = ['normal', 'fast', 'very_fast', 'instant'];
 
 /**
  * Der erste Bildschirm: aus wenigen Angaben entsteht eine ganze Laufbahn.
@@ -47,6 +46,7 @@ export function IdentityScreen({ onStart }: {
   const [formationId, setFormationId] = useState(DEFAULT_FORMATION);
   const [position, setPosition] = useState<PositionId | null>(null);
   const [showAllNations, setShowAllNations] = useState(false);
+  const [pace, setPace] = useState<GameMode>('normal');
 
   const formations = useMemo(
     () => staticData.formations.filter((f) => f.selectable),
@@ -230,34 +230,64 @@ export function IdentityScreen({ onStart }: {
       </View>
 
       <View style={styles.footer}>
-        <Button
-          label="Start career"
-          disabled={!ready}
-          onPress={() =>
-            onStart(
-              {
-                surname: surname.trim(),
-                shirtNumber: Number(number) || 10,
-                strongFoot: foot,
-                weakFoot,
-                nationality,
-                ...(dualNationality && secondNationality ? { secondNationality } : {}),
-                position: position!,
-                formationId: formation.id,
-              },
-              GAME_MODE,
-            )
-          }
-        />
-        {!ready ? (
-          <Text style={[font.caption, { marginTop: space[2] }]}>
-            {surname.trim().length < 2
+        <View style={styles.footerRow}>
+          {/* Links die Gangart, rechts der Start: beides gehört zum selben
+              Schritt und steht deshalb auf einer Linie. */}
+          <View style={styles.pace}>
+            <Label>Pace</Label>
+            <View style={styles.formationGrid}>
+              {PACES.map((id) => {
+                const active = id === pace;
+                return (
+                  <Pressable
+                    key={id}
+                    onPress={() => setPace(id)}
+                    style={[styles.formation, active && styles.formationActive]}
+                    accessibilityRole="radio"
+                    accessibilityState={{ selected: active }}
+                  >
+                    <Text
+                      style={[styles.formationLabel, active && { color: color.accent.onSubtle }]}
+                      numberOfLines={1}
+                    >
+                      {staticData.progression.career.modes[id].label.en as string}
+                    </Text>
+                  </Pressable>
+                );
+              })}
+            </View>
+          </View>
+
+          <Button
+            label="Start career"
+            disabled={!ready}
+            onPress={() =>
+              onStart(
+                {
+                  surname: surname.trim(),
+                  shirtNumber: Number(number) || 10,
+                  strongFoot: foot,
+                  weakFoot,
+                  nationality,
+                  ...(dualNationality && secondNationality ? { secondNationality } : {}),
+                  position: position!,
+                  formationId: formation.id,
+                },
+                pace,
+              )
+            }
+          />
+        </View>
+
+        <Text style={[font.caption, styles.footerNote]}>
+          {ready
+            ? staticData.progression.career.modes[pace].description.en as string
+            : surname.trim().length < 2
               ? 'Enter a name to continue.'
               : position === null
                 ? 'Choose your position on the pitch.'
                 : 'Pick your second nationality.'}
-          </Text>
-        ) : null}
+        </Text>
       </View>
 
       <Disclaimer />
@@ -475,6 +505,12 @@ const styles = StyleSheet.create({
   formationActive: { backgroundColor: color.accent.subtle, borderColor: color.accent.base },
   formationLabel: { ...font.bodyStrong, color: color.text.secondary },
   // Der Startknopf sitzt rechts — dort, wo der Blick nach dem Ausfüllen
-  // der rechten Spalte ohnehin endet.
-  footer: { marginTop: space[2], alignItems: 'flex-end' },
+  // der rechten Spalte ohnehin endet. Die Gangart steht ihm gegenüber.
+  footer: { marginTop: space[2], gap: space[2] },
+  footerRow: {
+    flexDirection: 'row', alignItems: 'flex-end',
+    justifyContent: 'space-between', gap: space[4], flexWrap: 'wrap',
+  },
+  pace: { gap: space[2] },
+  footerNote: { textAlign: 'right' },
 });
