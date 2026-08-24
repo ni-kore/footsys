@@ -1,0 +1,26 @@
+# Keep the Docker build context small and reproducible.
+
+# Installed dependencies — reinstalled fresh inside the image.
+**/node_modules
+
+# Build and tooling output.
+**/dist
+.expo
+**/.expo
+*.log
+
+# Version control and editor noise.
+.git
+.gitignore
+.vscode
+.idea
+
+# Large asset sources that are NOT bundled by the app:
+#  - _source holds ~77k raw badge files used only by offline import scripts
+#  - trophies holds the unmapped trophy images; the app draws silhouettes
+#    from assets/_fallback/trophies instead
+assets/_source
+assets/trophies
+
+# Docs and design references are not needed to build the app.
+design/reference

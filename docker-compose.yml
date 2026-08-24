@@ -1,0 +1,11 @@
+# Self-host footsys with one command:  docker compose up -d
+# Then open http://<host>:8080
+services:
+  footsys:
+    build: .
+    image: footsys:latest
+    container_name: footsys
+    ports:
+      # host:container — change the left number to serve on another port.
+      - "8080:80"
+    restart: unless-stopped

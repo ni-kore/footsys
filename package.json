@@ -15,7 +15,10 @@
     "assets": "tsx packages/engine/src/tools/assets.ts",
     "import:clubs": "tsx packages/engine/src/tools/import-clubs.ts",
     "balance": "tsx packages/engine/src/tools/balance.ts",
-    "typecheck:app": "tsc -p apps/mobile/tsconfig.json --noEmit"
+    "typecheck:app": "tsc -p apps/mobile/tsconfig.json --noEmit",
+    "build:web": "npm --prefix apps/mobile run export:web",
+    "docker:build": "docker build -t footsys .",
+    "docker:run": "docker run --rm -p 8080:80 footsys"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",

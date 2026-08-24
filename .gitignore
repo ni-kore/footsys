@@ -8,3 +8,7 @@ Thumbs.db
 .cache/
 assets/_source/
 .cache/
+
+# Web export / Docker build output
+apps/mobile/dist/
+.expo/

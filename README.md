@@ -6,7 +6,9 @@ to retirement. Every summer a club comes calling, and alongside it life brings
 whatever it brings — sometimes nothing, sometimes a couple of decisions that
 change the path.
 
-Target platform: iOS. Developed on Windows, no Mac required.
+It runs anywhere a browser does. Self-host it as a single Docker container (for
+example on Unraid — see [Self-hosting](#self-hosting)), or build it for iOS with
+Expo. Developed on Windows, no Mac required.
 
 The interface is available in **English, German and Spanish**, switchable at any
 time from the top-right of the screen. Everything is translated: the interface,
@@ -37,6 +39,53 @@ npm run app:clear
 
 For a real distributable `.ipa` later, `eas build --platform ios` runs on
 Apple's cloud machines and only needs an Apple developer account.
+
+## Self-hosting
+
+footsys is entirely client-side — all game data and images are bundled and
+nothing is fetched at runtime — so it ships as a static site served by nginx in
+a single small container. No database, no backend, no configuration.
+
+### Docker
+
+```bash
+docker compose up -d --build
+```
+
+Then open `http://<host>:8080`. Change the host port in
+[docker-compose.yml](docker-compose.yml) (the `8080:80` line). Without Compose:
+
+```bash
+docker build -t footsys .
+docker run -d --name footsys -p 8080:80 --restart unless-stopped footsys
+```
+
+### Unraid
+
+The image is published to the GitHub Container Registry on every push to `main`
+(see [.github/workflows/docker.yml](.github/workflows/docker.yml)), so you do not
+have to build on the server.
+
+- With the **Docker Compose Manager** plugin: add a new stack and paste
+  [docker-compose.yml](docker-compose.yml).
+- Or **Add Container** by hand:
+  - Repository: `ghcr.io/ni-kore/footsys:latest`
+  - Network: Bridge
+  - Port: container `80` → a host port of your choice (e.g. `8080`)
+  - No volumes or environment variables are needed.
+
+The container is stateless: player careers and the chosen language live in the
+browser's local storage, not on the server, so there is nothing to back up and
+updates are just a new image pull.
+
+### Build the static site without Docker
+
+```bash
+npm run build:web    # writes apps/mobile/dist/
+```
+
+`apps/mobile/dist/` is a plain static site you can serve with any web server
+(nginx, Caddy, a static host). All asset paths are absolute from the site root.
 
 ## Commands
 
