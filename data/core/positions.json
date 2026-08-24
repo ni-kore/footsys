@@ -6,11 +6,13 @@
     "y": 5,
     "abbr": {
       "de": "TW",
-      "en": "GK"
+      "en": "GK",
+      "es": "POR"
     },
     "name": {
       "de": "Torwart",
-      "en": "Goalkeeper"
+      "en": "Goalkeeper",
+      "es": "Portero"
     },
     "goalFactor": 0,
     "assistFactor": 0,
@@ -26,11 +28,13 @@
     "y": 15,
     "abbr": {
       "de": "LIB",
-      "en": "SW"
+      "en": "SW",
+      "es": "LIB"
     },
     "name": {
       "de": "Libero",
-      "en": "Sweeper"
+      "en": "Sweeper",
+      "es": "Líbero"
     },
     "goalFactor": 0.06,
     "assistFactor": 0.06,
@@ -49,11 +53,13 @@
     "y": 20,
     "abbr": {
       "de": "IV",
-      "en": "CB"
+      "en": "CB",
+      "es": "DFC"
     },
     "name": {
       "de": "Innenverteidiger",
-      "en": "Centre-Back"
+      "en": "Centre-Back",
+      "es": "Defensa central"
     },
     "goalFactor": 0.08,
     "assistFactor": 0.05,
@@ -74,11 +80,13 @@
     "y": 25,
     "abbr": {
       "de": "LV",
-      "en": "LB"
+      "en": "LB",
+      "es": "LI"
     },
     "name": {
       "de": "Linksverteidiger",
-      "en": "Left-Back"
+      "en": "Left-Back",
+      "es": "Lateral izquierdo"
     },
     "goalFactor": 0.07,
     "assistFactor": 0.22,
@@ -98,11 +106,13 @@
     "y": 25,
     "abbr": {
       "de": "RV",
-      "en": "RB"
+      "en": "RB",
+      "es": "LD"
     },
     "name": {
       "de": "Rechtsverteidiger",
-      "en": "Right-Back"
+      "en": "Right-Back",
+      "es": "Lateral derecho"
     },
     "goalFactor": 0.07,
     "assistFactor": 0.22,
@@ -122,11 +132,13 @@
     "y": 40,
     "abbr": {
       "de": "LAV",
-      "en": "LWB"
+      "en": "LWB",
+      "es": "CAI"
     },
     "name": {
       "de": "Linker Flügelverteidiger",
-      "en": "Left Wing-Back"
+      "en": "Left Wing-Back",
+      "es": "Carrilero izquierdo"
     },
     "goalFactor": 0.1,
     "assistFactor": 0.3,
@@ -146,11 +158,13 @@
     "y": 40,
     "abbr": {
       "de": "RAV",
-      "en": "RWB"
+      "en": "RWB",
+      "es": "CAD"
     },
     "name": {
       "de": "Rechter Flügelverteidiger",
-      "en": "Right Wing-Back"
+      "en": "Right Wing-Back",
+      "es": "Carrilero derecho"
     },
     "goalFactor": 0.1,
     "assistFactor": 0.3,
@@ -170,11 +184,13 @@
     "y": 38,
     "abbr": {
       "de": "ZDM",
-      "en": "CDM"
+      "en": "CDM",
+      "es": "MCD"
     },
     "name": {
       "de": "Defensives Mittelfeld",
-      "en": "Defensive Midfielder"
+      "en": "Defensive Midfielder",
+      "es": "Mediocentro defensivo"
     },
     "goalFactor": 0.14,
     "assistFactor": 0.2,
@@ -194,11 +210,13 @@
     "y": 50,
     "abbr": {
       "de": "ZM",
-      "en": "CM"
+      "en": "CM",
+      "es": "MC"
     },
     "name": {
       "de": "Zentrales Mittelfeld",
-      "en": "Central Midfielder"
+      "en": "Central Midfielder",
+      "es": "Mediocentro"
     },
     "goalFactor": 0.25,
     "assistFactor": 0.35,
@@ -219,11 +237,13 @@
     "y": 65,
     "abbr": {
       "de": "ZOM",
-      "en": "CAM"
+      "en": "CAM",
+      "es": "MP"
     },
     "name": {
       "de": "Offensives Mittelfeld",
-      "en": "Attacking Midfielder"
+      "en": "Attacking Midfielder",
+      "es": "Mediapunta"
     },
     "goalFactor": 0.45,
     "assistFactor": 0.55,
@@ -244,11 +264,13 @@
     "y": 55,
     "abbr": {
       "de": "LM",
-      "en": "LM"
+      "en": "LM",
+      "es": "MI"
     },
     "name": {
       "de": "Linkes Mittelfeld",
-      "en": "Left Midfielder"
+      "en": "Left Midfielder",
+      "es": "Medio izquierdo"
     },
     "goalFactor": 0.28,
     "assistFactor": 0.45,
@@ -268,11 +290,13 @@
     "y": 55,
     "abbr": {
       "de": "RM",
-      "en": "RM"
+      "en": "RM",
+      "es": "MD"
     },
     "name": {
       "de": "Rechtes Mittelfeld",
-      "en": "Right Midfielder"
+      "en": "Right Midfielder",
+      "es": "Medio derecho"
     },
     "goalFactor": 0.28,
     "assistFactor": 0.45,
@@ -292,11 +316,13 @@
     "y": 75,
     "abbr": {
       "de": "LA",
-      "en": "LW"
+      "en": "LW",
+      "es": "EI"
     },
     "name": {
       "de": "Linksaußen",
-      "en": "Left Winger"
+      "en": "Left Winger",
+      "es": "Extremo izquierdo"
     },
     "goalFactor": 0.55,
     "assistFactor": 0.55,
@@ -316,11 +342,13 @@
     "y": 75,
     "abbr": {
       "de": "RA",
-      "en": "RW"
+      "en": "RW",
+      "es": "ED"
     },
     "name": {
       "de": "Rechtsaußen",
-      "en": "Right Winger"
+      "en": "Right Winger",
+      "es": "Extremo derecho"
     },
     "goalFactor": 0.55,
     "assistFactor": 0.55,
@@ -340,11 +368,13 @@
     "y": 78,
     "abbr": {
       "de": "HS",
-      "en": "SS"
+      "en": "SS",
+      "es": "SD"
     },
     "name": {
       "de": "Hängende Spitze",
-      "en": "Second Striker"
+      "en": "Second Striker",
+      "es": "Segundo delantero"
     },
     "goalFactor": 0.7,
     "assistFactor": 0.45,
@@ -364,11 +394,13 @@
     "y": 85,
     "abbr": {
       "de": "MS",
-      "en": "CF"
+      "en": "CF",
+      "es": "DC"
     },
     "name": {
       "de": "Mittelstürmer",
-      "en": "Centre-Forward"
+      "en": "Centre-Forward",
+      "es": "Delantero centro"
     },
     "goalFactor": 0.85,
     "assistFactor": 0.35,
@@ -388,11 +420,13 @@
     "y": 92,
     "abbr": {
       "de": "ST",
-      "en": "ST"
+      "en": "ST",
+      "es": "DL"
     },
     "name": {
       "de": "Stürmer",
-      "en": "Striker"
+      "en": "Striker",
+      "es": "Delantero"
     },
     "goalFactor": 1,
     "assistFactor": 0.25,

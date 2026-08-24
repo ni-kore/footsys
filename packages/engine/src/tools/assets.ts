@@ -69,7 +69,7 @@ function main(): void {
       folder: 'competitions',
       label: 'Wettbewerbslogos',
       expected: [...data.competitions.club, ...data.competitions.national].map((c) => ({
-        id: c.id, name: c.name, rank: c.prestige,
+        id: c.id, name: c.name.en, rank: c.prestige,
       })),
     },
     {

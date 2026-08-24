@@ -1,12 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { titleName, type GameData, type PeriodReport } from '@footsys/engine';
+import { tr, titleName, type GameData, type PeriodReport } from '@footsys/engine';
 import { periodSummary, roleLabel, roleTone, seasonLabel } from '../format';
+import { useT } from '../i18n';
 import { color, font, radius, space } from '../theme';
 import { Button, ClubBlock } from '../components/ui';
 import { CardIcon } from '../components/icons';
 import { Fade } from '../components/motion';
 import { Trophy } from '../components/Trophy';
+import { trophyArt } from '../trophy-art';
 
 /** Ein Ereignis, wie es im Bericht steht. */
 type Happening = PeriodReport['randomEvents'][number];
@@ -21,6 +23,7 @@ export function ReportScreen({ data, report, onContinue }: {
   report: PeriodReport;
   onContinue: () => void;
 }) {
+  const { t, locale } = useT();
   const club = data.clubById.get(report.clubId);
   const league = data.leagueById.get(report.leagueId);
   const isSeason = report.kind === 'season';
@@ -38,14 +41,14 @@ export function ReportScreen({ data, report, onContinue }: {
   // eines leeren Bildschirms steht dann der Bericht selbst da — aus nichts als
   // den Zahlen der Halbserie.
   const quiet = report.randomEvents.length === 0 && won.length === 0
-    ? periodSummary(report)
+    ? periodSummary(report, locale)
     : null;
 
   return (
     <View style={styles.screen}>
       <View style={{ gap: space[2] }}>
         <Text style={styles.title}>
-          {isSeason ? 'Season review' : 'Half-season review'}
+          {isSeason ? t('seasonReview') : t('halfSeasonReview')}
         </Text>
 
         {/* Derselbe Block wie links auf der Spielerkarte. */}
@@ -54,29 +57,29 @@ export function ReportScreen({ data, report, onContinue }: {
           name={club?.name ?? ''}
           colors={club ? club.colors : ['#2B2B38', '#2B2B38']}
           abbr={club?.abbr ?? ''}
-          {...(league ? { league: league.name } : {})}
-          status={roleLabel(report.role)}
+          {...(league ? { league: league.name, leagueCode: league.country } : {})}
+          status={roleLabel(report.role, locale)}
           statusTone={roleTone(report.role)}
         />
       </View>
 
       <View style={{ gap: space[3] }}>
-        <Text style={font.title}>What happened</Text>
+        <Text style={font.title}>{t('whatHappened')}</Text>
 
         <View style={styles.columns}>
           <Column
-            label="Went well"
+            label={t('wentWell')}
             tone={color.status.positive}
             sign="+"
             events={good}
-            empty="Nothing stood out"
+            empty={t('nothingStoodOut')}
           />
           <Column
-            label="Went wrong"
+            label={t('wentWrong')}
             tone={color.status.negative}
             sign="−"
             events={bad}
-            empty="Nothing went against you"
+            empty={t('nothingAgainstYou')}
           />
         </View>
 
@@ -87,7 +90,7 @@ export function ReportScreen({ data, report, onContinue }: {
           <View style={styles.columns}>
             <Fade style={styles.trophyRow} delay={220}>
               {won.map((id) => (
-                <Trophy key={id} size={34} label={titleName(data, id)} />
+                <Trophy key={id} art={trophyArt(data, id)} size={34} label={titleName(data, id, locale)} />
               ))}
             </Fade>
             <View style={{ flex: 1 }} />
@@ -113,7 +116,7 @@ export function ReportScreen({ data, report, onContinue }: {
       <View style={{ alignItems: 'flex-start', marginTop: 'auto' }}>
         {/* Von hier geht es nicht direkt aufs Feld, sondern zu den
             Entscheidungen, die vor der nächsten Halbserie zu treffen sind. */}
-        <Button label="Your decisions" onPress={onContinue} />
+        <Button label={t('yourDecisions')} onPress={onContinue} />
       </View>
     </View>
   );
@@ -158,6 +161,7 @@ function Happening({ event, sign, tone, delay }: {
   tone?: string;
   delay: number;
 }) {
+  const { tr } = useT();
   return (
     <Fade delay={delay} style={styles.eventRow}>
       {/* Wo sonst das Vorzeichen steht, steht bei einem Platzverweis die
@@ -169,8 +173,8 @@ function Happening({ event, sign, tone, delay }: {
         <Text style={[styles.sign, tone ? { color: tone } : null]}>{sign}</Text>
       ) : null}
       <View style={{ flex: 1, gap: 2 }}>
-        <Text style={font.bodyStrong}>{event.title.en}</Text>
-        <Text style={[font.caption, { lineHeight: 18 }]}>{event.text}</Text>
+        <Text style={font.bodyStrong}>{tr(event.title)}</Text>
+        <Text style={[font.caption, { lineHeight: 18 }]}>{tr(event.text)}</Text>
       </View>
     </Fade>
   );

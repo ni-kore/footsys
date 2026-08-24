@@ -7,13 +7,13 @@ import {
 import { freshGameData } from './src/game-data';
 import { installWebStyles } from './src/web-styles';
 import { color } from './src/theme';
-import { seasonLabel } from './src/format';
 import { IdentityScreen } from './src/screens/IdentityScreen';
-import { DecisionScreen } from './src/screens/DecisionScreen';
+import { DecisionScreen, type StartLabel } from './src/screens/DecisionScreen';
 import { CareerStartScreen } from './src/screens/CareerStartScreen';
 import { KickoffScreen } from './src/screens/KickoffScreen';
 import { CareerLayout } from './src/components/CareerLayout';
 import { TooltipHost } from './src/components/Tooltip';
+import { LocaleProvider } from './src/i18n';
 import { ReportScreen } from './src/screens/ReportScreen';
 import { EndScreen } from './src/screens/EndScreen';
 
@@ -61,14 +61,16 @@ export default function App() {
   const data = dataRef.current;
 
   return (
-    <TooltipHost>
-      <View style={styles.root}>
-        <StatusBar barStyle="light-content" backgroundColor={color.bg.root} />
-        <SafeAreaView style={styles.root}>
-          {renderScreen()}
-        </SafeAreaView>
-      </View>
-    </TooltipHost>
+    <LocaleProvider>
+      <TooltipHost>
+        <View style={styles.root}>
+          <StatusBar barStyle="light-content" backgroundColor={color.bg.root} />
+          <SafeAreaView style={styles.root}>
+            {renderScreen()}
+          </SafeAreaView>
+        </View>
+      </TooltipHost>
+    </LocaleProvider>
   );
 
   function renderScreen() {
@@ -119,10 +121,10 @@ export default function App() {
  * Was am Ende der Pause passiert: entweder geht es in die Rückrunde, oder eine
  * neue Saison beginnt. Über das Karriereende wird gesondert entschieden.
  */
-function startLabel(state: CareerState): string {
-  if (state.pendingSet.some((decision) => decision.eventId === 'retirement')) return 'Confirm';
-  if (state.half === 2) return 'Into the second half';
-  return 'Into season ' + seasonLabel(state.year);
+function startLabel(state: CareerState): StartLabel {
+  if (state.pendingSet.some((decision) => decision.eventId === 'retirement')) return { kind: 'confirm' };
+  if (state.half === 2) return { kind: 'secondHalf' };
+  return { kind: 'season', year: state.year };
 }
 
 const styles = StyleSheet.create({

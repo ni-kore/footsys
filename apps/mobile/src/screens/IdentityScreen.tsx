@@ -1,18 +1,18 @@
 import React, { useMemo, useState } from 'react';
 import {
-  Image, Pressable, ScrollView, StyleSheet, Text, TextInput, useWindowDimensions, View,
+  Pressable, ScrollView, StyleSheet, Text, TextInput, useWindowDimensions, View,
 } from 'react-native';
 import type { GameMode, PlayerIdentity, PositionId } from '@footsys/engine';
 import { staticData } from '../game-data';
 import { breakpointFor, color, font, radius, space } from '../theme';
 import {
-  Button, Card, CONTROL_HEIGHT, Disclaimer, Flag, Label, Segmented, Stars, Toggle,
+  BrandHeader, Button, Card, CONTROL_HEIGHT, Disclaimer, Flag, Label, Segmented, Stars, Toggle,
 } from '../components/ui';
 import { ScrollArea } from '../components/ScrollArea';
 import { Pitch } from '../components/Pitch';
 import ranking from '../../../../data/core/fifa-ranking.json';
-
-const logo = require('../../../../assets/footsys-icon.png');
+import { useT } from '../i18n';
+import { tr, type LocalizedText } from '@footsys/engine';
 
 /** Vorbelegung, damit das Spielfeld sofort besetzt ist. */
 const DEFAULT_FORMATION = '4-2-3-1';
@@ -22,6 +22,46 @@ const DEFAULT_FORMATION = '4-2-3-1';
  * Reihenfolge hier: von der ausführlichen Laufbahn bis zum Durchlauf am Stück.
  */
 const PACES: GameMode[] = ['normal', 'fast', 'very_fast', 'instant'];
+
+/**
+ * Die zuletzt getroffene Auswahl beim Anlegen eines Spielers.
+ *
+ * Startet man eine neue Karriere, soll nicht alles wieder auf Anfang stehen:
+ * Name, Nummer, Fuß, Nation, Position und System bleiben, wie sie zuletzt
+ * waren. Der Entwurf liegt im Browserspeicher und übersteht auch einen Neustart.
+ */
+const DRAFT_KEY = 'footsys.identityDraft';
+
+interface IdentityDraft {
+  surname: string;
+  number: string;
+  foot: 'left' | 'right';
+  weakFoot: 1 | 2 | 3 | 4 | 5;
+  nationality: string;
+  dualNationality: boolean;
+  secondNationality: string | null;
+  formationId: string;
+  position: PositionId | null;
+  pace: GameMode;
+}
+
+function loadDraft(): Partial<IdentityDraft> {
+  try {
+    const raw = globalThis.localStorage?.getItem(DRAFT_KEY);
+    if (raw) return JSON.parse(raw) as Partial<IdentityDraft>;
+  } catch {
+    // Kein Speicher: dann eben mit den Vorgaben beginnen.
+  }
+  return {};
+}
+
+function saveDraft(draft: IdentityDraft): void {
+  try {
+    globalThis.localStorage?.setItem(DRAFT_KEY, JSON.stringify(draft));
+  } catch {
+    // Kein Speicher: die Auswahl gilt dann nur, solange die Seite offen ist.
+  }
+}
 
 /**
  * Der erste Bildschirm: aus wenigen Angaben entsteht eine ganze Laufbahn.
@@ -36,17 +76,20 @@ export function IdentityScreen({ onStart }: {
   const { width } = useWindowDimensions();
   const twoColumn = breakpointFor(width) !== 'compact';
 
-  const [surname, setSurname] = useState('');
-  const [number, setNumber] = useState('10');
-  const [foot, setFoot] = useState<'left' | 'right'>('right');
-  const [weakFoot, setWeakFoot] = useState<1 | 2 | 3 | 4 | 5>(2);
-  const [nationality, setNationality] = useState('GER');
-  const [dualNationality, setDualNationality] = useState(false);
-  const [secondNationality, setSecondNationality] = useState<string | null>(null);
-  const [formationId, setFormationId] = useState(DEFAULT_FORMATION);
-  const [position, setPosition] = useState<PositionId | null>(null);
+  // Der zuletzt angelegte Spieler als Vorlage — einmal beim Aufbau gelesen.
+  const draft = useMemo(loadDraft, []);
+  const [surname, setSurname] = useState(draft.surname ?? '');
+  const [number, setNumber] = useState(draft.number ?? '10');
+  const [foot, setFoot] = useState<'left' | 'right'>(draft.foot ?? 'right');
+  const [weakFoot, setWeakFoot] = useState<1 | 2 | 3 | 4 | 5>(draft.weakFoot ?? 2);
+  const [nationality, setNationality] = useState(draft.nationality ?? 'GER');
+  const [dualNationality, setDualNationality] = useState(draft.dualNationality ?? false);
+  const [secondNationality, setSecondNationality] = useState<string | null>(draft.secondNationality ?? null);
+  const [formationId, setFormationId] = useState(draft.formationId ?? DEFAULT_FORMATION);
+  const [position, setPosition] = useState<PositionId | null>(draft.position ?? null);
   const [showAllNations, setShowAllNations] = useState(false);
-  const [pace, setPace] = useState<GameMode>('normal');
+  const [pace, setPace] = useState<GameMode>(draft.pace ?? 'normal');
+  const { t, locale } = useT();
 
   const formations = useMemo(
     () => staticData.formations.filter((f) => f.selectable),
@@ -84,26 +127,30 @@ export function IdentityScreen({ onStart }: {
 
   const identityCard = (
     <Card style={[styles.section, twoColumn && styles.cardStretch]}>
-      <Text style={font.title}>Who are you?</Text>
+      <Text style={font.title}>{t('whoAreYou')}</Text>
 
       {/* Name, Nummer und Fuß sind drei kurze Angaben — sie stehen
           nebeneinander und brechen erst um, wenn es wirklich zu eng wird. */}
       <View style={styles.row}>
         <View style={[styles.field, styles.nameField]}>
-          <Label>Name</Label>
+          <Label>{t('name')}</Label>
+          {/* Der Name steht überall in Großbuchstaben, auf dem Trikot wie auf
+              der Spielerkarte. Also wird er auch so eingetragen, statt ihn
+              erst später zurechtzubiegen. */}
           <TextInput
             value={surname}
-            onChangeText={setSurname}
-            placeholder="Name"
+            onChangeText={(text) => setSurname(text.toUpperCase())}
+            placeholder={t('namePlaceholder')}
             placeholderTextColor={color.text.disabled}
             style={styles.input}
             maxLength={20}
             autoCorrect={false}
+            autoCapitalize="characters"
           />
         </View>
 
         <View style={[styles.field, styles.numberField]}>
-          <Label>No.</Label>
+          <Label>{t('number')}</Label>
           <TextInput
             value={number}
             onChangeText={(text) => setNumber(text.replace(/\D/g, '').slice(0, 2))}
@@ -113,16 +160,16 @@ export function IdentityScreen({ onStart }: {
         </View>
 
         <View style={[styles.field, styles.footField]}>
-          <Label>Strong foot</Label>
+          <Label>{t('strongFoot')}</Label>
           <Segmented
             value={foot}
             onChange={setFoot}
-            options={[{ value: 'left', label: 'Left' }, { value: 'right', label: 'Right' }]}
+            options={[{ value: 'left', label: t('left') }, { value: 'right', label: t('right') }]}
           />
         </View>
 
         <View style={[styles.field, styles.weakFootField]}>
-          <Label>Weak foot</Label>
+          <Label>{t('weakFoot')}</Label>
           <Stars value={weakFoot} onChange={(step) => setWeakFoot(step as 1 | 2 | 3 | 4 | 5)} />
         </View>
       </View>
@@ -131,7 +178,7 @@ export function IdentityScreen({ onStart }: {
           übrig bleibt. Ohne zweiten Pass bekommt die erste alles — und der
           Schalter rutscht dadurch an den unteren Rand der Karte. */}
       <View style={[styles.field, twoColumn && styles.grow]}>
-        <Label>Nationality</Label>
+        <Label>{t('nationality')}</Label>
         <NationPicker
           nations={nations}
           selected={nationality}
@@ -145,7 +192,7 @@ export function IdentityScreen({ onStart }: {
       </View>
 
       <Toggle
-        label="Second nationality"
+        label={t('secondNationality')}
         value={dualNationality}
         onChange={(on) => {
           setDualNationality(on);
@@ -172,10 +219,10 @@ export function IdentityScreen({ onStart }: {
 
   const tacticsCard = (
     <Card style={[styles.section, twoColumn && styles.cardStretch]}>
-      <Text style={font.title}>Where do you play?</Text>
+      <Text style={font.title}>{t('whereDoYouPlay')}</Text>
 
       <View style={styles.field}>
-        <Label>Favourite formation</Label>
+        <Label>{t('favouriteFormation')}</Label>
         <View style={styles.formationGrid}>
           {formations.map((item) => {
             const active = item.id === formationId;
@@ -197,7 +244,7 @@ export function IdentityScreen({ onStart }: {
       </View>
 
       <View style={styles.field}>
-        <Label>Your position</Label>
+        <Label>{t('yourPosition')}</Label>
         <Pitch
           positions={pitchPositions}
           value={position}
@@ -206,8 +253,8 @@ export function IdentityScreen({ onStart }: {
         />
         <Text style={[font.caption, { textAlign: 'center', marginTop: space[2] }]}>
           {position
-            ? staticData.positionById.get(position)?.name.en
-            : 'Tap your position on the pitch.'}
+            ? tr(staticData.positionById.get(position)!.name, locale)
+            : t('tapPosition')}
         </Text>
       </View>
 
@@ -219,10 +266,7 @@ export function IdentityScreen({ onStart }: {
       style={{ flex: 1, backgroundColor: color.bg.canvas }}
       contentContainerStyle={[styles.content, { maxWidth: 1100, alignSelf: 'center', width: '100%' }]}
     >
-      <View style={styles.header}>
-        <Image source={logo} style={styles.logo} resizeMode="contain" />
-        <Text style={styles.wordmark}>footsys</Text>
-      </View>
+      <BrandHeader style={styles.header} />
 
       <View style={twoColumn ? styles.twoColumn : undefined}>
         <View style={{ flex: 1 }}>{identityCard}</View>
@@ -234,7 +278,7 @@ export function IdentityScreen({ onStart }: {
           {/* Links die Gangart, rechts der Start: beides gehört zum selben
               Schritt und steht deshalb auf einer Linie. */}
           <View style={styles.pace}>
-            <Label>Pace</Label>
+            <Label>{t('pace')}</Label>
             <View style={styles.formationGrid}>
               {PACES.map((id) => {
                 const active = id === pace;
@@ -250,7 +294,7 @@ export function IdentityScreen({ onStart }: {
                       style={[styles.formationLabel, active && { color: color.accent.onSubtle }]}
                       numberOfLines={1}
                     >
-                      {staticData.progression.career.modes[id].label.en as string}
+                      {tr(staticData.progression.career.modes[id].label, locale)}
                     </Text>
                   </Pressable>
                 );
@@ -259,9 +303,15 @@ export function IdentityScreen({ onStart }: {
           </View>
 
           <Button
-            label="Start career"
+            label={t('startCareer')}
             disabled={!ready}
-            onPress={() =>
+            onPress={() => {
+              // Die Auswahl merken, damit die nächste Karriere damit beginnt.
+              saveDraft({
+                surname, number, foot, weakFoot, nationality,
+                dualNationality, secondNationality,
+                formationId: formation.id, position, pace,
+              });
               onStart(
                 {
                   surname: surname.trim(),
@@ -274,19 +324,19 @@ export function IdentityScreen({ onStart }: {
                   formationId: formation.id,
                 },
                 pace,
-              )
-            }
+              );
+            }}
           />
         </View>
 
         <Text style={[font.caption, styles.footerNote]}>
           {ready
-            ? staticData.progression.career.modes[pace].description.en as string
+            ? tr(staticData.progression.career.modes[pace].description, locale)
             : surname.trim().length < 2
-              ? 'Enter a name to continue.'
+              ? t('enterNameToContinue')
               : position === null
-                ? 'Choose your position on the pitch.'
-                : 'Pick your second nationality.'}
+                ? t('choosePosition')
+                : t('pickSecondNationality')}
         </Text>
       </View>
 
@@ -297,7 +347,7 @@ export function IdentityScreen({ onStart }: {
 
 /** Die Länderliste — einmal für den Pass, einmal für den zweiten. */
 function NationPicker({ nations, selected, exclude, showAll, onShowAll, onSelect, rows, flexible }: {
-  nations: { code: string; name: { en: string } }[];
+  nations: { code: string; name: LocalizedText }[];
   selected: string | null;
   exclude: string | null;
   showAll: boolean;
@@ -312,6 +362,7 @@ function NationPicker({ nations, selected, exclude, showAll, onShowAll, onSelect
    */
   flexible?: boolean;
 }) {
+  const { t, locale } = useT();
   const [search, setSearch] = useState('');
   const [space_, setSpace] = useState(0);
   const term = search.trim().toLowerCase();
@@ -324,7 +375,7 @@ function NationPicker({ nations, selected, exclude, showAll, onShowAll, onSelect
   // ausgegraut. Würde es verschwinden, rutschten alle folgenden Länder eine
   // Position weiter — und man klickt beim nächsten Mal daneben.
   const matching = term
-    ? nations.filter((country) => country.name.en.toLowerCase().includes(term))
+    ? nations.filter((country) => tr(country.name, locale).toLowerCase().includes(term))
     : nations;
 
   // Beim Suchen ist die Kürzung sinnlos — man sucht ja gerade das, was nicht
@@ -343,7 +394,7 @@ function NationPicker({ nations, selected, exclude, showAll, onShowAll, onSelect
       <TextInput
         value={search}
         onChangeText={setSearch}
-        placeholder="Search nation"
+        placeholder={t('searchNation')}
         placeholderTextColor={color.text.disabled}
         style={styles.input}
         autoCorrect={false}
@@ -384,7 +435,7 @@ function NationPicker({ nations, selected, exclude, showAll, onShowAll, onSelect
                 style={[styles.nationName, active && styles.nationNameActive]}
                 numberOfLines={1}
               >
-                {country.name.en}
+                {tr(country.name, locale)}
               </Text>
               {active ? <Text style={styles.nationCheck}>✓</Text> : null}
             </Pressable>
@@ -392,12 +443,12 @@ function NationPicker({ nations, selected, exclude, showAll, onShowAll, onSelect
         })}
 
       {matching.length === 0 ? (
-        <Text style={[font.caption, { padding: space[2] }]}>No nation matches that.</Text>
+        <Text style={[font.caption, { padding: space[2] }]}>{t('noNationMatches')}</Text>
       ) : null}
 
       {!term && !showAll && total > TOP_COUNT ? (
         <Pressable onPress={onShowAll} style={styles.showMore}>
-          <Text style={styles.showMoreText}>Show more</Text>
+          <Text style={styles.showMoreText}>{t('showMore')}</Text>
         </Pressable>
       ) : null}
       </ScrollArea>
@@ -425,12 +476,7 @@ const NATION_ROWS_DUAL = 3;
 
 const styles = StyleSheet.create({
   content: { padding: space[4], paddingBottom: space[9], gap: space[4] },
-  header: {
-    flexDirection: 'row', alignItems: 'center', gap: space[3],
-    marginTop: space[5], marginBottom: space[3],
-  },
-  logo: { width: 44, height: 44, borderRadius: 10 },
-  wordmark: { fontSize: 30, fontWeight: '700', color: color.text.primary, letterSpacing: -0.8 },
+  header: { marginTop: space[5], marginBottom: space[3] },
   // 'stretch' statt 'flex-start': nur so ziehen sich beide Spalten auf die
   // Höhe der höheren.
   twoColumn: { flexDirection: 'row', gap: space[4], alignItems: 'stretch' },

@@ -1,17 +1,22 @@
 # footsys
 
-Fußball-Karriere-Simulator. Du erstellst einen Spieler mit wenigen Variablen
-(Name, Nummer, Fuß, Nationalität, Position) und begleitest seine Karriere von
-16 bis zum Karriereende. In jedem Sommer liegt ein Vereinsangebot auf dem
-Tisch, dazu kommt, was das Leben sonst bringt — mal nichts, mal zwei
-Entscheidungen, die den Verlauf verändern.
+A football career simulator. You create a player from a handful of inputs
+(name, number, foot, nationality, position) and follow their career from age 16
+to retirement. Every summer a club comes calling, and alongside it life brings
+whatever it brings — sometimes nothing, sometimes a couple of decisions that
+change the path.
 
-Ziel-Plattform: iOS. Entwicklung aktuell unter Windows.
+Target platform: iOS. Developed on Windows, no Mac required.
 
-## Schnellstart
+The interface is available in **English, German and Spanish**, switchable at any
+time from the top-right of the screen. Everything is translated: the interface,
+the career prose, every event, the outcomes, and the names of countries,
+positions and competitions. Club, league and cup names keep their real name in
+every language.
 
-Vorausgesetzt sind Node 20 oder neuer (entwickelt wird mit Node 24) und npm.
-Ein Mac wird nicht gebraucht.
+## Quick start
+
+You need Node 20 or newer (developed on Node 24) and npm.
 
 ```bash
 npm install
@@ -19,233 +24,217 @@ npm --prefix apps/mobile install
 npm run app
 ```
 
-`npm run app` startet Metro und öffnet die App unter <http://localhost:8081> im
-Browser. Im Terminal steht zusätzlich ein QR-Code: mit **Expo Go** (App Store)
-gescannt, läuft dieselbe App auf iPhone oder iPad — Rechner und Gerät müssen im
-selben WLAN sein.
+`npm run app` starts Metro and opens the app at <http://localhost:8081> in the
+browser. The terminal also shows a QR code: scan it with **Expo Go** (App Store)
+to run the same app on an iPhone or iPad — the computer and the device must be
+on the same Wi-Fi.
 
-Hängt Metro nach einem Datei- oder Datenwechsel, hilft ein Start ohne Cache:
+If Metro gets stuck after a code or data change, start it without its cache:
 
 ```bash
 npm run app:clear
 ```
 
-Für eine echte `.ipa` zum Verteilen später `eas build --platform ios`; das läuft
-auf Apples Rechnern in der Cloud und braucht nur ein Apple-Entwicklerkonto.
+For a real distributable `.ipa` later, `eas build --platform ios` runs on
+Apple's cloud machines and only needs an Apple developer account.
 
-## Kommandos
+## Commands
 
 ```bash
-npm test                # Engine-Tests, inklusive Determinismus-Nachweis
-npm run typecheck       # Engine
-npm run typecheck:app   # App
+npm test                # engine tests, including the determinism proof
+npm run typecheck       # engine
+npm run typecheck:app   # app
 npm run sim -- --runs 300 --position ST --country GER --verbose
-npm run balance -- 120  # Karrieren gegen die Zieltabelle aus docs/iteration-2.md
-npm run assets          # zeigt, welche Wappen und Trophäen noch fehlen
-npm run import:clubs    # einmaliger Datenimport, siehe data/football/README.md
+npm run balance -- 120  # careers against the target table in docs/iteration-2.md
+npm run assets          # reports which badges and trophies are still missing
+npm run import:clubs    # one-off data import, see data/football/README.md
 ```
 
-`npm run sim` und `npm run balance` spielen hunderte Karrieren mit zufälligen
-Entscheidungen durch und geben die Verteilung aus — das ist das Werkzeug fürs
-Balancing. `npm run balance` prüft dabei gegen die Zielwerte der zweiten
-Iteration (Spitzen-OVR, Titel, Anhänger).
+`npm run sim` and `npm run balance` play hundreds of careers with random choices
+and print the distribution — the tool for balancing. `npm run balance` checks
+against the second iteration's target values (peak OVR, titles, followers).
 
-## Aufbau
+## Layout
 
 ```
-data/                      Stack-neutrale Spieldaten (reines JSON)
+data/                      Stack-neutral game data (plain JSON)
   core/
-    confederations.json    6 Konföderationen
-    countries.json         210 FIFA-Nationen (Code, Name, Konföderation, Stärke)
-    positions.json         17 Positionen inkl. Platzkoordinaten
-    formations.json        22 Formationen mit Slot-Belegung
-    association-logos.json Zuordnung Land → Verbandswappen in assets/nations
-    fifa-ranking.json      Weltrangliste als Startwert der Nationalmannschaften
+    confederations.json    6 confederations
+    countries.json         210 FIFA nations, names in de / en / es
+    positions.json         17 positions with pitch coordinates, localized
+    formations.json        22 formations with slot assignments
+    association-logos.json country -> association crest in assets/nations
+    fifa-ranking.json       world ranking as the starting strength of nations
   football/
-    leagues.json           75 Ligen mit ihren echten Namen (Land, Tier, Pokal)
-    cups.json              81 nationale Pokalwettbewerbe
-    competitions.json      24 Klub-, 9 Länder- und 10 Einzelauszeichnungen
-    clubs/<FIFA>.json      1.218 Vereine in 55 Ländern, nach Liga gruppiert
+    leagues.json           78 leagues under their real names (country, tier, cup)
+    cups.json              81 national cup competitions
+    competitions.json      24 club, 9 national and 10 individual awards (localized)
+    clubs/<FIFA>.json      1,219 clubs across 55 countries, grouped by league
   game/
-    progression.json       Entwicklung, Rollen, Marktwert, Anhänger, Marktinteresse
-    team-season.json       Tabellenplatz, Titel, europäische Startplätze
-    events.json            62 Karriere-Entscheidungen und 9 strukturelle
-    random-events.json     22 Zufallsereignisse ohne Entscheidung
-    meters.json            Moral, Fan-Rückhalt, Presse samt Wirkungskurven
-    partners.json          98 Medienpartner, 3 Ausrüster, Bindung an Verein
-                           oder Land, Regeln für Angebote
-    trophy-odds.json       Titelwahrscheinlichkeiten nach Reputation
+    progression.json       development, roles, market value, followers, interest
+    team-season.json       league position, titles, European entry
+    events.json            64 career decisions and 10 structural, all de/en/es
+    random-events.json     22 events without a decision, all de/en/es
+    meters.json            morale, fan support, press, with their effect curves
+    partners.json          98 media partners, 3 kit suppliers, offer rules
+    trophy-odds.json       title probabilities by reputation
 design/
-  DESIGN.md                Designsprache und Responsive-Verhalten (iPhone/iPad)
-  tokens.json              Farben, Abstände, Radien, Typografie, Komponenten
+  DESIGN.md                design language and responsive behaviour (iPhone/iPad)
+  tokens.json              colors, spacing, radii, typography, components
 docs/
-  iteration-2.md           Plan der zweiten Iteration samt offener Punkte
-assets/                    Bilddateien — Ablage nach Dateiname, siehe assets/README.md
+  iteration-2.md           plan of the second iteration and its open points
+assets/                    image files, filed by name, see assets/README.md
   clubs/                   <club-id>.png
-  trophies/                2.461 Bilder, aktuell dient 22.png allen als Platzhalter
-  nations/                 246 Verbandswappen
-  mediapartner/            123 Sender- und Verlagslogos
-  ausruester/              Ausrüsterlogos (noch leer, siehe README dort)
-  events/                  Bilder für die Antworten der Entscheidungskarten
-apps/mobile/               Expo-App (iPhone, iPad, Web)
-  App.tsx                  Zustandswechsel Start → Karriere → Karriereende
-  src/theme.ts             Tokens aus design/tokens.json
-  src/game-data.ts         gebündelte Spieldaten, je Karriere eine eigene Kopie
+  trophies/                trophy images (see below)
+  _fallback/trophies/      the six hand-made trophy silhouettes used for now
+  nations/                 association crests
+  mediapartner/            broadcaster and publisher logos
+  ui/                      kofi button image
+  events/                  images for the answers of the decision cards
+apps/mobile/               Expo app (iPhone, iPad, web)
+  App.tsx                  state machine start -> career -> retirement
+  src/i18n.tsx             language provider, useLocale / useT hooks
+  src/strings.ts           every interface string in de / en / es
+  src/theme.ts             tokens from design/tokens.json
+  src/game-data.ts         bundled game data, one copy per career
+  src/format.ts            money, followers, roles and the quiet-season summary
+  src/story.ts             the localized career opening
+  src/trophy-art.ts        maps a title to its trophy silhouette
   src/components/
-    PlayerCard.tsx         Spielerkarte: Werte, Verein, Vitrine, Partner, Meter
-    CareerLayout.tsx       zwei Flächen nebeneinander, gleich hoch
-    SeasonTable.tsx        Saison für Saison, Summe, Nationalmannschaft
-    Tooltip.tsx            eine Hinweisebene über der ganzen Anwendung
-    Trophy.tsx             gewonnener Titel als Bild mit Anzahl und Hinweis
-    CardImage.tsx          angeschnittenes Bild für die Antworten
-    motion.tsx             Zählen, Blenden, Übergänge
-  src/screens/             Identität, Karrierestart, Entscheidung, Auftakt,
-                           Saisonbericht, Karriereende (schlicht)
-packages/engine/src/       Spiel-Logik (rein funktional, deterministisch per Seed)
-  types.ts                 Typen zu allen Datendateien und zum Spielstand
-  rng.ts                   Deterministischer Zufallsgenerator
-  data.ts / data-node.ts   Datenzugriff (injiziert bzw. aus dem Dateisystem)
-  progression.ts           Entwicklung, Potenzial, Kaderrolle, Marktwert
-  simulation.ts            Halbserie rechnen, Saison abschließen
-  team-season.ts           Tabellenplatz der Mannschaft, daraus Titel und Europa
-  meters.ts                Moral, Rückhalt und Presse als Verstärker
-  facts.ts                 Karrierefakten, aus denen Ereignisse entstehen
-  events.ts                Ereignisauswahl, Vereinsangebote, Modifikatoren
-  outcome.ts               was eine Wahl bedeutet, in Worten statt Zahlen
-  partners.ts / fans.ts    Medienpartner, Ausrüster, Reichweite
-  national-team.ts         Nominierung, Länderspiele, Turniere
-  career.ts                Ablaufsteuerung der Karriere
+    ui.tsx                 cards, meters, badges, brand header, language selector
+    PlayerCard.tsx         the player card: values, club, trophies, partners, meters
+    CareerLayout.tsx       two equal-height panels side by side
+    SeasonTable.tsx        season by season, totals, national team
+    Tooltip.tsx            one hint layer above the whole app
+    Trophy.tsx             a won title as a shape, with count and hover hint
+    CardImage.tsx          the angled image on the answers
+    motion.tsx             counting, fading, transitions
+  src/screens/             identity, career start, decision, kickoff, report, end
+packages/engine/src/       game logic (purely functional, deterministic by seed)
+  types.ts                 types for every data file and the save state
+  i18n.ts                  Locale type and the tr() resolver
+  rng.ts                   deterministic random generator
+  data.ts / data-node.ts   data access (injected or from the file system)
+  progression.ts           development, potential, squad role, market value
+  simulation.ts            play a half-season, close a season
+  team-season.ts           the team's league position, and from it titles and Europe
+  meters.ts                morale, support and press as amplifiers
+  facts.ts                 career facts that trigger events
+  events.ts                event selection, club offers, modifiers, localization
+  outcome.ts               what a choice means, in words rather than numbers
+  partners.ts / fans.ts    media partners, kit suppliers, reach
+  national-team.ts         call-ups, internationals, tournaments
+  career.ts                the career flow
   tools/                   simulate, balance, assets, import-clubs, check-nations
-scripts/                   einmalige Import- und Zuordnungsläufe (Node, kein Build)
+scripts/                   one-off import and mapping runs (Node, no build)
 ```
 
 ## Stack
 
-TypeScript, App als Expo/React Native. Entwicklung läuft unter Windows; der
-iOS-Build entsteht über EAS auf Apples Cloud-Rechnern, ein eigener Mac ist dafür
-nicht nötig. Die Engine ist bewusst frei von UI und Plattform-APIs — falls das
-Projekt später auf natives SwiftUI wechselt, wird nur sie portiert.
+TypeScript, app as Expo / React Native. Development runs on Windows; the iOS
+build is produced through EAS on Apple's cloud machines, so a Mac is not needed.
+The engine is deliberately free of UI and platform APIs — if the project ever
+moves to native SwiftUI, only the engine is ported.
 
-## Ablauf
+## Internationalisation
 
-Die Engine hält an, wo der gewählte Rhythmus es vorsieht. Jeder Zwischenstand
-bekommt einen eigenen Bildschirm, der erst auf eine Eingabe hin weitergeht:
+The engine stores every player-facing text in all three languages at once, so
+switching language updates the current screen instantly, including the decision
+you are looking at and its outcome. The app resolves data through `tr(value,
+locale)` and interface strings through `useT()`; the chosen language is
+remembered between sessions. Untranslated text falls back to English, then
+German, so nothing is ever blank. Proper nouns — clubs, leagues, cups, the
+player's name — are the same in every language.
 
-    Identität → Vereinswahl → Auftakt → Entscheidungen → Halbserien-Bericht
-              → Entscheidungen → Saison-Bericht → … → Karriereende
+## Flow
 
-- Kleinste simulierte Einheit ist die **Halbserie**; Hin- und Rückrunde werden
-  getrennt gerechnet und in je einem Bericht gezeigt
-- In jeder **Sommerpause** fragt ein Verein an — bleiben oder gehen ist die
-  Frage, die eine Karriere trägt. Nur wen gerade niemand auf dem Zettel hat,
-  bei dem klingelt es auch mal nicht
-- Dazu kommen **null bis zwei weitere Entscheidungen** als Kartenstapel: er
-  lässt sich nach links und rechts schieben, jede Wahl ist bis zum Anpfiff noch
-  änderbar. In einer Pause steht höchstens eine Vereinsfrage an — man sucht
-  sich nicht zweimal hintereinander einen Klub aus
-- Angebote kommen aus der **eigenen Spielklasse und Gegend**: meist dieselbe
-  oder eine benachbarte Liga, ganz überwiegend derselbe Kontinent. Eine
-  Karriere arbeitet sich von unten nach oben — und wer nachlässt, bekommt die
-  Anrufe von weiter unten
-- Nach jeder Halbserie treten zusätzlich **Zufallsereignisse** ein:
-  Trainerwechsel, Formhoch, Verletzung, Abstieg, Investoreneinstieg, Rote Karte
-- Erzwingt ein Ereignis einen Wechsel, wählst du das Ziel selbst
-- Der **Saisonauftakt** wird nur vor der allerersten Saison gezeigt
-- Am Ende bleibt die Laufbahn stehen, wie sie war — Spielerkarte und
-  Saisontabelle. Eine eigene Zusammenfassung gibt es vorerst nicht
+The engine stops wherever the chosen rhythm calls for it. Each intermediate
+state gets its own screen and only moves on when you act:
 
-### Gangart
+    Identity -> Club choice -> Kickoff -> Decisions -> Half-season report
+             -> Decisions -> Season report -> ... -> Retirement
 
-Vor dem Start wird gewählt, wie oft die Simulation anhält
-(`data/game/progression.json`, `career.modes`):
+- The smallest simulated unit is the **half-season**; the two halves are played
+  and reported separately
+- Each **summer** a club enquires — stay or go is the question a career turns
+  on. Only when nobody currently has you on their list does the phone stay quiet
+- On top of that come **zero to two further decisions** as a card deck: swipe it
+  left and right, and every choice can still be changed until kickoff. At most
+  one club question stands in a break — you do not pick a club twice in a row
+- Offers come from **your own division and region**: usually the same or a
+  neighbouring league, overwhelmingly the same continent. A career works its way
+  up from the bottom, and whoever slips gets the calls from further down
+- After each half-season, **random events** also occur: a new coach, a hot
+  streak, an injury, relegation, an investor, a red card
+- If an event forces a move, you choose the destination yourself
+- The **season kickoff** is only shown before the very first season
 
-| Gangart | Hält an |
-| --- | --- |
-| **Normal** | jede Pause, Winter wie Sommer |
-| **Fast** | nur zur Sommerpause |
-| **Very fast** | nur alle drei Saisons |
-| **Instant** | gar nicht — die Engine entscheidet selbst und rechnet die ganze Laufbahn in einem Zug |
+## How a season is decided
 
-Übersprungen wird nur das Fragen und Zeigen: was in einem ungezeigten Bericht
-stand, wandert in den nächsten, und eine auslaufende Leihe oder ein
-Karriereende passiert in jeder Gangart.
+It is not the player who wins the title, but the team. `team-season.ts` first
+rolls the league position from the club's reputation, then shifts it by the
+player's contribution — noticeable, but never far enough that a promoted side
+with a strong striker becomes champion. The position yields the titles and the
+club's European entry for the following season. So to win something you have to
+move to where something is there to win.
 
-Die Oberfläche ist englisch. Die Daten führen weiterhin deutsche und englische
-Texte — eine deutsche Fassung wäre ein Sprachschalter, keine Übersetzungsrunde.
+Around that:
 
-## Wie eine Saison entschieden wird
+- **Meters as amplifiers.** Morale, support and press bend appearances, output,
+  variance and awards through curves in `meters.json`
+- **Environment.** A bigger club makes the player better in their own right
+- **Facts and chains.** What has happened in a career triggers fitting events
+  later; some decisions come back seasons afterwards
+- **Market interest.** Form and headlines determine how many and how good the
+  summer offers are
+- **Partners.** Media partners and kit suppliers bring followers and better
+  offers, none of it guaranteed
+- **Followers.** The cap is 400 million normally; only PELLE PELLE reaches 700
 
-Die Liga wird gespielt, nicht gewürfelt: jeder Verein der Spielklasse bekommt
-eine Saisonstärke aus seiner Reputation und einer Portion Form, danach steht
-die Tabelle. Der eigene Platz ist der Rang darin, verschoben um den Beitrag des
-Spielers. Deshalb gibt es je Saison genau einen Meister, und wer bei einem
-kleinen Verein spielt, muss an allen Großen vorbei. Der Pokal misst sich am
-eigenen Feld — dort spielt man gegen die eigene Liga, nicht gegen die Welt.
+## Trophies
 
-Nicht der Spieler holt den Titel, sondern die Mannschaft. `team-season.ts`
-würfelt zuerst den Tabellenplatz aus der Reputation des Vereins und verschiebt
-ihn dann um den Beitrag des Spielers — spürbar, aber nie so weit, dass ein
-Aufsteiger mit einem starken Stürmer Meister wird. Aus dem Platz ergeben sich
-Titel und der europäische Startplatz der Folgesaison. Wer etwas gewinnen will,
-muss also dorthin wechseln, wo etwas zu gewinnen ist.
+The `assets/trophies` folder holds thousands of images named by opaque numeric
+ids from another source, with no reliable way to map them to competitions.
+Rather than guess — a wrongly labelled trophy is worse than an honest generic
+one — each title resolves to a type-appropriate silhouette from
+`assets/_fallback/trophies`: a shield for a league, a cup for a domestic cup,
+the continental trophy, the world trophy, a boot or a ball for individual
+awards. Hovering a trophy names the exact title. When real images are mapped,
+they replace the silhouettes in `trophy-art.ts`.
 
-Rundherum:
+## Hidden potential
 
-- **Meter als Verstärker.** Moral, Rückhalt und Presse verändern über Kurven aus
-  `meters.json` Einsatzzeit, Ausbeute, Schwankung und Auszeichnungen
-- **Umfeld.** Ein größerer Verein macht den Spieler auch selbst besser
-- **Fakten und Ketten.** Was in der Karriere passiert ist, löst später passende
-  Ereignisse aus; manche Entscheidungen kommen Saisons darauf zurück
-- **Marktinteresse.** Leistung und Schlagzeilen bestimmen, wie viele und wie
-  gute Angebote im Sommer auf dem Tisch liegen
-- **Partner.** Medienpartner und Ausrüster bringen Anhänger und bessere
-  Angebote, garantiert ist dabei nichts. Unterschrieben wird auf vier bis
-  sieben Saisons — solange fragt niemand nach; erst zum Vertragsende steht die
-  Marke wieder zur Wahl, samt Verlängerung. Wer eine Marke hat, bekommt eigene
-  Entscheidungen dazu: die Doku über die eigene Laufbahn, das Exklusivinterview
-- **Wer anfragt.** Ein Vereinssender meldet sich nur beim eigenen Verein
-  (`club` in `partners.json`), eine Landesmarke im eigenen Land oder bei einem
-  Landsmann (`country`); ohne beides ist die Marke international. Wer den
-  Verein wechselt, verliert dessen Sender
-- **Anhänger.** Die Obergrenze liegt regulär bei 400 Millionen; die 700
-  Millionen erreicht nur PELLE PELLE
+Every player starts with a performance ceiling that is never shown. The closer
+the current OVR is to it, the more it slows growth. Without this every player in
+a game like this becomes world class. Over 120 played-out careers the peak OVR
+sits at a median of 74; a tenth never pass 67 and a tenth go beyond 86. A fifth
+of all careers end without a single title.
 
-## Verstecktes Potenzial
+## Principles
 
-Jeder Spieler bekommt beim Start ein Leistungsmaximum, das nie angezeigt wird.
-Je näher der aktuelle OVR daran liegt, desto stärker bremst das Wachstum. Ohne
-diesen Mechanismus wird in einem solchen Spiel jeder Spieler Weltklasse. Über
-120 durchgespielte Karrieren liegt der Spitzen-OVR im Median bei 74, ein Zehntel
-kommt nicht über 67 hinaus und ein Zehntel über 86. Ein Fünftel aller Karrieren
-endet ohne einen einzigen Titel.
+1. **Data is data.** No balancing in code, all of it in `data/`. Adding a league
+   or tweaking a curve touches no code.
+2. **Deterministic.** Same seed + same choices = same career. No `Math.random()`
+   in the engine, only a seeded RNG whose state is part of the save. That makes
+   replays, sharing and tests possible.
+3. **No network at runtime.** All data and images live in the project. Imports
+   run once through `scripts/` and `tools/`, never while playing.
+4. **The engine is portable.** It knows no UI and no framework. If the project
+   ever moves to native Swift, only the engine is ported — the data is unchanged.
+5. **i18n from the start.** Every visible text goes through keys, data carries
+   `de` / `en` / `es` fields.
 
-## Prinzipien
+## Data status
 
-1. **Daten sind Daten.** Kein Balancing im Code, alles in `data/`. Wer eine Liga
-   ergänzt oder eine Kurve anpasst, fasst keinen Code an.
-2. **Deterministisch.** Gleicher Seed + gleiche Entscheidungen = gleiche Karriere.
-   Kein `Math.random()` in der Engine, nur ein seeded RNG, dessen State Teil des
-   Spielstands ist. Das macht Replays, Sharing und Tests möglich.
-3. **Kein Netz zur Laufzeit.** Alle Daten und Bilder liegen im Projekt. Importe
-   laufen einmalig über `scripts/` und `tools/`, nie beim Spielen.
-4. **Engine ist portierbar.** Die Engine kennt keine UI und kein Framework.
-   Falls das Projekt später auf natives Swift wechselt, wird nur die Engine
-   portiert — die Daten bleiben unverändert.
-5. **i18n von Anfang an.** Alle sichtbaren Texte über Keys, Daten tragen
-   `de`/`en`-Felder.
+- Confederations, countries, positions, formations: complete, all trilingual
+- Leagues and cups: the relevant competitions of every confederation, under
+  their real names
+- Clubs: 1,219 across 55 countries; only clubs with a badge are selectable
+- Kit suppliers are fixed for 96 top clubs; their logos are not in yet
+- Trophy images are not mapped yet: every title shows its silhouette, and the
+  hover hint names it
+- Of 246 association crests, 50 are mapped to a country
+- Country codes and assignments follow the FIFA standard but are not yet
+  validated against an official source
 
-## Datenstand
-
-- Konföderationen, Länder, Positionen, Formationen: vollständig
-- Ligen und Pokale: die relevanten Wettbewerbe aller Konföderationen, mit ihren
-  echten Namen
-- Vereine: 1.218 in 55 Ländern; wählbar ist nur, wovon ein Wappen vorliegt
-- Ausrüster sind für 96 Spitzenvereine fest hinterlegt, die Logos dazu fehlen
-  noch
-- Trophäenbilder sind noch nicht zugeordnet: alle Titel zeigen denselben
-  Platzhalter, den Namen nennt der Hinweis beim Darüberfahren
-- Von 246 Verbandswappen sind 50 einem Land zugeordnet
-- Länder-Codes und -Zuordnungen sind nach FIFA-Standard erfasst, aber noch nicht
-  gegen eine offizielle Quelle validiert
-
-Offene Punkte der laufenden Iteration stehen in `docs/iteration-2.md`.
+Open points of the current iteration are in `docs/iteration-2.md`.

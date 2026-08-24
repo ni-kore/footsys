@@ -4,15 +4,31 @@ import {
 } from './data';
 import { meterFactor } from './meters';
 import { optionSummary } from './outcome';
+import { LOCALES, tr } from './i18n';
 import { offerReputationBonus, partnerFits, partnerOf, partnerOffers } from './partners';
 import { clamp, clampOverall, interpolate, roleAtLeast } from './progression';
 import { collectEffects, currentRole, isEligibleForNationalTeam } from './simulation';
 import type { Rng } from './rng';
 import type {
   CareerEvent, CareerState, Club, CountryCode, EventModifiers, EventOption, EventRequirements,
-  EventVariant, PartnerKind, PendingDecision, PendingOption, PositionId, RandomEvent,
-  ReputationLevel, TransferKind, TransferScope,
+  EventVariant, Locale, LocalizedOutcome, LocalizedText, PartnerKind, PendingDecision,
+  PendingOption, PositionId, RandomEvent, ReputationLevel, TransferKind, TransferScope,
 } from './types';
+
+// ------------------------------------------------- Mehrsprachige Bausteine
+
+/** Kurzschreibweise fuer einen Text in allen drei Sprachen. */
+const L = (en: string, de: string, es: string): LocalizedText => ({ en, de, es });
+/** Ein Eigenname traegt in jeder Sprache denselben Wortlaut. */
+const proper = (name: string): LocalizedText => ({ en: name, de: name, es: name });
+
+const TAG_STAY = L('Stay', 'Bleiben', 'Quedarse');
+const TAG_MOVE = L('Move', 'Wechseln', 'Fichar');
+const TAG_EXTEND = L('Extend', 'Verlaengern', 'Renovar');
+const TAG_LOAN = L('On loan', 'Leihe', 'Cesion');
+const LABEL_DECLINE = L('Sign with nobody', 'Keinen Vertrag', 'No firmar con nadie');
+const RIVALS = L('the rivals', 'die Rivalen', 'los rivales');
+const ANOTHER_COUNTRY = L('another country', 'ein anderes Land', 'otro pais');
 
 /**
  * Auswahl und Anwendung von Ereignissen.
@@ -126,33 +142,33 @@ export function buildPartnerDecision(
     eventId: event.id,
     window: 'summer',
     title: event.title,
-    text: event.text.en,
+    text: localizeText(data, state, event.text),
     options: [
       ...(canExtend ? [{
         id: 'partner:' + current!.id,
-        label: { de: current!.name, en: current!.name },
+        label: proper(current!.name),
         partnerId: current!.id,
-        tag: 'Extend',
+        tag: TAG_EXTEND,
         subtitle: reachLabel(current!.reach),
       }] : []),
       ...offers.map((partner) => ({
         id: 'partner:' + partner.id,
-        label: { de: partner.name, en: partner.name },
+        label: proper(partner.name),
         partnerId: partner.id,
         subtitle: reachLabel(partner.reach),
       })),
-      { id: 'decline', label: { de: 'Keinen Vertrag', en: 'Sign with nobody' } },
+      { id: 'decline', label: LABEL_DECLINE },
     ],
   };
 }
 
 /** Wie weit eine Marke trägt, in Worten. */
-function reachLabel(reach: number): string {
-  if (reach >= 9) return 'Worldwide reach';
-  if (reach >= 7) return 'National reach';
-  if (reach >= 5) return 'Wide reach';
-  if (reach >= 3) return 'Regional reach';
-  return 'Small but loyal following';
+function reachLabel(reach: number): LocalizedText {
+  if (reach >= 9) return L('Worldwide reach', 'Weltweite Reichweite', 'Alcance mundial');
+  if (reach >= 7) return L('National reach', 'Landesweite Reichweite', 'Alcance nacional');
+  if (reach >= 5) return L('Wide reach', 'Grosse Reichweite', 'Amplio alcance');
+  if (reach >= 3) return L('Regional reach', 'Regionale Reichweite', 'Alcance regional');
+  return L('Small but loyal following', 'Klein, aber treu', 'Pocos pero fieles');
 }
 
 /** Wie viele Reputationsstufen die Angebote über dem eigenen Niveau liegen. */
@@ -200,8 +216,8 @@ export function buildDestinationDecision(
     eventId,
     window: 'summer',
     title: event.title,
-    text: event.text.en,
-    options: clubs.map((club) => clubOption(data, club, 'destination', loan ? 'On loan' : 'Move')),
+    text: localizeText(data, state, event.text),
+    options: clubs.map((club) => clubOption(data, club, 'destination', loan ? TAG_LOAN : TAG_MOVE)),
   };
 }
 
@@ -345,14 +361,16 @@ export function academyOffers(data: GameData, rng: Rng, state: CareerState): Clu
 
 // ----------------------------------------------------- Entscheidungsbau
 
-function clubOption(data: GameData, club: Club, prefix: string, tag?: string): PendingOption {
+function clubOption(
+  data: GameData, club: Club, prefix: string, tag?: LocalizedText,
+): PendingOption {
   const league = leagueOf(data, club);
   return {
     id: `${prefix}:${club.id}`,
-    label: { de: club.short, en: club.short },
+    label: proper(club.short),
     clubId: club.id,
     ...(tag ? { tag } : {}),
-    subtitle: league.name,
+    subtitle: proper(league.name),
   };
 }
 
@@ -363,7 +381,7 @@ export function buildAcademyDecision(data: GameData, rng: Rng, state: CareerStat
     eventId: 'academy_offer',
     window: 'start',
     title: event.title,
-    text: event.text.en,
+    text: localizeText(data, state, event.text),
     options: academyOffers(data, rng, state).map((c) => clubOption(data, c, 'academy')),
   };
 }
@@ -377,15 +395,15 @@ export function buildTransferDecision(
   const clubs = clubOffers(data, rng, state, { scope, count, qualityBonus: bonus });
 
   // Ein Kennzeichen sagt, was die Wahl bedeutet: hier bleiben oder gehen.
-  const options: PendingOption[] = clubs.map((c) => clubOption(data, c, 'transfer', 'Move'));
+  const options: PendingOption[] = clubs.map((c) => clubOption(data, c, 'transfer', TAG_MOVE));
   if (state.clubId) {
     const club = clubOf(data, state.clubId);
     options.unshift({
       id: 'stay',
-      label: { de: club.short, en: club.short },
+      label: proper(club.short),
       clubId: club.id,
-      tag: 'Stay',
-      subtitle: leagueOf(data, club).name,
+      tag: TAG_STAY,
+      subtitle: proper(leagueOf(data, club).name),
     });
   }
 
@@ -394,7 +412,7 @@ export function buildTransferDecision(
     eventId: 'transfer_offer',
     window: 'summer',
     title: event.title,
-    text: event.text.en,
+    text: localizeText(data, state, event.text),
     options,
   };
 }
@@ -409,15 +427,15 @@ export function buildLoanDecision(data: GameData, rng: Rng, state: CareerState):
     eventId: 'loan_offer',
     window: 'summer',
     title: event.title,
-    text: event.text.en,
+    text: localizeText(data, state, event.text),
     options: [
-      ...clubs.map((c) => clubOption(data, c, 'loan', 'On loan')),
+      ...clubs.map((c) => clubOption(data, c, 'loan', TAG_LOAN)),
       {
         id: 'stay',
-        label: { de: club.short, en: club.short },
+        label: proper(club.short),
         clubId: club.id,
-        tag: 'Stay',
-        subtitle: leagueOf(data, club).name,
+        tag: TAG_STAY,
+        subtitle: proper(leagueOf(data, club).name),
       },
     ],
   };
@@ -434,7 +452,7 @@ export function buildRetirementDecision(data: GameData, state: CareerState): Pen
     eventId: 'retirement',
     window: 'summer',
     title: event.title,
-    text: event.text.en,
+    text: localizeText(data, state, event.text),
     options,
   };
 }
@@ -504,8 +522,8 @@ export function buildEventDecision(
   const related = needsAlternativePosition(event) ? relatedPositions(data, state) : [];
   const alternativePosition = related.length > 0 ? rng.pick(related) : undefined;
 
-  const filled = fillPlaceholders(
-    data, state, variant?.text.en ?? event.text.en, variant,
+  const filled = fillLocalized(
+    data, state, variant?.text ?? event.text, variant,
     alternativeCountry, alternativePosition,
   );
 
@@ -523,14 +541,18 @@ export function buildEventDecision(
     options: event.options
       .filter((o) => optionAllowed(state, o))
       .map((o) => {
-        // Was die Wahl bedeutet, kommt aus ihren Wirkungen, nicht aus einem
-        // zweiten Text, der auseinanderlaufen könnte.
-        const outcome = optionSummary(o);
+        // Fuer jede Sprache einmal, damit der Wechsel der Sprache auch das
+        // Ergebnis sofort umstellt.
+        const outcome: LocalizedOutcome = {
+          en: optionSummary(o, 'en'),
+          de: optionSummary(o, 'de'),
+          es: optionSummary(o, 'es'),
+        };
         return {
           id: o.id,
           label: o.label,
           ...(o.motif ? { motif: o.motif } : {}),
-          ...(outcome.length > 0 ? { outcome } : {}),
+          ...((outcome.en?.length ?? 0) > 0 ? { outcome } : {}),
         };
       }),
   };
@@ -597,38 +619,48 @@ function alternativeNationality(data: GameData, rng: Rng, state: CareerState): C
  * kommt er zusätzlich als Liste zurück, damit die Oberfläche ihn hervorheben
  * kann, ohne raten zu müssen.
  */
-function fillPlaceholders(
-  data: GameData, state: CareerState, text: string, variant: EventVariant | null,
+function fillLocalized(
+  data: GameData, state: CareerState, source: LocalizedText, variant: EventVariant | null,
   alternativeCountry?: CountryCode,
   alternativePosition?: PositionId,
-): { text: string; highlights: string[] } {
+): { text: LocalizedText; highlights: string[] } {
   const club = state.clubId ? clubOf(data, state.clubId) : null;
   const country = countryOf(data, state.player.nationality);
-  const alternative = alternativeCountry
-    ? countryOf(data, alternativeCountry).name.en
-    : 'another country';
-  const rival = club ? rivalOf(data, club)?.short ?? 'the rivals' : 'the rivals';
-  // Gefragt ist die neue Position — die eigene kennt der Spieler.
-  const position = alternativePosition ? positionOf(data, alternativePosition).name.en : '';
+  const rivalClub = club ? rivalOf(data, club) : null;
+  const media = partnerOf(data, state, 'media');
+  const altCountry = alternativeCountry ? countryOf(data, alternativeCountry) : null;
+  const altPosition = alternativePosition ? positionOf(data, alternativePosition) : null;
 
-  const names: Record<string, string> = {
-    '{club}': club?.short ?? '',
-    '{country}': country.name.en,
-    '{rivalClub}': rival,
-    '{alternativeCountry}': alternative,
-    '{alternativePosition}': position,
-    '{mediaPartner}': partnerOf(data, state, 'media')?.name ?? '',
+  // Die hervorgehobenen Namen sammeln sich über alle Sprachen. Zusätzliche,
+  // in der gerade gezeigten Sprache nicht vorkommende Begriffe schaden nicht:
+  // die Oberfläche färbt nur, was sie im Text findet.
+  const highlights = new Set<string>();
+
+  const fill = (locale: Locale): string => {
+    const names: Record<string, string> = {
+      '{club}': club?.short ?? '',
+      '{country}': tr(country.name, locale),
+      '{rivalClub}': rivalClub?.short ?? tr(RIVALS, locale),
+      '{alternativeCountry}': altCountry ? tr(altCountry.name, locale) : tr(ANOTHER_COUNTRY, locale),
+      '{alternativePosition}': altPosition ? tr(altPosition.name, locale) : '',
+      '{mediaPartner}': media?.name ?? '',
+    };
+    let filled = tr(source, locale).replace('{injuryLabel}', variant ? tr(variant.text, locale) : '');
+    for (const [token, name] of Object.entries(names)) {
+      if (!filled.includes(token) || !name) continue;
+      filled = filled.split(token).join(name);
+      highlights.add(name);
+    }
+    return filled;
   };
 
-  const highlights: string[] = [];
-  let filled = text.replace('{injuryLabel}', variant?.text.en ?? '');
-  for (const [token, name] of Object.entries(names)) {
-    if (!filled.includes(token) || !name) continue;
-    filled = filled.split(token).join(name);
-    highlights.push(name);
-  }
+  const text: LocalizedText = { en: fill('en'), de: fill('de'), es: fill('es') };
+  return { text, highlights: [...highlights] };
+}
 
-  return { text: filled, highlights };
+/** Ein Entscheidungstext ohne Antwortabhängige Platzhalter, in allen Sprachen. */
+export function localizeText(data: GameData, state: CareerState, source: LocalizedText): LocalizedText {
+  return fillLocalized(data, state, source, null).text;
 }
 
 /** Der prestigeträchtigste andere Verein derselben Liga gilt als Rivale. */
@@ -643,7 +675,7 @@ export function rivalOf(data: GameData, club: Club): Club | null {
 
 export interface RandomEventResult {
   event: RandomEvent;
-  text: string;
+  text: LocalizedText;
 }
 
 /** Zieht die Zufallsereignisse für das angegebene Fenster und wendet sie an. */
@@ -672,7 +704,7 @@ export function rollRandomEvents(
   return chosen.map((event) => {
     applyRandomEvent(data, rng, state, event);
     state.randomEventHistory.push({ id: event.id, year: state.year });
-    return { event, text: fillPlaceholders(data, state, event.text.en, null).text };
+    return { event, text: localizeText(data, state, event.text) };
   });
 }
 

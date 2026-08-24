@@ -4,7 +4,8 @@
     "label": "4-4-2",
     "name": {
       "de": "Flaches 4-4-2",
-      "en": "Flat 4-4-2"
+      "en": "Flat 4-4-2",
+      "es": "4-4-2 plano"
     },
     "attackingBias": 0.5,
     "slots": [
@@ -56,7 +57,8 @@
     "label": "4-4-2 Diamond",
     "name": {
       "de": "4-4-2 mit Raute",
-      "en": "4-4-2 Diamond"
+      "en": "4-4-2 Diamond",
+      "es": "4-4-2 Diamond"
     },
     "attackingBias": 0.55,
     "slots": [
@@ -106,7 +108,8 @@
     "label": "4-4-1-1",
     "name": {
       "de": "4-4-1-1",
-      "en": "4-4-1-1"
+      "en": "4-4-1-1",
+      "es": "4-4-1-1"
     },
     "attackingBias": 0.45,
     "slots": [
@@ -154,7 +157,8 @@
     "label": "4-3-3",
     "name": {
       "de": "4-3-3",
-      "en": "4-3-3"
+      "en": "4-3-3",
+      "es": "4-3-3"
     },
     "attackingBias": 0.7,
     "slots": [
@@ -202,7 +206,8 @@
     "label": "4-3-3 False 9",
     "name": {
       "de": "4-3-3 mit falscher Neun",
-      "en": "4-3-3 False Nine"
+      "en": "4-3-3 False Nine",
+      "es": "4-3-3 False Nine"
     },
     "attackingBias": 0.75,
     "slots": [
@@ -251,7 +256,8 @@
     "label": "4-2-3-1",
     "name": {
       "de": "4-2-3-1",
-      "en": "4-2-3-1"
+      "en": "4-2-3-1",
+      "es": "4-2-3-1"
     },
     "attackingBias": 0.6,
     "slots": [
@@ -302,7 +308,8 @@
     "label": "4-1-4-1",
     "name": {
       "de": "4-1-4-1",
-      "en": "4-1-4-1"
+      "en": "4-1-4-1",
+      "es": "4-1-4-1"
     },
     "attackingBias": 0.4,
     "slots": [
@@ -354,7 +361,8 @@
     "label": "4-5-1",
     "name": {
       "de": "4-5-1",
-      "en": "4-5-1"
+      "en": "4-5-1",
+      "es": "4-5-1"
     },
     "attackingBias": 0.3,
     "slots": [
@@ -402,7 +410,8 @@
     "label": "4-2-2-2",
     "name": {
       "de": "4-2-2-2",
-      "en": "4-2-2-2"
+      "en": "4-2-2-2",
+      "es": "4-2-2-2"
     },
     "attackingBias": 0.65,
     "slots": [
@@ -455,7 +464,8 @@
     "label": "4-3-1-2",
     "name": {
       "de": "4-3-1-2",
-      "en": "4-3-1-2"
+      "en": "4-3-1-2",
+      "es": "4-3-1-2"
     },
     "attackingBias": 0.6,
     "slots": [
@@ -505,7 +515,8 @@
     "label": "4-2-4",
     "name": {
       "de": "4-2-4",
-      "en": "4-2-4"
+      "en": "4-2-4",
+      "es": "4-2-4"
     },
     "attackingBias": 0.9,
     "slots": [
@@ -555,7 +566,8 @@
     "label": "3-5-2",
     "name": {
       "de": "3-5-2",
-      "en": "3-5-2"
+      "en": "3-5-2",
+      "es": "3-5-2"
     },
     "attackingBias": 0.55,
     "slots": [
@@ -607,7 +619,8 @@
     "label": "3-4-3",
     "name": {
       "de": "3-4-3",
-      "en": "3-4-3"
+      "en": "3-4-3",
+      "es": "3-4-3"
     },
     "attackingBias": 0.8,
     "slots": [
@@ -656,7 +669,8 @@
     "label": "3-4-2-1",
     "name": {
       "de": "3-4-2-1",
-      "en": "3-4-2-1"
+      "en": "3-4-2-1",
+      "es": "3-4-2-1"
     },
     "attackingBias": 0.6,
     "slots": [
@@ -707,7 +721,8 @@
     "label": "3-4-1-2",
     "name": {
       "de": "3-4-1-2",
-      "en": "3-4-1-2"
+      "en": "3-4-1-2",
+      "es": "3-4-1-2"
     },
     "attackingBias": 0.65,
     "slots": [
@@ -758,7 +773,8 @@
     "label": "3-6-1",
     "name": {
       "de": "3-6-1",
-      "en": "3-6-1"
+      "en": "3-6-1",
+      "es": "3-6-1"
     },
     "attackingBias": 0.35,
     "slots": [
@@ -809,7 +825,8 @@
     "label": "5-3-2",
     "name": {
       "de": "5-3-2",
-      "en": "5-3-2"
+      "en": "5-3-2",
+      "es": "5-3-2"
     },
     "attackingBias": 0.3,
     "slots": [
@@ -862,7 +879,8 @@
     "label": "5-4-1",
     "name": {
       "de": "5-4-1",
-      "en": "5-4-1"
+      "en": "5-4-1",
+      "es": "5-4-1"
     },
     "attackingBias": 0.2,
     "slots": [
@@ -913,7 +931,8 @@
     "label": "5-2-1-2",
     "name": {
       "de": "5-2-1-2",
-      "en": "5-2-1-2"
+      "en": "5-2-1-2",
+      "es": "5-2-1-2"
     },
     "attackingBias": 0.35,
     "slots": [
@@ -967,7 +986,8 @@
     "label": "4-1-2-1-2 Narrow",
     "name": {
       "de": "4-1-2-1-2 (eng)",
-      "en": "4-1-2-1-2 Narrow"
+      "en": "4-1-2-1-2 Narrow",
+      "es": "4-1-2-1-2 Narrow"
     },
     "attackingBias": 0.55,
     "slots": [
@@ -1017,7 +1037,8 @@
     "label": "3-3-3-1",
     "name": {
       "de": "3-3-3-1",
-      "en": "3-3-3-1"
+      "en": "3-3-3-1",
+      "es": "3-3-3-1"
     },
     "attackingBias": 0.7,
     "slots": [
@@ -1069,7 +1090,8 @@
     "label": "Sweeper System",
     "name": {
       "de": "Libero-System",
-      "en": "Sweeper System"
+      "en": "Sweeper System",
+      "es": "Sweeper System"
     },
     "attackingBias": 0.4,
     "historic": true,

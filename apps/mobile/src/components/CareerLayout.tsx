@@ -3,7 +3,8 @@ import { ScrollView, StyleSheet, useWindowDimensions, View } from 'react-native'
 import type { CareerState, GameData } from '@footsys/engine';
 import { fansDelta, seasonLabel } from '../format';
 import { color, layout, space } from '../theme';
-import { Card, Label, StatCard } from './ui';
+import { BrandHeader, Card, Disclaimer, Label, StatCard } from './ui';
+import { useT } from '../i18n';
 import { AppsIcon, AssistIcon, CleanSheetIcon, FansIcon, GoalIcon } from './icons';
 import { StepTransition } from './motion';
 import { PlayerCard } from './PlayerCard';
@@ -11,7 +12,8 @@ import { SeasonTable } from './SeasonTable';
 
 /** Zahlen der zuletzt gespielten Halbserie. */
 interface Period {
-  label: string;
+  labelKind: 'nothing' | 'season' | 'firstHalf';
+  year: number;
   appearances: number;
   goals: number;
   assists: number;
@@ -21,7 +23,7 @@ interface Period {
 }
 
 const NOTHING_YET: Period = {
-  label: 'Before your first match',
+  labelKind: 'nothing', year: 0,
   appearances: 0, goals: 0, assists: 0, cleanSheets: 0, fans: 0, keeper: false,
 };
 
@@ -60,9 +62,8 @@ export function CareerLayout({ data, state, children }: {
   if (report) {
     if (report.half === 1) seasonStart.current = report.fansBefore;
     period.current = {
-      label: report.kind === 'season'
-        ? 'Season ' + seasonLabel(report.year)
-        : 'Season ' + seasonLabel(report.year) + ' · first half',
+      labelKind: report.kind === 'season' ? 'season' : 'firstHalf',
+      year: report.year,
       appearances: report.appearances,
       goals: report.goals,
       assists: report.assists,
@@ -72,6 +73,11 @@ export function CareerLayout({ data, state, children }: {
     };
   }
   const shown = period.current;
+  const { t } = useT();
+  const shownLabel = shown.labelKind === 'nothing'
+    ? t('beforeFirstMatch')
+    : t('season') + ' ' + seasonLabel(shown.year)
+      + (shown.labelKind === 'firstHalf' ? ' · ' + t('firstHalf') : '');
 
   const stepKey = state.pendingKickoff
     ? 'kickoff:' + state.year
@@ -86,6 +92,10 @@ export function CareerLayout({ data, state, children }: {
       style={{ flex: 1, backgroundColor: color.bg.canvas }}
       contentContainerStyle={styles.content}
     >
+      {/* Über der laufenden Karriere die Kopfzeile: Logo und Name links, die
+          Verweise rechtsbündig. Gleiche Ränder wie auf der Startseite. */}
+      <BrandHeader style={styles.header} />
+
       <View style={twoColumn ? styles.twoColumn : styles.oneColumn}>
         <View
           style={twoColumn ? styles.column : undefined}
@@ -100,20 +110,20 @@ export function CareerLayout({ data, state, children }: {
         <View style={twoColumn ? [styles.column, { height: panelHeight }] : undefined}>
           <Card style={[styles.action, twoColumn && styles.stretch]}>
             <View style={styles.strip}>
-              <Label>{shown.label}</Label>
+              <Label>{shownLabel}</Label>
               <View style={styles.stripRow}>
-                <StatCard grow count={shown.appearances} label="Apps" icon={<AppsIcon />} />
+                <StatCard grow count={shown.appearances} label={t('apps')} icon={<AppsIcon />} />
                 {shown.keeper ? (
-                  <StatCard grow count={shown.cleanSheets} label="Clean sheets" icon={<CleanSheetIcon />} />
+                  <StatCard grow count={shown.cleanSheets} label={t('cleanSheets')} icon={<CleanSheetIcon />} />
                 ) : (
-                  <StatCard grow count={shown.goals} label="Goals" icon={<GoalIcon />} />
+                  <StatCard grow count={shown.goals} label={t('goals')} icon={<GoalIcon />} />
                 )}
-                <StatCard grow count={shown.assists} label="Assists" icon={<AssistIcon />} />
+                <StatCard grow count={shown.assists} label={t('assists')} icon={<AssistIcon />} />
                 <StatCard
                   grow
                   count={shown.fans}
                   format={fansDelta}
-                  label="Fans"
+                  label={t('fans')}
                   icon={<FansIcon />}
                   tint={shown.fans < 0 ? color.status.negative : color.status.positive}
                 />
@@ -137,6 +147,10 @@ export function CareerLayout({ data, state, children }: {
 
       {/* Unter beiden Flächen die Karriere Saison für Saison. */}
       <SeasonTable data={data} state={state} />
+
+      {/* Ganz unten der rechtliche Hinweis zu den Vereinsnamen, so wie beim
+          Anlegen des Spielers und am Ende der Karriere. */}
+      <Disclaimer />
     </ScrollView>
   );
 }
@@ -146,9 +160,12 @@ const styles = StyleSheet.create({
     padding: space[4], paddingBottom: space[9], gap: space[4],
     maxWidth: 1100, alignSelf: 'center', width: '100%',
   },
-  twoColumn: { flexDirection: 'row', gap: space[4], alignItems: 'flex-start', marginTop: space[4] },
+  // Gleiche Kopfzeilen-Ränder wie auf der Startseite; die Flächen brauchen
+  // deshalb keinen eigenen Abstand nach oben mehr.
+  header: { marginTop: space[5], marginBottom: space[3] },
+  twoColumn: { flexDirection: 'row', gap: space[4], alignItems: 'flex-start' },
   column: { flex: 1 },
-  oneColumn: { gap: space[4], marginTop: space[4] },
+  oneColumn: { gap: space[4] },
   stretch: { flex: 1 },
   action: { gap: space[4] },
   actionContent: { flexGrow: 1 },

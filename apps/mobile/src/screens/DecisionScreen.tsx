@@ -3,12 +3,15 @@ import {
   Animated, Platform, Pressable, ScrollView, StyleSheet, Text, View,
   type LayoutChangeEvent, type NativeScrollEvent, type NativeSyntheticEvent,
 } from 'react-native';
-import type { Club, GameData, PendingDecision } from '@footsys/engine';
+import type { Club, GameData, LocalizedText, PendingDecision } from '@footsys/engine';
 import { color, font, radius, space } from '../theme';
+import { seasonLabel } from '../format';
 import { Button, ClubBadge, Flag, Label, Meter, PartnerLogo } from '../components/ui';
 import { Fade, usePressScale } from '../components/motion';
 import { CardImage } from '../components/CardImage';
 import { Highlighted } from '../components/Highlighted';
+import { useT } from '../i18n';
+import type { StringKey } from '../strings';
 
 /** Gut, schlecht oder weder noch. */
 function toneColor(tone: 'positive' | 'negative' | 'neutral'): string {
@@ -17,10 +20,10 @@ function toneColor(tone: 'positive' | 'negative' | 'neutral'): string {
   return color.text.secondary;
 }
 
-const WINDOW_LABEL: Record<PendingDecision['window'], string> = {
-  start: 'Career start',
-  winter: 'Winter break',
-  summer: 'Summer break',
+const WINDOW_LABEL: Record<PendingDecision['window'], StringKey> = {
+  start: 'careerStart',
+  winter: 'winterBreak',
+  summer: 'summerBreak',
 };
 
 /** Abstand zwischen zwei Karten, damit die nächste nicht hereinlugt. */
@@ -34,13 +37,25 @@ const GUTTER = space[3];
  * verbindlich und schickt die Mannschaft auf den Platz. Manchmal steht nur
  * eine Entscheidung an, dann fehlen die Punkte und es gibt nichts zu ziehen.
  */
+/** Was der Knopf am Ende der Pause auslöst, sprachneutral beschrieben. */
+export type StartLabel =
+  | { kind: 'confirm' }
+  | { kind: 'secondHalf' }
+  | { kind: 'season'; year: number };
+
 export function DecisionScreen({ data, decisions, startLabel, onConfirm }: {
   data: GameData;
   decisions: PendingDecision[];
-  /** Beschriftung des Knopfes, der die Pause beendet. */
-  startLabel: string;
+  /** Was der Knopf auslöst, der die Pause beendet. */
+  startLabel: StartLabel;
   onConfirm: (optionIds: string[]) => void;
 }) {
+  const { t } = useT();
+  const startText = startLabel.kind === 'confirm'
+    ? t('confirm')
+    : startLabel.kind === 'secondHalf'
+      ? t('intoSecondHalf')
+      : t('intoSeason') + ' ' + seasonLabel(startLabel.year);
   const [width, setWidth] = useState(0);
   const [index, setIndex] = useState(0);
   const [choices, setChoices] = useState<(string | null)[]>(() => decisions.map(() => null));
@@ -148,7 +163,7 @@ export function DecisionScreen({ data, decisions, startLabel, onConfirm }: {
   return (
     <View style={styles.screen}>
       <View style={styles.head}>
-        <Label>{current ? WINDOW_LABEL[current.window] : ''}</Label>
+        <Label>{current ? t(WINDOW_LABEL[current.window]) : ''}</Label>
         {decisions.length > 1 ? (
           <View style={styles.steps}>
             {decisions.map((decision, i) => (
@@ -168,7 +183,7 @@ export function DecisionScreen({ data, decisions, startLabel, onConfirm }: {
                 />
               </Pressable>
             ))}
-            <Text style={styles.stepText}>{index + 1} of {decisions.length}</Text>
+            <Text style={styles.stepText}>{index + 1} / {decisions.length}</Text>
           </View>
         ) : null}
       </View>
@@ -203,7 +218,7 @@ export function DecisionScreen({ data, decisions, startLabel, onConfirm }: {
 
       <View style={styles.footer}>
         <Button
-          label={startLabel}
+          label={startText}
           disabled={!complete}
           onPress={() => onConfirm(choices.map((choice) => choice ?? ''))}
         />
@@ -225,19 +240,21 @@ function DecisionCard({ data, decision, chosen, last, onChoose, onNext }: {
   onChoose: (optionId: string) => void;
   onNext: () => void;
 }) {
+  const { t, tr, locale } = useT();
   const picked = decision.options.find((option) => option.id === chosen);
 
   // Sobald gewählt ist, verschwinden die anderen Möglichkeiten. Ein Druck auf
   // die getroffene Wahl nimmt sie zurück und holt die Liste wieder.
   const shown = picked ? [picked] : decision.options;
+  const outcomeLines = picked?.outcome?.[locale] ?? [];
 
   return (
     <View style={styles.card}>
       <View style={styles.headText}>
-        <Text style={styles.title}>{decision.title.en}</Text>
+        <Text style={styles.title}>{tr(decision.title)}</Text>
         <Highlighted
           style={styles.lead}
-          text={decision.text}
+          text={tr(decision.text)}
           terms={decision.highlights ?? []}
         />
       </View>
@@ -246,12 +263,15 @@ function DecisionCard({ data, decision, chosen, last, onChoose, onNext }: {
         {shown.map((option, index) => (
           <Fade key={option.id} delay={picked ? 0 : 80 + index * 110}>
             <Option
-              label={option.label.en}
+              label={tr(option.label)}
               selected={chosen === option.id}
-              {...(option.subtitle ? { subtitle: option.subtitle } : {})}
-              {...(option.tag ? { tag: option.tag } : {})}
+              {...(option.subtitle ? { subtitle: tr(option.subtitle) } : {})}
+              {...(option.tag ? { tag: tr(option.tag) } : {})}
               {...(option.motif ? { motif: option.motif } : {})}
               {...(option.clubId ? { club: data.clubById.get(option.clubId) } : {})}
+              {...(option.clubId
+                ? { leagueCode: data.leagueById.get(data.clubById.get(option.clubId)?.league ?? '')?.country }
+                : {})}
               {...(option.countryCode ? { countryCode: option.countryCode } : {})}
               {...(option.partnerId
                 ? {
@@ -265,13 +285,13 @@ function DecisionCard({ data, decision, chosen, last, onChoose, onNext }: {
         ))}
 
         {/* Was die Wahl bedeutet, als Text unter der Antwort. */}
-        {picked && picked.outcome && picked.outcome.length > 0 ? (
+        {picked && outcomeLines.length > 0 ? (
           <Fade delay={120}>
             <View style={styles.outcome}>
               {/* Ein Absatz, in dem jede Aussage ihre eigene Farbe trägt: was
                   hilft, steht grün da, was etwas kostet, rot. */}
               <Text style={styles.outcomeLine}>
-                {picked.outcome.map((line, index) => (
+                {outcomeLines.map((line, index) => (
                   <Text key={line.text} style={{ color: toneColor(line.tone) }}>
                     {index > 0 ? ' ' : ''}{line.text}
                   </Text>
@@ -283,7 +303,7 @@ function DecisionCard({ data, decision, chosen, last, onChoose, onNext }: {
 
         {picked && !last ? (
           <Fade delay={200} style={styles.nextRow}>
-            <Button label="Next decision" variant="secondary" onPress={onNext} />
+            <Button label={t('nextDecision')} variant="secondary" onPress={onNext} />
           </Fade>
         ) : null}
       </View>
@@ -293,7 +313,7 @@ function DecisionCard({ data, decision, chosen, last, onChoose, onNext }: {
 
 /** Eine Wahlmöglichkeit. Sie gibt unter dem Finger kurz nach. */
 function Option({
-  label, subtitle, tag, motif, club, partnerId, partnerLight, countryCode, selected, onPress,
+  label, subtitle, tag, motif, club, leagueCode, partnerId, partnerLight, countryCode, selected, onPress,
 }: {
   label: string;
   subtitle?: string;
@@ -302,6 +322,8 @@ function Option({
   /** Motiv für das Bild links auf der Antwort. */
   motif?: string;
   club?: Club | undefined;
+  /** Land der Liga eines Vereinsangebots: davor steht dann seine Fahne. */
+  leagueCode?: string;
   partnerId?: string;
   partnerLight?: boolean;
   /** Bei der Verbandswahl: die Flagge steht für die Antwort. */
@@ -309,6 +331,7 @@ function Option({
   selected: boolean;
   onPress: () => void;
 }) {
+  const { t } = useT();
   const press = usePressScale();
 
   return (
@@ -351,7 +374,13 @@ function Option({
 
         <View style={{ flex: 1, gap: 3 }}>
           <Text style={font.bodyStrong}>{label}</Text>
-          {subtitle ? <Text style={font.caption}>{subtitle}</Text> : null}
+          {subtitle ? (
+            <View style={styles.subtitleRow}>
+              {/* Vor dem Ligennamen eines Angebots steht die Fahne des Landes. */}
+              {leagueCode ? <Flag code={leagueCode} size={12} /> : null}
+              <Text style={font.caption}>{subtitle}</Text>
+            </View>
+          ) : null}
         </View>
 
         {/* Was die Wahl bedeutet, steht als Kennzeichen davor: bleiben,
@@ -364,7 +393,7 @@ function Option({
 
         {club ? (
           <View style={styles.reputation}>
-            <Text style={styles.reputationLabel}>Reputation</Text>
+            <Text style={styles.reputationLabel}>{t('reputation')}</Text>
             <Meter value={club.reputation.domestic * 10} steps={10} />
           </View>
         ) : null}
@@ -402,6 +431,7 @@ const styles = StyleSheet.create({
   lead: { ...font.body, color: color.text.secondary, lineHeight: 21 },
 
   options: { gap: space[2], paddingLeft: space[3] },
+  subtitleRow: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   // Das Ergebnis ist keine zweite Antwort, sondern der Kommentar zur Wahl:
   // kein Rahmen, nur der Text in der Farbe der Zustimmung.
   outcome: {

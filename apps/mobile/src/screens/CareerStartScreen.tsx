@@ -3,7 +3,8 @@ import { Modal, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, Vi
 import type { CareerState, GameData, PendingDecision } from '@footsys/engine';
 import { careerOpening } from '../story';
 import { breakpointFor, color, font, radius, space } from '../theme';
-import { ClubBadge, Meter, overallTint, StatCard } from '../components/ui';
+import { ClubBadge, Flag, Meter, overallTint, StatCard } from '../components/ui';
+import { useT } from '../i18n';
 
 /**
  * Der Auftakt: links die Zusammenfassung dessen, was gewählt wurde, rechts
@@ -17,9 +18,10 @@ export function CareerStartScreen({ data, state, decision, onChoose }: {
   decision: PendingDecision;
   onChoose: (optionId: string) => void;
 }) {
+  const { t, tr, locale } = useT();
   const { width } = useWindowDimensions();
   const compact = breakpointFor(width) === 'compact';
-  const story = useMemo(() => careerOpening(data, state), [data, state]);
+  const story = useMemo(() => careerOpening(data, state, locale), [data, state, locale]);
 
   const player = state.player;
   const position = data.positionById.get(player.position);
@@ -32,16 +34,16 @@ export function CareerStartScreen({ data, state, decision, onChoose }: {
           <ScrollView contentContainerStyle={styles.content}>
             <View style={[styles.header, compact && styles.headerCompact]}>
               <View style={{ gap: space[1] }}>
-                <Text style={styles.eyebrow}>A career begins</Text>
+                <Text style={styles.eyebrow}>{t('aCareerBegins')}</Text>
                 <Text style={styles.title}>{player.surname}</Text>
               </View>
 
               <View style={styles.statRow}>
-                <StatCard value={Math.round(player.overall)} label="OVR" tint={overallTint(player.overall)} />
-                <StatCard value={position?.abbr.en ?? ''} label="Pos" />
-                <StatCard value={player.strongFoot === 'left' ? 'L' : 'R'} label="Foot" />
-                <StatCard value={player.weakFoot} label="Weak" />
-                <StatCard value={formation?.label ?? ''} label="System" size="wide" />
+                <StatCard value={Math.round(player.overall)} label={t('ovr')} tint={overallTint(player.overall)} />
+                <StatCard value={position ? tr(position.abbr) : ''} label={t('pos')} />
+                <StatCard value={player.strongFoot === 'left' ? 'L' : 'R'} label={t('foot')} />
+                <StatCard value={player.weakFoot} label={t('weak')} />
+                <StatCard value={formation?.label ?? ''} label={t('system')} size="wide" />
               </View>
             </View>
 
@@ -53,11 +55,12 @@ export function CareerStartScreen({ data, state, decision, onChoose }: {
 
             <View style={styles.divider} />
 
-            <Text style={font.title}>{decision.title.en}</Text>
+            <Text style={font.title}>{tr(decision.title)}</Text>
 
             <View style={styles.options}>
               {decision.options.map((option) => {
                 const club = option.clubId ? data.clubById.get(option.clubId) : undefined;
+                const leagueCode = club ? data.leagueById.get(club.league)?.country : undefined;
                 return (
                   <Pressable
                     key={option.id}
@@ -70,13 +73,19 @@ export function CareerStartScreen({ data, state, decision, onChoose }: {
                     ) : null}
 
                     <View style={{ flex: 1, gap: 3 }}>
-                      <Text style={font.bodyStrong}>{option.label.en}</Text>
-                      {option.subtitle ? <Text style={font.caption}>{option.subtitle}</Text> : null}
+                      <Text style={font.bodyStrong}>{tr(option.label)}</Text>
+                      {option.subtitle ? (
+                        <View style={styles.subtitleRow}>
+                          {/* Fahne des Landes vor dem Ligennamen des Angebots. */}
+                          {leagueCode ? <Flag code={leagueCode} size={12} /> : null}
+                          <Text style={font.caption}>{tr(option.subtitle)}</Text>
+                        </View>
+                      ) : null}
                     </View>
 
                     {club ? (
                       <View style={styles.reputation}>
-                        <Text style={styles.reputationLabel}>Reputation</Text>
+                        <Text style={styles.reputationLabel}>{t('reputation')}</Text>
                         <Meter value={club.reputation.domestic * 10} steps={10} />
                       </View>
                     ) : null}
@@ -118,6 +127,7 @@ const styles = StyleSheet.create({
   paragraph: { ...font.body, color: color.text.secondary, lineHeight: 21 },
   divider: { height: 1, backgroundColor: color.border.subtle },
   options: { gap: space[2] },
+  subtitleRow: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   option: {
     flexDirection: 'row', alignItems: 'center', gap: space[3],
     minHeight: 72, padding: space[3],

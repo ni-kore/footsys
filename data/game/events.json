@@ -34,11 +34,13 @@
       },
       "title": {
         "de": "Angebot aus der Jugend",
-        "en": "Youth academy offer"
+        "en": "Youth academy offer",
+        "es": "Oferta de cantera"
       },
       "text": {
         "de": "Vier Vereine wollen dich in ihre Nachwuchsabteilung holen. Wo beginnt deine Karriere?",
-        "en": "Four clubs want you in their academy. Where does your career begin?"
+        "en": "Four clubs want you in their academy. Where does your career begin?",
+        "es": "Cuatro clubes te quieren en su cantera. ¿Dónde empieza tu carrera?"
       }
     },
     {
@@ -53,11 +55,13 @@
       },
       "title": {
         "de": "Leihe",
-        "en": "Loan move"
+        "en": "Loan move",
+        "es": "Cesión"
       },
       "text": {
         "de": "Dein Verein will, dass du woanders Spielpraxis sammelst.",
-        "en": "Your club wants you to get minutes elsewhere."
+        "en": "Your club wants you to get minutes elsewhere.",
+        "es": "Tu club quiere que sumes minutos en otro sitio."
       }
     },
     {
@@ -72,11 +76,13 @@
       },
       "title": {
         "de": "Transferfenster",
-        "en": "Transfer window"
+        "en": "Transfer window",
+        "es": "Mercado de fichajes"
       },
       "text": {
         "de": "Es liegen Angebote vor. Bleibst du oder wechselst du?",
-        "en": "Offers are on the table. Stay or move?"
+        "en": "Offers are on the table. Stay or move?",
+        "es": "Hay ofertas sobre la mesa. ¿Quedarte o marcharte?"
       }
     },
     {
@@ -85,18 +91,21 @@
       "trigger": "contract_expiring",
       "title": {
         "de": "Vertragsverlängerung",
-        "en": "Contract renewal"
+        "en": "Contract renewal",
+        "es": "Renovación de contrato"
       },
       "text": {
         "de": "Dein Vertrag läuft aus. Der Verein legt ein Angebot vor.",
-        "en": "Your contract is running out. The club has made an offer."
+        "en": "Your contract is running out. The club has made an offer.",
+        "es": "Tu contrato termina. El club te ha hecho una oferta."
       },
       "options": [
         {
           "id": "extend_long",
           "label": {
             "de": "Langfristig verlängern",
-            "en": "Sign long-term"
+            "en": "Sign long-term",
+            "es": "Firmar a largo plazo"
           },
           "modifiers": {
             "meters": {
@@ -109,7 +118,8 @@
           "id": "extend_short",
           "label": {
             "de": "Kurz verlängern",
-            "en": "Sign short-term"
+            "en": "Sign short-term",
+            "es": "Firmar a corto plazo"
           },
           "modifiers": {
             "marketValueMultiplier": 0.95
@@ -119,7 +129,8 @@
           "id": "run_down",
           "label": {
             "de": "Auslaufen lassen",
-            "en": "Run the contract down"
+            "en": "Run the contract down",
+            "es": "Agotar el contrato"
           },
           "modifiers": {
             "meters": {
@@ -137,18 +148,21 @@
       "trigger": "retirement_age_reached",
       "title": {
         "de": "Karriereende",
-        "en": "End of career"
+        "en": "End of career",
+        "es": "Fin de la carrera"
       },
       "text": {
         "de": "Es ist so weit. Wie hörst du auf?",
-        "en": "This is it. How do you go out?"
+        "en": "This is it. How do you go out?",
+        "es": "Esto es todo. ¿Cómo te retiras?"
       },
       "options": [
         {
           "id": "retire_at_club",
           "label": {
             "de": "Beim aktuellen Verein aufhören",
-            "en": "Retire at your current club"
+            "en": "Retire at your current club",
+            "es": "Retirarte en tu club actual"
           },
           "modifiers": {
             "meters": {
@@ -160,7 +174,8 @@
           "id": "retire_at_home",
           "label": {
             "de": "Bei deinem Jugendverein aufhören",
-            "en": "Retire at your boyhood club"
+            "en": "Retire at your boyhood club",
+            "es": "Retirarte en el club de tu infancia"
           },
           "modifiers": {
             "meters": {
@@ -172,7 +187,8 @@
           "id": "one_more_year",
           "label": {
             "de": "Noch eine Saison dranhängen",
-            "en": "One more season"
+            "en": "One more season",
+            "es": "Una temporada más"
           },
           "condition": {
             "maxAge": 39
@@ -189,11 +205,13 @@
       "trigger": "multiple_associations_calling",
       "title": {
         "de": "Zwei Verbände",
-        "en": "Two associations"
+        "en": "Two associations",
+        "es": "Dos federaciones"
       },
       "text": {
         "de": "Mehr als ein Verband will dich. Die Entscheidung bindet dich, sobald du ein A-Länderspiel bestreitest.",
-        "en": "More than one association wants you. Once you play a senior international, the choice is final."
+        "en": "More than one association wants you. Once you play a senior international, the choice is final.",
+        "es": "Más de una federación te quiere. En cuanto juegues un partido absoluto, la elección será definitiva."
       }
     },
     {
@@ -201,11 +219,13 @@
       "window": "summer",
       "title": {
         "de": "Ein Sender meldet sich",
-        "en": "Someone wants to tell your story"
+        "en": "Someone wants to tell your story",
+        "es": "Alguien quiere contar tu historia"
       },
       "text": {
         "de": "Ein Medienhaus will regelmäßig über dich berichten. Mehr Aufmerksamkeit bringt Fans und macht andere Vereine neugierig, aber du stehst dann auch bei jedem Fehler im Bild.",
-        "en": "A media outlet wants to follow you. More coverage brings fans and makes other clubs curious, but every mistake ends up on screen as well."
+        "en": "A media outlet wants to follow you. More coverage brings fans and makes other clubs curious, but every mistake ends up on screen as well.",
+        "es": "Un medio quiere seguirte. Más cobertura trae afición y despierta la curiosidad de otros clubes, pero cada error también acaba en pantalla."
       }
     },
     {
@@ -213,11 +233,13 @@
       "window": "summer",
       "title": {
         "de": "Ein Ausrüster bietet an",
-        "en": "A kit supplier comes calling"
+        "en": "A kit supplier comes calling",
+        "es": "Un proveedor de material llama a tu puerta"
       },
       "text": {
         "de": "Ein Ausrüster will dich unter Vertrag nehmen. Das bringt weniger Aufmerksamkeit als ein Sender, öffnet dafür Türen zu Vereinen, die dieselbe Marke tragen.",
-        "en": "A kit supplier wants to sign you. It brings less attention than a broadcaster, but it opens doors at clubs wearing the same brand."
+        "en": "A kit supplier wants to sign you. It brings less attention than a broadcaster, but it opens doors at clubs wearing the same brand.",
+        "es": "Un proveedor de material quiere ficharte. Da menos protagonismo que una televisión, pero abre puertas en clubes que visten la misma marca."
       }
     },
     {
@@ -225,11 +247,13 @@
       "window": "summer",
       "title": {
         "de": "Wohin?",
-        "en": "Where to?"
+        "en": "Where to?",
+        "es": "¿Adónde?"
       },
       "text": {
         "de": "Der Wechsel ist beschlossen. Jetzt zählt nur noch, bei wem du unterschreibst.",
-        "en": "The move is decided. All that is left is whose shirt you put on."
+        "en": "The move is decided. All that is left is whose shirt you put on.",
+        "es": "El traspaso está decidido. Solo falta saber qué camiseta te pones."
       }
     },
     {
@@ -237,11 +261,13 @@
       "window": "summer",
       "title": {
         "de": "Wohin auf Leihe?",
-        "en": "Out on loan, but where?"
+        "en": "Out on loan, but where?",
+        "es": "A préstamo, ¿pero dónde?"
       },
       "text": {
         "de": "Die Leihe ist abgemacht. Jetzt zählt nur noch, wo du deine Spiele bekommst.",
-        "en": "The loan is agreed. All that is left is where you get your minutes."
+        "en": "The loan is agreed. All that is left is where you get your minutes.",
+        "es": "La cesión está acordada. Solo falta saber dónde sumarás minutos."
       }
     }
   ],
@@ -259,18 +285,21 @@
       },
       "title": {
         "de": "Die Doku über dich",
-        "en": "Behind the career"
+        "en": "Behind the career",
+        "es": "Tras la carrera"
       },
       "text": {
         "de": "{mediaPartner} will eine Doku über dich drehen: eine Saison lang Kabine, Reha, Zuhause. Das bringt dich zu Leuten, die nie ein Spiel von dir gesehen haben — und zeigt jeden schlechten Tag mit.",
-        "en": "{mediaPartner} wants to make a documentary about you: a season in the dressing room, in rehab, at home. It reaches people who have never watched you play — and it shows every bad day too."
+        "en": "{mediaPartner} wants to make a documentary about you: a season in the dressing room, in rehab, at home. It reaches people who have never watched you play — and it shows every bad day too.",
+        "es": "{mediaPartner} quiere hacer un documental sobre ti: una temporada en el vestuario, en rehabilitación, en casa. Llega a gente que nunca te ha visto jugar, y también muestra cada mal día."
       },
       "options": [
         {
           "id": "full_access",
           "label": {
             "de": "Alles zeigen",
-            "en": "Let them film everything"
+            "en": "Let them film everything",
+            "es": "Déjales grabarlo todo"
           },
           "outcome": {
             "successChance": 0.65,
@@ -298,7 +327,8 @@
           "id": "controlled_access",
           "label": {
             "de": "Nur das Sportliche",
-            "en": "Football only"
+            "en": "Football only",
+            "es": "Solo el fútbol"
           },
           "modifiers": {
             "fansMultiplier": 1.25,
@@ -313,7 +343,8 @@
           "id": "no_documentary",
           "label": {
             "de": "Keine Kamera",
-            "en": "No cameras"
+            "en": "No cameras",
+            "es": "Nada de cámaras"
           },
           "modifiers": {
             "meters": {
@@ -340,18 +371,21 @@
       },
       "title": {
         "de": "Das Exklusivinterview",
-        "en": "The exclusive"
+        "en": "The exclusive",
+        "es": "La exclusiva"
       },
       "text": {
         "de": "{mediaPartner} will das große Gespräch: offen über Verein, Trainer und deine Pläne. Offenheit bringt Zuschauer, in der Kabine kommt sie nicht überall gut an.",
-        "en": "{mediaPartner} wants the big interview: open talk about the club, the coach and your plans. Being candid brings viewers, but it does not go down well everywhere in the dressing room."
+        "en": "{mediaPartner} wants the big interview: open talk about the club, the coach and your plans. Being candid brings viewers, but it does not go down well everywhere in the dressing room.",
+        "es": "{mediaPartner} quiere la gran entrevista: hablar sin filtros del club, del entrenador y de tus planes. La franqueza atrae espectadores, pero no cae bien en todo el vestuario."
       },
       "options": [
         {
           "id": "speak_freely",
           "label": {
             "de": "Offen reden",
-            "en": "Speak freely"
+            "en": "Speak freely",
+            "es": "Habla sin rodeos"
           },
           "modifiers": {
             "fansMultiplier": 1.3,
@@ -368,7 +402,8 @@
           "id": "stay_diplomatic",
           "label": {
             "de": "Zurückhaltend bleiben",
-            "en": "Keep it diplomatic"
+            "en": "Keep it diplomatic",
+            "es": "Sé diplomático"
           },
           "modifiers": {
             "fansMultiplier": 1.08,
@@ -393,18 +428,21 @@
       "variantsFrom": "progression.injury.types",
       "title": {
         "de": "Verletzung",
-        "en": "Injury"
+        "en": "Injury",
+        "es": "Lesión"
       },
       "text": {
         "de": "Du hast dich verletzt: {injuryLabel}. Die Ärzte raten zu einer langen Pause. Der Trainer hofft auf eine schnelle Rückkehr.",
-        "en": "You picked up an injury: {injuryLabel}. The doctors want a long break. The coach hopes for a quick return."
+        "en": "You picked up an injury: {injuryLabel}. The doctors want a long break. The coach hopes for a quick return.",
+        "es": "Te has lesionado: {injuryLabel}. Los médicos quieren un descanso largo. El entrenador espera una vuelta rápida."
       },
       "options": [
         {
           "id": "full_recovery",
           "label": {
             "de": "Vollständig auskurieren",
-            "en": "Recover fully"
+            "en": "Recover fully",
+            "es": "Recupérate del todo"
           },
           "modifiers": {
             "roleOverride": "substitute",
@@ -419,7 +457,8 @@
           "id": "play_through",
           "label": {
             "de": "Früher zurückkommen",
-            "en": "Come back early"
+            "en": "Come back early",
+            "es": "Vuelve antes de tiempo"
           },
           "outcome": {
             "successChance": 0.45,
@@ -454,18 +493,21 @@
       },
       "title": {
         "de": "Angebot vom Erzrivalen",
-        "en": "Offer from your rivals"
+        "en": "Offer from your rivals",
+        "es": "Oferta de tu rival"
       },
       "text": {
         "de": "{rivalClub} will dich verpflichten. Mehr Geld, größere Bühne, und die Fans deines Vereins werden es dir nie verzeihen.",
-        "en": "{rivalClub} want to sign you. More money, a bigger stage, and your own fans will never forgive you."
+        "en": "{rivalClub} want to sign you. More money, a bigger stage, and your own fans will never forgive you.",
+        "es": "{rivalClub} quiere ficharte. Más dinero, un escenario más grande, y tu propia afición nunca te lo perdonará."
       },
       "options": [
         {
           "id": "join_rival",
           "label": {
             "de": "Zum Rivalen wechseln",
-            "en": "Join the rivals"
+            "en": "Join the rivals",
+            "es": "Fichar por el rival"
           },
           "modifiers": {
             "forceTransfer": {
@@ -484,7 +526,8 @@
           "id": "stay_loyal",
           "label": {
             "de": "Treu bleiben",
-            "en": "Stay loyal"
+            "en": "Stay loyal",
+            "es": "Ser fiel"
           },
           "modifiers": {
             "meters": {
@@ -514,18 +557,21 @@
       },
       "title": {
         "de": "Rückkehr in die Heimat",
-        "en": "Return home"
+        "en": "Return home",
+        "es": "Volver a casa"
       },
       "text": {
         "de": "Ein Verein aus deiner Heimat meldet sich. Sportlich ein Rückschritt, emotional eine Rückkehr.",
-        "en": "A club from home is calling. A step down on the pitch, a homecoming off it."
+        "en": "A club from home is calling. A step down on the pitch, a homecoming off it.",
+        "es": "Un club de tu país te llama. Un paso atrás en el campo, un regreso a casa fuera de él."
       },
       "options": [
         {
           "id": "go_home",
           "label": {
             "de": "Zurückgehen",
-            "en": "Go home"
+            "en": "Go home",
+            "es": "Volver a casa"
           },
           "modifiers": {
             "forceTransfer": {
@@ -545,7 +591,8 @@
           "id": "stay_abroad",
           "label": {
             "de": "Im Ausland bleiben",
-            "en": "Stay abroad"
+            "en": "Stay abroad",
+            "es": "Quedarte en el extranjero"
           },
           "modifiers": {
             "meters": {
@@ -570,18 +617,21 @@
       },
       "title": {
         "de": "Zweite Nationalität",
-        "en": "Second nationality"
+        "en": "Second nationality",
+        "es": "Segunda nacionalidad"
       },
       "text": {
         "de": "Über deinen Großvater bist du für {alternativeCountry} spielberechtigt. Dort wärst du sofort Nationalspieler. Zu Hause müsstest du noch warten.",
-        "en": "Through your grandfather you're eligible for {alternativeCountry}. You'd be capped immediately there. At home you'd have to wait."
+        "en": "Through your grandfather you're eligible for {alternativeCountry}. You'd be capped immediately there. At home you'd have to wait.",
+        "es": "Por tu abuelo puedes jugar con {alternativeCountry}. Allí te convocarían de inmediato. En tu país tendrías que esperar."
       },
       "options": [
         {
           "id": "switch_national_team",
           "label": {
             "de": "Verband wechseln",
-            "en": "Switch association"
+            "en": "Switch association",
+            "es": "Cambiar de federación"
           },
           "modifiers": {
             "switchNationality": true,
@@ -596,7 +646,8 @@
           "id": "keep_waiting",
           "label": {
             "de": "Auf die Heimat warten",
-            "en": "Wait for your country"
+            "en": "Wait for your country",
+            "es": "Esperar a tu país"
           },
           "modifiers": {
             "meters": {
@@ -618,18 +669,21 @@
       ],
       "title": {
         "de": "Positionswechsel",
-        "en": "Position change"
+        "en": "Position change",
+        "es": "Cambio de posición"
       },
       "text": {
         "de": "Der Trainer sieht dich künftig als {alternativePosition}. Du müsstest dich neu erfinden. Dafür wärst du gesetzt.",
-        "en": "The coach sees you as a {alternativePosition} from now on. You'd have to reinvent yourself, but you'd be first choice."
+        "en": "The coach sees you as a {alternativePosition} from now on. You'd have to reinvent yourself, but you'd be first choice.",
+        "es": "El entrenador te ve como {alternativePosition} a partir de ahora. Tendrías que reinventarte, pero serías titular."
       },
       "options": [
         {
           "id": "accept_change",
           "label": {
             "de": "Position wechseln",
-            "en": "Change position"
+            "en": "Change position",
+            "es": "Cambiar de posición"
           },
           "modifiers": {
             "changePosition": true,
@@ -646,7 +700,8 @@
           "id": "refuse_change",
           "label": {
             "de": "Auf deiner Position bleiben",
-            "en": "Stay in your position"
+            "en": "Stay in your position",
+            "es": "Seguir en tu posición"
           },
           "modifiers": {
             "roleShift": -1,
@@ -668,18 +723,21 @@
       ],
       "title": {
         "de": "Konkurrenzkampf",
-        "en": "Competition for your place"
+        "en": "Competition for your place",
+        "es": "Competencia por tu puesto"
       },
       "text": {
         "de": "Der Verein verpflichtet einen Spieler für genau deine Position. Kämpfen oder ausweichen?",
-        "en": "The club signs a player for exactly your position. Fight or find another way?"
+        "en": "The club signs a player for exactly your position. Fight or find another way?",
+        "es": "El club ficha a un jugador justo para tu posición. ¿Pelear o buscar otra salida?"
       },
       "options": [
         {
           "id": "compete",
           "label": {
             "de": "Um den Platz kämpfen",
-            "en": "Fight for your place"
+            "en": "Fight for your place",
+            "es": "Pelear por tu puesto"
           },
           "outcome": {
             "successChance": 0.5,
@@ -703,7 +761,8 @@
           "id": "request_move",
           "label": {
             "de": "Wechsel fordern",
-            "en": "Ask to leave"
+            "en": "Ask to leave",
+            "es": "Pedir salir"
           },
           "modifiers": {
             "forceTransfer": {
@@ -735,7 +794,8 @@
           "failureOverall": -3,
           "text": {
             "de": "Ein privates Trainingslager in der Sommerpause statt Urlaub.",
-            "en": "A private training camp instead of a summer holiday."
+            "en": "A private training camp instead of a summer holiday.",
+            "es": "Una concentración privada en lugar de las vacaciones de verano."
           }
         },
         {
@@ -746,20 +806,23 @@
           "failureOverall": -2,
           "text": {
             "de": "Zusätzliche Einheiten nach dem Mannschaftstraining.",
-            "en": "Extra sessions after team training."
+            "en": "Extra sessions after team training.",
+            "es": "Sesiones extra tras el entrenamiento del equipo."
           }
         }
       ],
       "title": {
         "de": "Zusatztraining",
-        "en": "Extra training"
+        "en": "Extra training",
+        "es": "Entrenamiento extra"
       },
       "options": [
         {
           "id": "accept",
           "label": {
             "de": "Durchziehen",
-            "en": "Do it"
+            "en": "Do it",
+            "es": "Hazlo"
           },
           "outcome": {
             "fromVariant": true
@@ -770,7 +833,8 @@
           "id": "decline",
           "label": {
             "de": "Erholung vorziehen",
-            "en": "Rest instead"
+            "en": "Rest instead",
+            "es": "Descansa mejor"
           },
           "modifiers": {
             "meters": {
@@ -798,7 +862,8 @@
           "failureOverall": -2,
           "text": {
             "de": "Ein Ernährungsberater will deine komplette Lebensweise umstellen.",
-            "en": "A nutritionist wants to overhaul how you live."
+            "en": "A nutritionist wants to overhaul how you live.",
+            "es": "Un nutricionista quiere cambiar por completo tu forma de vida."
           }
         },
         {
@@ -809,20 +874,23 @@
           "failureOverall": -2,
           "text": {
             "de": "Ein Mentaltrainer bietet dir an, an deiner Nervenstärke zu arbeiten.",
-            "en": "A mental coach offers to work on your nerve."
+            "en": "A mental coach offers to work on your nerve.",
+            "es": "Un preparador mental se ofrece a trabajar tu temple."
           }
         }
       ],
       "title": {
         "de": "Persönlicher Coach",
-        "en": "Personal coach"
+        "en": "Personal coach",
+        "es": "Entrenador personal"
       },
       "options": [
         {
           "id": "accept",
           "label": {
             "de": "Zusammenarbeiten",
-            "en": "Work with them"
+            "en": "Work with them",
+            "es": "Trabajar con ellos"
           },
           "outcome": {
             "fromVariant": true,
@@ -834,7 +902,8 @@
           "id": "decline",
           "label": {
             "de": "Ablehnen",
-            "en": "Decline"
+            "en": "Decline",
+            "es": "Rechazar"
           },
           "modifiers": {},
           "motif": "training"
@@ -854,18 +923,21 @@
       },
       "title": {
         "de": "Der Verein steckt in der Krise",
-        "en": "The club is in crisis"
+        "en": "The club is in crisis",
+        "es": "El club está en crisis"
       },
       "text": {
         "de": "Abstiegskampf, Trainerwechsel, Unruhe. Du hast einen Weg raus, oder du bleibst und stellst dich hin.",
-        "en": "Relegation fight, coaching change, chaos. You have a way out, or you stay and front up."
+        "en": "Relegation fight, coaching change, chaos. You have a way out, or you stay and front up.",
+        "es": "Lucha por no descender, cambio de entrenador, caos. Tienes una salida, o te quedas y das la cara."
       },
       "options": [
         {
           "id": "stay_and_fight",
           "label": {
             "de": "Bleiben und kämpfen",
-            "en": "Stay and fight"
+            "en": "Stay and fight",
+            "es": "Quedarte y pelear"
           },
           "modifiers": {
             "immediateOverall": -3,
@@ -884,7 +956,8 @@
           "id": "leave_now",
           "label": {
             "de": "Sofort wechseln",
-            "en": "Leave now"
+            "en": "Leave now",
+            "es": "Marcharte ya"
           },
           "modifiers": {
             "forceTransfer": {
@@ -909,18 +982,21 @@
       ],
       "title": {
         "de": "Aussage mit Folgen",
-        "en": "A statement with consequences"
+        "en": "A statement with consequences",
+        "es": "Unas declaraciones con consecuencias"
       },
       "text": {
         "de": "Ein Interview von dir schlägt Wellen. Der Verein erwartet eine Entschuldigung.",
-        "en": "An interview of yours has blown up. The club expects an apology."
+        "en": "An interview of yours has blown up. The club expects an apology.",
+        "es": "Una entrevista tuya ha estallado. El club espera una disculpa."
       },
       "options": [
         {
           "id": "apologize",
           "label": {
             "de": "Entschuldigen",
-            "en": "Apologise"
+            "en": "Apologise",
+            "es": "Disculparte"
           },
           "modifiers": {
             "roleShift": -1,
@@ -936,7 +1012,8 @@
           "id": "double_down",
           "label": {
             "de": "Dazu stehen",
-            "en": "Stand by it"
+            "en": "Stand by it",
+            "es": "Mantenerte firme"
           },
           "outcome": {
             "successChance": 0.4,
@@ -977,18 +1054,21 @@
       },
       "title": {
         "de": "Verein gegen Nationalmannschaft",
-        "en": "Club versus country"
+        "en": "Club versus country",
+        "es": "Club contra selección"
       },
       "text": {
         "de": "Dein Verein will nicht, dass du zum Turnier fährst. Der Nationaltrainer wartet auf deine Zusage.",
-        "en": "Your club doesn't want you at the tournament. The national coach is waiting for your answer."
+        "en": "Your club doesn't want you at the tournament. The national coach is waiting for your answer.",
+        "es": "Tu club no te quiere en el torneo. El seleccionador espera tu respuesta."
       },
       "options": [
         {
           "id": "go_anyway",
           "label": {
             "de": "Trotzdem fahren",
-            "en": "Go anyway"
+            "en": "Go anyway",
+            "es": "Ir de todos modos"
           },
           "modifiers": {
             "nationalTeam": "force",
@@ -1001,7 +1081,8 @@
           "id": "comply",
           "label": {
             "de": "Beim Verein bleiben",
-            "en": "Stay with the club"
+            "en": "Stay with the club",
+            "es": "Quedarte con el club"
           },
           "modifiers": {
             "nationalTeam": "skip",
@@ -1031,18 +1112,21 @@
       },
       "title": {
         "de": "Angeschlagen vor dem Endspiel",
-        "en": "Carrying a knock before the final"
+        "en": "Carrying a knock before the final",
+        "es": "Tocado antes de la final"
       },
       "text": {
         "de": "Vor dem wichtigsten Spiel der Saison bist du nicht fit. Spritze oder Bank?",
-        "en": "You're not fit for the biggest game of the season. Painkillers or the bench?"
+        "en": "You're not fit for the biggest game of the season. Painkillers or the bench?",
+        "es": "No estás en condiciones para el partido más importante de la temporada. ¿Calmantes o banquillo?"
       },
       "options": [
         {
           "id": "play_injured",
           "label": {
             "de": "Spielen",
-            "en": "Play"
+            "en": "Play",
+            "es": "Jugar"
           },
           "outcome": {
             "successChance": 0.8,
@@ -1070,7 +1154,8 @@
           "id": "sit_out",
           "label": {
             "de": "Aussetzen",
-            "en": "Sit it out"
+            "en": "Sit it out",
+            "es": "Quedarte fuera"
           },
           "outcome": {
             "successChance": 0.3,
@@ -1100,18 +1185,21 @@
       ],
       "title": {
         "de": "Der entscheidende Elfmeter",
-        "en": "The decisive penalty"
+        "en": "The decisive penalty",
+        "es": "El penalti decisivo"
       },
       "text": {
         "de": "Finale, Elfmeterschießen, dein Verein liegt zurück. Übernimmst du?",
-        "en": "Final, shootout, your side is behind. Do you step up?"
+        "en": "Final, shootout, your side is behind. Do you step up?",
+        "es": "Final, tanda de penaltis, tu equipo va por detrás. ¿Das el paso?"
       },
       "options": [
         {
           "id": "take_it",
           "label": {
             "de": "Schießen",
-            "en": "Take it"
+            "en": "Take it",
+            "es": "Lanzarlo"
           },
           "outcome": {
             "successChance": 0.5,
@@ -1140,7 +1228,8 @@
           "id": "let-someone-else",
           "label": {
             "de": "Einem anderen überlassen",
-            "en": "Let someone else take it"
+            "en": "Let someone else take it",
+            "es": "Dejar que lo lance otro"
           },
           "modifiers": {
             "meters": {
@@ -1162,18 +1251,21 @@
       ],
       "title": {
         "de": "Das Talent",
-        "en": "The prospect"
+        "en": "The prospect",
+        "es": "La promesa"
       },
       "text": {
         "de": "Ein Siebzehnjähriger aus der eigenen Jugend drängt auf deine Position. Du könntest ihn aufbauen, oder blocken.",
-        "en": "A seventeen-year-old from the academy is pushing for your spot. You could bring him through, or block him."
+        "en": "A seventeen-year-old from the academy is pushing for your spot. You could bring him through, or block him.",
+        "es": "Un chico de diecisiete años de la cantera aprieta por tu puesto. Puedes ayudarle a crecer o cerrarle el paso."
       },
       "options": [
         {
           "id": "mentor",
           "label": {
             "de": "Ihn aufbauen",
-            "en": "Mentor him"
+            "en": "Mentor him",
+            "es": "Ser su mentor"
           },
           "modifiers": {
             "roleShift": -1,
@@ -1194,7 +1286,8 @@
           "id": "block",
           "label": {
             "de": "Platz verteidigen",
-            "en": "Defend your place"
+            "en": "Defend your place",
+            "es": "Defender tu puesto"
           },
           "outcome": {
             "successChance": 0.55,
@@ -1226,18 +1319,21 @@
       },
       "title": {
         "de": "Steuerermittlungen",
-        "en": "Tax investigation"
+        "en": "Tax investigation",
+        "es": "Investigación fiscal"
       },
       "text": {
         "de": "Gegen dich wird ermittelt. Dein Berater rät zum Vergleich, dein Anwalt zum Prozess.",
-        "en": "You're under investigation. Your agent says settle, your lawyer says fight."
+        "en": "You're under investigation. Your agent says settle, your lawyer says fight.",
+        "es": "Estás siendo investigado. Tu agente dice que pactes, tu abogado dice que pelees."
       },
       "options": [
         {
           "id": "settle",
           "label": {
             "de": "Vergleich schließen",
-            "en": "Settle"
+            "en": "Settle",
+            "es": "Pactar"
           },
           "modifiers": {
             "marketValueMultiplier": 0.9,
@@ -1251,7 +1347,8 @@
           "id": "fight",
           "label": {
             "de": "Vor Gericht gehen",
-            "en": "Go to court"
+            "en": "Go to court",
+            "es": "Ir a juicio"
           },
           "outcome": {
             "successChance": 0.45,
@@ -1287,18 +1384,21 @@
       },
       "title": {
         "de": "Die Kurve gegen dich",
-        "en": "The stands turn on you"
+        "en": "The stands turn on you",
+        "es": "La grada se vuelve contra ti"
       },
       "text": {
         "de": "Bei Heimspielen wirst du ausgepfiffen. Ein offenes Gespräch mit den Ultras könnte alles ändern, oder alles verschlimmern.",
-        "en": "You're getting whistled at home. A face-to-face with the ultras could fix everything, or make it worse."
+        "en": "You're getting whistled at home. A face-to-face with the ultras could fix everything, or make it worse.",
+        "es": "Te pitan en tu propio campo. Un cara a cara con los ultras podría arreglarlo todo, o empeorarlo."
       },
       "options": [
         {
           "id": "meet_them",
           "label": {
             "de": "Das Gespräch suchen",
-            "en": "Meet them"
+            "en": "Meet them",
+            "es": "Reunirte con ellos"
           },
           "outcome": {
             "successChance": 0.6,
@@ -1321,7 +1421,8 @@
           "id": "ignore",
           "label": {
             "de": "Ignorieren",
-            "en": "Ignore it"
+            "en": "Ignore it",
+            "es": "Ignorarlo"
           },
           "modifiers": {
             "meters": {
@@ -1346,18 +1447,21 @@
       },
       "title": {
         "de": "Das Angebot aus dem Osten",
-        "en": "The offer from the east"
+        "en": "The offer from the east",
+        "es": "La oferta del este"
       },
       "text": {
         "de": "Ein Verein aus einer finanzstarken, sportlich schwächeren Liga bietet das Vierfache deines Gehalts.",
-        "en": "A club from a rich but weaker league offers four times your salary."
+        "en": "A club from a rich but weaker league offers four times your salary.",
+        "es": "Un club de una liga rica pero más débil te ofrece cuatro veces tu salario."
       },
       "options": [
         {
           "id": "take_the_money",
           "label": {
             "de": "Annehmen",
-            "en": "Take it"
+            "en": "Take it",
+            "es": "Lanzarlo"
           },
           "modifiers": {
             "forceTransfer": {
@@ -1377,7 +1481,8 @@
           "id": "stay_competitive",
           "label": {
             "de": "Sportlich entscheiden",
-            "en": "Keep competing"
+            "en": "Keep competing",
+            "es": "Seguir compitiendo"
           },
           "modifiers": {
             "meters": {
@@ -1404,18 +1509,21 @@
       "maxPerCareer": 1,
       "title": {
         "de": "Die Binde",
-        "en": "The armband"
+        "en": "The armband",
+        "es": "El brazalete"
       },
       "text": {
         "de": "Der Trainer bietet dir das Kapitänsamt an. Mehr Verantwortung, mehr Aufmerksamkeit, weniger Ruhe.",
-        "en": "The coach offers you the captaincy. More responsibility, more attention, less peace."
+        "en": "The coach offers you the captaincy. More responsibility, more attention, less peace.",
+        "es": "El entrenador te ofrece la capitanía. Más responsabilidad, más atención, menos tranquilidad."
       },
       "options": [
         {
           "id": "accept_armband",
           "label": {
             "de": "Annehmen",
-            "en": "Accept"
+            "en": "Accept",
+            "es": "Aceptar"
           },
           "modifiers": {
             "setCaptain": true,
@@ -1436,7 +1544,8 @@
           "id": "decline_armband",
           "label": {
             "de": "Ablehnen",
-            "en": "Decline"
+            "en": "Decline",
+            "es": "Rechazar"
           },
           "modifiers": {
             "meters": {
@@ -1461,18 +1570,21 @@
       },
       "title": {
         "de": "Halbzeitbilanz",
-        "en": "Half-season review"
+        "en": "Half-season review",
+        "es": "Resumen de media temporada"
       },
       "text": {
         "de": "Die Hinrunde lief schlecht. In der Winterpause entscheidet sich, wie die Rückrunde wird.",
-        "en": "The first half of the season went badly. What you do in the winter break decides the rest."
+        "en": "The first half of the season went badly. What you do in the winter break decides the rest.",
+        "es": "La primera vuelta salió mal. Lo que hagas en el parón invernal decide el resto."
       },
       "options": [
         {
           "id": "winter_extra_work",
           "label": {
             "de": "Durchbeißen und schuften",
-            "en": "Knuckle down"
+            "en": "Knuckle down",
+            "es": "Ponerte las pilas"
           },
           "outcome": {
             "successChance": 0.6,
@@ -1495,7 +1607,8 @@
           "id": "winter_switch_off",
           "label": {
             "de": "Kopf freibekommen",
-            "en": "Clear your head"
+            "en": "Clear your head",
+            "es": "Despejar la cabeza"
           },
           "modifiers": {
             "meters": {
@@ -1509,7 +1622,8 @@
           "id": "winter_ask_out",
           "label": {
             "de": "Wechsel im Winter fordern",
-            "en": "Push for a winter move"
+            "en": "Push for a winter move",
+            "es": "Forzar un traspaso en invierno"
           },
           "modifiers": {
             "forceTransfer": {
@@ -1539,18 +1653,21 @@
       },
       "title": {
         "de": "Anfrage im Winter",
-        "en": "Winter enquiry"
+        "en": "Winter enquiry",
+        "es": "Sondeo invernal"
       },
       "text": {
         "de": "Mitten in der Saison meldet ein anderer Verein Interesse. Ein Wechsel jetzt reißt dich aus dem Rhythmus, aber die Chance kommt vielleicht nicht wieder.",
-        "en": "Another club comes in mid-season. Moving now breaks your rhythm, but the chance might not come again."
+        "en": "Another club comes in mid-season. Moving now breaks your rhythm, but the chance might not come again.",
+        "es": "Otro club llama a mitad de temporada. Moverte ahora rompe tu ritmo, pero puede que la oportunidad no vuelva."
       },
       "options": [
         {
           "id": "move_in_winter",
           "label": {
             "de": "Sofort wechseln",
-            "en": "Move now"
+            "en": "Move now",
+            "es": "Fichar ahora"
           },
           "modifiers": {
             "forceTransfer": {
@@ -1567,7 +1684,8 @@
           "id": "wait_for_summer",
           "label": {
             "de": "Bis zum Sommer warten",
-            "en": "Wait until summer"
+            "en": "Wait until summer",
+            "es": "Esperar al verano"
           },
           "modifiers": {
             "meters": {
@@ -1593,18 +1711,21 @@
       },
       "title": {
         "de": "Operation jetzt oder später",
-        "en": "Operate now or later"
+        "en": "Operate now or later",
+        "es": "Operarte ahora o después"
       },
       "text": {
         "de": "Die Blessur aus der Hinrunde braucht einen Eingriff. Jetzt kostet er dich die Rückrunde, später kostet er dich vielleicht mehr.",
-        "en": "The knock from the first half needs surgery. Now costs you the second half, later might cost you more."
+        "en": "The knock from the first half needs surgery. Now costs you the second half, later might cost you more.",
+        "es": "El golpe de la primera vuelta necesita cirugía. Ahora te cuesta la segunda vuelta; después podría costarte más."
       },
       "options": [
         {
           "id": "operate_now",
           "label": {
             "de": "Sofort operieren",
-            "en": "Operate now"
+            "en": "Operate now",
+            "es": "Operarte ahora"
           },
           "modifiers": {
             "missShare": 0.8,
@@ -1619,7 +1740,8 @@
           "id": "delay_surgery",
           "label": {
             "de": "Bis Saisonende hinauszögern",
-            "en": "Delay until the summer"
+            "en": "Delay until the summer",
+            "es": "Aplazarlo al verano"
           },
           "outcome": {
             "successChance": 0.55,
@@ -1651,18 +1773,21 @@
       },
       "title": {
         "de": "Werbedeal",
-        "en": "Endorsement offer"
+        "en": "Endorsement offer",
+        "es": "Oferta de patrocinio"
       },
       "text": {
         "de": "Ein Sponsor bietet dir viel Geld. Er ist allerdings Konkurrent des Vereinssponsors.",
-        "en": "A sponsor offers you serious money, but they're a rival of the club's own sponsor."
+        "en": "A sponsor offers you serious money, but they're a rival of the club's own sponsor.",
+        "es": "Un patrocinador te ofrece mucho dinero, pero es rival del patrocinador del club."
       },
       "options": [
         {
           "id": "sign_deal",
           "label": {
             "de": "Unterschreiben",
-            "en": "Sign it"
+            "en": "Sign it",
+            "es": "Firmarlo"
           },
           "modifiers": {
             "meters": {
@@ -1679,7 +1804,8 @@
           "id": "refuse_deal",
           "label": {
             "de": "Ablehnen",
-            "en": "Turn it down"
+            "en": "Turn it down",
+            "es": "Rechazarlo"
           },
           "modifiers": {
             "meters": {
@@ -1707,18 +1833,21 @@
       },
       "title": {
         "de": "Fit werden für das Turnier",
-        "en": "Getting fit for the tournament"
+        "en": "Getting fit for the tournament",
+        "es": "A punto para el torneo"
       },
       "text": {
         "de": "Das Turnier im Sommer ist dein Ziel. Der Verein braucht dich aber in der Rückrunde.",
-        "en": "The summer tournament is your goal. But the club needs you for the second half of the season."
+        "en": "The summer tournament is your goal. But the club needs you for the second half of the season.",
+        "es": "El torneo de verano es tu objetivo. Pero el club te necesita para la segunda vuelta."
       },
       "options": [
         {
           "id": "prioritise_country",
           "label": {
             "de": "Auf das Turnier hinarbeiten",
-            "en": "Build towards the tournament"
+            "en": "Build towards the tournament",
+            "es": "Preparar el torneo"
           },
           "modifiers": {
             "appearanceMultiplier": 0.7,
@@ -1733,7 +1862,8 @@
           "id": "prioritise_club",
           "label": {
             "de": "Für den Verein alles geben",
-            "en": "Give everything for the club"
+            "en": "Give everything for the club",
+            "es": "Darlo todo por el club"
           },
           "modifiers": {
             "trophyMultiplier": {
@@ -1761,18 +1891,21 @@
       "maxPerCareer": 2,
       "title": {
         "de": "Beraterwechsel",
-        "en": "Change of agent"
+        "en": "Change of agent",
+        "es": "Cambio de agente"
       },
       "text": {
         "de": "Eine große Agentur will dich vertreten. Mehr Türen, weniger Kontrolle.",
-        "en": "A big agency wants to represent you. More doors open, less control."
+        "en": "A big agency wants to represent you. More doors open, less control.",
+        "es": "Una gran agencia quiere representarte. Se abren más puertas, tienes menos control."
       },
       "options": [
         {
           "id": "sign_big_agency",
           "label": {
             "de": "Zur großen Agentur",
-            "en": "Join the big agency"
+            "en": "Join the big agency",
+            "es": "Fichar por la gran agencia"
           },
           "modifiers": {
             "marketValueMultiplier": 1.12,
@@ -1788,7 +1921,8 @@
           "id": "keep_agent",
           "label": {
             "de": "Beim alten Berater bleiben",
-            "en": "Stay with your agent"
+            "en": "Stay with your agent",
+            "es": "Seguir con tu agente"
           },
           "modifiers": {
             "meters": {
@@ -1814,18 +1948,21 @@
       },
       "title": {
         "de": "Mannschaftsrat",
-        "en": "Leadership group"
+        "en": "Leadership group",
+        "es": "Grupo de capitanes"
       },
       "text": {
         "de": "Die Mannschaft will dich in den Mannschaftsrat wählen. Das heißt: Konflikte austragen, die nicht deine sind.",
-        "en": "The squad wants you in the leadership group. That means owning conflicts that aren't yours."
+        "en": "The squad wants you in the leadership group. That means owning conflicts that aren't yours.",
+        "es": "La plantilla te quiere en el grupo de capitanes. Eso significa cargar con conflictos que no son tuyos."
       },
       "options": [
         {
           "id": "join_group",
           "label": {
             "de": "Annehmen",
-            "en": "Accept"
+            "en": "Accept",
+            "es": "Aceptar"
           },
           "modifiers": {
             "meters": {
@@ -1842,7 +1979,8 @@
           "id": "stay_out",
           "label": {
             "de": "Rausbleiben",
-            "en": "Stay out of it"
+            "en": "Stay out of it",
+            "es": "Mantenerte al margen"
           },
           "modifiers": {
             "meters": {
@@ -1865,18 +2003,21 @@
       "maxPerCareer": 1,
       "title": {
         "de": "Erster Profivertrag",
-        "en": "First professional contract"
+        "en": "First professional contract",
+        "es": "Primer contrato profesional"
       },
       "text": {
         "de": "Der Verein legt dir den ersten Profivertrag vor, zu schlechten Konditionen, weil du noch nichts gezeigt hast. Andere Vereine warten auf ein Nein.",
-        "en": "The club puts your first professional deal in front of you, on poor terms, because you haven't proven anything. Other clubs are waiting for you to say no."
+        "en": "The club puts your first professional deal in front of you, on poor terms, because you haven't proven anything. Other clubs are waiting for you to say no.",
+        "es": "El club te pone delante tu primer contrato profesional, en malas condiciones, porque aún no has demostrado nada. Otros clubes esperan a que digas que no."
       },
       "options": [
         {
           "id": "sign_first_deal",
           "label": {
             "de": "Unterschreiben",
-            "en": "Sign it"
+            "en": "Sign it",
+            "es": "Firmarlo"
           },
           "modifiers": {
             "meters": {
@@ -1890,7 +2031,8 @@
           "id": "refuse_first_deal",
           "label": {
             "de": "Ablehnen und wechseln",
-            "en": "Refuse and move"
+            "en": "Refuse and move",
+            "es": "Rechazar y marcharte"
           },
           "outcome": {
             "successChance": 0.5,
@@ -1929,18 +2071,21 @@
       },
       "title": {
         "de": "Ankommen im Ausland",
-        "en": "Settling in abroad"
+        "en": "Settling in abroad",
+        "es": "Adaptarte en el extranjero"
       },
       "text": {
         "de": "Sprache, Essen, Alltag. Nichts fühlt sich vertraut an. Du kannst dich anpassen oder deine Blase behalten.",
-        "en": "Language, food, everyday life. Nothing feels familiar. You can adapt, or keep your bubble."
+        "en": "Language, food, everyday life. Nothing feels familiar. You can adapt, or keep your bubble.",
+        "es": "El idioma, la comida, el día a día. Nada te resulta familiar. Puedes adaptarte o quedarte en tu burbuja."
       },
       "options": [
         {
           "id": "immerse",
           "label": {
             "de": "Sprache lernen, einleben",
-            "en": "Learn the language, settle in"
+            "en": "Learn the language, settle in",
+            "es": "Aprender el idioma y adaptarte"
           },
           "modifiers": {
             "deferredOverall": {
@@ -1958,7 +2103,8 @@
           "id": "keep_bubble",
           "label": {
             "de": "Unter Landsleuten bleiben",
-            "en": "Stay in your bubble"
+            "en": "Stay in your bubble",
+            "es": "Quedarte en tu burbuja"
           },
           "modifiers": {
             "meters": {
@@ -1982,18 +2128,21 @@
       ],
       "title": {
         "de": "Die letzten Jahre",
-        "en": "The final years"
+        "en": "The final years",
+        "es": "Los últimos años"
       },
       "text": {
         "de": "Du bist kein Stammspieler mehr, aber gebraucht wirst du noch. Die Frage ist wofür.",
-        "en": "You're not a regular any more, but you're still wanted. The question is what for."
+        "en": "You're not a regular any more, but you're still wanted. The question is what for.",
+        "es": "Ya no eres titular, pero aún te quieren. La cuestión es para qué."
       },
       "options": [
         {
           "id": "chase_titles",
           "label": {
             "de": "Nochmal Titel jagen",
-            "en": "Chase one more title"
+            "en": "Chase one more title",
+            "es": "Buscar un título más"
           },
           "modifiers": {
             "forceTransfer": {
@@ -2011,7 +2160,8 @@
           "id": "be_the_leader",
           "label": {
             "de": "Anführer eines kleinen Vereins werden",
-            "en": "Lead a smaller club"
+            "en": "Lead a smaller club",
+            "es": "Liderar un club más modesto"
           },
           "modifiers": {
             "forceTransfer": {
@@ -2028,7 +2178,8 @@
           "id": "go_out_at_home",
           "label": {
             "de": "Zurück in die Heimat",
-            "en": "Go home"
+            "en": "Go home",
+            "es": "Volver a casa"
           },
           "modifiers": {
             "forceTransfer": {
@@ -2056,18 +2207,21 @@
       "maxPerCareer": 99,
       "title": {
         "de": "Wie nutzt du die Pause?",
-        "en": "How do you use the break?"
+        "en": "How do you use the break?",
+        "es": "¿Cómo aprovechas el parón?"
       },
       "text": {
         "de": "Ein paar Wochen ohne Pflichtspiel. Was du damit machst, merkt man erst im Frühjahr.",
-        "en": "A few weeks without a competitive match. What you do with them shows up months later."
+        "en": "A few weeks without a competitive match. What you do with them shows up months later.",
+        "es": "Unas semanas sin partido oficial. Lo que hagas con ellas se notará meses después."
       },
       "options": [
         {
           "id": "train_hard",
           "label": {
             "de": "Durchtrainieren",
-            "en": "Train through it"
+            "en": "Train through it",
+            "es": "Seguir entrenando"
           },
           "modifiers": {
             "permanentOverall": 0.15,
@@ -2081,7 +2235,8 @@
           "id": "rest_properly",
           "label": {
             "de": "Richtig ausruhen",
-            "en": "Rest properly"
+            "en": "Rest properly",
+            "es": "Descansar de verdad"
           },
           "modifiers": {
             "meters": {
@@ -2095,7 +2250,8 @@
           "id": "go_public",
           "label": {
             "de": "Termine wahrnehmen",
-            "en": "Take the public appearances"
+            "en": "Take the public appearances",
+            "es": "Aceptar los actos públicos"
           },
           "modifiers": {
             "meters": {
@@ -2120,18 +2276,21 @@
       "maxPerCareer": 99,
       "title": {
         "de": "Woran arbeitest du?",
-        "en": "What do you work on?"
+        "en": "What do you work on?",
+        "es": "¿En qué trabajas?"
       },
       "text": {
         "de": "Der Trainerstab lässt dir die Wahl, worauf du die nächsten Monate setzt.",
-        "en": "The coaching staff lets you choose what the next months are about."
+        "en": "The coaching staff lets you choose what the next months are about.",
+        "es": "El cuerpo técnico te deja elegir en qué centrar los próximos meses."
       },
       "options": [
         {
           "id": "sharpen_strength",
           "label": {
             "de": "Die eigene Stärke schärfen",
-            "en": "Sharpen what you already do well"
+            "en": "Sharpen what you already do well",
+            "es": "Pulir lo que ya haces bien"
           },
           "modifiers": {
             "permanentOverall": 0.12
@@ -2142,7 +2301,8 @@
           "id": "fix_weakness",
           "label": {
             "de": "Die Schwäche angehen",
-            "en": "Work on the weak side"
+            "en": "Work on the weak side",
+            "es": "Trabajar tu lado débil"
           },
           "modifiers": {
             "deferredOverall": {
@@ -2159,7 +2319,8 @@
           "id": "lead_the_room",
           "label": {
             "de": "Verantwortung übernehmen",
-            "en": "Take charge in the dressing room"
+            "en": "Take charge in the dressing room",
+            "es": "Tomar las riendas del vestuario"
           },
           "modifiers": {
             "meters": {
@@ -2183,18 +2344,21 @@
       "maxPerCareer": 99,
       "title": {
         "de": "Neben dem Platz",
-        "en": "Away from the pitch"
+        "en": "Away from the pitch",
+        "es": "Fuera del campo"
       },
       "text": {
         "de": "Es bleibt Zeit für etwas, das nichts mit Fußball zu tun hat. Oder eben doch.",
-        "en": "There is room for something that has nothing to do with football. Or everything."
+        "en": "There is room for something that has nothing to do with football. Or everything.",
+        "es": "Hay hueco para algo que no tiene nada que ver con el fútbol. O todo que ver."
       },
       "options": [
         {
           "id": "family_first",
           "label": {
             "de": "Zu Hause bleiben",
-            "en": "Stay close to home"
+            "en": "Stay close to home",
+            "es": "Quedarte cerca de casa"
           },
           "modifiers": {
             "meters": {
@@ -2207,7 +2371,8 @@
           "id": "study_the_game",
           "label": {
             "de": "Spiele studieren",
-            "en": "Study the game"
+            "en": "Study the game",
+            "es": "Estudiar el juego"
           },
           "modifiers": {
             "deferredOverall": {
@@ -2221,7 +2386,8 @@
           "id": "meet_the_fans",
           "label": {
             "de": "Unter die Leute gehen",
-            "en": "Get out among the supporters"
+            "en": "Get out among the supporters",
+            "es": "Salir a estar con la afición"
           },
           "modifiers": {
             "meters": {
@@ -2245,18 +2411,21 @@
       "maxPerCareer": 2,
       "title": {
         "de": "Dein Cousin will ein Tattoo",
-        "en": "Your cousin wants a tattoo"
+        "en": "Your cousin wants a tattoo",
+        "es": "Tu primo quiere un tatuaje"
       },
       "text": {
         "de": "Dein Cousin hat einen Termin bei einem Studio, das er über einen Bekannten kennt, und will dich mitnehmen. Der Verein weiß nichts davon.",
-        "en": "Your cousin has an appointment at a studio a friend told him about, and he wants you along. The club knows nothing about it."
+        "en": "Your cousin has an appointment at a studio a friend told him about, and he wants you along. The club knows nothing about it.",
+        "es": "Tu primo tiene cita en un estudio que le recomendó un amigo, y quiere que le acompañes. El club no sabe nada."
       },
       "options": [
         {
           "id": "go_along",
           "label": {
             "de": "Mitgehen",
-            "en": "Go along"
+            "en": "Go along",
+            "es": "Acompañarle"
           },
           "risky": true,
           "modifiers": {
@@ -2275,7 +2444,8 @@
           "id": "club_doctor_first",
           "label": {
             "de": "Erst den Vereinsarzt fragen",
-            "en": "Ask the club doctor first"
+            "en": "Ask the club doctor first",
+            "es": "Preguntar antes al médico del club"
           },
           "modifiers": {
             "meters": {
@@ -2288,7 +2458,8 @@
           "id": "skip_it",
           "label": {
             "de": "Sein lassen",
-            "en": "Give it a miss"
+            "en": "Give it a miss",
+            "es": "Pasar del tema"
           },
           "modifiers": {
             "meters": {
@@ -2311,18 +2482,21 @@
       "maxPerCareer": 99,
       "title": {
         "de": "Die Stelle entzündet sich",
-        "en": "The tattoo gets infected"
+        "en": "The tattoo gets infected",
+        "es": "El tatuaje se infecta"
       },
       "text": {
         "de": "Die frische Tätowierung ist heiß und geschwollen. Der Vereinsarzt ist wenig begeistert und redet von Antibiotika und Pause.",
-        "en": "The fresh tattoo is hot and swollen. The club doctor is not amused and starts talking about antibiotics and rest."
+        "en": "The fresh tattoo is hot and swollen. The club doctor is not amused and starts talking about antibiotics and rest.",
+        "es": "El tatuaje reciente está caliente e hinchado. El médico del club no está nada contento y empieza a hablar de antibióticos y reposo."
       },
       "options": [
         {
           "id": "rest_it",
           "label": {
             "de": "Pause machen",
-            "en": "Sit it out"
+            "en": "Sit it out",
+            "es": "Quedarte fuera"
           },
           "modifiers": {
             "missShare": 0.35,
@@ -2336,7 +2510,8 @@
           "id": "play_through",
           "label": {
             "de": "Durchspielen",
-            "en": "Play through it"
+            "en": "Play through it",
+            "es": "Jugar a pesar de ello"
           },
           "risky": true,
           "modifiers": {
@@ -2363,18 +2538,21 @@
       "maxPerCareer": 1,
       "title": {
         "de": "Die Weisheitszähne müssen raus",
-        "en": "The wisdom teeth have to come out"
+        "en": "The wisdom teeth have to come out",
+        "es": "Hay que sacar las muelas del juicio"
       },
       "text": {
         "de": "Seit Wochen pocht es. Der Zahnarzt will operieren, der Trainer will dich auf dem Platz.",
-        "en": "It has been throbbing for weeks. The dentist wants to operate, the coach wants you on the pitch."
+        "en": "It has been throbbing for weeks. The dentist wants to operate, the coach wants you on the pitch.",
+        "es": "Lleva semanas latiendo. El dentista quiere operar, el entrenador te quiere en el campo."
       },
       "options": [
         {
           "id": "operate_now",
           "label": {
             "de": "Sofort operieren",
-            "en": "Get it done now"
+            "en": "Get it done now",
+            "es": "Hacerlo ya"
           },
           "modifiers": {
             "missShare": 0.2,
@@ -2388,7 +2566,8 @@
           "id": "wait_summer",
           "label": {
             "de": "Bis zum Sommer warten",
-            "en": "Wait until summer"
+            "en": "Wait until summer",
+            "es": "Esperar al verano"
           },
           "modifiers": {
             "goalMultiplier": 0.94,
@@ -2412,18 +2591,21 @@
       "maxPerCareer": 3,
       "title": {
         "de": "Du schläfst schlecht",
-        "en": "You are sleeping badly"
+        "en": "You are sleeping badly",
+        "es": "Duermes mal"
       },
       "text": {
         "de": "Seit dem letzten Auswärtsspiel liegst du nachts wach. Der Verein bietet einen Schlafcoach an, was in der Kabine für Sprüche sorgt.",
-        "en": "Since the last away game you have been lying awake. The club offers a sleep coach, which the dressing room finds hilarious."
+        "en": "Since the last away game you have been lying awake. The club offers a sleep coach, which the dressing room finds hilarious.",
+        "es": "Desde el último partido fuera no pegas ojo. El club te ofrece un coach del sueño, algo que al vestuario le hace mucha gracia."
       },
       "options": [
         {
           "id": "take_coach",
           "label": {
             "de": "Das Angebot annehmen",
-            "en": "Take the offer"
+            "en": "Take the offer",
+            "es": "Aceptar la oferta"
           },
           "modifiers": {
             "permanentOverall": 0.2,
@@ -2437,7 +2619,8 @@
           "id": "tough_it_out",
           "label": {
             "de": "Aussitzen",
-            "en": "Tough it out"
+            "en": "Tough it out",
+            "es": "Aguantar como sea"
           },
           "modifiers": {
             "meters": {
@@ -2461,18 +2644,21 @@
       "maxPerCareer": 2,
       "title": {
         "de": "Ernährung umstellen",
-        "en": "Change how you eat"
+        "en": "Change how you eat",
+        "es": "Cambiar tu alimentación"
       },
       "text": {
         "de": "Ein Ernährungsberater legt dir einen Plan hin, der alles streicht, was du magst. Dafür verspricht er dir zwei Jahre mehr Karriere.",
-        "en": "A nutritionist hands you a plan that cuts everything you like. In return he promises you two more years of career."
+        "en": "A nutritionist hands you a plan that cuts everything you like. In return he promises you two more years of career.",
+        "es": "Un nutricionista te da un plan que elimina todo lo que te gusta. A cambio te promete dos años más de carrera."
       },
       "options": [
         {
           "id": "follow_plan",
           "label": {
             "de": "Durchziehen",
-            "en": "Follow it"
+            "en": "Follow it",
+            "es": "Seguirlo"
           },
           "modifiers": {
             "deferredOverall": {
@@ -2489,7 +2675,8 @@
           "id": "half_way",
           "label": {
             "de": "Halb so wild nehmen",
-            "en": "Do half of it"
+            "en": "Do half of it",
+            "es": "Cumplir la mitad"
           },
           "modifiers": {
             "deferredOverall": {
@@ -2503,7 +2690,8 @@
           "id": "ignore",
           "label": {
             "de": "Ignorieren",
-            "en": "Ignore it"
+            "en": "Ignore it",
+            "es": "Ignorarlo"
           },
           "modifiers": {
             "meters": {
@@ -2529,18 +2717,21 @@
       },
       "title": {
         "de": "Der Rücken nach dem Langstreckenflug",
-        "en": "Your back after the long flight"
+        "en": "Your back after the long flight",
+        "es": "Tu espalda tras el vuelo largo"
       },
       "text": {
         "de": "Zwölf Stunden Rückflug vom Länderspiel, und seitdem zieht es im unteren Rücken. Am Wochenende ist Pflichtspiel.",
-        "en": "Twelve hours back from international duty, and your lower back has hurt ever since. There is a match at the weekend."
+        "en": "Twelve hours back from international duty, and your lower back has hurt ever since. There is a match at the weekend.",
+        "es": "Doce horas de vuelta de la selección, y desde entonces te duele la zona lumbar. Hay partido el fin de semana."
       },
       "options": [
         {
           "id": "sit_out",
           "label": {
             "de": "Aussetzen",
-            "en": "Sit this one out"
+            "en": "Sit this one out",
+            "es": "Perderte este partido"
           },
           "modifiers": {
             "missShare": 0.15
@@ -2551,7 +2742,8 @@
           "id": "painkillers",
           "label": {
             "de": "Schmerzmittel nehmen",
-            "en": "Take painkillers"
+            "en": "Take painkillers",
+            "es": "Tomar calmantes"
           },
           "risky": true,
           "modifiers": {
@@ -2580,18 +2772,21 @@
       "maxPerCareer": 99,
       "title": {
         "de": "Der Rücken meldet sich zurück",
-        "en": "Your back comes back at you"
+        "en": "Your back comes back at you",
+        "es": "La espalda te pasa factura"
       },
       "text": {
         "de": "Was du weggedrückt hast, ist wieder da, diesmal deutlicher. Der Arzt spricht von Wochen, nicht von Tagen.",
-        "en": "What you pushed through is back, and louder. The doctor talks about weeks, not days."
+        "en": "What you pushed through is back, and louder. The doctor talks about weeks, not days.",
+        "es": "Aquello que forzaste ha vuelto, y con más fuerza. El médico habla de semanas, no de días."
       },
       "options": [
         {
           "id": "proper_break",
           "label": {
             "de": "Richtig auskurieren",
-            "en": "Take a proper break"
+            "en": "Take a proper break",
+            "es": "Parar de verdad"
           },
           "modifiers": {
             "missShare": 0.45,
@@ -2605,7 +2800,8 @@
           "id": "manage_it",
           "label": {
             "de": "Verwalten",
-            "en": "Manage it"
+            "en": "Manage it",
+            "es": "Ir tirando"
           },
           "modifiers": {
             "appearanceMultiplier": 0.85,
@@ -2627,18 +2823,21 @@
       "maxPerCareer": 2,
       "title": {
         "de": "Du wirst Vater",
-        "en": "You become a father"
+        "en": "You become a father",
+        "es": "Vas a ser padre"
       },
       "text": {
         "de": "Das Kind kommt mitten in der Saison. Die ersten Wochen wirst du wenig schlafen und viel denken.",
-        "en": "The baby arrives in the middle of the season. The first weeks will be short on sleep and long on thinking."
+        "en": "The baby arrives in the middle of the season. The first weeks will be short on sleep and long on thinking.",
+        "es": "El bebé llega en plena temporada. Las primeras semanas serán de poco sueño y mucha cabeza."
       },
       "options": [
         {
           "id": "time_off",
           "label": {
             "de": "Ein paar Spiele aussetzen",
-            "en": "Miss a few games"
+            "en": "Miss a few games",
+            "es": "Perderte algunos partidos"
           },
           "modifiers": {
             "missShare": 0.12,
@@ -2652,7 +2851,8 @@
           "id": "keep_playing",
           "label": {
             "de": "Weiterspielen",
-            "en": "Keep playing"
+            "en": "Keep playing",
+            "es": "Seguir jugando"
           },
           "modifiers": {
             "meters": {
@@ -2679,18 +2879,21 @@
       },
       "title": {
         "de": "Heimweh",
-        "en": "Homesick"
+        "en": "Homesick",
+        "es": "Morriña"
       },
       "text": {
         "de": "Die Sprache, das Essen, die dunklen Nachmittage. Zu Hause wäre jetzt alles einfacher.",
-        "en": "The language, the food, the dark afternoons. Everything would be easier at home right now."
+        "en": "The language, the food, the dark afternoons. Everything would be easier at home right now.",
+        "es": "El idioma, la comida, las tardes oscuras. Ahora mismo todo sería más fácil en casa."
       },
       "options": [
         {
           "id": "bring_family",
           "label": {
             "de": "Familie nachholen",
-            "en": "Bring the family over"
+            "en": "Bring the family over",
+            "es": "Traer a la familia"
           },
           "modifiers": {
             "meters": {
@@ -2703,7 +2906,8 @@
           "id": "learn_language",
           "label": {
             "de": "Die Sprache lernen",
-            "en": "Learn the language"
+            "en": "Learn the language",
+            "es": "Aprender el idioma"
           },
           "modifiers": {
             "meters": {
@@ -2718,7 +2922,8 @@
           "id": "ask_to_leave",
           "label": {
             "de": "Um einen Wechsel bitten",
-            "en": "Ask to leave"
+            "en": "Ask to leave",
+            "es": "Pedir salir"
           },
           "modifiers": {
             "forceTransfer": {
@@ -2745,18 +2950,21 @@
       "maxPerCareer": 3,
       "title": {
         "de": "Ein anderer Berater klopft an",
-        "en": "Another agent comes calling"
+        "en": "Another agent comes calling",
+        "es": "Otro agente llama a tu puerta"
       },
       "text": {
         "de": "Er verspricht mehr Geld, größere Vereine und weniger Ärger. Dein jetziger Berater hat dich immerhin hierhergebracht.",
-        "en": "He promises more money, bigger clubs and less hassle. Your current agent did get you this far, though."
+        "en": "He promises more money, bigger clubs and less hassle. Your current agent did get you this far, though.",
+        "es": "Promete más dinero, clubes más grandes y menos líos. Aunque tu agente actual te ha traído hasta aquí."
       },
       "options": [
         {
           "id": "switch",
           "label": {
             "de": "Wechseln",
-            "en": "Switch"
+            "en": "Switch",
+            "es": "Cambiar"
           },
           "risky": true,
           "modifiers": {
@@ -2776,7 +2984,8 @@
           "id": "stay_loyal",
           "label": {
             "de": "Bleiben",
-            "en": "Stay put"
+            "en": "Stay put",
+            "es": "Quedarte como estás"
           },
           "modifiers": {
             "meters": {
@@ -2799,18 +3008,21 @@
       "maxPerCareer": 99,
       "title": {
         "de": "Streit mit dem Berater",
-        "en": "Falling out with your agent"
+        "en": "Falling out with your agent",
+        "es": "Ruptura con tu agente"
       },
       "text": {
         "de": "Die Versprechen von damals sind nicht eingetroffen, dafür liegt eine Rechnung auf dem Tisch, die niemand erklärt hat.",
-        "en": "None of the promises came true, but there is an invoice on the table nobody explained."
+        "en": "None of the promises came true, but there is an invoice on the table nobody explained.",
+        "es": "Ninguna de las promesas se cumplió, pero hay una factura sobre la mesa que nadie explicó."
       },
       "options": [
         {
           "id": "pay_and_go",
           "label": {
             "de": "Zahlen und trennen",
-            "en": "Pay up and part ways"
+            "en": "Pay up and part ways",
+            "es": "Pagar y separaros"
           },
           "modifiers": {
             "marketValueMultiplier": 0.97,
@@ -2824,7 +3036,8 @@
           "id": "fight_it",
           "label": {
             "de": "Vor Gericht gehen",
-            "en": "Take it to court"
+            "en": "Take it to court",
+            "es": "Llevarlo a juicio"
           },
           "risky": true,
           "modifiers": {
@@ -2853,18 +3066,21 @@
       },
       "title": {
         "de": "Das Gehalt kommt zu spät",
-        "en": "The wages are late"
+        "en": "The wages are late",
+        "es": "Los sueldos se retrasan"
       },
       "text": {
         "de": "Zum zweiten Mal in Folge ist am Monatsende nichts angekommen. In der Kabine wird über Streik geredet.",
-        "en": "For the second month running nothing has arrived. The dressing room is talking about refusing to train."
+        "en": "For the second month running nothing has arrived. The dressing room is talking about refusing to train.",
+        "es": "Por segundo mes seguido no ha llegado nada. El vestuario habla de negarse a entrenar."
       },
       "options": [
         {
           "id": "join_protest",
           "label": {
             "de": "Mitmachen",
-            "en": "Join the protest"
+            "en": "Join the protest",
+            "es": "Sumarte a la protesta"
           },
           "modifiers": {
             "meters": {
@@ -2879,7 +3095,8 @@
           "id": "stay_out",
           "label": {
             "de": "Sich raushalten",
-            "en": "Stay out of it"
+            "en": "Stay out of it",
+            "es": "Mantenerte al margen"
           },
           "modifiers": {
             "meters": {
@@ -2893,7 +3110,8 @@
           "id": "speak_publicly",
           "label": {
             "de": "Öffentlich Stellung nehmen",
-            "en": "Say it publicly"
+            "en": "Say it publicly",
+            "es": "Decirlo en público"
           },
           "risky": true,
           "modifiers": {
@@ -2919,18 +3137,21 @@
       "maxPerCareer": 2,
       "title": {
         "de": "Ein Investor steigt ein",
-        "en": "An investor buys in"
+        "en": "An investor buys in",
+        "es": "Entra un inversor"
       },
       "text": {
         "de": "Auf einmal ist Geld da. Der Kader wird umgebaut, und niemand weiß, wer im Herbst noch hier ist.",
-        "en": "Suddenly there is money. The squad is being rebuilt, and nobody knows who will still be here in autumn."
+        "en": "Suddenly there is money. The squad is being rebuilt, and nobody knows who will still be here in autumn.",
+        "es": "De repente hay dinero. Se reconstruye la plantilla, y nadie sabe quién seguirá aquí en otoño."
       },
       "options": [
         {
           "id": "embrace",
           "label": {
             "de": "Sich anbieten",
-            "en": "Put yourself forward"
+            "en": "Put yourself forward",
+            "es": "Postularte"
           },
           "modifiers": {
             "marketInterestDelta": 8,
@@ -2944,7 +3165,8 @@
           "id": "wait_and_see",
           "label": {
             "de": "Abwarten",
-            "en": "Wait and see"
+            "en": "Wait and see",
+            "es": "Esperar y ver"
           },
           "modifiers": {
             "meters": {
@@ -2967,18 +3189,21 @@
       "maxPerCareer": 3,
       "title": {
         "de": "Ärger im Trainingslager",
-        "en": "Trouble at the training camp"
+        "en": "Trouble at the training camp",
+        "es": "Problemas en la concentración"
       },
       "text": {
         "de": "Nach dem dritten Tag im selben Hotel liegen die Nerven blank. Zwei Mitspieler gehen aufeinander los, und du stehst daneben.",
-        "en": "After three days in the same hotel everyone is on edge. Two team-mates go at each other, and you are standing right there."
+        "en": "After three days in the same hotel everyone is on edge. Two team-mates go at each other, and you are standing right there.",
+        "es": "Tras tres días en el mismo hotel, todos están al límite. Dos compañeros se enzarzan, y tú estás justo ahí."
       },
       "options": [
         {
           "id": "break_it_up",
           "label": {
             "de": "Dazwischengehen",
-            "en": "Break it up"
+            "en": "Break it up",
+            "es": "Separarlos"
           },
           "modifiers": {
             "meters": {
@@ -2992,7 +3217,8 @@
           "id": "pick_a_side",
           "label": {
             "de": "Partei ergreifen",
-            "en": "Take a side"
+            "en": "Take a side",
+            "es": "Tomar partido"
           },
           "risky": true,
           "modifiers": {
@@ -3007,7 +3233,8 @@
           "id": "walk_away",
           "label": {
             "de": "Weggehen",
-            "en": "Walk away"
+            "en": "Walk away",
+            "es": "Apartarte"
           },
           "modifiers": {},
           "motif": "dressing_room"
@@ -3026,18 +3253,21 @@
       "maxPerCareer": 3,
       "title": {
         "de": "Falsch zitiert",
-        "en": "Misquoted"
+        "en": "Misquoted",
+        "es": "Sacado de contexto"
       },
       "text": {
         "de": "Aus einem Halbsatz über den Trainer ist eine Schlagzeile geworden, die du so nie gesagt hast.",
-        "en": "Half a sentence about the coach has turned into a headline you never said."
+        "en": "Half a sentence about the coach has turned into a headline you never said.",
+        "es": "Media frase sobre el entrenador se ha convertido en un titular que nunca dijiste."
       },
       "options": [
         {
           "id": "demand_correction",
           "label": {
             "de": "Richtigstellung verlangen",
-            "en": "Demand a correction"
+            "en": "Demand a correction",
+            "es": "Exigir una rectificación"
           },
           "modifiers": {
             "meters": {
@@ -3051,7 +3281,8 @@
           "id": "let_it_go",
           "label": {
             "de": "Laufen lassen",
-            "en": "Let it go"
+            "en": "Let it go",
+            "es": "Dejarlo pasar"
           },
           "modifiers": {
             "meters": {
@@ -3064,7 +3295,8 @@
           "id": "own_it",
           "label": {
             "de": "Dazu stehen",
-            "en": "Own it"
+            "en": "Own it",
+            "es": "Asumirlo"
           },
           "risky": true,
           "modifiers": {
@@ -3090,18 +3322,21 @@
       "maxPerCareer": 2,
       "title": {
         "de": "Ein Video geht viral",
-        "en": "A video goes viral"
+        "en": "A video goes viral",
+        "es": "Un vídeo se hace viral"
       },
       "text": {
         "de": "Ein Trick aus dem Aufwärmen ist über Nacht überall. Zwei Millionen Aufrufe, und plötzlich kennt dich jeder.",
-        "en": "A trick from the warm-up is everywhere overnight. Two million views, and suddenly everyone knows you."
+        "en": "A trick from the warm-up is everywhere overnight. Two million views, and suddenly everyone knows you.",
+        "es": "Un truco del calentamiento está en todas partes de la noche a la mañana. Dos millones de visitas, y de repente todos te conocen."
       },
       "options": [
         {
           "id": "ride_it",
           "label": {
             "de": "Die Welle mitnehmen",
-            "en": "Ride the wave"
+            "en": "Ride the wave",
+            "es": "Aprovechar la ola"
           },
           "modifiers": {
             "fansMultiplier": 1.25,
@@ -3116,7 +3351,8 @@
           "id": "stay_quiet",
           "label": {
             "de": "Ruhig bleiben",
-            "en": "Keep your head down"
+            "en": "Keep your head down",
+            "es": "Mantener el perfil bajo"
           },
           "modifiers": {
             "meters": {
@@ -3141,18 +3377,21 @@
       "risky": true,
       "title": {
         "de": "Ein Ausrutscher im Netz",
-        "en": "A slip online"
+        "en": "A slip online",
+        "es": "Un desliz en la red"
       },
       "text": {
         "de": "Ein alter Beitrag von dir macht die Runde. Er ist zehn Jahre alt und liest sich heute schlecht.",
-        "en": "An old post of yours is doing the rounds. It is ten years old and reads badly today."
+        "en": "An old post of yours is doing the rounds. It is ten years old and reads badly today.",
+        "es": "Una publicación antigua tuya está circulando. Tiene diez años y hoy queda muy mal."
       },
       "options": [
         {
           "id": "apologise",
           "label": {
             "de": "Sich entschuldigen",
-            "en": "Apologise"
+            "en": "Apologise",
+            "es": "Disculparte"
           },
           "modifiers": {
             "meters": {
@@ -3166,7 +3405,8 @@
           "id": "delete_quietly",
           "label": {
             "de": "Still löschen",
-            "en": "Delete it quietly"
+            "en": "Delete it quietly",
+            "es": "Borrarla sin ruido"
           },
           "modifiers": {
             "meters": {
@@ -3193,18 +3433,21 @@
       },
       "title": {
         "de": "Eine Dokumentation über dich",
-        "en": "A documentary about you"
+        "en": "A documentary about you",
+        "es": "Un documental sobre ti"
       },
       "text": {
         "de": "Ein Team will dich eine Saison lang begleiten, auch dann, wenn es nicht läuft.",
-        "en": "A crew wants to follow you for a season, including the parts where it goes wrong."
+        "en": "A crew wants to follow you for a season, including the parts where it goes wrong.",
+        "es": "Un equipo quiere seguirte una temporada, incluidas las partes en que sale mal."
       },
       "options": [
         {
           "id": "full_access",
           "label": {
             "de": "Alles zeigen",
-            "en": "Give them everything"
+            "en": "Give them everything",
+            "es": "Darles acceso total"
           },
           "risky": true,
           "modifiers": {
@@ -3221,7 +3464,8 @@
           "id": "limited",
           "label": {
             "de": "Nur das Sportliche",
-            "en": "Only the football"
+            "en": "Only the football",
+            "es": "Solo el fútbol"
           },
           "modifiers": {
             "fansMultiplier": 1.15,
@@ -3235,7 +3479,8 @@
           "id": "decline_doc",
           "label": {
             "de": "Ablehnen",
-            "en": "Say no"
+            "en": "Say no",
+            "es": "Decir que no"
           },
           "modifiers": {
             "meters": {
@@ -3261,18 +3506,21 @@
       ],
       "title": {
         "de": "Du sitzt plötzlich draußen",
-        "en": "Suddenly you are out of the team"
+        "en": "Suddenly you are out of the team",
+        "es": "De repente estás fuera del equipo"
       },
       "text": {
         "de": "Zwei Spiele auf der Bank, und der Trainer sagt nichts dazu. Irgendetwas musst du damit machen.",
-        "en": "Two games on the bench and the coach has said nothing about it. You have to do something with that."
+        "en": "Two games on the bench and the coach has said nothing about it. You have to do something with that.",
+        "es": "Dos partidos en el banquillo y el entrenador no ha dicho nada. Algo tienes que hacer con eso."
       },
       "options": [
         {
           "id": "ask_for_talk",
           "label": {
             "de": "Um ein Gespräch bitten",
-            "en": "Ask for a conversation"
+            "en": "Ask for a conversation",
+            "es": "Pedir una charla"
           },
           "modifiers": {
             "rerollRole": true,
@@ -3286,7 +3534,8 @@
           "id": "work_harder",
           "label": {
             "de": "Im Training antworten",
-            "en": "Answer in training"
+            "en": "Answer in training",
+            "es": "Responder en los entrenamientos"
           },
           "modifiers": {
             "deferredOverall": {
@@ -3303,7 +3552,8 @@
           "id": "push_for_exit",
           "label": {
             "de": "Auf einen Wechsel drängen",
-            "en": "Push for a move"
+            "en": "Push for a move",
+            "es": "Forzar una salida"
           },
           "modifiers": {
             "marketInterestDelta": 10,
@@ -3330,18 +3580,21 @@
       ],
       "title": {
         "de": "Du triffst nach Belieben",
-        "en": "You cannot stop scoring"
+        "en": "You cannot stop scoring",
+        "es": "No paras de marcar"
       },
       "text": {
         "de": "Sechs Spiele, acht Tore. Die Presse ruft an, der Verein will verlängern, und dein Berater sagt, du sollst warten.",
-        "en": "Six games, eight goals. The press are calling, the club wants to extend, and your agent says wait."
+        "en": "Six games, eight goals. The press are calling, the club wants to extend, and your agent says wait.",
+        "es": "Seis partidos, ocho goles. La prensa llama, el club quiere renovar y tu agente dice que esperes."
       },
       "options": [
         {
           "id": "sign_extension",
           "label": {
             "de": "Sofort verlängern",
-            "en": "Extend now"
+            "en": "Extend now",
+            "es": "Renovar ahora"
           },
           "modifiers": {
             "meters": {
@@ -3356,7 +3609,8 @@
           "id": "let_it_run",
           "label": {
             "de": "Laufen lassen",
-            "en": "Let it run"
+            "en": "Let it run",
+            "es": "Dejar correr el contrato"
           },
           "risky": true,
           "modifiers": {
@@ -3371,7 +3625,8 @@
           "id": "talk_to_press",
           "label": {
             "de": "Mit der Presse reden",
-            "en": "Talk to the press"
+            "en": "Talk to the press",
+            "es": "Hablar con la prensa"
           },
           "modifiers": {
             "meters": {
@@ -3398,18 +3653,21 @@
       ],
       "title": {
         "de": "Der Ball will nicht rein",
-        "en": "The ball will not go in"
+        "en": "The ball will not go in",
+        "es": "El balón no entra"
       },
       "text": {
         "de": "Eine halbe Saison ohne Tor. Im Stadion wird es still, wenn du den Ball bekommst.",
-        "en": "Half a season without a goal. The stadium goes quiet when the ball reaches you."
+        "en": "Half a season without a goal. The stadium goes quiet when the ball reaches you.",
+        "es": "Media temporada sin marcar. El estadio se calla cuando el balón te llega."
       },
       "options": [
         {
           "id": "extra_shooting",
           "label": {
             "de": "Nach dem Training bleiben",
-            "en": "Stay behind and shoot"
+            "en": "Stay behind and shoot",
+            "es": "Quedarte a tirar tras el entrenamiento"
           },
           "modifiers": {
             "goalMultiplier": 1.2,
@@ -3423,7 +3681,8 @@
           "id": "see_psychologist",
           "label": {
             "de": "Mit einem Psychologen arbeiten",
-            "en": "Work with a psychologist"
+            "en": "Work with a psychologist",
+            "es": "Trabajar con un psicólogo"
           },
           "modifiers": {
             "meters": {
@@ -3440,7 +3699,8 @@
           "id": "drop_deeper",
           "label": {
             "de": "Tiefer spielen",
-            "en": "Drop deeper"
+            "en": "Drop deeper",
+            "es": "Retrasar tu posición"
           },
           "modifiers": {
             "assistMultiplier": 1.25,
@@ -3465,18 +3725,21 @@
       ],
       "title": {
         "de": "Zurück auf dem Platz",
-        "en": "Back on the pitch"
+        "en": "Back on the pitch",
+        "es": "De vuelta al campo"
       },
       "text": {
         "de": "Die Reha läuft nach Plan. Der Trainer fragt, ob es für die Bank reicht, der Arzt schüttelt den Kopf.",
-        "en": "The rehab is on schedule. The coach asks if you could make the bench, the doctor shakes his head."
+        "en": "The rehab is on schedule. The coach asks if you could make the bench, the doctor shakes his head.",
+        "es": "La rehabilitación va según lo previsto. El entrenador pregunta si podrías ir al banquillo, el médico niega con la cabeza."
       },
       "options": [
         {
           "id": "take_time",
           "label": {
             "de": "Sich Zeit lassen",
-            "en": "Take the time"
+            "en": "Take the time",
+            "es": "Tomarte el tiempo"
           },
           "modifiers": {
             "missShare": 0.25,
@@ -3490,7 +3753,8 @@
           "id": "come_back_early",
           "label": {
             "de": "Früher zurückkommen",
-            "en": "Come back early"
+            "en": "Come back early",
+            "es": "Vuelve antes de tiempo"
           },
           "risky": true,
           "modifiers": {
@@ -3520,18 +3784,21 @@
       "maxPerCareer": 99,
       "title": {
         "de": "Rückfall",
-        "en": "A relapse"
+        "en": "A relapse",
+        "es": "Una recaída"
       },
       "text": {
         "de": "Dieselbe Stelle, derselbe Schmerz, nur schlimmer. Diesmal redet niemand mehr von ein paar Wochen.",
-        "en": "Same spot, same pain, only worse. This time nobody is talking about a few weeks."
+        "en": "Same spot, same pain, only worse. This time nobody is talking about a few weeks.",
+        "es": "Misma zona, mismo dolor, solo que peor. Esta vez nadie habla de unas semanas."
       },
       "options": [
         {
           "id": "full_rehab",
           "label": {
             "de": "Diesmal richtig",
-            "en": "Do it properly this time"
+            "en": "Do it properly this time",
+            "es": "Hacerlo bien esta vez"
           },
           "modifiers": {
             "missShare": 0.6,
@@ -3546,7 +3813,8 @@
           "id": "surgery",
           "label": {
             "de": "Operieren lassen",
-            "en": "Have the operation"
+            "en": "Have the operation",
+            "es": "Pasar por el quirófano"
           },
           "modifiers": {
             "forceZeroAppearances": true,
@@ -3577,18 +3845,21 @@
       ],
       "title": {
         "de": "Der Neue hat eigene Vorstellungen",
-        "en": "The new coach has his own ideas"
+        "en": "The new coach has his own ideas",
+        "es": "El nuevo entrenador tiene sus propias ideas"
       },
       "text": {
         "de": "Anderes System, andere Sprache, andere Lieblinge. In den ersten Wochen entscheidet sich, wo du stehst.",
-        "en": "Different system, different language, different favourites. The first weeks decide where you stand."
+        "en": "Different system, different language, different favourites. The first weeks decide where you stand.",
+        "es": "Otro sistema, otro idioma, otros favoritos. Las primeras semanas deciden dónde estás."
       },
       "options": [
         {
           "id": "adapt",
           "label": {
             "de": "Sich anpassen",
-            "en": "Adapt to him"
+            "en": "Adapt to him",
+            "es": "Adaptarte a él"
           },
           "modifiers": {
             "rerollRole": true,
@@ -3602,7 +3873,8 @@
           "id": "stick_to_game",
           "label": {
             "de": "Bei deinem Spiel bleiben",
-            "en": "Stick to your game"
+            "en": "Stick to your game",
+            "es": "Mantener tu juego"
           },
           "risky": true,
           "modifiers": {
@@ -3615,7 +3887,8 @@
           "id": "seek_him_out",
           "label": {
             "de": "Das Gespräch suchen",
-            "en": "Seek him out"
+            "en": "Seek him out",
+            "es": "Buscarle"
           },
           "modifiers": {
             "meters": {
@@ -3642,18 +3915,21 @@
       ],
       "title": {
         "de": "Zu wenig Spiele",
-        "en": "Not enough football"
+        "en": "Not enough football",
+        "es": "Poco fútbol"
       },
       "text": {
         "de": "Ein paar Minuten hier, eine Einwechslung dort. In deinem Alter ist das verlorene Zeit.",
-        "en": "A few minutes here, a substitute appearance there. At your age that is time lost."
+        "en": "A few minutes here, a substitute appearance there. At your age that is time lost.",
+        "es": "Unos minutos aquí, una suplencia allá. A tu edad es tiempo perdido."
       },
       "options": [
         {
           "id": "ask_for_loan",
           "label": {
             "de": "Um eine Leihe bitten",
-            "en": "Ask for a loan"
+            "en": "Ask for a loan",
+            "es": "Pedir una cesión"
           },
           "modifiers": {
             "forceTransfer": {
@@ -3670,7 +3946,8 @@
           "id": "stay_and_train",
           "label": {
             "de": "Bleiben und trainieren",
-            "en": "Stay and train"
+            "en": "Stay and train",
+            "es": "Quedarte y entrenar"
           },
           "modifiers": {
             "deferredOverall": {
@@ -3700,18 +3977,21 @@
       ],
       "title": {
         "de": "Ein Scout sitzt auf der Tribüne",
-        "en": "A scout in the stands"
+        "en": "A scout in the stands",
+        "es": "Un ojeador en la grada"
       },
       "text": {
         "de": "Seit Wochen sitzt derselbe Mann oben und schreibt mit. Dein Berater weiß, für wen er arbeitet, sagt es aber nicht.",
-        "en": "The same man has been up there for weeks, taking notes. Your agent knows who he works for and will not say."
+        "en": "The same man has been up there for weeks, taking notes. Your agent knows who he works for and will not say.",
+        "es": "El mismo hombre lleva semanas ahí arriba tomando notas. Tu agente sabe para quién trabaja y no lo dice."
       },
       "options": [
         {
           "id": "play_for_him",
           "label": {
             "de": "Für ihn spielen",
-            "en": "Play for him"
+            "en": "Play for him",
+            "es": "Jugar para él"
           },
           "risky": true,
           "modifiers": {
@@ -3725,7 +4005,8 @@
           "id": "ignore_stands",
           "label": {
             "de": "Nicht hinsehen",
-            "en": "Do not look up"
+            "en": "Do not look up",
+            "es": "No mirar hacia arriba"
           },
           "modifiers": {
             "meters": {
@@ -3752,18 +4033,21 @@
       ],
       "title": {
         "de": "Die erste Berufung",
-        "en": "Your first call-up"
+        "en": "Your first call-up",
+        "es": "Tu primera convocatoria"
       },
       "text": {
         "de": "Der Brief liegt im Spind. Zu Hause weinen sie, und dein Verein rechnet aus, wie viele Spiele du deshalb verpasst.",
-        "en": "The letter is in your locker. At home they are crying, and your club is counting the games you will miss."
+        "en": "The letter is in your locker. At home they are crying, and your club is counting the games you will miss.",
+        "es": "La carta está en tu taquilla. En casa lloran, y tu club cuenta los partidos que te vas a perder."
       },
       "options": [
         {
           "id": "go_all_in",
           "label": {
             "de": "Alles darauf setzen",
-            "en": "Put everything into it"
+            "en": "Put everything into it",
+            "es": "Darlo todo"
           },
           "modifiers": {
             "nationalTeam": "force",
@@ -3779,7 +4063,8 @@
           "id": "club_first",
           "label": {
             "de": "Der Verein geht vor",
-            "en": "The club comes first"
+            "en": "The club comes first",
+            "es": "El club es lo primero"
           },
           "modifiers": {
             "meters": {
@@ -3806,18 +4091,21 @@
       ],
       "title": {
         "de": "Nach dem Titel",
-        "en": "After the title"
+        "en": "After the title",
+        "es": "Tras el título"
       },
       "text": {
         "de": "Die Feier ist vorbei, die Angebote liegen auf dem Tisch. Ein Titel öffnet Türen, aber nicht ewig.",
-        "en": "The party is over and the offers are on the table. A title opens doors, but not forever."
+        "en": "The party is over and the offers are on the table. A title opens doors, but not forever.",
+        "es": "La fiesta terminó y hay ofertas sobre la mesa. Un título abre puertas, pero no para siempre."
       },
       "options": [
         {
           "id": "cash_in",
           "label": {
             "de": "Jetzt wechseln",
-            "en": "Move now"
+            "en": "Move now",
+            "es": "Fichar ahora"
           },
           "modifiers": {
             "marketInterestDelta": 14,
@@ -3831,7 +4119,8 @@
           "id": "defend_it",
           "label": {
             "de": "Titel verteidigen",
-            "en": "Defend it"
+            "en": "Defend it",
+            "es": "Defenderlo"
           },
           "modifiers": {
             "meters": {
@@ -3861,18 +4150,21 @@
       },
       "title": {
         "de": "Wer schießt die Elfmeter?",
-        "en": "Who takes the penalties?"
+        "en": "Who takes the penalties?",
+        "es": "¿Quién lanza los penaltis?"
       },
       "text": {
         "de": "Der bisherige Schütze ist weg. Der Trainer schaut in die Runde, und alle schauen zu Boden.",
-        "en": "The old taker has left. The coach looks around the room and everyone studies their boots."
+        "en": "The old taker has left. The coach looks around the room and everyone studies their boots.",
+        "es": "El lanzador de siempre se ha ido. El entrenador mira alrededor y todos se fijan en sus botas."
       },
       "options": [
         {
           "id": "take_them",
           "label": {
             "de": "Übernehmen",
-            "en": "Take them"
+            "en": "Take them",
+            "es": "Lanzarlos tú"
           },
           "risky": true,
           "modifiers": {
@@ -3887,7 +4179,8 @@
           "id": "leave_them",
           "label": {
             "de": "Anderen überlassen",
-            "en": "Leave them to someone else"
+            "en": "Leave them to someone else",
+            "es": "Dejárselos a otro"
           },
           "modifiers": {
             "meters": {
@@ -3915,18 +4208,21 @@
       },
       "title": {
         "de": "Die Binde",
-        "en": "The armband"
+        "en": "The armband",
+        "es": "El brazalete"
       },
       "text": {
         "de": "Der Trainer fragt, ob du Kapitän sein willst. Es bedeutet Verantwortung, Interviews und Ärger, den andere machen.",
-        "en": "The coach asks if you want to be captain. It means responsibility, interviews and trouble other people cause."
+        "en": "The coach asks if you want to be captain. It means responsibility, interviews and trouble other people cause.",
+        "es": "El entrenador te pregunta si quieres ser capitán. Significa responsabilidad, entrevistas y líos que causan otros."
       },
       "options": [
         {
           "id": "take_armband",
           "label": {
             "de": "Annehmen",
-            "en": "Take it"
+            "en": "Take it",
+            "es": "Lanzarlo"
           },
           "modifiers": {
             "setCaptain": true,
@@ -3942,7 +4238,8 @@
           "id": "decline_armband",
           "label": {
             "de": "Ablehnen",
-            "en": "Turn it down"
+            "en": "Turn it down",
+            "es": "Rechazarlo"
           },
           "modifiers": {
             "meters": {
@@ -3969,18 +4266,21 @@
       },
       "title": {
         "de": "Das Investment geht schief",
-        "en": "The investment goes wrong"
+        "en": "The investment goes wrong",
+        "es": "La inversión sale mal"
       },
       "text": {
         "de": "Das Restaurant, an dem du dich beteiligt hast, macht zu. Der Anteil ist weg, und die Zeitung weiß es schon.",
-        "en": "The restaurant you put money into is closing. The stake is gone, and the papers already know."
+        "en": "The restaurant you put money into is closing. The stake is gone, and the papers already know.",
+        "es": "El restaurante en el que invertiste va a cerrar. El dinero está perdido, y la prensa ya lo sabe."
       },
       "options": [
         {
           "id": "cut_losses",
           "label": {
             "de": "Schluss machen",
-            "en": "Cut your losses"
+            "en": "Cut your losses",
+            "es": "Cortar por lo sano"
           },
           "modifiers": {
             "marketValueMultiplier": 0.96,
@@ -3994,7 +4294,8 @@
           "id": "double_down",
           "label": {
             "de": "Nachschießen",
-            "en": "Put more in"
+            "en": "Put more in",
+            "es": "Poner más dinero"
           },
           "risky": true,
           "modifiers": {

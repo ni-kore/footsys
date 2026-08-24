@@ -15,11 +15,13 @@
         "winterBreak": true,
         "label": {
           "de": "Normal",
-          "en": "Normal"
+          "en": "Normal",
+          "es": "Normal"
         },
         "description": {
           "de": "Jede Pause, Winter wie Sommer.",
-          "en": "Every break, winter and summer."
+          "en": "Every break, winter and summer.",
+          "es": "Cada parón, invierno y verano."
         }
       },
       "fast": {
@@ -27,11 +29,13 @@
         "winterBreak": false,
         "label": {
           "de": "Schnell",
-          "en": "Fast"
+          "en": "Fast",
+          "es": "Rápido"
         },
         "description": {
           "de": "Nur zur Sommerpause.",
-          "en": "Summer breaks only."
+          "en": "Summer breaks only.",
+          "es": "Solo en el parón veraniego."
         }
       },
       "very_fast": {
@@ -39,11 +43,13 @@
         "winterBreak": false,
         "label": {
           "de": "Sehr schnell",
-          "en": "Very fast"
+          "en": "Very fast",
+          "es": "Muy rápido"
         },
         "description": {
           "de": "Nur alle drei Saisons.",
-          "en": "Every three seasons."
+          "en": "Every three seasons.",
+          "es": "Solo cada tres temporadas."
         }
       },
       "instant": {
@@ -51,11 +57,13 @@
         "winterBreak": false,
         "label": {
           "de": "Sofort",
-          "en": "Instant"
+          "en": "Instant",
+          "es": "Instantáneo"
         },
         "description": {
           "de": "Die ganze Laufbahn in einem Zug.",
-          "en": "The whole career in one go."
+          "en": "The whole career in one go.",
+          "es": "Toda la carrera de una vez."
         }
       }
     }

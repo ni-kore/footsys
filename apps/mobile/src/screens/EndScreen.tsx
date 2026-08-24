@@ -2,7 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import type { CareerState } from '@footsys/engine';
 import { color, font, space } from '../theme';
-import { Button, Label } from '../components/ui';
+import { Button, Disclaimer, Label } from '../components/ui';
+import { useT } from '../i18n';
 
 /**
  * Karriereende.
@@ -15,22 +16,27 @@ export function EndScreen({ state, onRestart }: {
   state: CareerState;
   onRestart: () => void;
 }) {
+  const { t } = useT();
   const clubs = new Set(state.seasons.map((season) => season.clubId)).size;
+  const summary = t('endSummary')
+    .replace('{n}', String(state.seasons.length))
+    .replace('{c}', String(clubs))
+    .replace('{club}', t(clubs === 1 ? 'clubOne' : 'clubMany'))
+    .replace('{a}', String(state.player.age));
 
   return (
     <View style={styles.screen}>
       <View style={{ gap: space[2] }}>
-        <Label>End of career</Label>
-        <Text style={styles.title}>That was the career</Text>
-        <Text style={[font.caption, { lineHeight: 20 }]}>
-          {state.seasons.length} seasons at {clubs} {clubs === 1 ? 'club' : 'clubs'},
-          {' '}played out to the age of {state.player.age}.
-        </Text>
+        <Label>{t('endOfCareer')}</Label>
+        <Text style={styles.title}>{t('thatWasTheCareer')}</Text>
+        <Text style={[font.caption, { lineHeight: 20 }]}>{summary}</Text>
       </View>
 
       <View style={{ alignItems: 'flex-start', marginTop: 'auto' }}>
-        <Button label="New career" onPress={onRestart} />
+        <Button label={t('newCareer')} onPress={onRestart} />
       </View>
+
+      <Disclaimer />
     </View>
   );
 }

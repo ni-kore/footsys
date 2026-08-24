@@ -15,6 +15,12 @@ export interface LocalizedText {
   [locale: string]: string;
 }
 
+/** Die drei Sprachen der Oberfläche. */
+export type Locale = 'en' | 'de' | 'es';
+
+/** Ein fertig formulierter Ausgang je Sprache. */
+export type LocalizedOutcome = Partial<Record<Locale, OutcomeLine[]>>;
+
 export type ConfederationId = 'UEFA' | 'CONMEBOL' | 'CONCACAF' | 'AFC' | 'CAF' | 'OFC';
 
 /** FIFA-Ländercode, dreistellig, z. B. "GER". */
@@ -156,7 +162,7 @@ export type CompetitionLevel =
 
 export interface ClubCompetition {
   id: string;
-  name: string;
+  name: LocalizedText;
   confederation: ConfederationId | null;
   /** Frauenwettbewerbe sind hinterlegt, werden aber erst mit weiblichen Karrieren aktiv. */
   gender: 'men' | 'women';
@@ -175,7 +181,7 @@ export interface NationalCompetition extends ClubCompetition {
 
 export interface IndividualAward {
   id: string;
-  name: string;
+  name: LocalizedText;
   scope: 'world' | 'continental' | 'league';
   prestige: 1 | 2 | 3 | 4 | 5;
   trophy: string;
@@ -587,12 +593,12 @@ export interface PendingOption {
   /** Bei der Verbandswahl: das Land hinter der Option. */
   countryCode?: CountryCode;
   /** Kurzes Kennzeichen der Option, etwa "Stay" oder "Move". */
-  tag?: string;
+  tag?: LocalizedText;
   /** Motiv für das Bild auf dieser Antwort. */
   motif?: string;
   /** Was diese Wahl bedeutet, in Worten, jede Aussage mit ihrem Ton. */
-  outcome?: OutcomeLine[];
-  subtitle?: string;
+  outcome?: LocalizedOutcome;
+  subtitle?: LocalizedText;
 }
 
 export interface PendingDecision {
@@ -604,7 +610,7 @@ export interface PendingDecision {
   alternativePosition?: PositionId;
   window: 'summer' | 'winter' | 'start';
   title: LocalizedText;
-  text: string;
+  text: LocalizedText;
   variantKey?: string;
   /** Art der Entscheidung, bestimmt das Bild auf der Karte. */
   category?: string;
@@ -640,7 +646,7 @@ export interface PeriodReport {
   overallAfter: number;
   marketValueBefore: number;
   marketValueAfter: number;
-  randomEvents: { id: string; title: LocalizedText; text: string; tone: string }[];
+  randomEvents: { id: string; title: LocalizedText; text: LocalizedText; tone: string }[];
   /** Auf welcher Position gespielt wurde. */
   position: PositionId;
   /** Anhängerschaft vor und nach der Halbserie. */

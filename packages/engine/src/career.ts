@@ -1,4 +1,6 @@
 import { clubOf, countryOf, leagueOf, positionOf, type GameData } from './data';
+import { tr } from './i18n';
+import { localizeText } from './events';
 import {
   buildAcademyDecision, buildCareerDecision, buildLoanDecision, buildPartnerDecision,
   buildRetirementDecision, buildTransferDecision, clubOffers, movesClub, resolveOption,
@@ -15,7 +17,7 @@ import { Rng } from './rng';
 import { ageEffects, closeSeason, simulateHalf } from './simulation';
 import { clubHoldsOn, updateFans } from './fans';
 import type {
-  CareerState, GameMode, PendingDecision, PendingOption, PeriodReport, PlayerIdentity,
+  CareerState, GameMode, Locale, PendingDecision, PendingOption, PeriodReport, PlayerIdentity,
   TimelineEntry, TransferScope,
 } from './types';
 
@@ -485,7 +487,7 @@ function playHalf(data: GameData, rng: Rng, state: CareerState): 'summer' | 'win
     updateFans(data, state, half);
     const randoms = rollRandomEvents(data, rng, state, 'winter');
     half.randomEventIds = randoms.map((r) => r.event.id);
-    for (const r of randoms) log(state, 'random_event', r.event.title.en, r.text);
+    for (const r of randoms) log(state, 'random_event', r.event.title.en, r.text.en);
 
     state.pendingReport = {
       ...base,
@@ -512,7 +514,7 @@ function playHalf(data: GameData, rng: Rng, state: CareerState): 'summer' | 'win
 
   const randoms = rollRandomEvents(data, rng, state, 'season_end');
   half.randomEventIds = randoms.map((r) => r.event.id);
-  for (const r of randoms) log(state, 'random_event', r.event.title.en, r.text);
+  for (const r of randoms) log(state, 'random_event', r.event.title.en, r.text.en);
 
   const seasonCaps = state.currentSeasonCaps;
   const seasonNationalGoals = state.currentSeasonNationalGoals;
@@ -579,15 +581,20 @@ function buildAssociationDecision(data: GameData, state: CareerState) {
     eventId: 'national_team_choice',
     window: 'summer' as const,
     title: event.title,
-    text: event.text.en,
+    text: localizeText(data, state, event.text),
     options: calling.map((code) => {
       const country = countryOf(data, code);
+      const s = country.strength;
       return {
         id: 'association:' + code,
-        label: { de: country.name.de, en: country.name.en },
+        label: country.name,
         countryCode: code,
-        tag: code,
-        subtitle: 'World ranking tier ' + country.strength,
+        tag: { en: code, de: code, es: code },
+        subtitle: {
+          en: 'World ranking tier ' + s,
+          de: 'Weltranglisten-Stufe ' + s,
+          es: 'Nivel del ranking mundial ' + s,
+        },
       };
     }),
   };
@@ -886,12 +893,17 @@ function updateMarketInterest(
   state.player.marketInterest = Math.max(0, Math.min(100, Math.round(interest)));
 }
 
-export function titleName(data: GameData, id: string): string {
-  return data.leagueById.get(id)?.name
-    ?? data.cupById.get(id)?.name
-    ?? data.competitions.club.find((c) => c.id === id)?.name
-    ?? data.competitions.national.find((c) => c.id === id)?.name
-    ?? id;
+export function titleName(data: GameData, id: string, locale: Locale = 'en'): string {
+  // Liga und Pokal tragen ihren echten Namen und bleiben in jeder Sprache
+  // gleich; Wettbewerbe und Auszeichnungen werden übersetzt.
+  const league = data.leagueById.get(id)?.name ?? data.cupById.get(id)?.name;
+  if (league) return league;
+  const competition = data.competitions.club.find((c) => c.id === id)
+    ?? data.competitions.national.find((c) => c.id === id)
+    // Einzelauszeichnungen tragen denselben Weg wie Titel durch die Anzeige;
+    // ohne sie stünde in der Vitrine die nackte Kennung wie "golden-boy".
+    ?? data.competitions.individual.find((c) => c.id === id);
+  return competition ? tr(competition.name, locale) : id;
 }
 
 /** Wurde dieser Titel mit der Nationalmannschaft gewonnen? */
@@ -899,8 +911,9 @@ export function isNationalTitle(data: GameData, id: string): boolean {
   return data.competitions.national.some((c) => c.id === id);
 }
 
-export function awardName(data: GameData, id: string): string {
-  return data.competitions.individual.find((a) => a.id === id)?.name ?? id;
+export function awardName(data: GameData, id: string, locale: Locale = 'en'): string {
+  const award = data.competitions.individual.find((a) => a.id === id);
+  return award ? tr(award.name, locale) : id;
 }
 
 /** Alle Titel einer Karriere, gruppiert nach Wettbewerb. */

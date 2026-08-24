@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
-import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
-import placeholder from '../../../../assets/trophies/22.png';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { color, font, radius } from '../theme';
+import type { TrophyArt } from '../trophy-art';
 import { useTooltip } from './Tooltip';
 
 /**
@@ -20,7 +20,9 @@ import { useTooltip } from './Tooltip';
  * Wurde ein Titel mehrfach gewonnen, sitzt unten rechts am Bild ein kleiner
  * Kreis mit der Anzahl, wie man es von Abzeichen kennt.
  */
-export function Trophy({ count = 1, size = 28, label }: {
+export function Trophy({ art, count = 1, size = 28, label }: {
+  /** Die Form der Trophäe. Fehlt sie, steht die Kontinentaltrophäe als Rückfall. */
+  art?: TrophyArt;
   count?: number;
   size?: number;
   /** Name des Titels, für den Hinweis und für Vorlesehilfen. */
@@ -37,6 +39,8 @@ export function Trophy({ count = 1, size = 28, label }: {
     });
   };
 
+  const Art = art;
+
   return (
     <View ref={anchor} style={{ width: size, height: size }}>
       <Pressable
@@ -45,7 +49,7 @@ export function Trophy({ count = 1, size = 28, label }: {
         accessibilityRole="image"
         {...(label ? { accessibilityLabel: label } : {})}
       >
-        <Image source={placeholder} style={{ width: size, height: size }} resizeMode="contain" />
+        {Art ? <Art width={size} height={size} color={color.status.warning} /> : null}
       </Pressable>
 
       {count > 1 ? (

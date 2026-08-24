@@ -27,5 +27,6 @@ export { clubHoldsOn, fanInfluence } from './fans';
 export { offerReputationBonus, partnerFanFactor, partnerOf, reachOf } from './partners';
 export { meterFactor } from './meters';
 export { optionSummary } from './outcome';
+export { tr, LOCALES, LOCALE_LABEL, type Locale } from './i18n';
 export { contributionShift, simulateTeamSeason } from './team-season';
 export * from './types';

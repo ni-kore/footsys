@@ -1,13 +1,15 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import {
-  isNationalTitle, liveTotals, titleName, trophyCabinet,
+  isNationalTitle, liveTotals, titleName, tr, trophyCabinet,
   type CareerState, type GameData,
 } from '@footsys/engine';
 import { fansDelta, readableOn } from '../format';
 import { color, font, radius, space } from '../theme';
 import { AssociationMark, Card, ClubBadge, Flag, Label, overallTint } from './ui';
 import { Trophy } from './Trophy';
+import { useT } from '../i18n';
+import { trophyArt } from '../trophy-art';
 import { AppsIcon, AssistIcon, CleanSheetIcon, FansIcon, GoalIcon, LoanIcon } from './icons';
 
 /** Eine Zeile der Tabelle, egal ob abgeschlossene oder laufende Saison. */
@@ -38,6 +40,7 @@ interface Row {
  * sondern über die ganze Laufbahn.
  */
 export function SeasonTable({ data, state }: { data: GameData; state: CareerState }) {
+  const { t, locale } = useT();
   const isKeeper = data.positionById.get(state.player.position)?.group === 'GK';
   const startFans = data.progression.fans.start as number;
 
@@ -94,7 +97,7 @@ export function SeasonTable({ data, state }: { data: GameData; state: CareerStat
     150,
     ...rows.map((row) => {
       const club = row.clubId ? data.clubById.get(row.clubId) : null;
-      const label = club ? club.short : 'Choosing club...';
+      const label = club ? club.short : t('choosingClub');
       return 26 + label.length * 7.6 + (row.loanFrom ? 88 : 0);
     }),
   );
@@ -113,7 +116,7 @@ export function SeasonTable({ data, state }: { data: GameData; state: CareerStat
 
   return (
     <Card style={styles.card}>
-      <Label>Season by season</Label>
+      <Label>{t('seasonBySeason')}</Label>
 
       {/* Sieben Spalten passen auf ein Telefon nicht nebeneinander. Statt
           etwas abzuschneiden, lässt sich die Tabelle seitlich schieben; auf
@@ -125,15 +128,15 @@ export function SeasonTable({ data, state }: { data: GameData; state: CareerStat
       >
         <View style={styles.tableInner}>
         <View style={styles.head}>
-        <Text style={[styles.cellAge, styles.headText]}>Age</Text>
-        <Text style={[styles.cellClub, clubColumn, styles.headText]}>Club</Text>
-        <Text style={[styles.cellOverall, styles.headText, styles.centred]}>OVR</Text>
-        <Text style={[styles.cellNumber, styles.headText, styles.centred]}>Apps</Text>
+        <Text style={[styles.cellAge, styles.headText]}>{t('age')}</Text>
+        <Text style={[styles.cellClub, clubColumn, styles.headText]}>{t('club')}</Text>
+        <Text style={[styles.cellOverall, styles.headText, styles.centred]}>{t('ovr')}</Text>
+        <Text style={[styles.cellNumber, styles.headText, styles.centred]}>{t('colApps')}</Text>
         <Text style={[styles.cellNumber, styles.headText, styles.centred]}>
-          {isKeeper ? 'Sheets' : 'Goals'}
+          {isKeeper ? t('colSheets') : t('colGoals')}
         </Text>
-        <Text style={[styles.cellNumber, styles.headText, styles.centred]}>Ast</Text>
-        <Text style={[styles.cellFans, styles.headText, styles.centred]}>Fans</Text>
+        <Text style={[styles.cellNumber, styles.headText, styles.centred]}>{t('colAst')}</Text>
+        <Text style={[styles.cellFans, styles.headText, styles.centred]}>{t('colFans')}</Text>
       </View>
 
       {rows.map((row) => {
@@ -160,15 +163,15 @@ export function SeasonTable({ data, state }: { data: GameData; state: CareerStat
                 <View style={styles.noBadge}><Text style={styles.noBadgeText}>?</Text></View>
               )}
               <Text style={[styles.clubName, !club && styles.clubNameMuted]}>
-                {club ? club.short : 'Choosing club...'}
+                {club ? club.short : t('choosingClub')}
               </Text>
               {row.loanFrom ? (
-                <View style={styles.loan}><Text style={styles.loanText}>On loan</Text></View>
+                <View style={styles.loan}><Text style={styles.loanText}>{t('onLoan')}</Text></View>
               ) : null}
               {/* Was in dieser Saison gewonnen wurde, direkt neben dem Verein.
                   Über die Jahre wird die Liste damit zur Chronik. */}
               {row.titles.map((id) => (
-                <Trophy key={id} size={18} label={titleName(data, id)} />
+                <Trophy key={id} art={trophyArt(data, id)} size={18} label={titleName(data, id, locale)} />
               ))}
             </View>
 
@@ -249,12 +252,12 @@ export function SeasonTable({ data, state }: { data: GameData; state: CareerStat
             </View>
           )}
           {nationalTeam ? (
-            <Text style={styles.clubName}>{nationalTeam.name.en}</Text>
+            <Text style={styles.clubName}>{tr(nationalTeam.name, locale)}</Text>
           ) : null}
           {/* Was mit der Nationalmannschaft gewonnen wurde, steht hier und
               nicht beim Verein. */}
           {nationalTitles.map(([id, count]) => (
-            <Trophy key={id} size={18} count={count} label={titleName(data, id)} />
+            <Trophy key={id} art={trophyArt(data, id)} size={18} count={count} label={titleName(data, id, locale)} />
           ))}
         </View>
         <View style={styles.cellOverall} />

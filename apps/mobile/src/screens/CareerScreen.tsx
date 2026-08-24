@@ -145,7 +145,7 @@ function SeasonRow({ data, season }: { data: GameData; season: SeasonRecord }) {
         <Text style={[styles.cellAge, font.body]}>{season.age}</Text>
         <View style={styles.cellClub}>
           <Text style={font.body} numberOfLines={1}>{club?.short ?? season.clubId}</Text>
-          <Text style={font.micro}>{roleLabel(season.role).toUpperCase()}</Text>
+          <Text style={font.micro}>{roleLabel(season.role, 'en').toUpperCase()}</Text>
         </View>
         <Text style={[styles.cellNum, font.bodyStrong, { color: ratingColor(season.overall) }]}>
           {season.overall}

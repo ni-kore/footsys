@@ -27,11 +27,13 @@
       "tone": "neutral",
       "title": {
         "de": "Trainerwechsel",
-        "en": "New coach"
+        "en": "New coach",
+        "es": "Nuevo entrenador"
       },
       "text": {
         "de": "{club} entlässt den Trainer. Der Neue hat eigene Vorstellungen. Deine Rolle wird neu verteilt.",
-        "en": "{club} sack the coach. The new one has his own ideas. Your place is up for grabs again."
+        "en": "{club} sack the coach. The new one has his own ideas. Your place is up for grabs again.",
+        "es": "{club} destituye al entrenador. El nuevo tiene sus propias ideas. Tu puesto vuelve a estar en juego."
       },
       "effects": {
         "rerollRole": true,
@@ -50,11 +52,13 @@
       "tone": "positive",
       "title": {
         "de": "Lauf",
-        "en": "Purple patch"
+        "en": "Purple patch",
+        "es": "Racha de goles"
       },
       "text": {
         "de": "Dir gelingt gerade alles. Die Presse redet über dich.",
-        "en": "Everything is coming off for you. The press has noticed."
+        "en": "Everything is coming off for you. The press has noticed.",
+        "es": "Todo te sale bien. La prensa se ha dado cuenta."
       },
       "effects": {
         "goalMultiplier": 1.45,
@@ -72,11 +76,13 @@
       "tone": "negative",
       "title": {
         "de": "Formtief",
-        "en": "Loss of form"
+        "en": "Loss of form",
+        "es": "Bajón de forma"
       },
       "text": {
         "de": "Nichts will fallen. Der Trainer stellt dich in Frage.",
-        "en": "Nothing is dropping for you. The coach is starting to doubt you."
+        "en": "Nothing is dropping for you. The coach is starting to doubt you.",
+        "es": "No te sale nada. El entrenador empieza a dudar de ti."
       },
       "effects": {
         "goalMultiplier": 0.55,
@@ -93,11 +99,13 @@
       "tone": "negative",
       "title": {
         "de": "Kleinere Blessur",
-        "en": "Knock"
+        "en": "Knock",
+        "es": "Golpe"
       },
       "text": {
         "de": "Eine Muskelverhärtung wirft dich für ein paar Wochen zurück.",
-        "en": "A muscle strain sets you back a few weeks."
+        "en": "A muscle strain sets you back a few weeks.",
+        "es": "Una sobrecarga muscular te frena unas semanas."
       },
       "effects": {
         "missShare": 0.25,
@@ -113,11 +121,13 @@
       "tone": "negative",
       "title": {
         "de": "Rote Karte",
-        "en": "Sent off"
+        "en": "Sent off",
+        "es": "Expulsado"
       },
       "text": {
         "de": "Grobes Foulspiel, Platzverweis, drei Spiele Sperre.",
-        "en": "Serious foul play, straight red, three-match ban."
+        "en": "Serious foul play, straight red, three-match ban.",
+        "es": "Juego brusco grave, roja directa, tres partidos de sanción."
       },
       "effects": {
         "missShare": 0.12,
@@ -137,11 +147,13 @@
       "tone": "positive",
       "title": {
         "de": "Investor steigt ein",
-        "en": "New owners"
+        "en": "New owners",
+        "es": "Nuevos dueños"
       },
       "text": {
         "de": "Bei {club} steigt ein Investor ein. Plötzlich sind ganz andere Spieler möglich.",
-        "en": "An investor buys into {club}. Suddenly very different signings are possible."
+        "en": "An investor buys into {club}. Suddenly very different signings are possible.",
+        "es": "Un inversor entra en {club}. De repente son posibles fichajes muy distintos."
       },
       "effects": {
         "clubReputationDelta": 1,
@@ -160,11 +172,13 @@
       "tone": "negative",
       "title": {
         "de": "Finanzielle Schieflage",
-        "en": "Financial trouble"
+        "en": "Financial trouble",
+        "es": "Problemas económicos"
       },
       "text": {
         "de": "{club} muss sparen. Die besten Spieler werden verkauft.",
-        "en": "{club} have to cut costs. The best players are being sold."
+        "en": "{club} have to cut costs. The best players are being sold.",
+        "es": "{club} tiene que recortar gastos. Se venden los mejores jugadores."
       },
       "effects": {
         "clubReputationDelta": -1,
@@ -184,11 +198,13 @@
       "tone": "positive",
       "title": {
         "de": "Aufstieg",
-        "en": "Promotion"
+        "en": "Promotion",
+        "es": "Ascenso"
       },
       "text": {
         "de": "{club} steigt auf. Nächste Saison eine Klasse höher.",
-        "en": "{club} go up. Next season is a division higher."
+        "en": "{club} go up. Next season is a division higher.",
+        "es": "{club} asciende. La próxima temporada será una categoría más arriba."
       },
       "effects": {
         "leagueMove": "promotion",
@@ -208,11 +224,13 @@
       "tone": "negative",
       "title": {
         "de": "Abstieg",
-        "en": "Relegation"
+        "en": "Relegation",
+        "es": "Descenso"
       },
       "text": {
         "de": "{club} steigt ab. Eine Klasse tiefer, und die halbe Mannschaft geht.",
-        "en": "{club} go down. A division lower, and half the squad is leaving."
+        "en": "{club} go down. A division lower, and half the squad is leaving.",
+        "es": "{club} desciende. Una categoría menos, y media plantilla se marcha."
       },
       "effects": {
         "leagueMove": "relegation",
@@ -233,11 +251,13 @@
       "tone": "positive",
       "title": {
         "de": "Nationalmannschaft",
-        "en": "International call-up"
+        "en": "International call-up",
+        "es": "Convocatoria internacional"
       },
       "text": {
         "de": "Du wirst erstmals für {country} nominiert.",
-        "en": "You get your first call-up for {country}."
+        "en": "You get your first call-up for {country}.",
+        "es": "Recibes tu primera convocatoria con {country}."
       },
       "effects": {
         "meters": {
@@ -257,11 +277,13 @@
       "tone": "positive",
       "title": {
         "de": "Publikumsliebling",
-        "en": "Fan favourite"
+        "en": "Fan favourite",
+        "es": "Ídolo de la afición"
       },
       "text": {
         "de": "Die Kurve hat einen Gesang für dich.",
-        "en": "The stands have a song for you."
+        "en": "The stands have a song for you.",
+        "es": "La grada tiene un cántico para ti."
       },
       "effects": {
         "meters": {
@@ -280,11 +302,13 @@
       "tone": "neutral",
       "title": {
         "de": "Wechselgerüchte",
-        "en": "Transfer rumours"
+        "en": "Transfer rumours",
+        "es": "Rumores de traspaso"
       },
       "text": {
         "de": "Die Presse schreibt dich weg. Die Fans sind irritiert.",
-        "en": "The press has you leaving. The fans aren't happy."
+        "en": "The press has you leaving. The fans aren't happy.",
+        "es": "La prensa te da por salir. La afición no está contenta."
       },
       "effects": {
         "meters": {
@@ -304,11 +328,13 @@
       "tone": "positive",
       "title": {
         "de": "Ausrüstervertrag",
-        "en": "Boot deal"
+        "en": "Boot deal",
+        "es": "Contrato de botas"
       },
       "text": {
         "de": "Ein Sportartikelhersteller nimmt dich unter Vertrag.",
-        "en": "A sportswear brand signs you up."
+        "en": "A sportswear brand signs you up.",
+        "es": "Una marca deportiva te ficha."
       },
       "effects": {
         "meters": {
@@ -329,11 +355,13 @@
       "tone": "positive",
       "title": {
         "de": "Binde für den Rest der Serie",
-        "en": "Armband for the rest of the run"
+        "en": "Armband for the rest of the run",
+        "es": "Brazalete para lo que queda"
       },
       "text": {
         "de": "Der Kapitän fällt aus, du führst die Mannschaft.",
-        "en": "The captain is out, you lead the side."
+        "en": "The captain is out, you lead the side.",
+        "es": "El capitán está fuera, tú lideras al equipo."
       },
       "effects": {
         "roleOverride": "starter",
@@ -350,11 +378,13 @@
       "tone": "negative",
       "title": {
         "de": "Streit im Training",
-        "en": "Bust-up in training"
+        "en": "Bust-up in training",
+        "es": "Bronca en el entrenamiento"
       },
       "text": {
         "de": "Eine Auseinandersetzung mit einem Mitspieler landet in der Zeitung.",
-        "en": "A row with a team-mate ends up in the papers."
+        "en": "A row with a team-mate ends up in the papers.",
+        "es": "Una discusión con un compañero acaba en la prensa."
       },
       "effects": {
         "meters": {
@@ -375,11 +405,13 @@
       "tone": "positive",
       "title": {
         "de": "Serie",
-        "en": "On a run"
+        "en": "On a run",
+        "es": "En racha"
       },
       "text": {
         "de": "Du triffst in sieben Spielen nacheinander. Das gab es hier lange nicht.",
-        "en": "You score in seven straight games. This club hasn't seen that in years."
+        "en": "You score in seven straight games. This club hasn't seen that in years.",
+        "es": "Marcas en siete partidos seguidos. Este club no lo veía desde hace años."
       },
       "effects": {
         "goalMultiplier": 1.25,
@@ -397,11 +429,13 @@
       "tone": "positive",
       "title": {
         "de": "Starkes Trainingslager",
-        "en": "Strong winter camp"
+        "en": "Strong winter camp",
+        "es": "Gran pretemporada de invierno"
       },
       "text": {
         "de": "Du kommst topfit aus der Winterpause.",
-        "en": "You come out of the winter break in top shape."
+        "en": "You come out of the winter break in top shape.",
+        "es": "Sales del parón invernal en plena forma."
       },
       "effects": {
         "immediateOverall": 1,
@@ -417,11 +451,13 @@
       "tone": "neutral",
       "title": {
         "de": "Familiäre Belastung",
-        "en": "Family matter"
+        "en": "Family matter",
+        "es": "Asunto familiar"
       },
       "text": {
         "de": "Etwas außerhalb des Platzes beschäftigt dich.",
-        "en": "Something off the pitch is weighing on you."
+        "en": "Something off the pitch is weighing on you.",
+        "es": "Algo fuera del campo te pesa."
       },
       "effects": {
         "meters": {
@@ -441,11 +477,13 @@
       "tone": "positive",
       "title": {
         "de": "Vereinsikone",
-        "en": "Club icon"
+        "en": "Club icon",
+        "es": "Icono del club"
       },
       "text": {
         "de": "{club} benennt die Trainingsakademie nach dir.",
-        "en": "{club} name the academy after you."
+        "en": "{club} name the academy after you.",
+        "es": "{club} pone tu nombre a la cantera."
       },
       "effects": {
         "meters": {
@@ -460,11 +498,13 @@
       "tone": "neutral",
       "title": {
         "de": "Schiedsrichter-Debatte",
-        "en": "Refereeing storm"
+        "en": "Refereeing storm",
+        "es": "Polémica arbitral"
       },
       "text": {
         "de": "Eine strittige Szene mit dir steht tagelang in der Kritik.",
-        "en": "A contentious moment involving you dominates the news for days."
+        "en": "A contentious moment involving you dominates the news for days.",
+        "es": "Una jugada polémica contigo de protagonista domina las noticias durante días."
       },
       "effects": {
         "meters": {
@@ -480,11 +520,13 @@
       "tone": "negative",
       "title": {
         "de": "Neuzugang für deine Position",
-        "en": "A signing for your position"
+        "en": "A signing for your position",
+        "es": "Un fichaje para tu posición"
       },
       "text": {
         "de": "{club} verpflichtet einen Spieler mit deinem Profil.",
-        "en": "{club} sign a player with your profile."
+        "en": "{club} sign a player with your profile.",
+        "es": "{club} ficha a un jugador con tu perfil."
       },
       "effects": {
         "rerollRole": true,
@@ -500,11 +542,13 @@
       "tone": "positive",
       "title": {
         "de": "Soziales Engagement",
-        "en": "Charity work"
+        "en": "Charity work",
+        "es": "Labor solidaria"
       },
       "text": {
         "de": "Deine Stiftungsarbeit wird öffentlich gewürdigt.",
-        "en": "Your foundation work gets public recognition."
+        "en": "Your foundation work gets public recognition.",
+        "es": "Tu labor en la fundación recibe reconocimiento público."
       },
       "effects": {
         "meters": {

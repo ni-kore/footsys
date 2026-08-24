@@ -1,14 +1,20 @@
 import React from 'react';
-import { Image, Pressable, StyleSheet, Text, View, type StyleProp, type ViewStyle } from 'react-native';
-import Svg, { Circle } from 'react-native-svg';
+import {
+  Image, Linking, Pressable, StyleSheet, Text, View,
+  type StyleProp, type ViewStyle,
+} from 'react-native';
+import Svg, { Circle, Path } from 'react-native-svg';
+import { LOCALES, LOCALE_LABEL } from '@footsys/engine';
 import { color, font, meterColor, radius, space } from '../theme';
 import { readableOn } from '../format';
 import { clubBadges } from '../club-badges';
 import { flagImages } from '../flags';
 import { associationLogos } from '../association-logos';
 import { partnerLogos } from '../partner-logos';
+import kofiImage from '../../../../assets/ui/kofi.png';
 import { LoanIcon } from './icons';
 import { useCountUp } from './motion';
+import { useLocale, useT } from '../i18n';
 
 /** Card with a hairline border — the base surface of the whole interface. */
 export function Card({ children, style }: { children: React.ReactNode; style?: StyleProp<ViewStyle> }) {
@@ -362,13 +368,15 @@ export function PartnerLogo({ partnerId, light, size = 30 }: {
  * und darunter, sobald gespielt wurde, die eigene Rolle in der Mannschaft.
  */
 export function ClubBlock({
-  clubId, name, colors, abbr, league, status, statusTone, loan, badgeSize = 30, style,
+  clubId, name, colors, abbr, league, leagueCode, status, statusTone, loan, badgeSize = 30, style,
 }: {
   clubId?: string;
   name: string;
   colors: [string, string];
   abbr: string;
   league?: string;
+  /** Land der Liga: davor steht dann seine Fahne. */
+  leagueCode?: string;
   status?: string;
   statusTone?: string;
   /** Beschriftung des Leihkennzeichens, etwa "On loan from Girona". */
@@ -384,7 +392,14 @@ export function ClubBlock({
       <ClubBadge clubId={clubId} colors={colors} abbr={abbr} size={badgeSize} />
       <View style={styles.clubBlockText}>
         <Text style={styles.clubBlockName}>{name}</Text>
-        {league ? <Text style={styles.clubBlockLine}>{league}</Text> : null}
+        {league ? (
+          <View style={styles.clubBlockLeague}>
+            {/* Eine kleine Fahne sagt vor dem Namen, in welchem Land die Liga
+                spielt. */}
+            {leagueCode ? <Flag code={leagueCode} size={12} /> : null}
+            <Text style={styles.clubBlockLine}>{league}</Text>
+          </View>
+        ) : null}
       </View>
       {loan ? (
         <View style={styles.clubBlockLoan}>
@@ -475,18 +490,114 @@ export function Toggle({ value, onChange, label }: {
   );
 }
 
+const GITHUB_URL = 'https://github.com/ni-kore/footsys';
+const KOFI_URL = 'https://ko-fi.com/X7X41TZDHJ';
+// Das Ko-fi-Bild ist 580x146; bei Höhe 34 bleibt es unverzerrt und bleibt unter
+// der Höhe des Logos (44), sitzt also sauber auf einer Linie mit ihm.
+const KOFI_HEIGHT = 34;
+const KOFI_WIDTH = Math.round(KOFI_HEIGHT * (580 / 146));
+const brandLogo = require('../../../../assets/footsys-icon.png');
+
 /**
- * Rechtlicher Hinweis zu den Vereinsnamen. Steht dort, wo eine Karriere
- * beginnt und wo sie endet — an beiden Stellen sieht ihn jeder einmal.
+ * Die beiden Verweise: das GitHub-Zeichen zum Quelltext und der Ko-fi-Knopf zur
+ * Unterstützung. Beide Bilder liegen im Projekt; zur Laufzeit wird nichts
+ * nachgeladen.
+ */
+function HeaderLinks() {
+  return (
+    <View style={styles.headerLinks}>
+      <LanguageSelector />
+      <Pressable
+        onPress={() => { void Linking.openURL(GITHUB_URL); }}
+        accessibilityRole="link"
+        accessibilityLabel="footsys on GitHub"
+        hitSlop={10}
+        style={({ pressed }) => [pressed && styles.linkPressed]}
+      >
+        <Svg width={30} height={30} viewBox="0 0 16 16">
+          <Path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            fill={color.text.secondary}
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+          />
+        </Svg>
+      </Pressable>
+
+      <Pressable
+        onPress={() => { void Linking.openURL(KOFI_URL); }}
+        accessibilityRole="link"
+        accessibilityLabel="Buy me a coffee at ko-fi.com"
+        hitSlop={10}
+        style={({ pressed }) => [pressed && styles.linkPressed]}
+      >
+        <Image
+          source={kofiImage}
+          style={{ width: KOFI_WIDTH, height: KOFI_HEIGHT }}
+          resizeMode="contain"
+        />
+      </Pressable>
+    </View>
+  );
+}
+
+/**
+ * Die Sprachauswahl: drei Kürzel nebeneinander, das gewählte hervorgehoben.
+ * Sie steht links neben den Verweisen, also oben rechts in der Kopfzeile.
+ */
+function LanguageSelector() {
+  const { locale, setLocale } = useLocale();
+  return (
+    <View style={styles.langSelector} accessibilityRole="radiogroup" accessibilityLabel="Language">
+      {LOCALES.map((code) => {
+        const active = code === locale;
+        return (
+          <Pressable
+            key={code}
+            onPress={() => setLocale(code)}
+            accessibilityRole="radio"
+            accessibilityState={{ selected: active }}
+            accessibilityLabel={LOCALE_LABEL[code]}
+            style={({ pressed }) => [
+              styles.langOption,
+              active && styles.langOptionActive,
+              pressed && !active && styles.linkPressed,
+            ]}
+          >
+            <Text style={[styles.langText, active && styles.langTextActive]}>
+              {code.toUpperCase()}
+            </Text>
+          </Pressable>
+        );
+      })}
+    </View>
+  );
+}
+
+/**
+ * Kopfzeile mit Logo und Namen links, den Verweisen rechtsbündig. Sie steht am
+ * Anfang jeder Ansicht: beim Anlegen des Spielers, beim Start der Karriere und
+ * über der laufenden Karriere. Rechts die Sprachauswahl und die Verweise.
+ */
+export function BrandHeader({ style }: { style?: StyleProp<ViewStyle> }) {
+  return (
+    <View style={[styles.brandHeader, style]}>
+      <Image source={brandLogo} style={styles.brandLogo} resizeMode="contain" />
+      <Text style={styles.brandWordmark}>footsys</Text>
+      {/* marginLeft:auto drückt die Verweise an den rechten Rand; wird es zu
+          eng, rutschen sie in eine zweite Zeile und bleiben dort rechtsbündig. */}
+      <HeaderLinks />
+    </View>
+  );
+}
+
+/**
+ * Rechtlicher Hinweis zu den Vereinsnamen. Steht am unteren Rand dort, wo eine
+ * Karriere beginnt, während sie läuft und wo sie endet.
  */
 export function Disclaimer() {
-  return (
-    <Text style={styles.disclaimer}>
-      The club names and references are used solely for identification purposes
-      within the simulation. This platform is not affiliated with, sponsored by,
-      or endorsed by the mentioned clubs, unless expressly stated otherwise.
-    </Text>
-  );
+  const { t } = useT();
+  return <Text style={styles.disclaimer}>{t('disclaimer')}</Text>;
 }
 
 export function Chip({ label, tone }: { label: string; tone?: string }) {
@@ -556,6 +667,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 7, paddingVertical: 2, flexShrink: 0,
   },
   clubBlockLoanText: { ...font.micro, textTransform: 'uppercase' },
+  clubBlockLeague: { flexDirection: 'row', alignItems: 'center', gap: 5 },
   clubBlockLine: { ...font.micro, textTransform: 'uppercase' },
   clubBlockStatus: { ...font.micro, textTransform: 'uppercase', textAlign: 'right' },
   shirtNumber: {
@@ -624,6 +736,27 @@ const styles = StyleSheet.create({
     width: 20, height: 20, borderRadius: 10, backgroundColor: color.text.secondary,
   },
   toggleKnobOn: { backgroundColor: '#FFFFFF', alignSelf: 'flex-end' },
+  brandHeader: {
+    flexDirection: 'row', alignItems: 'center', gap: space[3],
+    rowGap: space[2], flexWrap: 'wrap', alignSelf: 'stretch',
+  },
+  brandLogo: { width: 44, height: 44, borderRadius: 10 },
+  brandWordmark: { fontSize: 30, fontWeight: '700', color: color.text.primary, letterSpacing: -0.8 },
+  headerLinks: {
+    flexDirection: 'row', alignItems: 'center', gap: space[4],
+    flexShrink: 0, marginLeft: 'auto',
+  },
+  langSelector: {
+    flexDirection: 'row', alignItems: 'center', gap: 2,
+    padding: 2, borderRadius: radius.md,
+    backgroundColor: color.surface[2],
+    borderWidth: 1, borderColor: color.border.default,
+  },
+  langOption: { paddingHorizontal: 8, paddingVertical: 4, borderRadius: radius.sm },
+  langOptionActive: { backgroundColor: color.accent.subtle },
+  langText: { ...font.micro, color: color.text.secondary, letterSpacing: 0.5 },
+  langTextActive: { color: color.accent.onSubtle, fontWeight: '700' },
+  linkPressed: { opacity: 0.6 },
   disclaimer: {
     fontSize: 11,
     lineHeight: 16,

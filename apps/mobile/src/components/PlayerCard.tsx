@@ -1,10 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {
-  canStillSwitch, liveTotals, partnerOf, titleName, trophyCabinet,
+  canStillSwitch, liveTotals, partnerOf, titleName, tr, trophyCabinet,
   type CareerState, type GameData, type PartnerKind,
 } from '@footsys/engine';
 import { fans as formatFans, money, roleLabel, roleTone, seasonLabel } from '../format';
+import { useT } from '../i18n';
 import { color, font, radius, space } from '../theme';
 import {
   AssociationMark, Card, ClubBlock, Flag, Label, Meter, overallTint, PartnerLogo, StatCard,
@@ -12,6 +13,7 @@ import {
 } from './ui';
 import { AppsIcon, AssistIcon, CleanSheetIcon, FansIcon, GoalIcon } from './icons';
 import { Trophy } from './Trophy';
+import { trophyArt } from '../trophy-art';
 
 /**
  * Die Spielerkarte. Sie steht auf jedem Bildschirm links und zeigt in
@@ -27,6 +29,7 @@ export function PlayerCard({ data, state, style }: {
   state: CareerState;
   style?: object;
 }) {
+  const { t, locale } = useT();
   const player = state.player;
   const club = state.clubId ? data.clubById.get(state.clubId) : null;
   const league = club ? data.leagueById.get(club.league) : null;
@@ -72,48 +75,49 @@ export function PlayerCard({ data, state, style }: {
           <StatCard
             size="hero" filled grow
             count={player.overall}
-            label="OVR"
+            label={t('ovr')}
             tint={overallTint(player.overall)}
           />
           <StatCard
             size="hero" filled grow
             count={player.marketValue}
             format={money}
-            label="Value"
+            label={t('value')}
             tint={valueTint(player.marketValue)}
           />
         </View>
 
         <View style={styles.side}>
           <View style={styles.row}>
-            <StatCard grow style={styles.slim} count={player.age} label="Age" />
-            <StatCard grow style={styles.slim} value={position?.abbr.en ?? ''} label="Pos" />
-            <StatCard grow style={styles.slim} value={player.shirtNumber} label="No." />
-            <StatCard grow style={styles.slim} value={player.strongFoot === 'left' ? 'L' : 'R'} label="Foot" />
-            <StatCard grow style={styles.slim} value={player.weakFoot} label="Weak" />
+            <StatCard grow style={styles.slim} count={player.age} label={t('age')} />
+            <StatCard grow style={styles.slim} value={position ? tr(position.abbr, locale) : ''} label={t('pos')} />
+            <StatCard grow style={styles.slim} value={player.shirtNumber} label={t('number')} />
+            <StatCard grow style={styles.slim} value={player.strongFoot === 'left' ? 'L' : 'R'} label={t('foot')} />
+            <StatCard grow style={styles.slim} value={player.weakFoot} label={t('weak')} />
           </View>
 
           {/* Der Verein braucht keine Beschriftung: an seiner Stelle stehen
               die Liga und die eigene Rolle darin. */}
           <ClubBlock
             {...(club ? { clubId: club.id } : {})}
-            name={club ? club.name : 'No club'}
+            name={club ? club.name : t('noClub')}
             colors={club ? club.colors : ['#2B2B38', '#2B2B38']}
             abbr={club ? club.abbr : ''}
-            league={league ? league.name : 'Free agent'}
-            {...(state.activeLoan ? { loan: 'On loan' } : {})}
-            {...(role ? { status: roleLabel(role), statusTone: roleTone(role) } : {})}
+            league={league ? league.name : t('freeAgent')}
+            {...(league ? { leagueCode: league.country } : {})}
+            {...(state.activeLoan ? { loan: t('onLoan') } : {})}
+            {...(role ? { status: roleLabel(role, locale), statusTone: roleTone(role) } : {})}
           />
 
           <View style={styles.row}>
             {isKeeper ? (
-              <StatCard grow count={totals.cleanSheets} label="Clean sheets" icon={<CleanSheetIcon />} />
+              <StatCard grow count={totals.cleanSheets} label={t('cleanSheets')} icon={<CleanSheetIcon />} />
             ) : (
-              <StatCard grow count={totals.goals} label="Goals" icon={<GoalIcon />} />
+              <StatCard grow count={totals.goals} label={t('goals')} icon={<GoalIcon />} />
             )}
-            <StatCard grow count={totals.assists} label="Assists" icon={<AssistIcon />} />
-            <StatCard grow count={player.fans} format={formatFans} label="Fans" icon={<FansIcon />} />
-            <StatCard grow count={totals.appearances} label="Apps" icon={<AppsIcon />} />
+            <StatCard grow count={totals.assists} label={t('assists')} icon={<AssistIcon />} />
+            <StatCard grow count={player.fans} format={formatFans} label={t('fans')} icon={<FansIcon />} />
+            <StatCard grow count={totals.appearances} label={t('apps')} icon={<AppsIcon />} />
           </View>
         </View>
       </View>
@@ -124,20 +128,20 @@ export function PlayerCard({ data, state, style }: {
             ob ein Verband angerufen hat oder nicht. */}
         <StatCard
           grow
-          value={nationalTeam ? nationalTeam.code : 'None'}
-          label={bound ? 'National team' : 'Called up by'}
+          value={nationalTeam ? nationalTeam.code : t('none')}
+          label={bound ? t('nationalTeam') : t('calledUpBy')}
           {...(nationalTeam ? { inlineIcon: <AssociationMark code={nationalTeam.code} size={16} /> } : {})}
         />
-        <StatCard grow value={formation?.label ?? ''} label="System" />
-        <StatCard grow value={seasonLabel(state.year)} label="Season" />
+        <StatCard grow value={formation?.label ?? ''} label={t('system')} />
+        <StatCard grow value={seasonLabel(state.year)} label={t('season')} />
       </View>
 
       <View style={styles.trophies}>
-        <Label>Trophies</Label>
+        <Label>{t('trophies')}</Label>
         {cabinet.length > 0 ? (
           <View style={styles.trophyRow}>
             {shownTrophies.map(([id, count]) => (
-              <Trophy key={id} count={count} size={30} label={titleName(data, id)} />
+              <Trophy key={id} art={trophyArt(data, id)} count={count} size={30} label={titleName(data, id, locale)} />
             ))}
             {hiddenTrophies > 0 ? (
               <View style={styles.moreTrophies}>
@@ -146,21 +150,21 @@ export function PlayerCard({ data, state, style }: {
             ) : null}
           </View>
         ) : (
-          <Text style={styles.trophyEmpty}>Nothing won yet</Text>
+          <Text style={styles.trophyEmpty}>{t('nothingWonYet')}</Text>
         )}
       </View>
 
       {/* Ausrüster und Medienpartner. Beide bleiben leer, bis sich jemand
           meldet, und stehen trotzdem da: man soll sehen, dass es sie gibt. */}
       <View style={styles.partners}>
-        <PartnerPanel data={data} state={state} kind="kit" label="Kit supplier" />
-        <PartnerPanel data={data} state={state} kind="media" label="Media partner" />
+        <PartnerPanel data={data} state={state} kind="kit" label={t('kitSupplier')} />
+        <PartnerPanel data={data} state={state} kind="media" label={t('mediaPartner')} />
       </View>
 
       <View style={styles.meters}>
-        <Meter fill steps={10} label="Morale" value={player.meters.morale} />
-        <Meter fill steps={10} label="Fans" value={player.meters.fanSupport} />
-        <Meter fill steps={10} label="Media" value={player.meters.mediaRelation} />
+        <Meter fill steps={10} label={t('morale')} value={player.meters.morale} />
+        <Meter fill steps={10} label={t('fans')} value={player.meters.fanSupport} />
+        <Meter fill steps={10} label={t('media')} value={player.meters.mediaRelation} />
       </View>
     </Card>
   );
@@ -173,6 +177,7 @@ function PartnerPanel({ data, state, kind, label }: {
   kind: PartnerKind;
   label: string;
 }) {
+  const { t } = useT();
   const partner = partnerOf(data, state, kind);
   return (
     <View style={styles.partner}>
@@ -183,7 +188,7 @@ function PartnerPanel({ data, state, kind, label }: {
           <Text style={styles.partnerName} numberOfLines={2}>{partner.name}</Text>
         </View>
       ) : (
-        <Text style={styles.partnerEmpty}>Nobody yet</Text>
+        <Text style={styles.partnerEmpty}>{t('nobodyYet')}</Text>
       )}
     </View>
   );

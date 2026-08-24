@@ -459,11 +459,11 @@ describe('Karriere-Engine', () => {
         assert.ok(target, 'Positionswechsel ohne Zielposition');
         assert.notEqual(target, before, 'Angeboten wird die Position, auf der man schon spielt');
         assert.ok(
-          change.text.includes(data.positionById.get(target!)!.name.en),
+          change.text.en.includes(data.positionById.get(target!)!.name.en),
           `Der Text nennt nicht die Zielposition: "${change.text}"`,
         );
         assert.ok(
-          !change.text.includes(data.positionById.get(before)!.name.en),
+          !change.text.en.includes(data.positionById.get(before)!.name.en),
           `Der Text nennt die eigene Position: "${change.text}"`,
         );
         assert.equal(state.player.position, target, 'Gewechselt wurde woandershin als angekündigt');
@@ -594,7 +594,7 @@ describe('Karriere-Engine', () => {
           const partner = state.player.mediaPartner;
           assert.ok(partner, `${decision.eventId} ohne Medienpartner`);
           const name = data.partnerById.get(partner!)!.name;
-          assert.ok(decision.text.includes(name), `Der Text nennt ${name} nicht: "${decision.text}"`);
+          assert.ok(decision.text.en.includes(name), `Der Text nennt ${name} nicht: "${decision.text.en}"`);
           seen += 1;
         }
 
