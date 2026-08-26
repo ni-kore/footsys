@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>footsys</Name>
+  <Repository>ghcr.io/ni-kore/footsys:latest</Repository>
+  <Registry>https://github.com/ni-kore/footsys/pkgs/container/footsys</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/ni-kore/footsys/issues</Support>
+  <Project>https://github.com/ni-kore/footsys</Project>
+  <Overview>footsys is a football manager / career simulator that runs entirely in your browser. The app is fully client-side: all game data and images are bundled, and there is no backend, no database and no network access at runtime. The container simply serves the static files via nginx. After starting, open the WebUI and start playing.</Overview>
+  <Category>GameServers: Other:</Category>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/ni-kore/footsys/main/unraid/footsys.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ni-kore/footsys/main/assets/footsys-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI Port" Target="80" Default="8080" Mode="tcp" Description="Host port for the web interface. Reachable afterwards at http://SERVER-IP:PORT" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+</Container>
