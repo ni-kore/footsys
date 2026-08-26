@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<CommunityApplications>
+  <Profile>
+    footsys is a football manager / career simulator that runs entirely in your browser.
+    The app is fully client-side: all game data and images are bundled, with no backend,
+    no database and no network access at runtime. The container simply serves a static
+    site via nginx. This repository provides the self-host Docker template for footsys.
+    Support and issues: https://github.com/ni-kore/footsys/issues
+  </Profile>
+  <Icon>https://raw.githubusercontent.com/ni-kore/footsys/main/assets/footsys-icon.png</Icon>
+  <WebPage>https://github.com/ni-kore/footsys</WebPage>
+</CommunityApplications>
