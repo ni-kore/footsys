@@ -39,6 +39,10 @@ jobs:
           npm --prefix apps/mobile install
 
       - name: Export the static web bundle
+        # GitHub Pages serves the site under /footsys/, so build with that base
+        # path. The Docker image builds without it and serves from the root.
+        env:
+          EXPO_BASE_URL: /footsys
         run: npm --prefix apps/mobile run export:web
 
       # Jekyll (Pages' default) would drop the _expo/ folder; .nojekyll disables
